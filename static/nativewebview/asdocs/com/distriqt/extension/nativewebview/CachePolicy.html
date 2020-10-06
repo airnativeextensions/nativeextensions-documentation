@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="CachePolicy,com.distriqt.extension.nativewebview.CachePolicy,BLOCK,CURRENT_WEBVIEW,EXT_CONTEXT_ID,LOAD_CACHE_ELSE_NETWORK,LOAD_CACHE_ONLY,LOAD_DEFAULT,LOAD_NO_CACHE,SCROLLBAR_DARK,SCROLLBAR_DEFAULT,SCROLLBAR_LIGHT,SYSTEM_BROWSER,VERSION,allowInlineMediaPlayback,allowScrolling,allowZooming,autoScale,backgroundColour,backgroundEnabled,bounces,browserView,cachePolicy,canGoBack,canGoForward,cookieManager,cookies,disableLongPressGestures,geolocationEnabled,geolocationUsageDescription,height,htmlSource,implementation,isHistoryBackEnabled,isHistoryForwardEnabled,isPrintSupported,isSupported,keyboardDisplayRequiresUserAction,linkTargetAction,location,mediaPlaybackRequiresUserAction,name,nativeVersion,position,scrollBarStyle,service,statusCode,title,useWebKitIfAvailable,userAgent,userAgent,value,version,viewPort,visible,width,windows,x,y"><title>com.distriqt.extension.nativewebview.CachePolicy</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'CachePolicy - distriqt // NativeWebView';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // NativeWebView Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/nativewebview/CachePolicy.html&amp;com/distriqt/extension/nativewebview/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">CachePolicy</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CachePolicy"); titleBar_setSubNav(true,false,false,false,false,false,false,false,false,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.nativewebview</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  CachePolicy</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">CachePolicy  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>	
+	              <p>
+	 Cache policies to use with a WebView.
+	 </p>
+	 
+	              <p>
+	 You should test carefully before relying on a cache policy as they 
+	 are treated slightly differently across platforms. We have attempted
+	 to match operation as closely as possible however there are slight 
+	 differences between platform operations that haven't been overcome.
+	 </p>
+	           <p></p><br/><hr></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LOAD_CACHE_ELSE_NETWORK" class="signatureLink">LOAD_CACHE_ELSE_NETWORK</a> : int = 1<div class="summaryTableDescription">[static] 
+		 
+		 Use the cache (no matter how out of date), or if no cached response exists, load from the network
+		 
+		 </div></td><td class="summaryTableOwnerCol">CachePolicy</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LOAD_CACHE_ONLY" class="signatureLink">LOAD_CACHE_ONLY</a> : int = 3<div class="summaryTableDescription">[static] 
+		 
+		 Offline mode: use the cache (no matter how out of date), but don't load from the network
+		 
+		 </div></td><td class="summaryTableOwnerCol">CachePolicy</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LOAD_DEFAULT" class="signatureLink">LOAD_DEFAULT</a> : int = -1<div class="summaryTableDescription">[static] 
+		 
+		 The default will obey cache policy provided by the loaded pages
+		 
+		 </div></td><td class="summaryTableOwnerCol">CachePolicy</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LOAD_NO_CACHE" class="signatureLink">LOAD_NO_CACHE</a> : int = 2<div class="summaryTableDescription">[static] 
+		 
+		 Don't use the cache
+		 
+		 </div></td><td class="summaryTableOwnerCol">CachePolicy</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="LOAD_CACHE_ELSE_NETWORK"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LOAD_CACHE_ELSE_NETWORK</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const LOAD_CACHE_ELSE_NETWORK:int = 1</code><p></p><p></p><p>
+		 <p>
+		 Use the cache (no matter how out of date), or if no cached response exists, load from the network
+		 </p>
+		 </p></div><a name="constantDetail"></a><a name="LOAD_CACHE_ONLY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LOAD_CACHE_ONLY</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LOAD_CACHE_ONLY:int = 3</code><p></p><p></p><p>
+		 <p>
+		 Offline mode: use the cache (no matter how out of date), but don't load from the network
+		 </p>
+		 </p></div><a name="constantDetail"></a><a name="LOAD_DEFAULT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LOAD_DEFAULT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LOAD_DEFAULT:int = -1</code><p></p><p></p><p>
+		 <p>
+		 The default will obey cache policy provided by the loaded pages
+		 </p>
+		 </p></div><a name="constantDetail"></a><a name="LOAD_NO_CACHE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LOAD_NO_CACHE</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LOAD_NO_CACHE:int = 2</code><p></p><p></p><p>
+		 <p>
+		 Don't use the cache
+		 </p>
+		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Oct 2 2020, 09:35 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Oct 2 2020, 09:35 AM +10:00  -->

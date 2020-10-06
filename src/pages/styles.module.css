@@ -1,0 +1,73 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureImage {
+  height: 128px;
+  width: 128px;
+}
+
+.white-text {
+  color: #fff !important;
+}
+
+html, body { 
+  font-family: 'Maison-Neue-Book', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Maison-Neue-Bold';
+}
+
+
+@font-face {
+	font-family: 'Maison-Neue-Light';
+	src: url('/fonts/maison-neue/maison-neue-light.eot?') format('eot'),
+	     url('/fonts/maison-neue/maison-neue-light.woff') format('woff'),
+	     url('/fonts/maison-neue/maison-neue-light.ttf')  format('truetype'),
+	     url('/fonts/maison-neue/maison-neue-light.svg#maison-neue-light') format('svg');
+}
+@font-face {
+	font-family: 'Maison-Neue-Book';
+	src: url('/fonts/maison-neue/maison-neue-book.eot?') format('eot'),
+	     url('/fonts/maison-neue/maison-neue-book.woff') format('woff'),
+	     url('/fonts/maison-neue/maison-neue-book.ttf')  format('truetype'),
+	     url('/fonts/maison-neue/maison-neue-book.svg#maison-neue-book') format('svg');
+}
+@font-face {
+	font-family: 'Maison-Neue-Bold';
+	src: url('/fonts/maison-neue/maison-neue-bold.eot?') format('eot'),
+	     url('/fonts/maison-neue/maison-neue-bold.woff') format('woff'),
+	     url('/fonts/maison-neue/maison-neue-bold.ttf')  format('truetype'),
+	     url('/fonts/maison-neue/maison-neue-bold.svg#maison-neue-bold') format('svg');
+}
