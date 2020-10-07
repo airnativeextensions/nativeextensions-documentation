@@ -12,7 +12,7 @@ const features = [
     imageUrl: 'img/icon-devices.png',
     description: (
       <>
-        Single cross-platform APIs for iOS and Android make integration and development fast and painless for developers.
+        Single cross-platform APIs for iOS, tvOS, Android, Windows and macOS make integration and development fast and painless for developers.
       </>
     ),
   },
@@ -60,23 +60,47 @@ function Home() {
       description="Description will go into a meta tag in <head />">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <img src="img/ane-icon-white.png" />
+          <img className='ane__logo' src="img/ane-icon-white.png"  />
           <h1 className="hero__title">Native Extensions</h1>
           <p className="hero__subtitle">Create world class applications quickly and confidently with Native Extensions for Adobe AIR, Unity and Haxe.</p>
-          <p>by </p>
-          <img src="img/logo.png" />
+          
+          <p>This site contains the best source of documentation for the extensions, including detailed guides on adding the extensions, 
+            tutorials on getting started, and API documentation on the usage of the extensions in your applications.</p>
+          
           <div className={styles.buttons}>
             <Link
               className={clsx(
-                'button button--outline button--secondary button--lg',
+                'button button--outline button--lg',
                 styles.getStarted,
-              )}
+                )}
               to={useBaseUrl('docs/')}>
               Get Started
             </Link>
           </div>
+
+          
         </div>
       </header>
+      <div className={clsx('hero ', styles.heroBanner)}>
+        <div className="container">
+          <h2>Looking for our extensions?</h2>
+          <p>Our extensions are provided through a variety of sources all of which are linked through our main site. With over 60 extensions available, we are the largest provider of native extensions for AIR developers and one of the only providers of Universal Extensions.</p>
+          <p>Our mobile solutions allow developers to fast-forward development and focus on building great games and apps.</p>
+          <div className={styles.buttons}>
+            <Link
+              className={clsx(
+                'button button--primary button--lg',
+                styles.getStarted,
+                )}
+              to="https://airnativeextensions.com">
+              <img className="ane__logo" src="img/ane-icon-white.png" /> Get the extensions
+            </Link>
+          </div>
+          {/* <div className={styles.company}>
+            <a href="https://distriqt.com"><img src="img/logo.png"/></a>
+          </div> */}
+        </div>
+      </div>
       <main>
         {features && features.length > 0 && (
           <section className={styles.features}>

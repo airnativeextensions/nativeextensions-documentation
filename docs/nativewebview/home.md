@@ -35,7 +35,7 @@ As with all our extensions you get access to a year of support and updates as we
 
 ## Documentation
 
-This [documentation site](https://docs.airnativeextensions.com/nativewebview/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/nativewebview/asdocs/). 
+This [documentation site](https://docs.airnativeextensions.com/nativewebview/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/nativewebview/). 
 
 
 More information here: 

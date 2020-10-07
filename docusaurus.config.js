@@ -32,7 +32,7 @@ module.exports = {
       },
       items: [
         {
-          to: '/',
+          to: 'docs',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'right',
@@ -52,7 +52,7 @@ module.exports = {
           items: [
             {
               label: 'tutorials',
-              to: '/tutorials/',
+              to: '/docs/tutorials/',
             },
           ],
         },
@@ -100,7 +100,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          routeBasePath: '/docs',
           editUrl: 'https://github.com/airnativeextensions/nativeextensions-documentation/edit/master/website/',
         },
         blog: {
