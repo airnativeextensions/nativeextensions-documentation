@@ -3,7 +3,6 @@ title: Application State Events
 sidebar_label: Application State Events
 ---
 
-## Application State Events
 
 The AIR standard ACTIVATE and DEACTIVATE events will inform your application when the AIR application loses focus. This is often used to stop application rendering and other operations that you wish to perform when your application enters the background or returns to the foreground.
 

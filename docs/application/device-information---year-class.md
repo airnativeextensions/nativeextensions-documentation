@@ -4,8 +4,6 @@ sidebar_label: Device Information - Year Class
 ---
 
 
-## Year Class
-
 The current Android device list has around more than 10k different handsets. So it's hard to know how your application will perform on different devices. All having different amount of RAM, CPU speed, number of cores etc.
 
 The **year class** is an attempt to categorise the device by placing it in a year where the device specifications would have placed it alongside the high-end devices. This allows you to easily modify the behavior of your application according the capabilities of the phone’s hardware. It is not neccessarily the year of manufacture or release of the device.
@@ -34,7 +32,7 @@ else
 ```
 
 
-### Implementation 
+## Implementation 
 
 On Android this uses the "Device Year Class" provided by Facebook: https://github.com/facebook/device-year-class
 

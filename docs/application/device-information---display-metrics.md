@@ -1,11 +1,14 @@
 ---
-title: Device Information - Device State
-sidebar_label: Device Information - Device State
+title: Device Information - Display Metrics
+sidebar_label: Device Information - Display Metrics
 ---
 
+## Device State
 
 
-## Power Save Mode
+
+
+### Power Save Mode
 
 Recent releases of both iOS and Android have introduced a "power save mode" where applications should reduce their functionality in order to conserve battery as much as possible.
 
@@ -34,7 +37,7 @@ function deviceStateEventHandler( event:DeviceStateEvent ):void
 
 
 
-## Idle Mode
+### Idle Mode
 
 The idle mode indicates when a device has been sitting unused and unmoving for a sufficiently long period of time, so that it decides to go into a lower power-use state. 
 This may involve things like turning off network access to apps. 
@@ -59,7 +62,7 @@ function deviceStateEventHandler( event:DeviceStateEvent ):void
 ```
 
 
-### Testing
+#### Testing
 
 You can use the `adb` command line to test the changing of this state. 
 

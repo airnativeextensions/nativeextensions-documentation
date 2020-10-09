@@ -4,8 +4,6 @@ sidebar_label: Device Information - Operating System
 ---
 
 
-## Operating System
-
 You can also use the device functionality to retrieve information about the operating system 
 running on the device. This includes information such as the name and version of the OS.
 

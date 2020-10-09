@@ -3,12 +3,11 @@ title: Device Information - Phone Number
 sidebar_label: Device Information - Phone Number
 ---
 
-## Phone Number
 
 If you require access to the user's phone number you will need to request permission to access the phone state.
 
 
-### Android
+## Android
 
 Add the `android.permission.READ_PHONE_STATE` permission and then request permission to access it on recent versions:
 
@@ -43,6 +42,6 @@ function authorisationChangedHandler( event:AuthorisationEvent ):void
 ```
 
 
-### iOS 
+## iOS 
 
 Not supported
