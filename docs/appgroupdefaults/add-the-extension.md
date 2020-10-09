@@ -8,7 +8,7 @@ sidebar_label: Add the Extension
 # AIR
 
 First step is always to add the extension to your development environment. 
-To do this use the tutorial located [here](http://airnativeextensions.com/knowledgebase/tutorial/1).
+To do this use the tutorial located [here](/docs/tutorials/getting-started).
 
 
 ## Required ANEs

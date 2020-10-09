@@ -3,7 +3,6 @@ title: Advertising Identifier
 sidebar_label: Advertising Identifier
 ---
 
-## Advertising Identifier
 
 The advertising identifier is a user-specific, unique, resettable ID for advertising, provided by Google Play services and the iOS SDK. It gives users better controls and provides developers with a simple, standard system to continue to monetize your apps. It is an anonymous identifier for advertising purposes and enables users to reset their identifier or opt out of interest-based ads within Google Play and iOS apps.
 

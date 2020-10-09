@@ -3,8 +3,6 @@ title: Migrating to version 10
 sidebar_label: Migrating to version 10
 ---
 
-## Migrating to version 10
-
 Version 10 brings the latest consent gathering processes from Google utilising the User Messaging Platform and preparations for iOS 14's App Tracking Transparency framework requirement.
 
 

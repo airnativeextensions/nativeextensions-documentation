@@ -3,7 +3,7 @@ title: User Messaging Platform
 sidebar_label: User Messaging Platform
 ---
 
-# Obtaining Consent with the User Messaging Platform
+## Obtaining Consent with the User Messaging Platform
 
 >
 > Important: You must have a [Funding Choices](https://support.google.com/fundingchoices/answer/9180084) account linked to your AdMob account.

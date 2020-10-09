@@ -3,7 +3,6 @@ title: Battery Info
 sidebar_label: Battery Info
 ---
 
-## Battery Information
 
 To retrieve the battery information you must call the `getBatteryInfo` function. 
 The battery information retrieval is an asynchronous process so you must 
