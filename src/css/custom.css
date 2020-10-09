@@ -28,7 +28,7 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme='dark'] .ane__logo  { content: url(/img/ane-icon-black.png) }
+html[data-theme='dark'] .ane__logo  { content: url(/img/ane-icon-white.png) }
 
 
 html, body { 

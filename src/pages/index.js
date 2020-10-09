@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import Head from '@docusaurus/Head';
 
 const features = [
   {
@@ -58,27 +59,30 @@ function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
+        <Head>
+          <script src="https://kit.fontawesome.com/61428cba37.js" crossorigin="anonymous"></script>
+        </Head>
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <img className='ane__logo' src="img/ane-icon-white.png"  />
           <h1 className="hero__title">Native Extensions</h1>
           <p className="hero__subtitle">Create world class applications quickly and confidently with Native Extensions for Adobe AIR, Unity and Haxe.</p>
           
-          <p>This site contains the best source of documentation for the extensions, including detailed guides on adding the extensions, 
-            tutorials on getting started, and API documentation on the usage of the extensions in your applications.</p>
-          
           <div className={styles.buttons}>
             <Link
               className={clsx(
-                'button button--outline button--lg',
+                'button button--secondary button--lg',
                 styles.getStarted,
                 )}
               to={useBaseUrl('docs/')}>
-              Get Started
+              <i class="fa fa-file-alt"></i>&nbsp;&nbsp; Get Started
             </Link>
           </div>
 
-          
+          <br/>
+          <p>This site contains the best source of documentation for the extensions, including detailed guides on adding the extensions, 
+            tutorials on getting started, and API documentation on the usage of the extensions in your applications.</p>
+
         </div>
       </header>
       <div className={clsx('hero ', styles.heroBanner)}>
@@ -89,11 +93,11 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx(
-                'button button--primary button--lg',
+                'button button--primary button--outline',
                 styles.getStarted,
                 )}
               to="https://airnativeextensions.com">
-              <img className="ane__logo" src="img/ane-icon-white.png" /> Get the extensions
+              <img className="ane__logo" src="img/ane-icon-black.png" /> Get the extensions
             </Link>
           </div>
           {/* <div className={styles.company}>

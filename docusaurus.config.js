@@ -8,14 +8,17 @@ module.exports = {
   organizationName: 'airnativeextensions', // Usually your GitHub org/user name.
   projectName: 'nativeextensions-documentation', // Usually your repo name.
   themeConfig: {
-    // announcementBar: {
-    //   id: 'support_us', // Any value that will identify this message.
-    //   content:
-    //     'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
-    //   backgroundColor: '#fafbfc', // Defaults to `#fff`.
-    //   textColor: '#091E42', // Defaults to `#000`.
-    //   isCloseable: false, // Defaults to `true`.
-    // },
+    announcementBar: {
+      id: 'development', // Any value that will identify this message.
+      content:
+        'This is the new airnativeextensions documentation site and is currently under development. <a href="mailto:airnativeextensions@distriqt.com">Please let us know if you find any issues.</a>',
+      backgroundColor: '#AA0000', // Defaults to `#fff`.
+      textColor: '#FFF', // Defaults to `#000`.
+      isCloseable: false, // Defaults to `true`.
+    },
+    scripts : [
+        "https://kit.fontawesome.com/61428cba37.js"
+    ],
 
     prism: {
       theme: require('prism-react-renderer/themes/github'),
@@ -32,13 +35,13 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs',
+          to: 'docs/',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'right',
         },
         { 
-          to: 'news',
+          to: 'news/',
           label: 'News', 
           position: 'right'
         }
@@ -101,7 +104,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/docs',
-          editUrl: 'https://github.com/airnativeextensions/nativeextensions-documentation/edit/master/website/',
+          // editUrl: 'https://github.com/airnativeextensions/nativeextensions-documentation/',
         },
         blog: {
           blogDescription: 'distriqt // Native Extension News',
@@ -112,7 +115,7 @@ module.exports = {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} distriqt Pty Ltd`,
           },
-          editUrl: 'https://github.com/airnativeextensions/nativeextensions-documentation/edit/master/website/blog/',
+          // editUrl: 'https://github.com/airnativeextensions/nativeextensions-documentation/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

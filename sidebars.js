@@ -21,6 +21,7 @@ module.exports = {
   
 
   tutorials: [
+    { type: 'ref', id: 'home' },
     { type: 'doc', id: 'tutorials/index' },
     { 
       type: 'category',
@@ -46,6 +47,7 @@ module.exports = {
 
 
   nativewebview: [
+    { type: 'ref', id: 'home' },
     { type: 'doc', id: 'nativewebview/home' },
     { 
       type: 'category', 
@@ -89,7 +91,7 @@ module.exports = {
       label: "External Links", 
       collapsed: false,
       items: [
-        { type: "link", label: "ASDocs", href: "https://docs.airnativeextensions.com/asdocs/nativewebview/" },
+        { type: "link", label: "ASDocs", href: "/asdocs/nativewebview/" },
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-NativeWebView/issues/new' }
       ]
     },
