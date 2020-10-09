@@ -91,7 +91,7 @@ module.exports = {
       label: "External Links", 
       collapsed: false,
       items: [
-        { type: "link", label: "ASDocs", href: "/asdocs/nativewebview/" },
+        { type: "link", label: "ASDocs", href: "https://docs.airnativeextensions.com/asdocs/nativewebview/" },
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-NativeWebView/issues/new' }
       ]
     },
