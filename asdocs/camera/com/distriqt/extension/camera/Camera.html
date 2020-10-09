@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Camera,com.distriqt.extension.camera.Camera,AUDIO,AUTHORISED,CAMERA,DENIED,EXT_CONTEXT_ID,NOT_DETERMINED,ORIENTATION_FLIP_HORIZONTAL,ORIENTATION_FLIP_VERTICAL,ORIENTATION_NORMAL,ORIENTATION_ROTATE_180,ORIENTATION_ROTATE_270,ORIENTATION_ROTATE_90,ORIENTATION_TRANSPOSE,ORIENTATION_TRANSVERSE,ORIENTATION_UNSPECIFIED,PHOTOS,RESTRICTED,SHOULD_EXPLAIN,UNKNOWN,VERSION,canOpenDeviceSettings,implementation,instance,isSupported,nativeVersion,version,authorisationStatus,connect,disconnect,dispose,getAvailableDevices,getAvailableImageFormats,getCurrentDevice,hasAuthorisation,init,openDeviceSettings,requestAuthorisation"><title>com.distriqt.extension.camera.Camera</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Camera - distriqt // Camera';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Camera Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/camera/Camera.html&amp;com/distriqt/extension/camera/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Camera</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Camera"); titleBar_setSubNav(true,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.camera</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  Camera</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Camera  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>	
+	              <p>
+	 Camera Native Extension Library
+	 </p>
+	 
+	              <p>
+	 This extension creates access to native features of the Camera hardware giving you
+	 finer control over the camera and allowing you to create more complex imaging 
+	 applications.
+	 </p>
+	 
+	 
+	              <b>Key Features</b>
+	 
+	              <ul>
+	                 <li>Preview frames (ByteArray of pixel data for easy display to Bitmap)</li>
+	                 <li>Take a photo and simulataneously save to "camera roll" and retrieve as BitmapData</li>
+	                 <li>Control focus mode, exposure, white balance</li>
+	                 <li>Control focus point and exposure point</li>
+	                 <li>List available cameras and switch between cameras</li>
+	              </ul>
+	 
+	 
+	              <p>
+	 Supported on the following platforms:
+	 </p>
+	              <ul>
+	 	               <li>
+                     <b>Android</b>: All unless stated otherwise in documentation</li>
+	 	               <li>
+                     <b>iOS</b>: All unless stated otherwise in documentation</li>
+	              </ul>
+	 
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#canOpenDeviceSettings" class="signatureLink">canOpenDeviceSettings</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Returns true if you can display the device settings for your application.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#instance" class="signatureLink">instance</a> : <a href="../../../../com/distriqt/extension/camera/Camera.html">Camera</a><div class="summaryTableDescription">[static] [read-only] 
+		 The singleton instance of the Camera class.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+		 Whether the camera is supported on the current device
+		 </div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">Camera</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Camera()" class="signatureLink">Camera</a>()</div><div class="summaryTableDescription">
+		  Constructor
+		 </div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#authorisationStatus()" class="signatureLink">authorisationStatus</a>(type:String):String</div><div class="summaryTableDescription">
+		 
+		 Retrieves the current authorisation status of this application.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#connect()" class="signatureLink">connect</a>(deviceInfo:<a href="../../../../com/distriqt/extension/camera/device/CameraDeviceInfo.html">CameraDeviceInfo</a>, options:<a href="../../../../com/distriqt/extension/camera/device/CameraParameters.html">CameraParameters</a> = null):<a href="../../../../com/distriqt/extension/camera/device/CameraDevice.html">CameraDevice</a></div><div class="summaryTableDescription">
+		 
+		 Connect to the specified device using the supplied camera parameters.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#disconnect()" class="signatureLink">disconnect</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Releases any access to the camera the application may hold.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 
+		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getAvailableDevices()" class="signatureLink">getAvailableDevices</a>():Array</div><div class="summaryTableDescription">
+		 
+		 Returns the available capture devices.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getAvailableImageFormats()" class="signatureLink">getAvailableImageFormats</a>():Array</div><div class="summaryTableDescription">
+		 
+		 Retrieves a list of the available image formats for image stills
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getCurrentDevice()" class="signatureLink">getCurrentDevice</a>():<a href="../../../../com/distriqt/extension/camera/device/CameraDevice.html">CameraDevice</a></div><div class="summaryTableDescription">
+		 
+		 Returns the currently connected device, or null if none are connected.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hasAuthorisation()" class="signatureLink">hasAuthorisation</a>(type:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Helper method to determine if the current application has access to the device camera
+		  
+		 </div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#init()" class="signatureLink">init</a>(key:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div>[static] 
+		 Initialises the extension class for use with the provided  key.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#openDeviceSettings()" class="signatureLink">openDeviceSettings</a>():Boolean</div><div class="summaryTableDescription">
+		 		 
+		 iOS 8 introduced the ability to send your user to your application's device
+		 settings within the iOS Settings.</div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#requestAuthorisation()" class="signatureLink">requestAuthorisation</a>(type:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Performs a simple operation to display the permission dialog.</div></td><td class="summaryTableOwnerCol">Camera</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.Camera<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Camera</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 6.0.022<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Camera</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="canOpenDeviceSettings"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">canOpenDeviceSettings</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>canOpenDeviceSettings:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Returns true if you can display the device settings for your application.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get canOpenDeviceSettings():Boolean</code><br/></div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The implementation currently in use. 
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="instance"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">instance</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>instance:<a href="../../../../com/distriqt/extension/camera/Camera.html">Camera</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The singleton instance of the Camera class.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get instance():<a href="../../../../com/distriqt/extension/camera/Camera.html">Camera</a></code><br/><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the  key is invalid
+		 </td></tr></table></div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether the camera is supported on the current device
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The native version string of the native extension.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The version of this extension.
+		 </p>
+		 <p>
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Camera()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Camera</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Camera()</code><p></p><p>
+		  Constructor
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="authorisationStatus()"></a><a name="authorisationStatus(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">authorisationStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function authorisationStatus(type:String):String</code><p></p><p></p><p>
+		 <p>
+		 Retrieves the current authorisation status of this application.
+		 </p>
+		 <p>
+		 There are several possible values as defined in the <code>AuthorisationStatus</code> class.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> (default = <code>NaN</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The <code>AuthorisationStatus</code> string
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="AuthorisationStatus.html" target="">com.distriqt.extension.camera.AuthorisationStatus</a></div></div><a name="connect()"></a><a name="connect(com.distriqt.extension.camera.device.CameraDeviceInfo,com.distriqt.extension.camera.device.CameraParameters)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">connect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function connect(deviceInfo:<a href="../../../../com/distriqt/extension/camera/device/CameraDeviceInfo.html">CameraDeviceInfo</a>, options:<a href="../../../../com/distriqt/extension/camera/device/CameraParameters.html">CameraParameters</a> = null):<a href="../../../../com/distriqt/extension/camera/device/CameraDevice.html">CameraDevice</a></code><p></p><p></p><p>
+		 <p>
+		 Connect to the specified device using the supplied camera parameters.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">deviceInfo</span>:<a href="../../../../com/distriqt/extension/camera/device/CameraDeviceInfo.html">CameraDeviceInfo</a></code> &mdash; <code>CameraDeviceInfo</code> of the device to connect
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../com/distriqt/extension/camera/device/CameraParameters.html">CameraParameters</a></code> (default = <code>null</code>)<code></code> &mdash; specific camera parameters. If none are provided or <code>null</code> 
+		 			is used then the default parameters will be used
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/camera/device/CameraDevice.html">CameraDevice</a></code> &mdash; If successfully initialised a <code>CameraDevice</code> reference is returned which can
+		 			be used to control the camera device.
+		 			This will return <code>null</code> if a device is already connected or if the 
+		 			device failed to initialise.
+		 </td></tr></table></div><a name="disconnect()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">disconnect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function disconnect():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Releases any access to the camera the application may hold.
+		 </p>
+		 
+		 <p>
+		 This will force and recording or other activities to stop so you should 
+		 finalise any active operations before calling this function.
+		 </p>
+		 
+		 <p>
+		 This is the same as calling <code>Camera.instance.getCurrentDevice().disconnect()</code>
+		 or simply <code>device.disconnect();</code> on your device reference.
+		 </p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 <p>
+		 Disposes the extension and releases any allocated resources. Once this function 
+		 has been called, a call to <code>init</code> is neccesary again before any of the 
+		 extensions functionality will work.
+		 </p>
+		 </p></div><a name="getAvailableDevices()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getAvailableDevices</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getAvailableDevices():Array</code><p></p><p></p><p>
+		 <p>
+		 Returns the available capture devices. This will include any 
+		 camera's on the device (front and back) and potentially any 
+		 microphone devices.
+		 </p>
+		 
+		 <p>
+		 Please note this function may be costly as it has to query 
+		 each camera device individually for properties. You should 
+		 use this function sparingly.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; An <code>Array</code> of <code>CameraDeviceInfo</code> objects
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso">CameraDeviceInfo</div></div><a name="getAvailableImageFormats()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getAvailableImageFormats</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getAvailableImageFormats():Array</code><p></p><p></p><p>
+		 <p>
+		 Retrieves a list of the available image formats for image stills
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; An Array of String's each representing a supported format on the device
+		 
+		 </td></tr></table></div><a name="getCurrentDevice()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getCurrentDevice</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getCurrentDevice():<a href="../../../../com/distriqt/extension/camera/device/CameraDevice.html">CameraDevice</a></code><p></p><p></p><p>
+		 <p>
+		 Returns the currently connected device, or <code>null</code> if none are connected.
+		 </p>
+		  
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/camera/device/CameraDevice.html">CameraDevice</a></code> &mdash; 
+		 </td></tr></table></div><a name="hasAuthorisation()"></a><a name="hasAuthorisation(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hasAuthorisation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function hasAuthorisation(type:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Helper method to determine if the current application has access to the device camera
+		 </p> 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> (default = <code>NaN</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 Initialises the extension class for use with the provided  key.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the  key is invalid
+		 </td></tr></table></div><a name="openDeviceSettings()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">openDeviceSettings</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function openDeviceSettings():Boolean</code><p></p><p></p><p>
+		 		 <p>
+		 iOS 8 introduced the ability to send your user to your application's device
+		 settings within the iOS Settings.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the settings open was successful and
+		 			<code>false</code> if the device settings are not available.
+		 		 </td></tr></table></div><a name="requestAuthorisation()"></a><a name="requestAuthorisation(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">requestAuthorisation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function requestAuthorisation(type:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Performs a simple operation to display the permission dialog.
+		 </p>
+		 <p>
+		 iOS: Note this will only be shown if the authorisation status is currently NOT_DETERMINED
+		 </p> 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> (default = <code>NaN</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.Camera</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 6.0.022</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Oct 9 2020, 11:27 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Oct 9 2020, 11:27 PM +10:00  -->
