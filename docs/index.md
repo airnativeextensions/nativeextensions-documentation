@@ -1,5 +1,5 @@
 ---
-id: home
+id: index
 title: Documentation
 sidebar_label: Docs
 slug: /

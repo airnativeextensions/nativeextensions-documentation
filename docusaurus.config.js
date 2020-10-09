@@ -11,14 +11,20 @@ module.exports = {
     announcementBar: {
       id: 'development', // Any value that will identify this message.
       content:
-        'This is the new airnativeextensions documentation site and is currently under development. <a href="mailto:airnativeextensions@distriqt.com">Please let us know if you find any issues.</a>',
+        'This is the new airnativeextensions documentation site and is currently under development. <a href="https://github.com/airnativeextensions/nativeextensions-documentation/issues">Please let us know if you find any issues.</a>',
       backgroundColor: '#AA0000', // Defaults to `#fff`.
       textColor: '#FFF', // Defaults to `#000`.
       isCloseable: false, // Defaults to `true`.
     },
-    scripts : [
-        "https://kit.fontawesome.com/61428cba37.js"
-    ],
+    
+    image: 'img/ane-icon-black.png',
+    colorMode: {
+      disableSwitch: false,
+      switchConfig: {
+        darkIcon: ' ',
+        lightIcon: ' '
+      }
+    },
 
     prism: {
       theme: require('prism-react-renderer/themes/github'),

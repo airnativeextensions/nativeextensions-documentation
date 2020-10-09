@@ -1,18 +1,20 @@
 module.exports = {
   someSidebar: [
-    { type: 'doc', id: 'home' },
-    { 
-      type: 'category',
-      label: 'Extensions',
-      items: [
-        { type: 'ref', id: "nativewebview/home" },
-      ],
-    },
+    { type: 'doc', id: 'index' },
     { 
       type: 'category',
       label: 'Tutorials',
       items: [
         { type: 'ref', id: "tutorials/index" },
+      ],
+    },
+    { 
+      type: 'category',
+      label: 'Extensions',
+      collapsed: false,
+      items: [
+        { type: 'ref', id: "adverts/index" },
+        { type: 'ref', id: "nativewebview/index" },
       ],
     },
   ],
@@ -21,7 +23,7 @@ module.exports = {
   
 
   tutorials: [
-    { type: 'ref', id: 'home' },
+    { type: 'ref', id: 'index' },
     { type: 'doc', id: 'tutorials/index' },
     { 
       type: 'category',
@@ -47,8 +49,8 @@ module.exports = {
 
 
   nativewebview: [
-    { type: 'ref', id: 'home' },
-    { type: 'doc', id: 'nativewebview/home' },
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'nativewebview/index' },
     { 
       type: 'category', 
       label: "Get Started", 
@@ -93,13 +95,62 @@ module.exports = {
       items: [
         { type: "link", label: "ASDocs", href: "https://docs.airnativeextensions.com/asdocs/nativewebview/" },
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-NativeWebView/issues/new' }
+      ],
+    }
+  ],
+
+  adverts: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'adverts/index' },
+    { 
+      type: 'category', 
+      label: "Get Started", 
+      items: [
+        "adverts/add-the-extension",
+        "adverts/initialise-the-extension"
       ]
     },
-
-
-
-
-  ] 
+    { 
+      type: 'category', 
+      label: "Usage", 
+      items: [
+        "adverts/initialise-platform",
+        "adverts/advertising-identifier",
+        "adverts/banner-adverts",
+        "adverts/interstitials",
+        "adverts/rewarded-video-ads",
+        "adverts/native-ads",
+        "adverts/targeting"
+      ]
+    },
+    { 
+      type: 'category', 
+      label: "Consent", 
+      items: [
+        "adverts/user-messaging-platform",
+        "adverts/consent"
+      ]
+    },
+    { 
+      type: 'category', 
+      label: "Troubleshooting", 
+      items: [
+        "adverts/troubleshooting",
+        "adverts/migrating-to-version-10",   
+        "adverts/migrating-from-version-4",   
+        "adverts/migrating-to-androidx",   
+      ]
+    },
+    { 
+      type: 'category', 
+      label: "External Links", 
+      collapsed: false,
+      items: [
+        { type: "link", label: "ASDocs", href: "https://docs.airnativeextensions.com/asdocs/adverts/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Adverts/issues/new' }
+      ]
+    },
+  ],
 
 
 };
