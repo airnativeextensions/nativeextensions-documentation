@@ -36,7 +36,7 @@ The rewarded video ads have their own `isSupported` flag as rewarded video ads m
 
 To check if rewarded video ads are supported:
 
-```as3
+```actionscript
 if (Adverts.service.rewardedVideoAds.isSupported)
 {
 	// rewarded video ads are supported
@@ -50,7 +50,7 @@ This allows you to create a fallback scenario if rewarded video ads aren't suppo
 
 To create a `RewardedVideoAd` instance use the `createRewardedVideoAd()` function:
 
-```as3
+```actionscript
 var rewardedVideoAd : RewardedVideoAd = Adverts.service.rewardedVideoAds.createRewardedVideoAd();
 ```
 
@@ -59,7 +59,7 @@ This will instanciate an instance of the `RewardedVideoAd` class. You are requir
 
 You are required to set the ad unit id by calling the `setAdUnitId` function before any loading is performed.
 
-```as3
+```actionscript
 rewardedVideoAd.setAdUnitId( "REWARDED_AD_UNIT_ID" );
 ```
 
@@ -72,7 +72,7 @@ To load an advert you use the `load` function and pass it an `AdRequest` object 
 
 The simplest example is to just use a generic request:
 
-```as3
+```actionscript
 rewardedVideoAd.load( new AdRequestBuilder().build() );
 ```
 
@@ -84,7 +84,7 @@ You can listen for events that will inform you on when an advert is available or
 - `RewardedVideoAdEvent.ERROR`: dispatched if the ad failed to load
 
 
-```as3
+```actionscript
 rewardedVideoAd.addEventListener( RewardedVideoAdEvent.LOADED, loadedHandler );
 rewardedVideoAd.addEventListener( RewardedVideoAdEvent.ERROR, errorHandler );
 
@@ -122,7 +122,7 @@ The following Ad Unit IDs can be used to test rewarded video ads in your applica
 You can check whether the advert is loaded by waiting for the `RewardedVideoAdEvent.LOADED` 
 or checking the `isLoaded()` flag. It is useful to use the flag to confirm that the ad is loaded before attempting to display the ad:
 
-```as3
+```actionscript
 if (rewardedVideoAd.isLoaded())
 {
 	// Show the ad
@@ -135,13 +135,13 @@ if (rewardedVideoAd.isLoaded())
 
 When you are ready to display the rewarded video you call `show()` as below:
 
-```as3
+```actionscript
 rewardedVideoAd.show();
 ```
 
 You should check whether the ad is loaded before calling show to ensure that there is an ad available to display (as noted above). If there isn't this call will fail and return `false`.
 
-```as3
+```actionscript
 if (rewardedVideoAd.isLoaded())
 {
 	rewardedVideoAd.show();
@@ -160,7 +160,7 @@ There are several events dispatched by the rewarded video ad as the user interac
 - `RewardedVideoAdEvent.ERROR`: dispatched if there was an error presenting the ad
 
 
-```as3
+```actionscript
 rewardedVideoAd.addEventListener( RewardedVideoAdEvent.OPENED, openedHandler );
 rewardedVideoAd.addEventListener( RewardedVideoAdEvent.CLOSED, closedHandler );
 
@@ -182,7 +182,7 @@ function closedHandler( event:RewardedVideoAdEvent ):void
 Rewarding your user should take place after the `RewardedVideoAdEvent.REWARD` event is dispatched.
 This is the important event that is dispatched after the user has finished watching the video ad and is when you should give the reward associated with this event to your user.
 
-```as3
+```actionscript
 rewardedVideoAd.addEventListener( RewardedVideoAdEvent.REWARD, rewardHandler );
 
 function rewardHandler( event:RewardedVideoAdEvent ):void 
@@ -200,7 +200,7 @@ function rewardHandler( event:RewardedVideoAdEvent ):void
 
 Once you have displayed a rewarded video ad a new ad needs to be loaded in order to display the rewarded video ad again. This is a simple matter of starting a new ad request load:
 
-```as3
+```actionscript
 rewardedVideoAd.load( new AdRequestBuilder().build() );
 ```
 

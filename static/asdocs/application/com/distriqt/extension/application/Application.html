@@ -1,0 +1,447 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Application,com.distriqt.extension.application.Application,ADVERTISING,AUTHORISED,DARK,DEFAULT,DEFAULT,DENIED,ERROR_CREATION,ERROR_SINGLETON,EXT_CONTEXT_ID,FULLSCREEN,FULLSCREEN_WITH_STATUSBAR,IMMERSIVE,IOS_STATUS_BAR_DEFAULT,IOS_STATUS_BAR_LIGHT,IOS_STATUS_BLACK_OPAQUE,IOS_STATUS_BLACK_TRANSLUCENT,LIGHT,MAC_ADDRESS,NORMAL,NOT_DETERMINED,RESTRICTED,ROTATED_LEFT,ROTATED_RIGHT,SHOULD_EXPLAIN,UI_NAVIGATION_HIDE,UI_NAVIGATION_LOW_PROFILE,UI_NAVIGATION_VISIBLE,UNKNOWN,UNKNOWN,UPSIDE_DOWN,VENDOR,VERSION,abbreviation,accessibility,alarmManager,api_level,brand,country,defaults,densityDpi,description,device,device,deviceOrientation,displayMetrics,display,id,implementation,isSupported,isSupported,isSupported,keyboard,keychain,language,localTimeZone,locale,manufacturer,model,name,name,nativeScale,nativeVersion,os,phone,product,screenHeight,screenWidth,service,settings,type,utcOffset,version,version,voiceOverEnabled,xdpi,ydpi,yearClass,addBitmapOverlay,addEventListener,authorisationStatus,backButtonHelper,blackScreenHelper,checkUrlSchemeSupport,dispose,fromObject,fromObject,get,getBoolean,getBoolean,getExternalFilesDir,getFilesDir,getInt,getInt,getNumber,getNumber,getObject,getStatusBarHeight,getString,getString,hasAccess,init,isAutoStartEnabled,isDeviceIdleMode,isPowerSaveMode,openSettingsScreen,remove,remove,removeBitmapOverlay,removeEventListener,requestAccess,save,set,setAutoStart,setBoolean,setBoolean,setDisplayMode,setInt,setInt,setNumber,setNumber,setObject,setRequestedOrientation,setStage,setStatusBarColour,setStatusBarHidden,setStatusBarStyle,setString,setString,startGeneratingDeviceOrientationEvents,stopGeneratingDeviceOrientationEvents,toDisplayMode,toString,uniqueId,wasAutoStarted"><title>com.distriqt.extension.application.Application</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Application - distriqt // Application';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Application Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/application/Application.html&amp;com/distriqt/extension/application/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Application</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Application"); titleBar_setSubNav(true,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.application</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Application</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Application  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>	
+	              <p>This class represents the application extension.</p>
+	 
+	              <p>
+	 It provides application options and settings that aren't 
+	 available elsewhere through the AIR SDK.
+	 </p>
+	 
+	 
+	              <p>
+                  <b>Unique ID</b>
+               </p>
+	 
+	              <p>
+	 Provides access to the unique device ID's available on the various platforms.
+	 </p>
+	 
+	              <div class="listing" version="3.0"><pre>
+     var deviceID:String = Application.service.device.uniqueId( IDType.VENDOR );
+     </pre></div>
+	 
+	 
+	              <p>
+                  <b>
+	 Auto Start on Boot
+	 </b>
+               </p>
+	 
+	              <p>
+	 This setting allows you to make this application automatically start when the 
+	 device boots up. It is currently available on <b>Android</b> only.
+	 </p>
+	 
+	              <p>
+	 To use this you have to add some definitions to your application descriptor manifest additions 
+	 and then enable the auto start in the extension.
+	 
+	 The additions to your application descriptor are shown in the description of the <code>setAutoStart()</code> function below.
+	  
+	 Once you've added these additions the code you need to add to the actionscript side of your application is quite simple:
+	 </p>
+	 
+	              <div class="listing" version="3.0"><pre>
+     Application.init( DEV_KEY );
+     Application.service.setAutoStart( true );
+     </pre></div>
+	 
+	              <p>
+	 You can also use the <code>isAutoStartEnabled()</code> function to determine if autostart is already 
+	 enabled in your application.
+	 </p>
+	 
+	              <div class="listing" version="3.0"><pre>
+     Application.init( DEV_KEY );
+     if (!Application.service.isAutoStartEnabled())
+         Application.service.setAutoStart( true );
+     </pre></div>
+	 
+	 
+	              <p>
+                  <b>
+	 Display Modes
+	 </b>
+               </p>
+	 
+	              <p>
+	 These display modes allow you to control additional parts of the display UI. The main component here
+	 is the Android navigation bar, which on some versions of the OS shows the on-screen navigation controls:
+	 back, home, menu, search etc.
+	 </p>
+	 
+	              <p>
+	 In addition we allow setting the traditional fullscreen and normal display modes through the native 
+	 implementation.
+	 </p>
+	 
+	              <p>
+	 For more information on the available modes and options see the <code>setDisplayMode()</code> function 
+	 documentation and the <code>ApplicationDisplayModes</code>.
+	 </p>
+	 
+	              <p>
+	 With the navigation UI component you can listen for ApplicationEvent.UI_NAVIGATION_CHANGED events 
+	 dispatched to notify you when the state of the navigation UI component changes. 
+	 This may be the result of a call to <code>setDisplayMode()</code> or as the result of a system 
+	 interaction that forced the navigation UI component to change stage.
+	 </p>
+	 
+	              <p>
+	 For example:
+	 </p>
+	 
+	              <div class="listing" version="3.0"><pre>
+     Application.service.addEventListener( ApplicationEvent.UI_NAVIGATION_CHANGED, application_uiNavigationChangedHandler, false, 0, true );
+     Application.service.setDisplayMode( ApplicationDisplayModes.UI_NAVIGATION_HIDE );
+     
+     private function application_uiNavigationChangedHandler( event:ApplicationEvent ):void
+     {
+         trace( event.type + "::" + event.option );
+     }
+     </pre></div>
+	 
+	 
+	              <b>iOS</b>
+	 
+	              <p>
+	 Requires at least iOS 6+ as the unique ID functionality uses the new SDK's provided in that release. 
+	 Prior to this version it was required to do some hacks to generate a decent unique ID. If you 
+	 require older versions of iOS please contact us for a custom ANE specific to your ID needs.
+	 </p>
+	 	         <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#accessibility" class="signatureLink">accessibility</a> : <a href="../../../../com/distriqt/extension/application/Accessibility.html">Accessibility</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the Accessibility functionality to get information 
+		 about the state of the accessibility options on the device.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#alarmManager" class="signatureLink">alarmManager</a> : <a href="../../../../com/distriqt/extension/application/alarms/AlarmManager.html">AlarmManager</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the Alarm Manager functionality to set alarms and 
+		 receive alarm events.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#defaults" class="signatureLink">defaults</a> : <a href="../../../../com/distriqt/extension/application/Defaults.html">Defaults</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the defaults stored with this application.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#device" class="signatureLink">device</a> : <a href="../../../../com/distriqt/extension/application/Device.html">Device</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the device information, including unique device ID.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#display" class="signatureLink">display</a> : <a href="../../../../com/distriqt/extension/application/display/Display.html">Display</a><div class="summaryTableDescription">[read-only] </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+		 Whether the current device supports the extensions functionality
+		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#keyboard" class="signatureLink">keyboard</a> : <a href="../../../../com/distriqt/extension/application/keyboard/SoftKeyboard.html">SoftKeyboard</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the Soft Keyboard functionality to get information about 
+		 and control the device's current keyboard.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#keychain" class="signatureLink">keychain</a> : <a href="../../../../com/distriqt/extension/application/Keychain.html">Keychain</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the keychain functionality.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#service" class="signatureLink">service</a> : <a href="../../../../com/distriqt/extension/application/Application.html">Application</a><div class="summaryTableDescription">[static] [read-only] 
+		 The singleton instance of the Extension class.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#settings" class="signatureLink">settings</a> : <a href="../../../../com/distriqt/extension/application/Settings.html">Settings</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the Settings functionality.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">Application</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Application()" class="signatureLink">Application</a>()</div><div class="summaryTableDescription">
+		 Constructor
+		 		 You should not call this directly, but instead use the singleton access
+		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addBitmapOverlay()" class="signatureLink">addBitmapOverlay</a>(overlay:BitmapData):void</div><div class="summaryTableDescription">
+		 Adds a native image overlay that will display over the AIR view
+		 
+		 If an existing overlay is present it will be removed before adding the new overlay.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">[override] </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#authorisationStatus()" class="signatureLink">authorisationStatus</a>():String</div><div class="summaryTableDescription">
+		 
+		 Retrieves the current authorisation status of this application.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#backButtonHelper()" class="signatureLink">backButtonHelper</a>():void</div><div class="summaryTableDescription">
+		 Resolves an issue with Android target sdk 28+ where the back button keyboard event is not dispatched.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#blackScreenHelper()" class="signatureLink">blackScreenHelper</a>():void</div><div class="summaryTableDescription">
+		 Resolves an issue with AIR
+		 
+		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#checkUrlSchemeSupport()" class="signatureLink">checkUrlSchemeSupport</a>(urlScheme:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Returns whether or not the given URL Scheme is supported on the device
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 
+		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getStatusBarHeight()" class="signatureLink">getStatusBarHeight</a>():int</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#Display#getStatusBarHeight">Display#getStatusBarHeight</A></div>
+		 
+		 Returns the height of the status bar in pixels.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hasAccess()" class="signatureLink">hasAccess</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Helper method to determine if the current application has access to the user's photo library
+		  
+		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#init()" class="signatureLink">init</a>(key:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div>[static] 
+		 Initialises the extension class for use with the provided key.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isAutoStartEnabled()" class="signatureLink">isAutoStartEnabled</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Returns the state of the auto start on boot function.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeBitmapOverlay()" class="signatureLink">removeBitmapOverlay</a>():void</div><div class="summaryTableDescription">
+		 Removes an image overlay previously added through addBitmapOverlay
+		 		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">[override] </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#requestAccess()" class="signatureLink">requestAccess</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Performs a simple operation to force the display of the permission dialog.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setAutoStart()" class="signatureLink">setAutoStart</a>(enabled:Boolean):Boolean</div><div class="summaryTableDescription">
+		 
+		 Sets whether the application should start automatically when the device boots.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setDisplayMode()" class="signatureLink">setDisplayMode</a>(mode:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>See Display.setDisplayMode</div>
+		 
+		 Sets the display mode for the application
+		 
+		 
+		 Note:
+		 With all the System UI Navigation changes there is a limitation: 
+		 because navigation controls are so important, the least user 
+		 interaction will cause them to reappear immediately.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setRequestedOrientation()" class="signatureLink">setRequestedOrientation</a>(orientation:String):Boolean</div><div class="summaryTableDescription">
+		 		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setStage()" class="signatureLink">setStage</a>(stage:Stage):void</div><div class="summaryTableDescription">
+		 Sets the stage for fallback operations when native functionality not supported.</div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setStatusBarColour()" class="signatureLink">setStatusBarColour</a>(colour:uint, alpha:Number = 1):Boolean</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#Display#setStatusBarColour">Display#setStatusBarColour</A></div>
+		 
+		 Set the colour of the Android Status bar for API versions >= 21 (Lollipop)
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setStatusBarHidden()" class="signatureLink">setStatusBarHidden</a>(hidden:Boolean = true, animation:String = none):Boolean</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#Display#setStatusBarHidden">Display#setStatusBarHidden</A></div>
+		 
+		 Hides/Shows the status bar on iOS
+		 
+		 
+		 Support: iOS only
+		 
+		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setStatusBarStyle()" class="signatureLink">setStatusBarStyle</a>(style:uint, animated:Boolean = false):Boolean</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#Display#setStatusBarStyle">Display#setStatusBarStyle</A></div>
+		 
+		 Sets the UIStatusBarStyle for the status bar on iOS and controls the icon styles on Android
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#wasAutoStarted()" class="signatureLink">wasAutoStarted</a>():Boolean</div><div class="summaryTableDescription">
+		 Checks if the current launch was automatically started
+		 		 </div></td><td class="summaryTableOwnerCol">Application</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ERROR_CREATION" class="signatureLink">ERROR_CREATION</a> : String = The native extension context could not be created<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ERROR_SINGLETON" class="signatureLink">ERROR_SINGLETON</a> : String = The singleton has already been created. Use [ExtensionClass].instance to access the functionality<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.Application<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Application</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 6.4.021<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Application</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="accessibility"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">accessibility</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>accessibility:<a href="../../../../com/distriqt/extension/application/Accessibility.html">Accessibility</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the Accessibility functionality to get information 
+		 about the state of the accessibility options on the device.
+		 </p>
+		  
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get accessibility():<a href="../../../../com/distriqt/extension/application/Accessibility.html">Accessibility</a></code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="Accessibility.html" target="">com.distriqt.extension.application.Accessibility</a></div></div><a name="propertyDetail"></a><a name="alarmManager"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">alarmManager</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>alarmManager:<a href="../../../../com/distriqt/extension/application/alarms/AlarmManager.html">AlarmManager</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the Alarm Manager functionality to set alarms and 
+		 receive alarm events.
+		 </p>
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get alarmManager():<a href="../../../../com/distriqt/extension/application/alarms/AlarmManager.html">AlarmManager</a></code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/application/alarms/AlarmManager.html" target="">com.distriqt.extension.application.alarms.AlarmManager</a></div></div><a name="propertyDetail"></a><a name="defaults"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">defaults</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>defaults:<a href="../../../../com/distriqt/extension/application/Defaults.html">Defaults</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the defaults stored with this application.
+		 </p>
+		  
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get defaults():<a href="../../../../com/distriqt/extension/application/Defaults.html">Defaults</a></code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="Defaults.html" target="">com.distriqt.extension.application.Defaults</a></div></div><a name="propertyDetail"></a><a name="device"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">device</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>device:<a href="../../../../com/distriqt/extension/application/Device.html">Device</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the device information, including unique device ID.
+		 </p>
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get device():<a href="../../../../com/distriqt/extension/application/Device.html">Device</a></code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="Device.html" target="">com.distriqt.extension.application.Device</a></div></div><a name="propertyDetail"></a><a name="display"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">display</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>display:<a href="../../../../com/distriqt/extension/application/display/Display.html">Display</a></code>&nbsp;&nbsp;[read-only] <p></p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get display():<a href="../../../../com/distriqt/extension/application/display/Display.html">Display</a></code><br/></div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The implementation currently in use. 
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether the current device supports the extensions functionality
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="keyboard"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">keyboard</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>keyboard:<a href="../../../../com/distriqt/extension/application/keyboard/SoftKeyboard.html">SoftKeyboard</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the Soft Keyboard functionality to get information about 
+		 and control the device's current keyboard.
+		 </p>
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get keyboard():<a href="../../../../com/distriqt/extension/application/keyboard/SoftKeyboard.html">SoftKeyboard</a></code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/application/keyboard/SoftKeyboard.html" target="">com.distriqt.extension.application.keyboard.SoftKeyboard</a></div></div><a name="propertyDetail"></a><a name="keychain"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">keychain</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>keychain:<a href="../../../../com/distriqt/extension/application/Keychain.html">Keychain</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the keychain functionality.
+		 </p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get keychain():<a href="../../../../com/distriqt/extension/application/Keychain.html">Keychain</a></code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="Keychain.html" target="">com.distriqt.extension.application.Keychain</a></div></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The native version string of the native extension.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="service"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">service</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>service:<a href="../../../../com/distriqt/extension/application/Application.html">Application</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The singleton instance of the Extension class.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get service():<a href="../../../../com/distriqt/extension/application/Application.html">Application</a></code><br/></div><a name="propertyDetail"></a><a name="settings"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">settings</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>settings:<a href="../../../../com/distriqt/extension/application/Settings.html">Settings</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the Settings functionality.
+		 </p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get settings():<a href="../../../../com/distriqt/extension/application/Settings.html">Settings</a></code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="Settings.html" target="">com.distriqt.extension.application.Settings</a></div></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The version of this extension.
+		 </p>
+		 <p>
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Application()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Application</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Application()</code><p></p><p>
+		 Constructor
+		 		 You should not call this directly, but instead use the singleton access
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addBitmapOverlay()"></a><a name="addBitmapOverlay(flash.display.BitmapData)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addBitmapOverlay</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addBitmapOverlay(overlay:BitmapData):void</code><p></p><p></p><p>
+		 Adds a native image overlay that will display over the AIR view
+		 
+		 If an existing overlay is present it will be removed before adding the new overlay.
+		 
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">overlay</span>:BitmapData</code> &mdash; 	A bitmap data instance containing the image data to overlay.
+		 		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Application.html#removeBitmapOverlay()" target="">removeBitmapOverlay()</a></div></div><a name="addEventListener()"></a><a name="addEventListener(String,Function,Boolean,int,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>override public function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</code><p></p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">priority</span>:int</code> (default = <code>0</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useWeakReference</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr></table></p></div><a name="authorisationStatus()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">authorisationStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function authorisationStatus():String</code><p></p><p></p><p>
+		 <p>
+		 Retrieves the current authorisation status of this application.
+		 </p>
+		 <p>
+		 There are several possible values as defined in the <code>AuthorisationStatus</code> class.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The <code>AuthorisationStatus</code> string
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="AuthorisationStatus.html" target="">com.distriqt.extension.application.AuthorisationStatus</a></div></div><a name="backButtonHelper()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">backButtonHelper</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function backButtonHelper():void</code><p></p><p></p><p>
+		 Resolves an issue with Android target sdk 28+ where the back button keyboard event is not dispatched.
+		 
+		 Call this function as soon as possible after your application launch.
+		 </p></div><a name="blackScreenHelper()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">blackScreenHelper</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function blackScreenHelper():void</code><p></p><p></p><p>
+		 Resolves an issue with AIR
+		 
+		 </p></div><a name="checkUrlSchemeSupport()"></a><a name="checkUrlSchemeSupport(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">checkUrlSchemeSupport</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function checkUrlSchemeSupport(urlScheme:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Returns whether or not the given URL Scheme is supported on the device
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">urlScheme</span>:String</code> &mdash; 	The URL scheme to check
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the given URL scheme is supported, otherwise false.
+		 
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">Check if the device can open the facebook url scheme
+		 
+		 <div class="listing"><pre>
+         var canOpenFacebook:Boolean = Application.service.checkUrlSchemeSupport( "facebook://" );
+         </pre></div>
+		 		 </div></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 <p>
+		 Disposes the extension and releases any allocated resources. Once this function 
+		 has been called, a call to <code>init</code> is neccesary again before any of the 
+		 extensions functionality will work.
+		 </p>
+		 </p></div><a name="getStatusBarHeight()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getStatusBarHeight</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getStatusBarHeight():int</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#Display#getStatusBarHeight">Display#getStatusBarHeight</A></div><p></p><p></p><p>
+		 <p>
+		 Returns the height of the status bar in pixels. 
+		 The status bar is the top area of the UI where items 
+		 such as the battery level, connection strength, and 
+		 notifications etc are displayed.
+		 </p>
+		  
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; The height of the status bar in pixels
+		 
+		 </td></tr></table></div><a name="hasAccess()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hasAccess</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function hasAccess():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Helper method to determine if the current application has access to the user's photo library
+		 </p> 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 Initialises the extension class for use with the provided key.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the key is invalid
+		 </td></tr></table></div><a name="isAutoStartEnabled()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isAutoStartEnabled</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function isAutoStartEnabled():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Returns the state of the auto start on boot function.
+		 </p>
+		  
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the application is set to auto start on device boot and false otherwise
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Application.html#setAutoStart" target="">setAutoStart</a></div></div><a name="removeBitmapOverlay()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeBitmapOverlay</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeBitmapOverlay():void</code><p></p><p></p><p>
+		 Removes an image overlay previously added through <code>addBitmapOverlay</code>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Application.html#addBitmapOverlay()" target="">addBitmapOverlay()</a></div></div><a name="removeEventListener()"></a><a name="removeEventListener(String,Function,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>override public function removeEventListener(type:String, listener:Function, useCapture:Boolean = false):void</code><p></p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr></table></p></div><a name="requestAccess()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">requestAccess</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function requestAccess():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Performs a simple operation to force the display of the permission dialog.
+		 </p>
+		 <p>
+		 Note this will only be shown if the authorisation status is currently NOT_DETERMINED
+		 </p> 
+		 <p>
+		 You do not need to call this function, it just allows you to control when the permission dialog is presented.
+		 If you don't call this function then the permission dialog will be displayed just before your first access to the
+		 users' photos.
+		 </p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="setAutoStart()"></a><a name="setAutoStart(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setAutoStart</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setAutoStart(enabled:Boolean):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Sets whether the application should start automatically when the device boots.
+		 </p>
+		 
+		 <p>
+		 This stores a setting in the applications shared preferences
+		 to specify the application to start on boot.
+		 </p>
+		 
+		 <p><b>Support</b>: Android only</p>
+		 
+		 <p>
+		 In order for this to work correctly you must add the following 
+		 to your manifestAdditions node in your application descriptor file:
+		 </p>
+		 
+		 <pre>
+		 &lt;uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+		 		 &lt;application>
+		     &lt;receiver android:enabled="true" android:name="com.distriqt.extension.application.receivers.ApplicationStartupReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+		         &lt;intent-filter>
+		             &lt;action android:name="android.intent.action.BOOT_COMPLETED" />
+		             &lt;action android:name="android.intent.action.QUICKBOOT_POWERON" />
+		             &lt;category android:name="android.intent.category.DEFAULT" />
+		         &lt;/intent-filter>
+		     &lt;/receiver>
+		 &lt;/application>	
+		 </pre>
+		 
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">enabled</span>:Boolean</code> &mdash; If true the application will automatically start 
+		 					on following device bootups, otherwise, if false 
+		 					the application won't autostart at boot.
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the setting was changed successfully or <code>false</code> if there was an issue
+		 </td></tr></table></div><a name="setDisplayMode()"></a><a name="setDisplayMode(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setDisplayMode</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setDisplayMode(mode:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>See Display.setDisplayMode</div><p></p><p></p><p>
+		 <p>
+		 Sets the display mode for the application
+		 </p>
+		 
+		 <p><b>Note:</b>
+		 With all the System UI Navigation changes there is a limitation: 
+		 because navigation controls are so important, the least user 
+		 interaction will cause them to reappear immediately. This means 
+		 that you may use the hidden state of the navigation bar only when 
+		 there is no user interaction, e.g. when watching a movie or other
+		 such activity.
+		 </p>
+		 
+		 <p><b>Support</b>: Android only</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">mode</span>:String</code> &mdash; The display mode option to set
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="ApplicationDisplayModes.html#NORMAL" target="">ApplicationDisplayModes.NORMAL</a><br/><a href="ApplicationDisplayModes.html#FULLSCREEN" target="">ApplicationDisplayModes.FULLSCREEN</a><br/><a href="ApplicationDisplayModes.html#IMMERSIVE" target="">ApplicationDisplayModes.IMMERSIVE</a><br/><a href="ApplicationDisplayModes.html#UI_NAVIGATION_HIDE" target="">ApplicationDisplayModes.UI_NAVIGATION_HIDE</a><br/><a href="ApplicationDisplayModes.html#UI_NAVIGATION_LOW_PROFILE" target="">ApplicationDisplayModes.UI_NAVIGATION_LOW_PROFILE</a><br/><a href="ApplicationDisplayModes.html#UI_NAVIGATION_VISIBLE" target="">ApplicationDisplayModes.UI_NAVIGATION_VISIBLE</a></div></div><a name="setRequestedOrientation()"></a><a name="setRequestedOrientation(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setRequestedOrientation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setRequestedOrientation(orientation:String):Boolean</code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">orientation</span>:String</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; </td></tr></table></div><a name="setStage()"></a><a name="setStage(flash.display.Stage)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setStage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setStage(stage:Stage):void</code><p></p><p></p><p>
+		 Sets the stage for fallback operations when native functionality not supported.
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stage</span>:Stage</code></td></tr></table></p></div><a name="setStatusBarColour()"></a><a name="setStatusBarColour(uint,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setStatusBarColour</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setStatusBarColour(colour:uint, alpha:Number = 1):Boolean</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#Display#setStatusBarColour">Display#setStatusBarColour</A></div><p></p><p></p><p>
+		 <p>
+		 Set the colour of the Android Status bar for API versions >= 21 (Lollipop)
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">colour</span>:uint</code> &mdash; The colour to use for the background of the status bar
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">alpha</span>:Number</code> (default = <code>1</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the colour was set, or <code>false</code> if the device doesn't support status bar colour or if an error occurred.
+		 
+		 </td></tr></table></div><a name="setStatusBarHidden()"></a><a name="setStatusBarHidden(Boolean,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setStatusBarHidden</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setStatusBarHidden(hidden:Boolean = true, animation:String = none):Boolean</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#Display#setStatusBarHidden">Display#setStatusBarHidden</A></div><p></p><p></p><p>
+		 <p>
+		 Hides/Shows the status bar on iOS
+		 </p>
+		 
+		 <p><b>Support</b>: iOS only</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">hidden</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; Whether the status bar is hidden or shown (true to hide)
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">animation</span>:String</code> (default = <code>none</code>)<code></code> &mdash; The animation to use (either "fade", "slide" or "none" )
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="setStatusBarStyle()"></a><a name="setStatusBarStyle(uint,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setStatusBarStyle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setStatusBarStyle(style:uint, animated:Boolean = false):Boolean</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#Display#setStatusBarStyle">Display#setStatusBarStyle</A></div><p></p><p></p><p>
+		 <p>
+		 Sets the UIStatusBarStyle for the status bar on iOS and controls the icon styles on Android
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">style</span>:uint</code> &mdash; 	The status bar style to be set
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">animated</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Whether to animate the style transition
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="StatusBarStyle.html#DEFAULT" target="">StatusBarStyle.DEFAULT</a><br/><a href="StatusBarStyle.html#DARK" target="">StatusBarStyle.DARK</a><br/><a href="StatusBarStyle.html#LIGHT" target="">StatusBarStyle.LIGHT</a></div></div><a name="wasAutoStarted()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">wasAutoStarted</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function wasAutoStarted():Boolean</code><p></p><p></p><p>
+		 Checks if the current launch was automatically started
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Application.html#setAutoStart()" target="">setAutoStart()</a></div></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="ERROR_CREATION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ERROR_CREATION</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const ERROR_CREATION:String = The native extension context could not be created</code><p></p></div><a name="constantDetail"></a><a name="ERROR_SINGLETON"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ERROR_SINGLETON</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ERROR_SINGLETON:String = The singleton has already been created. Use [ExtensionClass].instance to access the functionality</code><p></p></div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.Application</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 6.4.021</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Oct 9 2020, 10:41 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Oct 9 2020, 10:41 PM +10:00  -->

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="CentralManager,com.distriqt.extension.bluetoothle.CentralManager,AUTHORISED,DENIED,EXT_CONTEXT_ID,NOT_DETERMINED,RESTRICTED,SHOULD_EXPLAIN,STATE_OFF,STATE_ON,STATE_RESETTING,STATE_UNAUTHORISED,STATE_UNKNOWN,STATE_UNSUPPORTED,UNKNOWN,VERSION,centralManager,implementation,isEnabled,isScanning,isSupported,isSupported,nativeVersion,peripheralManager,peripherals,service,state,state,state,version,addService,authorisationStatus,connect,disable,disconnect,dispose,enable,enableWithUI,hasAuthorisation,init,isAdvertising,removeAllServices,removeService,requestAuthorisation,respondToRequest,scanForPeripherals,startAdvertising,stopAdvertising,stopScan,updateValue"><title>com.distriqt.extension.bluetoothle.CentralManager</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'CentralManager - distriqt // BluetoothLE';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // BluetoothLE Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/bluetoothle/CentralManager.html&amp;com/distriqt/extension/bluetoothle/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">CentralManager</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CentralManager"); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.bluetoothle</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  CentralManager extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isScanning" class="signatureLink">isScanning</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Whether the device is currently scanning for peripheral services.</div></td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#peripherals" class="signatureLink">peripherals</a> : Vector.&lt;<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a>&gt;<div class="summaryTableDescription">[read-only] 
+		 
+		 The list of currently connected peripherals
+		 
+		 </div></td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#state" class="signatureLink">state</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The current state of the bluetooth device hardware
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">CentralManager</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#connect()" class="signatureLink">connect</a>(peripheral:<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Attempt to connect to the specified Peripheral.</div></td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#disconnect()" class="signatureLink">disconnect</a>(peripheral:<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Attempt to disconnect from the specified Peripheral.</div></td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#scanForPeripherals()" class="signatureLink">scanForPeripherals</a>(uuids:Vector.&lt;String&gt; = null, options:<a href="../../../../com/distriqt/extension/bluetoothle/PeripheralScanningOptions.html">PeripheralScanningOptions</a> = null):Boolean</div><div class="summaryTableDescription">
+		 
+		 Starts a scan to discover peripheral devices that available for this
+		 device to connect to.</div></td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stopScan()" class="signatureLink">stopScan</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Stops scanning for peripherals
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">CentralManager</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:peripheral:connect" class="signatureLink">peripheral:connect</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 </td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:peripheral:connect:fail" class="signatureLink">peripheral:connect:fail</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 </td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:peripheral:disconnect" class="signatureLink">peripheral:disconnect</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 </td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:peripheral:discovered" class="signatureLink">peripheral:discovered</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the central manager scan discovers a peripheral.</td><td class="summaryTableOwnerCol">CentralManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:peripheralManager:state:changed" class="signatureLink">peripheralManager:state:changed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the state of the Bluetooth adpater changes.</td><td class="summaryTableOwnerCol">CentralManager</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="isScanning"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isScanning</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>isScanning:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Whether the device is currently scanning for peripheral services.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isScanning():Boolean</code><br/></div><a name="propertyDetail"></a><a name="peripherals"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">peripherals</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>peripherals:Vector.&lt;<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a>&gt;</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The list of currently connected peripherals
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get peripherals():Vector.&lt;<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a>&gt;</code><br/></div><a name="propertyDetail"></a><a name="state"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">state</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>state:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The current state of the bluetooth device hardware
+		 </p>
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get state():String</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="BluetoothLEState.html" target="">com.distriqt.extension.bluetoothle.BluetoothLEState</a></div></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="connect()"></a><a name="connect(com.distriqt.extension.bluetoothle.objects.Peripheral)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">connect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function connect(peripheral:<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Attempt to connect to the specified Peripheral. This peripheral must be an object 
+		 returned in a <code>PeripheralEvent.DISCOVERED</code> event.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">peripheral</span>:<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a></code> &mdash; The <code>Peripheral</code> to initiate a connection
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the connection attempt was successfully started 
+		 			and false if the peripheral was invalid 
+		 			or the bluetooth hardware is in an invalid state.
+		 
+		 </td></tr></table></div><a name="disconnect()"></a><a name="disconnect(com.distriqt.extension.bluetoothle.objects.Peripheral)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">disconnect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function disconnect(peripheral:<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Attempt to disconnect from the specified Peripheral.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">peripheral</span>:<a href="../../../../com/distriqt/extension/bluetoothle/objects/Peripheral.html">Peripheral</a></code> &mdash; The <code>Peripheral</code> to disconnect
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the disconnection was successfully started 
+		 			and false if the peripheral was invalid 
+		 			or the bluetooth hardware is in an invalid state.
+		 
+		 </td></tr></table></div><a name="scanForPeripherals()"></a><a name="scanForPeripherals(Vector$String,com.distriqt.extension.bluetoothle.PeripheralScanningOptions)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scanForPeripherals</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function scanForPeripherals(uuids:Vector.&lt;String&gt; = null, options:<a href="../../../../com/distriqt/extension/bluetoothle/PeripheralScanningOptions.html">PeripheralScanningOptions</a> = null):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Starts a scan to discover peripheral devices that available for this
+		 device to connect to.
+		 </p>
+		 <p>
+		 Each UUID string represents the UUID of a service that a peripheral is advertising
+		 </p>
+		 <p>
+		  Because scanning is battery-intensive, you should observe the following guidelines:
+		 </p>
+		 <ul>
+		 <li>As soon as you find the desired device, stop scanning.</li>
+		 <li>Never scan on a loop, and set a time limit on your scan. A device that was previously available may have moved out of range, and continuing to scan drains the battery.</li>
+		 </ul>
+		 
+		 <p>
+		 <b>Note</b>
+		 Under Android it is not common practice to filter by uuids, so you may find this will actually return 
+		 all the detected devices and not just the specified uuids. It seems to operate slightly differently
+		 on different hardware so just be aware that you may get peripherals discovered that were not in your uuids.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uuids</span>:Vector.&lt;String&gt;</code> (default = <code>null</code>)<code></code> &mdash; 	An array of peripheral service UUIDs to scan for. If null the central manager returns <b>all</b> discovered peripherals. 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../com/distriqt/extension/bluetoothle/PeripheralScanningOptions.html">PeripheralScanningOptions</a></code> (default = <code>null</code>)<code></code> &mdash; An optional parameter specifying options to customize the scan
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the scan started successfully and false if BLE is not available or turned off
+		 
+		 </td></tr></table></div><a name="stopScan()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stopScan</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stopScan():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Stops scanning for peripherals
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the scanning was taking place and has been stopped, false if the device was not scanning
+		 
+		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:peripheral:connect"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">peripheral:connect</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralEvent.html"><code>com.distriqt.extension.bluetoothle.events.PeripheralEvent</code></a><br/><span class="label">PeripheralEvent.type property = </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralEvent.html#CONNECT"><code>com.distriqt.extension.bluetoothle.events.PeripheralEvent.CONNECT</code></a><br/><p></p><p></p><p>
+	 </p>
+		 </div><a name="event:peripheral:connect:fail"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">peripheral:connect:fail</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralEvent.html"><code>com.distriqt.extension.bluetoothle.events.PeripheralEvent</code></a><br/><span class="label">PeripheralEvent.type property = </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralEvent.html#CONNECT_FAIL"><code>com.distriqt.extension.bluetoothle.events.PeripheralEvent.CONNECT_FAIL</code></a><br/><p></p><p></p><p>
+	 </p>
+		 </div><a name="event:peripheral:disconnect"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">peripheral:disconnect</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralEvent.html"><code>com.distriqt.extension.bluetoothle.events.PeripheralEvent</code></a><br/><span class="label">PeripheralEvent.type property = </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralEvent.html#DISCONNECT"><code>com.distriqt.extension.bluetoothle.events.PeripheralEvent.DISCONNECT</code></a><br/><p></p><p></p><p>
+	 </p>
+		 </div><a name="event:peripheral:discovered"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">peripheral:discovered</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralEvent.html"><code>com.distriqt.extension.bluetoothle.events.PeripheralEvent</code></a><br/><span class="label">PeripheralEvent.type property = </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralEvent.html#DISCOVERED"><code>com.distriqt.extension.bluetoothle.events.PeripheralEvent.DISCOVERED</code></a><br/><p></p><p></p><p>
+	 <p>
+	 Dispatched when the central manager scan discovers a peripheral.
+	 This may be dispatched multiple times for the same device.
+	 </p>
+	 
+	 </p>
+		 </div><a name="event:peripheralManager:state:changed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">peripheralManager:state:changed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralManagerEvent.html"><code>com.distriqt.extension.bluetoothle.events.PeripheralManagerEvent</code></a><br/><span class="label">PeripheralManagerEvent.type property = </span><a href="../../../../com/distriqt/extension/bluetoothle/events/PeripheralManagerEvent.html#STATE_CHANGED"><code>com.distriqt.extension.bluetoothle.events.PeripheralManagerEvent.STATE_CHANGED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the state of the Bluetooth adpater changes. 
+		 For example, the user has turned off Bluetooth on their device.
+		 </p>
+		 <p>
+		 You should listen for this event and make sure you re-start any 
+		 services when the adapter is turned on again.
+		 </p>
+		 
+		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Oct 9 2020, 11:20 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Oct 9 2020, 11:20 PM +10:00  -->

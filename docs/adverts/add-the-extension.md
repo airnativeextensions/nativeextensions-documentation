@@ -301,7 +301,7 @@ You can use the `isSupported` flag to determine if this extension is supported o
 This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
 
 
-```as3
+```actionscript
 if (Adverts.isSupported)
 {
 	// Functionality here

@@ -8,7 +8,7 @@ sidebar_label: Initialise the Extension
 You should always check whether the extension is supported before making calls. 
 This allows you to react to whether the functionality is available on the device.
 
-```as3
+```actionscript
 if (Adverts.isSupported)
 {
 	//	Functionality here
@@ -24,12 +24,12 @@ You should use the  `GoogleApiAvailability` helper in the `com.distriqt.playserv
 
 For example:
 
-```as3
+```actionscript
 import com.distriqt.extension.playservices.base.ConnectionResult;
 import com.distriqt.extension.playservices.base.GoogleApiAvailability;
 ```
 
-```as3
+```actionscript
 var result:int = GoogleApiAvailability.instance.isGooglePlayServicesAvailable();
 if (result != ConnectionResult.SUCCESS)
 {

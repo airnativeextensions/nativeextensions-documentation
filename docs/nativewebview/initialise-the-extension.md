@@ -3,17 +3,19 @@ title: Initialise the Extension
 sidebar_label: Initialise the Extension
 ---
 
+
 ## Supported
 
 You should always check whether the extension is supported before making calls. 
 This allows you to react to whether the functionality is available on the device.
 
-```actionscript
+```as3
 if (NativeWebView.isSupported)
 {
   //	Functionality here
 }
 ```
+
 
 ## Initialisation
 
@@ -23,7 +25,7 @@ In order to specify these options and initialise the platform you must call `ini
 
 For example: 
 
-```actionscript
+```as3
 var options:NativeWebViewOptions = new NativeWebViewOptions()
         .setWindowsOptions(
                 new WindowsOptions()
@@ -34,7 +36,7 @@ var options:NativeWebViewOptions = new NativeWebViewOptions()
 
 The initialise process is asynchronous so you can either use a **callback**:
 
-```actionscript
+```as3
 NativeWebView.service.initialisePlatform( options, function(success:Boolean):void
 {
         // You can now create web views
@@ -43,7 +45,7 @@ NativeWebView.service.initialisePlatform( options, function(success:Boolean):voi
 
 Or listen for the `NativeWebViewEvent.INITIALISED` event:
 
-```actionscript
+```as3
 NativeWebView.service.addEventListener( NativeWebViewEvent.INITIALISED, function( event:NativeWebViewEvent ):void
 {
         NativeWebView.service.removeEventListener( NativeWebViewEvent.INITIALISED, arguments.callee );
@@ -53,6 +55,6 @@ NativeWebView.service.initialisePlatform( options );
 ```
 
 
-:::note
-See the notes in the `NativeWebViewOptions` class for details and support of the specific options
-:::
+>
+> See the notes in the `NativeWebViewOptions` class for details and support of the specific options
+>

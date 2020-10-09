@@ -3,11 +3,13 @@ title: Create a WebView
 sidebar_label: Create a WebView
 ---
 
+## Create a WebView 
+
 Once you have initialised the extension, creating a web view is simply a matter of calling the `createWebView()` function with your parameters.
 
 The following example creates a `WebView` of size 400x600 and loads a URL. It also demonstrates some of the events dispatched by the WebView.
 
-```actionscript
+```as3
 var viewPort:Rectangle = new Rectangle( 0, 0, 400, 600 );
 			
 var webView:WebView = NativeWebView.service.createWebView( viewPort ) ;
@@ -15,7 +17,7 @@ var webView:WebView = NativeWebView.service.createWebView( viewPort ) ;
 
 You can then attach listeners and load content into the view
 
-```actionscript
+```as3
 webView.addEventListener( NativeWebViewEvent.LOCATION_CHANGE, webView_locationChangeHandler );
 webView.addEventListener( NativeWebViewEvent.COMPLETE, webView_completeHandler );
 webView.addEventListener( NativeWebViewEvent.ERROR, webView_errorHandler );
@@ -25,7 +27,7 @@ webView.loadURL( "https://airnativeextensions.com" );
 
 The events give you information about the content in the view
 
-```actionscript
+```as3
 function webView_locationChangeHandler( event:NativeWebViewEvent ):void
 {
 	trace( "location change: " + event.data );
@@ -51,7 +53,7 @@ When creating a `WebView` you can specify some options as to how the view will h
 To do so, create an instance of the `WebViewOptions` class and set the options as required. *Some of these options are platform dependent so make sure you read the documentation in the `WebViewOptions` class.*
 
 
-```actionscript
+```as3
 var options:WebViewOptions = new WebViewOptions();
 
 options.mediaPlaybackRequiresUserAction = true;
@@ -64,7 +66,7 @@ options.scrollBarStyle = WebViewOptions.SCROLLBAR_LIGHT;
 
 This then gets passed as the second parameter to the `createWebView()` function:
 
-```actionscript
+```as3
 var webView:WebView = NativeWebView.service.createWebView( viewPort, options );
 ```
 
@@ -80,7 +82,7 @@ The link target action option determines how links with `"_blank"` targets are h
 
 For example:
 
-```actionscript
+```as3
 var options:WebViewOptions = new WebViewOptions();
 options.linkTargetAction = LinkTargetAction.BLOCK;
 

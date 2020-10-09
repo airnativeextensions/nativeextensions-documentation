@@ -19,13 +19,13 @@ With v5.0 you specify the unit id on the advert view. So you no longer have to s
 
 This means the follow version 4 code,
 
-```as3
+```actionscript
 Adverts.service.initialisePlatform( AdvertPlatform.PLATFORM_ADMOB, AD_UNIT_ID );
 ```
 
 becomes:
 
-```as3
+```actionscript
 Adverts.service.initialisePlatform( AdvertPlatform.PLATFORM_ADMOB );
 
 var adView:AdView = Adverts.service.createAdView();
@@ -41,7 +41,7 @@ adView.setAdUnitId( AD_UNIT_ID );
 
 Previously to display an advert:
 
-```as3
+```actionscript
 var position:AdvertPosition = new AdvertPosition();
 position.verticalAlign   = AdvertPosition.ALIGN_BOTTOM;
 position.horizontalAlign = AdvertPosition.ALIGN_CENTER;
@@ -51,7 +51,7 @@ Adverts.service.showAdvert( position );
 
 This now becomes:
 
-```as3
+```actionscript
 var adView:AdView = Adverts.service.createAdView();
 adView.setAdUnitId( AD_UNIT_ID );
 adView.setAdSize( AdSize.SMART_BANNER );
@@ -73,7 +73,7 @@ There is a bit more to the code now, however we believe this gives you much more
 
 Listening for events is much more specified now. The following:
 
-```as3
+```actionscript
 Adverts.service.addEventListener( AdvertEvent.RECEIVED_AD, adverts_receivedAdHandler );
 private function adverts_receivedAdHandler( event:AdvertEvent ):void
 {
@@ -83,7 +83,7 @@ private function adverts_receivedAdHandler( event:AdvertEvent ):void
 
 becomes:
 
-```as3
+```actionscript
 adView.addEventListener( AdViewEvent.LOADED, loadedHandler );
 
 function loadedHandler( event:AdViewEvent ):void
@@ -100,13 +100,13 @@ You can listen for many more events on the `AdView` now as well.
 
 Hiding an advert is a simple change, the following:
 
-```as3
+```actionscript
 Adverts.service.hideAdvert();
 ```
 
 becomes:
 
-```as3
+```actionscript
 adView.hide();
 ```
 
@@ -118,13 +118,13 @@ adView.hide();
 If you wish to manually refresh the advert you can call the refresh function. 
 This will make the advert update with a new ad request.
 
-```as3
+```actionscript
 Adverts.service.refresh();
 ```
 
 This now changes to a new load request:
 
-```as3
+```actionscript
 adView.load( new AdRequestBuilder().build() );
 ```
 
@@ -145,7 +145,7 @@ Previously to load an interstitial you called `load` on the `Interstitials` clas
 
 So
 
-```as3
+```actionscript
 Adverts.service.interstitials.addEventListener( InterstitialEvent.LOADED, loadedHandler );
 Adverts.service.interstitials.addEventListener( InterstitialEvent.ERROR, errorHandler );
 
@@ -154,7 +154,7 @@ Adverts.service.interstitials.load( AD_UNIT_ID );
 
 becomes:
 
-```as3
+```actionscript
 var interstitial:InterstitialAd = Adverts.service.interstitials.createInterstitialAd();
 
 interstitial.setAdUnitId( AD_UNIT_ID );
@@ -170,7 +170,7 @@ The `interstitial` instance should be held onto and reused in your application.
 
 Previously to display an interstitial:
 
-```as3
+```actionscript
 Adverts.service.interstitials.addEventListener( InterstitialEvent.DISMISSED, dismissedHandler );
 
 if (Adverts.service.interstitials.isReady())
@@ -182,7 +182,7 @@ if (Adverts.service.interstitials.isReady())
 This now becomes:
 
 
-```as3
+```actionscript
 interstitial.addEventListener( InterstitialAdEvent.CLOSED, closedHandler );
 
 if (interstitial.isLoaded())
@@ -202,13 +202,13 @@ This will now only return the advertisting identifier, however we have improved 
 
 Previously:
 
-```as3
+```actionscript
 var advertisingId:String = Adverts.service.uniqueId( Adverts.ADVERTISING );
 ```
 
 Becomes:
 
-```as3
+```actionscript
 Adverts.service.addEventListener( AdvertisingIdEvent.ADVERTISING_ID, advertisingIdHandler );
 Adverts.service.getAdvertisingId();
 

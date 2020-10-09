@@ -3,6 +3,8 @@ title: Add the Extension
 sidebar_label: Add the Extension
 ---
 
+## Add the Extension
+
 First step is always to add the extension to your development environment. 
 To do this use the tutorial located [here](https://airnativeextensions.github.io/tutorials/getting-started).
 

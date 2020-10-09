@@ -34,7 +34,7 @@ Before attempting to integrate the SDK you should ensure Funding Choices is enab
 
 You retrieve the consent information through the `ConsentInformation` instance accessible via:
 
-```as3
+```actionscript
 var consentInformation:ConsentInformation = Adverts.service.ump.getConsentInformation();
 ```
 
@@ -50,7 +50,7 @@ This object has the consent information including:
 
 To update consent information call the  `requestConsentInfoUpdate()` function on the consent information object.
 
-```as3
+```actionscript
 var params:ConsentRequestParameters = new ConsentRequestParameters();
 
 consentInformation.requestConsentInfoUpdate( params );
@@ -61,7 +61,7 @@ This will dispatch one of two possible events:
 - `ConsentInformationEvent.CONSENT_INFO_UPDATE_SUCCESS`: When the consent information was updated successfully;
 - `ConsentInformationEvent.CONSENT_INFO_UPDATE_FAILURE`: When there was an error updating the consent information;
 
-```as3
+```actionscript
 var consentInformation:ConsentInformation = Adverts.service.ump.getConsentInformation();
 consentInformation.addEventListener( ConsentInformationEvent.CONSENT_INFO_UPDATE_SUCCESS, updateSuccessHandler );
 consentInformation.addEventListener( ConsentInformationEvent.CONSENT_INFO_UPDATE_FAILURE, updateFailureHandler );
@@ -93,7 +93,7 @@ There are a variety of reasons why a form may not be available, such as:
 
 To check if a form is available, use the `isConsentFormAvailable()` method on the `ConsentInformation` instance. 
 
-```as3
+```actionscript
 if (consentInformation.isConsentFormAvailable())
 {
     // A form is available to load
@@ -111,7 +111,7 @@ This will dispatch one of two possible events:
 - `UserMessagingPlatformEvent.CONSENT_FORM_LOAD_FAILURE`: When an error occurred, try again later to load the form successfully before attempting to show;
 
 
-```as3
+```actionscript
 if (consentInformation.isConsentFormAvailable())
 {
     Adverts.service.ump.addEventListener( UserMessagingPlatformEvent.CONSENT_FORM_LOAD_SUCCESS, loadFormSuccessHandler );
@@ -135,7 +135,7 @@ function loadFormFailureHandler( event:UserMessagingPlatformEvent ):void
 
 To present the form use the `showConsentForm()` on the `UserMessagingPlatform` instance.
 
-```as3
+```actionscript
 Adverts.service.ump.showConsentForm();
 ```
 
@@ -150,7 +150,7 @@ You should determine if the user requires consent prior to presenting the form. 
 For example:
 
 
-```as3
+```actionscript
 function loadFormSuccessHandler( event:UserMessagingPlatformEvent ):void
 {
     // Form loaded and ready to be shown
@@ -180,7 +180,7 @@ The UMP SDK provides a simple way to test your app's behavior as though the devi
 
 You will need to provide your test device's hashed ID in your app's debug settings to use the debug functionality. If you call `requestConsentUpdate()` without setting this value, your app will log the required ID hash when run to the [native device log](https://airnativeextensions.github.io/tutorials/device-logs).
 
-```as3
+```actionscript
 var params:ConsentRequestParameters = new ConsentRequestParameters()
         .setTagForUnderAgeOfConsent( false )
         .setConsentDebugSettings(
@@ -202,7 +202,7 @@ Note that debug settings only work on test devices. Emulators do not need to be 
 
 In testing your app with the UMP SDK, you may find it helpful to reset the state of the consent SDK so that you can simulate a user's first install experience. The SDK provides the `reset()` method of the `ConsentInformation` interface to do this.
 
-```as3
+```actionscript
 Adverts.service.ump.getConsentInformation().reset();
 ```
 

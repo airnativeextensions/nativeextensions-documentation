@@ -24,7 +24,7 @@ The interstitials have their own `isSupported` flag as interstitials aren't avai
 
 To check if interstitials are supported:
 
-```as3
+```actionscript
 if (Adverts.service.interstitials.isSupported)
 {
 	// Interstitials are supported
@@ -39,7 +39,7 @@ This allows you to create a fallback scenario if interstitials aren't supported 
 To create an `InterstitialAd` use the `createInterstitialAd` function:
 
 
-```as3
+```actionscript
 var interstitial:InterstitialAd = Adverts.service.interstitials.createInterstitialAd();
 ```
 
@@ -48,7 +48,7 @@ This will instanciate an instance of the `InterstitialAd` class.
 
 You must set the ad unit on this ad as soon as possible by using the `setAdUnitId` function:
 
-```as3
+```actionscript
 interstitial.setAdUnitId( "interstitial_adUnitId" );
 ```
 
@@ -64,7 +64,7 @@ To load an advert you use the `load` function and pass it an `AdRequest` object 
 
 The simplest example is to just use a generic request:
 
-```as3
+```actionscript
 interstitial.load( new AdRequestBuilder().build() );
 ```
 
@@ -78,7 +78,7 @@ There are two events of interest here:
 
 You can use the loaded event to delay displaying the ad until you are sure an ad is available.
 
-```as3
+```actionscript
 interstitial.addEventListener( InterstitialAdEvent.LOADED, loadedHandler );
 interstitial.addEventListener( InterstitialAdEvent.ERROR, errorHandler );
 
@@ -116,7 +116,7 @@ The following Ad Unit IDs can be used to test interstitial ads in your applicati
 You can check whether the advert is loaded by waiting for the `InterstitialEvent.LOADED` 
 or checking the `isLoaded()` flag. It is useful to use the flag to confirm that the ad is loaded before attempting to display the ad:
 
-```as3
+```actionscript
 if (interstitial.isLoaded())
 {
 	// Show the ad
@@ -128,7 +128,7 @@ if (interstitial.isLoaded())
 
 When you are ready to display your advert you call `show()` as below.
 
-```as3
+```actionscript
 interstitial.show();
 ```
 
@@ -136,7 +136,7 @@ When showing an advert you should save any content in your application as the ad
 
 As noted above you should check if the advert is loaded before calling show:
 
-```as3
+```actionscript
 if (interstitial.isLoaded())
 {
 	interstitial.show();
@@ -154,7 +154,7 @@ There are several events dispatched by the advert as the user interacts with it:
 
 At the very least we suggest you should listen for the closed event to know when control returns to your application.
 
-```as3
+```actionscript
 interstitial.addEventListener( InterstitialAdEvent.OPENED, openedHandler );
 interstitial.addEventListener( InterstitialAdEvent.LEFT_APPLICATION, leftApplicationHandler );
 interstitial.addEventListener( InterstitialAdEvent.CLOSED, closedHandler );
@@ -188,7 +188,7 @@ function closedHandler( event:InterstitialAdEvent ):void
 
 Once you have displayed an interstitial a new ad needs to be loaded in order to display the interstitial again. This is a simple matter of starting a new ad request load:
 
-```as3
+```actionscript
 interstitial.load( new AdRequestBuilder().build() );
 ```
 

@@ -12,13 +12,13 @@ This is a two step process. You should initially call `setup` specifying you pla
 
 Firstly select the platform:
 
-```as3
+```actionscript
 Adverts.service.setup( AdvertPlatform.PLATFORM_ADMOB );
 ```
 
 Then call `initialise()`:
 
-```as3
+```actionscript
 Adverts.service.initialise();
 ```
 
@@ -36,7 +36,7 @@ Adverts.service.initialise();
 You can also check whether a platform is supported before initialising it to dynamically swap platforms, 
 by using the `isPlatformSupported` function.
 
-```as3
+```actionscript
 if (Adverts.service.isPlatformSupported( AdvertPlatform.PLATFORM_ADMOB ))
 {
 	Adverts.service.initialisePlatform( AdvertPlatform.PLATFORM_ADMOB, YOUR_ACCOUNT_ID );

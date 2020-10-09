@@ -18,7 +18,7 @@ Native ads are loaded via the `NativeAd` class.
 
 Firstly create an instance of the `NativeAd` by calling `Adverts.service.nativeAds.createNativeAd()` passing your unit id:
 
-```as3
+```actionscript
 var nativeAd:NativeAd = Adverts.service.nativeAds.createNativeAd( "ca-app-pub-3940256099942544/2247696110" );
 ```
 
@@ -26,13 +26,13 @@ To load an ad call the `loadAd()` function of the `NativeAd` instance and pass a
 
 The simplest example is to just use a generic request:
 
-```as3
+```actionscript
 nativeAd.load( new AdRequestBuilder().build() );
 ```
 
 You can set properties, such as adding a gender to the request, using the other methods on the builder:
 
-```as3
+```actionscript
 var request:AdRequest = new AdRequestBuilder()
 							.setGender( AdRequest.GENDER_MALE )
 							.build();
@@ -49,7 +49,7 @@ The load process will dispatch one of two events:
 - `NativeAdEvent.ERROR`: If there was an error, (eg invalid account, unit id etc)
 
 
-```as3
+```actionscript
 var nativeAd:NativeAd = Adverts.service.nativeAds.createNativeAd( "ca-app-pub-3940256099942544/2247696110" );
 
 nativeAd.addEventListener( NativeAdEvent.LOADED, loadedHandler );
@@ -114,20 +114,20 @@ To use a template call the `showWithTemplate()` function. This function takes tw
 
 For the small sized template:
 
-```as3
+```actionscript
 nativeAd.showWithTemplate( NativeAdTemplate.SMALL, params );
 ```
 
 For the medium sized template:
 
-```as3
+```actionscript
 nativeAd.showWithTemplate( NativeAdTemplate.MEDIUM, params );
 ```
 
 
 You must specify the size and position for the advert in order for it to be correctly created. Here `params` is an instance of `AdViewParams`. You must at least provide the width and height for the ad:
 
-```as3
+```actionscript
 var params:AdViewParams = new AdViewParams();
 params.width = 800;
 params.height = 800;
@@ -144,7 +144,7 @@ To control the size and position of the advert, use the `setViewParams()` functi
 
 To set the position:
 
-```as3
+```actionscript
 var params:AdViewParams = new AdViewParams();
 params.x = 50;
 params.y = 50;
@@ -159,7 +159,7 @@ nativeAd.setViewParams( params );
 
 To retrieve the displayed position and size of the advert use the `getViewParams()` function.
 
-```as3
+```actionscript
 var params:AdViewParams = nativeAd.getViewParams();
 
 trace( "AD WIDTH:  " + params.width );
@@ -175,7 +175,7 @@ You can style the templates by providing a custom `NativeAdTemplateStyle` instan
 
 The `NativeAdTemplateStyle` has a range of functions to control various styles, such as text sizes and background colours. 
 
-```as3
+```actionscript
 var style:NativeAdTemplateStyle = new NativeAdTemplateStyle()
     .setMainBackgroundColor( 0xFFFF00FF )
     .setCallToActionBackgroundColor( 0xFFFF0000 )
@@ -186,7 +186,7 @@ var style:NativeAdTemplateStyle = new NativeAdTemplateStyle()
 
 This instance is passed as the second parameter to the `showWithTemplate()` function:
 
-```as3
+```actionscript
 nativeAd.showWithTemplate( NativeAdTemplate.MEDIUM, params, style );
 ```
 
@@ -196,7 +196,7 @@ nativeAd.showWithTemplate( NativeAdTemplate.MEDIUM, params, style );
 ### Example
 
 
-```as3
+```actionscript
 var nativeAd:NativeAd = Adverts.service.nativeAds.createNativeAd( "ca-app-pub-3940256099942544/2247696110" );
 
 nativeAd.addEventListener( NativeAdEvent.LOADED, loadedHandler );

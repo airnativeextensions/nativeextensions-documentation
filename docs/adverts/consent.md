@@ -48,7 +48,7 @@ Prior to using any other methods in the Consent SDK, you should update consent s
 
 To retrieve and update the consent status call the `getConsentStatus` function:
 
-```as3
+```actionscript
 Adverts.service.consent.getConsentStatus( "publisher_id" );
 ```
 
@@ -60,7 +60,7 @@ This is an asynchronous process and will dispatch one of two possible events:
 - `ConsentEvent.STATUS_ERROR`: Dispatched when there was an error retrieving the consent status
 
 
-```as3
+```actionscript
 Adverts.service.consent.addEventListener( ConsentEvent.STATUS_UPDATED, statusUpdatedHandler );
 Adverts.service.consent.addEventListener( ConsentEvent.STATUS_ERROR, statusErrorHandler );
 
@@ -102,7 +102,7 @@ Asking for consent will involve presentation of the consent form.
 The Google-rendered consent form is configured using the `ConsentOptions` class and displayed using the `askForConsent(options)` function.
 The following code demonstrates how to display a form with all three consent options:
 
-```as3
+```actionscript
 var options:ConsentOptions = new ConsentOptions( "https://www.your.com/privacyurl" )
 					.withPersonalizedAdsOption()
 					.withNonPersonalizedAdsOption()
@@ -120,7 +120,7 @@ Once you have called `askForConsent` you will receive one of two events:
 
 See [`ConsentEvent`](https://docs.airnativeextensions.com/asdocs/adverts/com/distriqt/extension/adverts/events/ConsentEvent.html) for more information on the fields.
 
-```as3
+```actionscript
 var options:ConsentOptions = new ConsentOptions( "https://www.your.com/privacyurl" )
         .withPersonalizedAdsOption()
         .withNonPersonalizedAdsOption();

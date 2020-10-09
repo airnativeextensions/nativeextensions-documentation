@@ -91,13 +91,13 @@ You may notice that the `initialisePlatform()` function has been deprecated. Thi
 
 The legacy call to :
 
-```as3
+```actionscript
 Adverts.service.initialisePlatform( AdvertPlatform.PLATFORM_ADMOB );
 ```
 
 Is now the equivalent of :
 
-```as3
+```actionscript
 Adverts.service.setup( AdvertPlatform.PLATFORM_ADMOB );
 Adverts.service.initialise();
 ```

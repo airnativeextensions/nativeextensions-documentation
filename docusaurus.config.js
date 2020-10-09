@@ -29,8 +29,8 @@ module.exports = {
     prism: {
       theme: require('prism-react-renderer/themes/github'),
       darkTheme: require('prism-react-renderer/themes/vsDark'),
-      additionalLanguages: ['actionscript'],
-      defaultLanguage: 'actionscript'
+      additionalLanguages: ['actionscript', 'csharp'],
+      // defaultLanguage: 'actionscript'
     },
     navbar: {
       title: 'AIR Native Extensions',

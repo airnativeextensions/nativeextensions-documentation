@@ -3,12 +3,14 @@ title: Removing the WebView
 sidebar_label: Removing the WebView
 ---
 
-In order to remove a web view from your application you call the `dispose` function on the WebView. 
+## Removing a WebView
+
+In order to remove the web view from your application you call the `dispose` function on the WebView. 
 It is important that you remove any event listeners before calling `dispose`. After calling `dispose` 
 the WebView will be in an invalid state so calling any other functions will have undefined results.
 
 
-```actionscript
+```as3
 if (webView != null)
 {
 	webView.removeEventListener( NativeWebViewEvent.LOCATION_CHANGING, webView_locationChangingHandler );

@@ -1,0 +1,210 @@
+
+
+###### 2020.09.16 [v5.3.008]
+
+```
+Corrected issue with hasMetConditions and default params (-1) (resolves #48)
+```
+
+
+###### 2020.08.25 [v5.2.001]
+
+```
+Implemented Google Play In-App Review
+```
+
+
+###### 2020.04.02 [v5.1.016]
+
+```
+Added option to require all conditions before hasMetConditions returns true (resolves #45)
+```
+
+
+###### 2020.03.23 [v5.0.012]
+
+```
+Android X migration (resolves #44)
+```
+
+
+###### 2019.08.13 [v4.0.002]
+
+```
+Android 64bit update (resolves #40)
+Updated minimum iOS version to 9.0
+```
+
+
+###### 2019.04.18 [v3.5.080]
+
+```
+Android: Added error handling for missing app store application (#37)
+```
+
+
+###### 2019.03.12 [v3.5.078]
+
+```
+Embedded iOS bitcode
+```
+
+
+###### 2019.02.26 [v3.5.075]
+
+```
+Updated minimum iOS version to 8.0
+```
+
+
+###### 2018.11.06 [v3.4.073]
+
+```
+Corrected dispatching of displayed event
+```
+
+
+###### 2018.10.13 [v3.4.072]
+
+```
+Added null reference check for application launched date (#32)
+```
+
+
+###### 2018.10.12 [v3.4.069]
+
+```
+Corrected issue with first run initialisation (#31)
+```
+
+
+###### 2018.08.29 [v3.4.063]
+
+```
+Updated documentation
+```
+
+
+###### 2018.08.29 [v3.4.062]
+
+```
+Apple TV implementation
+iOS: Fixed crash when retrieving application id without network (resolves #28)
+iOS: Migrated dialog to latest UIKit implementation
+
+```
+
+
+###### 2017.11.07 [v3.3.043]
+
+```
+Updated documentation
+```
+
+
+###### 2017.10.25 [v3.3.043]
+
+```
+Corrected iOS 11 review link
+Created build without review controller (resolves #11, #13)
+Added Amazon store support (resolves #14)
+Added ability to retrieve the store the application was installed from
+Added automatic application id retrieval:
+```
+
+
+###### 2017.07.10 [v3.2.015]
+
+```
+Updated for compatibility with new Core library (for Notifications/PushNotifications fix)
+```
+
+
+###### 2017.05.26 [v3.2.014]
+
+```
+Added iOS Review Controller (resolves #9)
+```
+
+
+###### 2016.12.22 [v3.1.005]
+
+```
+Updating documentation
+```
+
+
+###### 2016.12.01 [v3.1.004]
+
+```
+Updated documentation with new wiki
+```
+
+
+###### 2016.10.05 [v3.1.003]
+
+```
+Updated Android dialog theme to device defaults
+```
+
+
+###### 2015.06.15
+
+```
+iOS: Updated to latest common library
+Android: Windows: Fix for bug in AIR packager resulting in missing resources
+Android: Changed name of resource folder to avoid conflicts
+Android: x86 Support (resolves #2)
+```
+
+
+###### 2015.02.12
+
+```
+Changed class structure to support FlashBuilder 4.6
+```
+
+
+###### 2015.01.31
+
+```
+Added check for .debug suffix in application id
+```
+
+
+###### 2014.12.18
+
+```
+iOS: Included arm64 support (resolves #1) 
+Android: Corrected application id check when doesn't contain air prefix 
+```
+
+
+###### 2014.12.05
+
+```
+Corrected missing EventDispatcher functions from base class
+iOS: Implemented autoreleasepools for all c function calls
+```
+
+
+###### 2014.11.27
+
+```
+Updated README
+```
+
+
+###### 2014.11.26
+
+```
+New application based key check, removing server checks
+```
+
+
+###### 2014.10.22
+
+```
+iOS Update for iOS 8
+```
+

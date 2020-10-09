@@ -20,7 +20,7 @@ As an app developer, you can indicate whether you want Google to treat your cont
 
 The following example indicates that you want your content treated as child-directed for purposes of COPPA:
 
-```as3
+```actionscript
 var request:AdRequest = new AdRequestBuilder()
         .tagForChildDirectedTreatment(true)
         .build();
@@ -36,7 +36,7 @@ When using this feature, a Tag For Users under the Age of Consent in Europe (TFU
 
 The following example indicates that you want TFUA included in your ad request:
 
-```as3
+```actionscript
 var request:AdRequest = new AdRequestBuilder()
         .tagForUnderAgeOfConsent(true)
         .build();
@@ -57,7 +57,7 @@ Apps can set a maximum ad content rating for their ad requests using the `maxAdC
 
 The following code configures an AdRequest object to specify that ad content returned should correspond to a digital content label designation no higher than G:
 
-```as3
+```actionscript
 var request:AdRequest = new AdRequestBuilder()
         .maxAdContentRating( "G" )
         .build();
@@ -76,7 +76,7 @@ You should ensure that somewhere in your application you ask for consent from yo
 
 The default behavior of the Google Mobile Ads SDK is to serve personalized ads. If a user has consented to receive only non-personalized ads, you can configure an `AdRequest` object with the following code to specify that only non-personalized ads should be returned:
 
-```as3
+```actionscript
 var request:AdRequest = new AdRequestBuilder()
         .nonPersonalisedAds( true )
         .build();

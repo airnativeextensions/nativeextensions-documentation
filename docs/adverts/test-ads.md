@@ -42,7 +42,7 @@ The quickest way to enable testing is to use Google-provided test ad units. Thes
 
 If you need to confirm your ad unit id you must specify the test device id on your requests:
 
-```as3
+```actionscript
 var request:AdRequest = new AdRequestBuilder()
 							.addTestDevice( "33BE2250B43518CCDA7DE426D04EE231" )
 							.build();

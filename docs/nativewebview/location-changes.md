@@ -16,7 +16,7 @@ then the location change will not occur and the `NativeWebViewEvent.LOCATION_CHA
 will not be dispatched. The web view will not change.
 
 
-```actionscript
+```as3
 var webView:WebView = NativeWebView.service.createWebView( new Rectangle( 0, 0, 400, 600 ) ) ;
 
 webView.addEventListener( NativeWebViewEvent.LOCATION_CHANGING, webView_locationChangingHandler );

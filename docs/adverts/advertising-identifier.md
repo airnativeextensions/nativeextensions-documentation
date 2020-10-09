@@ -20,7 +20,7 @@ This object contains the current advertisting identifier and whether the user ha
 
 For example:
 
-```as3
+```actionscript
 Adverts.service.addEventListener( AdvertisingIdEvent.ADVERTISING_ID, advertisingIdHandler );
 Adverts.service.getAdvertisingId();
 
@@ -43,7 +43,7 @@ If you wish you can also add a callback to the `getAdvertisingId` function. This
 
 For example:
 
-```as3
+```actionscript
 Adverts.service.getAdvertisingId( 
     function( info:AdvertisingIdInfo ):void 
     {
@@ -62,7 +62,7 @@ Please note that you need to include the `com.distriqt.playservices.AdsIdentifie
 If you don't include this extension you may receive an `ErrorEvent.ERROR` during the `getAdvertisingId()` call with text indicating the missing extension.
 
 
-```as3
+```actionscript
 Adverts.service.addEventListener( ErrorEvent.ERROR, errorHandler );
 
 

@@ -3,6 +3,8 @@ title: Communication
 sidebar_label: Communication
 ---
 
+## Communication
+
 One of the important aspects of this extension is the ability to communicate from your Actionscript 
 code to the Javascript in the web page and vice-versa.
 
@@ -39,7 +41,7 @@ We have implemented some handlers for this scenario but they may affect loading 
 
 The following is an example from actionscript:
 
-```actionscript
+```as3
 var webView:WebView = NativeWebView.service.createWebView( new Rectangle( 0, 0, 400, 600 ) ) ;
 
 webView.addEventListener( NativeWebViewEvent.COMPLETE, webView_completeHandler );
@@ -71,7 +73,7 @@ function javascriptMessageHandler( event:NativeWebViewEvent ):void
 
 communicating with the following html page:
 
-```html title="example.html"
+```html
 <html>
 <head>
 	<meta charset="utf-8">
@@ -103,7 +105,7 @@ communicating with the following html page:
 
 This is the contents of the `airbridge.js` file
 
-```javascript title="airbridge.js"
+```javascript
 var AirBridge = (function() {
 	var instance;
 	function createInstance() {

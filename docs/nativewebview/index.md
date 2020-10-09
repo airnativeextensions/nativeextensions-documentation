@@ -1,5 +1,5 @@
 ---
-title: Native Web View
+title: NativeWebView
 hide_title: true
 slug: /nativewebview
 ---
@@ -33,9 +33,10 @@ We provide complete guides to get you up and running with asset selection quickl
 As with all our extensions you get access to a year of support and updates as we are continually improving and updating the extensions for OS updates and feature requests.
 
 
+
 ## Documentation
 
-This [documentation site](https://docs.airnativeextensions.com/nativewebview/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/nativewebview/). 
+The [Wiki](https://github.com/distriqt/ANE-NativeWebView/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/nativewebview). 
 
 
 More information here: 
@@ -48,7 +49,7 @@ More information here:
 
 You can purchase a license for using this extension:
 
-[airnativeextensions.com](https://airnativeextensions.com/extension/com.distriqt.NativeWebView)
+[airnativeextensions.com](https://airnativeextensions.com/)
 
 distriqt retains all copyright.
 

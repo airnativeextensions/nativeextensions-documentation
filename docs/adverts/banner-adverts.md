@@ -11,7 +11,7 @@ Banner advertisements are represented by the `AdView` class. You create an insta
 
 To create an `AdView` use the `createAdView` function.
 
-```as3
+```actionscript
 var adView:AdView = Adverts.service.createAdView();
 ```
 
@@ -22,7 +22,7 @@ This will instanciate an instance of the `AdView` class.
 
 You must set at least the size and ad unit id properties on your `AdView` to correctly setup the view before use. Without these properties the advert will not display correctly.
 
-```as3
+```actionscript
 adView.setAdSize( AdSize.SMART_BANNER );
 adView.setAdUnitId( "ca-app-pub-3940256099942544/6300978111" );
 ```
@@ -44,7 +44,7 @@ When working with adaptive banners, note that these will always return a constan
 To use adaptive banners, replace any calls to `setAdSize()` with `setAdaptiveAdSize()`. This function takes two optional parameters, the width and the orientation. The simplest option is to use the defaults,and then the extension will calculate the available width based on the current orientation and use that for creation of the adaptive banner size.
 
 
-```as3
+```actionscript
 var adView:AdView = Adverts.service.createAdView();
 adView.setAdaptiveAdSize();
 adView.setAdUnitId( "ca-app-pub-3940256099942544/6300978111" );
@@ -55,7 +55,7 @@ adView.setAdUnitId( "ca-app-pub-3940256099942544/6300978111" );
 
 If you wish to preload an advert for a different width / orientation you can pass in the appropriate values, eg to set the :
 
-```as3
+```actionscript
 adView.setAdaptiveAdSize( width, "portrait" );
 ```
 
@@ -75,13 +75,13 @@ To load an advert into your view you use the `load` function and pass it an `AdR
 
 The simplest example is to just use a generic request:
 
-```as3
+```actionscript
 adView.load( new AdRequestBuilder().build() );
 ```
 
 You can set properties, such as adding a gender to the request, using the other methods on the builder:
 
-```as3
+```actionscript
 var request:AdRequest = new AdRequestBuilder()
 							.setGender( AdRequest.GENDER_MALE )
 							.build();
@@ -100,7 +100,7 @@ There are two events of interest here:
 
 You can use the loaded event to delay displaying the ad until you are sure an ad is available.
 
-```as3
+```actionscript
 adView.addEventListener( AdViewEvent.LOADED, loadedHandler );
 adView.addEventListener( AdViewEvent.ERROR, errorHandler );
 
@@ -140,7 +140,7 @@ The following Ad Unit IDs can be used to AdMob test banner ads in your applicati
 
 When you are ready to display your advert you call `show()` as below.
 
-```as3
+```actionscript
 adView.show();
 ```
 
@@ -148,7 +148,7 @@ You don't have to wait for a load complete event to show the ad. However if you 
 
 You can also remove the ad from the view by calling `hide()`. This is the reverse of the show function and will remove the ad from view, while not unloading the ad.
 
-```as3
+```actionscript
 adView.hide();
 ```
 
@@ -159,7 +159,7 @@ Changing the view parameters of an advert allows you to reposition the advert to
 
 The view params are probably best used to align the advert to a particular horizontal and vertical location in your application. For example to align the ad to the bottom left of your application:
 
-```as3
+```actionscript
 var params:AdViewParams = new AdViewParams();
 params.horizontalAlign = AdViewParams.ALIGN_LEFT;
 params.verticalAlign = AdViewParams.ALIGN_BOTTOM;
@@ -169,7 +169,7 @@ adView.setViewParams( params );
 
 You can also use the view params to position the adview at a specific location:
 
-```as3
+```actionscript
 var params:AdViewParams = new AdViewParams();
 params.x = 10;
 params.y = 10;
@@ -186,7 +186,7 @@ adView.setViewParams( params );
 
 Retrieving the size of the advert allows you to get the pixel size of the displayed Ad.
 
-```as3
+```actionscript
 var size:AdSize = adView.getAdSize();
 
 trace( "pixel width:  " + size.widthInPixels );
@@ -208,7 +208,7 @@ There are several events dispatched by the advert as the user interacts with it:
 
 At the very least we suggest you should listen for the closed event to know when control returns to your application.
 
-```as3
+```actionscript
 adView.addEventListener( AdViewEvent.OPENED, openedHandler );
 adView.addEventListener( AdViewEvent.LEFT_APPLICATION, leftApplicationHandler );
 adView.addEventListener( AdViewEvent.CLOSED, closedHandler );
@@ -239,7 +239,7 @@ function closedHandler( event:AdViewEvent ):void
 
 You can refresh the ad at any time by triggering another `AdRequest` load:
 
-```as3
+```actionscript
 adView.load( new AdRequestBuilder().build() ); 
 ```
 
@@ -249,7 +249,7 @@ adView.load( new AdRequestBuilder().build() );
 
 When you are finished with an `AdView` instance you can cleanup any memory consumed by the ad by calling `destroy()`:
 
-```as3
+```actionscript
 adView.destroy();
 ```
 
