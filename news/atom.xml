@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://docs.airnativeextensions.com/news</id>
+    <title>AIR Native Extensions Blog</title>
+    <updated>2020-09-22T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
+    <subtitle>AIR Native Extensions Blog</subtitle>
+    <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
+    <rights>Copyright © 2020 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[Welcome]]></title>
+        <id>welcome</id>
+        <link href="https://docs.airnativeextensions.com/news/welcome"/>
+        <updated>2020-09-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the new documentation site for the distriqt // air native extensions!]]></summary>
+    </entry>
+</feed>
