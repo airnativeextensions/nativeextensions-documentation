@@ -1,6 +1,6 @@
 ---
 title: Device Information - Device State
-sidebar_label: Device Information - Device State
+sidebar_label: Device State
 ---
 
 
@@ -29,7 +29,7 @@ function deviceStateEventHandler( event:DeviceStateEvent ):void
 
 | Android | iOS |
 | --- | --- |
-| [images/device_powersave_android.png]] ](-[[images/device_powersave_ios.png) |
+| ![](images/device_powersave_android.png) | ![](images/device_powersave_ios.png) |
 
 
 

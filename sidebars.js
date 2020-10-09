@@ -175,6 +175,12 @@ module.exports = {
       "Device Information": [
         "application/unique-device-id",
         "application/device-information",
+        "application/device-information---device-state",
+        "application/device-information---display-metrics",
+        "application/device-information---operating-system",
+        "application/device-information---orientation-events",
+        "application/device-information---phone-number",
+        "application/device-information---year-class",
         "application/accessibility",
       ]
     },
