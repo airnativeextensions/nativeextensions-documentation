@@ -1,5 +1,5 @@
 ---
-title: Windows Store Packaging - Method 1
+title: Windows Store Packaging 
 ---
 
 ![](images/WindowsPackaging-promo.png)

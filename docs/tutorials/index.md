@@ -2,7 +2,7 @@
 title: Tutorials
 slug: /tutorials/
 hide_title: true
-sidebar_label: About
+sidebar_label: Tutorials
 ---
 
 ![](images/hero.png)

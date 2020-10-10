@@ -1,11 +1,11 @@
 module.exports = {
   someSidebar: [
     { type: 'doc', id: 'index' },
+    { type: 'ref', id: "tutorials/index" },
     { 
       type: 'category',
       label: 'Tutorials',
       items: [
-        { type: 'ref', id: "tutorials/index" },
       ],
     },
     { 
@@ -42,14 +42,10 @@ module.exports = {
     { type: 'ref', id: 'index' },
     { type: 'doc', id: 'tutorials/index' },
     { 
-      type: 'category',
-      label: 'Getting Started',
-      items: [
-        { type: 'doc', id: "tutorials/getting-started" },
+      'Getting Started': [
+        "tutorials/getting-started",
         { 
-          type: "category",
-          label: "IDE",
-          items: [
+          "IDE": [
             "tutorials/getting-started-intellij",
             "tutorials/getting-started-flashbuilder4.7",
             "tutorials/getting-started-flashbuilder4.5",
@@ -58,7 +54,36 @@ module.exports = {
           ]
         }
       ],
-    }
+    },
+    {
+      "Debugging": [
+        "tutorials/device-logs",
+        "tutorials/android-device-debugging"
+      ]
+    },
+    {
+      "iOS Development": [
+        "tutorials/ios-icons-assets-car",
+        "tutorials/ios-launchscreens",
+        "tutorials/ios-sdk-custom",
+        "tutorials/ios-sdk-versions",
+      ]
+    },
+    {
+      "Android Development": [
+        "tutorials/android-splash-screen",
+        "tutorials/android-adaptive-icons"
+      ]
+    },
+    {
+      "Windows Development": [
+        "tutorials/windows-appx-packaging",
+        "tutorials/windows-appx-packaging-method1",
+        "tutorials/windows-appx-packaging-method2",
+        "tutorials/windows-appx-packaging-method3"
+      ]
+    },
+
   ],
 
 
