@@ -29,6 +29,31 @@ module.exports = {
         { type: 'ref', id: "camera/index" },
         { type: 'ref', id: "camerarollextended/index" },
         { type: 'ref', id: "cameraui/index" },
+        { type: 'ref', id: "cloudstorage/index" },
+        { type: 'ref', id: "compass/index" },
+        { type: 'ref', id: "contacts/index" },
+        
+        { type: 'ref', id: "devicemotion/index" },
+        { type: 'ref', id: "dialog/index" },
+        { type: 'ref', id: "dynamicicon/index" },
+
+        { type: 'ref', id: "expansionfiles/index" },
+        
+        // { type: 'ref', id: "facebookapi/index" },
+        // { type: 'ref', id: "firebase/index" },
+        { type: 'ref', id: "flurry/index" },
+        { type: 'ref', id: "forcetouch/index" },
+
+        { type: 'ref', id: "gameservices/index" },
+        { type: 'ref', id: "googleanalytics/index" },
+        { type: 'ref', id: "googleidentity/index" },
+        { type: 'ref', id: "googletagmanager/index" },
+        { type: 'ref', id: "gyroscope/index" },
+
+        { type: 'ref', id: "idfa/index" },
+        { type: 'ref', id: "image/index" },
+        { type: 'ref', id: "inappbilling/index" },
+        { type: 'ref', id: "ironsource/index" },
 
         { type: 'ref', id: "nativewebview/index" },
       ],
@@ -540,8 +565,611 @@ module.exports = {
     },
   ],
 
+  cloudstorage: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'cloudstorage/index' },
+    { 
+      "Get Started": [
+        "cloudstorage/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "cloudstorage/key-value-storage",
+        "cloudstorage/document-store",
+        "cloudstorage/android-testing",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'cloudstorage/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/cloudstorage/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-CloudStorage/issues/new' },
+      ]
+    },
+  ],
+
+  compass: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'compass/index' },
+    { 
+      "Get Started": [
+        "compass/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "compass/heading",
+        "compass/magnetic-field-sensor",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'compass/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/compass/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Compass/issues/new' },
+      ]
+    },
+  ],
+
+  contacts: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'contacts/index' },
+    { 
+      "Get Started": [
+        "contacts/add-the-extension",
+        "contacts/request-authorisation",
+      ]
+    },
+    { 
+      "Access the Contact List": [
+        "contacts/retrieving-the-contact-list",
+        "contacts/contact-images",
+      ]
+    },
+    { 
+      "Contact Selection": [
+        "contacts/contact-picker-ui",
+      ]
+    },
+    { 
+      "Help": [
+        "contacts/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'contacts/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/contacts/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Contacts/issues/new' },
+      ]
+    },
+  ],
 
 
+
+
+  devicemotion: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'devicemotion/index' },
+    { 
+      "Get Started": [
+        "devicemotion/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "devicemotion/register-for-updates",
+        "devicemotion/algorithms-and-format",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'devicemotion/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/devicemotion/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-DeviceMotion/issues/new' },
+      ]
+    },
+  ],
+
+  dialog: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'dialog/index' },
+    { 
+      "Get Started": [
+        "dialog/add-the-extension",
+        "dialog/dialog-views-and-builders",
+      ]
+    },
+    { 
+      "Usage": [
+        "dialog/toast",
+        "dialog/alerts",
+        "dialog/text-view-alert",
+        "dialog/action-sheet",
+        "dialog/progress-dialog",
+        "dialog/activity-dialog",
+        "dialog/custom-picker",
+        "dialog/date-time-dialog",
+      ]
+    },
+    { 
+      "Additional Features": [
+        "dialog/air-fallback",
+      ]
+    },
+    { 
+      "Help": [
+        "dialog/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'dialog/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/dialog/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Dialog/issues/new' },
+      ]
+    },
+  ],
+  
+  dynamicicon: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'dynamicicon/index' },
+    { 
+      "Get Started": [
+        "dynamicicon/add-the-extension",
+        "dynamicicon/adding-icons",
+        "dynamicicon/packaging",
+      ]
+    },
+    { 
+      "Usage": [
+        "dynamicicon/change-icon",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'dynamicicon/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/dynamicicon/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-DyanmicIcon/issues/new' },
+      ]
+    },
+  ],
+
+
+
+  expansionfiles: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'expansionfiles/index' },
+    { 
+      "Get Started": [
+        "expansionfiles/add-the-extension",
+        "expansionfiles/request-authorisation",
+      ]
+    },
+    { 
+      "Setup your Expansion Files": [
+        "expansionfiles/setup-licensing",
+        "expansionfiles/uploading-expansion-files",
+      ]
+    },
+    { 
+      "Usage": [
+        "expansionfiles/downloading-expansion-files",
+      ]
+    },
+    { 
+      "JOBB Files": [
+        "expansionfiles/jobb-files",
+        "expansionfiles/mounting-an-obb-file",
+        "expansionfiles/reading-an-obb-file",
+      ]
+    },
+    { 
+      "Help": [
+        "expansionfiles/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'expansionfiles/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/expansionfiles/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-ExpansionFiles/issues/new' },
+      ]
+    },
+  ],
+
+
+
+
+
+  flurry: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'flurry/index' },
+    { 
+      "Get Started": [
+        "flurry/add-the-extension",
+        "flurry/initialise-the-extension",
+      ]
+    },
+    { 
+      "Analytics": [
+        "flurry/analytics-sessions",
+        "flurry/analytics-events",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'flurry/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/flurry/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Flurry/issues/new' },
+      ]
+    },
+  ],
+
+  forcetouch: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'forcetouch/index' },
+    { 
+      "Get Started": [
+        "forcetouch/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "forcetouch/force-touch-events",
+        "forcetouch/app-shortcuts",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'forcetouch/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/forcetouch/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-ForceTouch/issues/new' },
+      ]
+    },
+  ],
+
+
+
+  gameservices: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'gameservices/index' },
+    { 
+      "Setup Services": [
+        "gameservices/setup-gamecenter",
+        "gameservices/setup-google-play-games",
+      ]
+    },
+    { 
+      "Integration": [
+        "gameservices/add-the-extension",
+        "gameservices/initialise-the-extension",
+        "gameservices/initialise-the-service",
+      ]
+    },
+    { 
+      "Usage": [
+        "gameservices/sign-in",
+        "gameservices/leaderboards",
+        "gameservices/achievements",
+        {
+          "Saved Games": [
+            "gameservices/saved-games",
+            "gameservices/saved-games---conflicts",
+          ]
+        },
+        {
+          "Turn Based Multiplayer": [
+            "gameservices/turn-based-multiplayer---key-concepts",
+            "gameservices/turn-based-multiplayer---implementation-overview",
+            "gameservices/turn-based-multiplayer---implementation",
+            "gameservices/turn-based-multiplayer---invitations",
+          ]
+        },
+        "gameservices/quests-and-events",
+        "gameservices/screen-recording",
+      ]
+    },
+    {
+      "Help": [
+        "gameservices/troubleshooting",
+        "gameservices/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'gameservices/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/gameservices/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-GameServices/issues/new' },
+      ]
+    },
+  ],
+
+  googleanalytics: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'googleanalytics/index' },
+    { 
+      "Setup the Extension": [
+        "googleanalytics/add-the-extension",
+        "googleanalytics/tracking-ids",
+      ]
+    },
+    { 
+      "Usage": [
+        "googleanalytics/create-a-tracker",
+        "googleanalytics/sending-hits-and-events",
+        "googleanalytics/ecommerce",
+        "googleanalytics/enhanced-ecommerce",
+        "googleanalytics/notes",
+        "googleanalytics/install-referrer",
+      ]
+    },
+    {
+      "Help": [
+        "googleanalytics/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'googleanalytics/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/googleanalytics/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-GoogleAnalytics/issues/new' },
+      ]
+    },
+  ],
+
+  googleidentity: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'googleidentity/index' },
+    { 
+      "Setup your Google Project": [
+        "googleidentity/google-developers-console-project",
+        "googleidentity/android-certificate",
+        "googleidentity/google-identity-options",
+      ]
+    },
+    { 
+      "Setup the Extension": [
+        "googleidentity/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "googleidentity/setup",
+        "googleidentity/signing-in",
+        "googleidentity/disconnect",
+        "googleidentity/user-information",
+      ]
+    },
+    { 
+      "Additional": [
+        "googleidentity/authenticate-with-a-backend-server",
+        "googleidentity/enabling-server-side-access",
+      ]
+    },
+    {
+      "Help": [
+        "googleidentity/troubleshooting",
+        "googleidentity/migrating-to-androidx",
+        "googleidentity/migrating-from-version-1",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'googleidentity/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/googleidentity/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-GoogleIdentity/issues/new' },
+      ]
+    },
+  ],
+
+  googletagmanager: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'googletagmanager/index' },
+    "googletagmanager/google-tag-manager-setup",
+    "googletagmanager/add-the-extension",
+    { 
+      "Usage": [
+        "googletagmanager/containers",
+        "googletagmanager/datalayer",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'googletagmanager/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/googletagmanager/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-GoogleTagManager/issues/new' },
+      ]
+    },
+  ],
+
+  gyroscope: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'gyroscope/index' },
+    "gyroscope/add-the-extension",
+    "gyroscope/sensor-updates",
+    { 
+      "Other": [
+        { type: 'doc', id: 'gyroscope/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/gyroscope/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Gyroscope/issues/new' },
+      ]
+    },
+  ],
+
+
+
+  idfa: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'idfa/index' },
+    { 
+      "Get Started": [
+        "idfa/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "idfa/get-advertising-identifier",
+      ]
+    },
+    {
+      "Help": [
+        "idfa/migrating",
+        "idfa/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'idfa/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/idfa/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-IDFA/issues/new' },
+      ]
+    },
+  ],
+
+  image: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'image/index' },
+    { 
+      "Get Started": [
+        "image/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "image/request-authorisation",
+        "image/saving-bitmapdata-to-file",
+        "image/loading-bitmapdata-from-file",
+        "image/encoding-bitmapdata-to-bytearray",
+        "image/decoding-bytearray-to-bitmapdata",
+        "image/saving-bitmapdata-to-the-camera-roll",
+        "image/transformations",
+        "image/capturing-a-screenshot",
+      ]
+    },
+    {
+      "Help": [
+        "image/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'image/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/image/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Image/issues/new' },
+      ]
+    },
+  ],
+
+  inappbilling: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'inappbilling/index' },
+    { 
+      "Setup your Billing Service": [
+        "inappbilling/apple.apple-in-app-purchases",
+        "inappbilling/google.google-play-inapp-billing",
+        "inappbilling/amazon.amazon-in-app-purchasing",
+        "inappbilling/huawei.huawei-appgallery",
+      ]
+    },
+    { 
+      "Setup the Extension": [
+        "inappbilling/add-the-extension",
+        "inappbilling/billing-service",
+      ]
+    },
+    { 
+      "Usage": [
+        "inappbilling/products",
+        "inappbilling/make-a-purchase",
+        "inappbilling/pending-purchases",
+        "inappbilling/restore-purchases",
+        "inappbilling/get-purchases",
+        "inappbilling/consuming-purchases",
+        "inappbilling/change-a-purchase",
+        "inappbilling/promotions",
+        {
+          "Subscription Discounts and Offers": [
+            "inappbilling/discounts",
+            "inappbilling/introductory-prices",
+          ]
+        }
+      ]
+    },
+    { 
+      "In-App Updates": [
+        "inappbilling/in-app-updates",
+      ]
+    },
+    {
+      "Help": [
+        "inappbilling/migration",
+      ]
+    },
+    {
+      "Testing": [
+        "inappbilling/testing",
+        "inappbilling/apple.testing-ios-subscriptions",
+        "inappbilling/amazon.testing-amazon-in-app-purchasing",
+        "inappbilling/huawei.testing-huawei-appgallery-purchases",
+      ]
+    },
+    {
+      "Advanced": [
+        "inappbilling/server-side-verification",
+        "inappbilling/user-data",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'inappbilling/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/inappbilling/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-InAppBilling/issues/new' },
+      ]
+    },
+  ],
+
+  ironsource: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'ironsource/index' },
+    { 
+      "Get Started": [
+        "ironsource/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "ironsource/initialisation",
+        "ironsource/interstitials",
+        "ironsource/rewarded-video",
+      ]
+    },
+    { 
+      "Mediation": [
+        "ironsource/mediation---adcolony",
+        "ironsource/mediation---admob",
+        "ironsource/mediation---amazon",
+        "ironsource/mediation---applovin",
+        "ironsource/mediation---chartboost",
+        "ironsource/mediation---facebook-audience",
+        "ironsource/mediation---tapjoy",
+        "ironsource/mediation---unityads",
+      ]
+    },
+    {
+      "Help": [
+        "ironsource/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'ironsource/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/ironsource/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-IronSource/issues/new' },
+      ]
+    },
+  ],
 
 
 

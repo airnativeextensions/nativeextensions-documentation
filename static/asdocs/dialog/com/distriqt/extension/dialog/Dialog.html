@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Dialog,com.distriqt.extension.dialog.Dialog,ACTIONSHEET,ACTIVITY,ALERT,ASCII_CAPABLE,BOTTOM,DARK,DATETIME,DECIMAL_PAD,DEFAULT,DEVICE_DEFAULT,DEVICE_DEFAULT_DARK,DEVICE_DEFAULT_LIGHT,DIALOG_PROGRESS_STYLE_ANNULAR,DIALOG_PROGRESS_STYLE_DETERMINATE,DIALOG_PROGRESS_STYLE_HORIZONTAL,DIALOG_PROGRESS_STYLE_SPINNER,EMAIL_ADDRESS,EXT_CONTEXT_ID,LENGTH_LONG,LENGTH_SHORT,LIGHT,MATERIAL_LIGHT,MATERIAL,MIDDLE,MODE_DATE,MODE_DATE_AND_TIME,MODE_TIME,MULTISELECT,NAME_PHONE_PAD,NUMBERS_AND_PUNCTUATION,NUMBER_PAD,PHONE_PAD,PICKER,PROGRESS,STYLE_ANNULAR,STYLE_DETERMINATE,STYLE_HORIZONTAL,STYLE_SPINNER,TEXTVEW,TOP,TRADITIONAL,TWITTER,URL,VERSION,WEB_SEARCH,id,implementation,isSupported,nativeVersion,root,service,type,version,create,dismiss,dismissPopover,dispose,dispose,getDate,getTime,getTimestamp,init,setDate,setDefaultTheme,setMessage,setSelectedIndex,setTime,show,showSelectPopover,toast,update"><title>com.distriqt.extension.dialog.Dialog</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Dialog - distriqt // Dialog';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Dialog Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/dialog/Dialog.html&amp;com/distriqt/extension/dialog/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Dialog</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Dialog"); titleBar_setSubNav(true,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.dialog</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Dialog</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Dialog  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>This class represents the dialog extension.</p>
+	 	            <p>Dialogs allow you to present a simple question or choice to the user in a modal manner.
+	 These alerts and other dialogs can be stacked and must all be dismissed by the user.</p>
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+		 Whether the current device supports the extensions functionality
+		 </div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#root" class="signatureLink">root</a> : DisplayObjectContainer<div class="summaryTableDescription">
+		 
+		 Set the base DisplayObjectContainer for placing dialogs when using the default library.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#service" class="signatureLink">service</a> : <a href="../../../../com/distriqt/extension/dialog/Dialog.html">Dialog</a><div class="summaryTableDescription">[static] [read-only] 
+		 The singleton instance of the Extension class.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Dialog()" class="signatureLink">Dialog</a>()</div><div class="summaryTableDescription">
+		 Constructor
+		 		 You should not call this directly, but instead use the singleton access
+		 </div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#create()" class="signatureLink">create</a>(params:<a href="../../../../com/distriqt/extension/dialog/objects/DialogParameters.html">DialogParameters</a>):*</div><div class="summaryTableDescription">
+		 
+		 Use a dialog builder to create a general dialog view.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dismissPopover()" class="signatureLink">dismissPopover</a>(id:int):Boolean</div><div class="summaryTableDescription">
+		 
+		 Hides (dismisses) the popover specified by the id.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 
+		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#init()" class="signatureLink">init</a>(key:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div>[static] 
+		 Initialises the extension class for use with the provided  key.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setDefaultTheme()" class="signatureLink">setDefaultTheme</a>(theme:<a href="../../../../com/distriqt/extension/dialog/DialogTheme.html">DialogTheme</a>):void</div><div class="summaryTableDescription">
+		 
+		 Set the default theme to use when no specified theme is passed to a supported dialog.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#showSelectPopover()" class="signatureLink">showSelectPopover</a>(id:int, title:String, values:Array, options:<a href="../../../../com/distriqt/extension/dialog/objects/PopoverOptions.html">PopoverOptions</a> = null, selection:Array = null, theme:<a href="../../../../com/distriqt/extension/dialog/DialogTheme.html">DialogTheme</a> = null):void</div><div class="summaryTableDescription">
+		 
+		 Displays a popover with a select list.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toast()" class="signatureLink">toast</a>(message:String, length:int, colour:uint = 0x333333, gravity:String, alpha:Number = 0.8):void</div><div class="summaryTableDescription">
+		 
+		 Displays a small popup message on the screen commonly called
+		 a "toast" message for an interval of time.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#DIALOG_PROGRESS_STYLE_ANNULAR" class="signatureLink">DIALOG_PROGRESS_STYLE_ANNULAR</a> : String = annular<div class="summaryTableDescription">[static] 
+		 
+		 A circular style progress dialog with a progress bar that can be updated
+		 to show a processes progress.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#DIALOG_PROGRESS_STYLE_DETERMINATE" class="signatureLink">DIALOG_PROGRESS_STYLE_DETERMINATE</a> : String = determinate<div class="summaryTableDescription">[static] 
+		 A determinate style progress dialog with a progress indicator that can be updated
+		 to show the progress of a process.
+		 		 To be used with the show progress dialog function.
+		 		 Under Android this will display a horizontal progress bar.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#DIALOG_PROGRESS_STYLE_HORIZONTAL" class="signatureLink">DIALOG_PROGRESS_STYLE_HORIZONTAL</a> : String = horizontal<div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#DIALOG_PROGRESS_STYLE_DETERMINATE">DIALOG_PROGRESS_STYLE_DETERMINATE</A></div>[static] 
+		 
+		 Depreciated.</div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#DIALOG_PROGRESS_STYLE_SPINNER" class="signatureLink">DIALOG_PROGRESS_STYLE_SPINNER</a> : String = spinner<div class="summaryTableDescription">[static] 
+		 A spinner style progress dialog to show a process with an indeterminate duration.
+		 		 To be used with the show progress dialog function.
+		 		 </div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.Dialog<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LENGTH_LONG" class="signatureLink">LENGTH_LONG</a> : int = 5<div class="summaryTableDescription">[static] 
+		 
+		 Used to display a toast message for a long interval
+		 
+		 		 </div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LENGTH_SHORT" class="signatureLink">LENGTH_SHORT</a> : int = 0<div class="summaryTableDescription">[static] 
+		 
+		 Used to display a toast message for a short interval
+		 
+		 		 </div></td><td class="summaryTableOwnerCol">Dialog</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 8.2.046<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Dialog</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The implementation currently in use.
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether the current device supports the extensions functionality
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The native version string of the native extension.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="root"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">root</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>root:DisplayObjectContainer</code><p></p><p></p><p>
+		 <p>
+		 Set the base <code>DisplayObjectContainer</code> for placing dialogs when using the default library.
+		 Generally we suggest using the flash stage here.
+		 </p>
+		 <p>
+		 If you fail to set this object no changes will occur on a device however you
+		 will not see dialogs in the AIR simulator.
+		 </p>
+		 <p>
+		 Dialogs are positioned based on the size (width, height) of this object so
+		 make sure the dimensions are correct for your display case.
+		 </p>
+		 		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get root():DisplayObjectContainer</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set root(value:DisplayObjectContainer):void</code><br/><br/><span class="label"> Example </span><br/><div class="detailBody">		 Use the native overlay with Starling
+		 		 <div class="listing"><pre>
+         Dialog.service.root = Starling.current.nativeOverlay;
+         </pre></div>
+		 		 		 </div><div class="detailBody">		 Use the flash stage in a simple project
+		 		 <div class="listing"><pre>
+         Dialog.service.root = stage;
+         </pre></div>
+		 </div></div><a name="propertyDetail"></a><a name="service"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">service</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>service:<a href="../../../../com/distriqt/extension/dialog/Dialog.html">Dialog</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The singleton instance of the Extension class.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get service():<a href="../../../../com/distriqt/extension/dialog/Dialog.html">Dialog</a></code><br/><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the  key is invalid
+		 </td></tr></table></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The version of this extension.
+		 </p>
+		 <p>
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Dialog()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Dialog</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Dialog()</code><p></p><p>
+		 Constructor
+		 		 You should not call this directly, but instead use the singleton access
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="create()"></a><a name="create(com.distriqt.extension.dialog.objects.DialogParameters)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">create</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function create(params:<a href="../../../../com/distriqt/extension/dialog/objects/DialogParameters.html">DialogParameters</a>):*</code><p></p><p></p><p>
+		 <p>
+		 Use a dialog builder to create a general dialog view. The DialogView then allows
+		 you to listen for events to a particular dialog and close when required.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">params</span>:<a href="../../../../com/distriqt/extension/dialog/objects/DialogParameters.html">DialogParameters</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>*</code> &mdash; A <code>DialogView</code> instance representing the created dialog. If this fails this may be null.
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/dialog/builders/ActionSheetBuilder.html" target="">com.distriqt.extension.dialog.builders.ActionSheetBuilder</a><br/><a href="../../../../com/distriqt/extension/dialog/builders/ActivityBuilder.html" target="">com.distriqt.extension.dialog.builders.ActivityBuilder</a><br/><a href="../../../../com/distriqt/extension/dialog/builders/AlertBuilder.html" target="">com.distriqt.extension.dialog.builders.AlertBuilder</a><br/><a href="../../../../com/distriqt/extension/dialog/builders/DateTimeDialogBuilder.html" target="">com.distriqt.extension.dialog.builders.DateTimeDialogBuilder</a><br/><a href="../../../../com/distriqt/extension/dialog/builders/MultiSelectBuilder.html" target="">com.distriqt.extension.dialog.builders.MultiSelectBuilder</a><br/><a href="../../../../com/distriqt/extension/dialog/builders/PickerDialogBuilder.html" target="">com.distriqt.extension.dialog.builders.PickerDialogBuilder</a><br/><a href="../../../../com/distriqt/extension/dialog/builders/ProgressDialogBuilder.html" target="">com.distriqt.extension.dialog.builders.ProgressDialogBuilder</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">		 Create a simple alert dialog using the <code>AlertBuilder</code>
+		 		 <div class="listing"><pre>
+         Dialog.service.create(
+                new AlertBuilder( true )
+                    .setTitle( "Alert" )
+                    .setMessage( "Test Message" )
+                    .addOption( "OK" )
+                    .build()
+                ).show();
+         </pre></div>
+		 </div></div><a name="dismissPopover()"></a><a name="dismissPopover(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dismissPopover</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dismissPopover(id:int):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Hides (dismisses) the popover specified by the id.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">id</span>:int</code> &mdash;    The id of the popover to dismiss
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 <p>
+		 Disposes the extension and releases any allocated resources. Once this function
+		 has been called, a call to <code>init</code> is neccesary again before any of the
+		 extensions functionality will work.
+		 </p>
+		 </p></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 Initialises the extension class for use with the provided  key.
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the  key is invalid
+		 </td></tr></table></div><a name="setDefaultTheme()"></a><a name="setDefaultTheme(com.distriqt.extension.dialog.DialogTheme)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setDefaultTheme</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setDefaultTheme(theme:<a href="../../../../com/distriqt/extension/dialog/DialogTheme.html">DialogTheme</a>):void</code><p></p><p></p><p>
+		 <p>
+		 Set the default theme to use when no specified theme is passed to a supported dialog.
+		 </p>
+		 <p>
+		 You can use this to set a global theme for your application and then ignore
+		 the setting for individual dialog calls
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">theme</span>:<a href="../../../../com/distriqt/extension/dialog/DialogTheme.html">DialogTheme</a></code> &mdash;    The theme to use as default for any supported dialogs
+		 		 </td></tr></table></p></div><a name="showSelectPopover()"></a><a name="showSelectPopover(int,String,Array,com.distriqt.extension.dialog.objects.PopoverOptions,Array,com.distriqt.extension.dialog.DialogTheme)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">showSelectPopover</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function showSelectPopover(id:int, title:String, values:Array, options:<a href="../../../../com/distriqt/extension/dialog/objects/PopoverOptions.html">PopoverOptions</a> = null, selection:Array = null, theme:<a href="../../../../com/distriqt/extension/dialog/DialogTheme.html">DialogTheme</a> = null):void</code><p></p><p></p><p>
+		 <p>
+		 Displays a popover with a select list. The popover is positioned and sized based on the options
+		 specified in the PopoverOptions parameter. The values contained in the select list should be
+		 a series of strings that the user can select.
+		 </p>
+		 		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">id</span>:int</code> &mdash;        An id to assign to this popover
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">title</span>:String</code> &mdash;        The title to display. (Note: you'll need to set the showNavigationBar in the options for this to be visible).
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">values</span>:Array</code> &mdash;    An Array of Strings, each being an option in the select list.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../com/distriqt/extension/dialog/objects/PopoverOptions.html">PopoverOptions</a></code> (default = <code>null</code>)<code></code> &mdash;    The options for position, size and display of the popover
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">selection</span>:Array</code> (default = <code>null</code>)<code></code> &mdash;    An array on integers that represent indexes into the values array of the selected items.
+		                    This is only useful when you have a multi-select list and want to preselect some options.
+		                    Generally it can be left as null or an empty array.
+		 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">theme</span>:<a href="../../../../com/distriqt/extension/dialog/DialogTheme.html">DialogTheme</a></code> (default = <code>null</code>)<code></code></td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/dialog/objects/PopoverOptions.html" target="">com.distriqt.extension.dialog.objects.PopoverOptions</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">		 <p>
+		 The following example shows how to display a select list popover.
+		 </p>
+		 		 <div class="listing"><pre>
+         Dialog.init( DEV_KEY );
+         Dialog.service.addEventListener( PopoverEvent.POPOVER_CLOSED, popover_closedHandler, false, 0, true );
+         Dialog.service.addEventListener( PopoverEvent.POPOVER_CHANGE, popover_changeHandler, false, 0, true );
+                  var options:PopoverOptions = new PopoverOptions();
+         options.position = new Rectangle( 50, 250, 150, 50 );
+         options.size = new Rectangle( 0, 0, 300, 350 );
+         options.arrowDirection = PopoverOptions.ARROW_DIRECTION_ANY;
+                  Dialog.service.showSelectPopover( 1, "Genres", ["All", "Punk", "Rock", "ATTACK OF THE CLONES"], options, [ 1 ] );
+                  ...
+                  private function popover_changeHandler( event:PopoverEvent ):void
+         {
+             trace( "The user changed the selection in the popover" );
+         }
+                  private function popover_closedHandler( event:PopoverEvent ):void
+         {
+             // The selection will be the array of indexes into your values that were selected by the user
+             trace( "Popover Closed: "+event.id +" selection: "+event.selection.join(",") );
+         }
+         </pre></div>
+		 		 </div></div><a name="toast()"></a><a name="toast(String,int,uint,String,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">toast</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toast(message:String, length:int, colour:uint = 0x333333, gravity:String, alpha:Number = 0.8):void</code><p></p><p></p><p>
+		 <p>
+		 Displays a small popup message on the screen commonly called
+		 a "toast" message for an interval of time.
+		 </p>
+		 		 <p>
+		 Support: <b>Android</b> <b>iOS</b>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">message</span>:String</code> &mdash;    The string message to display
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:int</code> (default = <code>NaN</code>)<code></code> &mdash;    Either LENGTH_SHORT or LENGTH_LONG (default: LENGTH_SHORT)
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">colour</span>:uint</code> (default = <code>0x333333</code>)<code></code> &mdash;    The colour for the background of the toast
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">gravity</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash;    Position of the toast, either TOP, BOTTOM or MIDDLE (default: BOTTOM)
+		 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">alpha</span>:Number</code> (default = <code>0.8</code>)<code></code></td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Gravity.html" target="">com.distriqt.extension.dialog.Gravity</a></div></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="DIALOG_PROGRESS_STYLE_ANNULAR"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">DIALOG_PROGRESS_STYLE_ANNULAR</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const DIALOG_PROGRESS_STYLE_ANNULAR:String = annular</code><p></p><p></p><p>
+		 <p>
+		 A circular style progress dialog with a progress bar that can be updated
+		 to show a processes progress.
+		 </p>
+		 		 <p>
+		 To be used with the show progress dialog function.
+		 </p>
+		 		 <p><b>Supported on iOS only</b>. On Android this will be the
+		 equivalent of DIALOG_PROGRESS_STYLE_DETERMINATE</p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Dialog.html#showProgressDialog()" target="">showProgressDialog()</a><br/><a href="Dialog.html#updateProgressDialog()" target="">updateProgressDialog()</a><br/><a href="Dialog.html#dismissProgressDialog()" target="">dismissProgressDialog()</a></div></div><a name="constantDetail"></a><a name="DIALOG_PROGRESS_STYLE_DETERMINATE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">DIALOG_PROGRESS_STYLE_DETERMINATE</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const DIALOG_PROGRESS_STYLE_DETERMINATE:String = determinate</code><p></p><p></p><p>
+		 <p>A determinate style progress dialog with a progress indicator that can be updated
+		 to show the progress of a process.</p>
+		 		 <p>To be used with the show progress dialog function.</p>
+		 		 <p>Under Android this will display a horizontal progress bar.
+		 Under iOS this will display a circular progress bar.</p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Dialog.html#showProgressDialog()" target="">showProgressDialog()</a><br/><a href="Dialog.html#updateProgressDialog()" target="">updateProgressDialog()</a><br/><a href="Dialog.html#dismissProgressDialog()" target="">dismissProgressDialog()</a></div></div><a name="constantDetail"></a><a name="DIALOG_PROGRESS_STYLE_HORIZONTAL"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">DIALOG_PROGRESS_STYLE_HORIZONTAL</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const DIALOG_PROGRESS_STYLE_HORIZONTAL:String = horizontal</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use <A href="#DIALOG_PROGRESS_STYLE_DETERMINATE">DIALOG_PROGRESS_STYLE_DETERMINATE</A></div><p></p><p></p><p>
+		 <p>
+		 Depreciated.
+		 Backwards support, equivalent of DIALOG_PROGRESS_STYLE_DETERMINATE
+		 </p>
+		 </p></div><a name="constantDetail"></a><a name="DIALOG_PROGRESS_STYLE_SPINNER"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">DIALOG_PROGRESS_STYLE_SPINNER</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const DIALOG_PROGRESS_STYLE_SPINNER:String = spinner</code><p></p><p></p><p>
+		 <p>A spinner style progress dialog to show a process with an indeterminate duration.</p>
+		 		 <p>To be used with the show progress dialog function.</p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Dialog.html#showProgressDialog()" target="">showProgressDialog()</a><br/><a href="Dialog.html#dismissProgressDialog()" target="">dismissProgressDialog()</a></div></div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.Dialog</code><p></p></div><a name="constantDetail"></a><a name="LENGTH_LONG"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LENGTH_LONG</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LENGTH_LONG:int = 5</code><p></p><p></p><p>
+		 <p>
+		 Used to display a toast message for a long interval
+		 </p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Dialog.html#toast()" target="">toast()</a></div></div><a name="constantDetail"></a><a name="LENGTH_SHORT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LENGTH_SHORT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LENGTH_SHORT:int = 0</code><p></p><p></p><p>
+		 <p>
+		 Used to display a toast message for a short interval
+		 </p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Dialog.html#toast()" target="">toast()</a></div></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 8.2.046</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 10:18 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 10:18 PM +10:00  -->

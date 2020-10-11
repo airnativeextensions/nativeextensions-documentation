@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="ExpansionFiles,com.distriqt.extension.expansionfiles.ExpansionFiles,AUTHORISED,DENIED,ERROR_ALREADY_MOUNTED,ERROR_COULD_NOT_MOUNT,ERROR_COULD_NOT_UNMOUNT,ERROR_INTERNAL,ERROR_NOT_MOUNTED,ERROR_PERMISSION_DENIED,EXT_CONTEXT_ID,MAIN,MOUNTED,NOT_DETERMINED,PATCH,RESTRICTED,SHOULD_EXPLAIN,STATE_COMPLETED,STATE_CONNECTING,STATE_DOWNLOADING,STATE_FAILED,STATE_FAILED_CANCELED,STATE_FAILED_FETCHING_URL,STATE_FAILED_SDCARD_FULL,STATE_FAILED_UNLICENSED,STATE_FETCHING_URL,STATE_IDLE,STATE_PAUSED_BY_REQUEST,STATE_PAUSED_NEED_CELLULAR_PERMISSION,STATE_PAUSED_NEED_WIFI,STATE_PAUSED_NETWORK_SETUP_FAILURE,STATE_PAUSED_NETWORK_UNAVAILABLE,STATE_PAUSED_ROAMING,STATE_PAUSED_SDCARD_UNAVAILABLE,STATE_PAUSED_WIFI_DISABLED,STATE_PAUSED_WIFI_DISABLED_NEED_CELLULAR_PERMISSION,UNKNOWN,UNMOUNTED,VERSION,currentSpeed,currentSpeedString,downloadOverCellular,fileSize,fileVersion,implementation,isSupported,nativeVersion,obbUtils,overallProgress,overallProgressString,overallTotal,service,timeRemaining,timeRemainingString,type,version,zipUtils,addExpansionFile,authorisationStatus,dispose,download,expansionFilesDelivered,getFilenameForExpansionFile,getMountedPath,getPathForExpansionFiles,hasAuthorisation,init,isMounted,mount,pause,removeAllExpansionFiles,removeExpansionFile,requestAuthorisation,resume,setDownloadFlags,setDownloadOverCellular,setup,stop,toString,unmount,unzip"><title>com.distriqt.extension.expansionfiles.ExpansionFiles</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'ExpansionFiles - distriqt // ExpansionFiles';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // ExpansionFiles Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/expansionfiles/ExpansionFiles.html&amp;com/distriqt/extension/expansionfiles/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">ExpansionFiles</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ExpansionFiles"); titleBar_setSubNav(true,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.expansionfiles</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  ExpansionFiles</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ExpansionFiles  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>	
+	              <p>
+	 This class represents the ExpansionFiles native extension.
+	 </p>
+	 
+	              <p>
+	 Firstly you'll need to acquire your license key, a Base64-encoded RSA public key for your application. You'll need to pass this to the <code>setup</code> function.
+	 <ul>
+	                    <li>Setting Up for Licensing: <a href="http://developer.android.com/google/play/licensing/setting-up.html" target="">http://developer.android.com/google/play/licensing/setting-up.html</a>
+                     </li>
+	                 </ul>
+	              </p>
+	 
+	              <p>
+	 To use and attach expansion files to an APK, you must at least have published an APK to the alpha test channel:
+	 <ul>
+	                    <li>Use and attach APK expansion files: <a href="http://support.google.com/googleplay/android-developer/answer/2481797?hl=en" target="">https://support.google.com/googleplay/android-developer/answer/2481797?hl=en</a>
+                     </li>
+	                 </ul>
+	              </p>
+	 
+	 
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+		 Whether the current device supports the extensions functionality
+		 </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#obbUtils" class="signatureLink">obbUtils</a> : <a href="../../../../com/distriqt/extension/expansionfiles/OBBUtils.html">OBBUtils</a><div class="summaryTableDescription">[read-only] </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#service" class="signatureLink">service</a> : <a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFiles.html">ExpansionFiles</a><div class="summaryTableDescription">[static] [read-only] 
+		 The singleton instance of the ExpansionFiles class.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#zipUtils" class="signatureLink">zipUtils</a> : <a href="../../../../com/distriqt/extension/expansionfiles/ZipUtils.html">ZipUtils</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the zip file utilities implementation.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#ExpansionFiles()" class="signatureLink">ExpansionFiles</a>()</div><div class="summaryTableDescription">
+		 Constructor
+		 
+		 You should not call this directly, but instead use the singleton access
+		 </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addExpansionFile()" class="signatureLink">addExpansionFile</a>(file:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Add an expansion file to track
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#authorisationStatus()" class="signatureLink">authorisationStatus</a>():String</div><div class="summaryTableDescription">
+		 
+		 Retrieves the current authorisation status of this application
+		 
+		 
+		 There are several possible values as defined in the AuthorisationStatus class.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 
+		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#download()" class="signatureLink">download</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Starts downloading the requested expansion files.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#expansionFilesDelivered()" class="signatureLink">expansionFilesDelivered</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Checks to see if the specified expansion files have been downloaded and are available to access.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getFilenameForExpansionFile()" class="signatureLink">getFilenameForExpansionFile</a>(file:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a>):String</div><div class="summaryTableDescription">
+		 
+		 Gets the filename for the specified expansion file, including the obb extension.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPathForExpansionFiles()" class="signatureLink">getPathForExpansionFiles</a>():String</div><div class="summaryTableDescription">
+		 
+		 Retrieves the path for this application's expansion files.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hasAuthorisation()" class="signatureLink">hasAuthorisation</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Helper method to determine if the current application has write access to the external storage 
+		 for writing the expansion files.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#init()" class="signatureLink">init</a>(key:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div>[static] 
+		 Initialises the extension class for use with the provided key.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#pause()" class="signatureLink">pause</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Pauses any downloading in progress
+		 
+		 </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeAllExpansionFiles()" class="signatureLink">removeAllExpansionFiles</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Removes all tracked expansion files
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeExpansionFile()" class="signatureLink">removeExpansionFile</a>(file:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Removes an expansion file from the list of tracked expansion files.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#requestAuthorisation()" class="signatureLink">requestAuthorisation</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Performs a simple operation to display the permission dialog.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#resume()" class="signatureLink">resume</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Resumes any paused downloads
+		 
+		 </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setDownloadFlags()" class="signatureLink">setDownloadFlags</a>(flags:<a href="../../../../com/distriqt/extension/expansionfiles/DownloadFlags.html">DownloadFlags</a>):void</div><div class="summaryTableDescription">
+		 
+		 Set any flags to control the downloading process
+		 
+		 </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setup()" class="signatureLink">setup</a>(key:String, salt:Vector.&lt;int&gt;):void</div><div class="summaryTableDescription">
+		 
+		 This function must be called to setup the licensing and salt values for your application.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stop()" class="signatureLink">stop</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Stops all downloads.</div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:expansionfiles:complete" class="signatureLink">expansionfiles:complete</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 
+		 </td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:expansionfiles:connected" class="signatureLink">expansionfiles:connected</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 		 </td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:expansionfiles:progress" class="signatureLink">expansionfiles:progress</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when progress information of the downloading expansion file
+		 is available.</td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:expansionfiles:statechanged" class="signatureLink">expansionfiles:statechanged</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the state of the expansion files is changed, 
+		 
+		 </td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.ExpansionFiles<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 4.1.014<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">ExpansionFiles</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The implementation currently in use. 
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether the current device supports the extensions functionality
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The native version string of the native extension.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="obbUtils"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">obbUtils</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>obbUtils:<a href="../../../../com/distriqt/extension/expansionfiles/OBBUtils.html">OBBUtils</a></code>&nbsp;&nbsp;[read-only] <p></p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get obbUtils():<a href="../../../../com/distriqt/extension/expansionfiles/OBBUtils.html">OBBUtils</a></code><br/></div><a name="propertyDetail"></a><a name="service"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">service</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>service:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFiles.html">ExpansionFiles</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The singleton instance of the ExpansionFiles class.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get service():<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFiles.html">ExpansionFiles</a></code><br/><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the key is invalid
+		 </td></tr></table></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The version of this extension.
+		 </p>
+		 <p>
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="propertyDetail"></a><a name="zipUtils"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">zipUtils</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>zipUtils:<a href="../../../../com/distriqt/extension/expansionfiles/ZipUtils.html">ZipUtils</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the zip file utilities implementation.
+		 </p> 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get zipUtils():<a href="../../../../com/distriqt/extension/expansionfiles/ZipUtils.html">ZipUtils</a></code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="ExpansionFiles()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ExpansionFiles</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function ExpansionFiles()</code><p></p><p>
+		 Constructor
+		 
+		 You should not call this directly, but instead use the singleton access
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addExpansionFile()"></a><a name="addExpansionFile(com.distriqt.extension.expansionfiles.ExpansionFile)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addExpansionFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addExpansionFile(file:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Add an expansion file to track
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a></code> &mdash; Details on the expansion file to add
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the expansion file was successfully added and false if there was an issue with the provided details
+		 </td></tr></table></div><a name="authorisationStatus()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">authorisationStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function authorisationStatus():String</code><p></p><p></p><p>
+		 <p>
+		 Retrieves the current authorisation status of this application
+		 </p>
+		 <p>
+		 There are several possible values as defined in the <code>AuthorisationStatus</code> class.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The <code>AuthorisationStatus</code> string
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="AuthorisationStatus.html" target="">com.distriqt.extension.expansionfiles.AuthorisationStatus</a></div></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 <p>
+		 Disposes the extension and releases any allocated resources. Once this function 
+		 has been called, a call to <code>init</code> is neccesary again before any of the 
+		 extensions functionality will work.
+		 </p>
+		 </p></div><a name="download()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">download</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function download():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Starts downloading the requested expansion files.
+		 </p>
+		  
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; Returns <code>true</code> if the download process was started.
+		 			Returns <code>false</code> if: 
+		 			<ul>
+		 				<li>no downloading was required,</li> 
+		 				<li>there are no requested expansion files,</li> 
+		 				<li>the downloading is complete,</li> 
+		 				<li>or the extension is not correctly initialised.</li> 
+		 			</ul>
+		 			
+		 </td></tr></table></div><a name="expansionFilesDelivered()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">expansionFilesDelivered</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function expansionFilesDelivered():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Checks to see if the specified expansion files have been downloaded and are available to access.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the files have been downloaded and are available. <code>false</code> if they need to be downloaded.
+		 </td></tr></table></div><a name="getFilenameForExpansionFile()"></a><a name="getFilenameForExpansionFile(com.distriqt.extension.expansionfiles.ExpansionFile)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getFilenameForExpansionFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getFilenameForExpansionFile(file:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a>):String</code><p></p><p></p><p>
+		 <p>
+		 Gets the filename for the specified expansion file, including the <code>obb</code> extension.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a></code> &mdash; The expansion file to retrieve the filename for
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The filename for the specified expansion file
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ExpansionFiles.html#getPathForExpansionFiles()" target="">getPathForExpansionFiles()</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 Retrieving the full path and filename of an expansion file:
+		 
+		 <div class="listing"><pre>
+         var fullPath:String = 
+                 ExpansionFiles.service.getPathForExpansionFiles() + 
+                 ExpansionFiles.service.getFilenameForExpansionFile( file );
+         </pre></div>
+		 
+		 
+		 </div></div><a name="getPathForExpansionFiles()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPathForExpansionFiles</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPathForExpansionFiles():String</code><p></p><p></p><p>
+		 <p>
+		 Retrieves the path for this application's expansion files. 
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; An absolute path to the directory containing the expansion files (obb) 
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ExpansionFiles.html#getFilenameForExpansionFile()" target="">getFilenameForExpansionFile()</a></div></div><a name="hasAuthorisation()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hasAuthorisation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function hasAuthorisation():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Helper method to determine if the current application has write access to the external storage 
+		 for writing the expansion files.
+		 </p> 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 Initialises the extension class for use with the provided key.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the key is invalid
+		 </td></tr></table></div><a name="pause()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pause</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function pause():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Pauses any downloading in progress
+		 </p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="removeAllExpansionFiles()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeAllExpansionFiles</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeAllExpansionFiles():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Removes all tracked expansion files
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if successfully removed and false if there was an error
+		 </td></tr></table></div><a name="removeExpansionFile()"></a><a name="removeExpansionFile(com.distriqt.extension.expansionfiles.ExpansionFile)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeExpansionFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeExpansionFile(file:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Removes an expansion file from the list of tracked expansion files.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="../../../../com/distriqt/extension/expansionfiles/ExpansionFile.html">ExpansionFile</a></code> &mdash; Details on the expansion file to remove
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if successfully removed and false if there was an error
+		 
+		 </td></tr></table></div><a name="requestAuthorisation()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">requestAuthorisation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function requestAuthorisation():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Performs a simple operation to display the permission dialog.
+		 </p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="resume()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">resume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function resume():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Resumes any paused downloads
+		 </p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="setDownloadFlags()"></a><a name="setDownloadFlags(com.distriqt.extension.expansionfiles.DownloadFlags)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setDownloadFlags</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setDownloadFlags(flags:<a href="../../../../com/distriqt/extension/expansionfiles/DownloadFlags.html">DownloadFlags</a>):void</code><p></p><p></p><p>
+		 <p>
+		 Set any flags to control the downloading process
+		 </p>
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">flags</span>:<a href="../../../../com/distriqt/extension/expansionfiles/DownloadFlags.html">DownloadFlags</a></code></td></tr></table></p></div><a name="setup()"></a><a name="setup(String,Vector$int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setup(key:String, salt:Vector.&lt;int&gt;):void</code><p></p><p></p><p>
+		 <p>
+		 This function must be called to setup the licensing and salt values for your application.
+		 </p>
+		 
+		 <p>
+		 The <code>key</code> value is a string that is the Base64-encoded RSA public key for your publisher account, 
+		 available from the profile page on the Developer Console
+		 (see <a href="http://developer.android.com/google/play/licensing/setting-up.html" target="">Setting Up for Licensing</a>).
+		 </p>
+		 <p>
+		 The <code>salt</code> value is an array of random int values that the licensing Policy uses to create an Obfuscator. 
+		 The salt ensures that your obfuscated SharedPreferences file in which your licensing data is saved will be unique and non-discoverable.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; Base64 encoded RSA public key for your licensing publisher account
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">salt</span>:Vector.&lt;int&gt;</code> &mdash; 	An array of integers to use as the obfuscation salt value
+		 
+		 </td></tr></table></p></div><a name="stop()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stop():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Stops all downloads.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; 
+		 
+		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:expansionfiles:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">expansionfiles:complete</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/expansionfiles/events/ExpansionFilesEvent.html"><code>com.distriqt.extension.expansionfiles.events.ExpansionFilesEvent</code></a><br/><span class="label">ExpansionFilesEvent.type property = </span><a href="../../../../com/distriqt/extension/expansionfiles/events/ExpansionFilesEvent.html#COMPLETE"><code>com.distriqt.extension.expansionfiles.events.ExpansionFilesEvent.COMPLETE</code></a><br/><p></p><p></p><p>
+	 </p>
+		 
+		 
+		 </div><a name="event:expansionfiles:connected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">expansionfiles:connected</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/expansionfiles/events/ExpansionFilesEvent.html"><code>com.distriqt.extension.expansionfiles.events.ExpansionFilesEvent</code></a><br/><span class="label">ExpansionFilesEvent.type property = </span><a href="../../../../com/distriqt/extension/expansionfiles/events/ExpansionFilesEvent.html#CONNECTED"><code>com.distriqt.extension.expansionfiles.events.ExpansionFilesEvent.CONNECTED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 		 </div><a name="event:expansionfiles:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">expansionfiles:progress</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/expansionfiles/events/ProgressEvent.html"><code>com.distriqt.extension.expansionfiles.events.ProgressEvent</code></a><br/><span class="label">ProgressEvent.type property = </span><a href="../../../../com/distriqt/extension/expansionfiles/events/ProgressEvent.html#PROGRESS"><code>com.distriqt.extension.expansionfiles.events.ProgressEvent.PROGRESS</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when progress information of the downloading expansion file
+		 is available.
+		 </p>
+		 
+		 </div><a name="event:expansionfiles:statechanged"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">expansionfiles:statechanged</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/expansionfiles/events/ExpansionFilesEvent.html"><code>com.distriqt.extension.expansionfiles.events.ExpansionFilesEvent</code></a><br/><span class="label">ExpansionFilesEvent.type property = </span><a href="../../../../com/distriqt/extension/expansionfiles/events/ExpansionFilesEvent.html#STATE_CHANGED"><code>com.distriqt.extension.expansionfiles.events.ExpansionFilesEvent.STATE_CHANGED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the state of the expansion files is changed, 
+		 </p>
+		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.ExpansionFiles</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 4.1.014</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 10:23 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 10:23 PM +10:00  -->

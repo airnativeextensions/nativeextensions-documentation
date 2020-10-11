@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="OutputFormat,com.distriqt.extension.devicemotion.OutputFormat,EULER,EULER_RAW,EXT_CONTEXT_ID,FUSION,HIGH,LOW,MEDIUM,NATIVE,QUATERNION,ROTATIONMATRIX,SENSOR_DELAY_FASTEST,SENSOR_DELAY_GAME,SENSOR_DELAY_NORMAL,SENSOR_DELAY_UI,UNKNOWN,UNRELIABLE,VERSION,Y_ARBITRARY_Z_VERTICAL,Y_MAGNETICNORTH_Z_VERTICAL,algorithm,autoOrient,format,implementation,isRegistered,isSupported,nativeVersion,rate,referenceFrame,service,version"><title>com.distriqt.extension.devicemotion.OutputFormat</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'OutputFormat - distriqt // DeviceMotion';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // DeviceMotion Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/devicemotion/OutputFormat.html&amp;com/distriqt/extension/devicemotion/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">OutputFormat</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("OutputFormat"); titleBar_setSubNav(true,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.devicemotion</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  OutputFormat</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">OutputFormat  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>
+	 Defines the output formats available for the algorithm
+	 <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#OutputFormat()" class="signatureLink">OutputFormat</a>()</div><div class="summaryTableDescription"></div></td><td class="summaryTableOwnerCol">OutputFormat</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EULER" class="signatureLink">EULER</a> : String = euler<div class="summaryTableDescription">[static] 
+	     
+	     The simplest and most problematic return values.</div></td><td class="summaryTableOwnerCol">OutputFormat</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EULER_RAW" class="signatureLink">EULER_RAW</a> : String = euler:raw<div class="summaryTableDescription">[static] 
+	     
+	     This returns the raw Euler values from the native process.</div></td><td class="summaryTableOwnerCol">OutputFormat</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#QUATERNION" class="signatureLink">QUATERNION</a> : String = quaternion<div class="summaryTableDescription">[static] 
+	     
+	     This is the best format to retrieve the device rotation information.</div></td><td class="summaryTableOwnerCol">OutputFormat</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ROTATIONMATRIX" class="signatureLink">ROTATIONMATRIX</a> : String = rotationmatrix<div class="summaryTableDescription">[static] 
+	     
+	     This format returns a rotation matrix of the current device position.</div></td><td class="summaryTableOwnerCol">OutputFormat</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="OutputFormat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">OutputFormat</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function OutputFormat()</code><p></p><br/><br/></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EULER"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EULER</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EULER:String = euler</code><p></p><p></p><p>
+	     <p>
+	     The simplest and most problematic return values. Only use these if
+	     you really cannot use one of the other formats.
+	     </p>
+	     <p>
+	     We attempt to correct these values by using quaternions internally
+	     and attempting to overcome the Gimbal lock issue.
+	     </p>
+	     <p>
+	     You will encounter odd motion in the form of a <b>Gimbal lock</b>
+	     using these values where you'll lose a degree of freedom.
+	     <a href="http://en.wikipedia.org/wiki/Gimbal_lock" target="">http://en.wikipedia.org/wiki/Gimbal_lock</a>
+	     </p>
+	     </p></div><a name="constantDetail"></a><a name="EULER_RAW"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EULER_RAW</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const EULER_RAW:String = euler:raw</code><p></p><p></p><p>
+	     <p>
+	     This returns the raw Euler values from the native process. Generally these
+	     are quite unusable but are provided as an option if required.
+	     </p>
+	     <p>
+	     You <b>will</b> encounter odd motion in the form of a <b>Gimbal lock</b>
+	     using these values where you'll lose a degree of freedom.
+	     <a href="http://en.wikipedia.org/wiki/Gimbal_lock" target="">http://en.wikipedia.org/wiki/Gimbal_lock</a>
+	     This will happen when the phone is held vertically.
+	     </p>
+	     </p></div><a name="constantDetail"></a><a name="QUATERNION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">QUATERNION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const QUATERNION:String = quaternion</code><p></p><p></p><p>
+	     <p>
+	     This is the best format to retrieve the device rotation information.
+	     </p>
+	     <p>
+	     Quaternions are a number system extending complex numbers,
+	     and are sort of similar to a vector in concept in three dimensions.
+	     They provide a very convenient way to represent orientations and
+	     rotations in three dimensions.
+	     </p>
+	     <p>
+	     Read more on quaternions here:
+	     <ul>
+	     <li><a href="http://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation" target="">http://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation</a></li>
+	     <li><a href="http://content.gpwiki.org/index.php/OpenGL%3aTutorials%3aUsing_Quaternions_to_represent_rotation" target="">http://content.gpwiki.org/index.php/OpenGL%3aTutorials%3aUsing_Quaternions_to_represent_rotation</a></li>
+	     </ul>
+	     </p>
+	     </p></div><a name="constantDetail"></a><a name="ROTATIONMATRIX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ROTATIONMATRIX</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ROTATIONMATRIX:String = rotationmatrix</code><p></p><p></p><p>
+	     <p>
+	     This format returns a rotation matrix of the current device position.
+	     </p>
+	     	     <p>
+	     This is currently unimplemented on most algorithm/platforms
+	     </p>
+	     	     </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 10:12 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 10:12 PM +10:00  -->

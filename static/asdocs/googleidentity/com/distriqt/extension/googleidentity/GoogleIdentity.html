@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="GoogleIdentity,com.distriqt.extension.googleidentity.GoogleIdentity,DEFAULT_GAMES_SIGN_IN,DEFAULT_SIGN_IN,EXT_CONTEXT_ID,VERSION,accessToken,authentication,clientID,email,familyName,givenName,idToken,implementation,isSupported,name,nativeVersion,photoUrl,profile,refreshToken,requestEmail,requestIdToken,requestProfile,requestServerAuthCode,scopes,serverAuthCode,serverClientID,service,userID,version,addScope,build,disconnect,dispose,fromObject,fromObject,fromObject,getToken,getUser,init,isSignedIn,requestEmail,requestIdToken,requestProfile,requestServerAuthCode,setAndroidServerClientID,setClientID,setIOSClientID,setServerClientID,setiOSServerClientID,setup,signIn,signInSilently,signOut,toString"><title>com.distriqt.extension.googleidentity.GoogleIdentity</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'GoogleIdentity - distriqt // GoogleIdentity';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // GoogleIdentity Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/googleidentity/GoogleIdentity.html&amp;com/distriqt/extension/googleidentity/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">GoogleIdentity</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("GoogleIdentity"); titleBar_setSubNav(true,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.googleidentity</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  GoogleIdentity</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">GoogleIdentity  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>	
+	              <p>
+	 This class represents the GoogleIdentity extension.
+	 </p>
+	 	            <p>
+	 Allows you to sign in user's to your application via their Google account
+	 and access Google APIs on their behalf if required.
+	 </p>
+	 
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+		 Whether the current device supports the extensions functionality
+		 </div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#service" class="signatureLink">service</a> : <a href="../../../../com/distriqt/extension/googleidentity/GoogleIdentity.html">GoogleIdentity</a><div class="summaryTableDescription">[static] [read-only] 
+		 The singleton instance of the GoogleIdentity class.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#GoogleIdentity()" class="signatureLink">GoogleIdentity</a>()</div><div class="summaryTableDescription">
+		 Constructor
+		 
+		 You should not call this directly, but instead use the singleton access
+		 </div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#disconnect()" class="signatureLink">disconnect</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Disconnects the current user from the app and revokes previous authentication.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 
+		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getToken()" class="signatureLink">getToken</a>(clientSecret:String):Boolean</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>This has been deprecated as it is against best practice to use an access token on a device</div>
+		 
+		 Get a valid access token and a valid ID token, 
+		 refreshing them first if they have expired or are about to expire.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getUser()" class="signatureLink">getUser</a>():<a href="../../../../com/distriqt/extension/googleidentity/GoogleUser.html">GoogleUser</a></div><div class="summaryTableDescription">
+		 
+		 Get the current GoogleUser.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#init()" class="signatureLink">init</a>(key:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div>[static] 
+		 Initialises the extension class for use with the provided key.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isSignedIn()" class="signatureLink">isSignedIn</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Returns true if there is a currently signed in user.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setup()" class="signatureLink">setup</a>(options:<a href="../../../../com/distriqt/extension/googleidentity/GoogleIdentityOptions.html">GoogleIdentityOptions</a>):void</div><div class="summaryTableDescription">
+		 
+		 Setup the Google Identity settings and initiate a connection to the 
+		 API services.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#signIn()" class="signatureLink">signIn</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Starts the user initiated sign-in process
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#signInSilently()" class="signatureLink">signInSilently</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 If the user has previously accepted authentication etc then you can 
+		 expect a silent sign in at startup to succeed.</div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#signOut()" class="signatureLink">signOut</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Marks current user as being in the signed out state
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:googleidentity:disconnect" class="signatureLink">googleidentity:disconnect</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the user has been disconnected from this application.</td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:googleidentity:error" class="signatureLink">googleidentity:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 An error occured
+		 
+		 
+		 error and errorCode will contain details of the
+		 error that occurred.</td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:googleidentity:setupcomplete" class="signatureLink">googleidentity:setupcomplete</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when setup is complete.</td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:googleidentity:signin" class="signatureLink">googleidentity:signin</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when sign in completes.</td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:googleidentity:signout" class="signatureLink">googleidentity:signout</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the user has been signed out.</td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:googleidentity:token:failed" class="signatureLink">googleidentity:token:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the tokens failed to be retrieved or refreshed.</td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:googleidentity:token:updated" class="signatureLink">googleidentity:token:updated</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when a call to getToken has completed successfully
+		 
+		 
+		 The access and id tokens in the user object will now be valid.</td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.GoogleIdentity<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 5.1.043<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">GoogleIdentity</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The implementation currently in use. 
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether the current device supports the extensions functionality
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The native version string of the native extension.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="service"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">service</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>service:<a href="../../../../com/distriqt/extension/googleidentity/GoogleIdentity.html">GoogleIdentity</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The singleton instance of the GoogleIdentity class.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get service():<a href="../../../../com/distriqt/extension/googleidentity/GoogleIdentity.html">GoogleIdentity</a></code><br/><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the key is invalid
+		 </td></tr></table></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The version of this extension.
+		 </p>
+		 <p>
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="GoogleIdentity()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">GoogleIdentity</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function GoogleIdentity()</code><p></p><p>
+		 Constructor
+		 
+		 You should not call this directly, but instead use the singleton access
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="disconnect()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">disconnect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function disconnect():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Disconnects the current user from the app and revokes previous authentication. 
+		 If the operation succeeds, the OAuth 2.0 token is also removed from keychain. 
+		 </p>
+		 
+		 <p>
+		 Once disconnect is called you can expect signInSilently to fail.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if started successfully and false otherwise
+		 
+		 </td></tr></table></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 <p>
+		 Disposes the extension and releases any allocated resources. Once this function 
+		 has been called, a call to <code>init</code> is neccesary again before any of the 
+		 extensions functionality will work.
+		 </p>
+		 </p></div><a name="getToken()"></a><a name="getToken(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getToken(clientSecret:String):Boolean</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>This has been deprecated as it is against best practice to use an access token on a device</div><p></p><p></p><p>
+		 <p>
+		 Get a valid access token and a valid ID token, 
+		 refreshing them first if they have expired or are about to expire.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">clientSecret</span>:String</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if started successfully and false if the user is not signed in
+		 </td></tr></table></div><a name="getUser()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getUser():<a href="../../../../com/distriqt/extension/googleidentity/GoogleUser.html">GoogleUser</a></code><p></p><p></p><p>
+		 <p>
+		 Get the current <code>GoogleUser</code>.
+		 Will return <code>null</code> if there is no user signed in.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/googleidentity/GoogleUser.html">GoogleUser</a></code> &mdash; The current <code>GoogleUser</code> or <code>null</code> if not signed in
+		 </td></tr></table></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 Initialises the extension class for use with the provided key.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the key is invalid
+		 </td></tr></table></div><a name="isSignedIn()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSignedIn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function isSignedIn():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Returns <code>true</code> if there is a currently signed in user.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if a user is signed in and <code>false</code> if not.
+		 </td></tr></table></div><a name="setup()"></a><a name="setup(com.distriqt.extension.googleidentity.GoogleIdentityOptions)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setup(options:<a href="../../../../com/distriqt/extension/googleidentity/GoogleIdentityOptions.html">GoogleIdentityOptions</a>):void</code><p></p><p></p><p>
+		 <p>
+		 Setup the Google Identity settings and initiate a connection to the 
+		 API services. Most importantly this call sets the client IDs for your
+		 application.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../com/distriqt/extension/googleidentity/GoogleIdentityOptions.html">GoogleIdentityOptions</a></code> &mdash; GoogleIdentityOptions 
+		 
+		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 <div class="listing"><pre>
+         GoogleIdentity.service.addEventListener( GoogleIdentityEvent.SETUP_COMPLETE, setupCompleteHandler );
+         
+         var options:GoogleIdentityOptions = new GoogleIdentityOptions( "ANDROID_CLIENT_ID", "IOS_CLIENT_ID" );
+         GoogleIdentity.service.setup( options );
+         
+         private function setupCompleteHandler( event:GoogleIdentityEvent ):void
+         {
+             // Setup is complete, can call sign in etc now
+             GoogleIdentity.service.signInSilently();
+         }
+         </pre></div>
+		 
+		 </div></div><a name="signIn()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">signIn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function signIn():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Starts the user initiated sign-in process
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if started successfully and false otherwise
+		 
+		 </td></tr></table></div><a name="signInSilently()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">signInSilently</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function signInSilently():Boolean</code><p></p><p></p><p>
+		 <p>
+		 If the user has previously accepted authentication etc then you can 
+		 expect a silent sign in at startup to succeed. You can do this early 
+		 in your application to automatically sign in returning users.
+		 </p>
+		 
+		 <p>
+		 It will dispatch an <code>ERROR</code> event if sign in fails, 
+		 generally if the user hasn't signed in previously. You should call
+		 <code>signIn</code> at some other point in your application.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if started successfully and false otherwise
+		 
+		 </td></tr></table></div><a name="signOut()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">signOut</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function signOut():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Marks current user as being in the signed out state
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if started successfully and false otherwise
+		 
+		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:googleidentity:disconnect"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">googleidentity:disconnect</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent</code></a><br/><span class="label">GoogleIdentityEvent.type property = </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html#DISCONNECT"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent.DISCONNECT</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the user has been disconnected from this application.
+		 </p>
+		 
+		 </div><a name="event:googleidentity:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">googleidentity:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent</code></a><br/><span class="label">GoogleIdentityEvent.type property = </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html#ERROR"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent.ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 An error occured
+		 </p>
+		 <p>
+		 <code>error</code> and <code>errorCode</code> will contain details of the
+		 error that occurred.
+		 </p>
+		 
+		 <p>
+		 - SIGN_IN_CANCELLED [12501]: The sign in was cancelled by the user. i.e. user cancelled some of the sign in resolutions, e.g. account picking or OAuth consent. 
+		 - SIGN_IN_FAILED [12500]: The sign in attempt didn't succeed with the current account. Unlike SIGN_IN_REQUIRED. when seeing this error code, there is nothing user can do to recover from the sign in failure.
+		 - SIGN_IN_REQUIRED [4]: The client attempted to connect to the service but the user is not signed in.
+		 - INTERNAL_ERROR [8]: An internal error occurred. Retrying should resolve the problem.
+		 - INVALID_ACCOUNT [5]: The client attempted to connect to the service with an invalid account name specified.
+		 - NETWORK_ERROR [7]: A network error occurred. Retrying should resolve the problem.
+		 </p>
+		 
+		 </div><a name="event:googleidentity:setupcomplete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">googleidentity:setupcomplete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent</code></a><br/><span class="label">GoogleIdentityEvent.type property = </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html#SETUP_COMPLETE"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent.SETUP_COMPLETE</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when <code>setup</code> is complete. 
+		 You should wait for this event before attempting any other functionality.
+		 </p>
+		 
+		 </div><a name="event:googleidentity:signin"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">googleidentity:signin</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent</code></a><br/><span class="label">GoogleIdentityEvent.type property = </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html#SIGN_IN"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent.SIGN_IN</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when sign in completes. 
+		 <code>user</code> will contain a valid <code>GoogleUser</code> object.
+		 </p>
+		 
+		 <p>
+		 At this point the access and id tokens may not be valid. If you 
+		 are planning on using them you should now call <code>getToken</code>
+		 and listen for the completion event.
+		 </p>
+		 
+		 </div><a name="event:googleidentity:signout"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">googleidentity:signout</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent</code></a><br/><span class="label">GoogleIdentityEvent.type property = </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html#SIGN_OUT"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent.SIGN_OUT</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the user has been signed out.
+		 </p>
+		 
+		 </div><a name="event:googleidentity:token:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">googleidentity:token:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent</code></a><br/><span class="label">GoogleIdentityEvent.type property = </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html#TOKEN_FAILED"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent.TOKEN_FAILED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the tokens failed to be retrieved or refreshed.
+		 </p>
+		 
+		 </div><a name="event:googleidentity:token:updated"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">googleidentity:token:updated</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent</code></a><br/><span class="label">GoogleIdentityEvent.type property = </span><a href="../../../../com/distriqt/extension/googleidentity/events/GoogleIdentityEvent.html#TOKEN_UPDATED"><code>com.distriqt.extension.googleidentity.events.GoogleIdentityEvent.TOKEN_UPDATED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when a call to <code>getToken</code> has completed successfully
+		 </p>
+		 <p>
+		 The access and id tokens in the user object will now be valid.
+		 </p>
+		 
+		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.GoogleIdentity</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 5.1.043</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 11:06 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 11:06 PM +10:00  -->

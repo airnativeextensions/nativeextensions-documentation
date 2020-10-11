@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="Leaderboards,com.distriqt.extension.gameservices.leaderboards.Leaderboards,COLLECTION_PUBLIC,COLLECTION_SOCIAL,SCORE_ORDER_LARGEST_FIRST,SCORE_ORDER_SMALLEST_FIRST,TIME_SPAN_ALL_TIME,TIME_SPAN_DAILY,TIME_SPAN_WEEKLY,displayName,displayRank,displayScore,id,isSupported,player,rank,rawScore,scoreOrder,displayLeaderboardUI,fromObject,fromObject,fromXML,loadLeaderboards,loadPlayerCenteredScores,loadPlayerScore,loadTopScores,submitScore"><title>com.distriqt.extension.gameservices.leaderboards.Leaderboards</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Leaderboards - distriqt // GameServices';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // GameServices Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/gameservices/leaderboards/Leaderboards.html&amp;com/distriqt/extension/gameservices/leaderboards/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Leaderboards</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Leaderboards"); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.gameservices.leaderboards</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  Leaderboards extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <b>Leaderboards</b>
+	 
+	              <p>
+	 This interface defines the leaderboard functionality for the 
+	 Game Services native extension.
+	 </p>
+	 
+	              <p>
+	 All the functionality here can be accessed through the main 
+	 GameServices class as below:
+	 </p>
+	 
+	              <div class="listing"><pre>
+     GameServices.service.leaderboards.[FUNCTION]
+     </pre></div> 
+	 
+	           <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/GameServices.html#leaderboards" target="">com.distriqt.extension.gameservices.GameServices.leaderboards</a></div><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		     Whether the leaderboards functionality is supported on the current game service.</div></td><td class="summaryTableOwnerCol">Leaderboards</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#displayLeaderboardUI()" class="signatureLink">displayLeaderboardUI</a>(leaderboardId:String):void</div><div class="summaryTableDescription">
+		 
+		 Displays a native UI to the user showing the specified leaderboard.</div></td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadLeaderboards()" class="signatureLink">loadLeaderboards</a>(forceReload:Boolean = false):void</div><div class="summaryTableDescription">
+		 
+		 Asynchronously loads the list of available leaderboards for the current game and user.</div></td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadPlayerCenteredScores()" class="signatureLink">loadPlayerCenteredScores</a>(leaderboardId:String, maxResults:int = 10, span:String, collection:String, forceReload:Boolean = false):void</div><div class="summaryTableDescription">
+		 
+		 Asynchronously loads the scores from the specified leaderboard centered around the current player.</div></td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadPlayerScore()" class="signatureLink">loadPlayerScore</a>(leaderboardId:String, span:String, collection:String):void</div><div class="summaryTableDescription">
+		 
+		 </div></td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadTopScores()" class="signatureLink">loadTopScores</a>(leaderboardId:String, maxResults:int = 10, span:String, collection:String, forceReload:Boolean = false):void</div><div class="summaryTableDescription">
+		 
+		 Asynchronously loads the top scores from the specified leaderboard.</div></td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#submitScore()" class="signatureLink">submitScore</a>(leaderboardId:String, score:int, tag:String):void</div><div class="summaryTableDescription">
+		 
+		 Submit a score to a leaderboard for the currently signed in player.</div></td><td class="summaryTableOwnerCol">Leaderboards</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:playercenteredscores:error" class="signatureLink">leaderboard:playercenteredscores:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when there was an error loading the scores for a leaderboard.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:playercenteredscores:loaded" class="signatureLink">leaderboard:playercenteredscores:loaded</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the player centered scores from a leaderboard have been loaded.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:playerscore:error" class="signatureLink">leaderboard:playerscore:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when there was an error loading the player's leaderboard score.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:playerscore:loaded" class="signatureLink">leaderboard:playerscore:loaded</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the player's leaderboard score has been loaded.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:scores:error" class="signatureLink">leaderboard:scores:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when there was an error loading the scores for a leaderboard.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:scores:loaded" class="signatureLink">leaderboard:scores:loaded</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the scores from a leaderboard have been loaded.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:submitscore:error" class="signatureLink">leaderboard:submitscore:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when there was an error submitting a score to a leaderboard.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:submitscore:success" class="signatureLink">leaderboard:submitscore:success</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when a score has been successfully submitted to a leaderboard
+		 
+		 		 </td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:topscores:loaded" class="signatureLink">leaderboard:topscores:loaded</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the top scores from a leaderboard have been loaded.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboard:ui:closed" class="signatureLink">leaderboard:ui:closed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the displayed leaderboard UI is closed by the user.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboards:error" class="signatureLink">leaderboards:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when there was an error loading the leaderboards.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:leaderboards:loaded" class="signatureLink">leaderboards:loaded</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the metadata about the leaderboards has been loaded.</td><td class="summaryTableOwnerCol">Leaderboards</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		     Whether the leaderboards functionality is supported on the current game service.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isSupported():Boolean</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="displayLeaderboardUI()"></a><a name="displayLeaderboardUI(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">displayLeaderboardUI</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function displayLeaderboardUI(leaderboardId:String):void</code><p></p><p></p><p>
+		 <p>
+		 Displays a native UI to the user showing the specified leaderboard.
+		 </p>
+		 
+		 <p>
+		 If you want to display the UI showing all the leaderboards, simply 
+		 pass an empty string (<code>""</code>) as the <code>leaderboardId</code> 
+		 or call this function with no parameters.
+		 </p>
+		  
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">leaderboardId</span>:String</code> &mdash; 	The id of the leaderboard to query. This will be retrieved from the loadLeaderboards request or you can hard code from your game application setup.
+		 
+		 </td></tr></table></p></div><a name="loadLeaderboards()"></a><a name="loadLeaderboards(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadLeaderboards</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadLeaderboards(forceReload:Boolean = false):void</code><p></p><p></p><p>
+		 <p>
+		 Asynchronously loads the list of available leaderboards for the current game and user. 
+		 This will fire a <code>LeaderboardEvent.LEADERBOARDS_LOADED</code>
+		 when the load is complete, and the event will contain an array of Leaderboard objects.
+		 </p>
+		  
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">forceReload</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Forces an update of the data if true otherwise will use the internally cached version. 
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#LEADERBOARDS_LOADED" target="">com.distriqt.extension.gameservices.events.LeaderboardEvent.LEADERBOARDS_LOADED</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 <p>
+		 The following shows the process of loading and processing the leaderboards using the Google Play Game Services.
+		 </p>
+		 
+		 <div class="listing"><pre>
+         try
+         {
+             GameServices.init( _devKey );
+             if (GameServices.isSupported)
+             {
+                 GameServices.service.addEventListener( GameServicesEvent.INITIALISED,        gameServices_initialisedHandler );
+                 GameServices.service.addEventListener( GameServicesEvent.SIGN_IN_SUCCESS,     gameServices_signInSuccessHandler );
+                 GameServices.service.leaderboards.addEventListener( LeaderboardEvent.LEADERBOARDS_LOADED, gameServices_leaderboardsLoadedHandler );
+         
+                 GameServices.service.leaderboards.initialiseService( Service.GOOGLE_PLAY_GAME_SERVICES, _googlePlayClientID );
+             }
+         }
+         catch (e:Error)
+         {
+         }
+         
+         
+         ...
+         
+         
+         private function gameServices_initialisedHandler( event:GameServicesEvent ):void
+         {
+             GameServices.service.signIn();
+         }
+         
+         private function gameServices_signInSuccessHandler( event:GameServicesEvent ):void
+         {
+             GameServices.service.leaderboards.loadLeaderboards();
+         }
+         
+         private function gameServices_leaderboardsLoadedHandler( event:LeaderboardEvent ):void
+         {
+             var boards:Array = event.data;
+             for each (var board:Leaderboard in boards)
+             {
+                 trace( "["+board.id+"] "+board.displayName );
+             }
+         }
+         </pre></div>
+		 
+		 
+		 </div></div><a name="loadPlayerCenteredScores()"></a><a name="loadPlayerCenteredScores(String,int,String,String,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadPlayerCenteredScores</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadPlayerCenteredScores(leaderboardId:String, maxResults:int = 10, span:String, collection:String, forceReload:Boolean = false):void</code><p></p><p></p><p>
+		 <p>
+		 Asynchronously loads the scores from the specified leaderboard centered around the current player. 
+		 Returned will be details on the leaderboard along with the specified  number of results on the leaderboard, 
+		 with player information and scores.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">leaderboardId</span>:String</code> &mdash; 	The id of the leaderboard to query. This will be retrieved from the loadLeaderboards request or you can hard code from your game application setup.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">maxResults</span>:int</code> (default = <code>10</code>)<code></code> &mdash; 	The maximum number of results to return from this query.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">span</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; 			The time span for the query (see <code>Leaderboard.TIME_SPAN_...</code>)
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">collection</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; 	The collection for the query (see <code>Leaderboard.COLLECTION_PUBLIC</code> or <code>Leaderboard.COLLECTION_SOCIAL</code>)
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">forceReload</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; 	Forces an update of the data if true otherwise will use the internally cached version and only update when necessary. 
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Leaderboard.html" target="">com.distriqt.extension.gameservices.leaderboards.Leaderboard</a><br/><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#PLAYERCENTEREDSCORES_LOADED" target="">com.distriqt.extension.gameservices.events.LeaderboardEvent.PLAYERCENTEREDSCORES_LOADED</a></div></div><a name="loadPlayerScore()"></a><a name="loadPlayerScore(String,String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadPlayerScore</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadPlayerScore(leaderboardId:String, span:String, collection:String):void</code><p></p><p></p><p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">leaderboardId</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">span</span>:String</code> (default = <code>NaN</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">collection</span>:String</code> (default = <code>NaN</code>)<code></code></td></tr></table></p></div><a name="loadTopScores()"></a><a name="loadTopScores(String,int,String,String,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadTopScores</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadTopScores(leaderboardId:String, maxResults:int = 10, span:String, collection:String, forceReload:Boolean = false):void</code><p></p><p></p><p>
+		 <p>
+		 Asynchronously loads the top scores from the specified leaderboard. 
+		 Returned will be details on the leaderboard along with the specified
+		 number of results on the leaderboard, with player information and 
+		 scores.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">leaderboardId</span>:String</code> &mdash; 	The id of the leaderboard to query. This will be retrieved from the loadLeaderboards request or you can hard code from your game application setup.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">maxResults</span>:int</code> (default = <code>10</code>)<code></code> &mdash; 	The maximum number of results to return from this query.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">span</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; 			The time span for the query (see <code>Leaderboard.TIME_SPAN_...</code>)
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">collection</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; 	The collection for the query (see <code>Leaderboard.COLLECTION_PUBLIC</code> or <code>Leaderboard.COLLECTION_SOCIAL</code>)
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">forceReload</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; 	Forces an update of the data if true otherwise will use the internally cached version and only update when necessary. 
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Leaderboard.html" target="">com.distriqt.extension.gameservices.leaderboards.Leaderboard</a><br/><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#TOPSCORES_LOADED" target="">com.distriqt.extension.gameservices.events.LeaderboardEvent.TOPSCORES_LOADED</a></div></div><a name="submitScore()"></a><a name="submitScore(String,int,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">submitScore</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function submitScore(leaderboardId:String, score:int, tag:String):void</code><p></p><p></p><p>
+		 <p>
+		 Submit a score to a leaderboard for the currently signed in player. 
+		 The score is ignored if it is worse (as defined by the leaderboard 
+		 configuration) than a previously submitted score for the same player.
+		 </p>
+		 
+		 
+		 <p>
+		 The meaning of the score value depends on the formatting of the leaderboard established in the developer console. Leaderboards support the following score formats:
+		 </p>
+		 
+		 <ul>
+		 <li>Fixed-point: score represents a raw value, and will be formatted based on the number of decimal places configured. A score of 1000 would be formatted as 1000, 100.0, or 10.00 for 0, 1, or 2 decimal places.</li>
+		 <li>Time: score represents an elapsed time in milliseconds. The value will be formatted as an appropriate time value.</li>
+		 <li>Currency: score represents a value in micro units. For example, in USD, a score of 100 would display as $0.0001, while a score of 1000000 would display as $1.00</li>
+		 </ul>
+		 
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">leaderboardId</span>:String</code> &mdash; 	The id of the leaderboard to query. This will be retrieved from the loadLeaderboards request or you can hard code from your game application setup.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">score</span>:int</code> &mdash; 			The score to submit
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">tag</span>:String</code> &mdash; 			A tag to associate with this score
+		 
+		 </td></tr></table></p></div><div class="detailSectionHeader"> Event Detail </div><a name="event:leaderboard:playercenteredscores:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:playercenteredscores:error</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#PLAYERCENTEREDSCORES_ERROR"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.PLAYERCENTEREDSCORES_ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when there was an error loading the scores for a leaderboard. 
+		 The data field may contain more information.
+		 </p> 
+		 
+		 </div><a name="event:leaderboard:playercenteredscores:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:playercenteredscores:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#PLAYERCENTEREDSCORES_LOADED"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.PLAYERCENTEREDSCORES_LOADED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the player centered scores from a leaderboard have been loaded. 
+		 </p>
+		 <p>
+		 For this event the <code>leaderboard</code> will be the leaderboard 
+		 information that was loaded and the <code>data</code> will contain 
+		 an Array of <code>LeaderboardScore</code> objects.
+		 </p>
+		 
+		 </div><a name="event:leaderboard:playerscore:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:playerscore:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#PLAYERSCORE_ERROR"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.PLAYERSCORE_ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when there was an error loading the player's leaderboard score.
+		 </p>
+		 <p>
+		 This could be due to an issue with the leaderboard or that the player hasn't yet 
+		 submitted any scores to the specified leaderboard.
+		 </p>
+		 
+		 </div><a name="event:leaderboard:playerscore:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:playerscore:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#PLAYERSCORE_LOADED"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.PLAYERSCORE_LOADED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the player's leaderboard score has been loaded.
+		 </p>
+		 <p>
+		 <code>data</code> will contain an array of one score object, being the players score.
+		 </p>
+		 
+		 </div><a name="event:leaderboard:scores:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:scores:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#SCORES_ERROR"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.SCORES_ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when there was an error loading the scores for a leaderboard. 
+		 The data field may contain more information.
+		 </p> 
+		 
+		 </div><a name="event:leaderboard:scores:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:scores:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#SCORES_LOADED"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.SCORES_LOADED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the scores from a leaderboard have been loaded. 
+		 </p>
+		 <p>
+		 For this event the <code>leaderboard</code> will be the leaderboard 
+		 information that was loaded and the <code>data</code> will contain 
+		 an Array of <code>LeaderboardScore</code> objects.
+		 </p>
+		 
+		 </div><a name="event:leaderboard:submitscore:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:submitscore:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#SUBMITSCORE_ERROR"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.SUBMITSCORE_ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when there was an error submitting a score to a leaderboard. 
+		 The data field may contain more information.
+		 </p>
+		 		 </div><a name="event:leaderboard:submitscore:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:submitscore:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#SUBMITSCORE_SUCCESS"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.SUBMITSCORE_SUCCESS</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when a score has been successfully submitted to a leaderboard
+		 </p>
+		 		 </div><a name="event:leaderboard:topscores:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:topscores:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#TOPSCORES_LOADED"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.TOPSCORES_LOADED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the top scores from a leaderboard have been loaded. 
+		 </p>
+		 <p>
+		 For this event the <code>leaderboard</code> will be the leaderboard 
+		 information that was loaded and the <code>data</code> will contain 
+		 an Array of <code>LeaderboardScore</code> objects.
+		 </p>
+		 
+		 </div><a name="event:leaderboard:ui:closed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:ui:closed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#UI_CLOSED"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.UI_CLOSED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the displayed leaderboard UI is closed by the user.
+		 </p>
+		 		 </div><a name="event:leaderboards:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboards:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#LEADERBOARDS_ERROR"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.LEADERBOARDS_ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when there was an error loading the leaderboards. 
+		 The data field may contain more information.
+		 </p>
+		 		 </div><a name="event:leaderboards:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboards:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#LEADERBOARDS_LOADED"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.LEADERBOARDS_LOADED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the metadata about the leaderboards has been loaded.
+		 </p>
+		 
+		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 10:38 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 10:38 PM +10:00  -->

@@ -1,0 +1,791 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="InAppBilling,com.distriqt.extension.inappbilling.InAppBilling,AMAZON_INAPP_PURCHASING,APPLE_INAPP_PURCHASE,BILLING_UNAVAILABLE,DEFAULT,DEFERRED,DEVELOPER_ERROR,ERROR,EXT_CONTEXT_ID,FEATURE_NOT_SUPPORTED,GOOGLE_PLAY_INAPP_BILLING,HUAWEI_APP_GALLERY,IMMEDIATE_AND_CHARGE_PRORATED_PRICE,IMMEDIATE_WITHOUT_PRORATION,IMMEDIATE_WITH_TIME_PRORATION,ITEM_ALREADY_OWNED,ITEM_NOT_OWNED,ITEM_UNAVAILABLE,PAYMENTMODE_FREE_TRIAL,PAYMENTMODE_PAY_AS_YOU_GO,PAYMENTMODE_PAY_UP_FRONT,RESPONSE_CANCELLED,SERVICE_DISCONNECTED,SERVICE_UNAVAILABLE,STATE_CANCELLED,STATE_DEFERRED,STATE_FAILED,STATE_NOTALLOWED,STATE_PURCHASED,STATE_PURCHASING,STATE_REFUNDED,STATE_REMOVED,STATE_RESTORED,STATE_UNKNOWN,TYPE_INTRODUCTORY,TYPE_PRODUCT,TYPE_SUBSCRIPTION,TYPE_SUBSCRIPTION,UNIT_DAY,UNIT_MONTH,UNIT_WEEK,UNIT_YEAR,USER_CANCELLED,VERSION,activeProductIds,activeProducts,applicationReceipt,applicationUsername,applicationUsername,canMakePayments,countryCode,currencyCode,currencyCode,currencySymbol,currencySymbol,currentProductId,description,developerPayload,developerPayload,discount,discount,discounts,downloads,error,errorCode,googlePlayPublicKey,huaweiAppGalleryPublicKey,id,id,implementation,inAppUpdates,isChangePurchaseSupported,isExpired,isGetPurchasesSupported,isProductViewSupported,isRevoked,isSupported,isSupported,isVolumePurchase,keyIdentifier,locale,nativeVersion,newProductId,nonce,numberOfPeriods,numberOfUnits,originalMessage,originalPurchase,paymentMode,price,price,priceString,priceString,productId,productId,promotions,prorationMode,quantity,quantity,service,signature,signature,simulatePurchase,source,storeDeterminedEligible,subscriptionPeriod,subscriptionPeriod,timestamp,title,transactionDate,transactionId,transactionReceipt,transactionState,transactionTimestamp,type,type,type,unit,userData,version,changePurchase,checkPurchaseRequestValid,cleanup,consumePurchase,consumePurchaseByProductId,dispose,finishPurchase,fromObject,fromObject,getAppReceipt,getPendingPurchases,getProducts,getPurchases,getUserData,init,isServiceSupported,makePurchase,refresh,restorePurchases,setApplicationUsername,setCurrentProductId,setDeveloperPayload,setDiscountRequest,setGooglePlayPublicKey,setHuaweiIAPPublicKey,setNewProductId,setProductDiscount,setProductId,setProrationMode,setQuantity,setServiceType,setServiceType,setSignature,setSimulatePurchase,setup,shouldAddPurchase,showProductView,toString,toString"><title>com.distriqt.extension.inappbilling.InAppBilling</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'InAppBilling - distriqt // InAppBilling';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // InAppBilling Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/inappbilling/InAppBilling.html&amp;com/distriqt/extension/inappbilling/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">InAppBilling</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("InAppBilling"); titleBar_setSubNav(true,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.inappbilling</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  InAppBilling</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">InAppBilling  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>	
+	              <p>
+	 This extension implements an in-application billing service allowing you to connect to 
+	 application store connected payment services.
+	 </p>
+	 
+	              <p>
+	 For full documentation on using this extension see:
+	 <ul>
+	 	                  <li>Website: http://airnativeextensions.com/extension/com.distriqt.InAppBilling</li>
+	 	                  <li>Wiki: https://github.com/distriqt/ANE-InAppBilling/wiki</li>
+	                 </ul>
+	              </p>
+	 
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#activeProductIds" class="signatureLink">activeProductIds</a> : Array<div class="summaryTableDescription">[read-only] 
+		 
+		 An array of active product ids, representing all the requests made to getProducts
+		 that haven't been cleared.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#activeProducts" class="signatureLink">activeProducts</a> : Array<div class="summaryTableDescription">[read-only] 
+		 
+		 The array of successfully retrieved Product's.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#applicationReceipt" class="signatureLink">applicationReceipt</a> : <a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceipt.html">ApplicationReceipt</a><div class="summaryTableDescription">[read-only] 
+		 
+		 Access to the application receipt functionality.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#canMakePayments" class="signatureLink">canMakePayments</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Returns true if the current device can make purchases.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#downloads" class="signatureLink">downloads</a> : <a href="../../../../com/distriqt/extension/inappbilling/purchases/Downloads.html">Downloads</a><div class="summaryTableDescription">[read-only] 
+		 Access to the purchase downloads functionality
+		 </div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#inAppUpdates" class="signatureLink">inAppUpdates</a> : <a href="../../../../com/distriqt/extension/inappbilling/updates/InAppUpdates.html">InAppUpdates</a><div class="summaryTableDescription">[read-only] 
+		 Access to the In-App Updates functionality
+		 </div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isChangePurchaseSupported" class="signatureLink">isChangePurchaseSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 Returns whether the current platform / service supports purchase changes
+		 through the changePurchase function.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isGetPurchasesSupported" class="signatureLink">isGetPurchasesSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Whether the getPurchases function is supported on
+		 the current platform and service.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isProductViewSupported" class="signatureLink">isProductViewSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Whether a built in product view is available with the current service and device.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+		 Whether the current device supports the extensions functionality
+		 </div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#promotions" class="signatureLink">promotions</a> : <a href="../../../../com/distriqt/extension/inappbilling/promotions/Promotions.html">Promotions</a><div class="summaryTableDescription">[read-only] 
+		 Access to the store promotions functionality
+		 </div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#service" class="signatureLink">service</a> : <a href="../../../../com/distriqt/extension/inappbilling/InAppBilling.html">InAppBilling</a><div class="summaryTableDescription">[static] [read-only] 
+		 The singleton instance of the Extension class.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#InAppBilling()" class="signatureLink">InAppBilling</a>()</div><div class="summaryTableDescription">
+		 Constructor
+		 		 You should not call this directly, but instead use the singleton access
+		 i.e.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#changePurchase()" class="signatureLink">changePurchase</a>(request:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseChangeRequest.html">PurchaseChangeRequest</a>):Boolean</div><div class="summaryTableDescription">
+		 		 </div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#checkPurchaseRequestValid()" class="signatureLink">checkPurchaseRequestValid</a>(request:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Checks any pending purchases and dispatches events based on the current state
+		 of the transaction
+		 
+		 		 Events
+		 
+		 Calling this function may potentially dispatch any of the following:
+		 
+		 	PurchaseEvent.
+		 
+		 
+		 		 </div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#cleanup()" class="signatureLink">cleanup</a>():void</div><div class="summaryTableDescription">
+		 
+		 This resets the setup service.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#consumePurchase()" class="signatureLink">consumePurchase</a>(purchase:<a href="../../../../com/distriqt/extension/inappbilling/Purchase.html">Purchase</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Call this function to consume a purchase, making it available for
+		 purchase in the store again.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#consumePurchaseByProductId()" class="signatureLink">consumePurchaseByProductId</a>(productId:String):Boolean</div><div class="summaryTableDescription">
+		 Utility function to consume a purchase by the product ID directly.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 
+		 Dispose of object, releasing resources.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#finishPurchase()" class="signatureLink">finishPurchase</a>(purchase:<a href="../../../../com/distriqt/extension/inappbilling/Purchase.html">Purchase</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 You MUST call this for each purchase you make, whether the purchase
+		 was successful or not.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPendingPurchases()" class="signatureLink">getPendingPurchases</a>():Array</div><div class="summaryTableDescription">
+		 
+		 Retrieves a list of the currently pending purchases.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getProducts()" class="signatureLink">getProducts</a>(products:Array, subscriptions:Array = null, clearProducts:Boolean = false):Boolean</div><div class="summaryTableDescription">
+		 
+		 Retrieves a list of products from the store.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPurchases()" class="signatureLink">getPurchases</a>(forceRefresh:Boolean = true):Boolean</div><div class="summaryTableDescription">
+		 
+		 This function allows you to retrieve the available purchases the current user
+		 has made.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getUserData()" class="signatureLink">getUserData</a>():Boolean</div><div class="summaryTableDescription">
+		 Retrieve any user data associated with the current user.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#init()" class="signatureLink">init</a>(key:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div>[static] 
+		 Initialises the extension class for use with the provided key.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isServiceSupported()" class="signatureLink">isServiceSupported</a>(serviceType:String):Boolean</div><div class="summaryTableDescription">
+		 
+		     Checks to see if the current device supports the specified service type.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#makePurchase()" class="signatureLink">makePurchase</a>(request:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Make a purchase of a specified product.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#restorePurchases()" class="signatureLink">restorePurchases</a>(applicationUsername:String):void</div><div class="summaryTableDescription">
+		 
+		 This function will restore any previously made purchases by this user.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setServiceType()" class="signatureLink">setServiceType</a>(serviceType:String):String</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You should pass the service type to the setup function in your BillingService</div>
+		 
+		 Set the type of billing service to use.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setup()" class="signatureLink">setup</a>(keyOrBillingService:*):Boolean</div><div class="summaryTableDescription">
+		 
+		 This function sets up the connection to the application store, setting up
+		 any required security connections.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#shouldAddPurchase()" class="signatureLink">shouldAddPurchase</a>(request:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a>, addToQueue:Boolean):Boolean</div><div class="summaryTableDescription">
+		 
+		 This function is used to respond to a PurchaseRequestEvent.SHOULD_ADD_PURCHASE event.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#showProductView()" class="signatureLink">showProductView</a>(productId:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 If supported a view of the specified product is presented to the user.</div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:get:purchases:complete" class="signatureLink">get:purchases:complete</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the getPurchases() call completes successfully.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:get:purchases:failed" class="signatureLink">get:purchases:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the getPurchases() call fails to complete
+		 perhaps due to network connectivity or user authentication reasons.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:consume:failed" class="signatureLink">inappbilling:consume:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when a consume purchase call fails, either due to communication
+		 problems or some other internal error.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:consume:success" class="signatureLink">inappbilling:consume:success</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when a consume purchase has been completed and is successful.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:product:invalid" class="signatureLink">inappbilling:product:invalid</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 This error occurs when there was an invalid product ID requested.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:products:failed" class="signatureLink">inappbilling:products:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when an attempt to retrieve the products fails, after a 
+		 call to getProducts.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:products:loaded" class="signatureLink">inappbilling:products:loaded</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the specified products have been successfully loaded from the 
+		 server after a call to getProducts.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:restore:purchases:failed" class="signatureLink">inappbilling:restore:purchases:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Indicates there was an error with the restore purchases process.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:restore:purchases:success" class="signatureLink">inappbilling:restore:purchases:success</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 The restore purchases process has been completed and was successful.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:setup:failure" class="signatureLink">inappbilling:setup:failure</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the billing service setup failed to complete.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:inappbilling:setup:success" class="signatureLink">inappbilling:setup:success</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the billing service setup has completed successfully
+		  
+		 
+		 </td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:productview:dismissed" class="signatureLink">productview:dismissed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched when the user closes / dismisses a product view that
+		 was previously displayed 
+		 
+		 </td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:productview:displayed" class="signatureLink">productview:displayed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched after the product is successfully loaded and the
+		 product view is displayed to the user 
+		 
+		 </td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:productview:failed" class="signatureLink">productview:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched if there was an error loading the specified product.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:productview:loaded" class="signatureLink">productview:loaded</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched when the product view was successfully loaded, you should
+		 expect a displayed event shortly after 
+		 
+		 </td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchase:cancelled" class="signatureLink">purchase:cancelled</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 A purchase was cancelled, normally due to the user denying the purchase.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchase:deferred" class="signatureLink">purchase:deferred</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 </td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchase:failed" class="signatureLink">purchase:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 A purchase failed.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchase:notallowed" class="signatureLink">purchase:notallowed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 </td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchase:purchasing" class="signatureLink">purchase:purchasing</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 The process to purchase a product is in process.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchase:removed" class="signatureLink">purchase:removed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 </td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchase:restored" class="signatureLink">purchase:restored</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 A purchase restored
+		 
+		 
+		 The #data contains an array with one element, being the details of the purchase.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchase:success" class="signatureLink">purchase:success</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 A purchase was successful.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:purchases:updated" class="signatureLink">purchases:updated</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched whenever a purchase state has changed.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:should:add:purchase" class="signatureLink">should:add:purchase</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when a purchase request is going to be added to the
+		 queue via an external source, such as through the AppStore
+		 promotions functionality.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:userdata:get:failed" class="signatureLink">userdata:get:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched after a call to getUserData() fails.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:userdata:get:success" class="signatureLink">userdata:get:success</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched after a call to getUserData() succeeds.</td><td class="summaryTableOwnerCol">InAppBilling</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.InAppBilling<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 12.0.119<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">InAppBilling</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="activeProductIds"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">activeProductIds</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>activeProductIds:Array</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 An array of active product ids, representing all the requests made to <code>getProducts</code>
+		 that haven't been cleared.
+		 </p>
+		 		 <p>
+		 This array will contain all the product ids that have been requested, including any
+		 that may have failed to load
+		 </p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get activeProductIds():Array</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="InAppBilling.html#getProducts()" target="">getProducts()</a></div></div><a name="propertyDetail"></a><a name="activeProducts"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">activeProducts</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>activeProducts:Array</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The array of successfully retrieved <code>Product</code>'s.
+		 </p>
+		 		 <p>
+		 This is only valid after a call to <code>getProducts</code> has completed successfully.
+		 It is equivalent to the array that is returned in with the <code>PRODUCTS_LOADED</code> event
+		 </p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get activeProducts():Array</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="InAppBilling.html#getProducts()" target="">getProducts()</a></div></div><a name="propertyDetail"></a><a name="applicationReceipt"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">applicationReceipt</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>applicationReceipt:<a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceipt.html">ApplicationReceipt</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Access to the application receipt functionality.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get applicationReceipt():<a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceipt.html">ApplicationReceipt</a></code><br/></div><a name="propertyDetail"></a><a name="canMakePayments"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">canMakePayments</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>canMakePayments:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Returns <code>true</code> if the current device can make purchases.
+		 </p>
+		 <p>
+		 This will return <code>false</code> if the user is not authorised to make purchases.
+		 For example, parents can restrict their children's ability to purchase additional content.
+		 Your application should confirm that the user is allowed to make payments before attempting to make a purchase.
+		 Your application may also want to alter its behavior or appearance when the user is not allowed to authorize payments.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get canMakePayments():Boolean</code><br/></div><a name="propertyDetail"></a><a name="downloads"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">downloads</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>downloads:<a href="../../../../com/distriqt/extension/inappbilling/purchases/Downloads.html">Downloads</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Access to the purchase downloads functionality
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get downloads():<a href="../../../../com/distriqt/extension/inappbilling/purchases/Downloads.html">Downloads</a></code><br/></div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The implementation currently in use.
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="inAppUpdates"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inAppUpdates</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>inAppUpdates:<a href="../../../../com/distriqt/extension/inappbilling/updates/InAppUpdates.html">InAppUpdates</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Access to the In-App Updates functionality
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get inAppUpdates():<a href="../../../../com/distriqt/extension/inappbilling/updates/InAppUpdates.html">InAppUpdates</a></code><br/></div><a name="propertyDetail"></a><a name="isChangePurchaseSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isChangePurchaseSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isChangePurchaseSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Returns whether the current platform / service supports purchase changes
+		 through the <code>changePurchase</code> function. Purchase changes
+		 mainly include subscription upgrades or downgrades.
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isChangePurchaseSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="isGetPurchasesSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isGetPurchasesSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isGetPurchasesSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Whether the <code>getPurchases</code> function is supported on
+		 the current platform and service. You must call <code>setup</code>
+		 to initialise your service before checking this flag.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isGetPurchasesSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="isProductViewSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isProductViewSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isProductViewSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Whether a built in product view is available with the current service and device.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isProductViewSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether the current device supports the extensions functionality
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The native version string of the native extension.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="promotions"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">promotions</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>promotions:<a href="../../../../com/distriqt/extension/inappbilling/promotions/Promotions.html">Promotions</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Access to the store promotions functionality
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get promotions():<a href="../../../../com/distriqt/extension/inappbilling/promotions/Promotions.html">Promotions</a></code><br/></div><a name="propertyDetail"></a><a name="service"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">service</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>service:<a href="../../../../com/distriqt/extension/inappbilling/InAppBilling.html">InAppBilling</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The singleton instance of the Extension class.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get service():<a href="../../../../com/distriqt/extension/inappbilling/InAppBilling.html">InAppBilling</a></code><br/></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The version of this extension.
+		 </p>
+		 <p>
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="InAppBilling()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">InAppBilling</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function InAppBilling()</code><p></p><p>
+		 Constructor
+		 		 You should not call this directly, but instead use the singleton access
+		 i.e. InAppBilling.service.FUNCTION();
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="changePurchase()"></a><a name="changePurchase(com.distriqt.extension.inappbilling.PurchaseChangeRequest)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">changePurchase</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function changePurchase(request:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseChangeRequest.html">PurchaseChangeRequest</a>):Boolean</code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">request</span>:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseChangeRequest.html">PurchaseChangeRequest</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; </td></tr></table></div><a name="checkPurchaseRequestValid()"></a><a name="checkPurchaseRequestValid(com.distriqt.extension.inappbilling.PurchaseRequest)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">checkPurchaseRequestValid</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function checkPurchaseRequestValid(request:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Checks any pending purchases and dispatches events based on the current state
+		 of the transaction
+		 </p>
+		 		 <b>Events</b>
+		 <p>
+		 Calling this function may potentially dispatch any of the following:
+		 <ul>
+		 	<li><code>PurchaseEvent.</code></li>
+		 </ul>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">request</span>:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html" target="">com.distriqt.extension.inappbilling.events.PurchaseEvent</a></div></div><a name="cleanup()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">cleanup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function cleanup():void</code><p></p><p></p><p>
+		 <p>
+		 This resets the setup service. After calling this you must call <code>setup</code>
+		 again to setup the service.
+		 </p>
+		 </p></div><a name="consumePurchase()"></a><a name="consumePurchase(com.distriqt.extension.inappbilling.Purchase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">consumePurchase</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function consumePurchase(purchase:<a href="../../../../com/distriqt/extension/inappbilling/Purchase.html">Purchase</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Call this function to consume a purchase, making it available for
+		 purchase in the store again.
+		 </p>
+		 		 <p>
+		 This is not required for Apple's InApp Purchases however calling
+		 this function will not affect your application, so you are suggested
+		 to use this mechanism to provide cross-platform compatibility.
+		 Under iOS this call will immediately fire the consume success event.
+		 </p>
+		 		 <p>
+		 <b>Security Recommendation</b>: You must send a consumption request before
+		 provisioning the benefit of the consumable purchase to the user.
+		 Make sure that you have received a successful consumption response
+		 before you provision the item.
+		 </p>
+		 		 <b>Events</b>
+		 <p>
+		 Calling this function may potentially dispatch any of the following:
+		 <ul>
+		 <li><code>InAppBillingEvent.CONSUME_SUCCESS</code></li>
+		 <li><code>InAppBillingEvent.CONSUME_FAILED</code></li>
+		 </ul>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">purchase</span>:<a href="../../../../com/distriqt/extension/inappbilling/Purchase.html">Purchase</a></code> &mdash; 	A Purchase object with a valid <code>productId</code>
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the consumption process was started successfully and <code>false</code>
+		 			if there was an issue with the supplied parameters or the service is not setup
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#CONSUME_SUCCESS" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.CONSUME_SUCCESS</a><br/><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#CONSUME_FAILED" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.CONSUME_FAILED</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">		 <div class="listing"><pre>
+         InAppBilling.service.consumePurchase( new Purchase( "com.distriqt.com.distriqt.test.TestProduct" ) );
+         </pre></div>
+		 		 </div></div><a name="consumePurchaseByProductId()"></a><a name="consumePurchaseByProductId(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">consumePurchaseByProductId</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function consumePurchaseByProductId(productId:String):Boolean</code><p></p><p></p><p>
+		 Utility function to consume a purchase by the product ID directly.
+		 Basically calls <code>consumePurchase( new Purchase( productId ) )</code> internally.
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">productId</span>:String</code> &mdash; The identifier of the product to consume
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; </td></tr></table></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 <p>
+		 Dispose of object, releasing resources. It's very important to call this
+		 method when you are done with this object. It will release any resources
+		 used by it such as service connections. Naturally, once the object is
+		 disposed of, it can't be used again. In order to use the object again
+		 you must call #init and #setup.
+		 </p>
+		 </p></div><a name="finishPurchase()"></a><a name="finishPurchase(com.distriqt.extension.inappbilling.Purchase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">finishPurchase</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function finishPurchase(purchase:<a href="../../../../com/distriqt/extension/inappbilling/Purchase.html">Purchase</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 You MUST call this for each purchase you make, whether the purchase
+		 was successful or not. Until you call this function the purchase
+		 will remain in the queue.
+		 </p>
+		 
+		 <p>
+		 Complete all of the following actions before you finish the transaction:
+		 </p>
+		 <ul>
+		 	<li>Persist the purchase</li>
+		 	<li>Download associated content</li>
+		 	<li>Update your app's UI to let the user access the product</li>
+		 </ul>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">purchase</span>:<a href="../../../../com/distriqt/extension/inappbilling/Purchase.html">Purchase</a></code> &mdash; The purchase to finish
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the finish purchase process was started successfully
+		 
+		 </td></tr></table></div><a name="getPendingPurchases()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPendingPurchases</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPendingPurchases():Array</code><p></p><p></p><p>
+		 <p>
+		 Retrieves a list of the currently pending purchases.
+		 </p>
+		 <p>
+		 <b>Android</b>: this will always be an empty array
+		 </p>
+		 <p>
+		 <b>iOS</b>: this will be the array of <code>Purchase</code>
+		 objects previously reported by a <code>PURCHASES_UPDATED</code> event.
+		 </p> 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code></td></tr></table></div><a name="getProducts()"></a><a name="getProducts(Array,Array,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getProducts</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getProducts(products:Array, subscriptions:Array = null, clearProducts:Boolean = false):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Retrieves a list of products from the store.
+		 </p>
+		 <p>
+		 These must be setup in the store previously through and you must have at least one product defined:
+		 <ul>
+		 <li><b>iOS</b>: http://itunesconnect.apple.com</li>
+		 <li><b>Android</b>: https://play.google.com/apps/publish/v2/</li>
+		 </ul>
+		 </p>
+		 <p>
+		 You must call and wait for a response from this function before attempting to make a
+		 purchase, even if you aren't going to use the product information returned.
+		 </p>
+		 		 <b>Events</b>
+		 <p>
+		 Calling this function may potentially dispatch any of the following:
+		 <ul>
+		 <li><code>InAppBillingEvent.PRODUCTS_LOADED</code></li>
+		 <li><code>InAppBillingEvent.PRODUCTS_FAILED</code></li>
+		 <li><code>InAppBillingEvent.INVALID_PRODUCT</code></li>
+		 </ul>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">products</span>:Array</code> &mdash; 	An array of product ids (also called SKUs) to retrieve from the server
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">subscriptions</span>:Array</code> (default = <code>null</code>)<code></code> &mdash;   An array of product ids for subscription items to retrieve from the server
+		 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">clearProducts</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; If true the internally loaded list of products is cleared,
+		 							If false, the list is appended with these new products.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the request was made correctly and false if there was a problem with the products array
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#PRODUCTS_LOADED" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.PRODUCTS_LOADED</a><br/><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#PRODUCTS_FAILED" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.PRODUCTS_FAILED</a><br/><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#INVALID_PRODUCT" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.INVALID_PRODUCT</a></div></div><a name="getPurchases()"></a><a name="getPurchases(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPurchases</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPurchases(forceRefresh:Boolean = true):Boolean</code><p></p><p></p><p>
+		 <p>
+		 This function allows you to retrieve the available purchases the current user
+		 has made. This will generally include any unconsumed consumable products, any
+		 un-consumable products and any active subscriptions.
+		 </p>
+		 		 <p>
+		     Supported:
+		     <ul>
+		         <li>Android - Google Play Billing</li>
+		     </ul>
+		 </p>
+		 		 <p>
+		 Dispatches an event on complete:
+		 <ul>
+		 <li><code>PurchaseEvent.GET_PURCHASES_COMPLETE</code>: On success and the event will contain an array of purchases</li>
+		 <li><code>PurchaseEvent.GET_PURCHASES_FAILED</code>: If an error occurred, see the event for details</li>
+		 </ul>
+		 </p>
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">forceRefresh</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; 	If <code>true</code> then the server will be queried for the latest purchases, otherwise the local device purchase cache will be used. Supported on Google Play (Android) only.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the functionality is supported on the current billing service.
+		          Will return <code>false</code> on platforms that require you to manage the inventory.
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#GET_PURCHASES_COMPLETE" target="">com.distriqt.extension.inappbilling.events.PurchaseEvent.GET_PURCHASES_COMPLETE</a><br/><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#GET_PURCHASES_FAILED" target="">com.distriqt.extension.inappbilling.events.PurchaseEvent.GET_PURCHASES_FAILED</a></div></div><a name="getUserData()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getUserData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getUserData():Boolean</code><p></p><p></p><p>
+		 Retrieve any user data associated with the current user.
+		 
+		 This information is required by some services (such as Amazon) to validate a purchase receipt.
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the current service supports user data and the retrieval process was started.
+		  <code>false</code> if the current service does not support user data.
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso">com.distriqt.extension.inappbilling.events.UserDataEvent.GET_FAILED<br/>com.distriqt.extension.inappbilling.events.UserDataEvent.GET_SUCCESS</div></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 Initialises the extension class for use with the provided key.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p></div><a name="isServiceSupported()"></a><a name="isServiceSupported(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isServiceSupported</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function isServiceSupported(serviceType:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		     Checks to see if the current device supports the specified service type.
+		 </p>
+		 <p>
+		     Note: This may return <code>false</code> if you have packaged the incorrect variant of the ANE with your application.
+		     Eg, querying for the amazon service but not using the amazon variant of the ANE.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">serviceType</span>:String</code> &mdash; A value from the supported service types defined in InAppBillingServiceTypes
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the service type is supported on the current device and with the current ANE.
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="InAppBillingServiceTypes.html" target="">com.distriqt.extension.inappbilling.InAppBillingServiceTypes</a></div></div><a name="makePurchase()"></a><a name="makePurchase(com.distriqt.extension.inappbilling.PurchaseRequest)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">makePurchase</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function makePurchase(request:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Make a purchase of a specified product. The purchase must contain a valid product id
+		 that has been previously retrieved by use of the #getProducts function, and a valid
+		 quantity (greater than zero).
+		 </p>
+		 		 <p>
+		 If this function returns false during development, it's likely due to the fact
+		 that your application hasn't been setup correctly.
+		 It will either be that the application descriptor hasn't been correctly setup,
+		 or the application hasn't been correctly setup in the appropriate application
+		 store. Double check all of the application setup and try again.
+		 </p>
+		 		 <p>
+		 If it returns false once deployed, it's likely that the connection to the application
+		 store has failed. You could com.distriqt.test the devices network connection, inform the user of
+		 the failure or just wait and try again at a later point.
+		 </p>
+		 		 <b>Events</b>
+		 <p>
+		 Calling this function may potentially dispatch any of the following:
+		 <ul>
+		 <li><code>PurchaseEvent.</code></li>
+		 </ul>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">request</span>:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a></code> &mdash; The PurchaseRequest to make. It must have a valid product id and quantity specified.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the purchase was started successfully and false otherwise
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html" target="">com.distriqt.extension.inappbilling.events.PurchaseEvent</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">		 <div class="listing"><pre>
+         InAppBilling.service.makePurchase( new PurchaseRequest( "com.distriqt.com.distriqt.test.TestProduct", 1 ));
+         </pre></div>
+		 		 </div></div><a name="restorePurchases()"></a><a name="restorePurchases(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">restorePurchases</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function restorePurchases(applicationUsername:String):void</code><p></p><p></p><p>
+		 <p>
+		 This function will restore any previously made purchases by this user. This is done
+		 by contacting the server and for each purchase made the appropriate event will 
+		 fire again, ie. for a successful purchase <code>PurchaseEvent.PURCHASE_SUCCESS</code> will fire.
+		 </p>
+		 
+		 <p>
+		 Once all the purchase events have fired you will receive an 
+		 InAppBillingEvent.RESTORE_PURCHASES_SUCCESS to indicate the process
+		 has completed
+		 </p>
+		 
+		 <p>
+		 Users restore transactions to maintain access to content they've already purchased.
+		 For example, when they upgrade to a new phone, they don’t lose all of the items they 
+		 purchased on the old phone. Include some mechanism in your app to let the user 
+		 restore their purchases, such as a Restore Purchases button. Restoring purchases 
+		 prompts for the user’s App Store credentials, which interrupts the flow of your app: 
+		 because of this, don’t automatically restore purchases, especially not every time 
+		 your app is launched.
+		 </p>
+		 
+		 <b>Events</b>
+		 <p>
+		 Calling this function may potentially dispatch any of the following:
+		 <ul>
+		 	<li><code>InAppBillingEvent.RESTORE_PURCHASES_SUCCESS</code></li>
+		 	<li><code>InAppBillingEvent.RESTORE_PURCHASES_FAILED</code></li>
+		 </ul>
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">applicationUsername</span>:String</code> &mdash; Should be the same username that you used in your PurchaseRequest
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#RESTORE_PURCHASES_SUCCESS" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.RESTORE_PURCHASES_SUCCESS</a><br/><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#RESTORE_PURCHASES_FAILED" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.RESTORE_PURCHASES_FAILED</a></div></div><a name="setServiceType()"></a><a name="setServiceType(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setServiceType</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setServiceType(serviceType:String):String</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You should pass the service type to the setup function in your BillingService</div><p></p><p></p><p>
+		 <p>
+		 Set the type of billing service to use. This should be done before any other
+		 calls to the service, calling this after you have performed any product requests
+		 or purchases will cause unexpected errors.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">serviceType</span>:String</code> &mdash; A value from the supported service types defined in InAppBillingServiceTypes
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The updated service type
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="InAppBillingServiceTypes.html" target="">com.distriqt.extension.inappbilling.InAppBillingServiceTypes</a></div></div><a name="setup()"></a><a name="setup(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setup(keyOrBillingService:*):Boolean</code><p></p><p></p><p>
+		 <p>
+		 This function sets up the connection to the application store, setting up
+		 any required security connections.
+		 </p>
+		 		 <p>
+		 You should listen and wait for the <code>SETUP_SUCCESS</code> and <code>SETUP_FAILURE</code> events
+		 before proceeding to any further extension calls.
+		 </p>
+		 		 <b>iOS InApp Purchases</b>:
+		 <p>
+		 This will register the purchase observer. This will make any pending
+		 purchase events to be dispatched, so you can handle any interrupted
+		 purchases. To do this you should add your PURCHASE_event listeners
+		 <b>before</b> calling this function.
+		 </p>
+		 		 <b>Google Play InApp Billing</b>:
+		 <p>
+		 The Google Play Public Key parameter on the Billing Service should be your
+		 Google Play License Key for the application.
+		 		 See the main documentation for more information on
+		 acquiring this key from the Google Play Developer Console. Please
+		 note it's highly recommended that you attempt to obfuscate this
+		 key in your code. See the security recommendations in the main
+		 documentation.
+		 </p>
+		 		 <b>Events</b>
+		 <p>
+		 Calling this function may potentially dispatch any of the following:
+		 <ul>
+		 <li><code>PurchaseEvent.</code></li>
+		 <li><code>InAppBillingEvent.SETUP_SUCCESS</code></li>
+		 <li><code>InAppBillingEvent.SETUP_FAILURE</code></li>
+		 </ul>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">keyOrBillingService</span>:*</code> &mdash; A <code>BillingService</code> specifying the requested billing configuration
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the service setup has been started correctly
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#SETUP_SUCCESS" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.SETUP_SUCCESS</a><br/><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#SETUP_FAILURE" target="">com.distriqt.extension.inappbilling.events.InAppBillingEvent.SETUP_FAILURE</a><br/><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html" target="">com.distriqt.extension.inappbilling.events.PurchaseEvent</a></div></div><a name="shouldAddPurchase()"></a><a name="shouldAddPurchase(com.distriqt.extension.inappbilling.PurchaseRequest,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">shouldAddPurchase</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function shouldAddPurchase(request:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a>, addToQueue:Boolean):Boolean</code><p></p><p></p><p>
+		 <p>
+		 This function is used to respond to a <code>PurchaseRequestEvent.SHOULD_ADD_PURCHASE</code> event.
+		 It controls whether the request is added to the queue or not.
+		 </p>
+		 <p>
+		 If you are adding a purchase to the queue here you will get normal queue updates
+		 when the purchase is started etc.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">request</span>:<a href="../../../../com/distriqt/extension/inappbilling/PurchaseRequest.html">PurchaseRequest</a></code> &mdash;       The purchase request that was passed with the <code>PurchaseRequestEvent</code>. Do not create a new instance.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">addToQueue</span>:Boolean</code> &mdash;    If <code>true</code> the request is added to the queue and the purchase flow will begin
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the purchase will be added to the queue or <code>false</code> if it's not supported or the request was invalid.
+		 </td></tr></table></div><a name="showProductView()"></a><a name="showProductView(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">showProductView</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function showProductView(productId:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 If supported a view of the specified product is presented to the user.
+		 </p>
+		 <p>
+		 If this returns true then there will be several events dispatched indicating
+		 the success / failure of the view
+		 </p>
+		 		 <b>Events</b>
+		 <p>
+		 Calling this function may potentially dispatch any of the following:
+		 <ul>
+		 <li><code>ProductViewEvent.LOADED</code></li>
+		 <li><code>ProductViewEvent.FAILED</code></li>
+		 <li><code>ProductViewEvent.DISPLAYED</code></li>
+		 <li><code>ProductViewEvent.DISMISSED</code></li>
+		 </ul>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">productId</span>:String</code> &mdash;  The product identifier to display
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if successfully initiated and false if it's not supported
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html" target="">com.distriqt.extension.inappbilling.events.ProductViewEvent</a></div></div><div class="detailSectionHeader"> Event Detail </div><a name="event:get:purchases:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">get:purchases:complete</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#GET_PURCHASES_COMPLETE"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.GET_PURCHASES_COMPLETE</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the <code>getPurchases()</code> call completes successfully.
+		 The <code>data</code> property will contain the array of <code>Purchase</code>'s
+		 made by the current user.
+		 </p>
+		 		 </div><a name="event:get:purchases:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">get:purchases:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#GET_PURCHASES_FAILED"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.GET_PURCHASES_FAILED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the <code>getPurchases()</code> call fails to complete
+		 perhaps due to network connectivity or user authentication reasons. You
+		 can check the error code and message for more information.
+		 </p>
+		 		 </div><a name="event:inappbilling:consume:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:consume:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#CONSUME_FAILED"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.CONSUME_FAILED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when a consume purchase call fails, either due to communication
+		 problems or some other internal error.
+		 </p>
+		 
+		 <p>
+		 The #message parameter will contain a message describing the error.
+		 </p>
+		 
+		 </div><a name="event:inappbilling:consume:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:consume:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#CONSUME_SUCCESS"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.CONSUME_SUCCESS</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when a consume purchase has been completed and is successful.
+		 </p>
+		 
+		 <p>
+		 The #data contains an array with one element, being the details of the purchase,
+		 the only guaranteed value here is the <code>productId</code>, the others may be invalid.
+		 </p>
+		 
+		 </div><a name="event:inappbilling:product:invalid"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:product:invalid</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#INVALID_PRODUCT"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.INVALID_PRODUCT</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 This error occurs when there was an invalid product ID requested. If this error occurs you
+		 should check that you have correctly specified a product ID and that it matches an ID that 
+		 was setup in the store. 
+		 </p>
+		 <p>
+		 When this occurs you will not be able to purchase the product specified by the ID.
+		 </p>
+		 <p>
+		 In this case the #errorCode variable will contain the invalid ID.
+		 </p>
+		 
+		 </div><a name="event:inappbilling:products:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:products:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#PRODUCTS_FAILED"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.PRODUCTS_FAILED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when an attempt to retrieve the products fails, after a 
+		 call to <code>getProducts</code>. This is generally due to a 
+		 failure to connect to the specified billing service due to connectivity
+		 problems. 
+		 </p>
+		 <p>
+		 When this happens you are advised to wait a small interval and 
+		 retry the call. You may also wish to check if the user has a valid
+		 network connection using the NetworkInfo ANE or other such method
+		 and inform the user of the problem.
+		 </p>
+		 
+		 </div><a name="event:inappbilling:products:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:products:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#PRODUCTS_LOADED"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.PRODUCTS_LOADED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the specified products have been successfully loaded from the 
+		 server after a call to getProducts.
+		 </p>
+		 
+		 <p>The #data parameter will contain the array of products successfully loaded</p>
+		 
+		 </div><a name="event:inappbilling:restore:purchases:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:restore:purchases:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#RESTORE_PURCHASES_FAILED"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.RESTORE_PURCHASES_FAILED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Indicates there was an error with the restore purchases process.
+		 </p>
+		 <p>
+		 The #errorCode and #message will be set accordingly to show further information about the error.
+		 </p> 
+		 
+		 </div><a name="event:inappbilling:restore:purchases:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:restore:purchases:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#RESTORE_PURCHASES_SUCCESS"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.RESTORE_PURCHASES_SUCCESS</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 The restore purchases process has been completed and was successful.
+		 </p> 
+		 <p>
+		 There is no data attached to this event, instead each of the individual purchase events 
+		 will be fired again when the restore purchases process is called.
+		 </p>
+		 
+		 </div><a name="event:inappbilling:setup:failure"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:setup:failure</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#SETUP_FAILURE"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.SETUP_FAILURE</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the billing service setup failed to complete. This is a 
+		 critical error and means the service will not work.
+		 </p> 
+		 
+		 </div><a name="event:inappbilling:setup:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inappbilling:setup:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent</code></a><br/><span class="label">InAppBillingEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/InAppBillingEvent.html#SETUP_SUCCESS"><code>com.distriqt.extension.inappbilling.events.InAppBillingEvent.SETUP_SUCCESS</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the billing service setup has completed successfully
+		 </p> 
+		 
+		 </div><a name="event:productview:dismissed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">productview:dismissed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html"><code>com.distriqt.extension.inappbilling.events.ProductViewEvent</code></a><br/><span class="label">ProductViewEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html#DISMISSED"><code>com.distriqt.extension.inappbilling.events.ProductViewEvent.DISMISSED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched when the user closes / dismisses a product view that
+		 was previously displayed 
+		 
+		 </div><a name="event:productview:displayed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">productview:displayed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html"><code>com.distriqt.extension.inappbilling.events.ProductViewEvent</code></a><br/><span class="label">ProductViewEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html#DISPLAYED"><code>com.distriqt.extension.inappbilling.events.ProductViewEvent.DISPLAYED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched after the product is successfully loaded and the
+		 product view is displayed to the user 
+		 
+		 </div><a name="event:productview:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">productview:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html"><code>com.distriqt.extension.inappbilling.events.ProductViewEvent</code></a><br/><span class="label">ProductViewEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html#FAILED"><code>com.distriqt.extension.inappbilling.events.ProductViewEvent.FAILED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched if there was an error loading the specified product.
+		 Generally this is due to the product not exisiting 
+		 
+		 </div><a name="event:productview:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">productview:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html"><code>com.distriqt.extension.inappbilling.events.ProductViewEvent</code></a><br/><span class="label">ProductViewEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/ProductViewEvent.html#LOADED"><code>com.distriqt.extension.inappbilling.events.ProductViewEvent.LOADED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched when the product view was successfully loaded, you should
+		 expect a displayed event shortly after 
+		 
+		 </div><a name="event:purchase:cancelled"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchase:cancelled</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASE_CANCELLED"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASE_CANCELLED</code></a><br/><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASES_UPDATED</div><p></p><p></p><p>
+	 </p>
+		 <p>
+		 A purchase was cancelled, normally due to the user denying the purchase.
+		 </p> 
+		 <p>
+		 The #data contains an array with one element, being the details of the purchase. 
+		 </p>
+		 
+		 </div><a name="event:purchase:deferred"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchase:deferred</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASE_DEFERRED"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASE_DEFERRED</code></a><br/><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASES_UPDATED</div><p></p><p></p><p>
+	 </p>
+		 </div><a name="event:purchase:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchase:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASE_FAILED"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASE_FAILED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 A purchase failed.
+		 </p> 
+		 <p>
+		 The #data contains an array with one element, being the details of the purchase. 
+		 </p>
+		 
+		 </div><a name="event:purchase:notallowed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchase:notallowed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASE_NOTALLOWED"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASE_NOTALLOWED</code></a><br/><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASES_UPDATED</div><p></p><p></p><p>
+	 </p>
+		 </div><a name="event:purchase:purchasing"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchase:purchasing</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASE_PURCHASING"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASE_PURCHASING</code></a><br/><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASES_UPDATED</div><p></p><p></p><p>
+	 </p>
+		 <p>
+		 The process to purchase a product is in process.
+		 </p>
+		 <p>
+		 The #data contains an array with one element, being the details of the purchase.
+		 </p>
+		 		 </div><a name="event:purchase:removed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchase:removed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASE_REMOVED"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASE_REMOVED</code></a><br/><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASES_UPDATED</div><p></p><p></p><p>
+	 </p>
+		 </div><a name="event:purchase:restored"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchase:restored</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASE_RESTORED"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASE_RESTORED</code></a><br/><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASES_UPDATED</div><p></p><p></p><p>
+	 </p>
+		 <p>
+		 A purchase restored
+		 </p>
+		 <p>
+		 The #data contains an array with one element, being the details of the purchase.
+		 </p>
+		 		 </div><a name="event:purchase:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchase:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASE_SUCCESS"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASE_SUCCESS</code></a><br/><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Please Use com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASES_UPDATED</div><p></p><p></p><p>
+	 </p>
+		 <p>
+		 A purchase was successful. When you receive this event you should deliver the product to the application.
+		 </p>
+		 <p>
+		 You will receive this as the result of a restore, and after a purchase was made, for each 
+		 individual successful purchase.
+		 </p>
+		 <p>
+		 The #data contains an array with one element, being the details of the purchase. 
+		 </p>
+		 
+		 </div><a name="event:purchases:updated"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">purchases:updated</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent</code></a><br/><span class="label">PurchaseEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseEvent.html#PURCHASES_UPDATED"><code>com.distriqt.extension.inappbilling.events.PurchaseEvent.PURCHASES_UPDATED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched whenever a purchase state has changed. This can be when the
+		 purchases queue is updated, when a purchase transaction is complete or
+		 when a user cancels a purchase.
+		 </p>
+		 <p>
+		 You should use this event to iterate over the <code>Purchase</code>
+		 objects contained in the <code>data</code> array using the
+		 <code>Purchase.transactionState</code> to process the purchase state.
+		 </p>
+		 		 <div class="listing"><pre>
+         private function purchasesUpdatedHandler( event:PurchaseEvent ):void
+         {
+          for each (var purchase:Purchase in event.data)
+          {
+              switch (purchase.transactionState)
+              {
+                  case case Purchase.STATE_FAILED:
+                      break;
+                           case Purchase.STATE_PURCHASED:
+                      break;
+                           // ETC...
+              }
+          }
+         }
+         </pre></div>
+		 		 		 </div><a name="event:should:add:purchase"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">should:add:purchase</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseRequestEvent.html"><code>com.distriqt.extension.inappbilling.events.PurchaseRequestEvent</code></a><br/><span class="label">PurchaseRequestEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/PurchaseRequestEvent.html#SHOULD_ADD_PURCHASE"><code>com.distriqt.extension.inappbilling.events.PurchaseRequestEvent.SHOULD_ADD_PURCHASE</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when a purchase request is going to be added to the
+		 queue via an external source, such as through the AppStore
+		 promotions functionality. The <code>request</code> will contain
+		 information about the product id that is being requested.
+		 </p>
+		 		 <p>
+		 You should respond to this event within a short amount of time
+		 to indicate if the purchase should be added to the purchase queue
+		 and the purchase flow initiated. This is done by calling
+		 <code>InAppBilling.service.shouldAppPurchase</code>
+		 </p>
+		 		 <p>
+		 If you don't respond to this event the default response is to
+		 add the purchase to the queue and start the purchase flow.
+		 </p>
+		 		 </div><a name="event:userdata:get:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">userdata:get:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/UserDataEvent.html"><code>com.distriqt.extension.inappbilling.events.UserDataEvent</code></a><br/><span class="label">UserDataEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/UserDataEvent.html#GET_FAILED"><code>com.distriqt.extension.inappbilling.events.UserDataEvent.GET_FAILED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched after a call to <code>getUserData()</code> fails.
+		 		 </div><a name="event:userdata:get:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">userdata:get:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/UserDataEvent.html"><code>com.distriqt.extension.inappbilling.events.UserDataEvent</code></a><br/><span class="label">UserDataEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/UserDataEvent.html#GET_SUCCESS"><code>com.distriqt.extension.inappbilling.events.UserDataEvent.GET_SUCCESS</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched after a call to <code>getUserData()</code> succeeds. <code>userData</code> will contain the user information.
+		 		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.InAppBilling</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 12.0.119</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 11:30 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 11:30 PM +10:00  -->
