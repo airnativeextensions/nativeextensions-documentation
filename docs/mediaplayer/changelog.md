@@ -3,6 +3,13 @@
 ###### 2020.10.12 [v4.3.010]
 
 ```
+Updated docs
+```
+
+
+###### 2020.10.12 [v4.3.010]
+
+```
 Android: Added some checks around exoplayer view creation (resolves #196)
 Reduced progress event load with no active listeners
 
