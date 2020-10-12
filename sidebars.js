@@ -55,7 +55,10 @@ module.exports = {
         { type: 'ref', id: "inappbilling/index" },
         { type: 'ref', id: "ironsource/index" },
 
+        { type: 'ref', id: "mediaplayer/index" },
+        
         { type: 'ref', id: "nativewebview/index" },
+        
       ],
     },
   ],
@@ -1176,6 +1179,65 @@ module.exports = {
     },
   ],
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  mediaplayer: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'mediaplayer/index' },
+    { 
+      "Get Started": [
+        "mediaplayer/add-the-extension",
+      ]
+    },
+    { 
+      "Media Player View": [
+        "mediaplayer/media-player---create",
+        "mediaplayer/media-player---loading-media",
+        "mediaplayer/media-player---control-playback",
+        "mediaplayer/media-player---playback-events",
+      ]
+    },
+    { 
+      "Audio Player": [
+        "mediaplayer/audio-player",
+        "mediaplayer/audio-player---background-audio",
+      ]
+    },
+    { 
+      "Sound Pool": [
+        "mediaplayer/sound-pool",
+      ]
+    },
+    { 
+      "Remote Command Center": [
+        "mediaplayer/remote-command-center"
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "mediaplayer/migrating-to-androidx",
+        "mediaplayer/migrating-from-version-1"   
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'mediaplayer/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/mediaplayer/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-MediaPlayer/issues/new' },
+      ],
+    },
+  ],
 
 
   nativewebview: [
