@@ -17,7 +17,7 @@ Select "In-App Items" and add all your products making sure to correctly set the
 
 Ensure the status of your items is "Live" in order to correctly access the products through your application and take note of all your product identifiers (SKUs).
 
-While you are in this section after setting up all your products it is useful to download the IAP exported JSON file to use when testing. See [Testing Amazon In-App Purchasing](testing-amazon-in-app-purchasing) for more.
+While you are in this section after setting up all your products it is useful to download the IAP exported JSON file to use when testing. See [Testing Amazon In-App Purchasing](amazon.testing-amazon-in-app-purchasing) for more.
 
 
 ### Types of Purchasable Items

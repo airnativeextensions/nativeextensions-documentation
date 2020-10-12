@@ -293,6 +293,11 @@ module.exports = {
       ]
     },
     { 
+      "Review Controller": [
+        "applicationrater/review-controller",
+      ]
+    },
+    { 
       "Other": [
         { type: 'doc', id: 'applicationrater/changelog' },
         { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/applicationrater/" },
