@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="KeyValueStore,com.distriqt.extension.cloudstorage.keyvalue.KeyValueStore,isSupported,getString,remove,setString,synchronise"><title>com.distriqt.extension.cloudstorage.keyvalue.KeyValueStore</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'KeyValueStore - distriqt // CloudStorage';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // CloudStorage Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/cloudstorage/keyvalue/KeyValueStore.html&amp;com/distriqt/extension/cloudstorage/keyvalue/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">KeyValueStore</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("KeyValueStore"); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.cloudstorage.keyvalue</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  KeyValueStore extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>
+	 Use the key-value store to make preference, configuration, and app-state 
+	 data available to every instance of your app on every device connected 
+	 to a user account.
+	 </p>
+	              <p>
+	 Changes your app writes to the key-value store object are initially held 
+	 in memory, then written to disk by the system at appropriate times. 
+	 If you write to the key-value store object when the user is not signed 
+	 into an account, the data is stored locally until the next 
+	 synchronization opportunity. When the user signs into an account, 
+	 the system automatically reconciles your local, on-disk keys and values 
+	 with those on the server.
+	 </p>
+	 
+	              <p>
+	 The maximum length for <code>key</code> strings for the key-value store is 64 bytes using UTF8 encoding.
+	 </p>
+	 
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Returns true if the current platform (iOS/tvOS/Android etc) supports the
+		 functionality defined in this interface.</div></td><td class="summaryTableOwnerCol">KeyValueStore</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getString()" class="signatureLink">getString</a>(key:String):String</div><div class="summaryTableDescription">
+		 
+		 Returns the string associated with the specified key.</div></td><td class="summaryTableOwnerCol">KeyValueStore</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#remove()" class="signatureLink">remove</a>(key:String):void</div><div class="summaryTableDescription">
+		 
+		 Removes the value associated with the specified key from the key-value store.</div></td><td class="summaryTableOwnerCol">KeyValueStore</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setString()" class="signatureLink">setString</a>(key:String, value:String):void</div><div class="summaryTableDescription">
+		 
+		 Sets a string object for the specified key in the key-value store.</div></td><td class="summaryTableOwnerCol">KeyValueStore</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#synchronise()" class="signatureLink">synchronise</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Explicitly synchronises in-memory keys and values with those stored on disk.</div></td><td class="summaryTableOwnerCol">KeyValueStore</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Returns true if the current platform (iOS/tvOS/Android etc) supports the
+		 functionality defined in this interface.
+		 </p>
+		 <p>
+		 If this returns <code>false</code>, all other functionality will have
+		 undefined results and you should not call any other function.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isSupported():Boolean</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="getString()"></a><a name="getString(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function getString(key:String):String</code><p></p><p></p><p>
+		 <p>
+		 Returns the string associated with the specified key.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; A key in the key-value store.
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The string associated with the specified key or an empty string if not found.
+		 
+		 </td></tr></table></div><a name="remove()"></a><a name="remove(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">remove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function remove(key:String):void</code><p></p><p></p><p>
+		 <p>
+		 Removes the value associated with the specified key from the key-value store.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; A key in the key-value store.
+		 
+		 </td></tr></table></p></div><a name="setString()"></a><a name="setString(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setString(key:String, value:String):void</code><p></p><p></p><p>
+		 <p>
+		 Sets a string object for the specified key in the key-value store.
+		 </p>
+		 
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; 	The key under which to store the value. The length of this key must not exceed 64 bytes using UTF8 encoding.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; 	The string you want to store. The total size (in bytes) of the string must not exceed the per-key size limits.
+		 
+		 </td></tr></table></p></div><a name="synchronise()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">synchronise</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function synchronise():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Explicitly synchronises in-memory keys and values with those stored on disk.
+		 </p> 
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the in-memory and on-disk keys and 
+		 			values were synchronized, or <code>false</code> if an 
+		 			error occurred. For example, this method returns 
+		 			<code>false</code> if an app was not built with the proper 
+		 			entitlement requests.
+		 </td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 09:52 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 09:52 PM +10:00  -->

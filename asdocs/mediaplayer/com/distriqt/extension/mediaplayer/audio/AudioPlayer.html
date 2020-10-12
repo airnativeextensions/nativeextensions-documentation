@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="AudioPlayer,com.distriqt.extension.mediaplayer.audio.AudioPlayer,OUTPUT_DEFAULT,OUTPUT_RECEIVER,OUTPUT_SPEAKER,audioOutput,backgroundAudioEnabled,duration,playbackSpeedEnabled,position,destroy,enableBackgroundAudio,enablePlaybackSpeed,load,loadFile,pause,play,seek,setAudioOutput,setPlaybackSpeed,setVolume,stop"><title>com.distriqt.extension.mediaplayer.audio.AudioPlayer</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'AudioPlayer - distriqt // MediaPlayer';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // MediaPlayer Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/mediaplayer/audio/AudioPlayer.html&amp;com/distriqt/extension/mediaplayer/audio/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">AudioPlayer</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AudioPlayer"); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.mediaplayer.audio</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  AudioPlayer extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>
+	 Represents an audio player interface with no application UI.
+	 </p>
+	              <p>
+	 You can use this to control playback of an audio file in your application using the native player, and enabling advanced features such as background audio playback.
+	 </p>
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#duration" class="signatureLink">duration</a> : Number<div class="summaryTableDescription">[read-only] 
+		 
+		 The duration of the media in seconds.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#position" class="signatureLink">position</a> : Number<div class="summaryTableDescription">[read-only] 
+		 
+		 The current playback position of the media in seconds.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#destroy()" class="signatureLink">destroy</a>():void</div><div class="summaryTableDescription">
+		 
+		 Destroys the player, clearing any caches and removing the player from memory.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#load()" class="signatureLink">load</a>(source:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Once a player has been created you can change the loaded media
+		 by using this call, passing in the path to the new file.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadFile()" class="signatureLink">loadFile</a>(file:File):Boolean</div><div class="summaryTableDescription">
+		 
+		 Once a player has been created you can change the loaded media
+		 by using this call, passing in the new file.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#pause()" class="signatureLink">pause</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Pauses the playback in the media player.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#play()" class="signatureLink">play</a>(loops:int = 0):Boolean</div><div class="summaryTableDescription">
+		 
+		 Starts playback of the loaded media
+		 (or schedules it to play when the media is available).</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#seek()" class="signatureLink">seek</a>(time:Number):Boolean</div><div class="summaryTableDescription">
+		 
+		 Seeks to the specified time in the media.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setPlaybackSpeed()" class="signatureLink">setPlaybackSpeed</a>(rate:Number):Boolean</div><div class="summaryTableDescription">
+		 
+		 Control the playback speed of the audio.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setVolume()" class="signatureLink">setVolume</a>(volume:Number):Boolean</div><div class="summaryTableDescription">
+		 
+		 The playback volume for the audio player, ranging from 0.0 through 1.0 on a linear scale.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stop()" class="signatureLink">stop</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Stops the playback in the media player.</div></td><td class="summaryTableOwnerCol">AudioPlayer</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:audioplayer:audiobecomingnoisy" class="signatureLink">audioplayer:audiobecomingnoisy</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the application audio would become "noisy", for example the headphones
+		 were removed and play would continue through the device speakers.</td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:audioplayer:complete" class="signatureLink">audioplayer:complete</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 		 </td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:audioplayer:interruption:end" class="signatureLink">audioplayer:interruption:end</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the interruption that occurred is completed and you can resume audio playback
+		 if you required.</td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:audioplayer:interruption:start" class="signatureLink">audioplayer:interruption:start</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when an interruption occurred such as receiving a phone call.</td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:audioplayer:loaded" class="signatureLink">audioplayer:loaded</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched when the audio player completed loading from the source
+		 		 </td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:audioplayer:loading" class="signatureLink">audioplayer:loading</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched when the audio player commenced loading from the source
+		 		 </td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:audioplayer:paused" class="signatureLink">audioplayer:paused</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 		 </td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:audioplayer:playing" class="signatureLink">audioplayer:playing</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 		 </td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:mediaplayer:error" class="signatureLink">mediaplayer:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 A generic error occurred.</td><td class="summaryTableOwnerCol">AudioPlayer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:mediaplayer:progress" class="signatureLink">mediaplayer:progress</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Progress event dispatched when the media is being played in the media player.</td><td class="summaryTableOwnerCol">AudioPlayer</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="duration"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">duration</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>duration:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The duration of the media in seconds.
+		 </p>
+		 <p>
+		 Returns 0 if the media hasn't completed loading, if the player hasn't been created,
+		 or if there was an error loading the media.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get duration():Number</code><br/></div><a name="propertyDetail"></a><a name="position"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">position</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>position:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The current playback position of the media in seconds.
+		 </p>
+		 <p>
+		 Returns 0 if the media hasn't completed loading, if the player hasn't been created,
+		 or if there was an error loading the media.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get position():Number</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="destroy()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">destroy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function destroy():void</code><p></p><p></p><p>
+		 <p>
+		 Destroys the player, clearing any caches and removing the player from memory.
+		 </p>
+		 <p>
+		 Any calls to the player after calling destroy will have undefined results.
+		 </p>
+		 </p></div><a name="load()"></a><a name="load(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">load</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function load(source:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Once a player has been created you can change the loaded media
+		 by using this call, passing in the path to the new file.
+		 </p>
+		 		 <p>
+		 Note: this function may return true even if the file couldn't be loaded,
+		 especially for remote files. The return value of true only indicates that the
+		 source from which the audio player will load has been changed.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:String</code> &mdash; The source of the audio to play (this can be the native path to a file or a url to a remote file)
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successfully changed and <code>false</code> if the player wasn't yet created.
+		 </td></tr></table></div><a name="loadFile()"></a><a name="loadFile(flash.filesystem.File)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadFile(file:File):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Once a player has been created you can change the loaded media
+		 by using this call, passing in the new file.
+		 </p>
+		 <p>
+		 Note: On Android if your file is located in the <code>applicationStorage</code> directory
+		 this will copy the file to a cached location for playback. AIR compresses media
+		 files in the APK and they need to be extracted before native players can access
+		 them.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:File</code> &mdash; The source File of the audio to play
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successfully changed and <code>false</code> if the player wasn't yet created.
+		 </td></tr></table></div><a name="pause()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pause</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function pause():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Pauses the playback in the media player.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="play()"></a><a name="play(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">play</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function play(loops:int = 0):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Starts playback of the loaded media
+		 (or schedules it to play when the media is available).
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">loops</span>:int</code> (default = <code>0</code>)<code></code> &mdash; 	Defines the number of times a sound loops back to the start before the sound stops playback. Set to <code>-1</code> to loop continuously.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="seek()"></a><a name="seek(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">seek</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function seek(time:Number):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Seeks to the specified time in the media. The time must be
+		 less than the total duration of the media, otherwise nothing
+		 is done.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">time</span>:Number</code> &mdash; 	The time to seek to (seconds)
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the seek was started successfully, and <code>false</code> if there was an error
+		 		 </td></tr></table></div><a name="setPlaybackSpeed()"></a><a name="setPlaybackSpeed(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setPlaybackSpeed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setPlaybackSpeed(rate:Number):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Control the playback speed of the audio.
+		 </p>
+		 <p>
+		 You must have set the <code>playbackSpeedEnabled</code> option when creating this player in order for this to work correctly.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">rate</span>:Number</code> &mdash; The playback rate, 0.5 for half speed to 2.0 for double speed
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the playback speed change was successful, and <code>false</code> if there was an error or if playback speed is not enabled for this player
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="AudioPlayerOptions.html#playbackSpeedEnabled" target="">com.distriqt.extension.mediaplayer.audio.AudioPlayerOptions.playbackSpeedEnabled</a></div></div><a name="setVolume()"></a><a name="setVolume(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setVolume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setVolume(volume:Number):Boolean</code><p></p><p></p><p>
+		 <p>
+		 The playback volume for the audio player, ranging from 0.0 through 1.0 on a linear scale.
+		 </p>
+		 <p>
+		 A value of 0.0 indicates silence; a value of 1.0 (the default) indicates full volume for the audio player instance.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">volume</span>:Number</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the volume change was successful, and <code>false</code> if there was an error
+		 </td></tr></table></div><a name="stop()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stop():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Stops the playback in the media player.
+		 </p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:audioplayer:audiobecomingnoisy"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">audioplayer:audiobecomingnoisy</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent</code></a><br/><span class="label">AudioPlayerEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html#AUDIO_BECOMING_NOISY"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent.AUDIO_BECOMING_NOISY</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the application audio would become "noisy", for example the headphones
+		 were removed and play would continue through the device speakers.
+		 The extension will pause the audio automatically and if you want to continue playing you
+		 should call <code>play</code> on your player.
+		 </p>
+		 		 </div><a name="event:audioplayer:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">audioplayer:complete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent</code></a><br/><span class="label">AudioPlayerEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html#COMPLETE"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent.COMPLETE</code></a><br/><p></p><p></p><p>
+	 </p>
+		 		 </div><a name="event:audioplayer:interruption:end"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">audioplayer:interruption:end</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent</code></a><br/><span class="label">AudioPlayerEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html#INTERRUPTION_END"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent.INTERRUPTION_END</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the interruption that occurred is completed and you can resume audio playback
+		 if you required.
+		 </p>
+		 		 </div><a name="event:audioplayer:interruption:start"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">audioplayer:interruption:start</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent</code></a><br/><span class="label">AudioPlayerEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html#INTERRUPTION_START"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent.INTERRUPTION_START</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when an interruption occurred such as receiving a phone call.
+		 Playback will be stopped until the interruption is complete
+		 </p>
+		 		 </div><a name="event:audioplayer:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">audioplayer:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent</code></a><br/><span class="label">AudioPlayerEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html#LOADED"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent.LOADED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched when the audio player completed loading from the source
+		 		 </div><a name="event:audioplayer:loading"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">audioplayer:loading</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent</code></a><br/><span class="label">AudioPlayerEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html#LOADING"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent.LOADING</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched when the audio player commenced loading from the source
+		 		 </div><a name="event:audioplayer:paused"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">audioplayer:paused</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent</code></a><br/><span class="label">AudioPlayerEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html#PAUSED"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent.PAUSED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 		 </div><a name="event:audioplayer:playing"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">audioplayer:playing</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent</code></a><br/><span class="label">AudioPlayerEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/AudioPlayerEvent.html#PLAYING"><code>com.distriqt.extension.mediaplayer.events.AudioPlayerEvent.PLAYING</code></a><br/><p></p><p></p><p>
+	 </p>
+		 		 </div><a name="event:mediaplayer:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mediaplayer:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/MediaErrorEvent.html"><code>com.distriqt.extension.mediaplayer.events.MediaErrorEvent</code></a><br/><span class="label">MediaErrorEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/MediaErrorEvent.html#ERROR"><code>com.distriqt.extension.mediaplayer.events.MediaErrorEvent.ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 A generic error occurred.
+		 </p>
+		 
+		 <p>
+		 The <code>code</code> and <code>description</code> will contain more information about the error.
+		 </p>
+		 		 </div><a name="event:mediaplayer:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mediaplayer:progress</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/MediaProgressEvent.html"><code>com.distriqt.extension.mediaplayer.events.MediaProgressEvent</code></a><br/><span class="label">MediaProgressEvent.type property = </span><a href="../../../../../com/distriqt/extension/mediaplayer/events/MediaProgressEvent.html#PROGRESS"><code>com.distriqt.extension.mediaplayer.events.MediaProgressEvent.PROGRESS</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Progress event dispatched when the media is being played in the media player.
+		 </p>
+		 
+		 <p>
+		 The event contains the current position and the total time of the media being played.
+		 </p>
+		 		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Mon Oct 12 2020, 10:12 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Mon Oct 12 2020, 10:12 AM +10:00  -->

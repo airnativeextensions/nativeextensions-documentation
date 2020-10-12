@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="FlurryAnalytics,com.distriqt.extension.flurry.FlurryAnalytics,dispose,endSession,endTimedEvent,getFlurryAgentVersion,init,initialise,initialiseWithKeys,logError,logEvent,setAge,setAppVersion,setCrashReportingEnabled,setGender,setLocation,setLogEnabled,setReportLocation,setSessionContinueSeconds,setUserID,startSession"><title>com.distriqt.extension.flurry.FlurryAnalytics</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'FlurryAnalytics - distriqt // Flurry';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Flurry Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/flurry/FlurryAnalytics.html&amp;com/distriqt/extension/flurry/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">FlurryAnalytics</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("FlurryAnalytics"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.flurry</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  FlurryAnalytics</td></tr></table><p></p><p></p><p></p>
+	 	 <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#endSession()" class="signatureLink">endSession</a>():void</div><div class="summaryTableDescription">
+		 
+		 End a Flurry session
+		 
+		 </div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#endTimedEvent()" class="signatureLink">endTimedEvent</a>(event:String, parameters:Object = null):void</div><div class="summaryTableDescription">
+		 
+		 Ends a timed event specified by eventName and optionally updates parameters with parameters
+		 
+		 
+		 This method ends an existing timed event.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getFlurryAgentVersion()" class="signatureLink">getFlurryAgentVersion</a>():String</div><div class="summaryTableDescription">
+		 Retrieves the Flurry Agent Build Version
+		 
+		 </div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#initialise()" class="signatureLink">initialise</a>(apiKey:String):void</div><div class="summaryTableDescription">
+		 
+		 Initialise the Flurry analytics SDK with the specific API Key.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#initialiseWithKeys()" class="signatureLink">initialiseWithKeys</a>(iosAPIKey:String, apiKeyAndroid:String):void</div><div class="summaryTableDescription">
+		 
+		 Initialise the Flurry analytics SDK with the platform API keys.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#logError()" class="signatureLink">logError</a>(name:String, message:String):void</div><div class="summaryTableDescription">
+		 
+		 Records an app error.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#logEvent()" class="signatureLink">logEvent</a>(event:String, parameters:Object = null, isTimed:Boolean = false):void</div><div class="summaryTableDescription">
+		 
+		 Records a custom event specified by event
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setAge()" class="signatureLink">setAge</a>(age:int):void</div><div class="summaryTableDescription">
+		 
+		 Set your user's age in years
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setAppVersion()" class="signatureLink">setAppVersion</a>(version:String):void</div><div class="summaryTableDescription">
+		 
+		 Explicitly specifies the App Version that Flurry will use to group Analytics data
+		 
+		  
+		 </div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCrashReportingEnabled()" class="signatureLink">setCrashReportingEnabled</a>(enabled:Boolean):void</div><div class="summaryTableDescription">
+		 
+		 Enable automatic collection of crash reports.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setGender()" class="signatureLink">setGender</a>(gender:String):void</div><div class="summaryTableDescription">
+		 
+		 Set your user's gender.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setLocation()" class="signatureLink">setLocation</a>(latitude:Number, longitude:Number, horizontalAccuracy:Number = 0, verticalAccuracy:Number = 0):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Flurry Analytics now tracks location automatically if available</div>
+		 
+		 Set the location of the session.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setLogEnabled()" class="signatureLink">setLogEnabled</a>(enabled:Boolean):void</div><div class="summaryTableDescription">
+		 
+		 Generates debug logs to device console logs
+		 
+		 
+		 This is an optional method that displays debug information 
+		 related to the Flurry SDK.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setReportLocation()" class="signatureLink">setReportLocation</a>(enabled:Boolean):void</div><div class="summaryTableDescription">
+		 
+		     Flurry will track where your app is being used.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setSessionContinueSeconds()" class="signatureLink">setSessionContinueSeconds</a>(seconds:int):void</div><div class="summaryTableDescription">
+		 
+		 Set the timeout for expiring a Flurry session.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setUserID()" class="signatureLink">setUserID</a>(userId:String):void</div><div class="summaryTableDescription">
+		 
+		 Assign a unique id for a user in your app.</div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#startSession()" class="signatureLink">startSession</a>():void</div><div class="summaryTableDescription">
+		 
+		 Start a Flurry session
+		 
+		 </div></td><td class="summaryTableOwnerCol">FlurryAnalytics</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="endSession()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">endSession</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function endSession():void</code><p></p><p></p><p>
+		 <p>
+		 End a Flurry session
+		 </p>
+		 </p></div><a name="endTimedEvent()"></a><a name="endTimedEvent(String,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">endTimedEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function endTimedEvent(event:String, parameters:Object = null):void</code><p></p><p></p><p>
+		 <p>
+		 Ends a timed event specified by eventName and optionally updates parameters with <code>parameters</code>
+		 </p>
+		 <p>
+		 This method ends an existing timed event. 
+		 If parameters are provided, this will overwrite existing parameters with the same name.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:String</code> &mdash; 		Name of the event
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">parameters</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; An object defining Name-Value pairs of parameters to log with this event
+		 
+		 </td></tr></table></p></div><a name="getFlurryAgentVersion()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getFlurryAgentVersion</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getFlurryAgentVersion():String</code><p></p><p></p><p>
+		 Retrieves the Flurry Agent Build Version
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The Flurry Agent Build Version String
+		 
+		 </td></tr></table></div><a name="initialise()"></a><a name="initialise(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">initialise</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function initialise(apiKey:String):void</code><p></p><p></p><p>
+		 <p>
+		 Initialise the Flurry analytics SDK with the specific API Key.
+		 Use this function if you manage the different platform API keys yourself.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">apiKey</span>:String</code> &mdash; The API Key to use for analytic sessions
+		 
+		 </td></tr></table></p></div><a name="initialiseWithKeys()"></a><a name="initialiseWithKeys(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">initialiseWithKeys</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function initialiseWithKeys(iosAPIKey:String, apiKeyAndroid:String):void</code><p></p><p></p><p>
+		 <p>
+		 Initialise the Flurry analytics SDK with the platform API keys.
+		 This function will use the key appropriate for the platform of the
+		 device.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">iosAPIKey</span>:String</code> &mdash; 	API key to use on iOS devices
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">apiKeyAndroid</span>:String</code> &mdash; API key to use on Android devices
+		 
+		 </td></tr></table></p></div><a name="logError()"></a><a name="logError(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">logError</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function logError(name:String, message:String):void</code><p></p><p></p><p>
+		 <p>
+		 Records an app error. This method captures an error for reporting to Flurry
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; 	Name of the error
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">message</span>:String</code> &mdash; The message to associate with the error
+		 
+		 </td></tr></table></p></div><a name="logEvent()"></a><a name="logEvent(String,Object,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">logEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function logEvent(event:String, parameters:Object = null, isTimed:Boolean = false):void</code><p></p><p></p><p>
+		 <p>
+		 Records a custom event specified by <code>event</code>
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:String</code> &mdash; 		Name of the event. 
+		 						For maximum effectiveness, we recommend using 
+		 						a naming scheme that can be easily understood 
+		 						by non-technical people in your business domain.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">parameters</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; An object defining Name-Value pairs of parameters to log with this event
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">isTimed</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; 	If true, this will record a timed event
+		 
+		 </td></tr></table></p></div><a name="setAge()"></a><a name="setAge(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setAge</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setAge(age:int):void</code><p></p><p></p><p>
+		 <p>
+		 Set your user's age in years
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">age</span>:int</code> &mdash; Reported age of user
+		 
+		 </td></tr></table></p></div><a name="setAppVersion()"></a><a name="setAppVersion(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setAppVersion</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setAppVersion(version:String):void</code><p></p><p></p><p>
+		 <p>
+		 Explicitly specifies the App Version that Flurry will use to group Analytics data
+		 </p>
+		  
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">version</span>:String</code> &mdash; The custom version name
+		 
+		 </td></tr></table></p></div><a name="setCrashReportingEnabled()"></a><a name="setCrashReportingEnabled(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCrashReportingEnabled</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setCrashReportingEnabled(enabled:Boolean):void</code><p></p><p></p><p>
+		 <p>
+		 Enable automatic collection of crash reports. Default value is <code>false</code>
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">enabled</span>:Boolean</code> &mdash; <code>true</code> to enable collection of crash reports.
+		 
+		 </td></tr></table></p></div><a name="setGender()"></a><a name="setGender(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setGender</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setGender(gender:String):void</code><p></p><p></p><p>
+		 <p>
+		 Set your user's gender.
+		 </p>
+		 <p>
+		 Use this method to capture the gender of your user. 
+		 Only use this method if you collect this information explictly 
+		 from your user (i.e. - there is no need to set a default value). 
+		 Allowable values are <code>Gender.MALE</code> or <code>Gender.FEMALE</code>
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">gender</span>:String</code> &mdash; Reported gender of user
+		 
+		 </td></tr></table></p></div><a name="setLocation()"></a><a name="setLocation(Number,Number,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setLocation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setLocation(latitude:Number, longitude:Number, horizontalAccuracy:Number = 0, verticalAccuracy:Number = 0):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>Flurry Analytics now tracks location automatically if available</div><p></p><p></p><p>
+		 <p>
+		 Set the location of the session.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">latitude</span>:Number</code> &mdash; 			The latitude
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">longitude</span>:Number</code> &mdash; 			The longitude
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">horizontalAccuracy</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The radius of uncertainty for the location in meters
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">verticalAccuracy</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; 	The accuracy of the altitude value in meters
+		 
+		 </td></tr></table></p></div><a name="setLogEnabled()"></a><a name="setLogEnabled(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setLogEnabled</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setLogEnabled(enabled:Boolean):void</code><p></p><p></p><p>
+		 <p>
+		 Generates debug logs to device console logs
+		 </p>
+		 <p>
+		 This is an optional method that displays debug information 
+		 related to the Flurry SDK. display information to the console. 
+		 The default setting for this method is <code>false</code> which 
+		 sets the log level to FlurryLogLevelCriticalOnly. 
+		 When set to <code>true</code> the debug log level is set to 
+		 FlurryLogLevelDebug
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">enabled</span>:Boolean</code> &mdash; <code>true</code> to show debug logs, <code>false</code> to omit debug logs
+		 
+		 </td></tr></table></p></div><a name="setReportLocation()"></a><a name="setReportLocation(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setReportLocation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setReportLocation(enabled:Boolean):void</code><p></p><p></p><p>
+		 <p>
+		     Flurry will track where your app is being used.
+		     Flurry uses cached value (to avoid excessive battery usage) when location reporting is enabled.
+		     Without location permission, Flurry will use the IP address of the user’s device
+		     and report this information at the country level.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">enabled</span>:Boolean</code> &mdash; <code>false</code> to disable automatic collection of user location even if available
+		 </td></tr></table></p></div><a name="setSessionContinueSeconds()"></a><a name="setSessionContinueSeconds(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setSessionContinueSeconds</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setSessionContinueSeconds(seconds:int):void</code><p></p><p></p><p>
+		 <p>
+		 Set the timeout for expiring a Flurry session.
+		 </p>
+		 <p>
+		 This is an optional method that sets the time the app may be in the 
+		 background before starting a new session upon resume. The default 
+		 value for the session timeout is 10 seconds in the background.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">seconds</span>:int</code> &mdash; The time in seconds to set the session timeout to
+		 
+		 </td></tr></table></p></div><a name="setUserID()"></a><a name="setUserID(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setUserID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setUserID(userId:String):void</code><p></p><p></p><p>
+		 <p>
+		 Assign a unique id for a user in your app.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; The app id for a user
+		 
+		 </td></tr></table></p></div><a name="startSession()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">startSession</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function startSession():void</code><p></p><p></p><p>
+		 <p>
+		 Start a Flurry session
+		 </p>
+		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 10:31 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 10:31 PM +10:00  -->

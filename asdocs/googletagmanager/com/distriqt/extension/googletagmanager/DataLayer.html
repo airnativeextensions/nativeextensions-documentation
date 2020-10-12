@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="DataLayer,com.distriqt.extension.googletagmanager.DataLayer,dispose,init,openContainer,push,refresh,stringForKey"><title>com.distriqt.extension.googletagmanager.DataLayer</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'DataLayer - distriqt // GoogleTagManager';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // GoogleTagManager Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/googletagmanager/DataLayer.html&amp;com/distriqt/extension/googletagmanager/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">DataLayer</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DataLayer"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.googletagmanager</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  DataLayer extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>
+	 Google Tag Manager also provides a dataLayer, into which you can push 
+	 information about your application that can be used to fire tags 
+	 you've configured in the Google Tag Manager web interface.
+	 </p>
+	 
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#push()" class="signatureLink">push</a>(data:Object):void</div><div class="summaryTableDescription">
+		 
+		 Pushing events to the dataLayer allows you to separate your application code from tags you might want to fire in response to those events.</div></td><td class="summaryTableOwnerCol">DataLayer</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="push()"></a><a name="push(Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">push</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function push(data:Object):void</code><p></p><p></p><p>
+		 <p>
+		 Pushing events to the dataLayer allows you to separate your application code from tags you might want to fire in response to those events.
+		 </p>
+		 <p>
+		 For example, instead of hard-coding Google Analytics screenview 
+		 tracking calls into your application, you could push screen events 
+		 onto the dataLayer and define your tracking tags via the Google Tag 
+		 Manager web interface. This gives you the flexibility to modify that 
+		 tag, or add additional tags that respond to screen events, without 
+		 updating your application code.
+		 </p>
+		 
+		 <p>
+		 The data object should be a series of key/value pairs and will be
+		 interpretted as String values.
+		 </p>
+		 <div class="listing"><pre>
+         var data:Object = {
+                 event:         "openScreen",
+                 screenName: "Home Screen"
+         };
+         </pre></div>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">data</span>:Object</code> &mdash; The data key/values to push to the data layer
+		 
+		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 <p>
+		 The following example demonstrates pushing an app view event
+		 onto the data layer
+		 </p>
+		 
+		 <div class="listing"><pre>
+         var data:Object = {
+             event:         "openScreen",
+             screenName: "Home Screen"
+         };
+         
+         GoogleTagManager.service.dataLayer.push( data );
+         </pre></div>
+		 
+		 </div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 11:09 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 11:09 PM +10:00  -->

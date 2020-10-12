@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="ScreenRecording,com.distriqt.extension.gameservices.recording.ScreenRecording,HIGH,LOW,MEDIUM,filepath,isSupported,microphoneEnabled,quality,uiOverlayEnabled,uiOverlayStopButton,checkAvailability,start,stop"><title>com.distriqt.extension.gameservices.recording.ScreenRecording</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'ScreenRecording - distriqt // GameServices';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // GameServices Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/gameservices/recording/ScreenRecording.html&amp;com/distriqt/extension/gameservices/recording/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">ScreenRecording</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ScreenRecording"); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.gameservices.recording</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  ScreenRecording extends  flash.events.IEventDispatcher</td></tr><tr><td class="classHeaderTableLabel">Implementors</td><td> <a href="../../../../../com/distriqt/extension/gameservices/_ScreenRecordingImpl.html">_ScreenRecordingImpl</a></td></tr></table><p></p><p></p><p></p>
+	 Provides screen recording functionality, access to services such as ReplayKit on iOS and Google Play Games screen recording.
+	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 This flag indicates whether screen recording is available on the current device and service.</div></td><td class="summaryTableOwnerCol">ScreenRecording</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#checkAvailability()" class="signatureLink">checkAvailability</a>(callback:Function = null):Boolean</div><div class="summaryTableDescription">
+		 
+		 Initiates a check to determine whether recording is currently available.</div></td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#start()" class="signatureLink">start</a>(options:<a href="../../../../../com/distriqt/extension/gameservices/recording/ScreenRecordingOptions.html">ScreenRecordingOptions</a> = null):Boolean</div><div class="summaryTableDescription">
+		 
+		     Starts a recording with the specified options.</div></td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stop()" class="signatureLink">stop</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		     Stops an active screen recording.</div></td><td class="summaryTableOwnerCol">ScreenRecording</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:screenrecording:controls:closed" class="signatureLink">screenrecording:controls:closed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 The recording controls have been dismissed by the user.</td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:screenrecording:controls:shown" class="signatureLink">screenrecording:controls:shown</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 The recording controls have been presented to the user.</td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:screenrecording:error" class="signatureLink">screenrecording:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 There was an error during recording.</td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:screenrecording:preview:closed" class="signatureLink">screenrecording:preview:closed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 The recording preview and edit interface has been dismissed by the user.</td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:screenrecording:preview:shown" class="signatureLink">screenrecording:preview:shown</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 The recording preview and edit interface has been presented to the user and
+		 is now visible.</td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:screenrecording:started" class="signatureLink">screenrecording:started</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Screen recording was started and a recording is in progress.</td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:screenrecording:stopped" class="signatureLink">screenrecording:stopped</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Screen recording was stopped, however there may still be some
+		 processing to perform before the recording is complete.</td><td class="summaryTableOwnerCol">ScreenRecording</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:screenrecording:supported:updated" class="signatureLink">screenrecording:supported:updated</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 		 </td><td class="summaryTableOwnerCol">ScreenRecording</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 This flag indicates whether screen recording is available on the current device and service.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isSupported():Boolean</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="checkAvailability()"></a><a name="checkAvailability(Function)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">checkAvailability</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function checkAvailability(callback:Function = null):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Initiates a check to determine whether recording is currently available.
+		 It will return the previous known value of the availability.
+		 </p>
+		 		 <p>
+		 Note: This may initially return false, but change to true after the availability
+		 requirements have been determined. Make sure you use a callback function or listen for
+		 the <code>ScreenRecordingEvent.AVAILABILITY_CHANGED</code> event to determine when
+		 this value changes.
+		 </p>
+		 		 <p>
+		 If a callback function is provided, one <code>Boolean</code> parameter will be
+		 passed to the function indicating the availability flag
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">callback</span>:Function</code> (default = <code>null</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">		 Using a callback
+		 		 <div class="listing"><pre>
+         GameServices.service.recording.checkAvailability( function( available:Boolean ):void
+         {
+             // available indicates the current value.
+         });
+         </pre></div>
+		 		 		 </div><div class="detailBody">		 Using the changed event
+		 		 <div class="listing"><pre>
+         GameServices.service.recording.addEventListener( ScreenRecordingEvent.AVAILABILITY_CHANGED, changeHandler );
+         GameServices.service.recording.checkAvailability();
+                  function changeHandler( event:ScreenRecordingEvent ):void
+         {
+             GameServices.service.recording.removeEventListener( ScreenRecordingEvent.AVAILABILITY_CHANGED, changeHandler );
+             var available:Boolean = GameServices.service.recording.checkAvailability();
+         }
+         </pre></div>
+		 </div></div><a name="start()"></a><a name="start(com.distriqt.extension.gameservices.recording.ScreenRecordingOptions)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">start</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function start(options:<a href="../../../../../com/distriqt/extension/gameservices/recording/ScreenRecordingOptions.html">ScreenRecordingOptions</a> = null):Boolean</code><p></p><p></p><p>
+		 <p>
+		     Starts a recording with the specified options.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../../com/distriqt/extension/gameservices/recording/ScreenRecordingOptions.html">ScreenRecordingOptions</a></code> (default = <code>null</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if started successfully and false otherwise
+		 </td></tr></table></div><a name="stop()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stop():Boolean</code><p></p><p></p><p>
+		 <p>
+		     Stops an active screen recording.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if successful and false otherwise
+		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:screenrecording:controls:closed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">screenrecording:controls:closed</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent</code></a><br/><span class="label">ScreenRecordingEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html#CONTROLS_CLOSED"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent.CONTROLS_CLOSED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 The recording controls have been dismissed by the user.
+		 </p>
+		 		 </div><a name="event:screenrecording:controls:shown"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">screenrecording:controls:shown</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent</code></a><br/><span class="label">ScreenRecordingEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html#CONTROLS_SHOWN"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent.CONTROLS_SHOWN</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 The recording controls have been presented to the user. This interface
+		 allows the user to start and stop recordings on some services.
+		 </p>
+		 		 </div><a name="event:screenrecording:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">screenrecording:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent</code></a><br/><span class="label">ScreenRecordingEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html#ERROR"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent.ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 There was an error during recording. <code>errorCode</code> and
+		 <code>message</code> will contain details of the error that occurred.
+		 </p>
+		 		 </div><a name="event:screenrecording:preview:closed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">screenrecording:preview:closed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent</code></a><br/><span class="label">ScreenRecordingEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html#PREVIEW_CLOSED"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent.PREVIEW_CLOSED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 The recording preview and edit interface has been dismissed by the user.
+		 </p>
+		 		 </div><a name="event:screenrecording:preview:shown"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">screenrecording:preview:shown</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent</code></a><br/><span class="label">ScreenRecordingEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html#PREVIEW_SHOWN"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent.PREVIEW_SHOWN</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 The recording preview and edit interface has been presented to the user and
+		 is now visible.
+		 </p>
+		 		 </div><a name="event:screenrecording:started"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">screenrecording:started</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent</code></a><br/><span class="label">ScreenRecordingEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html#STARTED"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent.STARTED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Screen recording was started and a recording is in progress.
+		 </p>
+		 		 </div><a name="event:screenrecording:stopped"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">screenrecording:stopped</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent</code></a><br/><span class="label">ScreenRecordingEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html#STOPPED"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent.STOPPED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Screen recording was stopped, however there may still be some
+		 processing to perform before the recording is complete.
+		 </p>
+		 		 </div><a name="event:screenrecording:supported:updated"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">screenrecording:supported:updated</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent</code></a><br/><span class="label">ScreenRecordingEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/ScreenRecordingEvent.html#AVAILABILITY_CHANGED"><code>com.distriqt.extension.gameservices.events.ScreenRecordingEvent.AVAILABILITY_CHANGED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Sat Oct 10 2020, 10:38 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Sat Oct 10 2020, 10:38 PM +10:00  -->
