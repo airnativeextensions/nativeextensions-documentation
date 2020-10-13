@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="EmailManager,com.distriqt.extension.share.email.EmailManager,filename,isMailSupported,location,mimeType,nativePath,sendMail,sendMailWithOptions"><title>com.distriqt.extension.share.email.EmailManager</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'EmailManager - distriqt // Share';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Share Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/share/email/EmailManager.html&amp;com/distriqt/extension/share/email/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">EmailManager</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("EmailManager"); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.share.email</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  EmailManager extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	 Defines the email sharing functionality
+	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isMailSupported" class="signatureLink">isMailSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 This checks that the device you are using has the ability to send an email.</div></td><td class="summaryTableOwnerCol">EmailManager</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sendMail()" class="signatureLink">sendMail</a>(subject:String, body:String, toRecipients:String):void</div><div class="summaryTableDescription">
+		 
+		 Sends an email using the native "compose mail" user interface.</div></td><td class="summaryTableOwnerCol">EmailManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sendMailWithOptions()" class="signatureLink">sendMailWithOptions</a>(subject:String, body:String, toRecipients:String, ccRecipients:String, bccRecipients:String, attachments:Array = null, isHTML:Boolean = true, useChooser:Boolean = true):void</div><div class="summaryTableDescription">
+		 
+		 Sends an email using the native "compose mail" user interface.</div></td><td class="summaryTableOwnerCol">EmailManager</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:message:mail:attachment:error" class="signatureLink">message:mail:attachment:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Error event when the attachment specified could not be found or is not
+		 accessible by the application
+		 
+		 
+		 
+		 The detail of this event contains the name of the file that caused the
+		 error.</td><td class="summaryTableOwnerCol">EmailManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:message:mail:compose" class="signatureLink">message:mail:compose</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Returns information about the send email dialog created on iOS, or just information 
+		 about the dialog returning.
+		 
+		 This is not possible on Android as the email is handled by many 
+		 possible external applications which all return different result/error codes 
+		 (or none) and depend on user choices.</td><td class="summaryTableOwnerCol">EmailManager</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="isMailSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isMailSupported</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>isMailSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 This checks that the device you are using has the ability to send an email.
+		 Generally when this returns <code>false</code> it is because the device doesn't have a mail
+		 client or an email account setup on the device.
+		 </p>
+		 		 <p>
+		 Use this to check if you should expect <code>sendMail</code> to complete successfully.
+		 </p>
+		 		 <p><b>iOS</b>: Double check in Settings / "Mail, Contacts ..." that there's a valid email account.</p>
+		 		 <p>
+		 Please note that you should incorporate this check into your application and
+		 inform users if they don't have the ability to send email from their device.
+		 </p>
+		 		 <p><b>true</b> if email messaging is supported</p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isMailSupported():Boolean</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="EmailManager.html#sendMail" target="">sendMail</a></div></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="sendMail()"></a><a name="sendMail(String,String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sendMail</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function sendMail(subject:String, body:String, toRecipients:String):void</code><p></p><p></p><p>
+		 <p>
+		 Sends an email using the native "compose mail" user interface. The parameters
+		 	of the UI are prepopulated with the information passed into this function.
+		 </p>
+		 		 <p>
+		 Recipients are specified as a comma separated string of email addresses, and
+		 	can be an empty string if not required.
+		 </p>
+		 		 <p><b>Supported OS:</b> default, iOS, Android</p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">subject</span>:String</code> &mdash; 		The subject of the email to prepopulate
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">body</span>:String</code> &mdash; 			The body content of the email
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">toRecipients</span>:String</code> &mdash; 	The list of <b>to</b> addresses
+		 		 </td></tr></table></p></div><a name="sendMailWithOptions()"></a><a name="sendMailWithOptions(String,String,String,String,String,Array,Boolean,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sendMailWithOptions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function sendMailWithOptions(subject:String, body:String, toRecipients:String, ccRecipients:String, bccRecipients:String, attachments:Array = null, isHTML:Boolean = true, useChooser:Boolean = true):void</code><p></p><p></p><p>
+		 <p>
+		 Sends an email using the native "compose mail" user interface. The parameters
+		 	of the UI are prepopulated with the information passed into this function.
+		 </p>
+		 		 <p>
+		 Recipients are specified as a comma separated string of email addresses, and
+		 	can be an empty string if not required.
+		 </p>
+		 		 <p>
+		 <b>Note:</b> Attachments are not yet supported in the default implementation.
+		 </p>
+		 		 <b>HTML Content</b>
+		 		 <p>
+		 The way the HTML content is rendered and the tags supported is greatly dependant
+		 on the email application used to send the email. The following list are the
+		 generallly accepted tags, there are a few more on iOS (including table support)
+		 but you are better off sticking to only using the following. If you require
+		 additional tags, we suggest you save your output as html and attach it as a
+		 file.
+		 </p>
+		 		 <ul>
+		 	<li>&lt;a href="..."></li>
+		 <li>&lt;b></li>
+		 <li>&lt;big></li>
+		 <li>&lt;blockquote></li>
+		 <li>&lt;br></li>
+		 <li>&lt;cite></li>
+		 <li>&lt;dfn></li>
+		 <li>&lt;div align="..."></li>
+		 <li>&lt;em></li>
+		 <li>&lt;font size="..." color="..." face="..."></li>
+		 <li>&lt;h1></li>
+		 <li>&lt;h2></li>
+		 <li>&lt;h3></li>
+		 <li>&lt;h4></li>
+		 <li>&lt;h5></li>
+		 <li>&lt;h6></li>
+		 <li>&lt;i></li>
+		 <li>&lt;img src="..."></li>
+		 <li>&lt;p></li>
+		 <li>&lt;small></li>
+		 <li>&lt;strike></li>
+		 <li>&lt;strong></li>
+		 <li>&lt;sub></li>
+		 <li>&lt;sup></li>
+		 <li>&lt;tt></li>
+		 <li>&lt;u></li>
+		 </ul>
+		 		 		 <p><b>Supported OS:</b> default, iOS, Android</p>
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">subject</span>:String</code> &mdash; 		The subject of the email to prepopulate
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">body</span>:String</code> &mdash; 			The body content of the email
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">toRecipients</span>:String</code> &mdash; 	The list of <b>to</b> addresses
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">ccRecipients</span>:String</code> &mdash; 	The list of <b>cc</b> addresses (carbon copy)
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bccRecipients</span>:String</code> &mdash; 	The list of <b>bcc</b> addresses (blind carbon copy)
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">attachments</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; 	The attachments array. This should be an array of Attachment objects. Default: null i.e. no attachments
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">isHTML</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; 		If true the <b>body</b> string is rendered as HTML in the email content, if false it's treated as plain text.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useChooser</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; 	If <code>true</code> on Android a dialog will be displayed to allow the user to choose the mail application to use.
+		 		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Attachment.html" target="">Attachment</a></div></div><div class="detailSectionHeader"> Event Detail </div><a name="event:message:mail:attachment:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">message:mail:attachment:error</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/share/events/EmailEvent.html"><code>com.distriqt.extension.share.events.EmailEvent</code></a><br/><span class="label">EmailEvent.type property = </span><a href="../../../../../com/distriqt/extension/share/events/EmailEvent.html#MESSAGE_MAIL_ATTACHMENT_ERROR"><code>com.distriqt.extension.share.events.EmailEvent.MESSAGE_MAIL_ATTACHMENT_ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Error event when the attachment specified could not be found or is not
+		 accessible by the application
+		 </p>
+		 
+		 <p>
+		 The detail of this event contains the name of the file that caused the
+		 error. It may be dispatched several times for a single send request, but
+		 at most once for each attachment.
+		 </p>
+		 
+		 </div><a name="event:message:mail:compose"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">message:mail:compose</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/share/events/EmailEvent.html"><code>com.distriqt.extension.share.events.EmailEvent</code></a><br/><span class="label">EmailEvent.type property = </span><a href="../../../../../com/distriqt/extension/share/events/EmailEvent.html#MESSAGE_MAIL_COMPOSE"><code>com.distriqt.extension.share.events.EmailEvent.MESSAGE_MAIL_COMPOSE</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>Returns information about the send email dialog created on iOS, or just information 
+		 about the dialog returning.</p>
+		 
+		 <p>This is not possible on Android as the email is handled by many 
+		 possible external applications which all return different result/error codes 
+		 (or none) and depend on user choices. Android will return complete but that is
+		 the only event.</p>
+		 
+		 <p><b>Note:</b> Under android to receive the complete event you must add in 
+		 an activity to your application manifest additions as below:
+		 </p>
+		 
+		 <pre>
+		 &lt;application>
+		   &lt;activity android:name="com.distriqt.extension.message.activities.SendMailActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" >&lt;/activity>
+		 &lt;/application>
+		 </pre>
+		 
+		 <p>If you don't add this the extension will still function you just won't get the complete
+		 notification</p>
+		 
+		 
+		 
+		 <p>
+		 The #details of this event this contains one of the following MESSAGE_MAIL_COMPOSE_types.
+		 </p>
+		 
+		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Oct 13 2020, 02:31 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Oct 13 2020, 02:31 PM +10:00  -->

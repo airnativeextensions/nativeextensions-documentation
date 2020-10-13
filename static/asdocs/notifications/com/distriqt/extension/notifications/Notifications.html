@@ -1,0 +1,328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Notifications,com.distriqt.extension.notifications.Notifications,AUTHORISED,DENIED,EXT_CONTEXT_ID,NOT_DETERMINED,PRIORITY_MAX,PRIORITY_MIN,REPEAT_DAY,REPEAT_FORTNIGHT,REPEAT_HOUR,REPEAT_MINUTE,REPEAT_MONTH,REPEAT_NONE,REPEAT_QUARTER,REPEAT_SECOND,REPEAT_WEEK,REPEAT_WEEKDAY,REPEAT_YEAR,TYPE_IMAGE,TYPE_INBOX,TYPE_NONE,TYPE_TEXT,UNKNOWN,VERSION,alert,alertAction,applicationId,backgroundImage,backgroundImageTextColour,body,canOpenDeviceSettings,categories,category,channelGroups,channelId,channels,colour,count,delay,enableNotificationsWhenActive,groupIcon,groupKey,groupSummary,groupTitle,icon,id,image,implementation,isSupported,largeIcon,lights,lines,nativeVersion,ongoing,payload,priority,repeatInterval,service,sound,style,text,title,type,version,vibrate,authorisationStatus,cancel,cancelAll,dispose,hasAuthorisation,init,notify,openDeviceSettings,register,requestAuthorisation,setBadgeNumber,setup,unregister"><title>com.distriqt.extension.notifications.Notifications</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Notifications - distriqt // Notifications';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Notifications Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/notifications/Notifications.html&amp;com/distriqt/extension/notifications/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Notifications</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Notifications"); titleBar_setSubNav(true,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.notifications</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Notifications</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Notifications  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>
+	 This extension allows access to native local notifications, as opposed to push notifications.
+	 These notifications are displayed locally in the notification area of the device, generally
+	 the pull down area at the top of the device.
+	 </p>
+	 	            <p>
+	 For detailed documentation on using this class see the "Getting Started" guide
+	 <a href="http://airnativeextensions.com/extension/com.distriqt.Notifications#get-started" target="">here</a>
+	              </p>
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#canOpenDeviceSettings" class="signatureLink">canOpenDeviceSettings</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Returns true if you can display the device settings for your application.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+		 Whether this extension is supported on the current platform
+		 </div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#service" class="signatureLink">service</a> : <a href="../../../../com/distriqt/extension/notifications/Notifications.html">Notifications</a><div class="summaryTableDescription">[static] [read-only] 
+		 The singleton instance of the Notifications class.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Notifications()" class="signatureLink">Notifications</a>()</div><div class="summaryTableDescription">
+		  Constructor
+		 </div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#authorisationStatus()" class="signatureLink">authorisationStatus</a>():String</div><div class="summaryTableDescription">
+		 
+		 Returns the current authorisation status of the device.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#cancel()" class="signatureLink">cancel</a>(id:int):void</div><div class="summaryTableDescription">
+		 
+		 Cancel a previously shown notification.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#cancelAll()" class="signatureLink">cancelAll</a>():void</div><div class="summaryTableDescription">
+		 
+		 Cancel all previously shown notifications.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 
+		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hasAuthorisation()" class="signatureLink">hasAuthorisation</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 If true the user has granted authorisation to display notifications
+		 on this device.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#init()" class="signatureLink">init</a>(key:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div>[static] 
+		 Initialises the extension class for use with the provided key.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#notify()" class="signatureLink">notify</a>(notification:<a href="../../../../com/distriqt/extension/notifications/Notification.html">Notification</a>):void</div><div class="summaryTableDescription">
+		 
+		 Post a notification to be shown in the status bar.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#openDeviceSettings()" class="signatureLink">openDeviceSettings</a>():Boolean</div><div class="summaryTableDescription">
+		 		 
+		 iOS 8 introduced the ability to send your user to your application's device
+		 settings within the iOS Settings.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#register()" class="signatureLink">register</a>():void</div><div class="summaryTableDescription">
+		 
+		 Registers to receive notifications.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#requestAuthorisation()" class="signatureLink">requestAuthorisation</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 This function triggers the authorisation request dialog.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setBadgeNumber()" class="signatureLink">setBadgeNumber</a>(number:int):void</div><div class="summaryTableDescription">
+		 Sets the badge number for the application icon
+		 		 </div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setup()" class="signatureLink">setup</a>(service:<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Sets up the service configuration
+		 
+		 		 </div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unregister()" class="signatureLink">unregister</a>():void</div><div class="summaryTableDescription">
+		 
+		 Unregisters to receive notifications.</div></td><td class="summaryTableOwnerCol">Notifications</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:authorisation:changed" class="signatureLink">authorisation:changed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the authorisation status may have changed
+		 
+		 
+		 </td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:notification:action" class="signatureLink">notification:action</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when a user selects an action on a notification.</td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:notification:error" class="signatureLink">notification:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when an error occurred, either an invalid format notification payload
+		 or a connection issue.</td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:notification:group:selected" class="signatureLink">notification:group:selected</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when a group notification is selected
+		  
+		 
+		 
+		 Android only
+		 
+		 
+		 </td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:notification:notification" class="signatureLink">notification:notification</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 A Notification was received 
+		 
+		 
+		 The payload field will contain a json formatted string containing the 
+		 payload sent with this notification.</td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:notification:notification:selected" class="signatureLink">notification:notification:selected</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 This event is dispatched when the user clicks on a notification 
+		 in the notification manager.</td><td class="summaryTableOwnerCol">Notifications</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.Notifications<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Notifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 6.1.122<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Notifications</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="canOpenDeviceSettings"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">canOpenDeviceSettings</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>canOpenDeviceSettings:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Returns true if you can display the device settings for your application.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get canOpenDeviceSettings():Boolean</code><br/></div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The implementation currently in use.
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether this extension is supported on the current platform
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The native version string of the native extension.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="service"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">service</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>service:<a href="../../../../com/distriqt/extension/notifications/Notifications.html">Notifications</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The singleton instance of the Notifications class.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get service():<a href="../../../../com/distriqt/extension/notifications/Notifications.html">Notifications</a></code><br/></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The version of this extension.
+		 </p>
+		 <p>
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Notifications()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Notifications</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Notifications()</code><p></p><p>
+		  Constructor
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="authorisationStatus()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">authorisationStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function authorisationStatus():String</code><p></p><p></p><p>
+		 <p>
+		 Returns the current authorisation status of the device.
+		 This status indicates whether the user has authorised or denied
+		 access to notifications.
+		 </p>
+		 <p>
+		 The <code>NOT_DETERMINED</code> status is returned when your application
+		 is first installed and you have not yet requested authorisation.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A value from the <code>AuthorisationStatus</code> constants
+		 		 </td></tr></table></div><a name="cancel()"></a><a name="cancel(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">cancel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function cancel(id:int):void</code><p></p><p></p><p>
+		 <p>
+		 Cancel a previously shown notification. If it's transient, the view will be hidden.
+		 If it's persistent, it will be removed from the status bar. If it has been scheduled
+		 to be displayed at a delayed interval, it will be removed.
+		 </p>
+		 		 <p>
+		 Note: iOS &lt; 10 can only remove scheduled notifications. Once a notification is displayed
+		 in the notification center it can not be individually removed. You can remove all
+		 notifications on iOS using the <code>cancelAll</code> function. This is no longer
+		 applicable for iOS 10, we now remove notifications both scheduled and displayed.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">id</span>:int</code> &mdash;    The id of the notification
+		 		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Notifications.html#cancelAll" target="">cancelAll</a></div></div><a name="cancelAll()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">cancelAll</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function cancelAll():void</code><p></p><p></p><p>
+		 <p>
+		 Cancel all previously shown notifications.
+		 This cancels all delayed or scheduled notifications and removes
+		 any displayed notifications from the notification center.
+		 </p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Notifications.html#cancel" target="">cancel</a></div></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 <p>
+		 Disposes the extension and releases any allocated resources. Once this function
+		 has been called, a call to <code>init</code> is neccesary again before any of the
+		 extensions functionality will work.
+		 </p>
+		 </p></div><a name="hasAuthorisation()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hasAuthorisation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function hasAuthorisation():Boolean</code><p></p><p></p><p>
+		 <p>
+		 If true the user has granted authorisation to display notifications
+		 on this device.
+		 </p>
+		 <p>
+		 This will also return false if authorisation has not yet been requested.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if notifications can be displayed and false otherwise.
+		 		 </td></tr></table></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 Initialises the extension class for use with the provided key.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p></div><a name="notify()"></a><a name="notify(com.distriqt.extension.notifications.Notification)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">notify</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function notify(notification:<a href="../../../../com/distriqt/extension/notifications/Notification.html">Notification</a>):void</code><p></p><p></p><p>
+		 <p>
+		 Post a notification to be shown in the status bar.
+		 </p>
+		 		 <p>
+		 On Android, if a notification with the same <code>id</code>
+		 has already been posted by your application and has not yet
+		 been canceled, it will be replaced by the updated information.
+		 On iOS, a new notification will always be displayed.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">notification</span>:<a href="../../../../com/distriqt/extension/notifications/Notification.html">Notification</a></code> &mdash;    A Notification object describing what to show the user.
+		                        Must not be null.
+		                        You should use the <code>NotificationBuilder</code> class to generate this object.
+		 		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">		 Showing a simple notification
+		 		 <div class="listing"><pre>
+         Notifications.service.notify(
+            new NotificationBuilder()
+                .setAlert( "A simple alert" )
+                .setTitle( "A simple notification" )
+                .setBody( "The body of the notification" )
+                .build()
+         );
+         </pre></div>
+		 </div></div><a name="openDeviceSettings()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">openDeviceSettings</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function openDeviceSettings():Boolean</code><p></p><p></p><p>
+		 		 <p>
+		 iOS 8 introduced the ability to send your user to your application's device
+		 settings within the iOS Settings.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the settings open was successful and
+		            <code>false</code> if the device settings are not available.
+		 		 </td></tr></table></div><a name="register()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">register</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function register():void</code><p></p><p></p><p>
+		 <p>
+		 Registers to receive notifications.
+		 </p>
+		 		 <p>
+		 This is important mainly if you expect to receive startup notifications.
+		 If the application was started via a local notification, you will
+		 receive a notification selected event immediately after calling
+		 this function so make sure you've added a listener for this event
+		 prior to calling this function.
+		 </p>
+		 		 <p>
+		 From iOS 8, calling this function also performs the necessary
+		 registration for notifications permission, which may display a
+		 popup dialog requesting permission from the user to
+		 display notifications.
+		 </p>
+		 		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html" target="">com.distriqt.extension.notifications.events.NotificationEvent</a></div></div><a name="requestAuthorisation()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">requestAuthorisation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function requestAuthorisation():Boolean</code><p></p><p></p><p>
+		 <p>
+		 This function triggers the authorisation request dialog. This dialog will only
+		 be displayed once to a user on iOS so make sure you have adequately informed
+		 your user why you are requesting authorisation.
+		 </p>
+		 <p>
+		 Note calling <code>register</code> at any point will trigger the request authorisation
+		 dialog as well so make sure you have implemented your authorisation logic before calling
+		 <code>register</code>
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the request was started successfully and false otherwise
+		 		 </td></tr></table></div><a name="setBadgeNumber()"></a><a name="setBadgeNumber(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setBadgeNumber</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setBadgeNumber(number:int):void</code><p></p><p></p><p>
+		 Sets the badge number for the application icon
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">number</span>:int</code> &mdash;    Badge number to set
+		 </td></tr></table></p></div><a name="setup()"></a><a name="setup(com.distriqt.extension.notifications.Service)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setup(service:<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Sets up the service configuration
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">service</span>:<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code> &mdash;    The service configuration
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">		 An example of setting up the default service with a single category
+		 		 <div class="listing"><pre>
+         var service:Service = new Service();
+         service.enableNotificationsWhenActive = true;
+         service.categories.push(
+            new CategoryBuilder()
+                .setIdentifier( "INVITE_CATEGORY" )
+                .addAction(
+                    new ActionBuilder()
+                        .setTitle( "Accept" )
+                        .setIdentifier( "ACCEPT_IDENTIFIER" )
+                        .build()
+                )
+                .addAction(
+                    new ActionBuilder()
+                        .setTitle( "Delete" )
+                        .setDestructive( true )
+                        .setIdentifier( "DELETE_IDENTIFIER" )
+                        .build()
+                )
+                .build()
+         );
+                  Notifications.service.setup( service );
+         </pre></div>
+		 		 </div></div><a name="unregister()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unregister</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function unregister():void</code><p></p><p></p><p>
+		 <p>
+		 Unregisters to receive notifications.
+		 </p>
+		 </p></div><div class="detailSectionHeader"> Event Detail </div><a name="event:authorisation:changed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">authorisation:changed</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/notifications/events/AuthorisationEvent.html"><code>com.distriqt.extension.notifications.events.AuthorisationEvent</code></a><br/><span class="label">AuthorisationEvent.type property = </span><a href="../../../../com/distriqt/extension/notifications/events/AuthorisationEvent.html#CHANGED"><code>com.distriqt.extension.notifications.events.AuthorisationEvent.CHANGED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the authorisation status may have changed
+		 </p>
+		 
+		 </div><a name="event:notification:action"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">notification:action</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html"><code>com.distriqt.extension.notifications.events.NotificationEvent</code></a><br/><span class="label">NotificationEvent.type property = </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html#ACTION"><code>com.distriqt.extension.notifications.events.NotificationEvent.ACTION</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when a user selects an action on a notification.
+		 </p>
+		 
+		 <p>
+		 The <code>identifier</code> will contain the identifier of the action
+		 allowing you to determine what action to take.
+		 </p>
+		 
+		 </div><a name="event:notification:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">notification:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html"><code>com.distriqt.extension.notifications.events.NotificationEvent</code></a><br/><span class="label">NotificationEvent.type property = </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html#ERROR"><code>com.distriqt.extension.notifications.events.NotificationEvent.ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when an error occurred, either an invalid format notification payload
+		 or a connection issue.
+		 </p>
+		 <p>
+		 The <code>payload</code> will contain the details of the error.
+		 </p>
+		 
+		 </div><a name="event:notification:group:selected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">notification:group:selected</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationGroupEvent.html"><code>com.distriqt.extension.notifications.events.NotificationGroupEvent</code></a><br/><span class="label">NotificationGroupEvent.type property = </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationGroupEvent.html#GROUP_SELECTED"><code>com.distriqt.extension.notifications.events.NotificationGroupEvent.GROUP_SELECTED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when a group notification is selected
+		 </p> 
+		 
+		 <p>
+		 Android only
+		 </p>
+		 
+		 </div><a name="event:notification:notification"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">notification:notification</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html"><code>com.distriqt.extension.notifications.events.NotificationEvent</code></a><br/><span class="label">NotificationEvent.type property = </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html#NOTIFICATION"><code>com.distriqt.extension.notifications.events.NotificationEvent.NOTIFICATION</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>A Notification was received</p> 
+		 
+		 <p>
+		 The payload field will contain a json formatted string containing the 
+		 payload sent with this notification.
+		 </p>
+		 
+		 </div><a name="event:notification:notification:selected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">notification:notification:selected</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html"><code>com.distriqt.extension.notifications.events.NotificationEvent</code></a><br/><span class="label">NotificationEvent.type property = </span><a href="../../../../com/distriqt/extension/notifications/events/NotificationEvent.html#NOTIFICATION_SELECTED"><code>com.distriqt.extension.notifications.events.NotificationEvent.NOTIFICATION_SELECTED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 This event is dispatched when the user clicks on a notification 
+		 in the notification manager. This may have been when the application
+		 was running in the background or wasn't running at all.
+		 </p>
+		 
+		 <p>
+		 If the application wasn't running this event will be dispatched straight
+		 after a call to register.
+		 </p>
+		 
+		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.Notifications</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 6.1.122</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Oct 13 2020, 03:39 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Oct 13 2020, 03:39 PM +10:00  -->

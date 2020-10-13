@@ -1,0 +1,535 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="PushNotifications,com.distriqt.extension.pushnotifications.PushNotifications,APNS,AUTHORISED,AZURE,DEFAULT,DENIED,EXT_CONTEXT_ID,FCM,GCM,NOT_DETERMINED,ONESIGNAL,PUSHY,UNKNOWN,VERSION,WNS,canOpenDeviceSettings,canSendTags,canSubscribeToTopics,categories,channelGroups,channels,enableNotificationsWhenActive,implementation,inAppMessaging,isSupported,locationShared,nativeVersion,requiresUserPrivacyConsent,sandboxMode,service,serviceId,serviceKey,shouldRequestCriticalAlerts,type,version,addCategory,addChannel,addChannelGroup,authorisationStatus,cancelAll,deleteTag,deleteTags,dispose,getDeviceToken,getServiceToken,getTags,hasAuthorisation,init,isServiceSupported,openDeviceSettings,provideUserConsent,register,requestAuthorisation,sendTag,sendTags,setBadgeNumber,setLocationShared,setNotificationsWhenActive,setRequiresUserPrivacyConsent,setServiceId,setServiceKey,setShouldRequestCriticalAlerts,setup,subscribeToTopic,unregister,unsubscribeFromTopic"><title>com.distriqt.extension.pushnotifications.PushNotifications</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'PushNotifications - distriqt // PushNotifications';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // PushNotifications Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/pushnotifications/PushNotifications.html&amp;com/distriqt/extension/pushnotifications/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">PushNotifications</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PushNotifications"); titleBar_setSubNav(true,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.pushnotifications</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  PushNotifications</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">PushNotifications  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>	
+	              <p>
+	 This class is the Push Notifications Native Extension interface. It 
+	 implements the different push notifications services on the supported 
+	 platforms giving the developer one consistent interface to push 
+	 notifications across these platforms.
+	 </p>
+	 
+	              <p>The currently implemented platforms are listed in the documentation,
+	 but include:</p>
+	 
+	              <ul>
+	                 <li>Apple Push Notification Service (APNS) on iOS</li>
+	                 <li>Google Cloud Messaging (GCM) on Android</li>
+	                 <li>Firebase Cloud Messaging (FCM)</li>
+	                 <li>Microsoft Azure Messaging</li>
+	                 <li>OneSignal</li>
+	              </ul>
+	 	            <p>
+	 For information on using this extension visit the getting started guide: <a href="http://airnativeextensions.com/extension/com.distriqt.PushNotifications#get-started" target="">here</a>
+	              </p>
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#canOpenDeviceSettings" class="signatureLink">canOpenDeviceSettings</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Returns true if you can display the device settings for your application.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#canSendTags" class="signatureLink">canSendTags</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 Returns whether the current service supports the setting of tags on the current user registration.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#canSubscribeToTopics" class="signatureLink">canSubscribeToTopics</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 
+		 Returns true if the current service supports topic subscription
+		 and false otherwise.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#inAppMessaging" class="signatureLink">inAppMessaging</a> : <a href="../../../../com/distriqt/extension/pushnotifications/inappmessaging/InAppMessaging.html">InAppMessaging</a><div class="summaryTableDescription">[read-only] 
+		 		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+		 Whether the platform supports push notifications
+		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#service" class="signatureLink">service</a> : <a href="../../../../com/distriqt/extension/pushnotifications/PushNotifications.html">PushNotifications</a><div class="summaryTableDescription">[static] [read-only] 
+		 The singleton instance of the PushNotifications class.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#PushNotifications()" class="signatureLink">PushNotifications</a>()</div><div class="summaryTableDescription">
+		 Class Constructor 
+		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#authorisationStatus()" class="signatureLink">authorisationStatus</a>():String</div><div class="summaryTableDescription">
+		 
+		 Returns the current authorisation status of the device.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#cancelAll()" class="signatureLink">cancelAll</a>():void</div><div class="summaryTableDescription">
+		 
+		 Cancels any notifications currently displayed.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#deleteTag()" class="signatureLink">deleteTag</a>(tag:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Deletes a single tag that was previously set on a user with sendTag or sendTags.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#deleteTags()" class="signatureLink">deleteTags</a>(tags:Array):Boolean</div><div class="summaryTableDescription">
+		 
+		 Deletes one or more tags that were previously set on a user with sendTag or sendTags.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 
+		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDeviceToken()" class="signatureLink">getDeviceToken</a>():String</div><div class="summaryTableDescription">
+		 
+		 Returns the deviceToken or registration ID value of a 
+		 currently registered device from the notification service
+		 
+		 
+		 
+		 This value has slightly different terminology on each of the services,
+		 as below:
+		 
+		 
+		 	"device token" with APNS;
+		 	"registration id" with Android GCM;
+		 	"instance token" with FCM.
+		 
+		 
+		 
+		 The value unique identifies this device.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getServiceToken()" class="signatureLink">getServiceToken</a>():String</div><div class="summaryTableDescription">
+		 		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getTags()" class="signatureLink">getTags</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Retrieve a list of tags that have been set on the user from the service.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hasAuthorisation()" class="signatureLink">hasAuthorisation</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 If true the user has granted authorisation to display notifications
+		 on this device.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#init()" class="signatureLink">init</a>(key:String):void</div><div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div>[static] 
+		 Initialises the extension class for use with the provided key.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isServiceSupported()" class="signatureLink">isServiceSupported</a>(serviceType:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Checks if the specified service type is supported on the 
+		 current device.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#openDeviceSettings()" class="signatureLink">openDeviceSettings</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 
+		 iOS 8 introduced the ability to send your user to your application's device 
+		 settings within the iOS Settings.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#provideUserConsent()" class="signatureLink">provideUserConsent</a>(granted:Boolean):Boolean</div><div class="summaryTableDescription">
+		 
+		 If your Service is set to require the user's privacy consent and the service supports this functionality,
+		 you can provide this consent using this method.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#register()" class="signatureLink">register</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 Registers this device with the push notification service.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#requestAuthorisation()" class="signatureLink">requestAuthorisation</a>():Boolean</div><div class="summaryTableDescription">
+		 
+		 This function triggers the authorisation request dialog.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sendTag()" class="signatureLink">sendTag</a>(key:String, value:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Tag a user based on an app event/property of your choosing to target these users.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sendTags()" class="signatureLink">sendTags</a>(tags:Object):Boolean</div><div class="summaryTableDescription">
+		 
+		 Tag a user based on an app event/property of your choosing to target these users.</div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setBadgeNumber()" class="signatureLink">setBadgeNumber</a>(number:int):void</div><div class="summaryTableDescription">
+		 
+		 Sets the badge number for the application icon
+		 
+		 
+		 
+		 Support: 
+		 
+		 
+		   iOS
+		   Android: Limited, see documentation
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setup()" class="signatureLink">setup</a>(service:<a href="../../../../com/distriqt/extension/pushnotifications/Service.html">Service</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Sets up the service configuration
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#subscribeToTopic()" class="signatureLink">subscribeToTopic</a>(topic:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Subscribe the current client to the specified topic 
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unregister()" class="signatureLink">unregister</a>():void</div><div class="summaryTableDescription">
+		 
+		 Unregisters the current device
+		 
+		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unsubscribeFromTopic()" class="signatureLink">unsubscribeFromTopic</a>(topic:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Unsubscribe the current client from the specified topic 
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:authorisation:changed" class="signatureLink">authorisation:changed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the authorisation status may have changed
+		 
+		 
+		 </td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:pushnotification:action" class="signatureLink">pushnotification:action</a></div></td><td class="summaryTableDescription summaryTableCol">This event is dispatched when the user clicks on a notification action</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:pushnotification:error" class="signatureLink">pushnotification:error</a></div></td><td class="summaryTableDescription summaryTableCol">An error has occurred</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:pushnotification:group:selected" class="signatureLink">pushnotification:group:selected</a></div></td><td class="summaryTableDescription summaryTableCol">This event is dispatched when the user clicks on a group notification</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:pushnotification:notification" class="signatureLink">pushnotification:notification</a></div></td><td class="summaryTableDescription summaryTableCol">A Notification was received</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:pushnotification:notification:selected" class="signatureLink">pushnotification:notification:selected</a></div></td><td class="summaryTableDescription summaryTableCol">This event is dispatched when the user clicks on a notification</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:registration:error" class="signatureLink">registration:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 An error has occurred
+		 
+		 The data field will contain more information about the error that occurred
+		 
+		 Android additional errors:
+		 
+		 SERVICE_NOT_AVAILABLE:		The device can't read the response, or there was a 500/503 from the server that can be retried later.</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:registration:register:failed" class="signatureLink">registration:register:failed</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the registration process fails</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:registration:register:success" class="signatureLink">registration:register:success</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched on successful registration with the server</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:registration:registering" class="signatureLink">registration:registering</a></div></td><td class="summaryTableDescription summaryTableCol">This event is dispatched when the service is attempting to register</td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:registration:unregistered" class="signatureLink">registration:unregistered</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the service has unregistered from the server</td><td class="summaryTableOwnerCol">PushNotifications</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.PushNotifications<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 10.0.013<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">PushNotifications</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="canOpenDeviceSettings"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">canOpenDeviceSettings</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>canOpenDeviceSettings:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Returns true if you can display the device settings for your application.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get canOpenDeviceSettings():Boolean</code><br/></div><a name="propertyDetail"></a><a name="canSendTags"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">canSendTags</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>canSendTags:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Returns whether the current service supports the setting of tags on the current user registration.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get canSendTags():Boolean</code><br/></div><a name="propertyDetail"></a><a name="canSubscribeToTopics"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">canSubscribeToTopics</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>canSubscribeToTopics:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 Returns <code>true</code> if the current service supports topic subscription
+		 and <code>false</code> otherwise.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get canSubscribeToTopics():Boolean</code><br/></div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The implementation currently in use. 
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="inAppMessaging"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">inAppMessaging</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>inAppMessaging:<a href="../../../../com/distriqt/extension/pushnotifications/inappmessaging/InAppMessaging.html">InAppMessaging</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get inAppMessaging():<a href="../../../../com/distriqt/extension/pushnotifications/inappmessaging/InAppMessaging.html">InAppMessaging</a></code><br/></div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether the platform supports push notifications
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():Boolean</code><br/></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The native version string of the native extension.
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="service"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">service</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>service:<a href="../../../../com/distriqt/extension/pushnotifications/PushNotifications.html">PushNotifications</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The singleton instance of the PushNotifications class.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get service():<a href="../../../../com/distriqt/extension/pushnotifications/PushNotifications.html">PushNotifications</a></code><br/></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 <p>
+		 The version of this extension.
+		 </p>
+		 <p>
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="PushNotifications()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">PushNotifications</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function PushNotifications()</code><p></p><p>
+		 Class Constructor 
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="authorisationStatus()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">authorisationStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function authorisationStatus():String</code><p></p><p></p><p>
+		 <p>
+		 Returns the current authorisation status of the device.
+		 This status indicates whether the user has authorised or denied 
+		 access to notifications. 
+		 </p>
+		 <p>
+		 The <code>NOT_DETERMINED</code> status is returned when your application
+		 is first installed and you have not yet requested authorisation.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A value from the <code>AuthorisationStatus</code> constants
+		 
+		 </td></tr></table></div><a name="cancelAll()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">cancelAll</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function cancelAll():void</code><p></p><p></p><p>
+		 <p>
+		 Cancels any notifications currently displayed.
+		 </p>
+		 <p>
+		 This may cancel local notifications as well created via the Notifications extension.
+		 </p>
+		 
+		 <p>
+		 Support: Android, iOS
+		 </p>
+		 </p></div><a name="deleteTag()"></a><a name="deleteTag(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">deleteTag</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function deleteTag(tag:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Deletes a single tag that was previously set on a user with <code>sendTag</code> or <code>sendTags</code>.
+		 Use deleteTags if you need to delete more than one.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">tag</span>:String</code> &mdash; Key of the tag to delete
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successfully started and <code>false</code> if not supported or there was an error
+		 </td></tr></table></div><a name="deleteTags()"></a><a name="deleteTags(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">deleteTags</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function deleteTags(tags:Array):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Deletes one or more tags that were previously set on a user with <code>sendTag</code> or <code>sendTags</code>.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">tags</span>:Array</code> &mdash; Array of string keys for the tags to delete.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successfully started and <code>false</code> if not supported or there was an error
+		 </td></tr></table></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 <p>
+		 Disposes the extension and releases any allocated resources. Once this function 
+		 has been called, a call to <code>init</code> is neccesary again before any of the 
+		 extensions functionality will work.
+		 </p>
+		 </p></div><a name="getDeviceToken()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDeviceToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDeviceToken():String</code><p></p><p></p><p>
+		 <p>
+		 Returns the deviceToken or registration ID value of a 
+		 currently registered device from the notification service
+		 </p>
+		 
+		 <p>
+		 This value has slightly different terminology on each of the services,
+		 as below:
+		 </p>
+		 <ul>
+		 	<li>"device token" with APNS;</li>
+		 	<li>"registration id" with Android GCM;</li>
+		 	<li>"instance token" with FCM.</li>
+		 </ul>
+		 
+		 <p>
+		 The value unique identifies this device.
+		 It may change and you should be prepared to manage changing
+		 tokens on your server.
+		 </p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code></td></tr></table></div><a name="getServiceToken()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getServiceToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getServiceToken():String</code><p></p><p></p><p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; </td></tr></table></div><a name="getTags()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getTags</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getTags():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Retrieve a list of tags that have been set on the user from the service.
+		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successfully started and <code>false</code> if not supported or there was an error
+		 </td></tr></table></div><a name="hasAuthorisation()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hasAuthorisation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function hasAuthorisation():Boolean</code><p></p><p></p><p>
+		 <p>
+		 If true the user has granted authorisation to display notifications
+		 on this device.
+		 </p>
+		 <p>
+		 This will also return false if authorisation has not yet been requested.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if notifications can be displayed and false otherwise.
+		 
+		 </td></tr></table></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 Initialises the extension class for use with the provided key.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p></div><a name="isServiceSupported()"></a><a name="isServiceSupported(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isServiceSupported</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function isServiceSupported(serviceType:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Checks if the specified service type is supported on the 
+		 current device.
+		 </p>
+		  
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">serviceType</span>:String</code> &mdash; The type of service to check
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the service is supported and false otherwise
+		 
+		 </td></tr></table></div><a name="openDeviceSettings()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">openDeviceSettings</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function openDeviceSettings():Boolean</code><p></p><p></p><p>
+		 
+		 <p>
+		 iOS 8 introduced the ability to send your user to your application's device 
+		 settings within the iOS Settings.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the settings open was successful and 
+		 			<code>false</code> if the device settings are not available.
+		 
+		 </td></tr></table></div><a name="provideUserConsent()"></a><a name="provideUserConsent(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">provideUserConsent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function provideUserConsent(granted:Boolean):Boolean</code><p></p><p></p><p>
+		 <p>
+		 If your <code>Service</code> is set to require the user's privacy consent and the service supports this functionality,
+		 you can provide this consent using this method. Until you call <code>provideUserConsent(true)</code>,
+		 the service will not fully initialize and will not send any data to the service.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">granted</span>:Boolean</code> &mdash; <code>true</code> if your user has granted permission
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successful and <code>false</code> if not supported or there was an error
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Service.html#requiresUserPrivacyConsent" target="">com.distriqt.extension.pushnotifications.Service.requiresUserPrivacyConsent</a></div></div><a name="register()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">register</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function register():Boolean</code><p></p><p></p><p>
+		 <p>
+		 Registers this device with the push notification service.
+		 You must have called <code>setup</code> before calling this function.
+		 </p>
+		 
+		 <p>
+		 You should make sure you have added all the event listeners for
+		 notifications you require before calling this function since any
+		 startup events will fire immediately after a call to this function.
+		 </p>
+		 
+		 <p>
+		 On <b>iOS</b> this will present the request push notifications
+		 permission dialog the first time you request it. You should read this 
+		 guide on <a href="http://techcrunch.com/2014/04/04/the-right-way-to-ask-users-for-ios-permissions/" target="">
+		 the right way to ask users for permissions</a>.
+		 </p> 
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the registration was attempted and false if the service is still initialising
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="PushNotifications.html#isEnabled" target="">isEnabled</a></div></div><a name="requestAuthorisation()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">requestAuthorisation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function requestAuthorisation():Boolean</code><p></p><p></p><p>
+		 <p>
+		 This function triggers the authorisation request dialog. This dialog will only
+		 be displayed once to a user on iOS so make sure you have adequately informed 
+		 your user why you are requesting authorisation.
+		 </p>
+		 <p>
+		 Note calling <code>register</code> at any point will trigger the request authorisation
+		 dialog as well so make sure you have implemented your authorisation logic before calling
+		 <code>register</code>
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the request was started successfully and false otherwise
+		 
+		 </td></tr></table></div><a name="sendTag()"></a><a name="sendTag(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sendTag</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function sendTag(key:String, value:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Tag a user based on an app event/property of your choosing to target these users.
+		 Use <code>sendTags</code> if you need to set more than one tag on a user at a time.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; Key of your choosing to create or update.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; Value to set on the key. NOTE: Passing in a blank/empty string deletes the key, you can also call deleteTag or deleteTags.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successfully started and <code>false</code> if not supported or there was an error
+		 </td></tr></table></div><a name="sendTags()"></a><a name="sendTags(Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sendTags</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function sendTags(tags:Object):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Tag a user based on an app event/property of your choosing to target these users.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">tags</span>:Object</code> &mdash; Key value pairs of your choosing. These should be string values and keys.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successfully started and <code>false</code> if not supported or there was an error
+		 </td></tr></table></div><a name="setBadgeNumber()"></a><a name="setBadgeNumber(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setBadgeNumber</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setBadgeNumber(number:int):void</code><p></p><p></p><p>
+		 <p>
+		 Sets the badge number for the application icon
+		 </p>
+		 
+		 <p>
+		 Support: 
+		 </p>
+		 <ul>
+		   <li><b>iOS</b></li>
+		   <li><b>Android</b>: Limited, see documentation</li>
+		 </ul>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">number</span>:int</code> &mdash; Badge number to set
+		 </td></tr></table></p></div><a name="setup()"></a><a name="setup(com.distriqt.extension.pushnotifications.Service)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setup(service:<a href="../../../../com/distriqt/extension/pushnotifications/Service.html">Service</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Sets up the service configuration
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">service</span>:<a href="../../../../com/distriqt/extension/pushnotifications/Service.html">Service</a></code> &mdash; The service configuration
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 An example of setting up the default service with a single category
+		 
+		 <div class="listing"><pre>
+         var service:Service = new Service( Service.DEFAULT, Config.gcmSenderId );
+         service.enableNotificationsWhenActive = true;
+         service.categories.push(
+             new CategoryBuilder()
+                 .setIdentifier( "INVITE_CATEGORY" )
+                 .addAction( 
+                     new ActionBuilder()
+                         .setTitle( "Accept" )
+                         .setIdentifier( "ACCEPT_IDENTIFIER" )
+                         .build()
+                 )
+                 .addAction( 
+                     new ActionBuilder()    
+                         .setTitle( "Delete" )
+                         .setDestructive( true )
+                         .setIdentifier( "DELETE_IDENTIFIER" )
+                         .build()
+                 )
+                 .build()
+         );
+         
+         PushNotifications.service.setup( service );
+         </pre></div>
+		 
+		 </div></div><a name="subscribeToTopic()"></a><a name="subscribeToTopic(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">subscribeToTopic</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function subscribeToTopic(topic:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Subscribe the current client to the specified <code>topic</code> 
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">topic</span>:String</code> &mdash; The topic to subscribe the client to
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successful
+		 
+		 </td></tr></table></div><a name="unregister()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unregister</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function unregister():void</code><p></p><p></p><p>
+		 <p>
+		 Unregisters the current device
+		 </p>
+		 </p></div><a name="unsubscribeFromTopic()"></a><a name="unsubscribeFromTopic(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unsubscribeFromTopic</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function unsubscribeFromTopic(topic:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Unsubscribe the current client from the specified <code>topic</code> 
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">topic</span>:String</code> &mdash; The topic to unsubscribe the client from
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if successful
+		 
+		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:authorisation:changed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">authorisation:changed</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/AuthorisationEvent.html"><code>com.distriqt.extension.pushnotifications.events.AuthorisationEvent</code></a><br/><span class="label">AuthorisationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/AuthorisationEvent.html#CHANGED"><code>com.distriqt.extension.pushnotifications.events.AuthorisationEvent.CHANGED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the authorisation status may have changed
+		 </p>
+		 
+		 </div><a name="event:pushnotification:action"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pushnotification:action</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationEvent.html"><code>com.distriqt.extension.pushnotifications.events.PushNotificationEvent</code></a><br/><span class="label">PushNotificationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationEvent.html#ACTION"><code>com.distriqt.extension.pushnotifications.events.PushNotificationEvent.ACTION</code></a><br/><p></p><p></p><p>
+	 This event is dispatched when the user clicks on a notification action
+	 
+	 </p>
+		 <p>
+		 Dispatched when a user selects an action on a notification.
+		 </p>
+		 
+		 <p>
+		 The <code>identifier</code> will contain the identifier of the action
+		 allowing you to determine what action to take.
+		 </p>
+		 
+		 </div><a name="event:pushnotification:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pushnotification:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationEvent.html"><code>com.distriqt.extension.pushnotifications.events.PushNotificationEvent</code></a><br/><span class="label">PushNotificationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationEvent.html#ERROR"><code>com.distriqt.extension.pushnotifications.events.PushNotificationEvent.ERROR</code></a><br/><p></p><p></p><p>
+	 An error has occurred
+	 
+	 </p>
+		 <p>
+		 Dispatched when an error occurred, either an invalid format notification payload
+		 or a connection issue.
+		 </p>
+		 <p>
+		 The <code>payload</code> will contain the details of the error.
+		 </p>
+		 
+		 </div><a name="event:pushnotification:group:selected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pushnotification:group:selected</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationGroupEvent.html"><code>com.distriqt.extension.pushnotifications.events.PushNotificationGroupEvent</code></a><br/><span class="label">PushNotificationGroupEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationGroupEvent.html#GROUP_SELECTED"><code>com.distriqt.extension.pushnotifications.events.PushNotificationGroupEvent.GROUP_SELECTED</code></a><br/><p></p><p></p><p>
+	 This event is dispatched when the user clicks on a group notification 
+	 
+	 </p>
+		 <p>
+		 Dispatched when a group notification is selected
+		 </p> 
+		 
+		 <p>
+		 Android only
+		 </p>
+		 
+		 </div><a name="event:pushnotification:notification"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pushnotification:notification</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationEvent.html"><code>com.distriqt.extension.pushnotifications.events.PushNotificationEvent</code></a><br/><span class="label">PushNotificationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationEvent.html#NOTIFICATION"><code>com.distriqt.extension.pushnotifications.events.PushNotificationEvent.NOTIFICATION</code></a><br/><p></p><p></p><p>
+	 A Notification was received
+	 
+	 </p>
+		 <p>A Notification was received</p> 
+		 
+		 <p>
+		 The payload field will contain a json formatted string containing the 
+		 payload sent with this notification.
+		 </p>
+		 
+		 </div><a name="event:pushnotification:notification:selected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pushnotification:notification:selected</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationEvent.html"><code>com.distriqt.extension.pushnotifications.events.PushNotificationEvent</code></a><br/><span class="label">PushNotificationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/PushNotificationEvent.html#NOTIFICATON_SELECTED"><code>com.distriqt.extension.pushnotifications.events.PushNotificationEvent.NOTIFICATON_SELECTED</code></a><br/><p></p><p></p><p>
+	 This event is dispatched when the user clicks on a notification 
+	 
+	 </p></div><a name="event:registration:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registration:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent</code></a><br/><span class="label">RegistrationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html#ERROR"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent.ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>An error has occurred</p>
+		 
+		 <p>The data field will contain more information about the error that occurred</p>
+		 
+		 <p>Android additional errors:</p>
+		 <ul>
+		 <li><b>SERVICE_NOT_AVAILABLE</b>:		The device can't read the response, or there was a 500/503 from the server that can be retried later. 
+		 													In this case the extension will perform retries of the registration or unregistration in an exponential
+		 													backoff process, so you can safely assume you will eventually get a register / unregister event as long 
+		 													as the retry eventually suceeds.</li>
+		 <li><b>ACCOUNT_MISSING</b>:			There is no Google account on the phone. The application should ask the user to open the account manager and add a Google account. Fix on the device side.</li>
+		 <li><b>AUTHENTICATION_FAILED</b>:		Bad password. The application should ask the user to enter his/her password, and let user retry manually later. Fix on the device side.</li>
+		 <li><b>TOO_MANY_REGISTRATIONS</b>:		The user has too many applications registered. The application should tell the user to uninstall some other applications, let user retry manually. Fix on the device side.</li>
+		 <li><b>INVALID_SENDER</b>:				The sender account is not recognized.</li>
+		 <li><b>PHONE_REGISTRATION_ERROR</b>: 	Incorrect phone registration with Google. This phone doesn't currently support C2DM.</li>
+		 </ul>
+		 
+		 <p>iOS additional errors:</p>
+		 <ul>
+		 <li><b>REGISTER_FAILED</b>:			The registration failed</li>
+		 </ul>
+		 
+		 </div><a name="event:registration:register:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registration:register:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent</code></a><br/><span class="label">RegistrationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html#REGISTER_FAILED"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent.REGISTER_FAILED</code></a><br/><p></p><p></p><p>
+	 Dispatched when the registration process fails
+	 
+	 </p>
+		 <p>
+		 Dispatched when the registration process fails. This could be due to connection
+		 issues or an issue with the server at the time of connection.
+		 </p> 
+		 
+		 </div><a name="event:registration:register:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registration:register:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent</code></a><br/><span class="label">RegistrationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html#REGISTER_SUCCESS"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent.REGISTER_SUCCESS</code></a><br/><p></p><p></p><p>
+	 Dispatched on successful registration with the server
+	 
+	 </p>
+		 <p>Dispatched on successful registration with the server</p>
+		 
+		 <p>
+		 The call to <code>getDeviceToken</code> will now return a valid registration id.
+		 </p>
+		 
+		 </div><a name="event:registration:registering"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registration:registering</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent</code></a><br/><span class="label">RegistrationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html#REGISTERING"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent.REGISTERING</code></a><br/><p></p><p></p><p>
+	 This event is dispatched when the service is attempting to register
+	 
+	 </p>
+		 <p>This event is dispatched when the service is attempting to register</p>
+		 
+		 </div><a name="event:registration:unregistered"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registration:unregistered</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent</code></a><br/><span class="label">RegistrationEvent.type property = </span><a href="../../../../com/distriqt/extension/pushnotifications/events/RegistrationEvent.html#UNREGISTERED"><code>com.distriqt.extension.pushnotifications.events.RegistrationEvent.UNREGISTERED</code></a><br/><p></p><p></p><p>
+	 Dispatched when the service has unregistered from the server
+	 
+	 </p>
+		 <p><b>Android only</b></p>
+		 
+		 <p>Dispatched when the service has unregistered from the server</p>
+		 
+		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.PushNotifications</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 10.0.013</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Oct 13 2020, 03:36 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Oct 13 2020, 03:36 PM +10:00  -->

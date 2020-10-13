@@ -55,64 +55,41 @@ module.exports = {
         { type: 'ref', id: "inappbilling/index" },
         { type: 'ref', id: "ironsource/index" },
 
+        { type: 'ref', id: "localauth/index" },
+        { type: 'ref', id: "location/index" },
+
         { type: 'ref', id: "mediaplayer/index" },
+        { type: 'ref', id: "message/index" },
         
+        { type: 'ref', id: "nativemaps/index" },
         { type: 'ref', id: "nativewebview/index" },
+        { type: 'ref', id: "networkinfo/index" },
+        { type: 'ref', id: "nfc/index" },
+        { type: 'ref', id: "notifications/index" },
+        
+        { type: 'ref', id: "ocr/index" },
+
+        { type: 'ref', id: "packagemanager/index" },
+        { type: 'ref', id: "pdfreader/index" },
+        { type: 'ref', id: "permissions/index" },
+        { type: 'ref', id: "pushnotifications/index" },
+
+        { type: 'ref', id: "scanner/index" },
+        { type: 'ref', id: "share/index" },
+        { type: 'ref', id: "systemgestures/index" },
+        
+        { type: 'ref', id: "vibration/index" },
+        { type: 'ref', id: "volume/index" },
+        
+        { type: 'ref', id: "webp/index" },
+        { type: 'ref', id: "windowsstore/index" },
+
+        { type: 'ref', id: "ziputils/index" },
         
       ],
     },
   ],
 
-
-  
-
-  tutorials: [
-    { type: 'ref', id: 'index' },
-    { type: 'doc', id: 'tutorials/index' },
-    { 
-      'Getting Started': [
-        "tutorials/getting-started",
-        { 
-          "IDE": [
-            "tutorials/getting-started-intellij",
-            "tutorials/getting-started-flashbuilder4.7",
-            "tutorials/getting-started-flashbuilder4.5",
-            "tutorials/getting-started-flashdevelop",
-            "tutorials/getting-started-animate"
-          ]
-        }
-      ],
-    },
-    {
-      "Debugging": [
-        "tutorials/device-logs",
-        "tutorials/android-device-debugging"
-      ]
-    },
-    {
-      "iOS Development": [
-        "tutorials/ios-icons-assets-car",
-        "tutorials/ios-launchscreens",
-        "tutorials/ios-sdk-custom",
-        "tutorials/ios-sdk-versions",
-      ]
-    },
-    {
-      "Android Development": [
-        "tutorials/android-splash-screen",
-        "tutorials/android-adaptive-icons"
-      ]
-    },
-    {
-      "Windows Development": [
-        "tutorials/windows-appx-packaging",
-        "tutorials/windows-appx-packaging-method1",
-        "tutorials/windows-appx-packaging-method2",
-        "tutorials/windows-appx-packaging-method3"
-      ]
-    },
-
-  ],
 
 
 
@@ -1358,14 +1335,65 @@ module.exports = {
 
 
 
+  localauth: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'localauth/index' },
+    { 
+      "Get Started": [
+        "localauth/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "localauth/biometric-authentication",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'localauth/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/localauth/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-LocalAuth/issues/new' },
+      ],
+    },
+  ],
 
-
-
-
-
-
-
-
+  location: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'location/index' },
+    { 
+      "Get Started": [
+        "location/add-the-extension",
+        "location/initialise-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "location/request-authorisation",
+        "location/device-location-settings",
+        "location/location-monitoring",
+        "location/geofences",
+        "location/geocoding",
+        "location/location-utils---distance",
+      ]
+    },
+    { 
+      "Testing": [
+        "location/ios-location-simulation",
+      ]
+    },
+    { 
+      "Help": [
+        "location/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'localauth/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/localauth/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-LocalAuth/issues/new' },
+      ],
+    },
+  ],
 
 
 
@@ -1416,6 +1444,79 @@ module.exports = {
     },
   ],
 
+  message: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'message/index' },
+    { 
+      "Get Started": [
+        "message/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "message/email",
+        "message/sms",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "message/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'message/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/message/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Message/issues/new' },
+      ],
+    },
+  ],
+
+
+  nativemaps: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'nativemaps/index' },
+    { 
+      "Setup your mapping provider": [
+        "nativemaps/apple-maps",
+        "nativemaps/google-maps"
+      ]
+    },
+    { 
+      "Setup the Extension": [
+        "nativemaps/add-the-extension",
+        "nativemaps/initialise-the-extension",
+        "nativemaps/request-authorisation"
+      ]
+    },
+    { 
+      "Usage": [
+        "nativemaps/create-a-map",
+        "nativemaps/controlling-the-view",
+        "nativemaps/touch-events",
+        {
+          "Overlays": [
+            "nativemaps/overlays",
+            "nativemaps/overlays---markers",
+            "nativemaps/overlays---polylines",
+            "nativemaps/overlays---polygons",
+          ]
+        }
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "nativemaps/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'nativemaps/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/nativemaps/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-NativeMaps/issues/new' },
+      ],
+    },
+  ],
 
   nativewebview: [
     { type: 'ref', id: 'index' },
@@ -1458,8 +1559,586 @@ module.exports = {
     },
   ],
 
+  networkinfo: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'networkinfo/index' },
+    { 
+      "Get Started": [
+        "networkinfo/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "networkinfo/network-change-monitoring",
+        "networkinfo/telephony",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'networkinfo/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/networkinfo/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-NetworkInfo/issues/new' },
+      ],
+    },
+  ],
+
+  nfc: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'nfc/index' },
+    { 
+      "Get Started": [
+        "nfc/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "nfc/scanning",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'nfc/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/nfc/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-NFC/issues/new' },
+      ],
+    },
+  ],
+
+  notifications: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'notifications/index' },
+    { 
+      "Get Started": [
+        "notifications/add-the-extension",
+        "notifications/add-the-extension---windows",
+        "notifications/request-authorisation",
+        "notifications/setup-your-service",
+      ]
+    },
+    { 
+      "Notifications": [
+        "notifications/register-for-notifications",
+        "notifications/displaying-notifications",
+        "notifications/notification-types",
+        "notifications/notification-icons",
+        "notifications/emojis",
+        "notifications/sounds",
+        "notifications/receiving-notifications",
+        "notifications/delay-and-repeat-interval",
+        "notifications/cancel-notifications",
+      ]
+    },
+    { 
+      "Other features": [
+        "notifications/set-badge-number",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "notifications/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'notifications/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/notifications/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Notifications/issues/new' },
+      ],
+    },
+  ],
 
 
+  ocr: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'ocr/index' },
+    { 
+      "Get Started": [
+        "ocr/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "ocr/recognising-text",
+        "ocr/training-data",
+        "ocr/tips-for-improving-ocr-results",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "ocr/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'ocr/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/ocr/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-OCR/issues/new' },
+      ],
+    },
+  ],
+
+
+
+
+  packagemanager: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'packagemanager/index' },
+    { 
+      "Get Started": [
+        "packagemanager/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "packagemanager/package-events",
+        "packagemanager/installing-apps",
+        "packagemanager/installed-application-info",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "packagemanager/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'packagemanager/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/packagemanager/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-PackageManager/issues/new' },
+      ],
+    },
+  ],
+
+  pdfreader: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'pdfreader/index' },
+    { 
+      "Get Started": [
+        "pdfreader/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "pdfreader/create-a-pdf-view",
+        "pdfreader/pages",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "pdfreader/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'pdfreader/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/pdfreader/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-PDFReader/issues/new' },
+      ],
+    },
+  ],
+
+  permissions: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'permissions/index' },
+    { 
+      "Get Started": [
+        "permissions/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "permissions/set-permissions",
+        "permissions/requesting-access",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "permissions/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'permissions/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/permissions/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Permissions/issues/new' },
+      ],
+    },
+  ],
+
+  pushnotifications: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'pushnotifications/index' },
+    { 
+      "Quick Start Guides": [
+        "pushnotifications/onesignal---quick-start",
+      ]
+    },
+    { 
+      "Configuring your application": [
+        "pushnotifications/add-the-extension",
+        "pushnotifications/add-the-extension---windows",
+      ]
+    },
+    { 
+      "Notification services": [
+        "pushnotifications/apple-push-notification-service",
+        "pushnotifications/firebase-cloud-messaging",
+        "pushnotifications/onesignal",
+        "pushnotifications/windows-notification-service",
+        "pushnotifications/azure-notifications",
+        "pushnotifications/pushy",
+      ]
+    },
+    { 
+      "Setup, authorisation, and registration": [
+        "pushnotifications/setup-your-service",
+        {
+          "Service Type Details" : [
+            "pushnotifications/setup-your-service---azure",
+            "pushnotifications/setup-your-service---onesignal",
+          ]
+        },
+        "pushnotifications/request-authorisation",
+        "pushnotifications/register-for-notifications",
+        "pushnotifications/topics",
+        "pushnotifications/tags",
+        "pushnotifications/user-consent",
+        "pushnotifications/inapp-messaging",
+      ]
+    },
+    { 
+      "Notifications": [
+        "pushnotifications/receiving-notifications",
+        "pushnotifications/icons",
+        "pushnotifications/handling-startup-notifications",
+        "pushnotifications/notification-scenarios",
+        "pushnotifications/sounds",
+      ]
+    },
+    { 
+      "Other features": [
+        "pushnotifications/set-badge-number",
+      ]
+    },
+    { 
+      "Payloads": [
+        "pushnotifications/ios-apns-payload",
+        "pushnotifications/fcm-gcm-payload",
+        "pushnotifications/windows-wns-payload",
+        "pushnotifications/pushy-payload",
+      ]
+    },
+    { 
+      "Sending Messages": [
+        "pushnotifications/ios-apns-message",
+        "pushnotifications/google-cloud-message",
+        "pushnotifications/firebase-cloud-message",
+        "pushnotifications/windows-wns-message",
+        "pushnotifications/pushy-message",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "pushnotifications/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'pushnotifications/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/pushnotifications/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-PushNotifications/issues/new' },
+      ],
+    },
+  ],
+
+
+  scanner: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'scanner/index' },
+    { 
+      "Get Started": [
+        "scanner/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "scanner/requesting-access",
+        "scanner/scanning",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "scanner/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'scanner/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/scanner/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Scanner/issues/new' },
+      ],
+    },
+  ],
+
+  share: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'share/index' },
+    { 
+      "Get Started": [
+        "share/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "share/simple-share",
+        "share/share-files",
+        "share/launch-applications",
+        "share/android-events",
+        "share/positioning",
+        "share/email",
+        "share/sms",
+      ]
+    },
+    { 
+      "iOS App Extension": [
+        "share/appextension---introduction",
+        "share/appextension---setup",
+        "share/appextension---share-extension",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "share/migrating-from-message",
+        "share/migrating-to-androidx",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'scanner/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/scanner/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Scanner/issues/new' },
+      ],
+    },
+  ],
+
+  systemgestures: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'systemgestures/index' },
+    { 
+      "Get Started": [
+        "systemgestures/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "systemgestures/defer-system-gestures",
+        "systemgestures/home-indicator",
+        "systemgestures/native-gesture-events",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'systemgestures/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/systemgestures/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-SystemGestures/issues/new' },
+      ],
+    },
+  ],
+
+
+
+  vibration: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'vibration/index' },
+    { 
+      "Get Started": [
+        "vibration/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "vibration/vibrate",
+        "vibration/feedback-generators",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'vibration/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/vibration/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Vibration/issues/new' },
+      ],
+    },
+  ],
+
+  volume: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'volume/index' },
+    { 
+      "Get Started": [
+        "volume/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "volume/volume-control",
+        "volume/streams",
+        "volume/silent-switch",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'volume/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/volume/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Volume/issues/new' },
+      ],
+    },
+  ],
+
+
+  webp: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'webp/index' },
+    { 
+      "Get Started": [
+        "webp/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "webp/webploader",
+        "webp/load-a-webp-file",
+        "webp/parse-webp-data",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'webp/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/webp/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-WebP/issues/new' },
+      ],
+    },
+  ],
+
+  windowsstore: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'windowsstore/index' },
+    { 
+      "Setup the Extension": [
+        "windowsstore/add-the-extension",
+        "windowsstore/initialise-the-extension",
+        {
+          "Windows" : [
+            "windowsstore/windows-overview",
+            "windowsstore/windows-developer-account",
+            "windowsstore/windows-desktop-app-converter",
+          ]
+        }
+      ]
+    },
+    { 
+      "Usage": [
+        "windowsstore/products",
+        "windowsstore/purchases",
+        "windowsstore/make-purchase",
+        "windowsstore/consumables",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'windowsstore/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/windowsstore/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-WindowsStore/issues/new' },
+      ],
+    },
+  ],
+
+
+
+  ziputils: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'ziputils/index' },
+    { 
+      "Setup the Extension": [
+        "ziputils/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "ziputils/unzipping-a-file",
+        "ziputils/zipping",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'ziputils/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/ziputils/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-ZipUtils/issues/new' },
+      ],
+    },
+  ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  tutorials: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'tutorials/index' },
+    { 
+      'Getting Started': [
+        "tutorials/getting-started",
+        { 
+          "IDE": [
+            "tutorials/getting-started-intellij",
+            "tutorials/getting-started-flashbuilder4.7",
+            "tutorials/getting-started-flashbuilder4.5",
+            "tutorials/getting-started-flashdevelop",
+            "tutorials/getting-started-animate"
+          ]
+        }
+      ],
+    },
+    {
+      "Debugging": [
+        "tutorials/device-logs",
+        "tutorials/android-device-debugging"
+      ]
+    },
+    {
+      "iOS Development": [
+        "tutorials/ios-icons-assets-car",
+        "tutorials/ios-launchscreens",
+        "tutorials/ios-sdk-custom",
+        "tutorials/ios-sdk-versions",
+      ]
+    },
+    {
+      "Android Development": [
+        "tutorials/android-splash-screen",
+        "tutorials/android-adaptive-icons"
+      ]
+    },
+    {
+      "Windows Development": [
+        "tutorials/windows-appx-packaging",
+        "tutorials/windows-appx-packaging-method1",
+        "tutorials/windows-appx-packaging-method2",
+        "tutorials/windows-appx-packaging-method3"
+      ]
+    },
+
+  ],
 
 
 };

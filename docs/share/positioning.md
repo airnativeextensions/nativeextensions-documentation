@@ -1,0 +1,72 @@
+---
+title: Positioning
+sidebar_label: Positioning
+---
+
+
+In general the share dialog is presented as a slide up dialog presenting the available sharing options.
+
+![](images/Share_shareFile_ios_framed.png)
+
+However in some circumstances such as on an iPad, the dialog will appear as a popup dialog and you can 
+guide where this dialog will appear using some of the parameters on the share options.
+
+The options allow you to specify two things:
+
+- `position`: The rectangle in view at which to anchor the popover window
+- `arrowDirection`: the direction the popover is permitted to use
+
+
+
+For example if we had a button located at x,y `100,100` of width `200` and height `50`, 
+the following will use the best positioning for the dialog and display a small arrow pointing 
+to the button:
+
+```actionscript 
+var options:ShareOptions = new ShareOptions();
+options.position = new Rectangle( 100, 100, 200, 50 );
+options.arrowDirection = ShareOptions.ARROWDIRECTION_ANY;
+
+Share.service.share( "Share text", null, "http://airnativeextensions.com", options );
+```
+
+![](images/Share_ios_positioning_any.png)
+
+
+Or we could limit the dialog to only appear to the left or right of the position by using 
+bitwise-OR to combine the required directions:
+
+
+```actionscript
+var options:ShareOptions = new ShareOptions();
+options.position = new Rectangle( 100, 100, 200, 50 );
+options.arrowDirection = ShareOptions.ARROWDIRECTION_LEFT | ShareOptions.ARROWDIRECTION_RIGHT;
+
+Share.service.share( "Share text", null, "http://airnativeextensions.com", options );
+```
+
+![](images/Share_ios_positioning_left.png)
+
+
+
+
+
+### Centering
+
+If you need to center the dialog you can simply use the center of the screen as the `position` and supply 
+`ARROWDIRECTION_NONE` as the `arrowDirection`.
+
+For example:
+
+```actionscript
+var options:ShareOptions = new ShareOptions();
+options.position = new Rectangle( stage.stageWidth*0.5, stage.stageHeight * 0.5, 0, 0 );
+options.arrowDirection = ShareOptions.ARROWDIRECTION_NONE;
+
+Share.service.share( "Share text", null, "http://airnativeextensions.com", options );
+```
+
+![](images/Share_ios_positioning_centered.png)
+
+
+
