@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Applications,com.distriqt.extension.share.Applications,dispose,init,isApplicationInstalled,isInstalled,launch,share,shareFile,shareFileLegacy,showOpenIn,startActivity"><title>com.distriqt.extension.share.Applications</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Applications - distriqt // Share';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Share Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/share/Applications.html&amp;com/distriqt/extension/share/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Applications</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Applications"); titleBar_setSubNav(false,false,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.share</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  Applications extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>
+	 The Applications implementation allows you to launch other 
+	 applications installed on the user's device.
+	 </p>
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isInstalled()" class="signatureLink">isInstalled</a>(app:<a href="../../../../com/distriqt/extension/share/applications/Application.html">Application</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Check whether an application is installed on a device
+		 
+		 
+		 
+		 iOS
+		 
+		 On iOS you must add the application schemes you wish to query to your info additions:
+		 
+		 
+		 
+		 &lt;iPhone&gt;
+		 	&lt;InfoAdditions&gt;&lt;![CDATA[
+		 			&lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt;
+		 			&lt;array&gt;
+		 				&lt;string&gt;instagram&lt;/string&gt;
+		 				&lt;string&gt;whatsapp&lt;/string&gt;
+		 			&lt;/array&gt;
+		 		]]&gt;&lt;/InfoAdditions&gt;
+		 	&lt;/iPhone&gt;
+		 
+		 
+		 </div></td><td class="summaryTableOwnerCol">Applications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#launch()" class="signatureLink">launch</a>(app:<a href="../../../../com/distriqt/extension/share/applications/Application.html">Application</a>, options:<a href="../../../../com/distriqt/extension/share/applications/ApplicationOptions.html">ApplicationOptions</a> = null):Boolean</div><div class="summaryTableDescription">
+		 
+		 Launch or start an application
+		 
+		 
+		 
+		 This function allows your application to start another application on the device.</div></td><td class="summaryTableOwnerCol">Applications</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#startActivity()" class="signatureLink">startActivity</a>(intent:<a href="../../../../com/distriqt/extension/share/applications/Intent.html">Intent</a>):Boolean</div><div class="summaryTableDescription">
+		 Android only
+		 
+		 		 This functionality allows you to use the Android Intent system to launch an Intent directly.</div></td><td class="summaryTableOwnerCol">Applications</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:activity:result" class="signatureLink">activity:result</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 </td><td class="summaryTableOwnerCol">Applications</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="isInstalled()"></a><a name="isInstalled(com.distriqt.extension.share.applications.Application)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isInstalled</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function isInstalled(app:<a href="../../../../com/distriqt/extension/share/applications/Application.html">Application</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Check whether an application is installed on a device
+		 </p>
+		 
+		 
+		 <b>iOS</b>
+		 <p>
+		 On iOS you must add the application schemes you wish to query to your info additions:
+		 </p>
+		 
+		 <div class="listing"><pre>
+         &lt;iPhone&gt;
+             &lt;InfoAdditions&gt;&lt;![CDATA[
+                     &lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt;
+                     &lt;array&gt;
+                         &lt;string&gt;instagram&lt;/string&gt;
+                         &lt;string&gt;whatsapp&lt;/string&gt;
+                     &lt;/array&gt;
+                 ]]&gt;&lt;/InfoAdditions&gt;
+             &lt;/iPhone&gt;
+         </pre></div>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">app</span>:<a href="../../../../com/distriqt/extension/share/applications/Application.html">Application</a></code> &mdash; Details of the application of interest (needs a package name on Android and a url scheme on iOS)
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the application is installed, and false otherwise. Note this will return false if you haven't set the queries schemes on iOS correctly.
+		 
+		 </td></tr></table></div><a name="launch()"></a><a name="launch(com.distriqt.extension.share.applications.Application,com.distriqt.extension.share.applications.ApplicationOptions)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">launch</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function launch(app:<a href="../../../../com/distriqt/extension/share/applications/Application.html">Application</a>, options:<a href="../../../../com/distriqt/extension/share/applications/ApplicationOptions.html">ApplicationOptions</a> = null):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Launch or start an application
+		 </p>
+		 
+		 <p>
+		 This function allows your application to start another application on the device.
+		 It uses different methods on iOS and Android however both will allow you to specify 
+		 start up parameters to an application:
+		 </p>
+		 
+		 <ul>
+		 	<li>On Android it uses an explicit Intent with a package, type, action and extras</li>
+		 	<li>On iOS it uses a custom url scheme with query parameters</li>
+		 </ul>
+		 
+		 
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">app</span>:<a href="../../../../com/distriqt/extension/share/applications/Application.html">Application</a></code> &mdash; 	Details of the application of interest (needs a package name on Android and a url scheme on iOS)
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../com/distriqt/extension/share/applications/ApplicationOptions.html">ApplicationOptions</a></code> (default = <code>null</code>)<code></code> &mdash; Start options, including extras and query parameters
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the application is installed and launched successfully, 
+		 			false if the application isn't installed or the launch failed
+		 
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 The simplest example of launching another application if installed
+		 
+		 <div class="listing"><pre>
+         var app:Application = new Application( "com.instagram.android", "instagram://" );
+         
+         if (Share.service.applications.isInstalled( app ))
+         {
+             Share.service.applications.launch( app );
+         }
+         </pre></div>
+		 
+		 
+		 
+		 </div><div class="detailBody">
+		 An example of launching Instagram and opening a specific user profile
+		 
+		 <div class="listing"><pre>
+         var app:Application = new Application( "com.instagram.android", "instagram://" );
+         
+         var options:ApplicationOptions = new ApplicationOptions();
+         options.action = ApplicationOptions.ACTION_VIEW;
+         options.data = "http://instagram.com/_u/distriqt";
+         options.parameters = "user?username=distriqt";
+         
+         if (Share.service.applications.isInstalled( app ))
+         {
+             Share.service.applications.launch( app, options );
+         }
+         </pre></div>
+		 
+		 
+		 		 </div></div><a name="startActivity()"></a><a name="startActivity(com.distriqt.extension.share.applications.Intent)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">startActivity</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function startActivity(intent:<a href="../../../../com/distriqt/extension/share/applications/Intent.html">Intent</a>):Boolean</code><p></p><p></p><p>
+		 <b>Android only</b>
+		 
+		 		 This functionality allows you to use the Android Intent system to launch an Intent directly.
+		 
+		 		 This is sometimes required when you need particular control over how the data is passed to an Intent.
+		 
+		 		 Use the <code>Intent</code> class to create an intent and then pass it to this function.
+		 
+		 		 This function will return <code>false</code> if no activity is available to handle the Intent
+		 or <code>true</code> if an activity was started.
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">intent</span>:<a href="../../../../com/distriqt/extension/share/applications/Intent.html">Intent</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the intent was handled and an activity started,
+		 			<code>false</code> if there was an error or no activity could handle the intent.
+		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:activity:result"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">activity:result</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/share/events/ApplicationEvent.html"><code>com.distriqt.extension.share.events.ApplicationEvent</code></a><br/><span class="label">ApplicationEvent.type property = </span><a href="../../../../com/distriqt/extension/share/events/ApplicationEvent.html#ACTIVITY_RESULT"><code>com.distriqt.extension.share.events.ApplicationEvent.ACTIVITY_RESULT</code></a><br/><p></p><p></p><p>
+	 </p>
+		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Oct 13 2020, 02:31 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Oct 13 2020, 02:31 PM +10:00  -->

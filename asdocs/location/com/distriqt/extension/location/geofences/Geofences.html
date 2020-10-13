@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="Geofences,com.distriqt.extension.location.geofences.Geofences,fromObject,getMonitoredRegions,isValid,startMonitoringRegion,stopMonitoringRegion,toString"><title>com.distriqt.extension.location.geofences.Geofences</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Geofences - distriqt // Location';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Location Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/location/geofences/Geofences.html&amp;com/distriqt/extension/location/geofences/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Geofences</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Geofences"); titleBar_setSubNav(false,false,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.location.geofences</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  Geofences extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	 
+	 <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getMonitoredRegions()" class="signatureLink">getMonitoredRegions</a>():Vector.&lt;<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a>&gt;</div><div class="summaryTableDescription">
+		 
+		 Currently supported on iOS only.</div></td><td class="summaryTableOwnerCol">Geofences</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#startMonitoringRegion()" class="signatureLink">startMonitoringRegion</a>(region:<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a>, options:<a href="../../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a> = null):Boolean</div><div class="summaryTableDescription">
+		 
+		 Starts monitoring a region for entry and exit events.</div></td><td class="summaryTableOwnerCol">Geofences</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stopMonitoringRegion()" class="signatureLink">stopMonitoringRegion</a>(region:<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a>):Boolean</div><div class="summaryTableDescription">
+		 
+		 Stops monitoring a region for entry and exit events.</div></td><td class="summaryTableOwnerCol">Geofences</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:region:enter" class="signatureLink">region:enter</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the device detects that a region has been entered.</td><td class="summaryTableOwnerCol">Geofences</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:region:exit" class="signatureLink">region:exit</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the device detects that a region has been left.</td><td class="summaryTableOwnerCol">Geofences</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:region:startMonitoring" class="signatureLink">region:startMonitoring</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the extension starts to monitor a region.</td><td class="summaryTableOwnerCol">Geofences</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:region:stopMonitoring" class="signatureLink">region:stopMonitoring</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the extension stops monitoring a region.</td><td class="summaryTableOwnerCol">Geofences</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="getMonitoredRegions()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getMonitoredRegions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function getMonitoredRegions():Vector.&lt;<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a>&gt;</code><p></p><p></p><p>
+		 <p>
+		 Currently supported on <b>iOS</b> only.
+		 </p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Vector.&lt;<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a>&gt;</code> &mdash; 
+		 
+		 </td></tr></table></div><a name="startMonitoringRegion()"></a><a name="startMonitoringRegion(com.distriqt.extension.location.geofences.Region,com.distriqt.extension.location.LocationRequest)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">startMonitoringRegion</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function startMonitoringRegion(region:<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a>, options:<a href="../../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a> = null):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Starts monitoring a region for entry and exit events. 
+		 </p>
+		 <p>
+		 Once a successful call to this function is made the extension will
+		 dispatch a <code>RegionEvent</code> for any changes in the region.
+		 </p>
+		 <p>
+		 You must correctly set the properties of a region to be able to start monitoring 
+		 the region. This includes the latitude, longitude, radius and identifier values.
+		 You can call the <code>isValid</code> function on the region to check your
+		 region is valid.
+		 </p>
+		 
+		 <p>
+		 <b>Note</b>: If you are adding multiple regions you should wait 
+		 until the <code>RegionEvent.START_MONITORING</code> event is fired
+		 before adding another. Adding multiple regions without waiting may
+		 cause some of the region monitoring not to correctly start. 
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">region</span>:<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a></code> &mdash; Details on the region to monitor. It's important that you set a unique identifier value on this object.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code> (default = <code>null</code>)<code></code> &mdash; Location options, specifying the location options such as accuracy of the monitoring
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the region was successfully added to the monitored regions
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html" target="">com.distriqt.extension.location.events.RegionEvent</a></div></div><a name="stopMonitoringRegion()"></a><a name="stopMonitoringRegion(com.distriqt.extension.location.geofences.Region)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stopMonitoringRegion</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stopMonitoringRegion(region:<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a>):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Stops monitoring a region for entry and exit events. It's important that you
+		 set the same identifier on the region as the one used to initially 
+		 </p>
+		 
+		 <p>
+		 <b>Note</b>: If you are stopping multiple regions you should wait 
+		 until the <code>RegionEvent.STOP_MONITORING</code> event is fired
+		 before adding another. Removing multiple regions without waiting may
+		 cause some of the region monitoring not to correctly stop. 
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">region</span>:<a href="../../../../../com/distriqt/extension/location/geofences/Region.html">Region</a></code> &mdash; 	Details on the region to monitor. It's important that you set a unique identifier value on this object.
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the region was successfully removed from the monitored regions
+		 
+		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:region:enter"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">region:enter</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html"><code>com.distriqt.extension.location.events.RegionEvent</code></a><br/><span class="label">RegionEvent.type property = </span><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html#ENTER"><code>com.distriqt.extension.location.events.RegionEvent.ENTER</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the device detects that a region has been entered.
+		 </p> 
+		 
+		 </div><a name="event:region:exit"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">region:exit</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html"><code>com.distriqt.extension.location.events.RegionEvent</code></a><br/><span class="label">RegionEvent.type property = </span><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html#EXIT"><code>com.distriqt.extension.location.events.RegionEvent.EXIT</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the device detects that a region has been left.
+		 </p>
+		 
+		 </div><a name="event:region:startMonitoring"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">region:startMonitoring</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html"><code>com.distriqt.extension.location.events.RegionEvent</code></a><br/><span class="label">RegionEvent.type property = </span><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html#START_MONITORING"><code>com.distriqt.extension.location.events.RegionEvent.START_MONITORING</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the extension starts to monitor a region.
+		 </p>
+		 
+		 </div><a name="event:region:stopMonitoring"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">region:stopMonitoring</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html"><code>com.distriqt.extension.location.events.RegionEvent</code></a><br/><span class="label">RegionEvent.type property = </span><a href="../../../../../com/distriqt/extension/location/events/RegionEvent.html#STOP_MONITORING"><code>com.distriqt.extension.location.events.RegionEvent.STOP_MONITORING</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the extension stops monitoring a region.
+		 </p>
+		 
+		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Oct 13 2020, 12:58 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Oct 13 2020, 12:58 PM +10:00  -->

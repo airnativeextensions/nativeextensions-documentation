@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="Social,com.distriqt.extension.share.social.Social,addImage,addURL,addVideo,build,isNetworkSupported,setInitialText,sharePost"><title>com.distriqt.extension.share.social.Social</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Social - distriqt // Share';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // Share Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/share/social/Social.html&amp;com/distriqt/extension/share/social/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Social</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Social"); titleBar_setSubNav(false,false,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.share.social</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  Social extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>
+	                 <b>Social functionality has been deprecated on iOS 11.</b>
+	              </p>
+	              <p>
+	 You will need to migrate to the appropriate social SDK to add these features now.
+	 </p> 
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isNetworkSupported()" class="signatureLink">isNetworkSupported</a>(network:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 Checks if sharing to a specified social network is available 
+		 on the current device.</div></td><td class="summaryTableOwnerCol">Social</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sharePost()" class="signatureLink">sharePost</a>(post:<a href="../../../../../com/distriqt/extension/share/social/SocialPost.html">SocialPost</a>, network:String):Boolean</div><div class="summaryTableDescription">
+		 
+		 This is similar to the normal share action except it uses the built in social 
+		 network services, rather than the generic share activity.</div></td><td class="summaryTableOwnerCol">Social</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:socialpost:cancelled" class="signatureLink">socialpost:cancelled</a></div></td><td class="summaryTableDescription summaryTableCol"></td><td class="summaryTableOwnerCol">Social</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:socialpost:complete" class="signatureLink">socialpost:complete</a></div></td><td class="summaryTableDescription summaryTableCol"></td><td class="summaryTableOwnerCol">Social</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:socialpost:error" class="signatureLink">socialpost:error</a></div></td><td class="summaryTableDescription summaryTableCol"></td><td class="summaryTableOwnerCol">Social</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="isNetworkSupported()"></a><a name="isNetworkSupported(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isNetworkSupported</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function isNetworkSupported(network:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Checks if sharing to a specified social network is available 
+		 on the current device.
+		 </p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">network</span>:String</code> &mdash; The network to check defined in the <code>SocialNetwork</code> class
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the <code>sharePost</code> functionality is available for the specified network
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="SocialNetwork.html" target="">com.distriqt.extension.share.social.SocialNetwork</a></div></div><a name="sharePost()"></a><a name="sharePost(com.distriqt.extension.share.social.SocialPost,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sharePost</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function sharePost(post:<a href="../../../../../com/distriqt/extension/share/social/SocialPost.html">SocialPost</a>, network:String):Boolean</code><p></p><p></p><p>
+		 <p>
+		 This is similar to the normal share action except it uses the built in social 
+		 network services, rather than the generic share activity.
+		 </p>
+		 
+		 <p>
+		 This is mainly for iOS using the Social framework introduced on iOS 6 and the SLComposeViewController
+		 </p>
+		 
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">post</span>:<a href="../../../../../com/distriqt/extension/share/social/SocialPost.html">SocialPost</a></code> &mdash; 	The SocialPost instance to post to the specified network
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">network</span>:String</code> &mdash; The network to post to
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if successful and false otherwise
+		 
+		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 
+		 A simple share to Facebook if available
+		 
+		 <div class="listing"><pre>
+         if (Share.service.social.isNetworkSupported( SocialNetwork.FACEBOOK ))
+         {
+             Share.service.social.sharePost( 
+                 
+                 new SocialPostBuilder()
+                     .setInitialText( "Awesome native extensions" )
+                     .addURL( "http://airnativeextensions.com" )
+                     .build(),
+                     
+                 SocialNetwork.FACEBOOK 
+             );
+         }
+         </pre></div>
+		 
+		 </div></div><div class="detailSectionHeader"> Event Detail </div><a name="event:socialpost:cancelled"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">socialpost:cancelled</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/share/events/SocialPostEvent.html"><code>com.distriqt.extension.share.events.SocialPostEvent</code></a><br/><span class="label">SocialPostEvent.type property = </span><a href="../../../../../com/distriqt/extension/share/events/SocialPostEvent.html#CANCELLED"><code>com.distriqt.extension.share.events.SocialPostEvent.CANCELLED</code></a><br/><p></p><p></p><p>
+	 </p></div><a name="event:socialpost:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">socialpost:complete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/share/events/SocialPostEvent.html"><code>com.distriqt.extension.share.events.SocialPostEvent</code></a><br/><span class="label">SocialPostEvent.type property = </span><a href="../../../../../com/distriqt/extension/share/events/SocialPostEvent.html#COMPLETE"><code>com.distriqt.extension.share.events.SocialPostEvent.COMPLETE</code></a><br/><p></p><p></p><p>
+	 </p></div><a name="event:socialpost:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">socialpost:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/share/events/SocialPostEvent.html"><code>com.distriqt.extension.share.events.SocialPostEvent</code></a><br/><span class="label">SocialPostEvent.type property = </span><a href="../../../../../com/distriqt/extension/share/events/SocialPostEvent.html#ERROR"><code>com.distriqt.extension.share.events.SocialPostEvent.ERROR</code></a><br/><p></p><p></p><p>
+	 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Oct 13 2020, 02:31 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Oct 13 2020, 02:31 PM +10:00  -->

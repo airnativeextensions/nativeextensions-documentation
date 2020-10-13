@@ -6,16 +6,16 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.65">
 <link rel="alternate" type="application/rss+xml" href="/news/rss.xml" title="AIR Native Extensions Blog RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/news/atom.xml" title="AIR Native Extensions Blog Atom Feed"><title data-react-helmet="true">Android Certificate | AIR Native Extensions</title><meta data-react-helmet="true" name="docsearch:version" content="current,latest"><meta data-react-helmet="true" property="og:image" content="https://docs.airnativeextensions.com/img/ane-icon-black.png"><meta data-react-helmet="true" property="twitter:image" content="https://docs.airnativeextensions.com/img/ane-icon-black.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for AIR Native Extensions"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Android Certificate | AIR Native Extensions"><meta data-react-helmet="true" name="description" content="This is where most people will run into issues getting this extension to work and signing in users."><meta data-react-helmet="true" property="og:description" content="This is where most people will run into issues getting this extension to work and signing in users."><meta data-react-helmet="true" property="og:url" content="https://docs.airnativeextensions.com/docs/googleidentity/android-certificate"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://docs.airnativeextensions.com/docs/googleidentity/android-certificate"><link rel="stylesheet" href="/styles.a5d65cc2.css">
-<link rel="preload" href="/styles.14265795.js" as="script">
-<link rel="preload" href="/runtime~main.215f6e8c.js" as="script">
-<link rel="preload" href="/main.523551ad.js" as="script">
-<link rel="preload" href="/1.5c32dd18.js" as="script">
-<link rel="preload" href="/2.ff3bdf3c.js" as="script">
-<link rel="preload" href="/392.649f1623.js" as="script">
-<link rel="preload" href="/393.bf69f800.js" as="script">
-<link rel="preload" href="/935f2afb.6f236d89.js" as="script">
-<link rel="preload" href="/17896441.f9dbbd57.js" as="script">
-<link rel="preload" href="/0fcfd01a.36ef1bad.js" as="script">
+<link rel="preload" href="/styles.ba6e78a0.js" as="script">
+<link rel="preload" href="/runtime~main.0275d125.js" as="script">
+<link rel="preload" href="/main.ffa2e3ef.js" as="script">
+<link rel="preload" href="/1.eca0ae3f.js" as="script">
+<link rel="preload" href="/2.cf21ba22.js" as="script">
+<link rel="preload" href="/666.29662dbb.js" as="script">
+<link rel="preload" href="/667.a7a15f38.js" as="script">
+<link rel="preload" href="/935f2afb.a043533f.js" as="script">
+<link rel="preload" href="/17896441.1fe85396.js" as="script">
+<link rel="preload" href="/0fcfd01a.7844613a.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -27,15 +27,15 @@ instead the debug certificate signature. </p><p>The following command retrieves 
 go into production, so make sure you create a second debugging project.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="using-the-production-certificate-for-debugging"></a>Using the production certificate for debugging<a aria-hidden="true" tabindex="-1" class="hash-link" href="#using-the-production-certificate-for-debugging" title="Direct link to heading">#</a></h2><p>The best method to debug is to use your production certificate for debugging. Getting this working
 requires a few configuration tricks.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="flash-builder"></a>Flash Builder<a aria-hidden="true" tabindex="-1" class="hash-link" href="#flash-builder" title="Direct link to heading">#</a></h3><p>Go to &#x27;Properties&#x27; for your project</p><ul><li><p>Select ActionScript Build Packaging &gt; Google Android</p></li><li><p>Next to Targets, click &#x27;Create Custom...&#x27; (copy values from &#x27;device&#x27;)</p></li><li><p>Next make sure it&#x27;s selected in the dropdown</p></li><li><p>Click &#x27;Customize Launch...&#x27;</p></li><li><p>Set &#x27;keystore&#x27; to the path to your release certificate, p12 file</p></li><li><p>Set &#x27;storetype&#x27; to <code>PKCS12</code></p></li><li><p>Set &#x27;storepass&#x27; to the password for your cert</p></li><li><p>Back under Properties, go to Run/Debug Settings, and select your Android debug configuration.</p></li><li><p>Make sure &#x27;Build Target&#x27; is set to your custom build target.</p></li></ul><p>Flash Builder will not save the password for the certificate. So each time you relaunch Flash Builder
 you will need to reenter the password in the debug settings.</p><ul><li>Go to &quot;Debug Configurations&quot;</li><li>&quot;Customize Launch&quot;</li><li>You should see a massive list of the parameters for your application</li><li>Scroll right to the bottom and enter your password manually.</li></ul></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/googleidentity/google-developers-console-project"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Google Developers Console project</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/googleidentity/google-identity-options"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Google Identity Options »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#debugging" class="table-of-contents__link">Debugging</a></li><li><a href="#using-the-production-certificate-for-debugging" class="table-of-contents__link">Using the production certificate for debugging</a><ul><li><a href="#flash-builder" class="table-of-contents__link">Flash Builder</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/tutorials/">tutorials</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a href="https://twitter.com/distriqt" target="_blank" rel="noopener noreferrer" class="footer__link-item">twitter</a></li><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/distriqt" target="_blank" rel="noopener noreferrer" class="footer__link-item">stack overflow</a></li><li class="footer__item"><a href="https://forum.starling-framework.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">starling</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/news">news</a></li><li class="footer__item"><a href="https://airnativeextensions.com/privacy" target="_blank" rel="noopener noreferrer" class="footer__link-item">privacy</a></li><li class="footer__item"><a href="https://airnativeextensions.com/license" target="_blank" rel="noopener noreferrer" class="footer__link-item">license</a></li></ul></div></div><div class="text--center"><div><br><a href="https://airnativeextensions.com">airnativeextensions.com</a> copyright © 2020 <br><br><a href="https://distriqt.com"><img src="/img/logo.png" alt="distriqt"></a></div></div></div></footer></div>
-<script src="/styles.14265795.js"></script>
-<script src="/runtime~main.215f6e8c.js"></script>
-<script src="/main.523551ad.js"></script>
-<script src="/1.5c32dd18.js"></script>
-<script src="/2.ff3bdf3c.js"></script>
-<script src="/392.649f1623.js"></script>
-<script src="/393.bf69f800.js"></script>
-<script src="/935f2afb.6f236d89.js"></script>
-<script src="/17896441.f9dbbd57.js"></script>
-<script src="/0fcfd01a.36ef1bad.js"></script>
+<script src="/styles.ba6e78a0.js"></script>
+<script src="/runtime~main.0275d125.js"></script>
+<script src="/main.ffa2e3ef.js"></script>
+<script src="/1.eca0ae3f.js"></script>
+<script src="/2.cf21ba22.js"></script>
+<script src="/666.29662dbb.js"></script>
+<script src="/667.a7a15f38.js"></script>
+<script src="/935f2afb.a043533f.js"></script>
+<script src="/17896441.1fe85396.js"></script>
+<script src="/0fcfd01a.7844613a.js"></script>
 </body>
 </html>
