@@ -3,8 +3,6 @@ title: Browser View
 sidebar_label: Browser View
 ---
 
-## Browser View
-
 The browser view is the simplest method of displaying a full page website in your application.
 This is perfect for displaying external links such as news articles or website information.
 
@@ -46,7 +44,7 @@ In order for the browser view to correctly receive events you must call `prepare
 
 Example:
 
-```as3
+```actionscript
 if (NativeWebView.service.browserView.isSupported)
 {
 	NativeWebView.service.browserView.addEventListener( BrowserViewEvent.READY, browserView_readyHandler );
@@ -74,7 +72,7 @@ private function browserView_readyHandler( event:BrowserViewEvent ):void
 
 This is the important part, simply opening a url for display.
 
-```as3
+```actionscript
 NativeWebView.service.browserView.openWithUrl( "http://airnativeextensions.com" );
 ```
 
@@ -82,7 +80,7 @@ This call will create and display the browser view and load the specified url.
 
 You can listen to the events dispatched by the view:
 
-```as3
+```actionscript
 NativeWebView.service.browserView.addEventListener( BrowserViewEvent.CLOSED, browserView_eventHandler );
 NativeWebView.service.browserView.addEventListener( BrowserViewEvent.OPENED, browserView_eventHandler );
 NativeWebView.service.browserView.addEventListener( BrowserViewEvent.LOADED, browserView_eventHandler );
@@ -109,7 +107,7 @@ for the `BrowserViewEvent` as described.
 
 To use these classes you will need the following import statements:
 
-```as3
+```actionscript
 import com.distriqt.extension.nativewebview.browser.BrowserView;
 import com.distriqt.extension.nativewebview.events.BrowserViewEvent;
 ```
@@ -120,7 +118,7 @@ import com.distriqt.extension.nativewebview.events.BrowserViewEvent;
 
 You can specify options when opening a browser view by creating an instance of the `BrowserViewOptions` class and passing that as the second parameter to the `openWithUrl` function:
 
-```as3
+```actionscript
 var options:BrowserViewOptions = new BrowserViewOptions();
 
 NativeWebView.service.browserView.openWithUrl( "http://airnativeextensions.com", options );
@@ -131,7 +129,7 @@ NativeWebView.service.browserView.openWithUrl( "http://airnativeextensions.com",
 
 You can change the background colour of the browser view tool bar by specifying the primary colour:
 
-```as3
+```actionscript
 options.primaryColour = 0xFF0000;
 ```
 
@@ -140,7 +138,7 @@ The primary colour is used on iOS 10+ and Android as the background colour of th
 
 You can change the text in the toolbar by specifying the secondard colour. This is currently only supported on iOS 10+.
 
-```as3
+```actionscript
 options.secondaryColour = 0x000000;
 ```
 
@@ -152,7 +150,7 @@ On Android you can select the in and out animations by setting the `animationIn`
 
 These animations control how the browser view is shown and hidden. For example to slide the browser view in from the bottom and back out to the bottom:
 
-```as3
+```actionscript
 options.animationIn = BrowserViewOptions.SLIDE_BOTTOM;
 options.animationOut = BrowserViewOptions.SLIDE_TOP;
 ```

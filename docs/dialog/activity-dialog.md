@@ -46,6 +46,6 @@ new ActivityBuilder()
 
 | DialogType.STYLE_ANNULAR | DialogType.STYLE_SPINNER | 
 | --- | --- | 
-| [images/ios_activity_annular.png]] ](-[[images/ios_activity_spinner.png) |
+| ![](images/ios_activity_annular.png) | ![](images/ios_activity_spinner.png) |
 
 

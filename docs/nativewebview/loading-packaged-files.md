@@ -13,7 +13,7 @@ In the example application we have a directory named `www` that contains several
 files. In the following we show how to copy these to an accessible location and then load 
 them into the web view.
 
-```as3
+```actionscript
 var webView:WebView = NativeWebView.service.createWebView( new Rectangle( 0, 0, 400, 600 ) ) ;
 
 var file:File;

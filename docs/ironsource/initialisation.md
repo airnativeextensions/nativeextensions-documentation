@@ -27,6 +27,6 @@ You can test the state of the integration by calling the `validateIntegration()`
 IronSource.instance.validateIntegration();
 ```
 
-This will output information about the current SDK integration to the native device log. Check [here](https://airnativeextensions.github.io/tutorials/device-logs) for information on how to access device logs. 
+This will output information about the current SDK integration to the native device log. Check [here](/docs/tutorials/device-logs) for information on how to access device logs. 
 
 

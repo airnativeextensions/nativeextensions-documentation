@@ -7,7 +7,7 @@ sidebar_label: Screenshot
 
 You can capture the web view to bitmap data by calling the `drawViewPortToBitmapData()` function and providing a correctly sized BitmapData object.
 
-```as3
+```actionscript
 var bd:BitmapData = new BitmapData( webView.width, webView.height );
 
 webView.drawViewPortToBitmapData( bd );
@@ -19,7 +19,7 @@ This process is asynchronous so the bitmap data will be updated after the captur
 
 Using the event listener:
 
-```as3
+```actionscript
 var bd:BitmapData = new BitmapData( webView.width, webView.height );
 webView.addEventListener( NativeWebViewEvent.DRAWVIEWPORT_COMPLETE, function(e:NativeWebViewEvent):void
 {
@@ -33,7 +33,7 @@ webView.drawViewPortToBitmapData( bd );
 
 Using the callback function:
 
-```as3
+```actionscript
 var bd:BitmapData = new BitmapData( webView.width, webView.height );
 webView.drawViewPortToBitmapData( bd, function():void
 {

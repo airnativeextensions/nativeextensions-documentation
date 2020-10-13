@@ -178,7 +178,7 @@ You can also use the form to give your user the option to change their consent s
 
 The UMP SDK provides a simple way to test your app's behavior as though the device was located in the EEA or UK using the `debugGeography`.
 
-You will need to provide your test device's hashed ID in your app's debug settings to use the debug functionality. If you call `requestConsentUpdate()` without setting this value, your app will log the required ID hash when run to the [native device log](https://airnativeextensions.github.io/tutorials/device-logs).
+You will need to provide your test device's hashed ID in your app's debug settings to use the debug functionality. If you call `requestConsentUpdate()` without setting this value, your app will log the required ID hash when run to the [native device log](/docs/tutorials/device-logs).
 
 ```actionscript
 var params:ConsentRequestParameters = new ConsentRequestParameters()

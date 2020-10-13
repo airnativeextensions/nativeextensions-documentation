@@ -3,7 +3,6 @@ title: Communication
 sidebar_label: Communication
 ---
 
-## Communication
 
 One of the important aspects of this extension is the ability to communicate from your Actionscript 
 code to the Javascript in the web page and vice-versa.
@@ -27,7 +26,7 @@ The two important events here are:
 
 
 
-### Android
+## Android
 
 On Android the communication channel is only completely setup after the page load is complete. I.e after `NativeWebViewEvent.COMPLETE`. We suggest you wait for this event before attempting to communicate between the page and the application.
 
@@ -37,11 +36,11 @@ We have implemented some handlers for this scenario but they may affect loading 
 
 
 
-### Example
+## Example
 
 The following is an example from actionscript:
 
-```as3
+```actionscript
 var webView:WebView = NativeWebView.service.createWebView( new Rectangle( 0, 0, 400, 600 ) ) ;
 
 webView.addEventListener( NativeWebViewEvent.COMPLETE, webView_completeHandler );
@@ -101,7 +100,7 @@ communicating with the following html page:
 
 
 
-### AIR Bridge Code 
+## AIR Bridge Code 
 
 This is the contents of the `airbridge.js` file
 

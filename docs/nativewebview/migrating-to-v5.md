@@ -17,7 +17,7 @@ Existing code will throw an `Error` with the message:
 In order to correctly migrate to this version you need to add the following initialisation code to some point in your application before you attempt to create a `WebView`:
 
 
-```as3
+```actionscript
 var options:NativeWebViewOptions = new NativeWebViewOptions();
 NativeWebView.service.initialisePlatform( options, function(success:Boolean):void
 {

@@ -3,13 +3,12 @@ title: Create a WebView
 sidebar_label: Create a WebView
 ---
 
-## Create a WebView 
 
 Once you have initialised the extension, creating a web view is simply a matter of calling the `createWebView()` function with your parameters.
 
 The following example creates a `WebView` of size 400x600 and loads a URL. It also demonstrates some of the events dispatched by the WebView.
 
-```as3
+```actionscript
 var viewPort:Rectangle = new Rectangle( 0, 0, 400, 600 );
 			
 var webView:WebView = NativeWebView.service.createWebView( viewPort ) ;
@@ -17,7 +16,7 @@ var webView:WebView = NativeWebView.service.createWebView( viewPort ) ;
 
 You can then attach listeners and load content into the view
 
-```as3
+```actionscript
 webView.addEventListener( NativeWebViewEvent.LOCATION_CHANGE, webView_locationChangeHandler );
 webView.addEventListener( NativeWebViewEvent.COMPLETE, webView_completeHandler );
 webView.addEventListener( NativeWebViewEvent.ERROR, webView_errorHandler );
@@ -27,7 +26,7 @@ webView.loadURL( "https://airnativeextensions.com" );
 
 The events give you information about the content in the view
 
-```as3
+```actionscript
 function webView_locationChangeHandler( event:NativeWebViewEvent ):void
 {
 	trace( "location change: " + event.data );
@@ -46,14 +45,14 @@ function webView_errorHandler( event:NativeWebViewEvent ):void
 
 
 
-### Web View Options
+## Web View Options
 
 When creating a `WebView` you can specify some options as to how the view will handle certain content and interactions.
 
 To do so, create an instance of the `WebViewOptions` class and set the options as required. *Some of these options are platform dependent so make sure you read the documentation in the `WebViewOptions` class.*
 
 
-```as3
+```actionscript
 var options:WebViewOptions = new WebViewOptions();
 
 options.mediaPlaybackRequiresUserAction = true;
@@ -66,12 +65,12 @@ options.scrollBarStyle = WebViewOptions.SCROLLBAR_LIGHT;
 
 This then gets passed as the second parameter to the `createWebView()` function:
 
-```as3
+```actionscript
 var webView:WebView = NativeWebView.service.createWebView( viewPort, options );
 ```
 
 
-#### Link Target Action
+### Link Target Action
 
 The link target action option determines how links with `"_blank"` targets are handled. In a normal browser situation these would open a new tab/window however in our environment you have the following options:
 
@@ -82,7 +81,7 @@ The link target action option determines how links with `"_blank"` targets are h
 
 For example:
 
-```as3
+```actionscript
 var options:WebViewOptions = new WebViewOptions();
 options.linkTargetAction = LinkTargetAction.BLOCK;
 

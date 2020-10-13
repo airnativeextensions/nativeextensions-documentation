@@ -2,14 +2,15 @@
 title: Position Size Visibility
 sidebar_label: Position Size Visibility
 ---
-## Changing the Position and Size of the WebView
+
+## Resizing
 
 Resizing a web view can be achieved by changing the view port of the webview by 
 setting a new rectangular area to display the web view. 
 
 For example:
 
-```as3
+```actionscript
 var viewPort:Rectangle = new Rectangle( 15, 15, 300, 600 );
 
 webview.viewPort = viewPort;
@@ -19,7 +20,7 @@ You can also control the x, y, width and height properties individually.
 
 For example:
 
-```as3
+```actionscript
 webView.width = 300;
 webView.height = 600;
 webView.x = 15;
@@ -45,7 +46,7 @@ The default is `true` and presents the web view to the user.
 
 For example to hide the web view:
 
-```as3
+```actionscript
 webView.visible = false;
 ```
 

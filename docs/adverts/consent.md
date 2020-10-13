@@ -182,7 +182,7 @@ To enable easier testing of your app both inside and outside the EEA, the Consen
 
 1. Update the consent status by calling `getConsentStatus()` as described above. 
 
-  - On Android check the [logcat output](https://airnativeextensions.github.io/tutorials/device-logs) for the following log:
+  - On Android check the [logcat output](/docs/tutorials/device-logs) for the following log:
 
 > ```
 > I/ConsentInformation: Use ConsentInformation.getInstance(context).addTestDevice("33BE2250B43518CCDA7DE426D04EE231") to get test ads on this device.
