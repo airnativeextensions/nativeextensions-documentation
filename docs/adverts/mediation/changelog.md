@@ -3,6 +3,13 @@
 ###### 2020.10.14 [v5.0.0]
 
 ```
+Correcting docs
+```
+
+
+###### 2020.10.14 [v5.0.0]
+
+```
 Updated to support latest Adverts release
 AppLovin update (resolves #18)
  - Android v9.13.4
