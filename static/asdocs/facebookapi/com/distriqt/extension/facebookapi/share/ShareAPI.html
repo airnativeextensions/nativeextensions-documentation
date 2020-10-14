@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="ShareAPI,com.distriqt.extension.facebookapi.share.ShareAPI,canShow,canShow,share,show,show"><title>com.distriqt.extension.facebookapi.share.ShareAPI</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'ShareAPI - distriqt // FacebookAPI';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // FacebookAPI Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/facebookapi/share/ShareAPI.html&amp;com/distriqt/extension/facebookapi/share/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">ShareAPI</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ShareAPI"); titleBar_setSubNav(false,false,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.facebookapi.share</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  ShareAPI extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>
+	 Provides functionality to share content via the Facebook Share API.
+	 </p>
+	              <p>
+	 This is really just a wrapper around the Graph API functionality but can be useful for sharing content directly.
+	 </p>
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#share()" class="signatureLink">share</a>(content:Object):Boolean</div><div class="summaryTableDescription">
+		 
+		 Attempts to use the Share API to post the provided content.</div></td><td class="summaryTableOwnerCol">ShareAPI</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:facebookapi:shareapi:cancelled" class="signatureLink">facebookapi:shareapi:cancelled</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 Dispatched if the share api call was cancelled
+		 		 </td><td class="summaryTableOwnerCol">ShareAPI</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:facebookapi:shareapi:completed" class="signatureLink">facebookapi:shareapi:completed</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when the Facebook share api call has completed successfully.</td><td class="summaryTableOwnerCol">ShareAPI</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:facebookapi:shareapi:error" class="signatureLink">facebookapi:shareapi:error</a></div></td><td class="summaryTableDescription summaryTableCol">
+		 
+		 Dispatched when an error occurred posting to the share api
+		 
+		 
+		 errorMessage will contain details on the error that occurred.</td><td class="summaryTableOwnerCol">ShareAPI</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="share()"></a><a name="share(Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">share</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function share(content:Object):Boolean</code><p></p><p></p><p>
+		 <p>
+		 Attempts to use the Share API to post the provided content.
+		 </p>
+		 		 <p>
+		 You must create the <code>content</code> using one of the builders:
+		 </p>
+		 <ul>
+		 <li><code>ShareLinkContentBuilder</code></li>
+		 <li><code>SharePhotoContentBuilder</code></li>
+		 <li><code>ShareVideoContentBuilder</code></li>
+		 <li><code>ShareMediaContentBuilder</code></li>
+		 <li><code>ShareOpenGraphContentBuilder</code></li>
+		 </ul>
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">content</span>:Object</code> &mdash; Share content created using one of the builders
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the share post was initiated and <code>false</code> if it is not available or there is an issue with the content
+		 		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">		 Share a link using the ShareLinkContentBuilder
+		 		 <div class="listing"><pre>
+         var builder:ShareLinkContentBuilder = new ShareLinkContentBuilder()
+             .setContentTitle("FacebookAPI ANE")
+             .setContentDescription("This link was shared using the distriqt FacebookAPI ANE" )
+             .setContentUrl("https://airnativeextensions.com/extension/com.distriqt.FacebookAPI");
+                  var success:Boolean = FacebookAPI.service.shareAPI.share( builder.build() );
+         </pre></div>
+		 		 </div></div><div class="detailSectionHeader"> Event Detail </div><a name="event:facebookapi:shareapi:cancelled"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">facebookapi:shareapi:cancelled</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/facebookapi/events/ShareAPIEvent.html"><code>com.distriqt.extension.facebookapi.events.ShareAPIEvent</code></a><br/><span class="label">ShareAPIEvent.type property = </span><a href="../../../../../com/distriqt/extension/facebookapi/events/ShareAPIEvent.html#CANCELLED"><code>com.distriqt.extension.facebookapi.events.ShareAPIEvent.CANCELLED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 Dispatched if the share api call was cancelled
+		 		 </div><a name="event:facebookapi:shareapi:completed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">facebookapi:shareapi:completed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/facebookapi/events/ShareAPIEvent.html"><code>com.distriqt.extension.facebookapi.events.ShareAPIEvent</code></a><br/><span class="label">ShareAPIEvent.type property = </span><a href="../../../../../com/distriqt/extension/facebookapi/events/ShareAPIEvent.html#COMPLETED"><code>com.distriqt.extension.facebookapi.events.ShareAPIEvent.COMPLETED</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when the Facebook share api call has completed successfully.
+		 </p>
+		 <p>
+		 <code>postId</code> will contain the id of the post created.
+		 </p>
+		 		 </div><a name="event:facebookapi:shareapi:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">facebookapi:shareapi:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/facebookapi/events/ShareAPIEvent.html"><code>com.distriqt.extension.facebookapi.events.ShareAPIEvent</code></a><br/><span class="label">ShareAPIEvent.type property = </span><a href="../../../../../com/distriqt/extension/facebookapi/events/ShareAPIEvent.html#ERROR"><code>com.distriqt.extension.facebookapi.events.ShareAPIEvent.ERROR</code></a><br/><p></p><p></p><p>
+	 </p>
+		 <p>
+		 Dispatched when an error occurred posting to the share api
+		 </p>
+		 <p>
+		 <code>errorMessage</code> will contain details on the error that occurred.
+		 </p>
+		 		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Oct 14 2020, 02:42 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Oct 14 2020, 02:42 PM +10:00  -->

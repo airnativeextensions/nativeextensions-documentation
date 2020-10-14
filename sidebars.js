@@ -39,7 +39,7 @@ module.exports = {
 
         { type: 'ref', id: "expansionfiles/index" },
         
-        // { type: 'ref', id: "facebookapi/index" },
+        { type: 'ref', id: "facebookapi/index" },
         { type: 'ref', id: "firebase/index" },
         { type: 'ref', id: "flurry/index" },
         { type: 'ref', id: "forcetouch/index" },
@@ -773,7 +773,83 @@ module.exports = {
   ],
 
 
-
+  facebookapi: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'facebookapi/index' },
+    { 
+      "Setup Facebook": [
+        "facebookapi/facebook-application",
+        "facebookapi/facebook-android-app",
+        "facebookapi/facebook-ios-app",
+        "facebookapi/advanced-facebook-settings",
+      ]
+    },
+    { 
+      "Setup the Extension": [
+        "facebookapi/add-the-extension",
+        "facebookapi/initialise-the-extension",
+        "facebookapi/initialise-facebook-app",
+      ]
+    },
+    { 
+      "Facebook Login": [
+        "facebookapi/login---overview",
+        "facebookapi/login---facebook-login",
+        "facebookapi/login---access-token",
+      ]
+    },
+    { 
+      "App Events": [
+        "facebookapi/app-events---overview",
+        "facebookapi/app-events---user-properties",
+        "facebookapi/app-events---automatic-logging",
+        "facebookapi/app-events---logging",
+      ]
+    },
+    { 
+      "Sharing": [
+        "facebookapi/sharing---overview",
+        "facebookapi/sharing---content",
+        "facebookapi/sharing---share-dialog",
+        "facebookapi/sharing---message-dialog",
+        "facebookapi/sharing---open-graph-stories",
+        "facebookapi/sharing---share-api",
+      ]
+    },
+    { 
+      "App Links": [
+        "facebookapi/app-links---overview",
+        "facebookapi/app-links---incoming-links",
+      ]
+    },
+    { 
+      "Games": [
+        "facebookapi/games---overview",
+        "facebookapi/games---game-request-dialog",
+      ]
+    },
+    { 
+      "Graph API": [
+        "facebookapi/graph-api---overview",
+        "facebookapi/graph-api---basics",
+        "facebookapi/graph-api---batch",
+        "facebookapi/graph-api---examples",
+      ]
+    },
+    { 
+      "Troubleshooting": [
+        "facebookapi/migrating-to-androidx",
+        "facebookapi/account-kit---deprecation",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'facebookapi/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/facebookapi/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-FacebookAPI/issues/new' },
+      ]
+    },
+  ],
 
   firebase: [
     { type: 'ref', id: 'index' },
