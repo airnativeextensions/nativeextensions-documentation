@@ -1,7 +1,7 @@
 ---
 title: Adverts
 hide_title: true
-slug: /adverts
+slug: /adverts/
 ---
 
 ![](images/hero.png)

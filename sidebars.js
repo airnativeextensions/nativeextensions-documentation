@@ -129,6 +129,14 @@ module.exports = {
       ]
     },
     { 
+      "Mediation": [
+        "adverts/mediation/applovin",
+        "adverts/mediation/facebookaudience",
+        "adverts/mediation/ironsource",
+        "adverts/mediation/unityads",
+      ]
+    },
+    { 
       "Other": [
         { type: 'doc', id: 'adverts/changelog' },
         { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/adverts/" },
