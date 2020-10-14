@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="AnalyticsFlushMode,com.distriqt.extension.facebookapi.appevents.AnalyticsFlushMode,EVENT_NAME_ACHIEVED_LEVEL,EVENT_NAME_ACTIVATED_APP,EVENT_NAME_ADDED_PAYMENT_INFO,EVENT_NAME_ADDED_TO_CART,EVENT_NAME_ADDED_TO_WISHLIST,EVENT_NAME_COMPLETED_REGISTRATION,EVENT_NAME_COMPLETED_TUTORIAL,EVENT_NAME_DEACTIVATED_APP,EVENT_NAME_INITIATED_CHECKOUT,EVENT_NAME_PURCHASED,EVENT_NAME_PUSH_TOKEN_OBTAINED,EVENT_NAME_RATED,EVENT_NAME_SEARCHED,EVENT_NAME_SESSION_INTERRUPTIONS,EVENT_NAME_SPENT_CREDITS,EVENT_NAME_TIME_BETWEEN_SESSIONS,EVENT_NAME_UNLOCKED_ACHIEVEMENT,EVENT_NAME_VIEWED_CONTENT,EVENT_PARAM_CONTENT_ID,EVENT_PARAM_CONTENT_TYPE,EVENT_PARAM_CURRENCY,EVENT_PARAM_DESCRIPTION,EVENT_PARAM_LEVEL,EVENT_PARAM_MAX_RATING_VALUE,EVENT_PARAM_NUM_ITEMS,EVENT_PARAM_PAYMENT_INFO_AVAILABLE,EVENT_PARAM_REGISTRATION_METHOD,EVENT_PARAM_SEARCH_STRING,EVENT_PARAM_SOURCE_APPLICATION,EVENT_PARAM_SUCCESS,EVENT_PARAM_VALUE_NO,EVENT_PARAM_VALUE_YES,MODE_AUTO,MODE_EXPLICIT,currency,eventName,isSupported,parameters,parameters,purchaseAmount,valueToSum"><title>com.distriqt.extension.facebookapi.appevents.AnalyticsFlushMode</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'AnalyticsFlushMode - distriqt // FacebookAPI';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">distriqt // FacebookAPI Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../../package-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../../class-summary.html" onclick="loadClassListFrame('../../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../../all-index-A.html" onclick="loadClassListFrame('../../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../../index.html?com/distriqt/extension/facebookapi/appevents/AnalyticsFlushMode.html&amp;com/distriqt/extension/facebookapi/appevents/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">AnalyticsFlushMode</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AnalyticsFlushMode"); titleBar_setSubNav(true,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.facebookapi.appevents</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  AnalyticsFlushMode</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">AnalyticsFlushMode  <img src="../../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>	
+	              <p>
+	 The Analytics interface allows the developer to log various types of events back to Facebook.
+	 This client-side event logging is then available through Facebook App Insights and for use with Facebook Ads conversion tracking and optimization.
+	 </p>
+	              <p>
+	 Logging predefined and application-defined events to Facebook App Insights 
+	 with a numeric value to sum across a large number of events, and an optional 
+	 set of key/value parameters that define "segments" for this event 
+	 (e.g., 'purchaserStatus' : 'frequent', or 'gamerLevel' : 'intermediate'). 
+	 These events may also be used for ads conversion tracking, optimization, 
+	 and other ads related targeting in the future.
+	 </p>
+	 
+	 
+	 
+	 
+	              <p>
+	 Some things to note when logging events:
+	 </p>
+	              <ul>
+	                 <li>
+	 	There is a limit on the number of unique event names an app can use, on the order of 1000.
+	 </li>
+	                 <li>
+	 	There is a limit to the number of unique parameter names in the provided parameters that can be used per event, on the order of 25. This is not just for an individual call, but for all invocations for that eventName.
+	 </li>
+	                 <li>
+	 	Event names and parameter names must be between 2 and 40 characters, and must consist of alphanumeric characters, _, -, or spaces.
+	 </li>
+	                 <li>
+	 The length of each parameter value can be no more than on the order of 100 characters.
+	 </li>
+	              </ul>
+	 
+
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#AnalyticsFlushMode()" class="signatureLink">AnalyticsFlushMode</a>()</div><div class="summaryTableDescription">
+		  Constructor
+		 </div></td><td class="summaryTableOwnerCol">AnalyticsFlushMode</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#MODE_AUTO" class="signatureLink">MODE_AUTO</a> : String = auto<div class="summaryTableDescription">[static] 
+		 
+		 </div></td><td class="summaryTableOwnerCol">AnalyticsFlushMode</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#MODE_EXPLICIT" class="signatureLink">MODE_EXPLICIT</a> : String = explicit<div class="summaryTableDescription">[static] 
+		 
+		 </div></td><td class="summaryTableOwnerCol">AnalyticsFlushMode</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="AnalyticsFlushMode()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">AnalyticsFlushMode</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function AnalyticsFlushMode()</code><p></p><p>
+		  Constructor
+		 </p></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="MODE_AUTO"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">MODE_AUTO</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const MODE_AUTO:String = auto</code><p></p><p></p><p>
+		 
+		 </p></div><a name="constantDetail"></a><a name="MODE_EXPLICIT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">MODE_EXPLICIT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const MODE_EXPLICIT:String = explicit</code><p></p><p></p><p>
+		 
+		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Oct 14 2020, 02:42 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Oct 14 2020, 02:42 PM +10:00  -->
