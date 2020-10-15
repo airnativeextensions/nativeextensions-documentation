@@ -1,5 +1,5 @@
 module.exports = {
-  title: "AIR Native Extensions",
+  title: "air native extensions",
   tagline: "Documentation for distriqt's Native Extensions",
   url: 'https://docs.airnativeextensions.com',
   baseUrl: '/',
@@ -12,7 +12,7 @@ module.exports = {
       id: 'development', // Any value that will identify this message.
       content:
         'This is the new airnativeextensions documentation site and is currently under development. <a href="https://github.com/airnativeextensions/nativeextensions-documentation/issues">Please let us know if you find any issues.</a>',
-      backgroundColor: '#AA0000', // Defaults to `#fff`.
+      backgroundColor: '#880000', // Defaults to `#fff`.
       textColor: '#FFF', // Defaults to `#000`.
       isCloseable: false, // Defaults to `true`.
     },
@@ -32,6 +32,18 @@ module.exports = {
       additionalLanguages: ['actionscript', 'csharp'],
       // defaultLanguage: 'actionscript'
     },
+    algolia: {
+      apiKey: 'f3ad51a28b5bae2a9f439e0b6f8d6fb9',
+      indexName: 'airnativeextensions',
+
+      // Optional: see doc section bellow
+      contextualSearch: true,
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      //... other Algolia params
+    },
     navbar: {
       title: 'AIR Native Extensions',
       logo: {
@@ -44,12 +56,12 @@ module.exports = {
           to: 'docs/',
           activeBasePath: 'docs',
           label: 'Docs',
-          position: 'right',
+          position: 'left',
         },
         { 
           to: 'news/',
           label: 'News', 
-          position: 'right'
+          position: 'left'
         }
       ],
     },

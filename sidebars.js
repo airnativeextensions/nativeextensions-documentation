@@ -2,12 +2,7 @@ module.exports = {
   someSidebar: [
     { type: 'doc', id: 'index' },
     { type: 'ref', id: "tutorials/index" },
-    { 
-      type: 'category',
-      label: 'Tutorials',
-      items: [
-      ],
-    },
+    { type: 'ref', id: "faqs/index" },
     { 
       type: 'category',
       label: 'Extensions',
@@ -2172,8 +2167,15 @@ module.exports = {
 
 
 
-
-
+  faqs: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'faqs/index' },
+    "faqs/ld-unknown-option",
+    "faqs/ld-warning",
+    "faqs/ld-framework-not-found",
+    "faqs/error-context-create",
+    "faqs/error-404",
+  ],
   
 
   tutorials: [
