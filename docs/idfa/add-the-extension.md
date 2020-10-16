@@ -120,7 +120,7 @@ You need to make sure you add the `android.permission.INTERNET` permission and t
 
 This ANE has been updated for iOS 14 and requires a minimum of the iOS 14 SDK to be linked with your application in order to have access to the iOS 14 app tracking transparency features.
 
-Make sure you provide a valid iOS 14+ SDK when packagaging. Currently you do this by packaging with the iOS SDK, see [here](https://airnativeextensions.github.io/tutorials/ios-sdk-custom) for more.
+Make sure you provide a valid iOS 14+ SDK when packagaging. Currently you do this by packaging with the iOS SDK, see [here](/docs/tutorials/ios-sdk-custom) for more.
 
 
 

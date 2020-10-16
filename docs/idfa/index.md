@@ -1,7 +1,7 @@
 ---
 title: IDFA
 hide_title: true
-slug: /idfa
+slug: /idfa/
 ---
 
 ![](images/hero.png)
