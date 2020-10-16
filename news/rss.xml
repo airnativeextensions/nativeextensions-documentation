@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>AIR Native Extensions Blog</title>
+        <title>air native extensions Blog</title>
         <link>https://docs.airnativeextensions.com/news</link>
-        <description>AIR Native Extensions Blog</description>
+        <description>air native extensions Blog</description>
         <lastBuildDate>Tue, 22 Sep 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
