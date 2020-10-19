@@ -1,5 +1,12 @@
 
 
+###### 2020.10.19 [v10.0.025]
+
+```
+Updated docs (resolves #202, resolves #210) and corrected App Tracking framework dependency (resolves #208)
+```
+
+
 ###### 2020.10.04 [v10.0.021]
 
 ```
