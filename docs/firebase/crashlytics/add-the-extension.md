@@ -148,7 +148,7 @@ It should now appear like:
 
     <!-- Firebase Crashlytics -->
     <meta-data
-        android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+        android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
         android:value="com.google.firebase.components.ComponentRegistrar" />
 
 </service>

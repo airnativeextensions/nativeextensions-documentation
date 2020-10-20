@@ -863,8 +863,11 @@ module.exports = {
         "firebase/core/analytics",
       ]
     },
-    {
-      "Develop": [
+    { 
+      type: 'category',
+      label: 'Develop',
+      collapsed: false,
+      items: [
         {
           "Authentication": [
             "firebase/auth/introduction",
@@ -878,6 +881,7 @@ module.exports = {
                 "firebase/auth/provider/anonymous",
                 "firebase/auth/provider/google-identity",
                 "firebase/auth/provider/github",
+                "firebase/auth/provider/microsoft",
                 "firebase/auth/provider/apple",
                 "firebase/auth/provider/facebook",
                 "firebase/auth/provider/twitter",
@@ -965,7 +969,10 @@ module.exports = {
       ]
     },
     {
-      "Quality": [
+      type: 'category',
+      label: "Quality",
+      collapsed: false,
+      items: [
         {
           "Crashlytics": [
             "firebase/crashlytics/introduction",
@@ -986,7 +993,10 @@ module.exports = {
       ]
     },
     {
-      "Grow": [
+      type: 'category',
+      label: "Grow",
+      collapsed: false,
+      items: [
         {
           "Cloud Messaging": [
             "firebase/fcm/introduction",

@@ -1,5 +1,12 @@
 
 
+###### 2020.10.20 [v5.1.044]
+
+```
+Updated docs for Microsoft Auth and Crashlytics
+```
+
+
 ###### 2020.09.17 [v5.1.042]
 
 ```

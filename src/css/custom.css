@@ -21,6 +21,22 @@
   /* --ifm-pagination-nav-border-radius: 0; */
 }
 
+
+.menu__list-item {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-size: 0.8rem;
+  /* line-height: 10px; */
+}
+
+.menu__link {
+  line-height: 18px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
