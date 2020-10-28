@@ -1,5 +1,14 @@
 
 
+###### 2020.10.28 [v12.1.128]
+
+```
+Added applicationUsername to a purchase change request (resolves #365)
+Android: Corrected change purchase functionality to include purchase token (resolves #364)
+Correctly reported error message and code with a PurchaseEvent.PURCHASE_FAILED event (resolves #361)
+```
+
+
 ###### 2020.09.17 [v12.0.119]
 
 ```

@@ -1,7 +1,7 @@
 ---
 title: InAppBilling
 hide_title: true
-slug: /inappbilling
+slug: /inappbilling/
 ---
 
 ![](images/hero.png)
