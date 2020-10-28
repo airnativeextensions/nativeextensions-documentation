@@ -1,5 +1,13 @@
 
 
+###### 2020.10.28 [v8.2.058]
+
+```
+Android: Fixed issue when attempting to set selected index to the last item in a picker (resolves #260)
+Android: Corrected issues with selected / closed events in the date / time picker (resolves #257, resolves #186)
+```
+
+
 ###### 2020.10.01 [v8.2.046]
 
 ```
