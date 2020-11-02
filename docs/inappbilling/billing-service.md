@@ -67,27 +67,25 @@ InAppBilling.service.setup(
 
 ### Service Type
 
-The billing service type will be automatically selected based on the default of the current device platform. However if you wish to specify you can set a particular type in the `BillingService` constructor to specify a particular platform:
+The billing service type will be automatically selected based on the default of the current device platform. However we suggest you specify the service type in your `BillingService` using `setServiceType()` to specify a particular service:
 
 ```actionscript
-var service:BillingService = new BillingService( )
+var service:BillingService = new BillingService(  )
+    .setServiceType( InAppBillingServiceTypes.GOOGLE_PLAY_INAPP_BILLING )
     .setGooglePlayPublicKey( GOOGLE_PLAY_INAPP_BILLING_KEY );
 
 var success:Boolean = InAppBilling.service.setup( service );
-
-
-// Set the required service type and call setup
-InAppBilling.service.setServiceType( InAppBillingServiceTypes.GOOGLE_PLAY_INAPP_BILLING );
 ```
 
-**This must be called before `setup()`.** Calling it after `setup()` will have no affect.
-
 >
-> Note: 
+> **Note**: 
 >
 > You do not need to call `setServiceType`. 
 > If you do not call it then the default for the current platform will be used, 
 > i.e. Apple InApp Purchases on iOS and Google's Play InApp Billing on Android.
+> 
+> We suggest that you do specify a service type, particularly on Android where there are multiple stores involved.
+> This is so that you ensure you are utilising the correct store for your application, otherwise you may find that the extension incorrectly assumes you are using the default store on the device (eg Huawei AppGallery on a Huawei device), which may not be what you intend.
 >
 
 
