@@ -109,7 +109,7 @@ There are no required iOS additions to the application descriptor.
 
 Here are some notes on using the current version of the iOS SDK with the AIR SDK:
 
-- [/docs/tutorials/iOS-versions](/docs/tutorials/iOS-versions)
+- [/docs/tutorials/ios-sdk-versions](/docs/tutorials/ios-sdk-versions)
 
 
 
