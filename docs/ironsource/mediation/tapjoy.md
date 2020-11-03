@@ -1,6 +1,6 @@
 ---
 title: Mediation - Tapjoy
-sidebar_label: Tapjoy
+sidebar_label: Mediation - Tapjoy
 ---
 
 This guide shows how to add mediation through Tapjoy to your IronSource integration.

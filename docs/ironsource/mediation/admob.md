@@ -1,6 +1,6 @@
 ---
 title: Mediation - AdMob
-sidebar_label: AdMob
+sidebar_label: Mediation - AdMob
 ---
 
 This guide shows how to add mediation through AdMob to your IronSource integration.

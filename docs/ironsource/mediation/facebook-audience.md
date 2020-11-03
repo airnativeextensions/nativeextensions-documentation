@@ -1,6 +1,6 @@
 ---
 title: Mediation - Facebook Audience
-sidebar_label: Facebook Audience
+sidebar_label: Mediation - Facebook Audience
 ---
 
 This guide shows how to add mediation through Facebook Audience to your IronSource integration.

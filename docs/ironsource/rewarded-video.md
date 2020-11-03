@@ -3,6 +3,10 @@ title: Rewarded Video
 sidebar_label: Rewarded Video
 ---
 
+Rewarded videos are opt-in ad units that encourage users to watch a video in order to receive in-app rewards. 
+
+![](images/rewarded-video.png)
+
 
 ## Availability 
 
@@ -108,3 +112,8 @@ function onRewardedVideoAdClicked( event:RewardedVideoAdEvent ):void
     trace( "onRewardedVideoAdClicked" );
 }
 ```
+
+
+## Errors
+
+See the complete description of the ironSource errors [here](errors).

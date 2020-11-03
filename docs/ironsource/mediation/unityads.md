@@ -1,6 +1,6 @@
 ---
 title: Mediation - UnityAds
-sidebar_label: UnityAds
+sidebar_label: Mediation - UnityAds
 ---
 
 This guide shows how to add mediation through UnityAds to your IronSource integration.

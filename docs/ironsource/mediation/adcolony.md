@@ -1,6 +1,6 @@
 ---
 title: Mediation - AdColony
-sidebar_label: AdColony
+sidebar_label: Mediation - AdColony
 ---
 
 This guide shows how to add mediation through AdColony to your IronSource integration.

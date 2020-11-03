@@ -1,6 +1,6 @@
 ---
 title: Mediation - AppLovin
-sidebar_label: AppLovin
+sidebar_label: Mediation - AppLovin
 ---
 
 This guide shows how to add mediation through AppLovin to your IronSource integration.

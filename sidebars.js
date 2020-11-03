@@ -1394,6 +1394,9 @@ module.exports = {
         "ironsource/initialisation",
         "ironsource/interstitials",
         "ironsource/rewarded-video",
+        "ironsource/banner-ads",
+        "ironsource/offerwall",
+        "ironsource/errors",
       ]
     },
     { 

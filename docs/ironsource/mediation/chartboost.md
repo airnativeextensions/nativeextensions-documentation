@@ -1,6 +1,6 @@
 ---
 title: Mediation - Chartboost
-sidebar_label: Chartboost
+sidebar_label: Mediation - Chartboost
 ---
 
 This guide shows how to add mediation through Chartboost to your IronSource integration.
