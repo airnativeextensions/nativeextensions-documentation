@@ -97,6 +97,35 @@ These additions should go inside the `application` node in your manifest additio
 
 ## iOS
 
+
+### Dynamic Frameworks
+
+Facebook is based on a dynamic framework so you must include the framework and dependent swift libs in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+If should contain all the `dylib` files in the supplied `Frameworks` directory and any of the Facebook SDK components that you are using in your application. 
+
+The Share extension requires the `FBSDKCoreKit.framework` and the `FBSDKShareKit.framework` so your `Frameworks` directory should contain:
+
+```
+FBSDKCoreKit.framework
+FBSDKShareKit.framework
+libswiftUIKit.dylib
+libswiftCore.dylib
+libswiftCoreFoundation.dylib
+libswiftCoreGraphics.dylib
+libswiftCoreImage.dylib
+libswiftDarwin.dylib
+libswiftDispatch.dylib
+libswiftFoundation.dylib
+libswiftMetal.dylib
+libswiftObjectiveC.dylib
+libswiftos.dylib
+libswiftQuartzCore.dylib
+```
+
+
 ### Info Additions
 
 The Facebook Share extension doesn't require any info additions beyond the ones you have added for the Facebook Core extension.

@@ -195,6 +195,33 @@ the `MultiDexApplication`:
 
 ## iOS
 
+### Dynamic Frameworks
+
+Facebook is based on a dynamic framework so you must include the framework and dependent swift libs in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+If should contain all the `dylib` files in the supplied `Frameworks` directory and any of the Facebook SDK components that you are using in your application. 
+
+The Core extension requires the `FBSDKCoreKit.framework` so your `Frameworks` directory should contain:
+
+```
+FBSDKCoreKit.framework
+libswiftUIKit.dylib
+libswiftCore.dylib
+libswiftCoreFoundation.dylib
+libswiftCoreGraphics.dylib
+libswiftCoreImage.dylib
+libswiftDarwin.dylib
+libswiftDispatch.dylib
+libswiftFoundation.dylib
+libswiftMetal.dylib
+libswiftObjectiveC.dylib
+libswiftos.dylib
+libswiftQuartzCore.dylib
+```
+
+
 ### Info Additions
 
 The Facebook Core extension requires some additions to the iOS section of your application 

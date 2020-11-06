@@ -86,6 +86,35 @@ The Facebook Login extension doesn't require any manifest additions beyond the o
 
 ## iOS
 
+
+### Dynamic Frameworks
+
+Facebook is based on a dynamic framework so you must include the framework and dependent swift libs in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+If should contain all the `dylib` files in the supplied `Frameworks` directory and any of the Facebook SDK components that you are using in your application. 
+
+The Login extension requires the `FBSDKCoreKit.framework` and the `FBSDKLoginKit.framework` so your `Frameworks` directory should contain:
+
+```
+FBSDKCoreKit.framework
+FBSDKLoginKit.framework
+libswiftUIKit.dylib
+libswiftCore.dylib
+libswiftCoreFoundation.dylib
+libswiftCoreGraphics.dylib
+libswiftCoreImage.dylib
+libswiftDarwin.dylib
+libswiftDispatch.dylib
+libswiftFoundation.dylib
+libswiftMetal.dylib
+libswiftObjectiveC.dylib
+libswiftos.dylib
+libswiftQuartzCore.dylib
+```
+
+
 ### Info Additions
 
 The Facebook Login extension doesn't require any info additions beyond the ones you have added for the Facebook Core extension.
