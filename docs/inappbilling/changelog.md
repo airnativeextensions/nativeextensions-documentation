@@ -1,5 +1,12 @@
 
 
+###### 2020.11.06 [v12.1.133]
+
+```
+Corrected missing classes from default library (resolves #369)
+```
+
+
 ###### 2020.11.02 [v12.1.128]
 
 ```
