@@ -1,7 +1,7 @@
 ---
 title: NativeWebView
 hide_title: true
-slug: /nativewebview
+slug: /nativewebview/
 ---
 
 ![](images/hero.png)

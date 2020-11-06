@@ -135,3 +135,59 @@ var AirBridge = (function() {
 	};
 })();
 ```
+
+
+## Sending parameters to Javascript
+
+You can use the `evaluateJavascript()` function to send any Javascript to the loaded page, however sometimes it is useful to call a function in javascript and pass an array of parameters. Below we are going to go through some techniques to communicate parameters with your page.
+
+
+This first method is the simplest, constructing a String with the function name and parameters laid out:
+
+```actionscript
+var javascript:String = "functionName( '" + param1 + "' )";
+_webView.evaluateJavascript( javascript );
+```
+
+--- 
+
+Developing on this you can also construct a utility function that takes a function name and array of parameters:
+
+```actionscript
+function callJavascriptFunction( functionName:String, args:Array ):void 
+{
+    var params:String = "";
+    for (var i:int = 0; i < args.length; i++) 
+	{
+		// Assuming strings, but you can add switching on type
+        params += "'"+args[i] + "'"; 
+    }
+    var javascript:String = functionName + "( " + params + " )" ;
+    _webView.evaluateJavascript( javascript );
+}
+```
+
+---
+
+You could use the `JSON` class to encode the parameters into a JSON string:
+
+```actionscript
+function callJavascriptFunction( functionName:String, args:Array ):void 
+{
+	var parametersJSON:String = JSON.stringify(args);
+	var javascript:String = functionName + "( " + parametersJSON + " )" ;
+    _webView.evaluateJavascript( javascript );
+}
+```
+
+Then in your javascript side parse the JSON back into your parameters: 
+
+```js
+function myFunction(parametersJSON):void
+{
+     let parametersArray = JSON.parse(parametersJSON);
+     
+	 // Use your parameters as required
+}
+```
+
