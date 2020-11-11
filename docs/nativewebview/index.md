@@ -36,7 +36,7 @@ As with all our extensions you get access to a year of support and updates as we
 
 ## Documentation
 
-The [Wiki](https://github.com/distriqt/ANE-NativeWebView/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/nativewebview). 
+This site forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/nativewebview). 
 
 
 More information here: 

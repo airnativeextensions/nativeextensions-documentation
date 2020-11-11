@@ -1,5 +1,16 @@
 
 
+###### 2020.11.11 [v5.1.338]
+
+```
+Android: Implemented linkTargetAction (resolves #227)
+macOS/iOS fixed clearing of cookies with latest OS versions 
+Added pageUp/pageDown/scrollTo/scrollBy functionality
+Windows: Changed the way target=_blank are handled (resolves #222)
+Windows: Added ability to set additional cef command line args (resolves #224)
+```
+
+
 ###### 2020.10.02 [v5.0.269]
 
 ```
