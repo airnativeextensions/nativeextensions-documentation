@@ -8,6 +8,7 @@ These are mainly designed for testing and currently only the following dialogs a
 
 - Toasts
 - Alert dialog views created with an `AlertBuilder`
+- Progress dialog
 
 We will progressively be adding more of these dialogs, please feel free to request an implementation in github.
 

@@ -1,5 +1,13 @@
 
 
+###### 2020.11.11 [v8.3.071]
+
+```
+iOS: Corrected date/time dialogs on iOS 14 (resolves #262) 
+Implemented default progress dialog (resolves #125)
+```
+
+
 ###### 2020.10.28 [v8.2.058]
 
 ```
