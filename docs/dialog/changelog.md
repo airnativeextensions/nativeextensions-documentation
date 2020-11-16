@@ -1,5 +1,12 @@
 
 
+###### 2020.11.16 [v8.3.073]
+
+```
+Fixed packaging issue with IntelliJ on windows (resolves #264)
+```
+
+
 ###### 2020.11.11 [v8.3.071]
 
 ```
