@@ -1,5 +1,12 @@
 
 
+###### 2020.11.16 [v5.1.341]
+
+```
+Android: Fix for Android WebView bug with href links on images (resolves #229)
+```
+
+
 ###### 2020.11.11 [v5.1.338]
 
 ```
