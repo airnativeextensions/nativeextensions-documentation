@@ -1,5 +1,12 @@
 
 
+###### 2020.11.25 [v8.4.092]
+
+```
+iOS: Corrected issue with determinate progress dialog style (resolves #265)
+```
+
+
 ###### 2020.11.16 [v8.3.073]
 
 ```
