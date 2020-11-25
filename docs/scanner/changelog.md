@@ -1,5 +1,12 @@
 
 
+###### 2020.11.25 [v4.2.017]
+
+```
+iOS: Resolved issue with new view controller modal presentation style (resolves #61)
+```
+
+
 ###### 2020.05.08 [v4.1.013]
 
 ```
