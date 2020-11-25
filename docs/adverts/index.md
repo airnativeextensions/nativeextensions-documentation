@@ -17,6 +17,7 @@ Currently the extension supports the following advertising platforms:
 
 - Google AdMob: Android, iOS
 
+
 >
 > ### iAd Shutdown
 > 

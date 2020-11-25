@@ -1,5 +1,14 @@
 
 
+###### 2020.11.25 [v10.1.037]
+
+```
+Added support for AdMob Open Bidding (resolves #211) 
+Updated initialisation process
+Deprecated wiki
+```
+
+
 ###### 2020.10.19 [v10.0.025]
 
 ```

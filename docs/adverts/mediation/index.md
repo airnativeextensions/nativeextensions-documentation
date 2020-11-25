@@ -1,7 +1,7 @@
 ---
 title: Adverts-Mediation
 hide_title: true
-slug: /adverts-mediation/
+slug: /adverts/mediation/
 ---
 
 ![](images/hero.png)
@@ -25,17 +25,16 @@ however should work with any recent AdMob implementation.
 
 
 - AdMob Mediation
-    - [App Lovin](https://github.com/distriqt/ANE-Adverts-Mediation/wiki/AppLovin)
-    - [Facebook Audience](https://github.com/distriqt/ANE-Adverts-Mediation/wiki/FacebookAudience)
-    - [IronSource](https://github.com/distriqt/ANE-Adverts-Mediation/wiki/IronSource)
-    - [Unity Ads](https://github.com/distriqt/ANE-Adverts-Mediation/wiki/UnityAds)
+    - [App Lovin](applovin)
+    - [Facebook Audience](facebookaudience)
+    - [IronSource](ironsource)
+    - [Unity Ads](unityads)
 
 
 
 ## Documentation
 
-Latest documentation can be found in the [wiki](https://github.com/distriqt/ANE-Adverts-Mediation/wiki)
-
+Latest documentation can be found in the [documentation site](https://docs.airnativeextensions.com/docs/adverts/mediation/)
 
 
 ![](images/promo.png)

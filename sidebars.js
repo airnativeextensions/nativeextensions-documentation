@@ -135,6 +135,7 @@ module.exports = {
       "Other": [
         { type: 'doc', id: 'adverts/changelog' },
         { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/adverts/" },
+        { type: "link", label: "asdocs - mediators", href: "https://docs.airnativeextensions.com/asdocs/adverts-mediation/" },
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Adverts/issues/new' },
       ]
     },
@@ -2074,9 +2075,9 @@ module.exports = {
     },
     { 
       "Other": [
-        { type: 'doc', id: 'scanner/changelog' },
-        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/scanner/" },
-        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Scanner/issues/new' },
+        { type: 'doc', id: 'share/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/share/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Share/issues/new' },
       ],
     },
   ],

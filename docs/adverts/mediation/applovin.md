@@ -18,6 +18,7 @@ To set up your AdMob ad unit, you'll need your AppLovin SDK Key and Report Key. 
 
 ![](images/applovin-keys.png)
 
+
 ### Select app for mediation
 
 On the AppLovin dashboard, select **Manage Apps** under the **Monetize** section to get to your registered apps. Select the app you'd like to use with mediation from the list of available apps. If you do not see your app in the list, it is not registered. See the note below to get it registered
@@ -119,27 +120,53 @@ You can access this extension here: [https://github.com/distriqt/ANE-Core](https
 
 ### Android
 
-Add the following to your manifest additions inside the `application` tag, making sure you replace the value of the AppLovin SDK Key with the value from the AppLovin dashboard for your account:
+Add the following to your manifest additions inside the `application` tag:
 
 ```xml
-<meta-data android:name="applovin.sdk.key"
-           android:value="lJZcB...l7mHlJZ8yvFu36nGvCs3IAv" />
+<!-- APPLOVIN MEDIATION -->
+<activity
+    android:name="com.applovin.adview.AppLovinInterstitialActivity"
+    android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
+    android:hardwareAccelerated="true"
+    android:screenOrientation="behind" />
+<activity
+    android:name="com.applovin.adview.AppLovinFullscreenActivity"
+    android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+    android:exported="false"
+    android:hardwareAccelerated="true"
+    android:launchMode="singleTop"
+    android:screenOrientation="behind" />
+<activity
+    android:name="com.applovin.sdk.AppLovinWebViewActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
 
-<activity android:name="com.applovin.adview.AppLovinInterstitialActivity" android:configChanges="orientation|screenSize"/>
-<activity android:name="com.applovin.adview.AppLovinConfirmationActivity" android:configChanges="orientation|screenSize"/>
+<service
+    android:name="com.applovin.impl.sdk.utils.AppKilledService"
+    android:exported="false"
+    android:stopWithTask="false" />
+<service
+    android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+    android:exported="false"
+    android:stopWithTask="false" />
 ```
 
 
 
 ### iOS
 
-Add the following to your info additions, making sure you replace the value of the AppLovin SDK Key with the value from the AppLovin dashboard for your account:
-
-
-```xml
-<key>AppLovinSdkKey</key>
-<string>lJZcB...l7mHlJZ8yvFu36nGvCs3IAv</string>
-```
+No additions required
 
 
 
