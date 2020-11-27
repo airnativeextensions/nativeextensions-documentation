@@ -62,4 +62,4 @@
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-FacebookAPI/issues/new' },
       ]
     },
-  ],
+  ]

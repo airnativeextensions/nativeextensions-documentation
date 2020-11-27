@@ -1,5 +1,24 @@
 
 
+###### 2020.11.27 [v8.0.013]
+
+```
+Major update and refactoring (resolves #277)
+Extension has been broken up into Facebook SDK components
+
+Updates
+ - Resolved delayed initialisation (resolves #274, resolves #265)
+ - Removed the deprecated game request share dialog (resolves #235)
+```
+
+
+###### 2020.08.14 [v7.1.194]
+
+```
+Corrected multidex documentation + updated build
+```
+
+
 ###### 2020.05.08 [v7.1.193]
 
 ```

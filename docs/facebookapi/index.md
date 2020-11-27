@@ -11,9 +11,15 @@ slug: /facebookapi/
 The [FacebookAPI](https://airnativeextensions.com/extension/com.distriqt.FacebookAPI) is a series of extensions that allow you to connect users with Facebook and utilise the Facebook SDK features including analytics, login and sharing.
 
 
-:::info
-If you are looking for the documentation on the legacy implementation you can find that [here](../facebookapi-legacy/)
+:::tip Migrating
+If you are migrating from version 7 or lower have a look over the [migration guide](migrating-to-version-8)
 :::
+
+:::caution Legacy Documentation
+If you are looking for the documentation on the legacy implementation (version 7) you can find that [here](../facebookapi-legacy/)
+:::
+
+
 
 ### Features
 
