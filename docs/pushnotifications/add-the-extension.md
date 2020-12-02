@@ -48,11 +48,11 @@ These libraries are specific to Android. There are no issues including these on 
 This extension requires the following extensions:
 
 - [`androidx.core`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
-- [`androidx.appcompat`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [`androidx.appcompat`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.appcompat.ane)
 - [`androidx.browser`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
-- [`androidx.cardview`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
-- [`androidx.constraintlayout`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
-- [`androidx.vectordrawable`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
+- [`androidx.cardview`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.cardview.ane)
+- [`androidx.constraintlayout`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.constraintlayout.ane)
+- [`androidx.vectordrawable`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.vectordrawable.ane)
 - [`com.google.android.datatransport`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.android.datatransport.ane)
 - [`com.google.dagger`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.dagger.ane)
 - [`com.google.protobuflite`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.protobuflite.ane)

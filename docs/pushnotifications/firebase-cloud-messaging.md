@@ -227,7 +227,7 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
 		<provider
 			android:name="com.google.firebase.provider.FirebaseInitProvider"
-			android:authorities="com.distriqt.extension.firebase.test.firebaseinitprovider"
+			android:authorities="APPLICATION_PACKAGE.firebaseinitprovider"
 			android:exported="false"
 			android:initOrder="100" />
 

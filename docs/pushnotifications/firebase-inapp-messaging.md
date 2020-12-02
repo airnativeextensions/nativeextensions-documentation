@@ -270,7 +270,7 @@ The following shows the complete manifest additions node.
 
 		<provider
 			android:name="com.google.firebase.provider.FirebaseInitProvider"
-			android:authorities="com.distriqt.extension.firebase.test.firebaseinitprovider"
+			android:authorities="APPLICATION_PACKAGE.firebaseinitprovider"
 			android:exported="false"
 			android:initOrder="100" />
 

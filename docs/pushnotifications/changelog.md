@@ -1,5 +1,12 @@
 
 
+###### 2020.12.02 [v10.0.013]
+
+```
+Corrected documentation links and FirebaseInitProvider authority (resolves #470)
+```
+
+
 ###### 2020.09.01 [v10.0.012]
 
 ```
