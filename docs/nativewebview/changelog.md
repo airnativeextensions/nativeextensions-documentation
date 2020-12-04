@@ -1,5 +1,15 @@
 
 
+###### 2020.12.04 [v5.2.362]
+
+```
+Fixed browser view failing on devices with Chrome not set as default browser (resolves #232)
+Applied global user agent as default for all web views
+Windows: Implemented cache policy (resolves #231)
+Deprecated wiki
+```
+
+
 ###### 2020.11.16 [v5.1.341]
 
 ```
