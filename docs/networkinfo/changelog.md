@@ -1,5 +1,13 @@
 
 
+###### 2020.12.10 [v4.1.010]
+
+```
+Android x64 support (resolves #34)
+Deprecated wiki
+```
+
+
 ###### 2020.03.20 [v4.0.006]
 
 ```
