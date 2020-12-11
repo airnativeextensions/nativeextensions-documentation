@@ -207,21 +207,23 @@ module.exports = {
     },
     { 
       "Device Information": [
-        "application/unique-device-id",
-        "application/device-information",
-        "application/device-information---device-state",
-        "application/device-information---display-metrics",
-        "application/device-information---operating-system",
-        "application/device-information---orientation-events",
-        "application/device-information---phone-number",
-        "application/device-information---year-class",
-        "application/accessibility",
+        "application/device-information/device",
+        "application/device-information/unique-device-id",
+        "application/device-information/device-state",
+        "application/device-information/operating-system",
+        "application/device-information/orientation-events",
+        "application/device-information/phone-number",
+        "application/device-information/year-class",
+        "application/device-information/accessibility",
       ]
     },
     { 
       "Display and Keyboard": [
-        "application/display",
-        "application/soft-keyboard",
+        "application/display/display",
+        "application/display/cutouts",
+        "application/display/dark-mode",
+        "application/display/display-metrics",
+        "application/display/soft-keyboard",
       ]
     },
     { 
@@ -256,7 +258,6 @@ module.exports = {
       ]
     },
   ],
-
 
 
   applicationrater: [
