@@ -10,8 +10,8 @@ First step is always to add the extension to your development environment. To do
 
 The dependencies and manifest additions are specific to the platform you are utilising so we have separated the guides here based on the platforms:
 
-- [AdMob](platforms/admob)
-- [Huawei](platforms/huawei)
+- [AdMob](platform/admob)
+- [Huawei](platform/huawei)
 
 
 
