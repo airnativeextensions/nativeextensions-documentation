@@ -116,11 +116,6 @@ This can be useful if you are attempting to check the accuracy of the time on th
 [Device State](device-state)
 
 
-### Display Metrics
-
-[Display Metrics](display-metrics)
-
-
 ### Device Orientation
 
 [Device Orientation](orientation-events)
