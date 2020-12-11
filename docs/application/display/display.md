@@ -104,7 +104,7 @@ Application.service.display.setDisplayMode(
 
 
 
-In order to render your content around the cutout see the documentation on getting information about the [Cutouts](display---cutouts).
+In order to render your content around the cutout see the documentation on getting information about the [Cutouts](cutouts).
 
 
 Examples: 
