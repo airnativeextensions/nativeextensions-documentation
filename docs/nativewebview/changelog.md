@@ -1,5 +1,13 @@
 
 
+###### 2020.12.11 [v5.2.378]
+
+```
+Windows: Corrected broken default CachePolicy implementation (resolves #233)
+Windows: Changed storage location of debug.log output (resolves #234)
+```
+
+
 ###### 2020.12.04 [v5.2.362]
 
 ```
