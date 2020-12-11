@@ -1,9 +1,7 @@
 ---
-title: Settings
+title: Settings and Preferences
 sidebar_label: Settings
 ---
-
-## Settings and Preferences
 
 In this section we will cover the native integration of settings or preferences in your application.
 This involves integrating with the OS method of displaying settings to your users.

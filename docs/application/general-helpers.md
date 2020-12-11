@@ -15,9 +15,9 @@ for example, when another activity was launched and returned for your applicatio
 
 This is quite common on Android 4.x when using Starling / Stage 3D 
 
-- http://forum.starling-framework.org/topic/starling-turns-into-black-screen
-- http://forum.starling-framework.org/topic/maybe-context-loss
-- http://forum.starling-framework.org/topic/resuming-using-eventactivate
+- https://forum.starling-framework.org/topic/starling-turns-into-black-screen
+- https://forum.starling-framework.org/topic/maybe-context-loss
+- https://forum.starling-framework.org/topic/resuming-using-eventactivate
 
 These appear to be related to context loss however often they are not and for 
 some reason the rendering of the 3D content just hasn't correctly resumed.
@@ -25,7 +25,7 @@ some reason the rendering of the 3D content just hasn't correctly resumed.
 There are many hacks and solutions around, eg using a native extension to 
 start and finish another activity:
 
-- http://forum.starling-framework.org/topic/ane-fix-for-blackblank-screen-bug-when-returning-to-air-android-apps
+- https://forum.starling-framework.org/topic/ane-fix-for-blackblank-screen-bug-when-returning-to-air-android-apps
 
 however we found these to be a bit hacky.
 

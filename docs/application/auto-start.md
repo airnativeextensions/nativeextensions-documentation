@@ -3,7 +3,7 @@ title: Auto Start
 sidebar_label: Auto Start
 ---
 
-This is an Android only feature.
+**This is an Android only feature.**
 
 
 ## Auto Start

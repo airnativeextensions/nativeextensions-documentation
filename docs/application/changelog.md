@@ -1,5 +1,13 @@
 
 
+###### 2020.12.11 [v6.5.049]
+
+```
+Android: Added ability to show keyboard manually (resolves #206)
+Android: Added ability to retrieve the automatic time and time zone (resolves #207)
+```
+
+
 ###### 2020.09.11 [v6.4.021]
 
 ```
