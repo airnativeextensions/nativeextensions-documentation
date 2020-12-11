@@ -4,12 +4,14 @@ sidebar_label: Consent
 ---
 
 >
-> **The Consent SDK has been deprecated. You should migrate to the new [User Messaging Platform](user-messaging-platform) to ensure you have access to the latest consent gathering tools**
+> **Google are advising customers migrate to the new [User Messaging Platform](user-messaging-platform) to ensure you have access to the latest consent gathering tools. You should assess whether this new platform is applicable for your situation.**
+>
+> Huawei still utilises this consent SDK.
 >
 
 
 >
-> **Important** There are additional resources required to be packaged with your application in order to use this part of the SDK. 
+> **Important** There are additional resources required to be packaged with your application in order to use this part of the AdMob SDK. 
 > This is described in the [Consent Form Resources](consent#consent-form-resources) section below.
 >
 
@@ -85,6 +87,9 @@ private function statusErrorHandler( event:ConsentEvent ):void
 
 Asking for consent will involve presentation of the consent form. 
 
+
+### AdMob
+
 >
 > The Google-rendered consent form is a full-screen configurable form that displays over your app content. You can configure the form to present the user with combinations of the following options:
 > 
@@ -108,8 +113,69 @@ var options:ConsentOptions = new ConsentOptions( "https://www.your.com/privacyur
 					.withNonPersonalizedAdsOption()
 					.withAdFreeOption();
 
-Adverts.service.consent.askForConsent( options );;
+Adverts.service.consent.askForConsent( options );
 ```
+
+#### AdMob Consent Form Resources
+
+You need to package some additional assets with your application for the consent form. This is the html content for the consent form. 
+It is packaged in a slightly different form for Android and iOS so we will address each separately.
+
+#### AdMob Consent Form Resources - Android
+
+On Android you will need to place the `consentform.html` file in the root of your application package and ensure it is packaged with your application.
+
+If you wish to customise the form, such as changing the textural content, you should update this html file.
+
+
+#### AdMob Consent Form Resources - iOS
+
+On iOS you will need to place the `PersonalizedAdConsent.bundle` in the root of your application package and ensure it is packaged with your application.
+
+If you wish to customise the form, such as changing the textural content, you should update the `consentform.html` file contained within the bundle.
+
+
+
+
+
+### Huawei Ads Kit
+
+Huawei does not provide a form, instead we present a series of dialogs to request consent for your user.
+
+
+![](images/android_consent_dialog_huawei.png)
+
+
+
+You can control the content using the `ConsentOptions.setDialogContent()` functionality and passing an `ConsentDialogContent` instance:
+
+```actionscript
+var options:ConsentOptions = new ConsentOptions( "https://airnativeextensions.com/privacy" )			
+          .setDialogContent(
+            new ConsentDialogContent()
+                .setContentText( "The Ads in this application are provided in collaboration with our advertising partners. To provide this service, we need to share certain information about you with these partners, including your location as well as your usage records for the news service.\n\n" +
+                            "For more information about our partners and how your data is processed, please touch %MORE_INFO%.\n\n" +
+                            "By touching AGREE, you indicate that you agree to share the above personal information with our partners so that they can provide you with personalized advertisements on behalf of their customers, based on interests and preferences identified or predicted through analysis of your personal information.\n\n" +
+                            "You can withdraw your consent at any time by going to settings.\n\n" +
+                            "If you touch SKIP, your data will not be shared with our partners and you will not receive personalized ads.")
+                .setTitle( "Test Title" )
+                .setMoreInfoText( "The Ads in HUAWEI X is provided in collaboration with our partners. You can find a full list of our partners for each country/region %MORE_INFO%.\n\n" +
+                              "    In order to provide you with personalized advertisements, we need to share the following information with our partners:\n\n" +
+                              "    •\tUser information, including advertising ID, city of residence, country, and language.\n\n" +
+                              "    •\tDevice information, including device name and model, operating system version, screen size, and network type.\n\n" +
+                              "    •\tService usage information, including news ID and records of views, clicks, dislikes, shares, and comments for news content and advertisements.\n\n" +
+                              "    With your consent, the above information will be shared with our partners so that they can provide you with personalized advertisements on behalf of their customers, based on interests and preferences identified or predicted through analysis of your personal information.\n\n" +
+                              "    You can withdraw your consent at any time by going to app settings.\n\n" +
+                              "    Without your consent, no data will be shared with our partners and you will not receive personalized ads." )
+                .setMediationPartnersText("You can find a full list of our partners for each country/region \n\n" )
+        );
+
+Adverts.service.consent.askForConsent( options );
+```
+
+
+
+### Consent Form Events
 
 Once you have called `askForConsent` you will receive one of two events:
 
@@ -148,27 +214,12 @@ function formErrorHandler( event:ConsentEvent ):void
 > The Google-rendered consent form is not supported if any of your publisher IDs use the commonly used set of ad technology providers. Attempting to load the Google-rendered consent form will always fail in this case.
 >
 
+>
+> Huawei Ads Kit return values are slightly different, `userPrefersAdFree` will always be `false` and `inEeaOrUnknown` will be `true` if the user needs to consent and `false` otherwise. The consent status will have equivalent values though.
+>  
+
 
 **Remember to provide users with the option to change or revoke consent.**
-
-
-### Consent Form Resources
-
-You need to package some additional assets with your application for the consent form. This is the html content for the consent form. 
-It is packaged in a slightly different form for Android and iOS so we will address each separately.
-
-#### Consent Form Resources - Android
-
-On Android you will need to place the `consentform.html` file in the root of your application package and ensure it is packaged with your application.
-
-If you wish to customise the form, such as changing the textural content, you should update this html file.
-
-
-#### Consent Form Resources - iOS
-
-On iOS you will need to place the `PersonalizedAdConsent.bundle` in the root of your application package and ensure it is packaged with your application.
-
-If you wish to customise the form, such as changing the textural content, you should update the `consentform.html` file contained within the bundle.
 
 
 

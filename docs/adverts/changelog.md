@@ -1,5 +1,14 @@
 
 
+###### 2020.12.11 [v11.0.001]
+
+```
+Huawei Ads Kit addition (resolves #220)
+Fix iOS AdMob issue with platformVersion (resolves #225)
+Added documentation on multidex (#223)
+```
+
+
 ###### 2020.11.25 [v10.1.037]
 
 ```

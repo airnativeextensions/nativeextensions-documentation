@@ -71,12 +71,12 @@ var params:ConsentRequestParameters = new ConsentRequestParameters();
 
 consentInformation.requestConsentInfoUpdate( params );
 
-function consentInformation_updateSuccessHandler( event:ConsentInformationEvent ):void
+function updateSuccessHandler( event:ConsentInformationEvent ):void
 {
     // consent information has been updated
 }
 
-function consentInformation_updateFailureHandler( event:ConsentInformationEvent ):void
+function updateFailureHandler( event:ConsentInformationEvent ):void
 {
     trace( "ERROR: [" + event.error.errorID + "] " + event.error.message );
 }

@@ -75,8 +75,13 @@ function initialisedHandler( event:AdvertsEvent ):void
 You can also check whether a platform is supported before initialising it to dynamically swap platforms, 
 by using the `isPlatformSupported` function.
 
+
 ```actionscript
-if (Adverts.service.isPlatformSupported( AdvertPlatform.PLATFORM_ADMOB ))
+if (Adverts.service.isPlatformSupported( AdvertPlatform.PLATFORM_HUAWEI_ADS ))
+{
+	Adverts.service.setup( AdvertPlatform.PLATFORM_HUAWEI_ADS );
+}
+else if (Adverts.service.isPlatformSupported( AdvertPlatform.PLATFORM_ADMOB ))
 {
 	Adverts.service.setup( AdvertPlatform.PLATFORM_ADMOB );
 }
