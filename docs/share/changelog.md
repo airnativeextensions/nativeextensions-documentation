@@ -1,5 +1,15 @@
 
 
+###### 2020.12.15 [v6.0.062]
+
+```
+Added Android Intel x64 support
+Added SWC (resolves #185)
+Deprecated wiki
+Updated examples to latest AIR version
+```
+
+
 ###### 2020.05.07 [v6.0.056]
 
 ```
