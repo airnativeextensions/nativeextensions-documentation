@@ -3,6 +3,10 @@ title: Crashlytics - Add the extension
 sidebar_label: Add the extension
 ---
 
+## AIR SDK
+
+The latest release of the Crashlytics extension requires at least version 33.1.1.345 of the AIR SDK. Using anything less than this will mean you will not get crash reports delivered to the console on iOS! 
+
 
 ## Required Extensions
 

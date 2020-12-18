@@ -1,5 +1,14 @@
 
 
+###### 2020.12.18 [v5.2.046]
+
+```
+Crashlytics: iOS updated to v6.30.0 migration from Fabric to Firebase (requires AIR update to 33.1.1.345) (resolves #317)
+Crashlytics: Added checks for empty stack trace when reporting errors (resolves #337) 
+Analytics: Automatically convert deprecated setCurrentScreen function to event (#325)
+```
+
+
 ###### 2020.10.20 [v5.1.044]
 
 ```
