@@ -1948,8 +1948,18 @@ module.exports = {
     { 
       "Notification services": [
         "pushnotifications/apple-push-notification-service",
-        "pushnotifications/firebase-cloud-messaging",
-        "pushnotifications/onesignal",
+        { 
+          "Firebase Messaging" :[
+            "pushnotifications/firebase-cloud-messaging",
+            "pushnotifications/firebase-inapp-messaging"
+          ]
+        },
+        { 
+          "One Signal" :[
+            "pushnotifications/onesignal",
+            "pushnotifications/onesignal---migrating-to-v7.5"
+          ]
+        },
         "pushnotifications/windows-notification-service",
         "pushnotifications/azure-notifications",
         "pushnotifications/pushy",
