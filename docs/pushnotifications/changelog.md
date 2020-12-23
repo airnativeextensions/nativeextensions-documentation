@@ -1,5 +1,12 @@
 
 
+###### 2020.12.23 [v10.0.016]
+
+```
+OneSignal: Added handling of group notifications (resolves #474)
+```
+
+
 ###### 2020.12.02 [v10.0.013]
 
 ```
