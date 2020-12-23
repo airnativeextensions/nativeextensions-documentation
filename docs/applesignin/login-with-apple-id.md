@@ -89,6 +89,7 @@ function successHandler( event:AppleSignInEvent ):void
     trace( "user: " + event.appleIdCredential.user );
     trace( "identityToken: " + event.appleIdCredential.identityToken );
     trace( "authorizationCode: " + event.appleIdCredential.authorizationCode );
+    trace( "raw Nonce: " + event.rawNonce );
 }
 
 function errorHandler( event:AppleSignInErrorEvent ):void
@@ -96,6 +97,9 @@ function errorHandler( event:AppleSignInErrorEvent ):void
     trace( "errorHandler(): [" + event.errorID + "] :: " + event.text  );
 }
 ```
+
+You can access the "nonce" used to initiate this authorisation request in the success handler via the `event.rawNonce` property. This can be used to further authenticate with services such as Firebase. 
+
 
 
 ## User Revoke

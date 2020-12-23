@@ -1,5 +1,12 @@
 
 
+###### 2020.12.23 [v2.2.087]
+
+```
+Added Android raw nonce implementation (resolves #21)
+```
+
+
 ###### 2020.06.18 [v2.1.082]
 
 ```
