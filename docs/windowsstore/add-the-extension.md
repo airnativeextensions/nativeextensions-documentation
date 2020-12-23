@@ -36,6 +36,14 @@ The following should be added to your `extensions` node in your application desc
 
 ## Windows
 
+
+### .Net Framework
+
+This extension requires v4.6 or higher of the .Net framework. This should come preinstalled on any Windows 10 or higher machine so if you are targetting those you should not have to do anything. If however you are targetting older versions of Windows you must ensure .Net v4.6 or higher is installed either manually or as part of an installer.
+ 
+
+### C++ Redistributable
+
 The native code has a dependency on the Visual C++ 2017 Redistributable package. This package contains code that is required to run code developed using C++ in Visual Studio and is very common amongst Windows applications.
 
 There are two ways to ensure this is available to your application:
