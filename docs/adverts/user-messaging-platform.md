@@ -168,6 +168,17 @@ function loadFormSuccessHandler( event:UserMessagingPlatformEvent ):void
 You can also use the form to give your user the option to change their consent status. You may wish to do this in a settings screen, and call the `showConsentForm()` to present the form so the user can change their consent as required.
 
 
+The `showConsentForm()` process will dispatch the `ConsentInformationEvent.CONSENT_FORM_DISMISSED` event when the consent form was dismissed.
+
+```actionscript
+Adverts.service.ump.addEventListener( UserMessagingPlatformEvent.CONSENT_FORM_DISMISSED, formDismissedHandler );
+Adverts.service.ump.showConsentForm();
+
+function formDismissedHandler( event:UserMessagingPlatformEvent ):void 
+{
+    // Handle form dismissal
+}
+```
 
 
 
