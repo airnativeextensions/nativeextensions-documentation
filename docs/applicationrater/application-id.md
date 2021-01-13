@@ -4,12 +4,10 @@ sidebar_label: Application ID
 ---
 
 
-## Application IDs
-
 The application ID is the most important thing to set in the extension, an invalid value will take you to the wrong application, or fail altogether. This ID is unfortunately different on the different operating systems, it is generally related to an identifier in the particular stores. 
 
 
-### Android
+## Android
 
 Under Android the value is the application identifier defined in your application descriptor, preceeded by `air.`. So, for example the distriqt 
 test application `com.distriqt.test` has a Google Play id of `air.com.distriqt.test`. 
@@ -27,7 +25,7 @@ the Google Play console to setup your application in the Play Store.
 Additionally note if you are using the `NO_ANDROID_FLAIR` flag you will not have the `air.` prefix mentioned above.
 
 
-### iOS
+## iOS
 
 Under iOS the value is a little more complicated. It's the value of the Apple ID in your iTunes Connect application page. For example, the distriqt test application `com.distriqt.test`
 has an Apple ID of `552872162`. 
@@ -36,7 +34,7 @@ It can also be found in the iTunes App Store link URL which will be of the form
 `https://itunes.apple.com/us/app/[APP_NAME]/id[APP_ID]`
 
 
-### Default
+## Default
 
 The default value uses the value from the NativeApplication applicationId variable, preceeded by `air.` which should be the valid id for your Android application in the Google Play store.
 

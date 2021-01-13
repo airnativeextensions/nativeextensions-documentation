@@ -1,7 +1,7 @@
 ---
 title: ApplicationRater
 hide_title: true
-slug: /applicationrater
+slug: /applicationrater/
 ---
 
 

@@ -1,5 +1,13 @@
 
 
+###### 2021.01.13 [v5.4.012]
+
+```
+Added Huawei App Gallery support (resolves #49)
+Deprecated wiki
+```
+
+
 ###### 2020.09.16 [v5.3.008]
 
 ```
