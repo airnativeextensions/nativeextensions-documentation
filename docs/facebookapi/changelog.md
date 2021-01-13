@@ -1,5 +1,18 @@
 
 
+###### 2021.01.13 [v8.1.021]
+
+```
+Gaming Services SDK Added 
+ - Game Request Dialog
+ - Friend Finder Dialog
+
+Updated SDK 
+ - iOS v8.2.0 (resolves #285)
+ - Android v8.2.0
+```
+
+
 ###### 2020.11.27 [v8.0.013]
 
 ```

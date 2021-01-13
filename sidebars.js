@@ -826,6 +826,14 @@ module.exports = {
       ]
     },
     {
+      "Gaming Services" : [
+        "facebookapi/gamingservices/overview",
+        "facebookapi/gamingservices/add-the-extension",
+        "facebookapi/gamingservices/game-request-dialog",
+        "facebookapi/gamingservices/friend-finder-dialog",
+      ]
+    },
+    {
       "Help": [
         "facebookapi/signing",
         "facebookapi/migrating-to-version-8",

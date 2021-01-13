@@ -28,6 +28,7 @@ The Facebook SDK consists of several components:
 - [Facebook Core](core/overview) SDK (includes Analytics)
 - [Facebook Login](login/overview) SDK
 - [Facebook Sharing](share/overview) SDK
+- [Facebook Gaming Services](gamingservices/overview) SDK
 - Facebook Places SDK
 - Facebook Marketing SDK
 
