@@ -48,7 +48,8 @@ Benefits of upgrading to FCM SDK include:
 
 ## AIR Integration
 
-Our highly tested Push Notifications ANE has been updated to include Firebase Cloud Messaging.
+Our highly tested Push Notifications ANE includes Firebase Cloud Messaging and Firebase In-App Messaging.
+
 We chose to integrate it into our existing ANE to allow you to easily switch between push notification services, including APNS, GCM, FCM and OneSignal.
 
 This means that you can easily integrate FCM in your application using that extension in combination with the core Firebase ANE. 
@@ -57,5 +58,5 @@ The core and config Firebase ANEs are required to include the neccessary SDK and
 Follow the guide in the Push Notifications ANE wiki to get started with Firebase Cloud Messaging:
 
 - Get the [Push Notifications ANE](https://airnativeextensions.com/extension/com.distriqt.PushNotifications)
-- Follow the FCM setup guide in the [Push Notifications Wiki](https://github.com/distriqt/ANE-PushNotifications/wiki) 
+- Follow the FCM setup guide in the [Push Notifications documentation](https://docs.airnativeextensions.com/docs/pushnotifications/firebase-cloud-messaging/) 
 
