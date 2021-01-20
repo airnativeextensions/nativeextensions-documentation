@@ -64,6 +64,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.Core</extensionID>
 
     <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.distriqt.playservices.CloudMessaging</extensionID>
 
     <extensionID>com.google.firebase.core</extensionID>
     <extensionID>com.google.android.datatransport</extensionID>
@@ -243,6 +244,10 @@ The following shows the complete manifest additions node.
 				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
 				android:value="com.google.firebase.components.ComponentRegistrar" />
 
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+
 			<!-- Firebase Cloud Messaging -->
 			<meta-data
 				android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
@@ -316,6 +321,9 @@ Firebase Messaging depends on Analytics so you must at least include the followi
 	android:value="com.google.firebase.components.ComponentRegistrar" />
 <meta-data
 	android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+	android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data
+	android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
 	android:value="com.google.firebase.components.ComponentRegistrar" />
 ```
 

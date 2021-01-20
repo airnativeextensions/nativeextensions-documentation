@@ -1,5 +1,20 @@
 
 
+###### 2021.01.20 [v10.1.025]
+
+```
+Firebase SDK update:
+ - iOS v7.4.0
+ - Android v21.0.1
+
+Firebase In-App Messaging update:
+ - iOS v7.4.0
+ - Android v19.1.3
+
+Added in-app messaging dismissed event (resolves #475)
+```
+
+
 ###### 2020.12.23 [v10.0.016]
 
 ```

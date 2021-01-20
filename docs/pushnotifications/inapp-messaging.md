@@ -70,17 +70,18 @@ function inappmessaging_selectedHandler( event:InAppMessagingEvent ):void
 
 Some services will allow you to trigger events programmatically when certain events occur in your application.
 
-You trigger these events in your application by calling the `triggerEvent()` method and passing the appropriate event name for your service defined trigger.
+You trigger these events in your application by calling the `addTrigger()` method and passing the appropriate event name for your service defined trigger and a `value` string (if applicable).
 
 ```actionscript
-PushNotifications.service.inAppMessaging.triggerEvent( "exampleTrigger" );
+PushNotifications.service.inAppMessaging
+    .addTrigger( "exampleTrigger", "optional value" );
 ```
 
 >
 > Note: Services that don't support this process with return `false` 
 >
 > ```actionscript
-> var success:Boolean = PushNotifications.service.inAppMessaging.triggerEvent( "exampleTrigger" );
+> var success:Boolean = PushNotifications.service.inAppMessaging.addTrigger( "exampleTrigger" );
 > if (!success)
 > { 
 >    // manual event triggering not supported

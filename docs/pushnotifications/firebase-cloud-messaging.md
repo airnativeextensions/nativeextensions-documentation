@@ -35,6 +35,7 @@ will avoid conflicts, allowing you to use multiple ANEs in the one application.
 This ANE requires the following Google Play Services:
 
 - [`com.distriqt.playservices.Base`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.distriqt.playservices.CloudMessaging`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.CloudMessaging.ane)
 
 You must include the above native extensions in your application along with this extension, 
 and you need to ensure they are packaged with your application.
@@ -80,7 +81,9 @@ The following should be added to your `extensions` node in your application desc
 <extensions>
 	<extensionID>com.distriqt.PushNotifications</extensionID>
 	<extensionID>com.distriqt.Core</extensionID>
+
 	<extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.distriqt.playservices.CloudMessaging</extensionID>
 
 	<extensionID>com.google.firebase.core</extensionID>
 	<extensionID>com.google.android.datatransport</extensionID>
@@ -212,6 +215,10 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
 				android:value="com.google.firebase.components.ComponentRegistrar" />
 
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+
 			<!-- Firebase Cloud Messaging -->
 			<meta-data
 				android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
@@ -222,7 +229,7 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 			<meta-data
 				android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
 				android:value="com.google.firebase.components.ComponentRegistrar" />
-
+			
 		</service>
 
 		<provider
@@ -273,6 +280,9 @@ Firebase Messaging depends on Analytics so you must at least include the followi
 	android:value="com.google.firebase.components.ComponentRegistrar" />
 <meta-data
 	android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+	android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data
+	android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
 	android:value="com.google.firebase.components.ComponentRegistrar" />
 ```
 
