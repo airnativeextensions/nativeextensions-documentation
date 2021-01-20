@@ -1,7 +1,7 @@
 ---
 title: GoogleIdentity
 hide_title: true
-slug: /googleidentity
+slug: /googleidentity/
 ---
 
 ![](images/hero.png)

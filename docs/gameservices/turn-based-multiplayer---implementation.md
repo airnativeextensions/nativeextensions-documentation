@@ -3,12 +3,6 @@ title: Turn Based Multiplayer - Implementation
 sidebar_label: Turn Based Multiplayer - Implementation
 ---
 
-# Adding Turn-based Multiplayer Support
-
-Before you start to code your turn-based multiplayer game:
-
-- Make sure to enable turn-based multiplayer support for your game in the Google Play Developer Console.
-
 Sections:
 
 - [Creating a Match](#creating-a-match)
@@ -18,10 +12,6 @@ Sections:
 - [Match Updates](#match-updates)
 - [Leaving a Match](#leaving-a-match)
 - [Completing a Match](#completing-a-match)
-
-
-
-
 
 
 
@@ -70,13 +60,13 @@ You can handle the cancel and errors as your application requires. The success e
 information about the selected players and allow you to create a match:
 
 ```actionscript
-private function createMatchUISuccessHandler( event:TurnBasedMultiplayerEvent ):void
+function createMatchUISuccessHandler( event:TurnBasedMultiplayerEvent ):void
 {
 	//
 	//	This event is fired when the create match ui is completed and we need
 	//	to manually call create match.
 	//
-	//	This is not needed on GameCenter as you will immediately get a CREATE MATCH 
+	//	This is not needed on GameCenter as you will immediately get a CREATE_SUCCESS  
 	//	event.
 	
 	var config:TurnBasedMatchConfig = event.data;
@@ -93,7 +83,7 @@ Then when the match is created you will receive the `TurnBasedMatchEvent.CREATE_
 which will contain the `TurnBasedMatch` reference for the match: 
 
 ```actionscript
-private function matchCreateHandler( event:TurnBasedMatchEvent ):void 
+function matchCreateHandler( event:TurnBasedMatchEvent ):void 
 {
 	//	You should store the match for usage in your game
 	// 	This forms the main interface for turn based matches.
@@ -101,7 +91,7 @@ private function matchCreateHandler( event:TurnBasedMatchEvent ):void
 }
 ```
 
-At this point it's good practice to initialise the `match` with some initial game data.
+At this point it is good practice to initialise the `match` with some initial game data.
 The `match` object contains a `data` ByteArray that you use to store information about
 the game state. 
 
@@ -158,7 +148,7 @@ On success the matches are available through the event payload. You can immediat
 using these match objects, listening for updates or taking turns as required.
 
 ```actionscript
-private function loadMatchesSuccessHandler( event:TurnBasedMultiplayerEvent ):void 
+function loadMatchesSuccessHandler( event:TurnBasedMultiplayerEvent ):void 
 {
 	for each (var match:TurnBasedMatch in event.data)
 	{
@@ -275,7 +265,7 @@ When you receive this event you should update your application with the match in
 The updated `match` will contain the latest match status and data.
 
 ```actionscript
-private function matchUpdatedHandler( event:TurnBasedMatchEvent ):void 
+function matchUpdatedHandler( event:TurnBasedMatchEvent ):void 
 {
 	updateMatch( event.match );
 }
@@ -284,7 +274,7 @@ private function matchUpdatedHandler( event:TurnBasedMatchEvent ):void
 For example:
 
 ```actionscript
-private function updateMatch( match:TurnBasedMatch ):void
+function updateMatch( match:TurnBasedMatch ):void
 {
 	// Clear out the old match reference if you are holding onto one
 	if (_match)
@@ -373,7 +363,7 @@ The call to `finishMatch` will dispatch one of the following events:
 ```actionscript
 match.addEventListener( TurnBasedMatchEvent.FINISH_SUCCESS, finishSuccessHandler );
 
-private function finishSuccessHandler( event:TurnBasedMatchEvent ):void 
+function finishSuccessHandler( event:TurnBasedMatchEvent ):void 
 {
 	// Match will now be complete
 }

@@ -4,6 +4,17 @@ sidebar_label: Turn Based Multiplayer - Key Concepts
 ---
 
 
+:::caution Ending support for multiplayer APIs in Play Games Services 
+Starting on March 31, 2020, Google have ended support for real-time and turn-based multiplayer APIs. 
+
+These features are no longer supported and you won't be able to add these features to new applications and existing applications will cease to operate.
+
+We are currently suggesting developers investigate using Firebase Realtime Database as an alternative. 
+
+More information [here](https://support.google.com/googleplay/android-developer/answer/9469745)
+:::
+
+
 In a turn-based multiplayer game, a single shared state is passed between multiple players, 
 and only one player has permission to modify the shared state at a time. Players take turns 
 asynchronously according to an order of play determined by the game. Your game can use the 

@@ -1,5 +1,14 @@
 
 
+###### 2021.01.20 [v7.0.005]
+
+```
+Updated Google Play Games to v21.0.0
+ - Deprecated Google related multiplayer functionality  
+
+```
+
+
 ###### 2020.09.01 [v6.3.001]
 
 ```
