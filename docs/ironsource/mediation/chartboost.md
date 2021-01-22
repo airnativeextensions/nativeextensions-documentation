@@ -1,6 +1,6 @@
 ---
 title: Mediation - Chartboost
-sidebar_label: Mediation - Chartboost
+sidebar_label: Chartboost
 ---
 
 This guide shows how to add mediation through Chartboost to your IronSource integration.
@@ -96,8 +96,25 @@ Add the following to your manifest additions inside the `application` tag.
 
 ### iOS 
 
-Nothing additional required
 
+Add the following to your `InfoAdditions` node:
+
+```xml
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+    <dict>
+        <!-- Chartboost -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>F38H382JLK.skadnetwork</string>
+    </dict>
+</array>
+```
 
 
 

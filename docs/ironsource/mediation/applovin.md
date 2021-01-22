@@ -1,6 +1,6 @@
 ---
 title: Mediation - AppLovin
-sidebar_label: Mediation - AppLovin
+sidebar_label: AppLovin
 ---
 
 This guide shows how to add mediation through AppLovin to your IronSource integration.
@@ -80,26 +80,59 @@ Add the following to your manifest additions inside the `application` tag.
     android:name="com.applovin.adview.AppLovinInterstitialActivity"
     android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
     android:hardwareAccelerated="true"
-    android:screenOrientation="behind"/>
-
+    android:screenOrientation="behind" />
 <activity
     android:name="com.applovin.adview.AppLovinFullscreenActivity"
     android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
     android:exported="false"
     android:hardwareAccelerated="true"
     android:launchMode="singleTop"
-    android:screenOrientation="behind"/>
-
+    android:screenOrientation="behind" />
 <activity
     android:name="com.applovin.sdk.AppLovinWebViewActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize|uiMode"/>
+    android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+
+<service
+    android:name="com.applovin.impl.sdk.utils.AppKilledService"
+    android:exported="false"
+    android:stopWithTask="false" />
+<service
+    android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+    android:exported="false"
+    android:stopWithTask="false" />
 ```
 
 
 ### iOS 
 
-Nothing additional required
+Add the following to your `InfoAdditions` node:
 
-
-
+```xml
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+    <dict>
+        <!-- AppLovin -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>ludvb6z3bs.skadnetwork</string>
+    </dict>
+</array>
+```
 

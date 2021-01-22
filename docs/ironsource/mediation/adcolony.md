@@ -1,6 +1,6 @@
 ---
 title: Mediation - AdColony
-sidebar_label: Mediation - AdColony
+sidebar_label: AdColony
 ---
 
 This guide shows how to add mediation through AdColony to your IronSource integration.
@@ -104,6 +104,21 @@ Add the following to your `InfoAdditions` node updating the usage description st
 <string>Taking selfies</string>
 <key>NSMotionUsageDescription </key>
 <string>Interactive ad controls</string>
+
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+    <dict>
+        <!-- AdColony -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>4PFYVQ9L8R.skadnetwork</string>
+    </dict>
+</array>
 ```
 
 

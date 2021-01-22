@@ -1,6 +1,6 @@
 ---
 title: Mediation - Amazon
-sidebar_label: Mediation - Amazon
+sidebar_label: Amazon
 ---
 
 This guide shows how to add mediation through Amazon to your IronSource integration.

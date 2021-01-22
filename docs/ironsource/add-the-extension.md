@@ -95,7 +95,7 @@ The following should be added to your `extensions` node in your application desc
 The IronSource ANE requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your manifest additions.
 
 ```xml
-<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28" />
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
 
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -118,6 +118,9 @@ The IronSource ANE requires a few additions to the manifest to be able to start 
         android:configChanges="orientation|screenSize"
         android:hardwareAccelerated="true"
         android:theme="@android:style/Theme.Translucent" />
+	<provider
+		android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+		android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider" />
 
 </application>
 ```
@@ -152,6 +155,16 @@ node in your `iPhone` settings of your application descriptor:
 	<key>NSAllowsArbitraryLoadsInWebContent</key>
 	<true/>
 </dict>
+
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+</array>
 ```
 
 The `NSAllowsArbitraryLoads` exception is required to make sure your ads are not 

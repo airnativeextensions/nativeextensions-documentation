@@ -1,6 +1,6 @@
 ---
 title: Mediation - UnityAds
-sidebar_label: Mediation - UnityAds
+sidebar_label: UnityAds
 ---
 
 This guide shows how to add mediation through UnityAds to your IronSource integration.
@@ -110,6 +110,21 @@ Add the following to your `InfoAdditions` node updating the usage description st
        </dict>
    </dict>
 </dict>
+
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+    <dict>
+        <!-- UnityAds -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>4DZT52R2T5.skadnetwork</string>
+    </dict>
+</array>
 ```
 
 

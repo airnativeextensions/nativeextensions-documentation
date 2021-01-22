@@ -1,6 +1,6 @@
 ---
 title: Mediation - Tapjoy
-sidebar_label: Mediation - Tapjoy
+sidebar_label: Tapjoy
 ---
 
 This guide shows how to add mediation through Tapjoy to your IronSource integration.
@@ -111,7 +111,20 @@ Add the following to your `InfoAdditions` node updating the usage description st
        </dict>
    </dict>
 </dict>
+
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+    <dict>
+        <!-- Tapjoy -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>ECPZ2SRF59.skadnetwork</string>
+    </dict>
+</array>
 ```
-
-
 

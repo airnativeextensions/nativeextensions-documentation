@@ -1,6 +1,6 @@
 ---
 title: Mediation - Facebook Audience
-sidebar_label: Mediation - Facebook Audience
+sidebar_label: Facebook Audience
 ---
 
 This guide shows how to add mediation through Facebook Audience to your IronSource integration.
@@ -61,6 +61,10 @@ Add the `audience_network.dex` file to the root of your application package. (Th
 
 Add the following to your manifest additions inside the `application` tag. 
 
+You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`.
+Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+
+
 ```xml
 <!-- Facebook -->
 <activity
@@ -71,6 +75,10 @@ Add the following to your manifest additions inside the `application` tag.
         android:name="com.facebook.ads.AudienceNetworkActivity"
         android:hardwareAccelerated="true"
         android:configChanges="keyboardHidden|orientation|screenSize" />
+<provider
+    android:name="com.facebook.ads.AudienceNetworkContentProvider"
+    android:authorities="APPLICATION_PACKAGE.AudienceNetworkContentProvider"
+    android:exported="false" />
 ```
 
 
@@ -79,13 +87,35 @@ Add the following to your manifest additions inside the `application` tag.
 ### iOS
 
 
+Add the following to your `InfoAdditions` node:
+
+```xml
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+    <dict>
+        <!-- Facebook -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>v9wttpbfk9.skadnetwork</string>
+    </dict>
+    <dict>
+        <!-- Facebook -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>n38lu8286q.skadnetwork</string>
+    </dict>
+</array>
+```
+
+
+
 Add the `Frameworks` folder to your application package, ensuring the dynamic `FBAudienceNetwork.framework` is included along with any swift libraries (`dylib` files).
 
 **You will need to resign your application following the guide below otherwise your build will likely fail signing validation.**
-
-
-
-
 
 
 
