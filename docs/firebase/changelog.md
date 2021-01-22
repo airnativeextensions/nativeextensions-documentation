@@ -1,5 +1,14 @@
 
 
+###### 2021.01.22 [v6.0.002]
+
+```
+Auth: Corrected documentation on manifest changes (resolves #350)
+Firestore: Fixed crash on iOS when changing settings
+Analytics: Updated event and param definitions
+```
+
+
 ###### 2021.01.20 [v6.0.0]
 
 ```

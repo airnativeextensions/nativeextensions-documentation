@@ -66,7 +66,7 @@ var welcomeMessage:String = FirebaseRemoteConfig.service.getString( "welcome_mes
 To fetch parameter values from the Remote Config service, call the `fetchAndActivate()` method. Any values that you set in the Remote Config service are fetched and cached in the Remote Config object.
 
 ```actionscript
-FirebaseRemoteConfig.service.fetfetchAndActivatech();
+FirebaseRemoteConfig.service.fetchAndActivate();
 ```
 
 Once complete the extension will automatically activate the new values and dispatch a complete event.

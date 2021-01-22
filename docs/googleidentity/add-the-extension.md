@@ -49,6 +49,7 @@ These libraries are specific to Android. There are no issues including these on 
 This extension requires the following extensions:
 
 - [androidx.core.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [androidx.appcompat.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.appcompat.ane)
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 
@@ -109,6 +110,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.GoogleIdentity</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>androidx.core</extensionID>
+    <extensionID>androidx.appcompat</extensionID>
     <extensionID>com.distriqt.playservices.Base</extensionID>
     <extensionID>com.distriqt.playservices.Auth</extensionID>
     <extensionID>com.distriqt.playservices.Identity</extensionID>
@@ -122,33 +124,38 @@ The following should be added to your `extensions` node in your application desc
 
 ## Android: Manifest Additions
 
-Making requests and accessing the Google Identity functionality requires the some additional permissions, 
-so these must also be declared in the manifest. Additionally you will need to add the activities to the 
-manifest as in the section below:
+Making requests and accessing the Google Identity functionality requires the some additional permissions, so these must also be declared in the manifest. Additionally you will need to add the activities to the manifest as in the section below:
 
 ```xml
 <manifest android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="14" />
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29"/>
 
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	
 	<application>
 	
-		<meta-data 
-			android:name="com.google.android.gms.version"
-			android:value="@integer/google_play_services_version" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
-		<activity 
-			android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" 
-			android:windowSoftInputMode="stateAlwaysHidden|adjustPan" 
+		<activity
+			android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+			android:excludeFromRecents="true"
+			android:exported="false"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<service
+			android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+			android:exported="true"
+			android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+		<activity
+			android:name="com.google.android.gms.common.api.GoogleApiActivity"
+			android:exported="false"
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 				
 	</application>
 
 </manifest>
 ```
-
 
 ## iOS Info Additions
 

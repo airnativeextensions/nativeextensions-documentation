@@ -125,6 +125,9 @@ It should now appear like:
     <meta-data
         android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
         android:value="com.google.firebase.components.ComponentRegistrar" />
+    <meta-data
+        android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+        android:value="com.google.firebase.components.ComponentRegistrar" />
 
 </service>
 ```

@@ -64,7 +64,9 @@ Locate the `ComponentDiscoveryService` service you added as part of the core Fir
 It should now appear like:
 
 ```xml
-<service android:name="com.google.firebase.components.ComponentDiscoveryService" >
+<service android:name="com.google.firebase.components.ComponentDiscoveryService" 
+        android:directBootAware="true"
+        android:exported="false">
     <meta-data
         android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
         android:value="com.google.firebase.components.ComponentRegistrar" />
@@ -74,6 +76,9 @@ It should now appear like:
         android:value="com.google.firebase.components.ComponentRegistrar" />
     <meta-data
         android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+        android:value="com.google.firebase.components.ComponentRegistrar" />
+    <meta-data
+        android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
         android:value="com.google.firebase.components.ComponentRegistrar" />
 </service>
 ```

@@ -61,14 +61,50 @@ There are some small additions required to the manifest for Firebase Auth.
 Firstly add the following activity to the application node in the manifest additions:
 
 ```xml
-    <!-- FIREBASE AUTH -->
-    <activity
-        android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-        android:excludeFromRecents="true"
-        android:exported="true"
-        android:launchMode="singleInstance"
-        android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+<!-- FIREBASE AUTH -->
+<activity
+    android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+    android:excludeFromRecents="true"
+    android:exported="true"
+    android:launchMode="singleTask"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data
+            android:host="firebase.auth"
+            android:path="/"
+            android:scheme="genericidp" />
+    </intent-filter>
+</activity>
+<activity
+    android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+    android:excludeFromRecents="true"
+    android:exported="true"
+    android:launchMode="singleTask"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data
+            android:host="firebase.auth"
+            android:path="/"
+            android:scheme="recaptcha" />
+    </intent-filter>
+</activity>
+<service
+    android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+    android:enabled="true"
+    android:exported="false" >
+    <intent-filter>
+        <action android:name="com.google.firebase.auth.api.gms.service.START" />
+        <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
+</service>
 ```
 
 Then locate the `ComponentDiscoveryService` service you added as part of the core Firebase manfiest additions and add the following meta data tag:
@@ -82,7 +118,9 @@ Then locate the `ComponentDiscoveryService` service you added as part of the cor
 It should now appear like the following at a minimum (it may have other meta-data tags from other components):
 
 ```xml
-<service android:name="com.google.firebase.components.ComponentDiscoveryService" >
+<service android:name="com.google.firebase.components.ComponentDiscoveryService" 
+        android:directBootAware="true"
+        android:exported="false">
     <meta-data
         android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
         android:value="com.google.firebase.components.ComponentRegistrar" />
@@ -92,6 +130,9 @@ It should now appear like the following at a minimum (it may have other meta-dat
         android:value="com.google.firebase.components.ComponentRegistrar" />
     <meta-data
         android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+        android:value="com.google.firebase.components.ComponentRegistrar" />
+    <meta-data
+        android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
         android:value="com.google.firebase.components.ComponentRegistrar" />
 </service>
 ```

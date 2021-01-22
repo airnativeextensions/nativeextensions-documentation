@@ -200,6 +200,9 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
                 android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
@@ -234,6 +237,9 @@ Firebase Messaging depends on Analytics so you must at least include the followi
 <meta-data
 	android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
 	android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data
+    android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+    android:value="com.google.firebase.components.ComponentRegistrar" />
 ```
 
 
