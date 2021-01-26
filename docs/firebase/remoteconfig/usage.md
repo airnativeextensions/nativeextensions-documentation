@@ -83,6 +83,28 @@ private function fetch_completeHandler( event:FirebaseRemoteConfigEvent ):void
 ```
 
 
+## Throttling
+
+If an app fetches too many times in a short time period, fetch calls are throttled.
+
+During app development, you might want to fetch and activate configs very frequently (many times per hour) to let you rapidly iterate as you develop and test your app. To accommodate rapid iteration on a project with up to 10 developers, you can temporarily set a FirebaseRemoteConfigSettings object with a low minimum fetch interval (`setMinimumFetchIntervalInSeconds`) in your app.
+
+The default minimum fetch interval for Remote Config is 12 hours, which means that configs won't be fetched from the backend more than once in a 12 hour window, regardless of how many fetch calls are actually made. 
+
+To set the minimum fetch interval to a custom value, use:
+
+```actionscript
+var settings:FirebaseRemoteConfigSettings = new FirebaseRemoteConfigSettings()
+		.setMinimumFetchIntervalInSeconds( 5 );
+
+FirebaseRemoteConfig.service.setConfigSettings( settings );
+```
+
+> This value is in seconds so the above would allow updates to fetch calls every 5 seconds.
+
+:::caution
+Keep in mind that this setting should be used for development only, not for an app running in production. If you're just testing your app with a small 10-person development team, you are unlikely to hit the hourly service-side quota limits. But if you pushed your app out to thousands of test users with a very low minimum fetch interval, your app would probably hit this quota.
+:::
 
 
 ## Next Steps

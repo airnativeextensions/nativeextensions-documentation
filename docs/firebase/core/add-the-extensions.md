@@ -139,8 +139,7 @@ You must add all of the following Firebase related manifest additions.
 
 Make sure you only have one `<application>` node in your manifest additions combining them if you have multiple. 
 
-The following shows the complete manifest additions node. You must replace `APPLICATION_PACKAGE` with your 
-AIR application's Java package name, something like `air.com.distriqt.test`.
+The following shows the complete manifest additions node. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`.
 Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 

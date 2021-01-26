@@ -1,5 +1,12 @@
 
 
+###### 2021.01.26 [v6.0.003]
+
+```
+Corrected issue in remote config setConfigSettings on iOS (resolves #352)
+```
+
+
 ###### 2021.01.22 [v6.0.002]
 
 ```
