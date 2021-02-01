@@ -1,6 +1,6 @@
 ---
-title: google.Google Play InApp Billing
-sidebar_label: google.Google Play InApp Billing
+title: Google Play InApp Billing
+sidebar_label: Setup
 ---
 
 ## Add Your Application to the Developer Console
@@ -44,7 +44,7 @@ Products represent each purchasable item in your application.
 - Go to the In-app Products section of your application and if you haven't done so already, 
   upload a valid version of your application (APK) file. 
   This can just be an early version of your application but must have the correct billing 
-  permissions included in the application manifest (see the [Add the Extension](add-the-extension) section for more).
+  permissions included in the application manifest (see the [Add the Extension](../add-the-extension) section for more).
 - Click "+ Add new product"
 - Enter in the product ID and select the type of product: **Managed** / **Unmanaged** / **Subscription**. 
   Be careful here as this information cannot be changed once you move to the next stage.

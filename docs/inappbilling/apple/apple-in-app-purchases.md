@@ -1,6 +1,6 @@
 ---
-title: apple.Apple In-App Purchases
-sidebar_label: apple.Apple In-App Purchases
+title: Apple In-App Purchases
+sidebar_label: Setup
 ---
 
 ## Creating Your Products

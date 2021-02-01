@@ -1405,70 +1405,96 @@ module.exports = {
   inappbilling: [
     { type: 'ref', id: 'index' },
     { type: 'doc', id: 'inappbilling/index' },
+    "inappbilling/overview",
     { 
-      "Setup your Billing Service": [
-        "inappbilling/apple.apple-in-app-purchases",
-        "inappbilling/google.google-play-inapp-billing",
-        "inappbilling/amazon.amazon-in-app-purchasing",
-        "inappbilling/huawei.huawei-appgallery",
-      ]
+        "Billing Services": [
+            {
+                "Apple In-App Purchases" : [
+                    "inappbilling/apple/apple-in-app-purchases",
+                    "inappbilling/apple/server-side-verification",
+                    "inappbilling/apple/testing-subscriptions",
+                    "inappbilling/apple/troubleshooting"
+                ]
+            },
+            {   
+                "Google Play Billing" : [
+                    "inappbilling/google/google-play-inapp-billing",
+                ]
+            },
+            {
+                "Amazon In-App Purchasing" : [
+                    "inappbilling/amazon/amazon-in-app-purchasing",
+                    "inappbilling/amazon/testing",
+                ]
+            },
+            {
+                "Huawei AppGallery": [
+                    "inappbilling/huawei/huawei-appgallery",
+                    "inappbilling/huawei/testing",
+                ]
+            },
+            {
+                "Samsung In-App Purchases" :[
+                    "inappbilling/samsung/samsung-in-app-purchases",
+                    "inappbilling/samsung/testing",
+                ]
+            }
+        ]
     },
     { 
-      "Setup the Extension": [
-        "inappbilling/add-the-extension",
-        "inappbilling/billing-service",
-      ]
+        type: 'category', 
+        label: "Setup the Extension",
+        collapsed: false,
+        items: [
+            "inappbilling/add-the-extension",
+            "inappbilling/billing-service",
+        ]
     },
     { 
-      "Usage": [
-        "inappbilling/products",
-        "inappbilling/make-a-purchase",
-        "inappbilling/pending-purchases",
-        "inappbilling/restore-purchases",
-        "inappbilling/get-purchases",
-        "inappbilling/consuming-purchases",
-        "inappbilling/change-a-purchase",
-        "inappbilling/promotions",
-        {
-          "Subscription Discounts and Offers": [
-            "inappbilling/discounts",
-            "inappbilling/introductory-prices",
-          ]
-        }
-      ]
+        type: 'category', 
+        label: "Usage",
+        collapsed: false,
+        items: [
+            "inappbilling/products",
+            "inappbilling/make-a-purchase",
+            "inappbilling/pending-purchases",
+            "inappbilling/restore-purchases",
+            "inappbilling/get-purchases",
+            "inappbilling/consuming-purchases",
+            "inappbilling/change-a-purchase",
+            "inappbilling/promotions",
+            {
+                "Subscription Discounts and Offers": [
+                "inappbilling/discounts",
+                "inappbilling/introductory-prices",
+                ]
+            },
+            "inappbilling/testing",
+        ]
     },
     { 
-      "In-App Updates": [
-        "inappbilling/in-app-updates",
-      ]
+        "In-App Updates": [
+            "inappbilling/in-app-updates",
+        ]
     },
     {
-      "Help": [
-        "inappbilling/migration",
-      ]
+        "Help": [
+            "inappbilling/migration",
+        ]
     },
     {
-      "Testing": [
-        "inappbilling/testing",
-        "inappbilling/apple.testing-ios-subscriptions",
-        "inappbilling/amazon.testing-amazon-in-app-purchasing",
-        "inappbilling/huawei.testing-huawei-appgallery-purchases",
-      ]
-    },
-    {
-      "Advanced": [
-        "inappbilling/server-side-verification",
-        "inappbilling/user-data",
-      ]
+        "Advanced": [
+            "inappbilling/user-data",
+        ]
     },
     { 
-      "Other": [
+        "Other": [
         { type: 'doc', id: 'inappbilling/changelog' },
         { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/inappbilling/" },
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-InAppBilling/issues/new' },
-      ]
+        ]
     },
-  ],
+],
 
   ironsource: [
     { type: 'ref', id: 'index' },

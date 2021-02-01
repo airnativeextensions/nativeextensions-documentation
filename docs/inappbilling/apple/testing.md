@@ -1,6 +1,6 @@
 ---
-title: apple.Testing iOS Subscriptions
-sidebar_label: apple.Testing iOS Subscriptions
+title: Testing Apple In-App Purchases
+sidebar_label: Testing
 ---
 
 ## iOS Subscriptions

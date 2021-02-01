@@ -22,10 +22,11 @@ concentrate on your application and not device specifics.
 - Get current purchases on supported services;
 - Subscriptions;
 - Handle AppStore product promotions;
-- Access **Apple's In-App Purchases** through the App Store on iOS / tvOS;
+- Access **Apple's In-App Purchases** through the App Store on iOS / tvOS and macOS;
 - Access **Google's In-App Billing** through the Play Store on Android;
 - Access **Amazon's In-App Purchasing** through the Amazon Store on Android;
 - Access **Huawei AppGallery's In-App Purchases** through the Huawei AppGallery on Android;
+- Access **Samsung Galaxy Store's In-App Purchases** through the Samsung Galaxy Store on Android;
 - Sample project code and ASDocs reference
 
 
@@ -35,8 +36,7 @@ improving and updating the extensions for OS updates and feature requests.
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-InAppBilling/wiki) forms the best source of detailed documentation for the extension along with the
-[asdocs](https://docs.airnativeextensions.com/asdocs/inappbilling). 
+The [documentation site](https://docs.airnativeextensions.com/docs/inappbilling/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/inappbilling). 
 
 
 More information here: 

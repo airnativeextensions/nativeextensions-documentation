@@ -1,5 +1,19 @@
 
 
+###### 2021.02.01 [v13.0.030]
+
+```
+Added Samsung Galaxy Store In-App Purchases (resolves #359)
+Added macOS AppStore (resolves  #355)
+
+Google Play Billing
+ - v3.0.2
+
+Fixes: 
+ - Android: Added handling of invalid extContext after app update (resolves #374)
+```
+
+
 ###### 2020.11.06 [v12.1.133]
 
 ```

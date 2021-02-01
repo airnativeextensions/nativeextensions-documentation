@@ -71,7 +71,7 @@ If you aren't using either of those services you can remove those additions if y
 
 
 		<!-- GOOGLE PLAY BILLING -->
-		<meta-data android:name="com.google.android.play.billingclient.version" android:value="3.0.0" />
+		<meta-data android:name="com.google.android.play.billingclient.version" android:value="3.0.2" />
 		<activity
 			android:name="com.android.billingclient.api.ProxyBillingActivity"
 			android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -92,6 +92,12 @@ If you aren't using either of those services you can remove those additions if y
 </manifest>
 ```
 
+:::warning
+
+See the setup guides for the specific billing service you are using for the manifest additions of other services.
+You only need to add the additions for the service you are using.
+
+:::
 
 
 ## iOS 
@@ -130,6 +136,6 @@ if (InAppBilling.isSupported)
 }
 ```
 
-
-Note: This only checks if there is some functionality supported, not whether a particular billing service is available.
-
+>
+> Note: This only checks if there is some functionality supported, not whether a particular billing service is available.
+>

@@ -1,6 +1,6 @@
 ---
-title: amazon.Testing Amazon In-App Purchasing
-sidebar_label: amazon.Testing Amazon In-App Purchasing
+title: Testing Amazon In-App Purchasing
+sidebar_label: Testing
 ---
 
 

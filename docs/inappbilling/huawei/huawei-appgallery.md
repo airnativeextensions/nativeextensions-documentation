@@ -1,6 +1,6 @@
 ---
-title: huawei.Huawei AppGallery
-sidebar_label: huawei.Huawei AppGallery
+title: Huawei AppGallery
+sidebar_label: Setup
 ---
 
 
@@ -98,7 +98,7 @@ These need to be added at the root level of your application and packaged with y
 
 ## Dependencies
 
-The following dependencies are required in addition to the generic dependencies outlined in [Add the Extension](add-the-extension).
+The following dependencies are required in addition to the generic dependencies outlined in [Add the Extension](../add-the-extension).
 
 
 ### Variant
@@ -298,7 +298,7 @@ The following example uses our test applicaiton id `air.com.distriqt.test`:
 
 ## Setting up a Billing Service
 
-> The following is in addition to the documentation in [Setting up a Billing Service](billing-service).
+> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service).
 
 When setting up your service you will need to specify the `InAppBillingServiceTypes.HUAWEI_APP_GALLERY` service type and provide your Huawei AppGallery Public key. The public key is used to verify purchases to provide a level of fraud protection:
 

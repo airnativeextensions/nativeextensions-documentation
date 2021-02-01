@@ -1,6 +1,6 @@
 ---
-title: huawei.Testing Huawei AppGallery Purchases
-sidebar_label: huawei.Testing Huawei AppGallery Purchases
+title: Testing Huawei AppGallery 
+sidebar_label: Testing
 ---
 
 
