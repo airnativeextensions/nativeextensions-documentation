@@ -7,16 +7,16 @@
 <link rel="alternate" type="application/rss+xml" href="/news/rss.xml" title="air native extensions Blog RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/news/atom.xml" title="air native extensions Blog Atom Feed">
 <link rel="search" type="application/opensearchdescription+xml" title="air native extensions" href="/opensearch.xml"><title data-react-helmet="true">Message | air native extensions</title><meta data-react-helmet="true" name="docsearch:version" content="current,latest"><meta data-react-helmet="true" property="og:image" content="https://docs.airnativeextensions.com/img/ane-icon-black.png"><meta data-react-helmet="true" property="twitter:image" content="https://docs.airnativeextensions.com/img/ane-icon-black.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for air native extensions"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Message | air native extensions"><meta data-react-helmet="true" name="description" content="Message"><meta data-react-helmet="true" property="og:description" content="Message"><meta data-react-helmet="true" property="og:url" content="https://docs.airnativeextensions.com/docs/message/"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="anonymous"><link data-react-helmet="true" rel="canonical" href="https://docs.airnativeextensions.com/docs/message/"><link rel="stylesheet" href="/styles.dd07ecd4.css">
-<link rel="preload" href="/styles.6e38af58.js" as="script">
-<link rel="preload" href="/runtime~main.0a6871dc.js" as="script">
-<link rel="preload" href="/main.f9ccc83e.js" as="script">
-<link rel="preload" href="/1.5fa9cacf.js" as="script">
-<link rel="preload" href="/2.99fc57f4.js" as="script">
-<link rel="preload" href="/756.fd12d19a.js" as="script">
-<link rel="preload" href="/759.b909117b.js" as="script">
-<link rel="preload" href="/935f2afb.028d777d.js" as="script">
-<link rel="preload" href="/17896441.d2cdfb2e.js" as="script">
-<link rel="preload" href="/c9d22c22.ddbde2a2.js" as="script">
+<link rel="preload" href="/styles.a554fd40.js" as="script">
+<link rel="preload" href="/runtime~main.19a3f4dc.js" as="script">
+<link rel="preload" href="/main.cb21cfd1.js" as="script">
+<link rel="preload" href="/1.15ff4005.js" as="script">
+<link rel="preload" href="/2.5015d76d.js" as="script">
+<link rel="preload" href="/762.f6ca05b3.js" as="script">
+<link rel="preload" href="/765.19fa0d62.js" as="script">
+<link rel="preload" href="/935f2afb.aea9e953.js" as="script">
+<link rel="preload" href="/17896441.5c9827d0.js" as="script">
+<link rel="preload" href="/c9d22c22.ff3f8c42.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -26,15 +26,15 @@ application in just a few lines of code. Identical code base can be used across
 all supported platforms allowing you to concentrate on your application and not
 device specifics.</p><p>We provide complete guides to get you up and running with messaging quickly and easily.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="features"></a>Features<a aria-hidden="true" tabindex="-1" class="hash-link" href="#features" title="Direct link to heading">#</a></h3><ul><li>Email<ul><li>Provides ability to compose an email using the native UI</li><li>Multiple To, CC and BCC Addresses</li><li>Multiple Attachments using a file path reference</li><li>Default implementation using a &quot;mailto&quot; link</li><li>Send preformatted HTML emails on iOS and Android;</li></ul></li><li>SMS<ul><li>Create an SMS and send with the native UI</li><li>Send an SMS without UI on Android</li></ul></li><li>Sample project code and ASDocs reference</li></ul><p>As with all our extensions you get access to a year of support and updates as we are
 continually improving and updating the extensions for OS updates and feature requests.</p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button><div tabindex="0" class="prism-code language-actionscript codeBlock_3iAC"><div class="codeBlockLines_b7E3" style="color:#393A34;background-color:#f6f8fa"><div class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">if</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">Message</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">isMailSupported</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">    Message</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">service</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">sendMailWithOptions</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token string" style="color:#e3116c">&quot;Subject&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token string" style="color:#e3116c">&quot;Body of email&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token string" style="color:#e3116c">&quot;test@distriqt.com&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span></div></div></div></div></div><p><img src="/assets/images/promo-6de1e74c49e9382693b5d7bf4cdee36a.png"></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/message/add-the-extension"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Add the Extension »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#features" class="table-of-contents__link">Features</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/tutorials/">tutorials</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a href="https://twitter.com/distriqt" target="_blank" rel="noopener noreferrer" class="footer__link-item">twitter</a></li><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/distriqt" target="_blank" rel="noopener noreferrer" class="footer__link-item">stack overflow</a></li><li class="footer__item"><a href="https://forum.starling-framework.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">starling</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/news">news</a></li><li class="footer__item"><a href="https://airnativeextensions.com/privacy" target="_blank" rel="noopener noreferrer" class="footer__link-item">privacy</a></li><li class="footer__item"><a href="https://airnativeextensions.com/license" target="_blank" rel="noopener noreferrer" class="footer__link-item">license</a></li></ul></div></div><div class="text--center"><div><br><a href="https://airnativeextensions.com">airnativeextensions.com</a> copyright © 2021 <br><br><a href="https://distriqt.com"><img src="/img/logo.png" alt="distriqt"></a></div></div></div></footer></div>
-<script src="/styles.6e38af58.js"></script>
-<script src="/runtime~main.0a6871dc.js"></script>
-<script src="/main.f9ccc83e.js"></script>
-<script src="/1.5fa9cacf.js"></script>
-<script src="/2.99fc57f4.js"></script>
-<script src="/756.fd12d19a.js"></script>
-<script src="/759.b909117b.js"></script>
-<script src="/935f2afb.028d777d.js"></script>
-<script src="/17896441.d2cdfb2e.js"></script>
-<script src="/c9d22c22.ddbde2a2.js"></script>
+<script src="/styles.a554fd40.js"></script>
+<script src="/runtime~main.19a3f4dc.js"></script>
+<script src="/main.cb21cfd1.js"></script>
+<script src="/1.15ff4005.js"></script>
+<script src="/2.5015d76d.js"></script>
+<script src="/762.f6ca05b3.js"></script>
+<script src="/765.19fa0d62.js"></script>
+<script src="/935f2afb.aea9e953.js"></script>
+<script src="/17896441.5c9827d0.js"></script>
+<script src="/c9d22c22.ff3f8c42.js"></script>
 </body>
 </html>
