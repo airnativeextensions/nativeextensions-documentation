@@ -258,7 +258,7 @@ This will require the addition of the `androidx.multidex` extension which contai
 
 # iOS 
 
-Azure uses APNS on iOS so you will have to go through the [setup process of APNS](apple-push-notification-service)
+Azure uses APNS on iOS so you will have to go through the [setup process of APNS](../apple/apple-push-notification-service)
 before using Azure.
 
 > 

@@ -56,7 +56,7 @@ In order to display a notification on Android, you must also include a `notifica
 ```
 
 
-You have access to all the fields defined in the FCM payload here, such as icons, grouping and images. See the documentation on the [FCM payload](fcm-gcm-payload) for more information.
+You have access to all the fields defined in the FCM payload here, such as icons, grouping and images. See the documentation on the [FCM payload](../firebase/fcm-gcm-payload) for more information.
 
 
 

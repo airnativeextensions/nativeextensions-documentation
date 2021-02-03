@@ -44,7 +44,7 @@ Additional fields include:
 - `alert`: The alert text displayed in ticker locations
 - `title`: The title text for the notification
 - `body`: The body text for the notification
-- `sound`: A custom sound path to use for the notification or `'default'` to use the default notification sound. This can be a path to an asset or a mp3 resource name.  *Note: Sounds on individual notifications were deprecated in Android O (API 26). You now have to set them on a [channel](setup-your-service#channels). This will be ignored on API v26+.*
+- `sound`: A custom sound path to use for the notification or `'default'` to use the default notification sound. This can be a path to an asset or a mp3 resource name.  *Note: Sounds on individual notifications were deprecated in Android O (API 26). You now have to set them on a [channel](../setup-your-service#channels). This will be ignored on API v26+.*
 - `vibrate`: `true` or `false`
 - `largeIcon`: The path to a packaged image asset or a url to a public image
 - `priority`: This should be one of the priority values from `-2` (low) to `2` (max). The default is `0`. 

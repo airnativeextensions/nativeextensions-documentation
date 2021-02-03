@@ -314,13 +314,13 @@ catch (e:Error)
 }
 ```
 
-You should then [request authorisation](request-authorisation) as normal.
+You should then [request authorisation](../request-authorisation) as normal.
 
 
 
 ## Registration
 
-[Register](register-for-notifications) your application for notifications when you are ready. The **Pushy "device token" is returned as the "service token" in our extension**, to distinguish it from the actual device token identified from the OS (iOS in particular).
+[Register](../register-for-notifications) your application for notifications when you are ready. The **Pushy "device token" is returned as the "service token" in our extension**, to distinguish it from the actual device token identified from the OS (iOS in particular).
 
 So you should send the service token to your backend for sending notifications using Pushy:
 
