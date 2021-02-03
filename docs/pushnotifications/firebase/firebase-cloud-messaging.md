@@ -20,7 +20,7 @@ All variants of the Push Notifications extension have the same extension id: `co
 </extensions>
 ```
 
-Make sure you have added the common ANEs from the [Add the Extension](add-the-extension) section first. This includes the Core and Android Support ANEs.
+Make sure you have added the common ANEs from the [Add the Extension](../add-the-extension) section first. This includes the Core and Android Support ANEs.
 
 
 

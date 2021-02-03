@@ -7,7 +7,7 @@ sidebar_label: Apple Push Notification Service
 
 APNS is supported by all of the ANEs in the repository. It is integrated into the iOS SDK so requires no additional SDKs or frameworks so we have included it in every ANE.  
 
-Make sure you have added the common ANEs from the [Add the Extension](add-the-extension) section. This includes the Core and Android Support ANEs. There are no additional ANEs required to use APNS.
+Make sure you have added the common ANEs from the [Add the Extension](../add-the-extension) section. This includes the Core and Android Support ANEs. There are no additional ANEs required to use APNS.
 
 
 # Setup 
@@ -18,14 +18,14 @@ iOS with iPhones, iPads and other such iOS devices.
 The system is quite complex and has a lot of different components as you can see 
 in the diagram below.
 
-![](images/tutorials/pushnotifications-tutorial-apns.png)
+![](images/pushnotifications-tutorial-apns.png)
 
 When the device finally receives the notification, the notification will be displayed 
 to the user (depending on the options specified in the notification, more about these 
 later). The user can then respond to the notification as they see fit, dismissing it 
 or opening your application.
 
-![](images/tutorials/pushnotifications-tutorial-apns-remote_notif_simple.png)
+![](images/pushnotifications-tutorial-apns-remote_notif_simple.png)
 
 Your server will be required to implement a solution to gather device tokens and to 
 send the notification to the APNS server with the required devices specified. This 
@@ -145,7 +145,7 @@ Choose the option under the main application menu (as shown in the screenshot be
 
 `Keychain Access / Certificate Assistant / Request a Certificate From a Certificate Authority...`
 
-![](images/tutorials/pushnotifications-tutorial-csr1.png)
+![](images/pushnotifications-tutorial-csr1.png)
 
 You should then be presented with a window asking for some details about the certificate request.
 
@@ -158,7 +158,7 @@ Make sure you’ve checked the Saved to disk option and then click Continue. Sav
 file somewhere convenient, you will need it again soon. We suggest you change the name 
 of the file to something like `ApplicationPushNotifications.certSigningRequest`.
 
-![](images/tutorials/pushnotifications-tutorial-csr2.png)
+![](images/pushnotifications-tutorial-csr2.png)
  
 
 Next we need to export the private key as a p12 file. To do this return to the Keychain 
@@ -172,7 +172,7 @@ You will need to enter a passphrase, which will be used to protect your private 
 You should enter something that is secure but also that you can easily recall. Normal 
 rules with passwords apply here!
 
-![](images/tutorials/pushnotifications-tutorial-csr3.png)
+![](images/pushnotifications-tutorial-csr3.png)
 
 Now we move on to the provisioning in the iOS portal.
 
@@ -194,7 +194,7 @@ It will have changed and won’t work if you don’t update your profile.
 
 To make a new application ID, go to the App IDs section on the left and click the New App ID button.
 
-![](images/tutorials/pushnotifications-tutorial-profile1.png)
+![](images/pushnotifications-tutorial-profile1.png)
 
 You will then be presented with the “Create App ID” form. Enter your application details, for example:
 
@@ -206,37 +206,37 @@ Bundle Identifier:         com.distriqt.test
 Take note of the **Bundle Seed ID (App ID Prefix)** and the **Bundle Identifier (App ID Suffix)**. 
 We will need these later.
 
-![](images/tutorials/pushnotifications-tutorial-profile2.png)
+![](images/pushnotifications-tutorial-profile2.png)
 
 After you have created the application it will appear in your App ID list, with something like the following beside it. Note that Push Notifications are listed as “Configurable”, both for development and production.
 
-![](images/tutorials/pushnotifications-tutorial-profile3.png)
+![](images/pushnotifications-tutorial-profile3.png)
 
 Click Configure. You should then be presented with the Configure App ID page. Look for the section as shown below and click the checkbox to enable the App ID for Apple Push Notification service. This should activate the Configure actions on the right. Click the button beside the Development Push SSL Certificate. (You can come back to this same place to configure the production certificate at a later date).
 
-![](images/tutorials/pushnotifications-tutorial-profile4.png)
+![](images/pushnotifications-tutorial-profile4.png)
 
 This will now ask you to upload the CSR file we created earlier. This is the ApplicationPushNotifications.certSigningRequest file not the p12 file. Choose the file and click Generate.
 
-![](images/tutorials/pushnotifications-tutorial-profile5.png)
+![](images/pushnotifications-tutorial-profile5.png)
 
 Your certificate should now get generated and after a while you'll get a message saying "Your APNs SSL Certificate has been generated. Please continue to the next step".
 
-![](images/tutorials/pushnotifications-tutorial-profile6.png)
+![](images/pushnotifications-tutorial-profile6.png)
 
 You will now get to download the SSL certificate. Click download and save the certificate somewhere safe. It should be called aps_development.cer. We suggest you rename it to something matching the application that it’s associated with.
 
-![](images/tutorials/pushnotifications-tutorial-profile7.png)
+![](images/pushnotifications-tutorial-profile7.png)
 
 You should now see the Status for the Development Push SSL Certificate is green and labelled as Enabled.
 
-![](images/tutorials/pushnotifications-tutorial-profile8.png)
+![](images/pushnotifications-tutorial-profile8.png)
 
 You should see the expiration date of the certificate listed. It is very important that you note this date and make sure you return and update the certificate before the date is reached. Otherwise you will experience a period where notifications will not work in your application!
 
 Lastly while we’re still in the Provisioning Portal lets create a provisioning profile for the application. Go to the Provisioning section and on the Development tab, click New Profile.
 
-![](images/tutorials/pushnotifications-tutorial-profile9.png)
+![](images/pushnotifications-tutorial-profile9.png)
 
 Give the profile a name and select the App ID you’ve just created, along with any devices you wish to test on. Make sure you select your developer certificate from the Certificates section. Click Submit and the profile will be generated.
 

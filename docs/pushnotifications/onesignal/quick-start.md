@@ -1,20 +1,29 @@
 ---
 title: OneSignal - Quick Start
-sidebar_label: OneSignal - Quick Start
+sidebar_label: Quick Start
 ---
 
 
 - [Setup OneSignal Account](https://onesignal.com)
   - Get your App ID: [Keys & IDs](https://documentation.onesignal.com/docs/accounts-and-keys#section-app-id)
 - [Add Required ANEs](onesignal#required-anes)
-  - `com.distriqt.Core.ane`
-  - `com.distriqt.playservices.Base.ane`
-  - `com.google.firebase.core.ane`
-  - `androidx.core.ane`
-  - `androidx.browser.ane`
-  - `androidx.cardview.ane`
-  - `com.google.android.datatransport.ane`
-  - `com.google.dagger.ane`
+  - `com.distriqt.Core`
+  - `com.distriqt.playservices.Base`
+  - `com.distriqt.playservices.AdsIdentifier`
+  - `com.distriqt.playservices.CloudMessaging`
+  - `com.google.firebase.core`
+  - `com.google.android.datatransport`
+  - `com.google.dagger`
+  - `com.google.guava`
+  - `androidx.appcompat`
+  - `androidx.browser`
+  - `androidx.cardview`
+  - `androidx.core`
+  - `androidx.recyclerview`
+  - `androidx.room`
+  - `androidx.vectordrawable`
+  - `androidx.work`
+  - `com.jetbrains.kotlin`
 - Use AIR 33+
 - iOS
   - [Info Additions and Entitlements](onesignal#info-additions-and-entitlements)
@@ -24,8 +33,7 @@ sidebar_label: OneSignal - Quick Start
 
 ## Setup the Extension and Service 
 
-  - replace `APPLICATION_KEY` with your distriqt application key 
-  - replace `YOUR_ONESIGNAL_APP_ID` with your OneSignal App ID:
+  - replace `ONESIGNAL_APP_ID` with your OneSignal App ID:
 
 
 ```actionscript
@@ -34,7 +42,9 @@ try
     Core.init();
     if (PushNotifications.isSupported)
     {
-        var service:Service = new Service( Service.ONESIGNAL, YOUR_ONESIGNAL_APP_ID );
+        var service:Service = new Service( 
+            Service.ONESIGNAL, 
+            ONESIGNAL_APP_ID );
         service.enableNotificationsWhenActive = true;
 
         PushNotifications.service.setup( service );

@@ -5,7 +5,7 @@ sidebar_label: Google Cloud Messaging
 
 
 >
-> Google is advising you use [Firebase Cloud Messaging](firebase-cloud-messaging) in place of GCM and have deprecated the GCM service.
+> Google is advising you use [Firebase Cloud Messaging](../firebase/firebase-cloud-messaging) in place of GCM and have deprecated the GCM service.
 > You should move to the more powerful FCM platform.
 >
 > We will no longer be maintaining the development of the GCM service.
@@ -23,7 +23,7 @@ instant messaging can consume the message directly). The GCM service handles all
 aspects of queueing of messages and delivery to the target Android application 
 running on the target device.
 
-images/pushnotifications-tutorial-gcm.png
+![](images/pushnotifications-tutorial-gcm.png)
 
 Architecturally it’s very similar to the APNS process, though “device token” 
 is called “registration ID” the process is relatively identical. The actual 
@@ -122,7 +122,7 @@ To create a Google API project:
 
 - Open the Google APIs Console Page
 
-- If you haven't created an API project yet, this page will prompt you to do so: ![](images/tutorials/pushnotifications-tutorial-gcm-create-api-proj.png) 
+- If you haven't created an API project yet, this page will prompt you to do so: ![](images/pushnotifications-tutorial-gcm-create-api-proj.png) 
 > Note: If you already have existing projects, the first page you see will be the 
 > Dashboard page. From there you can create a new project by opening the project 
 > drop-down menu (upper left corner) and choosing `Other projects > Create`.
@@ -138,13 +138,13 @@ To create a Google API project:
 To obtain an API key:
 
 - In the main Google APIs Console page, select API Access. 
-  You will see a screen that resembles the following:  ![](images/tutorials/pushnotifications-tutorial-gcm-api-1-access.png)
+  You will see a screen that resembles the following:  ![](images/pushnotifications-tutorial-gcm-api-1-access.png)
 
 - Click Create new Server key. Either a server key or a browser key should work. 
   The advantage to using a server key is that it allows you to whitelist IP 
-  addresses. The following screen appears: ![](images/tutorials/pushnotifications-tutorial-gcm-api-2-config-server-key.png)
+  addresses. The following screen appears: ![](images/pushnotifications-tutorial-gcm-api-2-config-server-key.png)
 
-- Click Create: ![](images/tutorials/pushnotifications-tutorial-gcm-api-3-key.png)
+- Click Create: ![](images/pushnotifications-tutorial-gcm-api-3-key.png)
 
 Take note of the API key value (YourKeyWillBeShownHere) in this example, as it will be used later on.
 

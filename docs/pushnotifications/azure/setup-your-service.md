@@ -1,6 +1,6 @@
 ---
 title: Setup your Service - Azure
-sidebar_label: Setup your Service - Azure
+sidebar_label: Azure
 ---
 
 

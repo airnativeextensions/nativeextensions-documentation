@@ -1,6 +1,6 @@
 ---
 title: Setup your Service - OneSignal
-sidebar_label: Setup your Service - OneSignal
+sidebar_label: OneSignal
 ---
 
 
@@ -11,13 +11,15 @@ The following shows how to configure the `Service` for usage with your One Signa
 
 
 ```actionscript
-var service:Service = new Service( Service.ONESIGNAL, Config.oneSignalAppId );
+var service:Service = new Service( 
+	Service.ONESIGNAL, 
+	ONESIGNAL_APP_ID );
 service.enableNotificationsWhenActive = true;
 	
 PushNotifications.service.setup( service );
 ```
 
-The `serviceId` will be your OneSignal App ID which you can retrieve from your App Settings under **Keys & IDs**.
+The `ONESIGNAL_APP_ID` will be your OneSignal App ID which you can retrieve from your App Settings under **Keys & IDs**.
 
 
 ![](images/onesignal_servicevalues.png)

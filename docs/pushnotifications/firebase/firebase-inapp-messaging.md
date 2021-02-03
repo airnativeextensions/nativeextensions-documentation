@@ -5,7 +5,7 @@ sidebar_label: Firebase InApp Messaging
 
 
 >
-> **Important**: You must have performed the setup process outlined in [Add the Extension](add-the-extension) **and** [Setup Firebase Cloud Messaging](firebase-cloud-messaging) before performing these additional setup steps.
+> **Important**: You must have performed the setup process outlined in [Add the Extension](../add-the-extension) **and** [Setup Firebase Cloud Messaging](firebase-cloud-messaging) before performing these additional setup steps.
 >
 
  

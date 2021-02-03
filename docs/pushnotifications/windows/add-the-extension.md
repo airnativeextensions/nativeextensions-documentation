@@ -1,6 +1,6 @@
 ---
-title: Add the Extension - Windows
-sidebar_label: Add the Extension - Windows
+title: Windows - Add the Extension 
+sidebar_label: Add the Extension
 ---
 
 There are several additional things to consider on Windows:

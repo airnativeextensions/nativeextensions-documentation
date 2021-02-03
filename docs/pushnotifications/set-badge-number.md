@@ -115,10 +115,10 @@ On Windows it is part of the operating system and nothing additional is required
 
 The badge will appear on the application tile pinned to the start menu:
 
-![](images/windows-badge-startmenu.png)
+![](windows/images/windows-badge-startmenu.png)
 
 And on the application tile in the task bar (when application is closed):
 
-![](images/windows-badge-taskbar.png)
+![](windows/images/windows-badge-taskbar.png)
 
 

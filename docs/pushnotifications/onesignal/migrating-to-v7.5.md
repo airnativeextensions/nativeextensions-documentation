@@ -1,6 +1,6 @@
 ---
 title: OneSignal - Migrating to v7.5
-sidebar_label: OneSignal - Migrating to v7.5
+sidebar_label: Migrating to v7.5
 ---
 
 ## Migrating
@@ -14,7 +14,7 @@ v7.5 brings a few changes to OneSignal:
 
 ## User Consent
 
-See the documentation on [user consent](user-consent)
+See the documentation on [user consent](../user-consent)
 
 
 

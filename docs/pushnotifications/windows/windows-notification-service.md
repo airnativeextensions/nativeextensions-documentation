@@ -12,7 +12,7 @@ sidebar_label: Windows Notification Service
 
 WNS is supported by all of the ANEs in the repository. It is the core notification service on Windows UWP and requires minimal additional libraries so we have included it in every ANE.  
 
-Make sure you have added the common ANEs from the [Add the Extension](add-the-extension) section particularly the Core ANE and been through the specific requirements for [Windows](add-the-extension---windows).
+Make sure you have added the common ANEs from the [Add the Extension](../add-the-extension) section particularly the Core ANE and been through the specific requirements for [Windows](../add-the-extension---windows).
 
 
 

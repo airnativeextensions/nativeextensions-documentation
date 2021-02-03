@@ -51,7 +51,6 @@ This extension requires the following extensions:
 - [`androidx.appcompat`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.appcompat.ane)
 - [`androidx.browser`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
 - [`androidx.cardview`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.cardview.ane)
-- [`androidx.constraintlayout`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.constraintlayout.ane)
 - [`androidx.vectordrawable`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.vectordrawable.ane)
 - [`com.google.android.datatransport`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.android.datatransport.ane)
 - [`com.google.dagger`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.dagger.ane)
@@ -91,7 +90,6 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.browser</extensionID>
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.cardview</extensionID>
-	<extensionID>androidx.constraintlayout</extensionID>
 	<extensionID>androidx.vectordrawable</extensionID>
 </extensions>
 ```

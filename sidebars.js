@@ -1975,35 +1975,31 @@ module.exports = {
   pushnotifications: [
     { type: 'ref', id: 'index' },
     { type: 'doc', id: 'pushnotifications/index' },
-    { 
-      "Quick Start Guides": [
-        "pushnotifications/onesignal---quick-start",
-      ]
-    },
-    { 
-      "Configuring your application": [
-        "pushnotifications/add-the-extension",
-        "pushnotifications/add-the-extension---windows",
-      ]
-    },
+    "pushnotifications/add-the-extension",
     { 
       "Notification services": [
-        "pushnotifications/apple-push-notification-service",
+        "pushnotifications/apple/apple-push-notification-service",
         { 
           "Firebase Messaging" :[
-            "pushnotifications/firebase-cloud-messaging",
-            "pushnotifications/firebase-inapp-messaging"
+            "pushnotifications/firebase/firebase-cloud-messaging",
+            "pushnotifications/firebase/firebase-inapp-messaging"
           ]
         },
         { 
           "One Signal" :[
-            "pushnotifications/onesignal",
-            "pushnotifications/onesignal---migrating-to-v7.5"
+            "pushnotifications/onesignal/quick-start",
+            "pushnotifications/onesignal/onesignal",
+            "pushnotifications/migrating-to-v10.2",
           ]
         },
-        "pushnotifications/windows-notification-service",
-        "pushnotifications/azure-notifications",
-        "pushnotifications/pushy",
+        {
+          "Windows": [
+            "pushnotifications/windows/add-the-extension",
+            "pushnotifications/windows/windows-notification-service",
+          ]
+        },
+        "pushnotifications/azure/azure-notifications",
+        "pushnotifications/pushy/pushy",
       ]
     },
     { 
@@ -2011,8 +2007,8 @@ module.exports = {
         "pushnotifications/setup-your-service",
         {
           "Service Type Details" : [
-            "pushnotifications/setup-your-service---azure",
-            "pushnotifications/setup-your-service---onesignal",
+            "pushnotifications/azure/setup-your-service",
+            "pushnotifications/onesignal/setup-your-service",
           ]
         },
         "pushnotifications/request-authorisation",
@@ -2039,23 +2035,23 @@ module.exports = {
     },
     { 
       "Payloads": [
-        "pushnotifications/ios-apns-payload",
-        "pushnotifications/fcm-gcm-payload",
-        "pushnotifications/windows-wns-payload",
-        "pushnotifications/pushy-payload",
+        "pushnotifications/apple/ios-apns-payload",
+        "pushnotifications/firebase/fcm-gcm-payload",
+        "pushnotifications/windows/windows-wns-payload",
+        "pushnotifications/pushy/pushy-payload",
       ]
     },
     { 
       "Sending Messages": [
-        "pushnotifications/ios-apns-message",
-        "pushnotifications/google-cloud-message",
-        "pushnotifications/firebase-cloud-message",
-        "pushnotifications/windows-wns-message",
-        "pushnotifications/pushy-message",
+        "pushnotifications/apple/ios-apns-message",
+        "pushnotifications/firebase/firebase-cloud-message",
+        "pushnotifications/windows/windows-wns-message",
+        "pushnotifications/pushy/pushy-message",
       ]
     },
     { 
       "Troubleshooting": [
+        "pushnotifications/migrating-to-v10.2",
         "pushnotifications/migrating-to-v10.1",
         "pushnotifications/migrating-to-androidx",
       ]
