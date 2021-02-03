@@ -837,6 +837,7 @@ module.exports = {
     {
       "Help": [
         "facebookapi/signing",
+        "facebookapi/migrating-to-version-9",
         "facebookapi/migrating-to-version-8",
         "facebookapi/migrating-to-androidx",
       ]

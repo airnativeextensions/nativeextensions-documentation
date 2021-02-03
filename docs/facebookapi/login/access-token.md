@@ -45,3 +45,18 @@ You can access the list of granted and denied permissions through the access tok
 - `token.permissions`: contains an array of permissions strings that this access token has been granted 
 - `token.declinedPermissions`: contains an array of permissions strings that this access token has been denied 
 
+
+
+## Access Token Changes 
+
+The access token can be updated over time, such as when the SDK refreshes a token with a longer expiration date. You can respond to changes in the access token by listening for the `FacebookAccessTokenEvent.CHANGED` event. This event will be dispatched whenever the access token changes and contains the new access token in the `accessToken` property.
+
+```actionscript
+FacebookLogin.instance.addEventListener( FacebookAccessTokenEvent.CHANGED, accessTokenChangedHandler );
+
+function accessTokenChangedHandler( event:FacebookAccessTokenEvent ):void
+{
+	// Update access token
+    trace( event.accessToken.token )
+}
+```

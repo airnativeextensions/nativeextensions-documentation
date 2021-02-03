@@ -1,5 +1,17 @@
 
 
+###### 2021.02.03 [v9.0.003]
+
+```
+Updated SDK
+ - iOS v9.0.0
+ - Android v9.0.0
+
+Introduced new limited tracking login process 
+Added access token and profile changed events (resolves #292)
+```
+
+
 ###### 2021.01.13 [v8.1.021]
 
 ```

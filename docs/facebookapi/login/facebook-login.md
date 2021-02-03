@@ -3,12 +3,16 @@ title: Facebook Login
 sidebar_label: Facebook Login
 ---
 
-In order to log a user in you will be calling the `logInWithReadPermissions()` function and awaiting a login event. This function takes an array of Facebook permission strings as the parameter.
+In order to log a user in you will be calling the `logInWithConfiguration()` function and awaiting a login event. This function takes a `LoginConfiguration` instance as the parameter. The `LoginConfiguration` allows you to specify the required configuration for the login request, including permissions and login tracking.
+
+The simplest version just specifies the array of permissions:
 
 ```actionscript
 if (FacebookLogin.isSupported)
 {
-	FacebookLogin.instance.logInWithReadPermissions( [ "public_profile", "email" ] );
+	FacebookLogin.instance.logInWithConfiguration( 
+		new LoginConfiguration( [ "public_profile", "email" ] )
+	);
 }
 ```
 
@@ -21,7 +25,7 @@ For the prefined permissions you can see the constants defined in the [`Facebook
 
 ## Events
 
-After calling `logInWithReadPermissions()` one of the following events will be dispatched:
+After calling `logInWithConfiguration()` one of the following events will be dispatched:
 
 - `FacebookLoginEvent.SUCCESS`: The login was successful and the user is now logged in; 
 - `FacebookLoginEvent.CANCEL`: The user cancelled the login process;
@@ -33,9 +37,9 @@ The `FacebookLoginEvent` class on success contains:
 
 - `accessToken`: An instance of `AccessToken` containing details about the token
 - `profile`: An instance of `Profile` containing details about the current user
+- `authToken`: An instance of `AuthenticationToken` containing details about the login request
 
-The `profile` may be `null` if the profile information hasn't been retrieved or requested yet. Both will be `null` for a cancel event.
-
+The `profile` may be `null` if the profile information hasn't been retrieved or requested yet. Both will be `null` for a cancel event. The `accessToken` may be `null` if you have specified a limited tracking login.
 
 For example:
 
@@ -152,4 +156,52 @@ if (profile != null)
 ```
 
 The [`Profile`](http://docs.airnativeextensions.com/asdocs/facebookapi/com/distriqt/extension/facebook/login/Profile.html) contains information about the user such as `firstName`, `lastName`, and `pictureUrl`.
+
+
+### Profile Changes 
+
+If you need to respond to changes in the user profile during the application session you can listen for the `FacebookProfileEvent.CHANGED` event. This event will be dispatched whenever the profile is updated.
+
+```actionscript
+FacebookLogin.instance.addEventListener( FacebookProfileEvent.CHANGED, profileChangedHandler );
+
+function profileChangedHandler( event:FacebookProfileEvent ):void
+{
+	// Update profile information
+}
+```
+
+This can also be useful during certain login scenarios where the profile may not be loaded initially but updated shortly after login. 
+
+
+## Limited Login
+
+Limited Login offers a login path that implements steps designed to prevent the fact that a person used Facebook to log in to your app from being used to target advertising or measure advertising effectiveness.
+
+Limited Login returns an `AuthenticationToken` that wraps an OpenID Connect token. **The ID token cannot be used to request additional data using the Graph API, such as friends, photos, or pages. Doing so requires the use of classic Facebook Login.**
+
+A successful login populates a global `AuthenticationToken` instance. You can provide a `nonce` for the login attempt that will be reflected in the return token. In addition, Limited Login populates a shared profile instance that contains the basic information including ID, name, profile picture, and email (if granted by the user).
+
+To use a limited login you must set the login tracking to be `LoginTracking.LIMITED` in the `LoginConfiguration` instance when attempting login. (You will likely want to set a `nonce` value that you can use to validate the login serverside.)
+
+
+```actionscript
+var configuration:LoginConfiguration = new LoginConfiguration( [ "public_profile", "email" ] );
+
+configuration.setLoginTracking( LoginTracking.LIMITED );
+configuration.setNonce("123");
+
+
+FacebookLogin.instance.logInWithConfiguration( configuration );
+```
+
+To retrieve the authentication token (OIDC token) you can call the `getAuthenticationToken()` function:
+
+
+```as3
+var token:AuthenticationToken = FacebookLogin.instance.getAuthenticationToken();
+
+trace( token.token );
+trace( token.nonce );
+```
 
