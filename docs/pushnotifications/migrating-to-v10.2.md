@@ -12,7 +12,70 @@ v10.2 brings the latest release of OneSignal:
 If you are updating from a version < 10 make sure you check out the changes for Firebase Cloud Messaging as well in the [Migrating to v10.1](migrating-to-v10.1)
 
 
-We have managed to hide any implementation changes within the native code however there are some major changes to the dependencies and to the manifest additions. 
+We have managed to hide any major implementation changes within the native code however there are some changes to the [dependencies](#update-dependencies), to the [manifest additions](#update-manifest-additions) and to the [payload data structure](#payload).
+
+
+## Payload
+
+:::caution Payload
+The payload structure has changed due to a change in the data returned by OneSignal for a notification. Rather than reformatting to matching a legacy structure we have taken the approach to return the data as per OneSignal's design.
+
+Importantly you will need to update any code you have that relies on the structure of the OneSignal notification payload.
+:::
+
+For example on Android the previous payload structure was: 
+
+```json
+{
+    "isAppInFocus":true,
+    "shown":false,
+    "androidNotificationId":0,
+    "displayType":0,
+    "payload": {
+        "notificationId":"bb5fd966-4ac2-4070-bcec-d66fb0fbab1f",
+        "title":"asdf",
+        "body":"asdfasdf",
+        "additionalData":{
+            
+        },
+        "lockScreenVisibility":1,
+        "actionButtons":[
+            
+            ],
+        "fromProjectNumber":"616489336300",
+        "priority":5,
+        "rawPayload":"{\"google.delivered_priority\":\"normal\",\"google.sent_time\":1612744363074,\"google.ttl\":259200,\"google.original_priority\":\"normal\",\"custom\":\"{\\\"i\\\":\\\"bb5fd966-4ac2-4070-bcec-d66fb0fbab1f\\\",\\\"a\\\":{\\\"actionButtons\\\":[],\\\"actionId\\\":\\\"__DEFAULT__\\\"}}\",\"pri\":\"5\",\"vis\":\"1\",\"from\":\"616489336300\",\"alert\":\"asdfasdf\",\"title\":\"asdf\",\"google.message_id\":\"0:1612744363095757%32d7332ff9fd7ecd\",\"google.c.sender.id\":\"616489336300\"}"
+    }
+}
+```
+
+The new payload structure is:
+
+```json
+{
+    "androidNotificationId":0,
+    "groupedNotifications":[
+        
+    ],
+    "notificationId":"bb5fd966-4ac2-4070-bcec-d66fb0fbab1f",
+    "templateName":"",
+    "templateId":"",
+    "title":"asdf",
+    "body":"asdfasdf",
+    "lockScreenVisibility":1,
+    "fromProjectNumber":"616489336300",
+    "priority":5,
+    "additionalData":{
+        
+    },
+    "actionButtons":[
+        
+    ],
+    "rawPayload":"{\"google.delivered_priority\":\"normal\",\"google.sent_time\":1612744363074,\"google.ttl\":259200,\"google.original_priority\":\"normal\",\"custom\":\"{\\\"i\\\":\\\"bb5fd966-4ac2-4070-bcec-d66fb0fbab1f\\\",\\\"a\\\":{\\\"actionButtons\\\":[],\\\"actionId\\\":\\\"__DEFAULT__\\\"}}\",\"pri\":\"5\",\"vis\":\"1\",\"from\":\"616489336300\",\"alert\":\"asdfasdf\",\"title\":\"asdf\",\"google.message_id\":\"0:1612744363095757%32d7332ff9fd7ecd\",\"google.c.sender.id\":\"616489336300\"}"
+}
+```
+
+
 
 ## Update Dependencies
 

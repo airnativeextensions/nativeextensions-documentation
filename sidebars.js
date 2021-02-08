@@ -1983,7 +1983,8 @@ module.exports = {
         { 
           "Firebase Messaging" :[
             "pushnotifications/firebase/firebase-cloud-messaging",
-            "pushnotifications/firebase/firebase-inapp-messaging"
+            "pushnotifications/firebase/firebase-inapp-messaging",
+            "pushnotifications/migrating-to-v10.1",
           ]
         },
         { 

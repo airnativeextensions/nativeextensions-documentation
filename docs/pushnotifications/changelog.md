@@ -1,5 +1,12 @@
 
 
+###### 2021.02.08 [v10.2.043]
+
+```
+Corrected missing OneSignal data fields (resolves #480)
+```
+
+
 ###### 2021.02.03 [v10.2.039]
 
 ```
