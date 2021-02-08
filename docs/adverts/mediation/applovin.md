@@ -166,7 +166,17 @@ Add the following to your manifest additions inside the `application` tag:
 
 ### iOS
 
-No additions required
+Add the following to your info additions. If you already have an `SKAdNetworkItems` then append the `dict` items to the `array`.
+
+```xml
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>ludvb6z3bs.skadnetwork</string>
+    </dict>
+</array>
+```
 
 
 

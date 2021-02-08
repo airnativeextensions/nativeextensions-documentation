@@ -57,7 +57,7 @@ There is no additional code required just a few additional configuration options
 
 Add the `audience_network.dex` file to the root of your application package. (This file is located in the repository, this must be the same version as the extension).
 
-Add the following to your manifest additions inside the `application` tag. You must replace `YOUR_APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+Add the following to your manifest additions inside the `application` tag. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 
 ```xml
@@ -69,23 +69,8 @@ Add the following to your manifest additions inside the `application` tag. You m
 
 <provider
     android:name="com.facebook.ads.AudienceNetworkContentProvider"
-    android:authorities="YOUR_APPLICATION_PACKAGE.AudienceNetworkContentProvider"
+    android:authorities="APPLICATION_PACKAGE.AudienceNetworkContentProvider"
     android:exported="false" />
-
-<activity
-    android:name="com.facebook.ads.internal.ipc.RemoteANActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:exported="false"
-    android:process=":adnw"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-<service
-    android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService"
-    android:exported="false" />
-<service
-    android:name="com.facebook.ads.internal.ipc.AdsMessengerService"
-    android:exported="false"
-    android:process=":adnw" />
 ```
 
 
@@ -96,6 +81,22 @@ Add the `Frameworks` folder to your application package, ensuring the dynamic `F
 
 **You will need to resign your application following the guide below otherwise your build will likely fail signing validation.**
 
+
+Add the following to your info additions. If you already have an `SKAdNetworkItems` then append the `dict` items to the `array`.
+
+```xml
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>v9wttpbfk9.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>n38lu8286q.skadnetwork</string>
+    </dict>
+</array>
+```
 
 
 ## Step 5: Test your implementation 

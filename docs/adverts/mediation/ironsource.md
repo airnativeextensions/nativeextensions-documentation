@@ -56,8 +56,7 @@ You should call `IronSource.init();` in your code before you intend to display a
 
 ### Android
 
-Add the following to your manifest additions inside the `application` tag:
-
+Add the following to your manifest additions inside the `application` tag. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 ```xml
 <!-- IRONSOURCE -->
@@ -75,12 +74,26 @@ Add the following to your manifest additions inside the `application` tag:
     android:configChanges="orientation|screenSize"
     android:hardwareAccelerated="true"
     android:theme="@android:style/Theme.Translucent" />
+
+<provider
+    android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+    android:authorities="APPLICATION_PACKAGE.IronsourceLifecycleProvider" />
 ```
 
 
 ### iOS
 
-No specific additions required here.
+Add the following to your info additions. If you already have an `SKAdNetworkItems` then append the `dict` items to the `array`.
+
+```xml
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>su67r6k2v3.skadnetwork</string>
+    </dict>
+</array>
+```
 
 
 

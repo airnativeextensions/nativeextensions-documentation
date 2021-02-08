@@ -59,7 +59,7 @@ There is no additional code required just a few additional configuration options
 
 ### Android
 
-Add the following to your manifest additions inside the `application` tag. You must replace `YOUR_APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+Add the following to your manifest additions inside the `application` tag. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 
 ```xml
@@ -89,7 +89,17 @@ Add the following to your manifest additions inside the `application` tag. You m
 
 ### iOS
 
-No additional configuration required.
+Add the following to your info additions. If you already have an `SKAdNetworkItems` then append the `dict` items to the `array`.
+
+```xml
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>4dzt52r2t5.skadnetwork</string>
+    </dict>
+</array>
+```
 
 
 
