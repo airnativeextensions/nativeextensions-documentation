@@ -6,6 +6,14 @@ slug: /ironsource/
 
 ![](images/hero.png)
 
+
+>
+> This extension is provided for **free**. If it helps you please consider sponsoring the developers to continue support and development of the extension:
+>
+> [:heart: Sponsor](https://github.com/sponsors/marchbold)
+>
+
+
 # IronSource
 
 IronSource is an AIR Native Extension to access the [IronSource](https://www.ironsrc.com/) advertising SDK for in app monetisation.
@@ -38,7 +46,8 @@ IronSource does provide an offical ANE. We developed this extension so we can up
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-IronSource/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/ironsource). 
+The [documentation site](https://docs.airnativeextensions.com/docs/ironsource/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/ironsource/). 
+
 
 Quick Example: 
 
