@@ -1,5 +1,12 @@
 
 
+###### 2021.02.11 [v13.0.031]
+
+```
+Fixed issue with purchase state during restore purchases on Play Billing (resolves #395)
+```
+
+
 ###### 2021.02.01 [v13.0.030]
 
 ```
