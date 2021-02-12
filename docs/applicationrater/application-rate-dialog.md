@@ -23,7 +23,8 @@ If you have set multiple conditions then the first condition to be met will caus
 >
 > Note:
 >
-> This extension stores the current launch count, events and settings in a file in the application directory.
+> This extension stores the current launch count, events and settings in a file in the application directory
+> except on iOS/tvOS/macOS where the application user defaults is used to store this data. 
 >
 
 
@@ -32,7 +33,7 @@ and display the rate dialog after the max days is reached (default of 5 days).
 
 The code to achieve this is quite simple, just add the following lines at some point during your application
 launch. We suggest somewhere after your is initialised and displayed. The important bit is to determine your
-application ID and correctly set that in the `setApplicationId` call (see the [Application ID](application-id) 
+application ID and correctly set that in the `setApplicationId()` call (see the [Application ID](application-id) 
 section).
 
 ```actionscript
@@ -74,6 +75,13 @@ if (ApplicationRater.service.hasMetConditions())
 } 
 ```
 
+### iOS
+
+![](images/rate_dialog_screen.png)
+
+### macOS 
+
+![](images/rate_dialog_screen_macos.png)
 
 
 ## Conditions and Options

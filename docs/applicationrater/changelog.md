@@ -1,5 +1,13 @@
 
 
+###### 2021.02.12 [v5.5.001]
+
+```
+Added macOS support including AppStore redirects and Review Controller (resolves #56)
+Removed deprecated IOS10 variant
+```
+
+
 ###### 2021.01.13 [v5.4.012]
 
 ```

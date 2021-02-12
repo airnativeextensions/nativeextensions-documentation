@@ -39,7 +39,7 @@ You can access the Google Play Services client library extensions here: [https:/
 
 >
 > **Note:** The Google Play Services and Android Support ANEs are only **required** on Android devices. 
-> There are no issues packaging these extensions with all platforms as there are default implementations available which will allow your code to package without errors however if you are only building an iOS application feel free to remove the Google Play Services and Android Support ANEs from your application.
+> There are no issues packaging these extensions with all platforms as there are default implementations available which will allow your code to package without errors however if you are only building an iOS/macOS application feel free to remove the Google Play Services and Android Support ANEs from your application.
 >
 
 
@@ -94,20 +94,4 @@ You should add the listing below to your application descriptor.
 ]]></manifestAdditions>
 ```
 
-
-## Variants
-
-There are different versions of this ANE available. 
-
-- `com.distriqt.ApplicationRater.ane`
-
-	- If you do want to use the review controller then link against the base `com.distriqt.ApplicationRater.ane` extension. This version includes all the available functionality.
-
-- `IOS10/com.distriqt.ApplicationRater.IOS10.ane`
-
-	- If you don't want to link against the iOS SDK v10.3+ for the iOS [Review Controller](review-controller) then use the `com.distriqt.ApplicationRater.IOS10.ane` in the `IOS10` directory. This version will not support the review controller but also won't require the additional components from the iOS SDK that aren't included in the AIR SDK.
-
->
-> All variants have the same extension id: `com.distriqt.ApplicationRater`
->
 

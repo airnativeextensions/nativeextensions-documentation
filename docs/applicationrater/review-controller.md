@@ -8,10 +8,18 @@ sidebar_label: Review Controller
 The review controller allows you to gather user reviews inside your application without redirecting them to the store. This process generally does not give you feedback about whether a user wrote a review however it does give you the ability to simplify a review request, presenting the review screens directly in your application.
 
 
+### Apple
+
 Apple introduced the "Store Review Controller" in iOS 10.3. 
 
 ![](images/request_review.png)
 
+and in macOS 10.14:
+
+![](images/request_review_macos.png)
+
+
+### Google
 
 Google has made available the "In-App Review Activity" as part of the Play Core library running on Android v5.0 (API level 21) and higher that have the Google Play Store installed.
 
@@ -31,8 +39,11 @@ if (ApplicationRater.service.review.isSupported)
 }
 ```
 
-Currently this is supported on iOS 10.3+ and on Android 5.0+ (API 21+) through Google Play. 
+Currently this is supported on iOS 10.3+, macOS 10.14+ and on Android 5.0+ (API 21+) through Google Play. 
 
+>
+> Note: this simply checks the operating system version and some basic requirements. It will not definitely report that your application was installed through an application store. If your application has multiple distribution avenues, make sure you use a method to check whether the application was installed via a store as well.
+>
 
 
 ### Requesting Review
@@ -49,7 +60,7 @@ if (ApplicationRater.service.review.isSupported)
 
 Although you should call this method when it makes sense in the user experience flow of your app, the actual display of a rating/review request view is governed by App Store / Google Play policy and quotas and this logic is outside the control of the extension.
 
-Because this method may or may not present any UI, it's not appropriate to call it in response to a button tap or other user action. 
+**Because this method may or may not present any UI, it's not appropriate to call it in response to a button tap or other user action.** 
 
 
 #### When to request
@@ -73,12 +84,12 @@ Android: *Google Play enforces a quota on how often a user can be shown the revi
 
 ### Testing 
 
-#### iOS
+#### Apple
 
-With iOS while your app is still in development mode, a rating/review request view is always displayed so that you can test the user interface and experience. **However, this method has no effect when you call it in an app that you distribute using Testflight.**
+With iOS and macOS while your app is still in development mode, a rating/review request view is always displayed so that you can test the user interface and experience. **However, this method has no effect when you call it in an app that you distribute using Testflight.**
 
 
-#### Android
+#### Google
 
 Follow the steps in the guide below for instructions on testing:
 

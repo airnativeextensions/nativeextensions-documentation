@@ -13,10 +13,12 @@ The [Application Rater](https://airnativeextensions.com/extension/com.distriqt.A
 
 It also allows you to control this process yourself and use the extension to correctly redirect to the appropriate store review page.
 
+Additionally you can use the modern in-app review controllers allowing simple in-app ratings and reviews so your user never has to leave your application.
+
 
 The simple API allows you to quickly integrate application rating in your AIR application in just a few lines of code. Identical code base can be used across all platforms allowing you to concentrate on your application and not device specifics.
 
-We provide complete guides to get you up and running with asset selection quickly and easily.
+We provide complete guides to get you up and running with application ratings and reviews quickly and easily.
 
 
 As with all our extensions you get access to a year of support and updates as we are continually improving and updating the extensions for OS updates and feature requests.
@@ -30,17 +32,21 @@ As with all our extensions you get access to a year of support and updates as we
 - Reminder code to ask the user to rate at a later point if the user clicked the "remind me later" option;
 - Customisable labels and conditions;
 - Direct link to appropriate stores review page;
-- Supports different Android stores including Amazon and Google Play
+- Supports different Android stores including Amazon and Google Play;
+- In App Reviews using:
+  - Google Play In-App Review, and;
+  - Apple StoreKit Review Controller; 
 
 
 ## Documentation
 
-The [Wiki](https://github.com/distriqt/ANE-ApplicationRater/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/applicationrater). 
+The [documentation site](https://docs.airnativeextensions.com/docs/applicationrater/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/applicationrater/). 
 
 
 ```actionscript
 ApplicationRater.service.setApplicationId( "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
 ApplicationRater.service.setApplicationId( "552872162", ApplicationRater.IMPLEMENTATION_IOS );
+ApplicationRater.service.setApplicationId( "552872162", ApplicationRater.IMPLEMENTATION_MACOS );
 ApplicationRater.service.applicationLaunched();
 ```
 

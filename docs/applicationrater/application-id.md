@@ -9,8 +9,7 @@ The application ID is the most important thing to set in the extension, an inval
 
 ## Android
 
-Under Android the value is the application identifier defined in your application descriptor, preceeded by `air.`. So, for example the distriqt 
-test application `com.distriqt.test` has a Google Play id of `air.com.distriqt.test`. 
+Under Android the value is the application identifier defined in your application descriptor, preceeded by `air.`. So, for example the distriqt test application `com.distriqt.test` has a Google Play id of `air.com.distriqt.test`. 
 
 A simple way to attain this value is to use the NativeApplication class as follows: 
 
@@ -18,17 +17,17 @@ A simple way to attain this value is to use the NativeApplication class as follo
 var applicationId:String = "air." + NativeApplication.nativeApplication.applicationId;
 ```
 
-There are exceptions to this however! If you have an invalid Java package name as your application ID then the AIR packager will change the id to be valid. For example, if 
-your application has a package starting with a number `com.1invalid.example` will be changed. To confirm you should always make sure you supply the ID that you use in 
+There are exceptions to this however! If you have an invalid Java package name as your application ID then the AIR packager will change the id to be valid. For example, if your application has a package starting with a number `com.1invalid.example` will be changed. To confirm you should always make sure you supply the ID that you use in 
 the Google Play console to setup your application in the Play Store.
 
 Additionally note if you are using the `NO_ANDROID_FLAIR` flag you will not have the `air.` prefix mentioned above.
 
 
-## iOS
+## iOS / tvOS / macOS
 
-Under iOS the value is a little more complicated. It's the value of the Apple ID in your iTunes Connect application page. For example, the distriqt test application `com.distriqt.test`
-has an Apple ID of `552872162`. 
+Under Apple the value is a little more complicated. It's the value of the Apple ID in your iTunes Connect application page. For example, the distriqt test application `com.distriqt.test` has an iOS Apple ID of `552872162`. 
+
+> It may be different for your macOS and iOS applications.
 
 It can also be found in the iTunes App Store link URL which will be of the form 
 `https://itunes.apple.com/us/app/[APP_NAME]/id[APP_ID]`
@@ -56,13 +55,27 @@ ApplicationRater.service.retrieveApplicationId();
 
 This will dispatch an event when the id is determined:
 
+- `ApplicationIDEvent.RETRIEVED`: If the application id was retrieved correctly;
+- `ApplicationIDEvent.ERROR`: If the application could not be identified.
+
+An error could result if the application is not yet in the app store or if the current application id does not match the one in the store.
+
+
+For example:
+
 ```actionscript
 ApplicationRater.service.addEventListener( ApplicationIDEvent.RETRIEVED, applicationId_retrievedHandler );
+ApplicationRater.service.addEventListener( ApplicationIDEvent.ERROR, applicationId_errorHandler );
 ApplicationRater.service.retrieveApplicationId();
 
 function applicationId_retrievedHandler( event:ApplicationIDEvent ):void 
 {
     trace( event.applicationId );
+}
+
+function applicationId_errorHandler( event:ApplicationIDEvent ):void 
+{
+    trace( "error: [" + event.errorCode + "] " + event.error )
 }
 ```
 
@@ -71,18 +84,17 @@ function applicationId_retrievedHandler( event:ApplicationIDEvent ):void
 
 Manually setting the application id can be useful if you want to ensure the rating process is working during testing or other situations where you don't want to rely on the automatic retrieval. 
 
-You can call the `setApplicationId` function multiple times with the platform string (and store if required) specifying the platform for the `applicationId` so you won't have to determine 
-the OS to set the correct ID. 
+You can call the `setApplicationId()` function multiple times with the platform string (and store if required) specifying the platform for the `applicationId` so you won't have to determine the OS to set the correct ID. 
 
 If you don't specify the platform then it is assumed you have determined to correct ID and it will overwrite any previous value.
-
 
 You should pass the above id's to the extension as early as possible, preferably just after you 
 initialise the extension as below:
 
 ```actionscript
 ApplicationRater.service.setApplicationId( "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
-ApplicationRater.service.setApplicationId( "552872162", ApplicationRater.IMPLEMENTATION_IOS );
+ApplicationRater.service.setApplicationId( "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
+ApplicationRater.service.setApplicationId( "YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS );
 ```
 
 
@@ -95,14 +107,17 @@ You can combine both these methods to provide a fallback in the cases where the 
 
 Doing the following will set the fallback application id's first and then attempt to correct them using the automatic method.
 
+
 ```actionscript
 // Set the default / fallback
 ApplicationRater.service.setApplicationId( "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
-ApplicationRater.service.setApplicationId( "552872162", ApplicationRater.IMPLEMENTATION_IOS );
+ApplicationRater.service.setApplicationId( "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
+ApplicationRater.service.setApplicationId( "YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS );
 
 // Attempt automatic retrieval
 ApplicationRater.service.retrieveApplicationId();
 ```
+
 
 
 
