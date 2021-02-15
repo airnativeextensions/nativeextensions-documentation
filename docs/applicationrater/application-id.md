@@ -9,7 +9,11 @@ The application ID is the most important thing to set in the extension, an inval
 
 ## Android
 
-Under Android the value is the application identifier defined in your application descriptor, preceeded by `air.`. So, for example the distriqt test application `com.distriqt.test` has a Google Play id of `air.com.distriqt.test`. 
+Under Android the value is the Java package name of your application.
+
+### AIR 
+
+With AIR the value is the application identifier defined in your application descriptor, preceeded by `air.`. So, for example the distriqt test application `com.distriqt.test` has a Google Play id of `air.com.distriqt.test`. 
 
 A simple way to attain this value is to use the NativeApplication class as follows: 
 
@@ -22,6 +26,9 @@ the Google Play console to setup your application in the Play Store.
 
 Additionally note if you are using the `NO_ANDROID_FLAIR` flag you will not have the `air.` prefix mentioned above.
 
+The default value uses the value from the NativeApplication applicationId variable, preceeded by `air.` which should be the valid id for your Android application in the Google Play store.
+
+
 
 ## iOS / tvOS / macOS
 
@@ -32,10 +39,6 @@ Under Apple the value is a little more complicated. It's the value of the Apple 
 It can also be found in the iTunes App Store link URL which will be of the form 
 `https://itunes.apple.com/us/app/[APP_NAME]/id[APP_ID]`
 
-
-## Default
-
-The default value uses the value from the NativeApplication applicationId variable, preceeded by `air.` which should be the valid id for your Android application in the Google Play store.
 
 
 
@@ -49,6 +52,11 @@ This will most likely not work for a test application, where you may not yet hav
 
 To retrieve the id's automatically simply call the `retrieveApplicationId()` function.
 
+An error could result if the application is not yet in the app store or if the current application id does not match the one in the store.
+
+
+### AIR 
+
 ```actionscript
 ApplicationRater.service.retrieveApplicationId();
 ```
@@ -58,26 +66,65 @@ This will dispatch an event when the id is determined:
 - `ApplicationIDEvent.RETRIEVED`: If the application id was retrieved correctly;
 - `ApplicationIDEvent.ERROR`: If the application could not be identified.
 
-An error could result if the application is not yet in the app store or if the current application id does not match the one in the store.
-
 
 For example:
 
 ```actionscript
-ApplicationRater.service.addEventListener( ApplicationIDEvent.RETRIEVED, applicationId_retrievedHandler );
-ApplicationRater.service.addEventListener( ApplicationIDEvent.ERROR, applicationId_errorHandler );
+ApplicationRater.service.addEventListener( 
+    ApplicationIDEvent.RETRIEVED, retrievedHandler );
+ApplicationRater.service.addEventListener( 
+    ApplicationIDEvent.ERROR, errorHandler );
 ApplicationRater.service.retrieveApplicationId();
 
-function applicationId_retrievedHandler( event:ApplicationIDEvent ):void 
+function retrievedHandler( event:ApplicationIDEvent ):void 
 {
     trace( event.applicationId );
 }
 
-function applicationId_errorHandler( event:ApplicationIDEvent ):void 
+function errorHandler( event:ApplicationIDEvent ):void 
 {
     trace( "error: [" + event.errorCode + "] " + event.error )
 }
 ```
+
+
+### Unity
+
+
+```csharp
+ApplicationRater.Instance.RetrieveApplicationId();
+```
+
+This will dispatch an event when the id is determined:
+
+- Retrieved: If the application id was retrieved correctly
+	- `OnApplicationIDRetrieved` event
+- Error: If the application could not be identified
+	- `OnApplicationIDError` event
+
+
+For example:
+
+```csharp
+ApplicationRater.Instance.OnApplicationIDRetrieved 
+	+= OnApplicationIDRetrieved;
+ApplicationRater.Instance.OnApplicationIDError 
+	+= OnApplicationIDError;
+
+ApplicationRater.Instance.RetrieveApplicationId();
+
+
+void OnApplicationIDRetrieved(ApplicationIDEvent e)
+{
+	Debug.Log(e.applicationId);
+}
+
+void OnApplicationIDError(ApplicationIDEvent e)
+{
+	Debug.Log("error: [" + e.errorCode + "] " + e.error);
+}
+```
+
 
 
 ## Manual Setup
@@ -91,12 +138,27 @@ If you don't specify the platform then it is assumed you have determined to corr
 You should pass the above id's to the extension as early as possible, preferably just after you 
 initialise the extension as below:
 
+AIR: 
+
 ```actionscript
-ApplicationRater.service.setApplicationId( "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
-ApplicationRater.service.setApplicationId( "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
-ApplicationRater.service.setApplicationId( "YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS );
+ApplicationRater.service.setApplicationId( 
+    "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
+ApplicationRater.service.setApplicationId( 
+    "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
+ApplicationRater.service.setApplicationId( 
+    "YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS );
 ```
 
+Unity:
+
+```csharp
+ApplicationRater.Instance.SetApplicationId(
+	"com.package.application", ApplicationRater.IMPLEMENTATION_ANDROID);
+ApplicationRater.Instance.SetApplicationId(
+	"XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS);
+ApplicationRater.Instance.SetApplicationId(
+	"YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS);
+```
 
 
 
@@ -107,16 +169,37 @@ You can combine both these methods to provide a fallback in the cases where the 
 
 Doing the following will set the fallback application id's first and then attempt to correct them using the automatic method.
 
+AIR:
 
 ```actionscript
 // Set the default / fallback
-ApplicationRater.service.setApplicationId( "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
-ApplicationRater.service.setApplicationId( "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
-ApplicationRater.service.setApplicationId( "YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS );
+ApplicationRater.service.setApplicationId( 
+    "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
+ApplicationRater.service.setApplicationId( 
+    "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
+ApplicationRater.service.setApplicationId( 
+    "YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS );
 
 // Attempt automatic retrieval
 ApplicationRater.service.retrieveApplicationId();
 ```
+
+
+Unity:
+
+```csharp
+// Set the default / fallback
+ApplicationRater.Instance.SetApplicationId(
+	"com.package.application", ApplicationRater.IMPLEMENTATION_ANDROID);
+ApplicationRater.Instance.SetApplicationId(
+	"XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS);
+ApplicationRater.Instance.SetApplicationId(
+	"YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS);
+
+// Attempt automatic retrieval
+ApplicationRater.Instance.RetrieveApplicationId();
+```
+
 
 
 

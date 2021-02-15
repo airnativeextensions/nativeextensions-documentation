@@ -17,14 +17,23 @@ This function will attempt to determine which store the application was installe
 
 Example:
 
+AIR:
+
 ```actionscript
 var store:String = ApplicationRater.service.getInstallerStore();
 ```
 
+Unity:
+
+```csharp
+string store = ApplicationRater.Instance.GetInstallerStore();
+```
 
 You can then use this value to set the appropriate application id if you use different application id's in different stores.
 
 For example, say we have `air.com.distriqt.test` in the Google Play Store and `air.com.distriqt.amazon` in the Amazon store:
+
+AIR:
 
 ```actionscript
 var store:String = ApplicationRater.service.getInstallerStore();
@@ -37,6 +46,24 @@ switch (store)
     default:
     case ApplicationRater.STORE_GOOGLEPLAY:
         ApplicationRater.service.setApplicationId( "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
+        break;
+    
+}
+```
+
+Unity:
+
+```csharp
+string store = ApplicationRater.Instance.GetInstallerStore();
+switch (store)
+{
+    case ApplicationRater.STORE_AMAZON:
+        ApplicationRater.Instance.SetApplicationId( "com.distriqt.amazon", ApplicationRater.IMPLEMENTATION_ANDROID );
+        break;
+    
+    default:
+    case ApplicationRater.STORE_GOOGLEPLAY:
+        ApplicationRater.Instance.SetApplicationId( "com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
         break;
     
 }

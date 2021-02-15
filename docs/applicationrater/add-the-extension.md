@@ -95,3 +95,16 @@ You should add the listing below to your application descriptor.
 ```
 
 
+## Checking for Support
+
+You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
+
+This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
+
+
+```actionscript
+if (ApplicationRater.isSupported)
+{
+	// Functionality here
+}
+```

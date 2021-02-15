@@ -36,13 +36,24 @@ launch. We suggest somewhere after your is initialised and displayed. The import
 application ID and correctly set that in the `setApplicationId()` call (see the [Application ID](application-id) 
 section).
 
+AIR:
+
 ```actionscript
-ApplicationRater.service.setApplicationId( "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
-ApplicationRater.service.setApplicationId( "552872162", ApplicationRater.IMPLEMENTATION_IOS );
+ApplicationRater.service.setApplicationId( 
+  "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
 ApplicationRater.service.applicationLaunched();
 ```
 
-The `applicationLaunched` function should be called when your application launches, after your application has initialised. It will increment the launch count and if `autoPrompt` is set will cause the rate dialog to be displayed if the conditions are met.
+Unity:
+
+```csharp
+ApplicationRater.Instance.SetApplicationId(
+	"XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS);
+ApplicationRater.Instance.ApplicationLaunched();
+```
+
+
+The `applicationLaunched()` function should be called when your application launches, after your application has initialised. It will increment the launch count and if `autoPrompt` is set will cause the rate dialog to be displayed if the conditions are met.
 
 
 
@@ -52,9 +63,18 @@ By default the extension will automatically prompt the user when the conditions 
 
 If you wish to disable this, you do so by setting `autoPrompt` to be `false`:
 
+AIR:
+
 ```actionscript
 ApplicationRater.service.autoPrompt = false;
 ```
+
+Unity:
+
+```csharp
+ApplicationRater.Instance.autoPrompt = false;
+```
+
 
 When disabled you are responsible for displaying the dialog as in the section below.
 
@@ -62,11 +82,12 @@ When disabled you are responsible for displaying the dialog as in the section be
 
 ## Displaying the Rate Dialog
 
-If you have `autoPrompt` set then the dialog will be displayed when the `applicationLaunched` function is 
+If you have `autoPrompt` set then the dialog will be displayed when the `applicationLaunched()`, or `userDidSignificantEvent()` function is 
 called and the conditions have been met.
 
-Alternatively if you wish to control when to display the dialog you can set `autoPrompt` to be false and 
-instead query the `hasMetConditions` function, calling `showRateDialog` if appropriate. Eg:
+Alternatively if you wish to control when to display the dialog you can set `autoPrompt` to be false and instead query the `hasMetConditions()` function, calling `showRateDialog()` if appropriate. Eg:
+
+AIR:
 
 ```actionscript
 if (ApplicationRater.service.hasMetConditions())
@@ -74,6 +95,16 @@ if (ApplicationRater.service.hasMetConditions())
 	ApplicationRater.service.showRateDialog();
 } 
 ```
+
+Unity:
+
+```csharp
+if (ApplicationRater.Instance.HasMetConditions())
+{
+	ApplicationRater.Instance.ShowRateDialog();
+} 
+```
+
 
 ### iOS
 
@@ -86,23 +117,29 @@ if (ApplicationRater.service.hasMetConditions())
 
 ## Conditions and Options
 
-We suggest all these conditions and options should be set before calling `applicationLaunched`, especially
-if you are using auto prompting.
+We suggest all these conditions and options should be set before calling `applicationLaunched()`, especially if you are using auto prompting.
 
 
 
 ### Application Launches
 
-To set the number of application launches that will trigger the dialog you use the `setLaunchesUntilPrompt` function.
+To set the number of application launches that will trigger the dialog you use the `setLaunchesUntilPrompt()` function.
 
 For example:
+
+AIR:
 
 ```actionscript
 ApplicationRater.service.setLaunchesUntilPrompt( 10 );
 ```
 
-Each time `applicationLaunched` is called, the internal count will be incremented and compared against this 
-value. 
+Unity:
+
+```csharp
+ApplicationRater.Instance.SetLaunchesUntilPrompt( 10 );
+```
+
+Each time `applicationLaunched` is called, the internal count will be incremented and compared against this value. 
 
 If you wish to disable the application launch condition, simply set the value to `-1`.
 
@@ -112,20 +149,36 @@ If you wish to disable the application launch condition, simply set the value to
 
 ### Days Until Prompt
 
-You can set the number of days from the initial launch that will trigger the dialog by using the `setDaysUntilPrompt` 
+You can set the number of days from the initial launch that will trigger the dialog by using the `setDaysUntilPrompt()` 
 function.
 
 For example, to set it to be 2 weeks after initial launch:
+
+AIR:
 
 ```actionscript
 ApplicationRater.service.setDaysUntilPrompt( 14 );
 ```
 
+Unity:
+
+```csharp
+ApplicationRater.Instance.SetDaysUntilPrompt( 14 );
+```
+
 If you wish to disable the number of days condition and rely on the other conditions (eg, application launches 
 or significant user events) you should set this value to `-1`:
 
+AIR:
+
 ```actionscript
 ApplicationRater.service.setDaysUntilPrompt( -1 );
+```
+
+Unity:
+
+```csharp
+ApplicationRater.Instance.SetDaysUntilPrompt( -1 );
 ```
 
 The default value is `5`.
@@ -135,24 +188,37 @@ The default value is `5`.
 
 ### User Significant Events
 
-You can also enable the condition of significant user events. These could be events such as games completed
-or photos taken, and depends entirely on your application.
+You can also enable the condition of significant user events. These could be events such as games completed or photos taken, and depends entirely on your application.
 
-You can change the value of the number of events until prompt by using the `setSignificantEventsUntilPrompt` 
-function. By default these are disabled which you can acheive by setting the value to `-1`.
+You can change the value of the number of events until prompt by using the `setSignificantEventsUntilPrompt()` function. By default these are disabled which you can acheive by setting the value to `-1`.
 
 For example, to set the condition that after 5 events the dialog should be displayed:
+
+AIR:
 
 ```actionscript
 ApplicationRater.service.setSignificantEventsUntilPrompt( 5 );
 ```
 
+Unity:
+
+```csharp
+ApplicationRater.Instance.SetSignificantEventsUntilPrompt( 5 );
+```
+
 When you wish to log a significant event, simply call:
+
+AIR:
 
 ```actionscript
 ApplicationRater.service.userDidSignificantEvent();
 ```
 
+Unity:
+
+```csharp
+ApplicationRater.Instance.UserDidSignificantEvent();
+```
 
 
 ### Require All Conditions
@@ -184,10 +250,17 @@ of days and is from the date that the user pressed the "Remind me later" button.
 
 For example, to remind a user one week later, set this value to 7:
 
+AIR:
+
 ```actionscript
 ApplicationRater.service.setTimeBeforeReminding( 7 );
 ```
 
+Unity:
+
+```csharp
+ApplicationRater.Instance.SetTimeBeforeReminding( 7 );
+```
 
 
 
