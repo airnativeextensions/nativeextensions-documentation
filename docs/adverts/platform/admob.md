@@ -172,7 +172,7 @@ Also we suggest you enable hardware acceleration so videos are displayed correct
 		<!-- AndroidX Work -->
         <provider
             android:name="androidx.work.impl.WorkManagerInitializer"
-            android:authorities="com.distriqt.extension.adverts.test.workmanager-init"
+            android:authorities="APPLICATION_PACKAGE.workmanager-init"
             android:directBootAware="false"
             android:exported="false"
             android:multiprocess="true" />

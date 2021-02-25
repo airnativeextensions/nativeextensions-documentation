@@ -271,6 +271,7 @@ module.exports = {
     { 
       "Get Started": [
         "applicationrater/add-the-extension",
+        "applicationrater/add-the-plugin",
       ]
     },
     { 
