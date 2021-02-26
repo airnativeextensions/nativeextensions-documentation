@@ -1,5 +1,12 @@
 
 
+###### 2021.02.26 [v13.0.037]
+
+```
+Corrected developer challenge on huawei consume purchase by product id (resolves #402)
+```
+
+
 ###### 2021.02.11 [v13.0.031]
 
 ```
