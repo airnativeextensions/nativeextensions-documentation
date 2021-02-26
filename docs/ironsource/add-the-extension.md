@@ -92,7 +92,9 @@ The following should be added to your `extensions` node in your application desc
 
 ### Manifest Additions 
 
-The IronSource ANE requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your manifest additions.
+The IronSource ANE requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your manifest additions. 
+
+You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 ```xml
 <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
@@ -120,7 +122,7 @@ The IronSource ANE requires a few additions to the manifest to be able to start 
         android:theme="@android:style/Theme.Translucent" />
 	<provider
 		android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
-		android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider" />
+		android:authorities="APPLICATION_PACKAGE.IronsourceLifecycleProvider" />
 
 </application>
 ```
