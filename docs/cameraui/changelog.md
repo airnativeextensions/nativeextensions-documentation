@@ -1,5 +1,12 @@
 
 
+###### 2021.03.01 [v3.1.022]
+
+```
+Added ability to request audio permission directly (resolves #77)
+```
+
+
 ###### 2020.03.23 [v3.0.009]
 
 ```

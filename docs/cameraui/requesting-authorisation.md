@@ -51,6 +51,21 @@ private function authorisationStatus_changedHandler( event:AuthorisationEvent ):
 ```
 
 
+### Authorisation Types
+
+There are several types of authorisation that you will require for this extension and as they 
+may not be required by all applications they have been separated so you can request them individually 
+as appropriate for your application:
+
+- `AuthorisationType.CAMERA`: Access to the camera device
+- `AuthorisationType.AUDIO`: Access to the microphone device
+- `AuthorisationType.PHOTOS`: Access to the camera roll to save images (only required if you set `saveToCameraRoll` to `true` in the options)
+
+You will need to run through the above process for each of the permissions your application 
+requires!
+
+
+
 ### Camera Permission
 
 While this ANE uses the camera, it does not require the `android.permission.CAMERA` permission 
