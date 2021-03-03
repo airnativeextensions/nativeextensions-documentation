@@ -236,7 +236,7 @@ function scoresErrorHandler( event:LeaderboardEvent ):void
 
 
 
-### Display Leaderboard UI
+### Displaying Leaderboard UI
 
 To display the native leaderboard UI, call `displayLeaderboardUI()` with the leaderboard id of interest.
 
@@ -247,6 +247,11 @@ GameServices.service.leaderboards.displayLeaderboardUI( "leaderboard_id" );
 Your game will then display the leaderboard UI for the specified leaderboard, for example, Google Play Games on Android: 
 
 ![](images/googleplay_leaderboards_leaderboardUI.png)
+
+
+Game Center on iOS:
+
+![](images/gamecenter-showui-leaderboard.png)
 
 
 You can also listen for the `LeaderboardEvent.UI_CLOSED` event to be informed about the user closing the native UI:

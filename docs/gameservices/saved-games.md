@@ -1,6 +1,6 @@
 ---
 title: Saved Games
-sidebar_label: Saved Games
+sidebar_label: Usage
 ---
 
 

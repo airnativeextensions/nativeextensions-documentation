@@ -1,6 +1,6 @@
 ---
 title: Turn Based Multiplayer - Key Concepts
-sidebar_label: Turn Based Multiplayer - Key Concepts
+sidebar_label: Key Concepts
 ---
 
 

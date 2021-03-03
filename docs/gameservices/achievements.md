@@ -140,7 +140,7 @@ function achievementsError( event:AchievementEvent ):void
 ```
 
 
-## Displaying Achievements
+## Displaying Achievements UI
 
 To show a player's achievements, call `displayAchievementsUI()`. 
 
@@ -151,6 +151,12 @@ GameServices.service.achievements.displayAchievementsUI();
 Your game will then display the default achievements UI, for example, Google Play Games on Android: 
 
 ![](images/googleplay_achievements_achievementsUI.png)
+
+
+Game Center on iOS:
+
+![Game Center Achievements](images/gamecenter-showui-achievements.png)
+
 
 You can also listen for the `AchievementEvent.ACHIEVEMENTS_UI_CLOSED` event to be informed about the user closing the native achievements UI:
 

@@ -1,6 +1,6 @@
 ---
 title: Turn Based Multiplayer - Implementation
-sidebar_label: Turn Based Multiplayer - Implementation
+sidebar_label: Implementation
 ---
 
 Sections:

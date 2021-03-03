@@ -1,5 +1,13 @@
 
 
+###### 2021.03.03 [v7.1.009]
+
+```
+Added Access Point functionality for Game Center on iOS 14+
+Added generic show UI functionality to show dashboard elements (resolves #189) 
+```
+
+
 ###### 2021.01.20 [v7.0.005]
 
 ```

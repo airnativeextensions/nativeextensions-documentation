@@ -1211,6 +1211,12 @@ module.exports = {
         },
         "gameservices/quests-and-events",
         "gameservices/screen-recording",
+        {
+          "User Interface": [
+            "gameservices/user-interface",
+            "gameservices/access-point"
+          ]
+        }
       ]
     },
     {

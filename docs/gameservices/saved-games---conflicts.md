@@ -1,6 +1,6 @@
 ---
 title: Saved Games - Conflicts
-sidebar_label: Saved Games - Conflicts
+sidebar_label: Conflicts
 ---
 
 ## Detecting Conflicts

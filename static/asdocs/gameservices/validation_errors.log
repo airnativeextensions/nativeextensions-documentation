@@ -1,0 +1,6 @@
+Text for description in com.distriqt.extension.gameservices.accesspoint:AccessPointOptions/location is not valid.
+org.xml.sax.SAXParseException; lineNumber: 5; columnNumber: 6; The element type "code" must be terminated by the matching end-tag "</code>".
+
+Text for description in com.distriqt.extension.gameservices.accesspoint:AccessPointOptions/setLocation is not valid.
+org.xml.sax.SAXParseException; lineNumber: 5; columnNumber: 9; The element type "code" must be terminated by the matching end-tag "</code>".
+

@@ -1,6 +1,6 @@
 ---
 title: Turn Based Multiplayer - Invitations
-sidebar_label: Turn Based Multiplayer - Invitations
+sidebar_label: Invitations
 ---
 
 
