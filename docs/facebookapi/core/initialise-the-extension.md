@@ -39,8 +39,10 @@ Starting with v9 Facebook has removed this auto-initialisation feature.
 If you currently rely on the Facebook Platform SDKs being automatically initialized for use, you will now need to explicitly initialize the SDK by making the appropriate calls.
 :::
 
-We suggest you ensure you have disabled automatic initialisation in your application by setting set the `AutoInitEnabled` flag to `false` in the application descriptor.
 
+### 
+
+To produce consistent results we suggest you ensure you have disabled automatic initialisation in your application by setting set the `AutoInitEnabled` flag to `false` in the application descriptor. These flags should be ignored however it appears Android may still auto initialise in some cases. 
 
 For iOS you set the `FacebookAutoInitEnabled` key to `false` in your `InfoAdditions`
 

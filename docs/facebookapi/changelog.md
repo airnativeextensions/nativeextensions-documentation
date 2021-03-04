@@ -1,5 +1,13 @@
 
 
+###### 2021.03.04 [v9.0.005]
+
+```
+Added the data field to game requests (resolves #301)
+Corrected documentation around new initialisation process (#300)
+```
+
+
 ###### 2021.02.03 [v9.0.003]
 
 ```
