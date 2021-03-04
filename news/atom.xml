@@ -2,12 +2,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2020-09-22T00:00:00.000Z</updated>
+    <updated>2021-02-28T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2021 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[February 2021]]></title>
+        <id>2021-02</id>
+        <link href="https://docs.airnativeextensions.com/news/2021-02"/>
+        <updated>2021-02-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[APM, InAppBilling, OneSignal, Facebook and Unity]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[January 2021]]></title>
+        <id>2021-01</id>
+        <link href="https://docs.airnativeextensions.com/news/2021-01"/>
+        <updated>2021-01-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Firebase, Facebook, Advertising, Game Services and more…]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[December 2020]]></title>
+        <id>2020-12</id>
+        <link href="https://docs.airnativeextensions.com/news/2020-12"/>
+        <updated>2020-12-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Firebase Crashlytics and Huawei Ads Kit]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[November 2020]]></title>
+        <id>2020-11</id>
+        <link href="https://docs.airnativeextensions.com/news/2020-11"/>
+        <updated>2020-11-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Facebook, NativeWebView, Flash EOL, and advertising updates.]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
