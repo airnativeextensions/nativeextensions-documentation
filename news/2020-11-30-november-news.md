@@ -35,7 +35,7 @@ Migrating user’s have a look at the [migration documentation here](https://doc
 ### [Flash EOL](https://medium.com/airnativeextensions/managing-flash-end-of-life-e7d08b82504c)
 
 
-You may be worried about the Flash End of Life which will be occurring next year. We wrote a bit of a break down of what’s going to happen earlier this month [here](https://medium.com/airnativeextensions/managing-flash-end-of-life-e7d08b82504c). If you need any help managing or converting existing web applications please feel free to get in [touch with us](airnativeextensions@distriqt.com). We have helped many clients this year prepare for the removal of the player from browsers.
+You may be worried about the Flash End of Life which will be occurring next year. We wrote a bit of a break down of what’s going to happen earlier this month [here](https://medium.com/airnativeextensions/managing-flash-end-of-life-e7d08b82504c). If you need any help managing or converting existing web applications please feel free to get in [touch with us](mailto:airnativeextensions@distriqt.com). We have helped many clients this year prepare for the removal of the player from browsers.
 
 
 
