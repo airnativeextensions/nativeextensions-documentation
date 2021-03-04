@@ -2356,7 +2356,8 @@ module.exports = {
     {
       "Android Development": [
         "tutorials/android-splash-screen",
-        "tutorials/android-adaptive-icons"
+        "tutorials/android-adaptive-icons",
+        "tutorials/android-resources"
       ]
     },
     {

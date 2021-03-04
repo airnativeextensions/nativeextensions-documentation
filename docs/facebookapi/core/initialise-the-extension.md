@@ -22,23 +22,25 @@ if (Facebook.isSupported)
 
 ## Initialise the Facebook Application
 
-Initialising the Facebook application is normally done automatically by the SDK. 
+To initialise the Facebook SDK call the `initialise()` function. You must do this before attempting to use any of the functionality in the Facebook Platform SDKs.
 
-However when you choose to disable automatic initialisation, for example, to ensure you have user consent for analytics, then you can manually initialise the Facebook SDK by calling `initialise()`,
 
 ```actionscript
 Facebook.instance.initialise();
 ```
 
-
-### Disable Automatic Initialisation
-
-To disable automatic initialisation set the `AutoInitEnabled` flag to `false` in the application descriptor.
+If you plan to gather permission to track the user or other such consent you should do this before calling `initialise()`.
 
 
+:::warning
+Previously you may have relied on the Facebook Platform SDKs automatically initialising on launch.
+Starting with v9 Facebook has removed this auto-initialisation feature.
 
+If you currently rely on the Facebook Platform SDKs being automatically initialized for use, you will now need to explicitly initialize the SDK by making the appropriate calls.
+:::
 
-#### iOS
+We suggest you ensure you have disabled automatic initialisation in your application by setting set the `AutoInitEnabled` flag to `false` in the application descriptor.
+
 
 For iOS you set the `FacebookAutoInitEnabled` key to `false` in your `InfoAdditions`
 
@@ -46,9 +48,6 @@ For iOS you set the `FacebookAutoInitEnabled` key to `false` in your `InfoAdditi
 <key>FacebookAutoInitEnabled</key>
 <false/>
 ```
-
-
-#### Android
 
 For Android you set the `com.facebook.sdk.AutoInitEnabled` meta-data value to `false`:
 
@@ -60,22 +59,4 @@ For Android you set the `com.facebook.sdk.AutoInitEnabled` meta-data value to `f
 
 This value should be inside the `application` node in your manifest additions.
 
-
-### Re-enable Automatic Initialisation
-
-Then, re-enable automatic initialisation after an end User provides consent by calling the `setAutoInitEnabled()` method of the `Facebook` class and setting it to `true`. You should then trigger a manual initialisation call to fully initialise the SDK.
-
-
-```actionscript
-Facebook.instance.setAutoInitEnabled( true );
-Facebook.instance.initialise();
-```
-
-
-You can also retrieve the current value of this setting by calling `getAutoInitEnabled()`:
-
-```actionscript
-var autoInitEnabled:Boolean = 
-	Facebook.instance.getAutoInitEnabled();
-```
 

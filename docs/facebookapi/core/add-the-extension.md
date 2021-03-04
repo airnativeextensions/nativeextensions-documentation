@@ -129,8 +129,8 @@ You will need to replace the instances of `APPLICATION_PACKAGE` with your applic
 		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\ FACEBOOK_APP_ID"/>
 
 		<!-- OPTIONAL SETTINGS -->
+		<meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="false"/>
 		<meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true"/>
-		<meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="true"/>
 		<meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true"/>
 
 		<activity
@@ -251,7 +251,7 @@ This is required additions for the InfoAdditions section:
 
 <!-- OPTIONAL SETTINGS -->
 <key>FacebookAutoInitEnabled</key>
-<true/>
+<false/>
 <key>FacebookAutoLogAppEventsEnabled</key>
 <true/>
 <key>FacebookAdvertiserIDCollectionEnabled</key>
