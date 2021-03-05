@@ -1640,8 +1640,9 @@ module.exports = {
       ]
     },
     { 
-      "Remote Command Center": [
-        "mediaplayer/remote-command-center"
+      "System Integration": [
+        "mediaplayer/remote-command-center",
+        "mediaplayer/system-control"
       ]
     },
     { 
@@ -2092,6 +2093,7 @@ module.exports = {
     },
     { 
       "Troubleshooting": [
+        "scanner/migrating-to-version-5",
         "scanner/migrating-to-androidx",
       ]
     },

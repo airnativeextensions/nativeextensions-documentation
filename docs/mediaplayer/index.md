@@ -6,7 +6,8 @@ slug: /mediaplayer
 
 ![](images/hero.png)
 
-# MediaPlayer
+
+# Media Player 
 
 The [MediaPlayer](https://airnativeextensions.com/extension/com.distriqt.MediaPlayer) 
 extension allows developers to display a native video player in your application.
@@ -49,6 +50,7 @@ We provide complete guides to get you up and running with dialogs quickly and ea
   - Can be used to create a background audio player and utilise system controls and notifications 
 - Sound Pool (Android only) allows quick playback of short sound effects
 - Performance: Native video playback performance
+- System Control: Dispatch system events to control other media players
 
 - Standard UI: Ability to display and hide standard UI controls
 - Sample project code and ASDocs reference
@@ -56,6 +58,7 @@ We provide complete guides to get you up and running with dialogs quickly and ea
 
 As with all our extensions you get access to a year of support and updates as we are 
 continually improving and updating the extensions for OS updates and feature requests.
+
 
 
 ## Documentation
