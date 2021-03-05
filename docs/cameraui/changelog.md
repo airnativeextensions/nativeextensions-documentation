@@ -1,5 +1,12 @@
 
 
+###### 2021.03.05 [v3.2.025]
+
+```
+Added video orientation to video capture event (resolves #78)
+```
+
+
 ###### 2021.03.01 [v3.1.022]
 
 ```
