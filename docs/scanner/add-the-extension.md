@@ -65,22 +65,24 @@ The following should be added to your `extensions` node in your application desc
 
 ### Manifest Additions
 
-The Scanner ANE requires a few additions to the manifest to be able to get access 
-to the device camera and to display the scanning activity. 
+The extension requires a few additions to the manifest to be able to get access to the device camera and to display the scanning activity. 
 
 You should add the listing below to your manifest:
 
 ```xml
 <manifest android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23"/>
 	
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.CAMERA"/>
+
 	<uses-feature android:name="android.hardware.camera" />
 	
 	<application>
+
 		<activity android:name="com.distriqt.extension.scanner.zbar.ZBarScannerActivity" />
+
 		<activity android:name="com.distriqt.extension.scanner.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
 	</application>
 	
 </manifest>
@@ -106,11 +108,9 @@ The following additions are for the `InfoAdditions` node of the iPhone section i
 ```
 
 
-If you are using **iOS 10** you now need to add some strings to display messages to the user 
-when certain permissions are requested. 
+If you are using **iOS 10** you now need to add some strings to display messages to the user when certain permissions are requested. 
 
-The most important string is the camera usage description which will get displayed during
-the request authorisation process (later). 
+The most important string is the camera usage description which will get displayed during the request authorisation process (later). 
 
 ![](images/ios-permission-dialog-camera.png)
 

@@ -1,5 +1,13 @@
 
 
+###### 2021.03.05 [v5.0.046]
+
+```
+Added ability to position a camera preview within a viewport for scanning (resolves #58, resolves #36)
+Added ability to scan a bitmap data reference for symbols directly (resolves #16)
+```
+
+
 ###### 2020.11.25 [v4.2.017]
 
 ```

@@ -3,7 +3,13 @@ title: Requesting Access
 sidebar_label: Requesting Access
 ---
 
-## Requesting Access
+:::info Authorisation
+If you are going to be using one of the camera methods then you need to ensure you have 
+requested authorisation before using the scanning functionality.
+
+However if you are planning to just scan bitmap data, then you can skip this section.
+:::
+
 
 When you are going to be accessing the camera you must check that your application 
 has been allowed access. To this end the extension provides several helpers to 

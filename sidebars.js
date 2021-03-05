@@ -2087,6 +2087,7 @@ module.exports = {
       "Usage": [
         "scanner/requesting-access",
         "scanner/scanning",
+        "scanner/scanning-bitmap-data",
       ]
     },
     { 
