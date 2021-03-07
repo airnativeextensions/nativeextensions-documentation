@@ -75,7 +75,7 @@ function Home() {
                 styles.getStarted,
                 )}
               to={useBaseUrl('docs/')}>
-              <i class="fa fa-file-alt"></i>&nbsp;&nbsp; Get Started
+              <i class="fa fa-file-alt"></i>&nbsp;&nbsp; Documentation
             </Link>
           </div>
 

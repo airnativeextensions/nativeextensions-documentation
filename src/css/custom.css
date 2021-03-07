@@ -55,6 +55,10 @@ h1, h2, h3, h4, h5 {
   font-family: 'Maison-Neue-Bold';
 }
 
+.hero--primary {
+  background: url(/img/promo-background.png) center top no-repeat;
+  background-size: cover;
+}
 
 @font-face {
 	font-family: 'Maison-Neue-Light';

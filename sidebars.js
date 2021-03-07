@@ -135,8 +135,8 @@ module.exports = {
                 "adverts/mediation/applovin",
                 "adverts/mediation/facebookaudience",
                 "adverts/mediation/ironsource",
-                "adverts/mediation/unityads",
                 "adverts/mediation/tapjoy",
+                "adverts/mediation/unityads",
             ]
         },
         { 

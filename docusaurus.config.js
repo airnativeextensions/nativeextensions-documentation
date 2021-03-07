@@ -8,14 +8,14 @@ module.exports = {
   organizationName: 'airnativeextensions', // Usually your GitHub org/user name.
   projectName: 'nativeextensions-documentation', // Usually your repo name.
   themeConfig: {
-    announcementBar: {
-      id: 'development', // Any value that will identify this message.
-      content:
-        'This is the new airnativeextensions documentation site and is currently under development. <a href="https://github.com/airnativeextensions/nativeextensions-documentation/issues">Please let us know if you find any issues.</a>',
-      backgroundColor: '#880000', // Defaults to `#fff`.
-      textColor: '#FFF', // Defaults to `#000`.
-      isCloseable: false, // Defaults to `true`.
-    },
+    // announcementBar: {
+    //   id: 'development', // Any value that will identify this message.
+    //   content:
+    //     'This is the new airnativeextensions documentation site and is currently under development. <a href="https://github.com/airnativeextensions/nativeextensions-documentation/issues">Please let us know if you find any issues.</a>',
+    //   backgroundColor: '#880000', // Defaults to `#fff`.
+    //   textColor: '#FFF', // Defaults to `#000`.
+    //   isCloseable: false, // Defaults to `true`.
+    // },
     
     image: 'img/ane-icon-black.png',
     colorMode: {
@@ -85,12 +85,16 @@ module.exports = {
               href: 'https://twitter.com/distriqt',
             },
             {
-              label: 'stack overflow',
-              href: 'https://stackoverflow.com/questions/tagged/distriqt',
+              label: 'AIR discussions',
+              href: 'https://github.com/Gamua/Adobe-Runtime-Support/discussions'
             },
             {
               label: 'starling',
               href: 'https://forum.starling-framework.org/'
+            },
+            {
+              label: 'stack overflow',
+              href: 'https://stackoverflow.com/questions/tagged/distriqt',
             },
           ],
         },
