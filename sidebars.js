@@ -89,6 +89,7 @@ module.exports = {
 
 
 
+
     adverts: [
         { type: 'ref', id: 'index' },
         { type: 'doc', id: 'adverts/index' },
@@ -135,6 +136,7 @@ module.exports = {
                 "adverts/mediation/facebookaudience",
                 "adverts/mediation/ironsource",
                 "adverts/mediation/unityads",
+                "adverts/mediation/tapjoy",
             ]
         },
         { 
@@ -146,6 +148,7 @@ module.exports = {
             ]
         },
     ],
+
 
 
 

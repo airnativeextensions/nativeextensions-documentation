@@ -29,6 +29,7 @@ however should work with any recent AdMob implementation.
     - [Facebook Audience](facebookaudience)
     - [IronSource](ironsource)
     - [Unity Ads](unityads)
+    - [TapJoy](tapjoy)
 
 
 
