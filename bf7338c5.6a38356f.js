@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[594],{649:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"gameservices","name":"gameservices","count":1,"permalink":"/news/tags/gameservices"}')}}]);
