@@ -23,6 +23,9 @@ The system will then only display applications that can handle that type of file
 
 On iOS this uses the `UIActivityViewController` to display a list of services that support the supplied data.
 
+
+### AIR
+
 ```actionscript
 Share.service.addEventListener( ShareEvent.COMPLETE,	share_shareHandler );
 Share.service.addEventListener( ShareEvent.CANCELLED,	share_shareHandler );
@@ -43,6 +46,31 @@ private function share_shareHandler( event:ShareEvent ):void
 ```
 
 
+### Unity
+
+```csharp
+// Here we have an image file in the streaming assets (iOS only)
+string filePath = Path.Combine(
+    UnityEngine.Application.streamingAssetsPath, 
+    "image.png"
+);
+
+Share.Instance.OnComplete += Share_OnComplete;
+
+Share.Instance.shareFile( filePath, "image.png", "image/png" );
+```
+
+
+```csharp
+private void Share_OnComplete(ShareEvent e)
+{
+    Debug.Log("Share_OnComplete");
+}
+```
+
+
+
+
 ## Opening a File
 
 Similarly to "Sharing a File", opening a file can be used to pass a file to another application, for opening, 
@@ -53,6 +81,8 @@ Generally this operation gives better functionality than the share file.
 
 On iOS this uses the `UIDocumentInteractionController` to display a list of applications that can open the specified file.
 
+### AIR
+
 ```actionscript
 var path:String = File.applicationDirectory.nativePath + File.separator + "assets" + File.separator + "TestDocument.pdf";
 
@@ -60,9 +90,28 @@ Share.service.showOpenIn( path, "TestDocument.pdf", "application/pdf" );
 ```
 
 
+### Unity
+
+```csharp
+// Here we have an image file in the streaming assets (iOS only)
+string filePath = Path.Combine(
+    UnityEngine.Application.streamingAssetsPath, 
+    "image.png"
+);
+
+Share.Instance.OnComplete += Share_OnComplete;
+
+Share.Instance.showOpenIn( filePath, "image.png", "image/png" );
+```
+
+
+## Opening a File: Example
+
 The below shows an example of opening an `igo` (instagram only file) and setting the packageName and UTI to limit the applications
 displayed to only be Instagram. We also use the `isApplicationInstalled` to check that Instagram is installed.
 More on this function in the [Launch Applications](launch-applications) section.
+
+### AIR 
 
 ```actionscript
 if (Share.service.isApplicationInstalled( "com.instagram.android", "instagram://app" ))
@@ -74,5 +123,25 @@ if (Share.service.isApplicationInstalled( "com.instagram.android", "instagram://
 	options.UTI = "com.instagram.photo";
 	
 	Share.service.showOpenIn( instagramImage.nativePath, "", "image/*", options );
+}
+```
+
+### Unity 
+
+```csharp
+plugins.share.applications.Application app
+        = new plugins.share.applications.Application(
+            "com.instagram.android",
+            "instagram://");
+
+if (Share.Instance.Applications.IsInstalled(app))
+{
+	string filePath = Path.Combine(UnityEngine.Application.streamingAssetsPath, "instagram.igo");
+	
+	ShareOptions options = new ShareOptions();
+	options.packageName = "com.instagram.android";
+	options.UTI = "com.instagram.photo";
+	
+	Share.Instance.showOpenIn( filePath, "", "image/*", options );
 }
 ```

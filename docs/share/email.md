@@ -9,8 +9,15 @@ You can check whether the current user can send emails using the `isMailSupporte
 
 This performs some basic checks as to whether the user can send an email.
 
-```actionscript
+```actionscript title="AIR"
 if (Share.service.email.isMailSupported)
+{
+	// You should be able to send an email
+}
+```
+
+```csharp title="Unity"
+if (Share.Instance.Email.IsMailSupported)
 {
 	// You should be able to send an email
 }
@@ -25,7 +32,7 @@ if (Share.service.email.isMailSupported)
 
 Sending an email is a simple task of calling the `sendMail()` function, specifying the subject, body and recipients.
 
-```actionscript
+```actionscript title="AIR"
 var email:String = "emailaddress@test.com";
 var subject:String = "Sending HTML email from AIR using the distriqt Message ANE";
 var body:String = "The body content of the email";
@@ -35,6 +42,29 @@ Share.service.email.sendMail(
 	body, 
 	email
 );
+```
+
+
+```csharp title="Unity"
+string subject = "Test email from unity";
+string body = "Some awesome message I want to send";
+string toRecipients = "unityplugins@distriqt.com";
+
+Share.Instance.Email.OnCompose += Email_OnCompose;
+Share.Instance.Email.OnAttachmentError += Email_OnAttachmentError;
+
+bool success = Share.Instance.Email.SendMail(subject, body, toRecipients);
+
+
+private void Email_OnCompose(EmailEvent e)
+{
+    Debug.Log("Email_OnCompose: " + e.details);
+}
+
+private void Email_OnAttachmentError(EmailEvent e)
+{
+    Debug.Log("Email_OnAttachmentError: " + e.details);
+}
 ```
 
 
@@ -51,7 +81,8 @@ If you wish to send html content you can set the `isHTML` flag in the `sendMailW
 
 The following example shows the supported HTML content:
 
-```actionscript
+
+```actionscript title="AIR"
 var email:String = "emailaddress@test.com";
 var subject:String = "Sending HTML email from AIR using the distriqt Message ANE";
 var ccRecipients:String = "";
@@ -82,6 +113,40 @@ Share.service.email.sendMailWithOptions(
 	);
 ```
 
+
+```csharp title="Unity"
+string subject = "Test email from unity";
+string body = "Some awesome message I want to send";
+string toRecipients = "unityplugins@distriqt.com";
+string ccRecipients = "distriqt@distriqt.com";
+string bccRecipients = "airnativeextensions@distriqt.com";
+
+string body = 
+		"<div>"+
+		"<p>This HTML email was sent using the distriqt <b>Message ANE</b></p>"+
+		"A link: <a href='http://airnativeextensions.com'>airnativeextensions.com</a>"+
+		"<br/>" +
+		"Block: <blockquote>Some quote</blockquote>"+
+		"<br/>" +
+		"Bold: <b>This text should be bold</b>"+
+		"<br/>" +
+		"Italic: <i>This text should be italic</i>"+
+		"<br/>" +
+		"Colour: <font color='#ff0000'>This text should be red</font>"+
+		"<div/>" ;
+
+Share.Instance.Email.SendMailWithOptions( 
+		subject, 
+		body, 
+		toRecipients, 
+		ccRecipients,
+		bccRecipients,
+		null,           // Attachments (see next section)
+		true            // isHTML flag
+	);
+```
+
+
 >
 > HTML content can depend on the client the user has installed. As this can vary greatly (on Android in particular) the HTML content functionality can have unexpected results in clients that don't respect or accept html content.
 >
@@ -95,7 +160,9 @@ You can specify an `Array` of `Attachment` objects each representing a file to a
 
 You create an attachment using the constructor and passing the native path to the file and we suggest passing a mime type.
 
-```actionscript
+#### AIR
+
+```actionscript 
 var attachmentImage:File = File.applicationStorage.resolvePath( "image.jpg" );
 
 var attachment:Attachment = new Attachment( attachmentFile.nativePath, "image/jpg" );
@@ -103,7 +170,7 @@ var attachment:Attachment = new Attachment( attachmentFile.nativePath, "image/jp
 
 Then you pass your attachments to the send mail function in an `Array`:
 
-```
+```actionscript 
 var attachments:Array = [ attachment ];
 
 Share.service.email.sendMailWithOptions( 
@@ -115,4 +182,28 @@ Share.service.email.sendMailWithOptions(
 		attachments
 	);
 ```
+
+#### Unity
+
+```csharp
+Attachment attachment = new Attachment();
+attachment.nativePath = imageFile; // Absolute native path to file 
+```
+
+Then you pass your attachments to the send mail function in an `Attachment[]` array:
+
+```csharp
+Attachment[] attachments = new Attachment[1];
+attachments[0] = attachment;
+
+Share.Instance.Email.SendMailWithOptions( 
+		subject, 
+		body, 
+		toRecipients, 
+		"",
+		"",
+		attachments
+	);
+```
+
 

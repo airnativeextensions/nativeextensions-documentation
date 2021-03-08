@@ -1,6 +1,6 @@
 ---
 title: Add the Extension
-sidebar_label: Add the Extension
+sidebar_label: AIR
 ---
 
 First step is always to add the extension to your development environment. 
@@ -19,9 +19,7 @@ You will add these extensions as you do with any other extension, and you need t
 
 ### Core ANE
 
-The Core ANE is required by this ANE. You must include this extension in your application and call the initialisation function at some point, 
-generally at the same time as the initialisation of this extension. If you are using other extensions that also require the Core ANE, 
-you only need to initialise it once, generally before initialising the other extensions.
+The Core ANE is required by this ANE. You must include this extension in your application and call the initialisation function at some point, generally at the same time as the initialisation of this extension. If you are using other extensions that also require the Core ANE, you only need to initialise it once, generally before initialising the other extensions.
 
 ```actionscript
 Core.init();

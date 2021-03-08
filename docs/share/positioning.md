@@ -22,13 +22,23 @@ For example if we had a button located at x,y `100,100` of width `200` and heigh
 the following will use the best positioning for the dialog and display a small arrow pointing 
 to the button:
 
-```actionscript 
+
+```actionscript  title="AIR"
 var options:ShareOptions = new ShareOptions();
 options.position = new Rectangle( 100, 100, 200, 50 );
 options.arrowDirection = ShareOptions.ARROWDIRECTION_ANY;
 
 Share.service.share( "Share text", null, "http://airnativeextensions.com", options );
 ```
+
+```csharp  title="Unity"
+ShareOptions options = new ShareOptions();
+options.position = new Rect(100, 100, 200, 50);
+options.arrowDirection = ShareOptions.ARROWDIRECTION_ANY;
+
+Share.Instance.share( "Share text", null, "http://airnativeextensions.com", options );
+```
+
 
 ![](images/Share_ios_positioning_any.png)
 
@@ -37,7 +47,7 @@ Or we could limit the dialog to only appear to the left or right of the position
 bitwise-OR to combine the required directions:
 
 
-```actionscript
+```actionscript title="AIR"
 var options:ShareOptions = new ShareOptions();
 options.position = new Rectangle( 100, 100, 200, 50 );
 options.arrowDirection = ShareOptions.ARROWDIRECTION_LEFT | ShareOptions.ARROWDIRECTION_RIGHT;
@@ -58,13 +68,25 @@ If you need to center the dialog you can simply use the center of the screen as 
 
 For example:
 
-```actionscript
+
+```actionscript title="AIR"
 var options:ShareOptions = new ShareOptions();
 options.position = new Rectangle( stage.stageWidth*0.5, stage.stageHeight * 0.5, 0, 0 );
 options.arrowDirection = ShareOptions.ARROWDIRECTION_NONE;
 
 Share.service.share( "Share text", null, "http://airnativeextensions.com", options );
 ```
+
+Unity: 
+
+```csharp  title="Unity"
+ShareOptions options = new ShareOptions();
+options.position = new Rect(centerX, centerY, 0, 0);
+options.arrowDirection = ShareOptions.ARROWDIRECTION_NONE;
+
+Share.Instance.share( "Share text", null, "http://airnativeextensions.com", options );
+```
+
 
 ![](images/Share_ios_positioning_centered.png)
 

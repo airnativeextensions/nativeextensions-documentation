@@ -3,11 +3,31 @@ title: SMS
 sidebar_label: SMS
 ---
 
+## SMS Supported
+
+You can check whether the current user can send sms using the `isSMSSupported` call.
+
+```actionscript  title="AIR"
+if (Share.service.sms.isSMSSupported)
+{
+	// You should be able to send an sms
+}
+```
+
+```csharp  title="Unity"
+if (Share.Instance.SMS.IsSMSSupported)
+{
+	// You should be able to send an sms
+}
+```
+
+
+
 ## Sending an SMS with UI
 
 The example below shows how to send an SMS using the native UI:
 
-```actionscript
+```actionscript  title="AIR"
 if (Share.service.sms.isSMSSupported)
 {
 	Share.service.sms.addEventListener( SMSEvent.MESSAGE_SMS_CANCELLED, smsEventHandler );
@@ -21,13 +41,47 @@ if (Share.service.sms.isSMSSupported)
 	Share.service.sms.sendSMSWithUI( sms, false );
 }
 
-...
+function smsEventHandler( event:SMSEvent ):void
+{
+	trace( event.type +"::"+ event.details + "::"+event.sms.toString() );
+}
+```
+
+```csharp  title="Unity"
+if (Share.Instance.SMS.IsSMSSupported)
+{
+    Share.Instance.SMS.OnSMSSent += SMS_OnSMSSent;
+    Share.Instance.SMS.OnSMSSentError += SMS_OnSMSSentError;
+    Share.Instance.SMS.OnSMSCancelled += SMS_OnSMSCancelled;
+
+	SMS sms = new SMS();
+	sms.address = "0444444444";
+	sms.message = "Sending an SMS with the distriqt plugin";
+	
+	Share.Instance.SMS.SendSMSWithUI( sms );
+}
 
 private function smsEventHandler( event:SMSEvent ):void
 {
 	trace( event.type +"::"+ event.details + "::"+event.sms.toString() );
 }
+
+private void SMS_OnSMSCancelled(SMSEvent e)
+{
+    Debug.Log("SMS_OnSMSCancelled");
+}
+
+private void SMS_OnSMSSentError(SMSEvent e)
+{
+    Debug.Log("SMS_OnSMSSentError");
+}
+
+private void SMS_OnSMSSent(SMSEvent e)
+{
+    Debug.Log("SMS_OnSMSSent");
+}
 ```
+
 
 
 
@@ -39,7 +93,10 @@ user interaction.
 
 ### Manifest Additions
 
-The Message ANE requires a few additions to the manifest to be able to start certain activities and to get permission to send and receive SMS. 
+The extension requires a few additions to the manifest to be able to start certain activities and to get permission to send and receive SMS. 
+
+These are optional and so should be added manually currently. 
+
 
 ```xml
 <manifest android:installLocation="auto">
@@ -73,6 +130,8 @@ The Message ANE requires a few additions to the manifest to be able to start cer
 
 Firstly you must request authorisation to send and receive messages. 
 
+#### AIR 
+
 On Android these permissions are listed through the manifest additions. 
 On older versions of Android these permissions are accepted when the user installs the application. 
 More modern versions (Marshmallow 6 [v23]+) require that you request the permissions similar to iOS. 
@@ -82,7 +141,7 @@ You should respect the `SHOULD_EXPLAIN` status by displaying additional informat
 The following code will work across both platforms:
 
 
-```actionscript
+```actionscript 
 Share.service.sms.addEventListener( AuthorisationEvent.CHANGED, authorisationStatus_changedHandler );
 
 switch (Share.service.sms.authorisationStatus())
@@ -103,22 +162,34 @@ switch (Share.service.sms.authorisationStatus())
 		// AUTHORISED: SMS will be available
 		break;						
 }
-```
 
-```actionscript
-private function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
+function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
 {
 	trace( "authorisationStatus_changedHandler: "+event.status );
 }
 ```
+
+#### Unity 
+
+You can do this using the normal `Permission` process through Unity, eg to check whether you have permission to send sms directly:
+
+```csharp  
+if (Permission.HasUserAuthorizedPermission("android.permission.SEND_SMS"))
+{
+    //
+}
+```
+
+More information here: [https://docs.unity3d.com/Manual/android-RequestingPermissions.html](https://docs.unity3d.com/Manual/android-RequestingPermissions.html)
+
+
 
 
 ### Sending an SMS
 
 Once you have authorisation, sending an SMS is a simple matter of calling `sendSMS`:
 
-
-```actionscript
+```actionscript  title="AIR"
 if (Share.service.sms.isSMSSupported)
 {
 	var sms:SMS = new SMS();
@@ -126,6 +197,18 @@ if (Share.service.sms.isSMSSupported)
 	sms.message = "Testing Message ANE";
 	
 	Share.service.sms.sendSMS( sms );
+}
+```
+
+
+```csharp  title="Unity"
+if (Share.service.sms.isSMSSupported)
+{
+	SMS sms = new SMS();
+	sms.address = "0444444444";
+	sms.message = "Sending an SMS with the distriqt plugin";
+	
+	Share.Instance.SMS.SendSMS( sms );
 }
 ```
 
@@ -139,7 +222,7 @@ Firstly you must add the additional permission to `READ_PHONE_STATE` to be able 
 
 Then call `getSubscriptions()` to retrieve an array of `SubscriptionInfo` objects representing the different sims.
 
-```actionscript
+```actionscript  title="AIR"
 var subs:Array = Share.service.sms.getSubscriptions();
 for each (var sub:SubscriptionInfo in subs)
 {
@@ -147,10 +230,24 @@ for each (var sub:SubscriptionInfo in subs)
 }
 ```
 
+```csharp  title="Unity"
+SubscriptionInfo[] subs = Share.Instance.SMS.GetSubscriptions();
+foreach (SubscriptionInfo sub in subs)
+{
+	Debug.Loh( "SIM: ["+sub.id+"] " + sub.displayName + "/"+sub.carrierName);
+}
+```
+
+
 When sending an SMS you can specify the subscription id to use to send the SMS:
 
-```actionscript
+
+```actionscript title="AIR"
 Share.service.sms.sendSMS( sms, sub.id );
+```
+
+```csharp title="Unity" 
+Share.Instance.SMS.SendSMS( sms, sub.id );
 ```
 
 >
@@ -163,7 +260,7 @@ Share.service.sms.sendSMS( sms, sub.id );
 You can listen for several events, as defined in the `SMSEvent` class, see the documentation
 in that class for more information on the events.
 
-```actionscript
+```actionscript  title="AIR"
 Share.service.sms.addEventListener( SMSEvent.MESSAGE_SMS_CANCELLED, 	smsEventHandler );
 Share.service.sms.addEventListener( SMSEvent.MESSAGE_SMS_DELIVERED, 	smsEventHandler );
 Share.service.sms.addEventListener( SMSEvent.MESSAGE_SMS_RECEIVED, 		smsEventHandler );

@@ -11,7 +11,8 @@ It uses different methods on iOS and Android however both will allow you to spec
 
 The simplest example of launching another application if installed.
 
-```actionscript
+
+```actionscript title="AIR"
 var app:Application = new Application( "com.instagram.android", "instagram://" );
  
 if (Share.service.applications.isInstalled( app ))
@@ -20,9 +21,22 @@ if (Share.service.applications.isInstalled( app ))
 }
 ```
 
+```csharp title="Unity"
+plugins.share.applications.Application app
+        = new plugins.share.applications.Application(
+            "com.instagram.android",
+            "instagram://");
+
+if (Share.Instance.Applications.IsInstalled(app))
+{
+    Share.Instance.Applications.Launch(app);
+}
+```
+
 An example of launching Instagram and opening a specific user profile
 
-```actionscript
+
+```actionscript title="AIR"
 var app:Application = new Application( "com.instagram.android", "instagram://" );
 
 var options:ApplicationOptions = new ApplicationOptions();
@@ -36,11 +50,33 @@ if (Share.service.applications.isInstalled( app ))
 }
 ```
 
+```csharp title="Unity"
+plugins.share.applications.Application app
+        = new plugins.share.applications.Application(
+            "com.instagram.android",
+            "instagram://");
+
+ApplicationOptions options = new ApplicationOptions();
+options.action = ApplicationOptions.ACTION_VIEW;
+options.data = "http://instagram.com/_u/distriqt";
+options.parameters = "user?username=distriqt";
+ 
+if (Share.Instance.Applications.IsInstalled(app))
+{
+    Share.Instance.Applications.Launch(app, options);
+}
+```
+
 
 ## iOS 
 
 On iOS you must add the application schemes you wish to query or launch to your info additions. 
-If you don't perform these additions you will always receive false from the isInstalled and the launch functions.
+If you don't perform these additions you will always receive `false` from the `isInstalled()` and the launch functions.
+
+
+### AIR
+
+You should add the `LSApplicationQueriesSchemes` value to your `InfoAdditions` in your application descriptor, and include the schemes for the applications you intend to query.
 
 ```xml
 <iPhone>
@@ -54,6 +90,17 @@ If you don't perform these additions you will always receive false from the isIn
 </iPhone>
 ```
 
+### Unity
+
+You should add the `LSApplicationQueriesSchemes` value to your `Info.plist`, and include the schemes for the applications you intend to query.
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>instagram</string>
+    <string>whatsapp</string>
+</array>
+```
 
 
 
@@ -65,6 +112,8 @@ This functionality allows you to use the Android Intent system to launch an Inte
 
 This is sometimes required when you need particular control over how the data is passed to an Intent.
 
+
+### AIR 
 
 Use the `Intent` class to create an Intent and then pass it to the `startActivity` function.
 
@@ -89,3 +138,22 @@ intent.extras = {
 	extraName: "some value"
 };
 ```
+
+
+### Unity
+
+Use the `Intent` class to create an Intent and then pass it to the `StartActivity` function.
+
+For example to launch a url in the Chrome application
+
+
+```csharp
+Intent intent = new Intent(Intent.ACTION_VIEW);
+intent.packageName = "com.android.chrome";
+intent.data = "https://distriqt.com";
+
+Share.Instance.Applications.StartActivity(intent);
+```
+
+The return value of the `StartActivity` function will be `false` if no activity could be launched matching the `Intent` and will be `true` if an activity was started.
+

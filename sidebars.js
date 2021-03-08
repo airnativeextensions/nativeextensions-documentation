@@ -2115,6 +2115,7 @@ module.exports = {
     { 
       "Get Started": [
         "share/add-the-extension",
+        "share/add-the-plugin",
       ]
     },
     { 
