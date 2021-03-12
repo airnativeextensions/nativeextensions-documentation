@@ -55,6 +55,7 @@ module.exports = {
         { type: 'ref', id: "location/index" },
 
         { type: 'ref', id: "mediaplayer/index" },
+        { type: 'ref', id: "memory/index" },
         { type: 'ref', id: "message/index" },
         
         { type: 'ref', id: "nativemaps/index" },
@@ -1693,6 +1694,20 @@ module.exports = {
         { type: 'doc', id: 'mediaplayer/changelog' },
         { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/mediaplayer/" },
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-MediaPlayer/issues/new' },
+      ],
+    },
+  ],
+
+
+  memory: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'memory/index' },
+    { type: 'doc', id: 'memory/usage' },
+    { 
+      "Other": [
+        { type: 'doc', id: 'memory/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/memory/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Memory/issues/new' },
       ],
     },
   ],
