@@ -51,6 +51,8 @@ module.exports = {
         { type: 'ref', id: "inappbilling/index" },
         { type: 'ref', id: "ironsource/index" },
 
+        { type: 'ref', id: "jobscheduler/index" },
+        
         { type: 'ref', id: "localauth/index" },
         { type: 'ref', id: "location/index" },
 
@@ -1586,6 +1588,20 @@ module.exports = {
     },
   ],
 
+
+  jobscheduler: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'jobscheduler/index' },
+    { type: 'doc', id: 'jobscheduler/add-the-extension' },
+    { type: 'doc', id: 'jobscheduler/application-termination' },
+    { 
+      "Other": [
+        { type: 'doc', id: 'jobscheduler/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/jobscheduler/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-JobScheduler/issues/new' },
+      ],
+    },
+  ],
 
 
   localauth: [
