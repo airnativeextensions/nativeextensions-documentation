@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[268],{323:function(s){s.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"flash-eol","name":"flash-eol","count":1,"permalink":"/news/tags/flash-eol"}')}}]);
