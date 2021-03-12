@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[313],{368:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"firebase","name":"firebase","count":2,"permalink":"/news/tags/firebase"}')}}]);
