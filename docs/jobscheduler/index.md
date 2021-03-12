@@ -1,7 +1,7 @@
 ---
 title: Job Scheduler
 hide_title: true
-slug: /memory/
+slug: /jobscheduler/
 ---
 
 ![](images/promo.png)

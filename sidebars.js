@@ -33,6 +33,7 @@ module.exports = {
         { type: 'ref', id: "dialog/index" },
         { type: 'ref', id: "dynamicicon/index" },
 
+        { type: 'ref', id: "exceptions/index" },
         { type: 'ref', id: "expansionfiles/index" },
         
         { type: 'ref', id: "facebookapi/index" },
@@ -772,6 +773,21 @@ module.exports = {
     },
   ],
 
+
+
+  exceptions: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'exceptions/index' },
+    { type: 'doc', id: 'exceptions/add-the-extension' },
+    { type: 'doc', id: 'exceptions/usage' },
+    { 
+      "Other": [
+        { type: 'doc', id: 'exceptions/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/exceptions/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-Exceptions/issues/new' },
+      ],
+    },
+  ],
 
 
   expansionfiles: [
