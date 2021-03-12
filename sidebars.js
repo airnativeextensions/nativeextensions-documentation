@@ -19,6 +19,7 @@ module.exports = {
         { type: 'ref', id: "beacon/index" },
         { type: 'ref', id: "bluetooth/index" },
         { type: 'ref', id: "bluetoothle/index" },
+        { type: 'ref', id: "branch/index" },
 
         { type: 'ref', id: "calendar/index" },
         { type: 'ref', id: "camera/index" },
@@ -432,6 +433,39 @@ module.exports = {
         { type: 'doc', id: 'bluetoothle/changelog' },
         { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/bluetoothle/" },
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-BluetoothLE/issues/new' },
+      ]
+    },
+  ],
+
+
+  branch: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'branch/index' },
+    { 
+      "Get Started": [
+        "branch/add-the-extension",
+      ]
+    },
+    { 
+      "Usage": [
+        "branch/initialisation",
+        "branch/deep-links",
+        "branch/user-identity",
+        "branch/link-parameters",
+        "branch/referral-credits",
+        "branch/event-tracking",
+      ]
+    },
+    { 
+      "Branch Universal Objects": [
+        "branch/branch-universal-objects",
+      ]
+    },
+    { 
+      "Other": [
+        { type: 'doc', id: 'branch/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/branch/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-BranchIO/issues/new' },
       ]
     },
   ],
