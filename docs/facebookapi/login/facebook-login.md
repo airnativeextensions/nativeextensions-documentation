@@ -198,7 +198,7 @@ FacebookLogin.instance.logInWithConfiguration( configuration );
 To retrieve the authentication token (OIDC token) you can call the `getAuthenticationToken()` function:
 
 
-```as3
+```actionscript
 var token:AuthenticationToken = FacebookLogin.instance.getAuthenticationToken();
 
 trace( token.token );

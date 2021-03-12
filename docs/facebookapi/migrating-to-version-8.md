@@ -62,7 +62,7 @@ Note there is a small additional manifest entry for the Share extension [here](s
 
 Remove any imports from the `com.distriqt.extension.facebookapi` package. All the imports now are in the `com.distriqt.extension.facebook` package, eg:
 
-```as3
+```actionscript
 import com.distriqt.extension.facebook.core.Facebook;
 ```
 
@@ -72,13 +72,13 @@ import com.distriqt.extension.facebook.core.Facebook;
 
 Previously you would have called `initialiseApp()` as below:
 
-```as3
+```actionscript
 FacebookAPI.service.initialiseApp( "YOUR_FACEBOOK_APP_ID" );
 ```
 
 Change this to:
 
-```as3
+```actionscript
 Facebook.instance.initialise();
 ```
 
@@ -94,7 +94,7 @@ Key points:
 
 For example the following legacy code:
 
-```as3
+```actionscript
 var event:FacebookAppEvent = new FacebookAppEvent( AppEventsConstants.EVENT_NAME_ADDED_TO_CART );
 event.valueToSum = 54.23;
 
@@ -108,7 +108,7 @@ FacebookAPI.service.appEvents.logEvent( event );
 
 becomes:
 
-```as3
+```actionscript
 var event:AppEvent = 
     new AppEvent()
         .setEventName( AppEventsConstants.EVENT_NAME_ADDED_TO_CART )
@@ -137,7 +137,7 @@ The graph API remains fairly similar:
 
 For example the following legacy code:
 
-```as3
+```actionscript
 var request:GraphAPIRequest = new GraphAPIRequestBuilder()
     .setPath( "/me" )
     .build();
@@ -147,7 +147,7 @@ FacebookAPI.service.graphAPI.makeRequest( request );
 
 becomes:
 
-```as3
+```actionscript
 var request:GraphRequest = new GraphRequestBuilder()
     .setPath( "/me" )
     .build();
@@ -163,19 +163,19 @@ More on the graph API [here](core/graph-api/overview)
 
 To login you would have called `createSession()`:
 
-```as3
+```actionscript
 FacebookAPI.service.createSession( [ "public_profile", "email" ], true );
 ```
 
 This becomes:
 
-```as3
+```actionscript
 FacebookLogin.instance.logInWithReadPermissions( [ "public_profile", "email" ] );
 ```
 
 There are no longer a series of session events to handle, so you can remove any code handling `FacebookAPISessionEvent`s and replace with a couple of simple `FacebookLoginEvent`/`FacebookLoginErrorEvent` events:
 
-```as3
+```actionscript
 FacebookLogin.instance.addEventListener( FacebookLoginEvent.SUCCESS, successHandler );
 FacebookLogin.instance.addEventListener( FacebookLoginEvent.CANCEL, cancelHandler );
 FacebookLogin.instance.addEventListener( FacebookLoginErrorEvent.ERROR, errorHandler );
@@ -213,13 +213,13 @@ You basically only have access to the Share dialog now and a smaller set of cont
 
 The share dialog show has moved, so:
 
-```as3
+```actionscript
 FacebookAPI.service.shareDialog.show( builder.build() );
 ```
 
 becomes:
 
-```as3
+```actionscript
 FacebookShare.instance.shareDialog.show( builder.build() );
 ```
 

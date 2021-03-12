@@ -74,6 +74,8 @@ module.exports = {
         { type: 'ref', id: "permissions/index" },
         { type: 'ref', id: "pushnotifications/index" },
 
+        { type: 'ref', id: "rootchecker/index" },
+
         { type: 'ref', id: "scanner/index" },
         { type: 'ref', id: "share/index" },
         { type: 'ref', id: "systemgestures/index" },
@@ -2155,6 +2157,21 @@ module.exports = {
         { type: 'doc', id: 'pushnotifications/changelog' },
         { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/pushnotifications/" },
         { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-PushNotifications/issues/new' },
+      ],
+    },
+  ],
+
+
+  rootchecker: [
+    { type: 'ref', id: 'index' },
+    { type: 'doc', id: 'rootchecker/index' },
+    { type: 'doc', id: 'rootchecker/add-the-extension' },
+    { type: 'doc', id: 'rootchecker/root-check' },
+    { 
+      "Other": [
+        { type: 'doc', id: 'rootchecker/changelog' },
+        { type: "link", label: "asdocs", href: "https://docs.airnativeextensions.com/asdocs/rootchecker/" },
+        { type: 'link', label: 'Contact Support', href: 'http://github.com/distriqt/ANE-RootChecker/issues/new' },
       ],
     },
   ],

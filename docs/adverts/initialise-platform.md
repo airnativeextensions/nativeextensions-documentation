@@ -36,7 +36,7 @@ This will initialise the actual platforms advertising SDK.
 
 The initialisation process is asynchronous and will take a short amount of time depending on the platform. An event is dispatched when this process is complete. 
 
-```as3
+```actionscript
 Adverts.service.addEventListener( AdvertsEvent.INITIALISED, initialisedHandler );
 
 Adverts.service.initialise();
@@ -54,7 +54,7 @@ If you are planning to use "Open Bidding Mediation" then you need to ensure you 
 
 The initialised event will contain details of the available mediator adapters, including their state and latency:
 
-```as3
+```actionscript
 Adverts.service.addEventListener( AdvertsEvent.INITIALISED, initialisedHandler );
 
 Adverts.service.initialise();

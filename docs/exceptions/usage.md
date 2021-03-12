@@ -8,14 +8,14 @@ This extension is very simple in the implementation, having only 2 main function
 To start catching exceptions you simply call `setUncaughtExceptionHandler()` at 
 some point at the beginning of your application.
 
-```as3
+```actionscript
 Exceptions.service.setUncaughtExceptionHandler();
 ```
 
 
 To check if your application crashed previously you use the `hasPendingException()` function.
 
-```as3
+```actionscript
 if (Exceptions.service.hasPendingException())
 {
 	var report:ExceptionReport = Exceptions.service.getPendingException();

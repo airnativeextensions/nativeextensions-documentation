@@ -12,7 +12,7 @@ Calling this function will schedule a job with the Android system that will be c
 
 For example to terminate the application in 4 seconds:
 
-```as3
+```actionscript
 JobScheduler.instance.scheduleTermination( 4000 );
 ```
 
@@ -22,7 +22,7 @@ JobScheduler.instance.scheduleTermination( 4000 );
 
 If you wish to cancel the schedule termination simply call `cancelTermination`. This will remove the scheduled job from the system.
 
-```as3
+```actionscript
 JobScheduler.instance.cancelTermination();
 ```
 
