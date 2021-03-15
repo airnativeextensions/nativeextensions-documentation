@@ -17,15 +17,11 @@ This function will attempt to determine which store the application was installe
 
 Example:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 var store:String = ApplicationRater.service.getInstallerStore();
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 string store = ApplicationRater.Instance.GetInstallerStore();
 ```
 
@@ -33,9 +29,7 @@ You can then use this value to set the appropriate application id if you use dif
 
 For example, say we have `air.com.distriqt.test` in the Google Play Store and `air.com.distriqt.amazon` in the Amazon store:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 var store:String = ApplicationRater.service.getInstallerStore();
 switch (store)
 {
@@ -51,9 +45,7 @@ switch (store)
 }
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 string store = ApplicationRater.Instance.GetInstallerStore();
 switch (store)
 {

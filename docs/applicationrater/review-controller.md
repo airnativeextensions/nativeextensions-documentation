@@ -3,8 +3,6 @@ title: Review Controller
 sidebar_label: Review Controller
 ---
 
-## Review Controller 
-
 The review controller allows you to gather user reviews inside your application without redirecting them to the store. This process generally does not give you feedback about whether a user wrote a review however it does give you the ability to simplify a review request, presenting the review screens directly in your application.
 
 
@@ -32,18 +30,16 @@ Google has made available the "In-App Review Activity" as part of the Play Core 
 
 To check if this functionality is supported on the current device you can call `isSupported` as below:
 
-AIR: 
 
-```actionscript
+```actionscript title="AIR"
 if (ApplicationRater.service.review.isSupported)
 {
 	// InApp Review is supported
 }
 ```
 
-Unity: 
 
-```csharp
+```csharp title="Unity"
 if (ApplicationRater.Instance.Review.isSupported)
 {
 	// InApp Review is supported
@@ -62,18 +58,14 @@ Currently this is supported on iOS 10.3+, macOS 10.14+ and on Android 5.0+ (API 
 To start the review process you call the `requestReview()` function. This function attempts to ask 
 the user to rate or review your app, if appropriate.
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 if (ApplicationRater.service.review.isSupported)
 {
 	ApplicationRater.service.review.requestReview();
 }
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 if (ApplicationRater.Instance.Review.isSupported)
 {
 	ApplicationRater.Instance.Review.RequestReview();

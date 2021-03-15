@@ -1,6 +1,6 @@
 ---
 title: Add the Plugin
-sidebar_label: Add the Plugin
+sidebar_label: Unity
 ---
 
 First step is always to add the plugin to your development environment. 
@@ -8,9 +8,9 @@ First step is always to add the plugin to your development environment.
 
 ## Asset Store
 
-Open the Asset Store in your browser and add the Application Rater plugin to your assets.
+Open the Asset Store in your browser and add the plugin to your assets.
 
-Open the Package Manager (Window > Package Manager) in the Unity Editor and select the "My Assets" section. Select the Application Rater plugin, and click Import in the bottom right.
+Open the Package Manager (Window > Package Manager) in the Unity Editor and select the "My Assets" section. Select the plugin, and click Import in the bottom right.
 
 
 ## Manual Installation
@@ -90,6 +90,15 @@ dependencies {
 	implementation 'com.google.android.play:core:1.9.1'
 }
 ```
+
+
+:::note Proguard
+If you are using a custom proguard configuration you may need to add the following line to ensure the interface class for the plugin is accessible to unity at runtime.
+
+```
+-keep class com.distriqt.extension.applicationrater.ApplicationRaterUnityPlugin {*;}
+```
+:::
 
 
 ## Checking for Support

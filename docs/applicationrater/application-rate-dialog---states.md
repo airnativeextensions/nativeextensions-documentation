@@ -15,15 +15,11 @@ There are several states that the service can be in:
 
 You can access the current state by calling, `state` :
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 var state:String = ApplicationRater.service.state;
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 string state = ApplicationRater.Instance.state;
 ```
 

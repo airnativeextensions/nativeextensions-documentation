@@ -36,17 +36,14 @@ launch. We suggest somewhere after your is initialised and displayed. The import
 application ID and correctly set that in the `setApplicationId()` call (see the [Application ID](application-id) 
 section).
 
-AIR:
 
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.setApplicationId( 
   "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
 ApplicationRater.service.applicationLaunched();
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.SetApplicationId(
 	"XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS);
 ApplicationRater.Instance.ApplicationLaunched();
@@ -63,15 +60,11 @@ By default the extension will automatically prompt the user when the conditions 
 
 If you wish to disable this, you do so by setting `autoPrompt` to be `false`:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.autoPrompt = false;
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.autoPrompt = false;
 ```
 
@@ -87,18 +80,14 @@ called and the conditions have been met.
 
 Alternatively if you wish to control when to display the dialog you can set `autoPrompt` to be false and instead query the `hasMetConditions()` function, calling `showRateDialog()` if appropriate. Eg:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 if (ApplicationRater.service.hasMetConditions())
 {
 	ApplicationRater.service.showRateDialog();
 } 
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 if (ApplicationRater.Instance.HasMetConditions())
 {
 	ApplicationRater.Instance.ShowRateDialog();
@@ -127,15 +116,13 @@ To set the number of application launches that will trigger the dialog you use t
 
 For example:
 
-AIR:
 
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.setLaunchesUntilPrompt( 10 );
 ```
 
-Unity:
 
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.SetLaunchesUntilPrompt( 10 );
 ```
 
@@ -154,30 +141,23 @@ function.
 
 For example, to set it to be 2 weeks after initial launch:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.setDaysUntilPrompt( 14 );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.SetDaysUntilPrompt( 14 );
 ```
 
 If you wish to disable the number of days condition and rely on the other conditions (eg, application launches 
 or significant user events) you should set this value to `-1`:
 
-AIR:
 
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.setDaysUntilPrompt( -1 );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.SetDaysUntilPrompt( -1 );
 ```
 
@@ -194,29 +174,21 @@ You can change the value of the number of events until prompt by using the `setS
 
 For example, to set the condition that after 5 events the dialog should be displayed:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.setSignificantEventsUntilPrompt( 5 );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.SetSignificantEventsUntilPrompt( 5 );
 ```
 
 When you wish to log a significant event, simply call:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.userDidSignificantEvent();
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.UserDidSignificantEvent();
 ```
 
@@ -250,15 +222,11 @@ of days and is from the date that the user pressed the "Remind me later" button.
 
 For example, to remind a user one week later, set this value to 7:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.setTimeBeforeReminding( 7 );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.SetTimeBeforeReminding( 7 );
 ```
 

@@ -138,9 +138,7 @@ If you don't specify the platform then it is assumed you have determined to corr
 You should pass the above id's to the extension as early as possible, preferably just after you 
 initialise the extension as below:
 
-AIR: 
-
-```actionscript
+```actionscript title="AIR"
 ApplicationRater.service.setApplicationId( 
     "air.com.distriqt.test", ApplicationRater.IMPLEMENTATION_ANDROID );
 ApplicationRater.service.setApplicationId( 
@@ -149,9 +147,7 @@ ApplicationRater.service.setApplicationId(
     "YYYYYYYYY", ApplicationRater.IMPLEMENTATION_MACOS );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 ApplicationRater.Instance.SetApplicationId(
 	"com.package.application", ApplicationRater.IMPLEMENTATION_ANDROID);
 ApplicationRater.Instance.SetApplicationId(
