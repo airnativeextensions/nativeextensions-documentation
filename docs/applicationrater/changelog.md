@@ -1,6 +1,6 @@
 
 
-###### 2021.03.15 [v6.0.002]
+###### 2021.03.15 [v6.0.004]
 
 ```
 Updated docs on unity proguard usage and included proguard rules in plugin aar
