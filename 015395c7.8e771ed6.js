@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{59:function(a){a.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"huawei","name":"huawei","count":1,"permalink":"/news/tags/huawei"}')}}]);
