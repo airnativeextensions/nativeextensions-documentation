@@ -44,6 +44,10 @@ module.exports = {
 
       //... other Algolia params
     },
+    googleAnalytics: {
+      trackingID: 'UA-188619114-3',
+      anonymizeIP: true, 
+    },
     navbar: {
       title: 'AIR Native Extensions',
       logo: {

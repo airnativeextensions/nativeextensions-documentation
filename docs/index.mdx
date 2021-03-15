@@ -1,0 +1,86 @@
+---
+id: index
+title: Native Extensions
+sidebar_label: Home
+slug: /
+---
+
+import Layout from '@theme/Layout';
+
+export const Extension = ({children, name, shortname}) => (
+  <div
+    style={{
+        padding: '1rem',
+        width: '50%',
+        display: 'inline-block' ,
+        'vertical-align': 'top'
+        }}>
+    <div
+        style={{
+            backgroundColor: '#eee',
+            borderRadius: '10px',
+            color: '#333',
+            padding: '1rem',
+        }}>
+        <a href={"/docs/" + shortname}>
+            <h4 style={{
+                color: '#000',
+                'text-align': 'center',
+                display: 'block'
+                }}>{name}</h4>
+            <img src={ shortname + '/images/promo.png' } />
+        </a>
+        <span style={{
+            'text-align': 'center',
+            display: 'block',
+            margin: '0.5em'
+        }}>
+        {children}
+        </span>
+    </div>
+  </div>
+);
+
+
+
+
+Get started quickly and easily with distriqt's native extensions and focus on building great games and apps.
+
+:::note Note on terminology
+We develop across several platforms (AIR, Unity, Flutter etc). Each platform uses their own name for a native extension:
+- AIR has ANEs (AIR Native Extensions);
+- Unity has Unity Native Plugins;
+- Flutter has Plugin packages;
+
+We use the name **"extension"** to represent all these concepts.
+:::
+
+
+## Getting Started 
+
+If you are new to extensions, check the [tutorials](/docs/tutorials) and [FAQs](/docs/faqs/) sections for information on starting out with native extensions. 
+
+:::info Find your extension
+
+- <img src="/img/left-arrow.svg" width="20px" style={{ margin: '0 0 -5px 0', padding: '0 5px 0 0' }}/>  Select the extension from the list on the left;
+- Look through the popular extensions below;
+- Try the search at the top of the page.
+:::
+
+## Common Extensions
+
+<Extension name="Adverts" shortname="adverts">Banners, interstitials and rewarded video ads</Extension>
+<Extension name="Native WebView" shortname="nativewebview">Native webview for better web rendering support</Extension>
+<Extension name="In-App Billing" shortname="inappbilling">Monetise your app with in-app purchases through multiple services</Extension>
+<Extension name="Notifications" shortname="notifications">Simple user engagement through local notifications</Extension>
+<Extension name="Share" shortname="share">Sharing images and urls through the native share dialogs</Extension>
+<Extension name="Firebase" shortname="firebase">Firebase platform, including analytics, auth and database functionality</Extension>
+
+
+
+## Free Extensions
+
+<Extension name="IronSource" shortname="ironsource">IronSource advertising</Extension>
+<Extension name="IDFA" shortname="idfa">Access the Advertising Identifiers</Extension>
+<Extension name="System Gestures" shortname="systemgestures">Control the screen edge gestures and home indicator</Extension>
+<Extension name="Branch" shortname="branch">Branch IO deep linking and universal objects</Extension>
