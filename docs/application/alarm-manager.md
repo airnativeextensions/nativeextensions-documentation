@@ -18,7 +18,6 @@ The first receiver is required to restore alarms after a reboot and the second t
 ```xml
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.READ_PHONE_STATE"/> 
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 	
@@ -31,7 +30,7 @@ The first receiver is required to restore alarms after a reboot and the second t
 		</receiver>
 		
 		<receiver android:name="com.distriqt.extension.application.alarms.AlarmReceiver" android:enabled="true" />
-		<activity android:name="com.distriqt.extension.application.alarms.AlarmActivity" />
+		<activity android:name="com.distriqt.extension.application.alarms.AlarmActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 		
 	</application>
 		

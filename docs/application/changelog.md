@@ -1,5 +1,12 @@
 
 
+###### 2021.03.22 [v6.5.056]
+
+```
+Added better alarm handling when app active
+```
+
+
 ###### 2021.03.16 [v6.5.051]
 
 ```

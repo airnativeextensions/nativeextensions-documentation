@@ -173,7 +173,6 @@ Ensure you place this within the `application` tag eg:
             <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28"/>
 
             <uses-permission android:name="android.permission.INTERNET"/>
-            <uses-permission android:name="android.permission.READ_PHONE_STATE"/> 
             <uses-permission android:name="android.permission.WAKE_LOCK" />
 
             <application>

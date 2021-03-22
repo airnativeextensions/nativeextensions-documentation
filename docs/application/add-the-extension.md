@@ -83,7 +83,6 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 ```xml
 <manifest android:installLocation="auto">
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -104,7 +103,7 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
         <!-- ALARM MANAGER -->
         <receiver android:name="com.distriqt.extension.application.alarms.AlarmReceiver" android:enabled="true" />
-        <activity android:name="com.distriqt.extension.application.alarms.AlarmActivity" />
+        <activity android:name="com.distriqt.extension.application.alarms.AlarmActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- SETTINGS -->
         <activity android:name="com.distriqt.extension.application.settings.SettingsActivity" android:label="Settings" />
