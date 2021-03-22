@@ -1,5 +1,13 @@
 
 
+###### 2021.03.22 [v5.0.053]
+
+```
+Added more robust checks for camera modes on Android and ability to use front camera with the activity method
+Removed ios_min_version
+```
+
+
 ###### 2021.03.05 [v5.0.046]
 
 ```
