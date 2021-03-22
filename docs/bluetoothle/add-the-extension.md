@@ -105,17 +105,24 @@ Note: Since Android 23, you need to add `ACCESS_COARSE_LOCATION` to be able to s
 The following additions are required to enable the background operation modes of the application 
 as either a peripheral or a central or both.
 
-The `NSBluetoothPeripheralUsageDescription` key lets you describe the reason your app uses Bluetooth. 
-When the system prompts the user to allow usage, the value that you provide for this key is displayed as part of the alert.
+The `NSBluetoothAlwaysUsageDescription` and `NSBluetoothPeripheralUsageDescription` keys let you describe the reason your app uses Bluetooth. 
+- `NSBluetoothAlwaysUsageDescription` is required for iOS versions 13+;
+- if you are also deploying to earlier versions you should also include `NSBluetoothPeripheralUsageDescription`.
 
+When the system prompts the user to allow usage, the value that you provide for this key is displayed as part of the alert.
 
 ```xml
 <InfoAdditions><![CDATA[
 	
 	<!-- OTHER SETTINGS --> 
 
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Usage description</string>
+
+	<!-- For iOS versions earlier than 13 -->
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Some description of the bluetooth usage</string>
+	<string>Usage description</string>
+
 
 	<key>UIBackgroundModes</key>
 	<array>

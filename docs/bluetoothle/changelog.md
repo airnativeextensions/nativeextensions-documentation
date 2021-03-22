@@ -1,5 +1,12 @@
 
 
+###### 2021.03.22 [v4.1.017]
+
+```
+Updated documentation and Android x64 build
+```
+
+
 ###### 2020.03.23 [v4.0.010]
 
 ```

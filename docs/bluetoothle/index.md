@@ -6,6 +6,7 @@ slug: /bluetoothle
 
 ![](images/hero.png)
 
+
 # BluetoothLE
 
 The [BluetoothLE](https://airnativeextensions.com/extension/com.distriqt.BluetoothLE) extension 
@@ -60,8 +61,9 @@ improving and updating the extensions for OS updates and feature requests.
 
 ## Documentation
 
-The Wiki forms the best source of detailed documentation for the extension along 
-with the [asdocs](https://docs.airnativeextensions.com/asdocs/bluetoothle). 
+The [documentation site](https://docs.airnativeextensions.com/docs/bluetoothle) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/bluetoothle/). 
+
+
 
 More information here: 
 
