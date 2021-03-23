@@ -1,5 +1,14 @@
 
 
+###### 2021.03.23 [v5.0.070]
+
+```
+Unity Plugin release
+Added Haptic Engine functionality for iOS
+
+```
+
+
 ###### 2020.03.20 [v4.0.023]
 
 ```

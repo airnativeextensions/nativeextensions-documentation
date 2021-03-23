@@ -19,11 +19,14 @@ To create a feedback generator you call the `createFeedbackGenerator()` function
 
 For example, to create an impact feedback generator:
 
-```actionscript
+```actionscript title="AIR"
 var generator:FeedbackGenerator = Vibration.service.createFeedbackGenerator( FeedbackGeneratorType.IMPACT );
 ```
 
 
+```csharp title="Unity"
+FeedbackGenerator generator = Vibration.Instance.CreateFeedbackGenerator( FeedbackGeneratorType.IMPACT );
+```
 
 
 
@@ -31,8 +34,12 @@ var generator:FeedbackGenerator = Vibration.service.createFeedbackGenerator( Fee
 
 Once you have created your generator, performing feedback is a simple matter of calling the `performFeedback` function:
 
-```actionscript
+```actionscript title="AIR"
 generator.performFeedback();
+```
+
+```csharp title="Unity"
+generator.PerformFeedback();
 ```
 
 >
@@ -73,9 +80,11 @@ This is currently mainly required on iOS, however it is intended to perform the 
 
 To prepare your generator simply call the `prepare()` function:
 
-```actionscript
+```actionscript title="AIR"
 generator.prepare();
 ```
 
-
+```csharp title="Unity"
+generator.Prepare();
+```
 

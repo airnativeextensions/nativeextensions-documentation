@@ -1,6 +1,6 @@
 ---
 title: Add the Extension
-sidebar_label: Add the Extension
+sidebar_label: AIR
 ---
 
 First step is always to add the extension to your development environment. 
