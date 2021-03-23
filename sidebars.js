@@ -2281,12 +2281,14 @@ module.exports = {
     { 
       "Get Started": [
         "vibration/add-the-extension",
+        "vibration/add-the-plugin",
       ]
     },
     { 
       "Usage": [
         "vibration/vibrate",
         "vibration/feedback-generators",
+        "vibration/haptic-engine",
       ]
     },
     { 
