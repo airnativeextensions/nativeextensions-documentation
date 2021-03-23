@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[769],{827:function(s){s.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"crashlytics","name":"crashlytics","count":1,"permalink":"/news/tags/crashlytics"}')}}]);
