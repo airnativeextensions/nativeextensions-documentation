@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[555],{611:function(n){n.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"ironsource","name":"ironsource","count":1,"permalink":"/news/tags/ironsource"}')}}]);

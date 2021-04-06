@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[135],{191:function(e){e.exports=JSON.parse('{"permalink":"/news","page":1,"postsPerPage":10,"totalPages":1,"totalCount":6,"previousPage":null,"nextPage":null,"blogDescription":"distriqt // Native Extension News"}')}}]);
