@@ -1,5 +1,12 @@
 
 
+###### 2021.04.06 [v10.3.046]
+
+```
+Added setUserId and removeUserId to associate custom user identifiers (resolves #485)
+```
+
+
 ###### 2021.02.08 [v10.2.043]
 
 ```
