@@ -610,6 +610,7 @@ module.exports = {
     { 
       "Get Started": [
         "cloudstorage/add-the-extension",
+        "cloudstorage/add-the-plugin",
       ]
     },
     { 

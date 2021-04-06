@@ -42,7 +42,7 @@ improving and updating the extensions for OS updates and feature requests.
 
 ## Documentation
 
-Latest documentation can be found in the [wiki](https://github.com/distriqt/ANE-CloudStorage/wiki)
+Latest documentation can be found in the [documentation site](https://docs.airnativeextensions.com/docs/cloudstorage)
 
 More information here: 
 
