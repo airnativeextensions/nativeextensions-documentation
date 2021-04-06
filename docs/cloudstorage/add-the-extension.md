@@ -153,57 +153,18 @@ The tvOS descriptor must have the tvOS device type added to the iPhone node info
 
 
 
-
-
-
-# Unity 
-
-In unity you import the package by selecting `Assets / Import Package / Custom Package ...` and then browsing to the unity plugin package file: `com.distriqt.CloudStorage.unitypackage`.
-
-![](images/unity-import-package.png)
-
-This will present the import dialog and display all the files for the plugin, make sure all the files are selected.
-
-The plugin will be added to your project and you can now use the plugins functionality in your application.
-
-
-
-## iOS / tvOS 
-
-The `Capabilities` editor script should automatically enable iCloud key-value store for your Xcode project, which should add the appropriate value for the `com.apple.developer.ubiquity-kvstore-identifier` key in your entitlements.
-
-We suggest you ensure the value is correct and that cloud kit has been enabled in the capabilities section of your project.
-
-
-
-
-
-
-
-
-# Checking for Support
+## Checking for Support
 
 You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
 
 This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
 
-AIR: 
-
-```actionscript
+```actionscript title="AIR"
 if (CloudStorage.isSupported)
 {
 	// Functionality here
 }
 ```
 
-
-Unity: 
-
-```csharp
-if (CloudStorage.isSupported)
-{
-	// Functionality here
-}
-```
 
 
