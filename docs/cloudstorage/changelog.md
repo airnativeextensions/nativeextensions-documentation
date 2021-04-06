@@ -3,6 +3,13 @@
 ###### 2021.04.06 [v6.0.095]
 
 ```
+Updated docs
+```
+
+
+###### 2021.04.06 [v6.0.095]
+
+```
 Updated docs and reduced unity minimum version
 ```
 

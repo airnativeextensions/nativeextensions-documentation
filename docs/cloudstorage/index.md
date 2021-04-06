@@ -28,12 +28,12 @@ normal file and get notifications of changes when updates are received from the 
 We provide complete guides to get you up and running with cloud storage quickly and easily.
 
 
-It supports both Unity and Adobe AIR frameworks on iOS and tvOS, allowing you to use the same functionality on all frameworks.
+It supports both Unity and Adobe AIR frameworks on iOS, tvOS and macOS, allowing you to use the same functionality on all frameworks.
 
 
 ### Features
 
-- Save key/value pairs to iCloud on iOS;
+- Save key/value pairs to iCloud on iOS, tvOS and macOS;
 - Document store 
 
 As with all our extensions you get access to a year of support and updates as we are continually 
@@ -53,7 +53,8 @@ More information here:
 
 You can purchase a license for using this extension:
 
-[airnativeextensions.com](https://airnativeextensions.com/)
+- [airnativeextensions.com](https://airnativeextensions.com/)
+- [Unity Asset Store](https://assetstore.unity.com/publishers/46451)
 
 distriqt retains all copyright.
 
