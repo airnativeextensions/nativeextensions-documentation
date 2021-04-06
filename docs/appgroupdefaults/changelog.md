@@ -1,5 +1,12 @@
 
 
+###### 2021.04.06 [v4.1.065]
+
+```
+Updated unity minimum requirements and proguard settings + updated docs
+```
+
+
 ###### 2020.08.22 [v4.1.058]
 
 ```

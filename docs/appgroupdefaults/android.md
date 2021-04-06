@@ -13,10 +13,9 @@ There are two methods available on Android to share settings between application
 >
 > ### Unity
 > 
-> For unity these additions should be placed in your applications `AndroidManifest.xml` file. 
-> If you don't have one, create a file at `Assets/Plugins/Android/AndroidManifest.xml` and add the 
-> content from the example, then proceed as below to update the manifest as per the method you 
-> plan to use.
+> For unity these additions will be automatically added to your build. 
+>
+> However if you have a manually control your manifest then these should be placed in your custom application `AndroidManifest.xml` file. 
 > 
 
 
@@ -88,9 +87,7 @@ You must place the application authority both in the meta-data tag and in the pr
 The default is the provider method however if you wish to use the shared file method you 
 can specify the type in the `setup` call:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 AppGroupDefaults.service.setup( 
 	"12345678", 
 	"group.com.distriqt.test", 
@@ -98,9 +95,7 @@ AppGroupDefaults.service.setup(
 );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 AppGroupDefaults.Instance.Setup( 
 	"12345678", // salt
 	"group.com.distriqt.test", // app group identifier
@@ -131,7 +126,7 @@ This requires read / write permissions to the external storage:
 >
 > With AIR you can use the Permissions ANE to request the permissions at runtime.
 >
-> ```actionscript
+> ```actionscript title="AIR"
 > Permissions.service.setPermissions( [
 > 		"android.permission.READ_EXTERNAL_STORAGE",
 > 		"android.permission.WRITE_EXTERNAL_STORAGE"
@@ -144,7 +139,7 @@ This requires read / write permissions to the external storage:
 >
 > Unity you can use the  `UnityEngine.Android.Permission` helper class to request permissions.
 > 
-> ```csharp
+> ```csharp title="Unity"
 > if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite) 
 >     || !Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead))
 > {

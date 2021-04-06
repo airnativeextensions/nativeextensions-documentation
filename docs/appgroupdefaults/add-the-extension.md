@@ -1,11 +1,7 @@
 ---
 title: Add the Extension
-sidebar_label: Add the Extension
+sidebar_label: AIR
 ---
-
-
-
-# AIR
 
 First step is always to add the extension to your development environment. 
 To do this use the tutorial located [here](/docs/tutorials/getting-started).
@@ -36,15 +32,3 @@ The following should be added to your `extensions` node in your application desc
 ```
 
 
-
-# Unity 
-
-In unity you import the package by selecting `Assets / Import Package / Custom Package ...` and then browsing to the unity plugin package file: `com.distriqt.AppGroupDefaults.unitypackage`.
-
-![](images/unity-import-package.png)
-
-This will present the import dialog and place all the files for the plugin, make sure all the files are selected.
-
-![](images/unity-import-files.png)
-
-The plugin will be added to your project and you can now use the plugins functionality in your application.

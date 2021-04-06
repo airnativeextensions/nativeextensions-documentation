@@ -71,8 +71,8 @@ To do it through Xcode simply select **Capabilities** in your project settings a
 
 ![](images/unity-xcode-capabilities.png)
 
-Or open the `AppGroupDefaults/Editor/Capabilities.cs` script and insert your app group identifiers in the `appGroups` array.
-
-- Uncomment the `group.application.group.identifier` and replace with your App Group identifier you used earlier.
+However we suggest use the automatic configuration method by setting your values in the `/Assets/distriqt/AppGroupDefaultsUnity/AppGroupDefaults/Editor/AppGroupDefaultsConfig.cs` script.
 
 This script will be run when your application's Xcode project is built and automatically enable the app group capability and insert the app groups specified. Using this script means you won't have to update each time you build the Xcode project.
+
+

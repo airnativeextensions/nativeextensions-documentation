@@ -3,48 +3,41 @@ title: Usage
 sidebar_label: Usage
 ---
 
-## Configuration 
+## Setup 
 
 To correctly configure the extension you will need to inform it about your group and a salt value to use for encryption.
 
-The salt value is only applicable to Android however the group is used on both. 
-The salt can be any string you require and is used to setup the file encryption algorithm. 
+- The salt value is only applicable to Android however the group is used on both. 
+- The salt can be any string you require and is used to setup the file encryption algorithm. 
 
 
-For the group, you should use the identifier of your AppGroup setup in the iOS member center. 
-This is used to identify the correct group to use on iOS and similarly on Android it's used as the
-name of the file containing the preferences.
+For the group, you should use the identifier of your AppGroup setup in the iOS member center. (With Unity this is the same value as you entered into the `AppGroupDefaultsConfig` file as the `groupIdentifier`).
 
-AIR:
+This is used to identify the correct group to use on iOS and similarly on Android it's used as the name of the file containing the preferences.
 
-```actionscript
+```actionscript title="AIR"
 AppGroupDefaults.service.setup( 
 	"12345678", 
-	"group.application.group.identifier", 
+	"group.com.distriqt.test", 
 	AppGroupDefaults.TYPE_CONTENTPROVIDER 
 );
 ```
 
-Unity: 
-
-```csharp
+```csharp title="Unity"
 AppGroupDefaults.Instance.Setup( 
 	"12345678", 
-	"group.application.group.identifier", 
+	"group.com.distriqt.test", 
 	AppGroupDefaults.TYPE_CONTENTPROVIDER 
 );
 ```
 
 
-The setup call can take a short amount of time to initialise the encryption algorithms so you should
-wait for the initialised event before attempting to read or write values.
+The setup call can take a short amount of time to initialise the encryption algorithms so you should wait for the initialised event before attempting to read or write values.
 
 With AIR you listen for the `AppGroupDefaultsEvent.INITIALISED` event and with Unity add a listener to the `OnInitialised` event.
 
 
-AIR: 
-
-```actionscript
+```actionscript title="AIR"
 AppGroupDefaults.service.addEventListener( AppGroupDefaultsEvent.INITIALISED, initialisedHandler );
 AppGroupDefaults.service.setup( 
 	"12345678", 
@@ -59,14 +52,12 @@ function initialisedHandler( event:AppGroupDefaultsEvent ):void
 ```
 
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 AppGroupDefaults.Instance.OnInitialised += Instance_OnInitialised;
 AppGroupDefaults.Instance.Setup(
 	"12345678", // salt
 	"group.com.distriqt.test", // app group identifier
-	AppGroupDefaults.TYPE_FILE // Android type
+	AppGroupDefaults.TYPE_CONTENTPROVIDER // Android type
 );
 
 void Instance_OnInitialised(distriqt.plugins.appgroupdefaults.events.AppGroupDefaultsEvent e)
@@ -76,19 +67,15 @@ void Instance_OnInitialised(distriqt.plugins.appgroupdefaults.events.AppGroupDef
 ```
 
 
-## Get a value
+## Get Values
 
 Retrieving a value is as simple as calling `getValue()` with the key of interest.
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 trace( "value = " + AppGroupDefaults.service.getValue( "some_key" ) );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 Debug.Log("value = " + AppGroupDefaults.Instance.GetValue( "some_key" ));
 ```
 
@@ -96,19 +83,15 @@ Debug.Log("value = " + AppGroupDefaults.Instance.GetValue( "some_key" ));
 This will return `null` if the key hasn't been set before or if you haven't called `setup` beforehand.
 
 
-## Set a value
+## Set Values
 
 Setting a value is likewise as simple, calling the `setValue` function.
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 var success:Boolean = AppGroupDefaults.service.setValue( "some_key", "some_value" );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 bool success = AppGroupDefaults.Instance.SetValue("some_key", "some_value");
 ```
 
@@ -124,9 +107,7 @@ set in the defaults.
 
 This allows you to list all settings currently stored in the defaults.
 
-AIR: 
-
-```actionscript
+```actionscript title="AIR"
 var keys:Array = AppGroupDefaults.service.getKeys();
 for each (var key:String in keys)
 {
@@ -135,9 +116,7 @@ for each (var key:String in keys)
 }
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 string[] keys = AppGroupDefaults.Instance.GetKeys();
 foreach (string key in keys)
 {
@@ -150,15 +129,11 @@ foreach (string key in keys)
 
 If you wish to clear a value and remove it from the defaults, simply call the `remove` function with the key of interest.
 
-AIR: 
-
-```actionscript
+```actionscript title="AIR"
 AppGroupDefaults.service.remove( "some_key" );
 ```
 
-Unity:
-
-```csharp
+```csharp title="Unity"
 AppGroupDefaults.Instance.Remove("some_key");
 ```
 
@@ -166,16 +141,72 @@ AppGroupDefaults.Instance.Remove("some_key");
 
 If you wish to remove all values from the defaults, simply call the `removeAll` function:
 
-AIR:
-
-```actionscript
+```actionscript title="AIR"
 AppGroupDefaults.service.removeAll();
 ```
 
-Unity: 
-
-```csharp
+```csharp title="Unity"
 AppGroupDefaults.Instance.RemoveAll();
+```
+
+
+
+## AIR Example
+
+The following example shows the core concepts, i.e. the setup process, listening to the `AppGroupDefaultsEvent.INITIALISED` event, 
+and getting and setting values.
+
+
+```actionscript title="AIR"
+if (AppGroupDefaults.isSupported)
+{
+	AppGroupDefaults.service.addEventListener( AppGroupDefaultsEvent.INITIALISED, initialisedHandler );
+	AppGroupDefaults.service.setup( 
+		"12345678", 
+		"group.com.distriqt.test",
+		AppGroupDefaults.TYPE_FILE 
+	);
+						
+
+}
+
+function initialisedHandler( event:AppGroupDefaultsEvent ):void
+{
+	var someValue:String = AppGroupDefaults.service.getValue( "some_key" );
+
+    AppGroupDefaults.service.setValue("anotherKey", "Sample text from AIR!");
+}
+```
+
+
+## Unity Example
+
+The following example shows the core concepts, i.e. the setup process, listening to the `OnInitialised` event, 
+and getting and setting values.
+
+
+```csharp title="Unity"
+if (AppGroupDefaults.isSupported)
+{
+	AppGroupDefaults.Instance.OnInitialised += Instance_OnInitialised;
+
+	AppGroupDefaults.Instance.Setup(
+		"12345678", // salt
+		"group.com.distriqt.test", // app group identifier
+		AppGroupDefaults.TYPE_CONTENTPROVIDER // Android type
+	);
+}
+
+
+private void Instance_OnInitialised(AppGroupDefaultsEvent e)
+{
+	Debug.Log("OnInitialised");
+
+	string someValue = AppGroupDefaults.Instance.GetValue("someKey");
+
+    AppGroupDefaults.Instance.SetValue("anotherKey", "Sample text from Unity!");
+
+}
 ```
 
 
