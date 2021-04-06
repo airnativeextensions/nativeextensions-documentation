@@ -165,6 +165,7 @@ module.exports = {
     { 
       "Get Started": [
         "appgroupdefaults/add-the-extension",
+        "appgroupdefaults/add-the-plugin",
         "appgroupdefaults/ios",
         "appgroupdefaults/android",
       ]
