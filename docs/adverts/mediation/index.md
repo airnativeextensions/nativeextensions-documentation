@@ -28,8 +28,8 @@ however should work with any recent AdMob implementation.
     - [App Lovin](applovin)
     - [Facebook Audience](facebookaudience)
     - [IronSource](ironsource)
-    - [Unity Ads](unityads)
     - [TapJoy](tapjoy)
+    - [Unity Ads](unityads)
 
 
 
