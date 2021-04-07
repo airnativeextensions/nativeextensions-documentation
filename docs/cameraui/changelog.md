@@ -1,5 +1,13 @@
 
 
+###### 2021.04.07 [v3.3.007]
+
+```
+Removed ios minimum version linker option
+Corrected removal of media data from gallery on Android
+```
+
+
 ###### 2021.03.05 [v3.2.025]
 
 ```
