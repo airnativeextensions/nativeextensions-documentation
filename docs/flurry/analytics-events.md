@@ -13,6 +13,7 @@ Flurry.service.analytics.logEvent( "click", { x: event.stageX, y: event.stageY }
 ```
 
 
+
 ## Example
 
 Simple example of initialisation and logging a startup event.
@@ -20,15 +21,19 @@ Simple example of initialisation and logging a startup event.
 ```actionscript
 try
 {
-	Flurry.init( "APPLICATION_KEY" );
-	
 	trace( "Flurry Supported:     " + Flurry.isSupported );
 	if (Flurry.isSupported)
 	{
+		var config:FlurryAnalyticsConfig = new FlurryAnalyticsConfig();
+
+		Flurry.service.analytics.initialiseWithKeys(
+			"IOS_FLURRY_KEY", 
+			"ANDROID_FLURRY_KEY",
+			config );
+		
 		trace( "Flurry Version:       " + Flurry.service.version );
 		trace( "Flurry Agent Version: " + Flurry.service.analytics.getFlurryAgentVersion() );
 
-		Flurry.service.analytics.initialiseWithKeys( "IOS_FLURRY_KEY", "ANDROID_FLURRY_KEY" );
 		Flurry.service.analytics.startSession();
 		Flurry.service.analytics.logEvent( "startup" );
 	}

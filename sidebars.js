@@ -1198,7 +1198,13 @@ module.exports = {
       "Analytics": [
         "flurry/analytics-sessions",
         "flurry/analytics-events",
+        "flurry/user-properties",
       ]
+    },
+    {
+        "Migration Guides": [
+            "flurry/migrating-to-v6"
+        ]
     },
     { 
       "Other": [

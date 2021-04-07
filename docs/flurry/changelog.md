@@ -1,5 +1,17 @@
 
 
+###### 2021.04.07 [v6.0.006]
+
+```
+SDK Update:
+- iOS v11.2.0
+- Android v12.11.0
+
+New configuration process
+Added User Properties (resolves #19)
+```
+
+
 ###### 2020.03.22 [v5.0.011]
 
 ```

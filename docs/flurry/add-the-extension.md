@@ -76,7 +76,13 @@ The following should be added to your `extensions` node in your application desc
 
 
 The Flurry API requires a few additions to the manifest. 
+
+:::warning
+You need to replace `APPLICATION_PACKAGE` with your applications package name, generally your air application id prefixed by `air.`, eg `air.com.distriqt.test`.
+:::
+
 You should add the listing below to your manifest:
+
 
 ```xml
 <manifest android:installLocation="auto">
@@ -89,7 +95,16 @@ You should add the listing below to your manifest:
     <!-- OR -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <application>
+    
+        <provider
+            android:name="com.flurry.android.agent.FlurryContentProvider"
+            android:authorities="APPLICATION_PACKAGE.FlurryContentProvider"
+            android:exported="false" />
+    
+    </application>
+
 </manifest>
 ```
 
-
+Make sure you only have one `application` node in your manifest additions.

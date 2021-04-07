@@ -8,16 +8,17 @@ session each time your application is activated. Make sure you only add the acti
 handler after you've initialised the Flurry extension, or else implement a check to 
 make sure this process has been performed.
 
+
 ```actionscript
-Flurry.service.analytics.initialiseWithKeys( "IOS_FLURRY_KEY", "ANDROID_FLURRY_KEY" );
+var config:FlurryAnalyticsConfig = new FlurryAnalyticsConfig();
+Flurry.service.analytics.initialiseWithKeys( "IOS_FLURRY_KEY", "ANDROID_FLURRY_KEY", config );
 Flurry.service.analytics.startSession();
 
 addEventListener( Event.ACTIVATE, activateHandler );
 addEventListener( Event.DEACTIVATE, deactivateHandler );
 
-...
 
-private function activateHandler( event:Event ):void
+function activateHandler( event:Event ):void
 {
 	if (Flurry.isSupported)
 	{
@@ -25,7 +26,7 @@ private function activateHandler( event:Event ):void
 	}
 }
 
-private function deactivateHandler( event:Event ):void
+function deactivateHandler( event:Event ):void
 {
 	if (Flurry.isSupported)
 	{
