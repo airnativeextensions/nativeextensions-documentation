@@ -139,6 +139,7 @@ module.exports = {
         },
         { 
             "Mediation": [
+                "adverts/mediation/adcolony",
                 "adverts/mediation/applovin",
                 "adverts/mediation/facebookaudience",
                 "adverts/mediation/ironsource",

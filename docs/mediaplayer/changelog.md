@@ -1,5 +1,13 @@
 
 
+###### 2021.04.08 [v4.4.006]
+
+```
+Corrected issue with displaying initial video frame when destroying a media player (resolves #204)
+Removed ios minimum version linker option
+```
+
+
 ###### 2021.03.05 [v4.4.003]
 
 ```
