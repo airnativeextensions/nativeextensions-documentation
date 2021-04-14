@@ -1,5 +1,12 @@
 
 
+###### 2021.04.14 [v5.0.054]
+
+```
+Corrected default implementation (SWC) function definitions to match native
+```
+
+
 ###### 2021.03.22 [v5.0.053]
 
 ```
