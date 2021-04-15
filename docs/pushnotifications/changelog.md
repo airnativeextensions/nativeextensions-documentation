@@ -1,5 +1,12 @@
 
 
+###### 2021.04.15 [v10.3.048]
+
+```
+Corrected iOS deployment target which caused issues on iOS 9 (resolves #489)
+```
+
+
 ###### 2021.04.06 [v10.3.046]
 
 ```
