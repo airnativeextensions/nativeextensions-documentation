@@ -1,5 +1,12 @@
 
 
+###### 2021.04.21 [v6.0.005]
+
+```
+Corrected issue with realtime database startAt query (resolves #361)
+```
+
+
 ###### 2021.01.26 [v6.0.003]
 
 ```
