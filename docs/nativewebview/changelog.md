@@ -1,5 +1,12 @@
 
 
+###### 2021.04.21 [v5.2.383]
+
+```
+iOS: Fixed issue with browser view failing to initialise correctly (resolves #252)
+```
+
+
 ###### 2020.12.11 [v5.2.378]
 
 ```
