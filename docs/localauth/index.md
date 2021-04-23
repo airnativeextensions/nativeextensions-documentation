@@ -32,19 +32,18 @@ and uses a universal UI that your users will be familiar with.
 
 ### Support
 
-- iOS v8+
+- iOS v9+
 - Android v23+ 
 
 
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-LocalAuth/wiki) forms the best source of detailed documentation for the extension along with the
- [asdocs](https://docs.airnativeextensions.com/asdocs/localauth). 
+The [documentation site](https://docs.airnativeextensions.com/docs/localauth/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/localauth/). 
 
 Quick Example: 
 
-```actionscript
+```as3
 if (LocalAuth.service.canAuthenticateWithFingerprint())
 {
 	LocalAuth.service.addEventListener( LocalAuthEvent.AUTH_SUCCESS, authSuccessHandler );

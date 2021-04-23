@@ -1,5 +1,12 @@
 
 
+###### 2021.04.23 [v3.0.008]
+
+```
+Updated documentation (resolves #15) Android x64 support
+```
+
+
 ###### 2020.03.20 [v3.0.006]
 
 ```
