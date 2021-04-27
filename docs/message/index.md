@@ -8,6 +8,17 @@ slug: /message/
 
 # Message
 
+:::caution Deprecated
+The Message extension has been deprecated.
+
+The [Share](../share) extension has all of this functionality available plus access to other sharing methods (such as via other apps).
+
+While this extension will still be available please be aware that we will wind down support and development on the extension. All existing customers have been given access to the Share extension.
+
+If you have any questions or concerns you can contact us at airnativeextensions@distriqt.com.
+:::
+
+
 The [Message](https://airnativeextensions.com/extension/com.distriqt.Message) 
 extension provides functionality to send an email with attachments and to send SMS.
 
