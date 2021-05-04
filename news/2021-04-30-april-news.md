@@ -64,7 +64,7 @@ We have had a few requests around improving the game controller support in AIR o
 
 You can read the discussion [here](https://forum.starling-framework.org/d/23008-gamepad-controller-support-iosandroid/18)
 
-We have had a large contribution to the development but are still looking for additional funding to get this extension started. If you are interested you can sponsor the development on [github](https://github.com/sponsors/distriqt).
+Sponsoring helps us to fund the initial development work for a new extension and is the simplest way we can continue further development of the AIR platform. We have had a large contribution to the development but are still looking for additional funding to get this extension started. If you are interested you can sponsor the development on [github](https://github.com/sponsors/distriqt).
 
 
 
