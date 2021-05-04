@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[166],{222:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"gamecontroller","name":"gamecontroller","count":1,"permalink":"/news/tags/gamecontroller"}')}}]);

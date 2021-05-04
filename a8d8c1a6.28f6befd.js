@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[551],{607:function(n){n.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"nfc","name":"nfc","count":1,"permalink":"/news/tags/nfc"}')}}]);
