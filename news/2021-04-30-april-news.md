@@ -75,7 +75,7 @@ Sponsoring helps us to fund the initial development work for a new extension and
 
 ### [Unity Plugins](https://assetstore.unity.com/publishers/46451)
 
-We have released another more plugins to the Unity Asset Store this month:
+We have released another plugin to the Unity Asset Store this month:
 
 - [NFC](https://assetstore.unity.com/packages/tools/integration/nfc-190517) 
 
