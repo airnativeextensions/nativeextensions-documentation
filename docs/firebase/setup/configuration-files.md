@@ -99,7 +99,7 @@ it's a good idea to use this method from the start.
 
 ### Android Values XML
 
-To create your values file (`res/values/values.xml`) you can either use the conversion tool [available here](pathname://../tools/google-services-json-to-xml.html) or you can create it manually by copying the example below:
+To create your values file (`res/values/values.xml`) you can either use the conversion tool [available here](pathname:///firebase/tools/google-services-json-to-xml.html) or you can create it manually by copying the example below:
 
 >
 > Complete `values.xml` example:
