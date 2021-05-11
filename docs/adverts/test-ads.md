@@ -14,6 +14,7 @@ It is very important that while you are developing your application that you do 
 
 The quickest way to enable testing is to use Google-provided test ad units. These ad units are not associated with your AdMob account, so there's no risk of your account generating invalid traffic when using these ad units. Here are sample ad units that point to specific test creatives for each format:
 
+
 ### Android
 
 | Ad format | Sample ad unit ID |
@@ -24,6 +25,8 @@ The quickest way to enable testing is to use Google-provided test ad units. Thes
 | Rewarded Video | `ca-app-pub-3940256099942544/5224354917` |
 | Native Advanced | `ca-app-pub-3940256099942544/2247696110` |
 | Native Advanced Video | `ca-app-pub-3940256099942544/1044960115` |
+| App Open Ad | `ca-app-pub-3940256099942544/3419835294` |
+
 
 ### iOS
 
@@ -35,19 +38,21 @@ The quickest way to enable testing is to use Google-provided test ad units. Thes
 | Rewarded Video | `ca-app-pub-3940256099942544/1712485313` |
 | Native Advanced | `ca-app-pub-3940256099942544/3986624511` |
 | Native Advanced Video | `ca-app-pub-3940256099942544/2521693316` |
+| App Open Ad | `ca-app-pub-3940256099942544/5662855259` |
 
 
 
 ## Test Devices
 
-If you need to confirm your ad unit id you must specify the test device id on your requests:
+If you want to do more rigorous testing with production-looking ads, you can now configure your device as a test device and use your own ad unit IDs that you've created. Test devices can either be added in the AdMob UI or programmatically.
+
 
 ```actionscript
-var request:AdRequest = new AdRequestBuilder()
-							.addTestDevice( "33BE2250B43518CCDA7DE426D04EE231" )
-							.build();
+var config:RequestConfiguration = Adverts.service.getRequestConfiguration()
+		.setTestDeviceIds( [ "33BE2250B43518CCDA7DE426D04EE231" ] )
+;
 
-adView.load( request );
+Adverts.service.setRequestConfiguration( config );
 ```
 
 This test id is listed in the device logs when testing an ad request.
@@ -58,7 +63,7 @@ This test id is listed in the device logs when testing an ad request.
 Check the logcat output for a message that looks like this:
 
 ```
-I/Ads: Use AdRequest.Builder.addTestDevice("33BE2250B43518CCDA7DE426D04EE231") to get test ads on this device."
+I/Ads: Use RequestConfiguration.Builder.setTestDeviceIds(Arrays.asList("33BE2250B43518CCDA7DE426D04EE231")) to get test ads on this device.
 ```
 
 >
@@ -74,7 +79,7 @@ Read more [here](https://developers.google.com/admob/android/test-ads)
 Check the console (device logs) for a message that looks like this:
 
 ```
-<Google> To get test ads on this device, call: request.testDevices = @[ @"2077ef9a63d2b398840261c8221a0c9b" ];
+<Google> To get test ads on this device, set: GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"2077ef9a63d2b398840261c8221a0c9b" ];
 ```
 
 

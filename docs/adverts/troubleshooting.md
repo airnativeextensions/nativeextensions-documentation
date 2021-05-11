@@ -7,6 +7,29 @@ sidebar_label: Troubleshooting
 ## Common Issues
 
 
+
+### Account Setup 
+
+It is important that you have completed the account setup through the AdMob console. An incomplete account setup will generally mean all ad requests will fail. 
+
+Accounts require a linked application before they can be reviewed and approved by AdMob. Without this you will not receive live ads and may not receive test ads. (This requirement is being rolled out through 2021).
+
+>
+> Note that new apps must be listed and linked to a supported store in order to be approved and remove the ad serving limit. New apps not listed to any supported stores won't be able to be reviewed. To have an app reviewed and eligible for approval, list and link the app to a supported store. 
+>
+
+Reference: https://support.google.com/admob/answer/10417515
+
+
+
+### Resolve common onboarding issues
+
+Carefully review the details you receive from the Google Mobile Ads SDK to determine the issue you're having. Click on the error message you received to view more details about how to fix the issue. 
+
+https://support.google.com/admob/answer/9905175
+
+
+
 ### iOS Crash on Launch
 
 If you encounter a crash on launch, ensure you have added the [info additions](add-the-extension#info-additions) correctly. The AdMob SDK will terminate your application if you haven't provided your application identifier in the info additions.
@@ -17,6 +40,9 @@ If you encounter a crash on launch, ensure you have added the [info additions](a
 It can take an hour or two for a new ad unit to become available. Make sure you have waited a decent amount of time before testing your ad unit ids.
 
 
+
+
+## AdMob Error Codes
 
 ### Error Code 0
 
@@ -37,8 +63,6 @@ To confirm this you can try changing your application id and serving the same ad
 
 
 
-
-
 ### Error Code 1
 
 Error code 1 (`ERROR_CODE_INVALID_REQUEST `) can occur in certain situations. 
@@ -46,5 +70,8 @@ Error code 1 (`ERROR_CODE_INVALID_REQUEST `) can occur in certain situations.
 The most common situation is that your AdUnit ID is incorrect. Check that it was correctly transferred from the console and no irregular characters or spaces have been included.
 
 This error can also occur if the user of this device has enabled ad limiting. This can affect the requests to AdMob and result in this error.
+
+This error can also be caused by an incomplete [account setup](#account-setup). 
+
 
 

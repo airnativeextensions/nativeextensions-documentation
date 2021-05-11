@@ -154,22 +154,22 @@ if (rewardedVideoAd.isLoaded())
 
 There are several events dispatched by the rewarded video ad as the user interacts with it (in addition to the loaded and error events already mentioned):
 
-- `RewardedVideoAdEvent.OPENED`: dispatched when an ad opens an overlay that covers the screen;
-- `RewardedVideoAdEvent.CLOSED`: dispatched when a user returns to the app, having closed the rewarded video ad;
+- `FullScreenContentEvent.SHOW`: dispatched when an ad shows an overlay that covers the screen;
+- `FullScreenContentEvent.DISMISSED`: dispatched when a user returns to the app, having closed the rewarded video ad;
+- `FullScreenContentEvent.FAILED_TO_SHOW`: dispatched if there was an error presenting the ad
 - `RewardedVideoAdEvent.REWARD`: See the [reward section](rewarded-video-ads#rewards)
-- `RewardedVideoAdEvent.ERROR`: dispatched if there was an error presenting the ad
 
 
 ```actionscript
-rewardedVideoAd.addEventListener( RewardedVideoAdEvent.OPENED, openedHandler );
-rewardedVideoAd.addEventListener( RewardedVideoAdEvent.CLOSED, closedHandler );
+rewardedVideoAd.addEventListener( FullScreenContentEvent.SHOW, showHandler );
+rewardedVideoAd.addEventListener( FullScreenContentEvent.DISMISSED, dismissedHandler );
 
-function openedHandler( event:RewardedVideoAdEvent ):void 
+function showHandler( event:FullScreenContentEvent ):void 
 {
-    // The rewarded video ad has been opened and is now visible to the user 
+    // The rewarded video ad has been shown and is now visible to the user 
 }
 
-function closedHandler( event:RewardedVideoAdEvent ):void 
+function dismissedHandler( event:FullScreenContentEvent ):void 
 {
 	// Control has returned to your application
 	// you should reactivate any paused / stopped parts of your application.
@@ -204,5 +204,5 @@ Once you have displayed a rewarded video ad a new ad needs to be loaded in order
 rewardedVideoAd.load( new AdRequestBuilder().build() );
 ```
 
-The `CLOSED` event is generally a good place to trigger this load so that you ensure you always have a loaded ad available to display in your application, however you can handle this process as you see fit.
+The `FullScreenContentEvent.DISMISSED` event is generally a good place to trigger this load so that you ensure you always have a loaded ad available to display in your application, however you can handle this process as you see fit.
 

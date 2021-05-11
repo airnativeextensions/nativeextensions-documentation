@@ -1,5 +1,16 @@
 
 
+###### 2021.05.11 [v13.0.009]
+
+```
+Updated AdMob SDK
+ - Android v20.0.0
+ - iOS v8.4.0
+
+Major refactoring around AdMob restructured SDK, introducing FullScreenContentEvent and RequestConfiguration
+```
+
+
 ###### 2021.01.20 [v12.0.009]
 
 ```

@@ -12,7 +12,9 @@ Add the following 2 additional androidx dependencies:
 - [androidx.room.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.room.ane)
 - [androidx.work.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.work.ane)
 
-Ensure you have the included the additional manifest additions for the androidx room and work libraries (inside the `application` node of your additions):
+Ensure you have the included the additional manifest additions for the androidx room and work libraries (inside the `application` node of your additions).
+
+You should replace `APPLICATION_PACKAGE` with your AIR application package name on Android (eg `air.com.distriqt.test`). Note that it may be prefixed by `air.`.
 
 ```xml
 <!-- AndroidX Room -->
@@ -24,7 +26,7 @@ Ensure you have the included the additional manifest additions for the androidx 
 <!-- AndroidX Work -->
 <provider
 	android:name="androidx.work.impl.WorkManagerInitializer"
-	android:authorities="com.distriqt.extension.adverts.test.workmanager-init"
+	android:authorities="APPLICATION_PACKAGE.workmanager-init"
 	android:directBootAware="false"
 	android:exported="false"
 	android:multiprocess="true" />

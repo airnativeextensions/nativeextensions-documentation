@@ -203,14 +203,12 @@ This can be useful if you need to adjust elements of your application to fit aro
 There are several events dispatched by the advert as the user interacts with it:
 
 - `AdViewEvent.OPENED`: dispatched when an ad opens an overlay that covers the screen;
-- `AdViewEvent.LEFT_APPLICATION`: when a user click opens another app (such as Google Play), backgrounding the current app;
 - `AdViewEvent.CLOSED`: dispatched when a user returns to the app, having closed the interstitial;
 
 At the very least we suggest you should listen for the closed event to know when control returns to your application.
 
 ```actionscript
 adView.addEventListener( AdViewEvent.OPENED, openedHandler );
-adView.addEventListener( AdViewEvent.LEFT_APPLICATION, leftApplicationHandler );
 adView.addEventListener( AdViewEvent.CLOSED, closedHandler );
 
 adView.show();
@@ -219,12 +217,6 @@ adView.show();
 function openedHandler( event:AdViewEvent ):void 
 {
 	// The has been opened and presented an overlay visible to the user 
-}
-
-function leftApplicationHandler( event:AdViewEvent ):void 
-{
-	// Control has left your application, 
-	// you can deactivate any none important parts of your application
 }
 
 function closedHandler( event:AdViewEvent ):void 

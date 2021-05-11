@@ -102,7 +102,7 @@ If an error occurs you can use the `errorCode` on the event to determine what ty
 
 It is very important that while you are developing your application that you do not serve live ads. **This is a requirement of the usage of AdMob and not following this correctly can have your application id blocked from using AdMob.**
 
-While in development you should either use the test ad unit ids available or specify your test device id in your ad requests. More information on this is located in the section on [Test Ads](test-ads)
+While in development you should either use the test ad unit ids available or specify your test device id in your request configuration. More information on this is located in the section on [Test Ads](test-ads)
 
 The following Ad Unit IDs can be used to test interstitial ads in your application:
 
@@ -148,16 +148,16 @@ if (interstitial.isLoaded())
 
 There are several events dispatched by the advert as the user interacts with it:
 
-- `InterstitialAdEvent.OPENED`: dispatched when an ad opens an overlay that covers the screen;
-- `InterstitialAdEvent.LEFT_APPLICATION`: when a user click opens another app (such as Google Play), backgrounding the current app;
-- `InterstitialAdEvent.CLOSED`: dispatched when a user returns to the app, having closed the interstitial;
+- `FullScreenContentEvent.SHOW`: dispatched when an ad opens an overlay that covers the screen;
+- `FullScreenContentEvent.FAILED_TO_SHOW`: dispatched when an ad fails to be shown;
+- `FullScreenContentEvent.DISMISSED`: dispatched when a user returns to the app, having dismissed the interstitial;
 
 At the very least we suggest you should listen for the closed event to know when control returns to your application.
 
 ```actionscript
-interstitial.addEventListener( InterstitialAdEvent.OPENED, openedHandler );
-interstitial.addEventListener( InterstitialAdEvent.LEFT_APPLICATION, leftApplicationHandler );
-interstitial.addEventListener( InterstitialAdEvent.CLOSED, closedHandler );
+interstitial.addEventListener( FullScreenContentEvent.SHOW, showHandler );
+interstitial.addEventListener( FullScreenContentEvent.FAILED_TO_SHOW, failedToShowHandler );
+interstitial.addEventListener( FullScreenContentEvent.DISMISSED, dismissedHandler );
 
 if (interstitial.isLoaded())
 {
@@ -165,18 +165,17 @@ if (interstitial.isLoaded())
 }
 
 
-function openedHandler( event:InterstitialAdEvent ):void 
+function showHandler( event:FullScreenContentEvent ):void 
 {
 	// The interstitial has been opened and is now visible to the user 
 }
 
-function leftApplicationHandler( event:InterstitialAdEvent ):void 
+function failedToShowHandler( event:FullScreenContentEvent ):void 
 {
-	// Control has left your application, 
-	// you can deactivate any none important parts of your application
+	// The ad failed to be shown 
 }
 
-function closedHandler( event:InterstitialAdEvent ):void 
+function dismissedHandler( event:FullScreenContentEvent ):void 
 {
 	// Control has returned to your application
 	// you should reactivate any paused / stopped parts of your application.
@@ -192,5 +191,5 @@ Once you have displayed an interstitial a new ad needs to be loaded in order to 
 interstitial.load( new AdRequestBuilder().build() );
 ```
 
-The `CLOSED` event is generally a good place to trigger this load so that you ensure you always have a loaded ad available to display in your application, however you can handle this process as you see fit.
+The `FullScreenContentEvent.DISMISSED` event is generally a good place to trigger this load so that you ensure you always have a loaded ad available to display in your application, however you can handle this process as you see fit.
 
