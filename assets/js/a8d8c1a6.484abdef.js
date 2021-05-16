@@ -1,0 +1,1 @@
+(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[87550],{82816:function(n){"use strict";n.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"nfc","name":"nfc","count":1,"permalink":"/news/tags/nfc"}')}}]);
