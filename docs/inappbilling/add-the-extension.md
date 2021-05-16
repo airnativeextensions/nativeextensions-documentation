@@ -71,7 +71,7 @@ If you aren't using either of those services you can remove those additions if y
 
 
 		<!-- GOOGLE PLAY BILLING -->
-		<meta-data android:name="com.google.android.play.billingclient.version" android:value="3.0.2" />
+		<meta-data android:name="com.google.android.play.billingclient.version" android:value="3.0.3" />
 		<activity
 			android:name="com.android.billingclient.api.ProxyBillingActivity"
 			android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"

@@ -1,5 +1,17 @@
 
 
+###### 2021.05.16 [v13.0.045]
+
+```
+Google Play Billing
+ - v3.0.3
+
+Huawei 
+ - Fixed endless login loop (resolves #410)
+ - Changed returned error codes to match definitions in ErrorCodes class
+```
+
+
 ###### 2021.02.26 [v13.0.037]
 
 ```
