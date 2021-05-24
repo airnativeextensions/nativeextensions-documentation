@@ -64,18 +64,10 @@ Add the following to your manifest additions inside the `application` tag. You m
     android:hardwareAccelerated="true"
     android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 <activity
-    android:name="com.tapjoy.mraid.view.ActionHandler"
-    android:configChanges="orientation|keyboardHidden|screenSize" />
-<activity
-    android:name="com.tapjoy.mraid.view.Browser"
-    android:configChanges="orientation|keyboardHidden|screenSize" />
-<activity
     android:name="com.tapjoy.TJContentActivity"
     android:configChanges="orientation|keyboardHidden|screenSize"
     android:hardwareAccelerated="true"
     android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-<receiver android:name="com.tapjoy.TapjoyReceiver" />
 ```
 
 

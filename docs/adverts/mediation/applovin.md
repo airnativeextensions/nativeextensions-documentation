@@ -151,6 +151,18 @@ Add the following to your manifest additions inside the `application` tag:
     android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
     android:configChanges="keyboardHidden|orientation|screenSize"
     android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+<activity
+    android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
 
 <service
     android:name="com.applovin.impl.sdk.utils.AppKilledService"
