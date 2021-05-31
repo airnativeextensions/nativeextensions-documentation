@@ -6704,10 +6704,10 @@
   "resolved" "https://registry.npmjs.org/pretty-time/-/pretty-time-1.1.0.tgz"
   "version" "1.1.0"
 
-"prism-react-renderer@^1.1.1":
-  "integrity" "sha512-GHqzxLYImx1iKN1jJURcuRoA/0ygCcNhfGw1IT8nPIMzarmKQ3Nc+JcG0gi8JXQzuh0C5ShE4npMIoqNin40hg=="
-  "resolved" "https://registry.npmjs.org/prism-react-renderer/-/prism-react-renderer-1.2.0.tgz"
-  "version" "1.2.0"
+"prism-react-renderer@^1.1.1", "prism-react-renderer@^1.2.1":
+  "integrity" "sha512-w23ch4f75V1Tnz8DajsYKvY5lF7H1+WvzvLUcF0paFxkTHSp42RS0H5CttdN2Q8RR3DRGZ9v5xD/h3n8C8kGmg=="
+  "resolved" "https://registry.npmjs.org/prism-react-renderer/-/prism-react-renderer-1.2.1.tgz"
+  "version" "1.2.1"
 
 "prismjs@^1.23.0":
   "integrity" "sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA=="

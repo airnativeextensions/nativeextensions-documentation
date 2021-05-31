@@ -1,5 +1,15 @@
 
 
+###### 2021.05.31 [v6.1.004]
+
+```
+SDK Update:
+ - Android v12.13.0
+
+Added revenue tracking (resolves #20)
+```
+
+
 ###### 2021.04.07 [v6.0.006]
 
 ```

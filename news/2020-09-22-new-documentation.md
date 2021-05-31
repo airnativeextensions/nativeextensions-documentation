@@ -13,9 +13,5 @@ Welcome to the new documentation site for the distriqt // air native extensions!
 This site forms the home of all documentation for the distriqt's native extensions. 
 
 
-<!--truncate-->
-
-
-This blog is created with [**Docusaurus 2 alpha**](https://v2.docusaurus.io/).
 
 

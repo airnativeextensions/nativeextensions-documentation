@@ -63,8 +63,10 @@ The following should be added to your `extensions` node in your application desc
 <extensions>
     <extensionID>com.distriqt.Flurry</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
+    
     <extensionID>com.distriqt.playservices.Base</extensionID>
     <extensionID>com.distriqt.playservices.Analytics</extensionID>
+    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 </extensions>
 ```
 
@@ -96,6 +98,8 @@ You should add the listing below to your manifest:
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application>
+
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
     
         <provider
             android:name="com.flurry.android.agent.FlurryContentProvider"
