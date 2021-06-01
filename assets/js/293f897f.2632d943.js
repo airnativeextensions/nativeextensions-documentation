@@ -1,0 +1,1 @@
+(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[15659],{71393:function(e){"use strict";e.exports=JSON.parse('{"permalink":"/news","page":1,"postsPerPage":10,"totalPages":1,"totalCount":8,"previousPage":null,"nextPage":null,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);
