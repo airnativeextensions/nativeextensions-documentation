@@ -119,6 +119,7 @@ module.exports = {
                 "adverts/interstitials",
                 "adverts/rewarded-video-ads",
                 "adverts/native-ads",
+                "adverts/app-open-ads",
                 "adverts/targeting",
                 "adverts/test-ads"
             ]
