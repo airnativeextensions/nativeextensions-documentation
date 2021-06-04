@@ -41,7 +41,7 @@ var consentInformation:ConsentInformation = Adverts.service.ump.getConsentInform
 This object has the consent information including:
 
 - `consentInformation.getConsentStatus()`: The current user consent status (see `ConsentStatus` constants);
-- `consentInformation.getConsentType()`: The type of consent (see `ConsentType` constants);
+- `consentInformation.getConsentType()`: The type of consent (see `ConsentType` constants); **Android only. This has been removed on iOS**
 - `consentInformation.isConsentFormAvailable()`: Whether a form is available to be loaded and displayed to the user;
 
 

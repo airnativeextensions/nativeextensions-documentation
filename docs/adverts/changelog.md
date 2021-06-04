@@ -1,5 +1,16 @@
 
 
+###### 2021.06.05 [v13.1.002]
+
+```
+Updated AdMob SDK
+ - Android v20.1.0
+
+Added adaptive inline banner sizing setInlineAdaptiveAdSize and setInlineAdaptiveAdSizeWithMaxHeight (resolves #279) 
+iOS: Fixed crash with UMP caused by removal of consent type information (#286)
+```
+
+
 ###### 2021.05.11 [v13.0.009]
 
 ```
