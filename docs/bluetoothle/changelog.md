@@ -1,5 +1,12 @@
 
 
+###### 2021.06.08 [v4.1.020]
+
+```
+Updated build to correct swc definitions
+```
+
+
 ###### 2021.03.22 [v4.1.019]
 
 ```
