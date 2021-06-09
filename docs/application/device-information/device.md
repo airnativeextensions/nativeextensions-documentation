@@ -5,9 +5,22 @@ sidebar_label: Device Information
 
 Device functionality allows you to retrieve information about the device.
 
+### Device information
+
+
 There are many pieces of information available through the Device interface that allow 
 you to determine what device you are currently running on, including things like the operating system version and the device model. 
 
+
+- `name` : The name of the device, generally this is a user set name for their device, eg `My iPhone`;
+- `brand` : The consumer-visible brand with which the product/hardware will be associated, if any, eg `Apple`;
+- `manufacturer` : The manufacturer of the product/hardware, eg `Apple` ;
+- `device` : The device type, ie. a simple name for the device eg `iPhone`;
+- `model` : The end-user-visible name for the end product eg `iPhone 11`;
+- `product` : The name of the overall product hardware, eg `iPhone12,1`;
+
+
+For example, the following on an iPhone 11
 
 ```actionscript
 trace( "DEVICE INFO ============================" );
@@ -16,8 +29,19 @@ trace( " brand:        " + Application.service.device.brand );
 trace( " manufacturer: " + Application.service.device.manufacturer );
 trace( " device:       " + Application.service.device.device );
 trace( " model:        " + Application.service.device.model );
-trace( " yearClass:    " + Application.service.device.yearClass );
 trace( " product:      " + Application.service.device.product );
+```
+
+will output:
+
+```
+DEVICE INFO ============================
+ name:         My iPhone
+ brand:        Apple
+ manufacturer: Apple
+ device:       iPhone
+ model:        iPhone 11
+ product:      iPhone12,1
 ```
 
 

@@ -1,5 +1,12 @@
 
 
+###### 2021.06.09 [v6.6.003]
+
+```
+Updated ios device definitions and clarified documentation for year class and device information (resolves #218)
+```
+
+
 ###### 2021.03.22 [v6.5.056]
 
 ```
