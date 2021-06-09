@@ -1,5 +1,15 @@
 
 
+###### 2021.06.09 [v13.2.006]
+
+```
+Removed legacy google consent sdk (resolves #287)
+Updated consent sdk docs
+Added isSupported flag to Consent SDK
+Corrected default lib definitions (resolves #288)
+```
+
+
 ###### 2021.06.05 [v13.1.002]
 
 ```

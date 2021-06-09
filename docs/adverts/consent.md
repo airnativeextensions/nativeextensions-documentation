@@ -4,43 +4,35 @@ sidebar_label: Consent
 ---
 
 >
-> **Google are advising customers migrate to the new [User Messaging Platform](user-messaging-platform) to ensure you have access to the latest consent gathering tools. You should assess whether this new platform is applicable for your situation.**
+> **AdMob users must migrate to the [User Messaging Platform](user-messaging-platform) to ensure you have access to the latest consent gathering tools. The consent sdk has been removed due to app rejections when it was included.**
 >
 > Huawei still utilises this consent SDK.
 >
 
 
->
-> **Important** There are additional resources required to be packaged with your application in order to use this part of the AdMob SDK. 
-> This is described in the [Consent Form Resources](consent#consent-form-resources) section below.
->
 
 
 ## The Consent SDK
 
 >
-> Under the Google EU User Consent Policy, you must make certain disclosures to your users in the European Economic Area (EEA) and obtain their consent to use cookies or other local storage, where legally required, and to use personal data (such as AdID) to serve ads. This policy reflects the requirements of the EU ePrivacy Directive and the General Data Protection Regulation (GDPR).
+> Under the EU User Consent Policy, you must make certain disclosures to your users in the European Economic Area (EEA) and obtain their consent to use cookies or other local storage, where legally required, and to use personal data (such as AdID) to serve ads. This policy reflects the requirements of the EU ePrivacy Directive and the General Data Protection Regulation (GDPR).
 >
-> To support publishers in meeting their duties under this policy, Google offers a Consent SDK. The Consent SDK is an open-source library that provides utility functions for collecting consent from your users.
+> This consent SDK is to support publishers in meeting their duties under this policy. The Consent SDK is an open-source library that provides utility functions for collecting consent from your users.
 >
-> Ads served by Google can be categorized as personalized or non-personalized, both requiring consent from users in the EEA. By default, ad requests to Google serve personalized ads, with ad selection based on the user's previously collected data. Google also supports configuring ad requests to serve non-personalized ads. Learn more about personalized and non-personalized ads.
->
-> This guide describes how to use the Consent SDK to obtain consent from users. It also describes how to forward consent to the Google Mobile Ads SDK once you have obtained consent.
+> This guide describes how to use the Consent SDK to obtain consent from users. It also describes how to forward consent to the ads SDK once you have obtained consent.
 >
 
 
-## AdMob Settings
+## Availability
 
-Firstly lets check you have setup your AdMob account to allow usage of the Consent SDK.
+The consent sdk is only available for certain platforms. Once you have setup your platform you can check if the consent sdk is available by calling `isSupported`
 
-- Sign in to your AdMob account and [select ad technology providers](https://support.google.com/admob/answer/7666519#providers).
-
-If you plan to use the consent form then you will need to make sure you select the **Custom set of ad technology providers** when you **Select ad technology providers**. 
-This is located in the  *Blocking Controls / EU User Consent* section.
-
-
-![](images/admob-eu-user-consent.png)
-
+```actionscript
+if (Adverts.service.consent.isSupported)
+{
+  // Consent sdk is available
+}
+```
 
 
 
@@ -83,68 +75,13 @@ private function statusErrorHandler( event:ConsentEvent ):void
 
 
 
-## Consent Form
-
-Asking for consent will involve presentation of the consent form. 
-
-
-### AdMob
-
->
-> The Google-rendered consent form is a full-screen configurable form that displays over your app content. You can configure the form to present the user with combinations of the following options:
-> 
-> - Consent to view personalized ads
-> - Consent to view non-personalized ads
-> - Use a paid version of the app instead of viewing ads
->
-> You should review the consent text carefully: what appears by default is a message that might be appropriate if you use Google to monetize your app; but we cannot provide legal advice on the consent text that is appropriate for you. 
-> To update consent text of the Google-rendered consent form, modify the `consentform.html` file included in the Consent SDK as required.
->
-
-![](images/android_eu_consent_form.png)
-
-
-The Google-rendered consent form is configured using the `ConsentOptions` class and displayed using the `askForConsent(options)` function.
-The following code demonstrates how to display a form with all three consent options:
-
-```actionscript
-var options:ConsentOptions = new ConsentOptions( "https://www.your.com/privacyurl" )
-					.withPersonalizedAdsOption()
-					.withNonPersonalizedAdsOption()
-					.withAdFreeOption();
-
-Adverts.service.consent.askForConsent( options );
-```
-
-#### AdMob Consent Form Resources
-
-You need to package some additional assets with your application for the consent form. This is the html content for the consent form. 
-It is packaged in a slightly different form for Android and iOS so we will address each separately.
-
-#### AdMob Consent Form Resources - Android
-
-On Android you will need to place the `consentform.html` file in the root of your application package and ensure it is packaged with your application.
-
-If you wish to customise the form, such as changing the textural content, you should update this html file.
-
-
-#### AdMob Consent Form Resources - iOS
-
-On iOS you will need to place the `PersonalizedAdConsent.bundle` in the root of your application package and ensure it is packaged with your application.
-
-If you wish to customise the form, such as changing the textural content, you should update the `consentform.html` file contained within the bundle.
-
-
-
-
+## Consent 
 
 ### Huawei Ads Kit
 
-Huawei does not provide a form, instead we present a series of dialogs to request consent for your user.
-
+Huawei's consent sdk will present a series of dialogs to request consent for your user.
 
 ![](images/android_consent_dialog_huawei.png)
-
 
 
 You can control the content using the `ConsentOptions.setDialogContent()` functionality and passing an `ConsentDialogContent` instance:
@@ -211,10 +148,6 @@ function formErrorHandler( event:ConsentEvent ):void
 ```
 
 >
-> The Google-rendered consent form is not supported if any of your publisher IDs use the commonly used set of ad technology providers. Attempting to load the Google-rendered consent form will always fail in this case.
->
-
->
 > Huawei Ads Kit return values are slightly different, `userPrefersAdFree` will always be `false` and `inEeaOrUnknown` will be `true` if the user needs to consent and `false` otherwise. The consent status will have equivalent values though.
 >  
 
@@ -258,7 +191,7 @@ After completing these steps, calls to update consent status will take into acco
 
 
 
-## Forward consent to the Google Mobile Ads SDK
+## Forward consent to the SDK
 
 Once you have gathered consent you must set the appropriate information on an ad request. See the [Targeting section](targeting) for more information.
 
