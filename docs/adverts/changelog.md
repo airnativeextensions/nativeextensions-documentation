@@ -1,5 +1,12 @@
 
 
+###### 2021.06.14 [v13.2.009]
+
+```
+Corrected new AdView delegate definitions on iOS causing issues with events (resolves #290)
+```
+
+
 ###### 2021.06.09 [v13.2.006]
 
 ```
