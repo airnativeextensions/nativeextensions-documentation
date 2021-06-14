@@ -1,5 +1,12 @@
 
 
+###### 2021.06.14 [v6.0.006]
+
+```
+Database: Resolved iOS crash with null param passed to child function (resolves #366)
+```
+
+
 ###### 2021.04.21 [v6.0.005]
 
 ```
