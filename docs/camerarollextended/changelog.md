@@ -1,5 +1,12 @@
 
 
+###### 2021.06.15 [v6.1.007]
+
+```
+Android: Corrected issue with parcelable extra with mutliple select browse on certain devices (resolves #133)
+```
+
+
 ###### 2020.09.01 [v6.0.001]
 
 ```
