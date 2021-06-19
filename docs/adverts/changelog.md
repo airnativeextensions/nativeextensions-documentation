@@ -1,5 +1,13 @@
 
 
+###### 2021.06.19 [v13.2.013]
+
+```
+Android: AdMob corrected issue with native ad templates (resolves #293)
+iOS: AdMob Corrected user identifier set on rewarded video ads (resolves #292)
+```
+
+
 ###### 2021.06.14 [v13.2.009]
 
 ```
