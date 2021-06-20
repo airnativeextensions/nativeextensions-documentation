@@ -1902,11 +1902,14 @@ module.exports = {
     { 
       "Get Started": [
         "nfc/add-the-extension",
+        "nfc/add-the-plugin",
       ]
     },
     { 
-      "Usage": [
+      "Scanning": [
         "nfc/scanning",
+        "nfc/dispatch-mode",
+        "nfc/reader-mode"
       ]
     },
     { 
