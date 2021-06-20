@@ -1,5 +1,15 @@
 
 
+###### 2021.06.20 [v5.0.090]
+
+```
+Unity plugin release 1.0
+Reader mode
+Added restart scanning function
+Updated build and improved iOS implementation for iOS 13+ compatibility
+```
+
+
 ###### 2020.03.20 [v4.0.016]
 
 ```
