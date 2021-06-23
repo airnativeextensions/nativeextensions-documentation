@@ -56,28 +56,27 @@ You should call `IronSource.init();` in your code before you intend to display a
 
 ### Android
 
-Add the following to your manifest additions inside the `application` tag. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+Add the following to your manifest additions inside the `application` tag. 
 
 ```xml
 <!-- IRONSOURCE -->
 <activity
     android:name="com.ironsource.sdk.controller.ControllerActivity"
     android:configChanges="orientation|screenSize"
+    android:exported="false"
     android:hardwareAccelerated="true" />
 <activity
     android:name="com.ironsource.sdk.controller.InterstitialActivity"
     android:configChanges="orientation|screenSize"
+    android:exported="false"
     android:hardwareAccelerated="true"
     android:theme="@android:style/Theme.Translucent" />
 <activity
     android:name="com.ironsource.sdk.controller.OpenUrlActivity"
     android:configChanges="orientation|screenSize"
+    android:exported="false"
     android:hardwareAccelerated="true"
     android:theme="@android:style/Theme.Translucent" />
-
-<provider
-    android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
-    android:authorities="APPLICATION_PACKAGE.IronsourceLifecycleProvider" />
 ```
 
 

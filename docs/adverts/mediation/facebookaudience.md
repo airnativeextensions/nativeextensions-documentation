@@ -55,7 +55,7 @@ There is no additional code required just a few additional configuration options
 
 ### Android
 
-Add the `audience_network.dex` file to the root of your application package. (This file is located in the repository, this must be the same version as the extension).
+Add the `audience_network.dex` file to the root of your application package. (This file is located in the repository, this must be the same version as the extension, i.e. if you update the extension ensure you update this file).
 
 Add the following to your manifest additions inside the `application` tag. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
@@ -134,6 +134,11 @@ Doing this you can give the mediation network you are wanting to test a high eCP
 
 
 # Signing your iOS application
+
+>
+> If you are using AIR from Harman, this should no longer be required with the latest release. Only perform these steps if you are having issues installing an application once you added the Frameworks.
+>
+
 
 With AIR 27 Adobe partially added the ability to use dynamic frameworks in your iOS application, which works fine with frameworks you control however still has issues with third party frameworks.
 
