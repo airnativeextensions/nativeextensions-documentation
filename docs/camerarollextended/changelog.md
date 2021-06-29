@@ -1,5 +1,12 @@
 
 
+###### 2021.06.29 [v6.1.9]
+
+```
+Updated iOS modal presentation style to correctly dispatch cancel event (resolves #134)
+```
+
+
 ###### 2021.06.15 [v6.1.007]
 
 ```
