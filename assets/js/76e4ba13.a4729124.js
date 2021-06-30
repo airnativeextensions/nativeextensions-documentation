@@ -1,0 +1,1 @@
+(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[1642],{57186:function(e){"use strict";e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"air","name":"air","count":7,"permalink":"/news/tags/air"}')}}]);
