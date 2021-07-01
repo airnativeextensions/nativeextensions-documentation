@@ -222,4 +222,23 @@ Application.service.display.setDisplayMode( DisplayMode.FULLSCREEN );
 
 
 
+---
 
+
+## Brightness
+
+You can set the screen brightness using the `setBrightness()` method. This method accepts a numeric value between 0 and 1, representing the percentage brightness from lowest brightness (0) to highest brightness (1).
+
+```actionscript
+Application.service.display.setBrightness( 0.4 );
+```
+
+
+Setting the brightness will attempt to set the system brightness levels on Android. This may present an authorisation dialog on certain versions of Android. If denied the brightness will only affect the current window and not the entire device.
+
+You should add the following permission to your application:
+
+```xml
+<!-- To control the system screen brightness setting -->
+<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+```

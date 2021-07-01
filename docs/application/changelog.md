@@ -1,5 +1,12 @@
 
 
+###### 2021.07.01 [v6.7.4]
+
+```
+Added screen brightness implementation
+```
+
+
 ###### 2021.06.09 [v6.6.003]
 
 ```
