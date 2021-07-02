@@ -3,7 +3,7 @@
 <p align="center">
     <a href="https://docs.airnativeextensions.com/" rel="noopener" target="_blank">
         <img width="150" 
-            src="https://raw.githubusercontent.com/airnativeextensions/nativeextensions-documentation/main/static/img/ane-icon-black.png" 
+            src="https://raw.githubusercontent.com/airnativeextensions/nativeextensions-documentation/master/static/img/ane-icon-black.png" 
             alt="ANE logo">
     </a>
 </p>
@@ -14,7 +14,9 @@
     Source for the docs.airnativeextensions.com site. Site for developer news, information, tutorials, guides and reference for using distriqt's native extensions.
 </div>
 
-[![deploy](https://github.com/airnativeextensions/nativeextensions-documentation/actions/workflows/deploy.yml/badge.svg)](https://github.com/airnativeextensions/nativeextensions-documentation/actions/workflows/deploy.yml)
+<div align="center">
+    [![deploy](https://github.com/airnativeextensions/nativeextensions-documentation/actions/workflows/deploy.yml/badge.svg)](https://github.com/airnativeextensions/nativeextensions-documentation/actions/workflows/deploy.yml)
+</div>
 
 
 ---
