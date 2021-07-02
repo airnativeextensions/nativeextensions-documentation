@@ -14,10 +14,11 @@
     Source for the docs.airnativeextensions.com site. Site for developer news, information, tutorials, guides and reference for using distriqt's native extensions.
 </div>
 
----
+<div align="center">
 
-    [![deploy](https://github.com/airnativeextensions/nativeextensions-documentation/actions/workflows/deploy.yml/badge.svg)](https://github.com/airnativeextensions/nativeextensions-documentation/actions/workflows/deploy.yml)
+[![deploy](https://github.com/airnativeextensions/nativeextensions-documentation/actions/workflows/deploy.yml/badge.svg)](https://github.com/airnativeextensions/nativeextensions-documentation/actions/workflows/deploy.yml)
 
+</div>
 
 ---
 
