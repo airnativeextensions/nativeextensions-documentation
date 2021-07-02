@@ -1,5 +1,14 @@
 
 
+###### 2021.07.02 [v8.5.4]
+
+```
+Android: Fixed spacing between buttons on Samsung devices (resolves #273)
+iOS: Fixed toast display in fullscreen on devices with notches (resolves #274) 
+Added auto capitalisation and auto correct options to addTextField method (resolves #275)
+```
+
+
 ###### 2021.03.16 [v8.4.094]
 
 ```
