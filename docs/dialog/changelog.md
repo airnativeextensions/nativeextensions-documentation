@@ -1,5 +1,19 @@
 
 
+###### 2021.07.04 [v8.5.6]
+
+```
+Updated asdocs
+```
+
+
+###### 2021.07.03 [v8.5.5]
+
+```
+Added different autocapitalisation types (resolves #275)
+```
+
+
 ###### 2021.07.02 [v8.5.4]
 
 ```
