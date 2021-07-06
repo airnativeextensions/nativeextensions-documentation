@@ -1,5 +1,12 @@
 
 
+###### 2021.07.06 [v8.6.7]
+
+```
+Added new iOS date / time dialog implementation (resolves #263)
+```
+
+
 ###### 2021.07.04 [v8.5.6]
 
 ```

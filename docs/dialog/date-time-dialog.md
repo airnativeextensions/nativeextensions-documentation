@@ -34,14 +34,14 @@ dateTime.addEventListener( DialogDateTimeEvent.SELECTED, dateTime_selectedHandle
 				
 dateTime.show();
 
-...
 
-private function dateTime_selectedHandler( event:DialogDateTimeEvent ):void
+
+function dateTime_selectedHandler( event:DialogDateTimeEvent ):void
 {
 	trace( event.type +"::"+ event.date.toString() );
 }
 
-private function dateTime_closedHandler( event:DialogViewEvent ):void
+function dateTime_closedHandler( event:DialogViewEvent ):void
 {
 	var dateTime:DateTimeDialogView = DateTimeDialogView(event.currentTarget);
 	dateTime.removeEventListener( DialogViewEvent.CLOSED, dateTime_closedHandler );
@@ -49,6 +49,28 @@ private function dateTime_closedHandler( event:DialogViewEvent ):void
 	dateTime.dispose();
 }
 ```
+
+
+## iOS
+
+On iOS versions previous to 14 used a "picker" style dialog using wheels to select the date and time. iOS 14 introduces a new style which we have applied as the default and presented in a modal dialog.
+
+
+![](images/datetime-ios-inline.png)
+
+
+If you wish to retain the legacy style utilising the picker then you can call `usePickerIfAvailable()` on your builder:
+
+```actionscript
+new DateTimeDialogBuilder()
+		.setMode( DialogType.MODE_TIME )
+		.setTitle( "Select Time" )
+		.setAcceptLabel( "ACCEPT" )
+		.setCancelLabel( "Cancel" )
+		.usePickerIfAvailable() // Forces picker / wheels usage on iOS
+		.build()
+```
+
 
 
 ## Adding a TODAY button
@@ -69,3 +91,6 @@ as reported by the user's device.
 When the user clicks this button you will receive the normal date change events.
 
 ![](images/datetime-today.png)
+
+
+
