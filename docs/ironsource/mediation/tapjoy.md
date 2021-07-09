@@ -89,8 +89,6 @@ Add the following to your manifest additions inside the `application` tag.
     android:configChanges="orientation|keyboardHidden|screenSize"
     android:hardwareAccelerated="true"
     android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-<receiver android:name="com.tapjoy.TapjoyReceiver" />
 ```
 
 

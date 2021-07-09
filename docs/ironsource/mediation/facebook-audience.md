@@ -68,13 +68,11 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 ```xml
 <!-- Facebook -->
 <activity
-        android:name="com.facebook.ads.InterstitialAdActivity"
-        android:hardwareAccelerated="true"
-        android:configChanges="keyboardHidden|orientation|screenSize" />
-<activity
-        android:name="com.facebook.ads.AudienceNetworkActivity"
-        android:hardwareAccelerated="true"
-        android:configChanges="keyboardHidden|orientation|screenSize" />
+    android:name="com.facebook.ads.AudienceNetworkActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:exported="false"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
 <provider
     android:name="com.facebook.ads.AudienceNetworkContentProvider"
     android:authorities="APPLICATION_PACKAGE.AudienceNetworkContentProvider"
@@ -115,9 +113,54 @@ Add the following to your `InfoAdditions` node:
 
 Add the `Frameworks` folder to your application package, ensuring the dynamic `FBAudienceNetwork.framework` is included along with any swift libraries (`dylib` files).
 
-**You will need to resign your application following the guide below otherwise your build will likely fail signing validation.**
+**If you are using an old version of AIR you will need to resign your application following the guide below otherwise your build will likely fail signing validation. AIR 33.1.1.476 or higher do not need this additional step.**
 
 
+
+
+## Step 5: Facebook Additional Settings
+
+
+### CCPA Support 
+
+If you are using Facebook adapter 4.3.17+, make sure to follow Facebook Audience Network instructions, as described [here](https://developers.facebook.com/docs/marketing-apis/data-processing-options#audience-network-sdk). Please note that setting FAN Limited Data Use flag, should be done before initializing ironSource Mediation.
+
+To set this in actionscript call the `setDataProcessingOptions()` method on the `AdSettings` instance.
+
+To explicitly not enable Limited Data Use (LDU) mode, use:
+
+```actionscript
+FacebookAudience.instance.adSettings.setDataProcessingOptions( [] ); 
+```
+
+To enable LDU for users and specify user geography, use:
+- Country: 1 to indicate USA
+- State: 1000 to indicate California.
+
+```actionscript
+FacebookAudience.instance.adSettings.setDataProcessingOptions( ["LDU"], 1, 1000 ); 
+```
+
+To enable LDU for users with geolocation, use:
+- Country: 0 to request that we geolocate that event
+- State: 0 to request that we geolocate that event.
+
+```actionscript
+FacebookAudience.instance.adSettings.setDataProcessingOptions( ["LDU"], 0, 0 ); // enable LDU for users with geolocation
+```
+
+
+
+### iOS 14+ Support
+
+If you are using Facebook adapter 4.3.20+, and building for iOS14+, FAN requires you to set the `setAdvertiserTrackingEnabled` flag. This allows you to inform Facebook whether to use the data to deliver personalized ads. If the flag is set to false FAN will not be able to deliver personalized ads. 
+
+Please note that setting the `setAdvertiserTrackingEnabled` flag should be done before initializing ironSource Mediation. Learn more about Advertising Tracking Enabled for Audience Network [here](https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/ios/advertising-tracking-enabled). 
+
+
+```actionscript
+FacebookAudience.instance.adSettings.setAdvertiserTrackingEnabled( true );
+```
 
 
 
@@ -125,13 +168,13 @@ Add the `Frameworks` folder to your application package, ensuring the dynamic `F
 
 # Signing your iOS application
 
+>
+> This is no longer required since AIR AIR 33.1.1.476
+>
+
 With AIR 27 Adobe partially added the ability to use dynamic frameworks in your iOS application, which works fine with frameworks you control however still has issues with third party frameworks.
 
 Everything will work up to a point, however AIR will incorrectly sign your IPA and it will fail AppStore submission with an error from the Application Loader tool and installing development builds with a signature validation error.
-
-**Please vote to resolve this issue here: [https://tracker.adobe.com/#/view/AIR-4198407](https://tracker.adobe.com/#/view/AIR-4198407)**
-
-
 
 To get around this, before you upload or install your application you will need to run a script to resign your IPA. 
 This script is available in the repository alongside the ANE in the `scripts` directory.

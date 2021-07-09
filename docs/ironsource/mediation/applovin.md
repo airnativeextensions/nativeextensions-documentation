@@ -74,8 +74,19 @@ There is no additional code required just a few additional configuration options
 
 Add the following to your manifest additions inside the `application` tag. 
 
+You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`.
+Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+
+
 ```xml
 <!-- AppLovin -->
+<provider
+    android:name="com.applovin.sdk.AppLovinInitProvider"
+    android:authorities="APPLICATION_PACKAGE.applovincontentprovider"
+    android:exported="false"
+    android:grantUriPermissions="true"
+    android:initOrder="101" />
+
 <activity
     android:name="com.applovin.adview.AppLovinInterstitialActivity"
     android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
