@@ -43,6 +43,7 @@ Add the extension id to your application descriptor:
     <extensionID>com.distriqt.playservices.Ads</extensionID>
 
     <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 

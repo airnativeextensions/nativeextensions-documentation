@@ -61,6 +61,7 @@ Add the extension id to your application descriptor:
     <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
     <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 

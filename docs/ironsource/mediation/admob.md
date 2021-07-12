@@ -80,6 +80,7 @@ Add the extension id to your application descriptor:
     <extensionID>androidx.work</extensionID>
     <extensionID>androidx.room</extensionID>
     <extensionID>com.google.guava</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 

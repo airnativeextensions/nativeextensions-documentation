@@ -36,6 +36,7 @@ These libraries are specific to Android. There are no issues including these on 
 This extension requires the following extensions:
 
 - [androidx.core.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [com.jetbrains.kotlin](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlin.ane)
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 
@@ -84,6 +85,7 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	
     <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
