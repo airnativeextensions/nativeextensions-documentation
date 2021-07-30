@@ -1,5 +1,13 @@
 
 
+###### 2021.07.30 [v5.0.25]
+
+```
+Resolved crash on Android when viewing truncated pdfs (resolves #89)
+Android: Implemented shouldOverrideLinks behaviour to intercept url links
+```
+
+
 ###### 2020.04.17 [v5.0.013]
 
 ```
