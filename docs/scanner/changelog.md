@@ -1,5 +1,14 @@
 
 
+###### 2021.08.03 [v5.0.60]
+
+```
+Android: Fixed issue with single result scan activity (resolves #64)
+Added more refocus functionality
+Android: Added security to activities
+```
+
+
 ###### 2021.04.14 [v5.0.054]
 
 ```
