@@ -1,5 +1,12 @@
 
 
+###### 2021.08.05 [v6.7.7]
+
+```
+Corrected tvOS implementation (issue with set brightness integration)
+```
+
+
 ###### 2021.07.01 [v6.7.4]
 
 ```
