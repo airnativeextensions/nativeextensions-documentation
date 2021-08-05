@@ -175,6 +175,13 @@ dependencies {
 ```
 
 
+### Proguard 
+
+If you are using a custom proguard configuration you may need to add the following line to ensure the interface class for the plugin is accessible to unity at runtime.
+
+```
+-keep class com.distriqt.extension.share.ShareUnityPlugin {*;}
+```
 
 
 

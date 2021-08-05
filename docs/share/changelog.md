@@ -1,5 +1,13 @@
 
 
+###### 2021.08.05 [v7.0.10]
+
+```
+iOS: Removed minimum ios version flag
+Android: Added security requirements to activities
+```
+
+
 ###### 2021.03.08 [v7.0.008]
 
 ```

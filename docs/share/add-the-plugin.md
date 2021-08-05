@@ -92,6 +92,15 @@ dependencies {
 ```
 
 
+:::note Proguard
+If you are using a custom proguard configuration you may need to add the following line to ensure the interface class for the plugin is accessible to unity at runtime.
+
+```
+-keep class com.distriqt.extension.share.ShareUnityPlugin {*;}
+```
+:::
+
+
 ## Checking for Support
 
 You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
