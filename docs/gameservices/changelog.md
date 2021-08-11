@@ -1,5 +1,12 @@
 
 
+###### 2021.08.11 [v7.1.13]
+
+```
+Updated documentation around adding Google Play Games app id to manifest (resolves #199)
+```
+
+
 ###### 2021.07.19 [v7.1.11]
 
 ```

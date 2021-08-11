@@ -112,7 +112,7 @@ The following should be added to your `extensions` node in your application desc
 The Google Play Game Services require a few additions to the manifest to be able to start certain 
 activities and set certain information. You should add the listing below to your manifest, replacing 
 the `XXXXXXXXXXXX` with your application ID that you took note of when enabling Game Services in the 
-console. (Note you must leave the `\ ` before your application id).
+console. (Note you must leave the `\u003` before your application id).
 
 You should make sure your manifest contains the following:
 
@@ -122,7 +122,7 @@ You should make sure your manifest contains the following:
 	
 	<application>
 		
-		<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\ XXXXXXXXXXXX" />
+		<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\u003XXXXXXXXXXXX" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
 		<activity

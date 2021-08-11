@@ -35,7 +35,7 @@ Create an entry for your game in the Google Play Developer Console. This enables
 
 ## Manifest Additions
 
-Add the following to your manifest additions. You must replace the `XXXXXXXXXXXX` with your games application id you recorded above.
+Add the following to your manifest additions. You must replace the `XXXXXXXXXXXX` with your games application id you recorded above. (Note you must leave the `\u003` before your application id). You can also use a resource value here if you are adding Android resources to your application.
 
 ```
 <manifestAdditions><![CDATA[
@@ -44,7 +44,7 @@ Add the following to your manifest additions. You must replace the `XXXXXXXXXXXX
 		
 		<application>
 
-			<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\ XXXXXXXXXXXX" />
+			<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\u003XXXXXXXXXXXX" />
 			<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 			
 			<activity
@@ -66,6 +66,8 @@ Add the following to your manifest additions. You must replace the `XXXXXXXXXXXX
 	</manifest>
 ]]></manifestAdditions>
 ```
+
+
 
 
 ## iOS
