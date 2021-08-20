@@ -5,9 +5,6 @@ sidebar_label: AppLovin
 
 This guide is intended for publishers who want to use the Google Mobile Ads SDK to load and display ads from AppLovin Ads via mediation. It covers how to add AppLovin to an ad unit's mediation configuration , how to set up Ad Network Optimization (ANO), and how to integrate the AppLovin SDK and adapter into an Android app.
 
-
-
-
 ## Step 1: Set up AppLovin
 
 [Sign up](https://www.applovin.com/signup) or [log in](https://www.applovin.com/login) to your AppLovin account.
@@ -18,25 +15,25 @@ To set up your AdMob ad unit, you'll need your AppLovin SDK Key and Report Key. 
 
 ![](images/applovin-keys.png)
 
-
 ### Select app for mediation
 
 On the AppLovin dashboard, select **Manage Apps** under the **Monetize** section to get to your registered apps. Select the app you'd like to use with mediation from the list of available apps. If you do not see your app in the list, it is not registered. See the note below to get it registered
 
 ![](images/applovin-manage_apps_list.png)
 
->
 > Before you can complete the AdMob mediation setup, your app needs to be registered by AppLovin. Once your app initializes the AppLovin SDK, AppLovin automatically detects and registers it. To complete this process:
 >
 > 1. Follow the steps in the Import the AppLovin SDK and adapter section. Once that's done, you'll have the AppLovin SDK integrated in your app.
 >
 > 2. **Android**: Add the following `meta-data` tag into your `manifestAdditions` in your application descriptor under the application tag using the SDK Key obtained earlier:
+>
 > ```xml
 > <meta-data android:name="applovin.sdk.key"
 >            android:value="lJZcB...l7mHlJZ8yvFu36nGvCs3IAv" />
 > ```
 >
 > 3. **iOS**: Add the following `key` to the `InfoAdditions` tag in your application descriptor using the SDK Key obtained earlier:
+>
 > ```xml
 > <key>AppLovinSdkKey</key>
 > <string>lJZcB...l7mHlJZ8yvFu36nGvCs3IAv</string>
@@ -47,8 +44,6 @@ On the AppLovin dashboard, select **Manage Apps** under the **Monetize** section
 > Build and run your app, then wait thirty minutes or so. Afterwards, check the AppLovin dashboard under Monetize > Manage Apps to find your app.
 >
 > Once the registration process is complete, you can remove the `initializeSdk` call.
->
-
 
 ### Create Zone
 
@@ -62,26 +57,15 @@ Configure Pricing for the Zone by selecting either Flat CPM or Optimized by AppL
 
 ![](images/applovin-create_zone_android.png)
 
-
 Once the Zone is created, the Zone ID can be found under the Zone ID column.
 
 ![](images/applovin-zone_id_android.png)
 
->
 > Note: We highly recommend that you create an AppLovin Zone corresponding to each AdMob ad unit so that AdMob can more effectively [Optimize ad sources in mediation](https://support.google.com/admob/answer/7374110). See AppLovin's [best practices](https://support-developer.applovin.com/hc/en-us/articles/360000476612-What-is-the-recommended-implementation-of-Zones) to assist you in configuring Zones optimally. In the meantime, you can continue without creating a Zone.
->
-
-
-
-
-
 
 ## Step 2: Configure mediation settings for your AdMob ad unit
 
 https://developers.google.com/admob/android/mediation/applovin#step_2_configure_mediation_settings_for_your_ad_unit
-
-
-
 
 ## Step 3: Import the AppLovin SDK and adapter ANE
 
@@ -103,7 +87,6 @@ Add the extension id to your application descriptor:
 
 More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
 
-
 ### Core ANE
 
 Note all our extensions rely on the Core ANE. Even if you are using this mediation adapter with another providers ANEs you must include the Core ANE.
@@ -112,18 +95,20 @@ The Core ANE doesn't provide any functionality in itself but provides support li
 
 You can access this extension here: [https://github.com/distriqt/ANE-Core](https://github.com/distriqt/ANE-Core).
 
-
-
-
-
 ## Step 4: Additional code required
 
 ### Android
 
-Add the following to your manifest additions inside the `application` tag:
+Add the following to your manifest additions inside the `application` tag. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 ```xml
 <!-- APPLOVIN MEDIATION -->
+<provider
+    android:name="com.applovin.sdk.AppLovinInitProvider"
+    android:authorities="APPLICATION_PACKAGE.applovincontentprovider"
+    android:exported="false"
+    android:grantUriPermissions="true"
+    android:initOrder="101" />
 <activity
     android:name="com.applovin.adview.AppLovinInterstitialActivity"
     android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
@@ -174,8 +159,6 @@ Add the following to your manifest additions inside the `application` tag:
     android:stopWithTask="false" />
 ```
 
-
-
 ### iOS
 
 Add the following to your info additions. If you already have an `SKAdNetworkItems` then append the `dict` items to the `array`.
@@ -190,9 +173,6 @@ Add the following to your info additions. If you already have an `SKAdNetworkIte
 </array>
 ```
 
-
-
-
 ## Step 5: Test your implementation
 
 AppLovin recommends that [test ads](https://support-developer.applovin.com/hc/en-us/articles/115000509267-How-can-I-get-test-ads-) should be used during development if you cannot get live ads.
@@ -203,17 +183,13 @@ To enable test ads, go to the Manage Apps page by clicking on your app's name in
 
 Test Mode may take up to 30 mins to take effect. It will also automatically reset to OFF after two hours.
 
-
 ### Forcing Mediation Network
 
-The easiest way we have found to force a mediation network during testing is to disable automatic optimisations and set the eCPM manually. 
+The easiest way we have found to force a mediation network during testing is to disable automatic optimisations and set the eCPM manually.
 
 Doing this you can give the mediation network you are wanting to test a high eCPM value ( eg $1000) and all others (including AdMob) a very low eCPM (eg $0.01).
 
 ![](images/applovin-force_testing_ecpm.png)
-
-
-
 
 ## Optional steps
 
@@ -235,13 +211,8 @@ Additionally, if the user is known to be in an age-restricted category, you can 
 AdMobAppLovin.service.setIsAgeRestrictedUser( true );
 ```
 
-
-
-
 ## Further information
 
 See the Google AppLovin Mediation guide:
 
 https://developers.google.com/admob/android/mediation/applovin
-
-

@@ -3,9 +3,7 @@ title: Tapjoy
 sidebar_label: Tapjoy
 ---
 
-
 This guide is intended for publishers who want to use the Google Mobile Ads SDK to load and display ads from Tapjoy through mediation.
-
 
 ## Step 1: Set up Tapjoy
 
@@ -16,8 +14,6 @@ Make sure you follow this guide closely.
 - Android: https://developers.google.com/admob/android/mediation/tapjoy#step_1_set_up_tapjoy
 - iOS: https://developers.google.com/admob/ios/mediation/tapjoy#step_1_set_up_tapjoy
 
-
-
 ## Step 2: Configure mediation settings for your AdMob ad unit
 
 You need to add Tapjoy to the mediation configuration for your ad unit:
@@ -25,10 +21,7 @@ You need to add Tapjoy to the mediation configuration for your ad unit:
 - Android: https://developers.google.com/admob/android/mediation/tapjoy#step_2_configure_mediation_settings_for_your_ad_unit
 - iOS: https://developers.google.com/admob/ios/mediation/tapjoy#step_2_configure_mediation_settings_for_your_ad_unit
 
-
-
 ## Step 3: Import the Tapjoy SDK and adapter ANE
-
 
 The `com.distriqt.admob.TapJoy` ANE includes the TapJoy SDK and the AdMob TapJoy adapter. This is everything you need to get TapJoy mediation working in your application.
 
@@ -48,9 +41,7 @@ Add the extension id to your application descriptor:
 
 More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
 
-
 ## Step 4: Additional code required
-
 
 ### Android
 
@@ -68,8 +59,9 @@ Add the following to your manifest additions inside the `application` tag. You m
     android:configChanges="orientation|keyboardHidden|screenSize"
     android:hardwareAccelerated="true"
     android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-```
 
+<receiver android:name="com.tapjoy.TapjoyReceiver" />
+```
 
 ### iOS
 
@@ -153,8 +145,6 @@ Add the following to your info additions. If you already have an `SKAdNetworkIte
 </array>
 ```
 
-
-
 ## Optional Steps
 
 ### EU consent and GDPR
@@ -163,11 +153,8 @@ Under the Google EU User Consent Policy, you must ensure that certain disclosure
 
 The code below shows you how to enable or disable personalized ads for TapJoy.
 
-
 ```actionscript
 TapJoy.instance.setUserConsent( true );
 ```
 
->
 > If you choose to call this method, it is recommended that you do so prior to requesting ads via the Adverts extension.
->

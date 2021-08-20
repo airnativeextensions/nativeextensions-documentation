@@ -3,9 +3,7 @@ title: UnityAds
 sidebar_label: UnityAds
 ---
 
-This guide is intended for publishers who want to use the Google Mobile Ads SDK to load and display ads from Unity Ads via mediation. 
-
-
+This guide is intended for publishers who want to use the Google Mobile Ads SDK to load and display ads from Unity Ads via mediation.
 
 ## Step 1: Set up Unity ads
 
@@ -15,19 +13,12 @@ Make sure you follow this guide closely.
 
 https://developers.google.com/admob/android/mediation/unity#step_1_set_up_unity_ads
 
-
-
-
 ## Step 2: Configure mediation settings for your AdMob ad unit
 
 You need to add Unity Ads to the mediation configuration for your ad unit.
 
 - Android: https://developers.google.com/admob/android/mediation/unity#step_2_configure_mediation_settings_for_your_ad_unit
 - iOS: https://developers.google.com/admob/ios/mediation/unity#step_2_configure_mediation_settings_for_your_ad_unit
-
-
-
-
 
 ## Step 3: Import the Unity Ads SDK and adapter ANE
 
@@ -49,18 +40,13 @@ Add the extension id to your application descriptor:
 
 More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
 
-
-
-
 ## Step 4: Additional code required
 
 There is no additional code required just a few additional configuration options.
 
-
 ### Android
 
 Add the following to your manifest additions inside the `application` tag. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-
 
 ```xml
 <!-- UNITY ADS -->
@@ -86,7 +72,6 @@ Add the following to your manifest additions inside the `application` tag. You m
     android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 ```
 
-
 ### iOS
 
 Add the following to your info additions. If you already have an `SKAdNetworkItems` then append the `dict` items to the `array`.
@@ -101,10 +86,7 @@ Add the following to your info additions. If you already have an `SKAdNetworkIte
 </array>
 ```
 
-
-
-
-## Step 5: Test your implementation 
+## Step 5: Test your implementation
 
 When testing always make sure you are adding your test device id to the request to ensuring AdMob do not block your account for policy violations:
 
@@ -115,9 +97,6 @@ new AdRequestBuilder()
 ```
 
 See the Adverts docs for more details.
-
-
-
 
 ## Optional Steps
 
@@ -131,8 +110,6 @@ Unity Ads provides a GDPR Compliance guide that describes both automatic and man
 
 The following sample code shows how to pass consent information to the Unity Ads SDK manually. Should you choose to pass consent information to the Unity Ads SDK manually, it is recommended that this code is called prior to requesting ads via the Google Mobile Ads SDK.
 
-
 ```actionscript
 AdMobUnityAds.instance.setConsent(true);
 ```
-

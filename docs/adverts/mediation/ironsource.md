@@ -3,9 +3,7 @@ title: IronSource
 sidebar_label: IronSource
 ---
 
-
 This guide is intended for publishers who want to use the Google Mobile Ads SDK to load and display ads from ironSource through mediation.
-
 
 ## Step 1: Set up ironSource
 
@@ -16,8 +14,6 @@ Make sure you follow this guide closely.
 - Android: https://developers.google.com/admob/android/mediation/ironsource#step_1_set_up_ironsource
 - iOS: https://developers.google.com/admob/ios/mediation/ironsource#step_1_set_up_ironsource
 
-
-
 ## Step 2: Configure mediation settings for your AdMob ad unit
 
 You need to add ironSource to the mediation configuration for your ad unit:
@@ -25,10 +21,7 @@ You need to add ironSource to the mediation configuration for your ad unit:
 - Android: https://developers.google.com/admob/android/mediation/ironsource#step_2_configure_mediation_settings_for_your_ad_unit
 - iOS: https://developers.google.com/admob/ios/mediation/ironsource#step_2_configure_mediation_settings_for_your_ad_unit
 
-
-
 ## Step 3: Import the ironSource SDK and adapter ANE
-
 
 The `com.distriqt.admob.IronSource` ANE includes the IronSource SDK and the AdMob IronSource mediation adapter. This is everything you need to get IronSource mediation working in your application.
 
@@ -48,15 +41,13 @@ Add the extension id to your application descriptor:
 
 More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
 
-
 ## Step 4: Additional code required
 
 You should call `IronSource.init();` in your code before you intend to display ads. This ensures the internal sdk is initialised correctly.
- 
 
 ### Android
 
-Add the following to your manifest additions inside the `application` tag. 
+Add the following to your manifest additions inside the `application` tag. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 ```xml
 <!-- IRONSOURCE -->
@@ -77,8 +68,11 @@ Add the following to your manifest additions inside the `application` tag.
     android:exported="false"
     android:hardwareAccelerated="true"
     android:theme="@android:style/Theme.Translucent" />
-```
 
+<provider
+    android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+    android:authorities="APPLICATION_PACKAGE.IronsourceLifecycleProvider" />
+```
 
 ### iOS
 
@@ -94,12 +88,9 @@ Add the following to your info additions. If you already have an `SKAdNetworkIte
 </array>
 ```
 
-
-
 ## Step 5: Test your implementation
 
 You should run the IronSource `validateIntegration()` function to ensure the extension and manifest additions have been added correctly.
-
 
 ```actionscript
 IronSource.instance.validateIntegration();
@@ -107,15 +98,10 @@ IronSource.instance.validateIntegration();
 
 This will output information to the [native device log](/docs/tutorials/device-logs).
 
-
-
 You can then follow the Google guides to add a test device to receive test ads:
 
 - Android: https://developers.google.com/admob/android/mediation/ironsource#step_5_test_your_implementation
 - iOS: https://developers.google.com/admob/ios/mediation/ironsource#step_5_test_your_implementation
-
-
-
 
 ## Optional Steps
 
@@ -125,11 +111,8 @@ Under the Google EU User Consent Policy, you must ensure that certain disclosure
 
 The code below shows you how to enable or disable personalized ads for ironSource.
 
-
 ```actionscript
-IronSource.instance.setConsent( true ); 
+IronSource.instance.setConsent( true );
 ```
 
->
 > If you choose to call this method, it is recommended that you do so prior to requesting ads via the Adverts extension.
->
