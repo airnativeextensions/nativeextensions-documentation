@@ -1,3 +1,11 @@
+###### 2021.08.23 [v3.4.14]
+
+```
+Added airpackage
+Android chooser addition for specifying alternative camera applications (#80)
+Android 30 updates around deleting files from camera roll (resolves #82)
+```
+
 
 
 ###### 2021.04.07 [v3.3.007]
