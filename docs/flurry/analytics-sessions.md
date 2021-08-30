@@ -1,13 +1,12 @@
 ---
 title: Analytics Sessions
-sidebar_label: Analytics Sessions
+sidebar_label: Sessions
 ---
 
-A session represents a single use of the application, so you should start and end a 
-session each time your application is activated. Make sure you only add the activation 
-handler after you've initialised the Flurry extension, or else implement a check to 
+A session represents a single use of the application, so you should start and end a
+session each time your application is activated. Make sure you only add the activation
+handler after you've initialised the Flurry extension, or else implement a check to
 make sure this process has been performed.
-
 
 ```actionscript
 var config:FlurryAnalyticsConfig = new FlurryAnalyticsConfig();
@@ -34,4 +33,3 @@ function deactivateHandler( event:Event ):void
 	}
 }
 ```
-
