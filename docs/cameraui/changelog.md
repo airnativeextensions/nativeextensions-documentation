@@ -1,3 +1,9 @@
+###### 2021.08.30 [v3.4.15]
+
+```
+Implemented new Android chooser for specifying alternative camera applications (resolves #80)
+```
+
 ###### 2021.08.23 [v3.4.14]
 
 ```

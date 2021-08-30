@@ -3,18 +3,13 @@ title: Add the Extension
 sidebar_label: Add the Extension
 ---
 
-
-First step is always to add the extension to your development environment. 
+First step is always to add the extension to your development environment.
 To do this use the tutorial located [here](/docs/tutorials/getting-started).
 
->
 > You must use AIR SDK v33+. Anything less than 33 is not supported due to issues
 > with the Android integration.
->
-
 
 The Facebook Core SDK is contained in the `com.distriqt.facebook.Core` extension. Add this extension to your application along with the following dependencies.
-
 
 ## Dependencies
 
@@ -24,15 +19,14 @@ We have to separate these libraries into separate extensions in order to avoid m
 
 You will add these extensions as you do with any other extension, and you need to ensure it is packaged with your application.
 
-
-### Core 
+### Core
 
 The Core ANE is required by this ANE. You must include and package this extension in your application.
 
 The Core ANE doesn't provide any functionality in itself but provides support libraries and frameworks used by our extensions.
 It also includes some centralised code for some common actions that can cause issues if they are implemented in each individual extension.
 
-You must include this extension in your application and call the initialisation function at some point in your application before using any of our extensions. 
+You must include this extension in your application and call the initialisation function at some point in your application before using any of our extensions.
 
 ```actionscript
 Core.init();
@@ -40,22 +34,18 @@ Core.init();
 
 You can access this extension here: [https://github.com/distriqt/ANE-Core](https://github.com/distriqt/ANE-Core).
 
+### Bolts
 
+The Bolts extension is required by Facebook.
 
-### Bolts 
-
-The Bolts extension is required by Facebook. 
-
-The Bolts extension doesn't provide any functionality in itself but supports some of our other extensions. 
+The Bolts extension doesn't provide any functionality in itself but supports some of our other extensions.
 It contains the Bolts framework.
 
 You can access this extension here: [https://github.com/distriqt/ANE-Bolts](https://github.com/distriqt/ANE-Bolts).
 
-
-
 ### Android Support
 
-The Android Support libraries encompass the Android Support, Android X and common Google libraries. 
+The Android Support libraries encompass the Android Support, Android X and common Google libraries.
 
 These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
 
@@ -63,20 +53,15 @@ This extension requires the following extensions:
 
 - [androidx.core](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
 - [com.android.installreferrer](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.android.installreferrer.ane)
+- [com.jetbrains.kotlin](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlin.ane)
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 
->
 > **Note**: if you have been using the older `com.distriqt.androidsupport.*` (Android Support) extensions you should remove these extensions and replace it with the `androidx` extensions listed above. This is the new version of the android support libraries and moving forward all our extensions will require AndroidX.
->
 
-
->
-> **Note:** The Google Play Services and Android Support ANEs are only **required** on Android devices. 
-> There is no problem packaging these ANEs with all platforms as there are default implementations available which will allow your code to package without errors 
+> **Note:** The Google Play Services and Android Support ANEs are only **required** on Android devices.
+> There is no problem packaging these ANEs with all platforms as there are default implementations available which will allow your code to package without errors
 > however if you are only building an iOS application feel free to remove the Google Play Services ANEs from your application.
->
-
 
 ## Extension IDs
 
@@ -91,32 +76,33 @@ The following should be added to your `extensions` node in your application desc
 
 	<extensionID>androidx.core</extensionID>
 	<extensionID>com.android.installreferrer</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
-
-## Android  
+## Android
 
 ### Manifest Additions
 
-The Facebook Core extension requires some additions to the Android section of 
-your application descriptor XML file. These settings should be added or modified 
+The Facebook Core extension requires some additions to the Android section of
+your application descriptor XML file. These settings should be added or modified
 in the `manifestAdditions` node, under the `android` node.
 
-This is an example of the manfiest additions section for our example application. 
+This is an example of the manfiest additions section for our example application.
 
-Your app may require other settings in the manifest additions, so just ensure 
+Your app may require other settings in the manifest additions, so just ensure
 that all the following entries are added correctly to your version.
 
-You will need to replace the instances of `FACEBOOK_APP_ID` and `FACEBOOK_APP_NAME` 
+You will need to replace the instances of `FACEBOOK_APP_ID` and `FACEBOOK_APP_NAME`
 with the relevant settings from your Facebook app. (Don't include the braces).
 
-You will need to replace the instances of `APPLICATION_PACKAGE` with your applications java package name (generally your AIR application id prefixed with `air.`) eg `air.com.distriqt.test`. 
-
+You will need to replace the instances of `APPLICATION_PACKAGE` with your applications java package name (generally your AIR application id prefixed with `air.`) eg `air.com.distriqt.test`.
 
 ```xml
 <manifest android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="29" />
+
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="30" />
+
 	<uses-permission android:name="android.permission.INTERNET"/>
 
 	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
@@ -145,8 +131,9 @@ You will need to replace the instances of `APPLICATION_PACKAGE` with your applic
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
-				<data android:scheme="fbFACEBOOK_APP_ID" />
-
+				<data
+					android:host="cct.APPLICATION_PACKAGE"
+					android:scheme="fbconnect" />
 			</intent-filter>
 		</activity>
 
@@ -168,15 +155,14 @@ You will need to replace the instances of `APPLICATION_PACKAGE` with your applic
 </manifest>
 ```
 
-
-### MultiDex Applications 
+### MultiDex Applications
 
 If you have a large application and are supporting Android 4.x then you will need to ensure you
 enable your application to correctly support MultiDex to allow the application to be broken up
 into smaller dex packages.
 
-This is enabled by default with recent releases of AIR (25+), except in the Android 4.x case where 
-you need to change the manifest additions for the application tag to match the following and use 
+This is enabled by default with recent releases of AIR (25+), except in the Android 4.x case where
+you need to change the manifest additions for the application tag to match the following and use
 the `MultiDexApplication`:
 
 ```xml
@@ -191,8 +177,6 @@ the `MultiDexApplication`:
 </manifest>
 ```
 
-
-
 ## iOS
 
 ### Dynamic Frameworks
@@ -201,12 +185,21 @@ Facebook is based on a dynamic framework so you must include the framework and d
 
 To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
 
-If should contain all the `dylib` files in the supplied `Frameworks` directory and any of the Facebook SDK components that you are using in your application. 
+If should contain all the `dylib` files in the supplied `Frameworks` directory and any of the Facebook SDK components that you are using in your application.
 
 The Core extension requires the `FBSDKCoreKit.framework` so your `Frameworks` directory should contain:
 
 ```
 FBSDKCoreKit.framework
+```
+
+### Swift Libs
+
+If you are targetting lower than iOS 12.2 then you will need to add the swift dylib files to your `Frameworks` directory. We highly recommend targetting 12.2 as a minimum in order to remove these dependencies as they can add a significant size to your application.
+
+The files you need to add are :
+
+```
 libswiftUIKit.dylib
 libswiftCore.dylib
 libswiftCoreFoundation.dylib
@@ -221,19 +214,26 @@ libswiftos.dylib
 libswiftQuartzCore.dylib
 ```
 
+To target iOS 12.2 add the following to your InfoAdditions:
+
+```xml
+<key>MinimumOSVersion</key>
+<string>12.2</string>
+```
 
 ### Info Additions
 
-The Facebook Core extension requires some additions to the iOS section of your application 
-descriptor XML file. These settings should be added or modified in the `InfoAdditions` node, 
+The Facebook Core extension requires some additions to the iOS section of your application
+descriptor XML file. These settings should be added or modified in the `InfoAdditions` node,
 under the `iPhone` node.
 
-You will need to replace the instances of `FACEBOOK_APP_ID` and `FACEBOOK_APP_NAME` 
+You will need to replace the instances of `FACEBOOK_APP_ID` and `FACEBOOK_APP_NAME`
 with the relevant settings from your Facebook app. (Don't include the braces).
 
 This is required additions for the InfoAdditions section:
 
 ```xml
+<>
 <key>CFBundleURLTypes</key>
 <array>
 	<dict>
@@ -264,7 +264,7 @@ This is required additions for the InfoAdditions section:
 		<key>facebook.com</key>
 		<dict>
 			<key>NSIncludesSubdomains</key>
-			<true/>                
+			<true/>
 			<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 			<false/>
 		</dict>
@@ -307,7 +307,6 @@ This is required additions for the InfoAdditions section:
 </array>
 ```
 
-
 We also suggest adding the photo usage description string in case you will be sharing
 photos using the share dialogs
 
@@ -317,6 +316,3 @@ photos using the share dialogs
 <key>NSPhotoLibraryAddUsageDescription</key>
 <string>Access to photo library is required to save images and videos.</string>
 ```
-
-
-
