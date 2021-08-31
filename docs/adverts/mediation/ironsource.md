@@ -29,6 +29,16 @@ To add the ANE download it from the repository and add it to your application:
 
 - [com.distriqt.admob.IronSource.ane](https://github.com/distriqt/ANE-Adverts-Mediation/raw/master/lib/ironsource/com.distriqt.admob.IronSource.ane)
 
+### Android Dependencies
+
+The ironSource SDK requires the following extensions:
+
+- [`com.jetbrains.kotlin`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlin.ane)
+
+You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
+
+### Extension IDs
+
 Add the extension id to your application descriptor:
 
 ```xml
@@ -36,6 +46,7 @@ Add the extension id to your application descriptor:
     <!-- OTHER EXTENSIONS -->
 
     <extensionID>com.distriqt.admob.IronSource</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
@@ -43,7 +54,7 @@ More information on adding ANEs in this [tutorial](/docs/tutorials/getting-start
 
 ## Step 4: Additional code required
 
-You should call `IronSource.init();` in your code before you intend to display ads. This ensures the internal sdk is initialised correctly.
+You should call `AdMobIronSource.instance.init();` in your code before you intend to display ads. This ensures the internal sdk is initialised correctly.
 
 ### Android
 
