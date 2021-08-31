@@ -1,3 +1,18 @@
+###### 2021.08.31 [v13.3.29]
+
+```
+Deprecated the advertising identifier to remove AdSupport / ASIdentifierManager usage (resolves #305)
+Implemented Rewarded Interstitials (resolves #297)
+Corrected processing of RequestConfiguration on iOS 12 (resolves #301)
+
+Updated UMP SDK v2.0.0
+Updated Admob SDK
+ - Android v20.2.0
+ - iOS v8.9.0
+
+Added air package
+```
+
 
 
 ###### 2021.06.19 [v13.2.013]

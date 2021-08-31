@@ -3,25 +3,19 @@ title: Consent
 sidebar_label: Consent
 ---
 
->
-> **AdMob users must migrate to the [User Messaging Platform](user-messaging-platform) to ensure you have access to the latest consent gathering tools. The consent sdk has been removed due to app rejections when it was included.**
->
-> Huawei still utilises this consent SDK.
->
+:::caution
+**AdMob users must migrate to the [User Messaging Platform](user-messaging-platform) to ensure you have access to the latest consent gathering tools. The consent sdk has been removed due to app rejections when it was included.**
 
-
-
+Huawei still utilises this consent SDK.
+:::
 
 ## The Consent SDK
 
->
 > Under the EU User Consent Policy, you must make certain disclosures to your users in the European Economic Area (EEA) and obtain their consent to use cookies or other local storage, where legally required, and to use personal data (such as AdID) to serve ads. This policy reflects the requirements of the EU ePrivacy Directive and the General Data Protection Regulation (GDPR).
 >
 > This consent SDK is to support publishers in meeting their duties under this policy. The Consent SDK is an open-source library that provides utility functions for collecting consent from your users.
 >
 > This guide describes how to use the Consent SDK to obtain consent from users. It also describes how to forward consent to the ads SDK once you have obtained consent.
->
-
 
 ## Availability
 
@@ -33,8 +27,6 @@ if (Adverts.service.consent.isSupported)
   // Consent sdk is available
 }
 ```
-
-
 
 ## Consent Status
 
@@ -52,7 +44,6 @@ This is an asynchronous process and will dispatch one of two possible events:
 
 - `ConsentEvent.STATUS_UPDATED`: Dispatched when the consent status has been updated
 - `ConsentEvent.STATUS_ERROR`: Dispatched when there was an error retrieving the consent status
-
 
 ```actionscript
 Adverts.service.consent.addEventListener( ConsentEvent.STATUS_UPDATED, statusUpdatedHandler );
@@ -73,9 +64,7 @@ private function statusErrorHandler( event:ConsentEvent ):void
 }
 ```
 
-
-
-## Consent 
+## Consent
 
 ### Huawei Ads Kit
 
@@ -83,11 +72,10 @@ Huawei's consent sdk will present a series of dialogs to request consent for you
 
 ![](images/android_consent_dialog_huawei.png)
 
-
 You can control the content using the `ConsentOptions.setDialogContent()` functionality and passing an `ConsentDialogContent` instance:
 
 ```actionscript
-var options:ConsentOptions = new ConsentOptions( "https://airnativeextensions.com/privacy" )			
+var options:ConsentOptions = new ConsentOptions( "https://airnativeextensions.com/privacy" )
           .setDialogContent(
             new ConsentDialogContent()
                 .setContentText( "The Ads in this application are provided in collaboration with our advertising partners. To provide this service, we need to share certain information about you with these partners, including your location as well as your usage records for the news service.\n\n" +
@@ -110,14 +98,12 @@ var options:ConsentOptions = new ConsentOptions( "https://airnativeextensions.co
 Adverts.service.consent.askForConsent( options );
 ```
 
-
-
 ### Consent Form Events
 
 Once you have called `askForConsent` you will receive one of two events:
 
 - `ConsentEvent.FORM_CLOSED`: Dispatched when the user has selected their consent status and the form has been closed
-  - `event.status`:  Is a string containing one of the values defined in the ConsentStatus class.
+  - `event.status`: Is a string containing one of the values defined in the ConsentStatus class.
 - `ConsentEvent.FORM_ERROR`: Dispatched when there was an error loading or displaying the form
   - `event.error`: Will be a description of the error that occurred.
 
@@ -147,16 +133,9 @@ function formErrorHandler( event:ConsentEvent ):void
 }
 ```
 
->
 > Huawei Ads Kit return values are slightly different, `userPrefersAdFree` will always be `false` and `inEeaOrUnknown` will be `true` if the user needs to consent and `false` otherwise. The consent status will have equivalent values though.
->  
-
 
 **Remember to provide users with the option to change or revoke consent.**
-
-
-
-
 
 ## Testing
 
@@ -164,15 +143,15 @@ The Consent SDK has different behaviors depending on the location of the user. F
 
 To enable easier testing of your app both inside and outside the EEA, the Consent SDK supports debug options that you can set prior to calling any other methods in the Consent SDK.
 
-1. Update the consent status by calling `getConsentStatus()` as described above. 
+1. Update the consent status by calling `getConsentStatus()` as described above.
 
-  - On Android check the [logcat output](/docs/tutorials/device-logs) for the following log:
+- On Android check the [logcat output](/docs/tutorials/device-logs) for the following log:
 
 > ```
 > I/ConsentInformation: Use ConsentInformation.getInstance(context).addTestDevice("33BE2250B43518CCDA7DE426D04EE231") to get test ads on this device.
 > ```
 
-  - On iOS get the value of the [Advertising identifier](advertising-identifier). 
+- On iOS get the value of the [Advertising identifier](advertising-identifier).
 
 2. Whitelist your device to be a debug device using the advertising ID:
 
@@ -188,10 +167,6 @@ Adverts.service.consent.setDebugGeography( DebugGeography.DEBUG_GEOGRAPHY_EEA );
 
 After completing these steps, calls to update consent status will take into account your debug geography.
 
-
-
-
 ## Forward consent to the SDK
 
 Once you have gathered consent you must set the appropriate information on an ad request. See the [Targeting section](targeting) for more information.
-
