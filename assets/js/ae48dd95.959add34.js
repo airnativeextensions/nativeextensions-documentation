@@ -1,1 +1,0 @@
-(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[54410],{93860:function(e){"use strict";e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"ironsource","name":"ironsource","count":2,"permalink":"/news/tags/ironsource"}')}}]);

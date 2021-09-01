@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[61385],{41586:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/huawei","name":"huawei","count":1,"permalink":"/news/tags/huawei"}')}}]);

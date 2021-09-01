@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[23372],{2082:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/dialog","name":"dialog","count":1,"permalink":"/news/tags/dialog"}')}}]);

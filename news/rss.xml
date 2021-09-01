@@ -4,10 +4,17 @@
         <title>air native extensions Blog</title>
         <link>https://docs.airnativeextensions.com/news</link>
         <description>air native extensions Blog</description>
-        <lastBuildDate>Sat, 31 Jul 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 31 Aug 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>Copyright © 2021 distriqt Pty Ltd</copyright>
+        <item>
+            <title><![CDATA[August 2021]]></title>
+            <link>https://docs.airnativeextensions.com/news/2021-08</link>
+            <guid>2021-08</guid>
+            <pubDate>Tue, 31 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[APM, Adverts, Android 30, AIR Config]]></description>
+        </item>
         <item>
             <title><![CDATA[July 2021]]></title>
             <link>https://docs.airnativeextensions.com/news/2021-07</link>

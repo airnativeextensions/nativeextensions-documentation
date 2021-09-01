@@ -2,18 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2021-07-31T00:00:00.000Z</updated>
+    <updated>2021-08-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2021 distriqt Pty Ltd</rights>
     <entry>
+        <title type="html"><![CDATA[August 2021]]></title>
+        <id>2021-08</id>
+        <link href="https://docs.airnativeextensions.com/news/2021-08"/>
+        <updated>2021-08-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[APM, Adverts, Android 30, AIR Config]]></summary>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[July 2021]]></title>
         <id>2021-07</id>
         <link href="https://docs.airnativeextensions.com/news/2021-07"/>
         <updated>2021-07-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[APM, Dialog, ironSource]]></summary>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[June 2021]]></title>
@@ -21,6 +36,10 @@
         <link href="https://docs.airnativeextensions.com/news/2021-06"/>
         <updated>2021-06-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[APM, Adverts]]></summary>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[May 2021]]></title>
@@ -28,6 +47,10 @@
         <link href="https://docs.airnativeextensions.com/news/2021-05"/>
         <updated>2021-05-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[APM, AdMob and Google Play Services]]></summary>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[April 2021]]></title>
@@ -35,6 +58,10 @@
         <link href="https://docs.airnativeextensions.com/news/2021-04"/>
         <updated>2021-04-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[General Updates, APM, Game Controller, and Unity NFC]]></summary>
+        <author>
+            <name>distriqt</name>
+            <uri>https://github.com/distriqt</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[March 2021]]></title>
@@ -42,6 +69,10 @@
         <link href="https://docs.airnativeextensions.com/news/2021-03"/>
         <updated>2021-03-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Game Services, Vibration (Haptics), Scanning and more Unity]]></summary>
+        <author>
+            <name>distriqt</name>
+            <uri>https://github.com/distriqt</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[February 2021]]></title>
@@ -49,6 +80,10 @@
         <link href="https://docs.airnativeextensions.com/news/2021-02"/>
         <updated>2021-02-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[APM, InAppBilling, OneSignal, Facebook and Unity]]></summary>
+        <author>
+            <name>distriqt</name>
+            <uri>https://github.com/distriqt</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[January 2021]]></title>
@@ -56,6 +91,10 @@
         <link href="https://docs.airnativeextensions.com/news/2021-01"/>
         <updated>2021-01-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Firebase, Facebook, Advertising, Game Services and more…]]></summary>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[December 2020]]></title>
@@ -63,6 +102,10 @@
         <link href="https://docs.airnativeextensions.com/news/2020-12"/>
         <updated>2020-12-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Firebase Crashlytics and Huawei Ads Kit]]></summary>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[November 2020]]></title>
@@ -70,6 +113,10 @@
         <link href="https://docs.airnativeextensions.com/news/2020-11"/>
         <updated>2020-11-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Facebook, NativeWebView, Flash EOL, and advertising updates.]]></summary>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
@@ -77,5 +124,9 @@
         <link href="https://docs.airnativeextensions.com/news/welcome"/>
         <updated>2020-09-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the new documentation site for the distriqt // air native extensions!]]></summary>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
     </entry>
 </feed>
