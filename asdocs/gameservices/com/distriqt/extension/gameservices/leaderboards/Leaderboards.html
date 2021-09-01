@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="Leaderboards,com.distriqt.extension.gameservices.leaderboards.Leaderboards,COLLECTION_PUBLIC,COLLECTION_SOCIAL,SCORE_ORDER_LARGEST_FIRST,SCORE_ORDER_SMALLEST_FIRST,TIME_SPAN_ALL_TIME,TIME_SPAN_DAILY,TIME_SPAN_WEEKLY,displayName,displayRank,displayScore,id,isSupported,player,rank,rawScore,scoreOrder,displayLeaderboardUI,fromObject,fromObject,fromXML,loadLeaderboards,loadPlayerCenteredScores,loadPlayerScore,loadTopScores,submitScore"><title>com.distriqt.extension.gameservices.leaderboards.Leaderboards</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="Leaderboards,com.distriqt.extension.gameservices.leaderboards.Leaderboards,COLLECTION_PUBLIC,COLLECTION_SOCIAL,SCORE_ORDER_LARGEST_FIRST,SCORE_ORDER_SMALLEST_FIRST,TIME_SPAN_ALL_TIME,TIME_SPAN_DAILY,TIME_SPAN_WEEKLY,displayName,displayRank,displayScore,id,isSupported,player,rank,rawScore,scoreOrder,tag,timestamp,displayLeaderboardUI,fromObject,fromObject,loadLeaderboards,loadPlayerCenteredScores,loadPlayerScore,loadTopScores,submitScore"><title>com.distriqt.extension.gameservices.leaderboards.Leaderboards</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
 				asdocTitle = 'Leaderboards - distriqt // GameServices';
 				var baseRef = '../../../../../';
 				window.onload = configPage;
@@ -188,12 +188,17 @@
 		 <li>Time: score represents an elapsed time in milliseconds. The value will be formatted as an appropriate time value.</li>
 		 <li>Currency: score represents a value in micro units. For example, in USD, a score of 100 would display as $0.0001, while a score of 1000000 would display as $1.00</li>
 		 </ul>
-		 
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">leaderboardId</span>:String</code> &mdash; 	The id of the leaderboard to query. This will be retrieved from the loadLeaderboards request or you can hard code from your game application setup.
+		 		 		 
+		 		 Note: <code>tag</code> is a string value here however certain services limit the type
+		 that can be used. So we suggest using only numeric characters for the tag value.
+		 <ul>
+		     <li>Game Center uses a "context" integer value so we will strip and non-numeric characters
+		 out of the tag before passing to Game Center</li>
+		     <li>Google Play accepts a string value so the value will be passed directly.</li>
+		 </ul>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">leaderboardId</span>:String</code> &mdash; 	The id of the leaderboard to add this score to. This will be retrieved from a loadLeaderboards request or you can use a value from your game application setup.
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">score</span>:int</code> &mdash; 			The score to submit
-		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">tag</span>:String</code> &mdash; 			A tag to associate with this score
-		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">tag</span>:String</code> &mdash; 			A tag to associate with this score (will be returned in leaderboard scores as the tag value)
 		 </td></tr></table></p></div><div class="detailSectionHeader"> Event Detail </div><a name="event:leaderboard:playercenteredscores:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaderboard:playercenteredscores:error</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent</code></a><br/><span class="label">LeaderboardEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/LeaderboardEvent.html#PLAYERCENTEREDSCORES_ERROR"><code>com.distriqt.extension.gameservices.events.LeaderboardEvent.PLAYERCENTEREDSCORES_ERROR</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
@@ -288,4 +293,4 @@
 		 Dispatched when the metadata about the leaderboards has been loaded.
 		 </p>
 		 
-		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Aug 11 2021, 03:41 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Aug 11 2021, 03:41 PM +10:00  -->
+		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Sep 1 2021, 03:20 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Sep 1 2021, 03:20 PM +10:00  -->
