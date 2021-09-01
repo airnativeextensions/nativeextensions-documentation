@@ -1,3 +1,10 @@
+###### 2021.09.01 [v7.2.2]
+
+```
+Added leaderboard score tags to add context to a score entry
+Added airpackage
+```
+
 
 
 ###### 2021.08.11 [v7.1.13]
