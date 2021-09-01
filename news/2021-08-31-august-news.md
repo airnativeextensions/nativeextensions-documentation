@@ -124,7 +124,7 @@ apm project config set adMobIOSApplicationId YYYYYYY
 
 ### Android 30
 
-Now that the AIR SDK supports Android 30 we have been updating all our extensions to support this latest iteration of the Android platform. There are several major changes around opening and quering other installed packages and changes around file access that have affected some of our extensions, such as the CameraUI.
+Now that the AIR SDK supports Android 30 we have been updating all our extensions to support this latest iteration of the Android platform. There are several major changes around opening and querying other installed packages and changes around file access that have affected some of our extensions, such as the CameraUI.
 
 If you run into any issues, please let us know and we will make sure any issues are addressed promptly!
 
