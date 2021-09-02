@@ -1,3 +1,14 @@
+###### 2021.09.02 [v6.8.1]
+
+```
+Added air package
+Android: Removed logging output from wasAutoStarted function (resolves #224)
+Android: Added new method for auto start on Android 30 (including new permission access) (resolves #222)
+Android: Corrected behaviour of status bar light / dark on Android 30 (resolves #225)
+Android: Security flags on activities (resolves #214)
+Corrected documentation on DefaultsEvent.CHANGED event on iOS (resolves #212)
+```
+
 
 
 ###### 2021.08.05 [v6.7.7]
