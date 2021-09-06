@@ -5,20 +5,17 @@ sidebar_label: AdMob
 
 This guide shows how to add mediation through AdMob to your IronSource integration.
 
-
-## Step 1: Create an AdMob Account 
+## Step 1: Create an AdMob Account
 
 1. To access AdMob’s ad inventory through ironSource‘s Mediation platform, you must create an account with AdMob. You can do so [here](https://www.google.com/admob/).
 
 2. We recommend to adjust the time zone of your AdMob’s account to UTC to align with the ironSource dashboard. This will ensure accurate reporting. More info [here](https://support.google.com/admob/answer/7276705?hl=en).
-
 
 ## Step 2: Create an Application and Ad Zone in Admob
 
 Next, you must add your app and set up Ad Zones in your Admob account.
 
 https://developers.ironsrc.com/ironsource-mobile/android/admob-mediation-guide/#step-2
-
 
 ## Step 3: Activate AdMob in Your ironSource Network Setup Module
 
@@ -28,8 +25,6 @@ See the following guide for more information:
 
 https://developers.ironsrc.com/ironsource-mobile/android/admob-mediation-guide/#step-3
 
-
-
 ## Step 4. Add the AdMob Adapter to Your Build
 
 The `com.distriqt.ironsource.AdMob` ANE includes the IronSource AdMob mediation adapter. This is everything you need to get AdMob mediation working in your application.
@@ -38,10 +33,9 @@ To add the ANE download it from the repository and add it to your application:
 
 - [com.distriqt.ironsource.AdMob](https://github.com/distriqt/ANE-IronSource/raw/master/lib/admob/com.distriqt.ironsource.AdMob.ane)
 
-
 ### Android Support
 
-The Android Support libraries encompass the Android Support, Android X and common Google libraries. 
+The Android Support libraries encompass the Android Support, Android X and common Google libraries.
 
 These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
 
@@ -55,11 +49,7 @@ This extension requires the following extensions:
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 
-
->
 > **Note**: if you have been using the older `com.distriqt.androidsupport.*` (Android Support) extensions you should remove these extensions and replace it with the `androidx` extensions listed above. This is the new version of the android support libraries and moving forward all our extensions will require AndroidX.
->
-
 
 ### Extension IDs
 
@@ -86,24 +76,18 @@ Add the extension id to your application descriptor:
 
 More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
 
-
-
 ## Step 5: Additional code required
 
 There is no additional code required just a few additional configuration options and files that need to be packaged with your application.
 
-
 ### Android
 
-Add the following to your manifest additions inside the `application` tag. 
+Add the following to your manifest additions inside the `application` tag.
 
 You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`.
 Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
->
 > You need to ensure you set the `android:value` for your AdMob application, replacing `ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY` in the additions below.
->
-
 
 ```xml
 <!-- ADMOB -->
@@ -221,28 +205,15 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
     android:exported="false" />
 ```
 
-
-
 ### iOS
-
 
 Add the following to your `InfoAdditions` node updating the usage description strings as required for your application:
 
->
 > You need to ensure you set the `GADApplicationIdentifier` for your AdMob application, replacing `ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY` in the additions below.
->
 
 ```xml
 <key>GADApplicationIdentifier</key>
 <string>ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY</string>
-
-<key>SKAdNetworkItems</key>
-<array>
-    <dict>
-        <key>SKAdNetworkIdentifier</key>
-        <string>cstr6suwn9.skadnetwork</string>
-    </dict>
-</array>
 
 <!-- iOS 14 AdNetwork -->
 <key>SKAdNetworkItems</key>
@@ -250,7 +221,7 @@ Add the following to your `InfoAdditions` node updating the usage description st
     <dict>
         <!-- IronSource -->
         <key>SKAdNetworkIdentifier</key>
-        <string>SU67R6K2V3.skadnetwork</string> 
+        <string>SU67R6K2V3.skadnetwork</string>
     </dict>
     <dict>
         <!-- AdMob -->
@@ -259,5 +230,3 @@ Add the following to your `InfoAdditions` node updating the usage description st
     </dict>
 </array>
 ```
-
-
