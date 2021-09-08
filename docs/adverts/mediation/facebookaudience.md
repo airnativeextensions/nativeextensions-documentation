@@ -72,10 +72,6 @@ Add the following to your manifest additions . You must replace `APPLICATION_PAC
 
 ### iOS
 
-Add the `Frameworks` folder to your application package, ensuring the dynamic `FBAudienceNetwork.framework` is included along with the swift libraries (`dylib` files).
-
-**You will need to resign your application following the guide below otherwise your build will likely fail signing validation.**
-
 Add the following to your info additions. If you already have an `SKAdNetworkItems` then append the `dict` items to the `array`.
 
 ```xml
@@ -91,6 +87,10 @@ Add the following to your info additions. If you already have an `SKAdNetworkIte
     </dict>
 </array>
 ```
+
+:::note
+If you previously added `FBAudienceNetwork.framework` to your `Frameworks` directory, you should remove it as it is no longer required. The framework is now statically linked in the extension.
+:::
 
 ## Step 5: Test your implementation
 
@@ -115,52 +115,3 @@ See the [Testing Audience Network Implementation guide](https://developers.faceb
 The easiest way we have found to force a mediation network during testing is to disable automatic optimisations and set the eCPM manually.
 
 Doing this you can give the mediation network you are wanting to test a high eCPM value ( eg $1000) and all others (including AdMob) a very low eCPM (eg $0.01).
-
-# Signing your iOS application
-
-> If you are using AIR from Harman, this should no longer be required with the latest release. Only perform these steps if you are having issues installing an application once you added the Frameworks.
-
-With AIR 27 Adobe partially added the ability to use dynamic frameworks in your iOS application, which works fine with frameworks you control however still has issues with third party frameworks.
-
-Everything will work up to a point, however AIR will incorrectly sign your IPA and it will fail AppStore submission with an error from the Application Loader tool and installing development builds with a signature validation error.
-
-**Please vote to resolve this issue here: [https://tracker.adobe.com/#/view/AIR-4198407](https://tracker.adobe.com/#/view/AIR-4198407)**
-
-To get around this, before you upload or install your application you will need to run a script to resign your IPA.
-This script is available in the repository alongside the ANE in the `scripts` directory.
-
-> **This script will only work on a macOS machine with Xcode installed and your certificate installed in Keychain**
-
-Copy this script to a directory in your development environment.
-
-Firstly edit the script to change the details of the IPA, provisioning profile and signing identity for your application. These details are located at the top of the script.
-
-```
-#####################################
-## CONFIG
-
-# You need to set the values below for your application
-# We suggest they are full paths to the files.
-
-# The path to the ipa generated from your AIR application packaging
-IPA="/path/to/yourApp.ipa"
-
-# The distribution provisioning profile for your application
-PROVISIONING_PROFILE="/path/to/profile.mobileprovision"
-
-# The name of the signing identity. You get this by running the following in a terminal
-# and selecting the name of your distribution certificate:
-#
-# security find-identity -v -p codesigning
-SIGNING_IDENTITY="iPhone Distribution: XXXXXXXXX (XXXXX)"
-```
-
-Now open a Terminal at the script location. _You will need to run the script from this directory._
-
-```
-./resign
-```
-
-This should output a few informational items to the console and then once complete you should have a new IPA file in the directory named: `yourApp_resigned.ipa`. If there were any errors or warnings displayed, make sure the information above is all correct.
-
-This resigned IPA is the file you should use.
