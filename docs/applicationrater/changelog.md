@@ -1,3 +1,10 @@
+###### 2021.09.09 [v6.1.0]
+
+```
+Added air package
+Updated com.google.android.play dependency to 1.10.1
+```
+
 
 
 ###### 2021.07.19 [v6.0.12]
