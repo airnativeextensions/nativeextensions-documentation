@@ -1,3 +1,15 @@
+###### 2021.09.09 [v13.1.0]
+
+```
+Added air package
+Updated com.google.android.play dependency to 1.10.1
+
+Updates: 
+ - Added cancel date to a purchase to indicate end date of a subscription, and corrected Amazon getProducts returning false (resolves #427)
+ - Amazon: Added handling of pagination in purchase query responses (#428)
+ - Amazon: Updated implementation for better handling of consume purchase (#428)
+```
+
 
 
 ###### 2021.05.16 [v13.0.045]

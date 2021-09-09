@@ -7,22 +7,18 @@ In-App Updates is a method for your application to check with the store as to wh
 
 This feature allows you to check and prompt active users to update your app.
 
-
 ![](images/inappupdates_googleplay.png)
 
+## Additional Requirements
 
-## Additional Requirements 
-
-
-### Google Play 
+### Google Play
 
 You will need to add the common Play Core extension ([`com.google.android.play`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.android.play.ane)).
 
-
 And add the following to the manifest additions inside the `application` node:
 
-
 ```xml
+<!-- com.google.android.play -->
 <activity
     android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
     android:enabled="false"
@@ -32,21 +28,26 @@ And add the following to the manifest additions inside the `application` node:
     android:stateNotNeeded="true" />
 <activity
     android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-    android:enabled="false"
     android:exported="false"
     android:stateNotNeeded="true"
-    android:theme="@style/Theme.PlayCore.Transparent" /> 
+    android:theme="@style/Theme.PlayCore.Transparent" />
 <service
     android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
     android:enabled="false"
-    android:exported="true" />
+    android:exported="true" >
+    <meta-data
+        android:name="com.google.android.play.core.assetpacks.versionCode"
+        android:value="11001" />
+</service>
+<service
+    android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+    android:enabled="false"
+    android:exported="false" />
 ```
-
 
 ### Huawei App-Gallery
 
 For Huawei you will need to add the [`com.huawei.hms.game`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.game.ane) Huawei Mobile Services extension and add the following to your manifest additions:
-
 
 ```xml
 <!-- HUAWEI GAME -->
@@ -83,10 +84,6 @@ For Huawei you will need to add the [`com.huawei.hms.game`](https://github.com/d
         android:value="androidhwext:style/Theme.Emui.Translucent" />
 ```
 
-
-
-
-
 ## Usage
 
 ### Check if supported
@@ -95,7 +92,6 @@ Only certain services support In-App Updates:
 
 - Google Play
 - Huawei AppGallery
-
 
 You can use the `isSupported` flag to check whether the current device and service supported In App Updates:
 
@@ -106,8 +102,6 @@ if (InAppBilling.service.inAppUpdates.isSupported)
 }
 ```
 
-
-
 ### Check for an update
 
 To check for an update, call `checkAppUpdate()` and await one of the events:
@@ -115,15 +109,12 @@ To check for an update, call `checkAppUpdate()` and await one of the events:
 - `InAppUpdatesEvent.CHECK_APP_UPDATES_SUCCESS`: dispatched when the check was completed successfully
 - `InAppUpdatesEvent.CHECK_APP_UPDATES_FAILED`: dispatched if there was an error performing the check.
 
-
-
 ```actionscript
 InAppBilling.service.inAppUpdates.addEventListener( InAppUpdatesEvent.CHECK_APP_UPDATES_SUCCESS, successHandler );
 InAppBilling.service.inAppUpdates.addEventListener( InAppUpdatesEvent.CHECK_APP_UPDATES_FAILED, failedHandler );
 
 InAppBilling.service.inAppUpdates.checkAppUpdate();
 ```
-
 
 If successful you can use the details in the event to determine if there is an update available:
 
@@ -135,13 +126,12 @@ function successHandler( event:InAppUpdatesEvent ):void
         // An update is available
         trace( "info: " + (event.updateInfo == null ? "null" : event.updateInfo.toString()) );
     }
-    else 
+    else
     {
         // No update available
     }
 }
 ```
-
 
 If an error occurred you can use the `errorCode` and `message` fields to understand the issue:
 
@@ -153,8 +143,6 @@ function checkAppUpdates_failedHandler( event:InAppUpdatesEvent ):void
 }
 ```
 
-
-
 ### Start an update
 
 If there is an update available, you can start the in app update process by calling `startAppUpdate()`:
@@ -162,8 +150,6 @@ If there is an update available, you can start the in app update process by call
 ```actionscript
 InAppBilling.service.inAppUpdates.startAppUpdate();
 ```
-
-
 
 ## Testing
 
@@ -174,13 +160,13 @@ With internal app sharing, you can quickly share an app bundle or APK with your 
 You can also use internal app sharing to test in-app updates, as follows:
 
 1. On your test device, make sure you've already installed a version of your app that meets the following requirements:
-  - The app was installed using an internal app sharing URL
-  - Supports in-app updates
-  - Uses a version code that's lower than the updated version of your app
+
+- The app was installed using an internal app sharing URL
+- Supports in-app updates
+- Uses a version code that's lower than the updated version of your app
 
 2. Follow the Play Console instructions on how to [share your app internally](https://support.google.com/googleplay/android-developer/answer/9303479). Make sure you upload a version of your app that uses a version code that's higher than the one you have already installed on the test device.
 
 3. On the test device, only click the internal app-sharing link for the updated version of your app. **Do not install the app** from the Google Play Store page you see after clicking the link.
 
 4. Open the app from the device's app drawer or home screen. The update should now be available to your app, and you can test your implementation of in-app updates.
-
