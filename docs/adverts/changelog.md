@@ -1,3 +1,9 @@
+###### 2021.09.13 [v13.3.31]
+
+```
+Corrected Rewarded interstitial event dispatching incorrectly (resolves #326)
+```
+
 ###### 2021.08.31 [v13.3.29]
 
 ```
