@@ -7,39 +7,34 @@ This ANE implements the OneSignal iOS and Android SDKs for usage in your mobile 
 
 OneSignal is a high volume and reliable push notification service for websites and mobile applications. They support all major native and mobile platforms by providing dedicated SDKs for each platform, a RESTful server API, and an online dashboard for marketers to design and send push notifications.
 
-OneSignal provides a simple interface to push notifications, letting content creators focus on quality user engagement instead of complex implementation. 
-
+OneSignal provides a simple interface to push notifications, letting content creators focus on quality user engagement instead of complex implementation.
 
 ## Required For Setup
 
 - [A OneSignal Account](https://onesignal.com/) if you do not already have one
 - Your OneSignal App ID, available in [Keys & IDs](https://documentation.onesignal.com/docs/accounts-and-keys#section-app-id)
 
-
-
 ## Required ANEs
 
-To use this service add the `com.distriqt.PushNotifications.OneSignal.ane` variant of the extension to your project in place of  `com.distriqt.PushNotifications.ane`. You should only add one of the variants to your project. If you need to support multiple services please use the All Services variant.
+To use this service add the `com.distriqt.PushNotifications.OneSignal.ane` variant of the extension to your project in place of `com.distriqt.PushNotifications.ane`. You should only add one of the variants to your project. If you need to support multiple services please use the All Services variant.
 
 All variants of the Push Notifications extension have the same extension id: `com.distriqt.PushNotifications` so you should add this to your extensions list in your application descriptor:
 
 ```xml
 <extensions>
 	...
-	
+
 	<extensionID>com.distriqt.PushNotifications</extensionID>
-	
+
 	...
 </extensions>
 ```
 
 Make sure you have added the common ANEs from the [Add the Extension](../add-the-extension) section first. This includes the Core and AndroidX ANEs.
 
-
-
 ### Android Support
 
-The Android Support libraries encompass the Android Support, Android X and common Google libraries. 
+The Android Support libraries encompass the Android Support, Android X and common Google libraries.
 
 These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
 
@@ -49,6 +44,7 @@ This extension requires the following extensions:
 - [androidx.browser](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
 - [androidx.cardview](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.cardview.ane)
 - [androidx.core](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [androidx.concurrent](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.concurrent.ane)
 - [androidx.recyclerview](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.recyclerview.ane)
 - [androidx.room](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.room.ane)
 - [androidx.vectordrawable](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.vectordrawable.ane)
@@ -61,19 +57,14 @@ This extension requires the following extensions:
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 
-
->
 > **Note**: if you have been using the older `com.distriqt.androidsupport.*` (Android Support) extensions you should remove these extensions and replace it with the `androidx` extensions listed above. This is the new version of the android support libraries and moving forward all our extensions will require AndroidX.
->
-
-
 
 ### Google Play Services
 
-This ANE requires usage of certain aspects of the Google Play Services client library. 
-The client library is available as a series of ANEs that you add into your applications packaging options. 
-Each separate ANE provides a component from the Play Services client library and are used by different ANEs. 
-These client libraries aren't packaged with this ANE as they are used by multiple ANEs and separating them 
+This ANE requires usage of certain aspects of the Google Play Services client library.
+The client library is available as a series of ANEs that you add into your applications packaging options.
+Each separate ANE provides a component from the Play Services client library and are used by different ANEs.
+These client libraries aren't packaged with this ANE as they are used by multiple ANEs and separating them
 will avoid conflicts, allowing you to use multiple ANEs in the one application.
 
 This ANE requires the following Google Play Services:
@@ -86,18 +77,12 @@ Optional:
 
 - [com.distriqt.playservices.Location](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Location.ane)
 
-
-You must include the above native extensions in your application along with this extension, 
+You must include the above native extensions in your application along with this extension,
 and you need to ensure they are packaged with your application.
 
 You can access the Google Play Services client library extensions here: [https://github.com/distriqt/ANE-GooglePlayServices](https://github.com/distriqt/ANE-GooglePlayServices).
 
-
->
-> If you have used an older version of this ANE you should remove the Play Services GCM ANE. It is no longer required. 
->
-
-
+> If you have used an older version of this ANE you should remove the Play Services GCM ANE. It is no longer required.
 
 ### Firebase
 
@@ -106,8 +91,6 @@ To use Firebase Cloud Messaging you must include the core Firebase libraries. Th
 - [com.google.firebase.core.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane)
 
 You do not need to initialise or configure this.
-
-
 
 ## Extension IDs
 
@@ -127,6 +110,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>androidx.browser</extensionID>
     <extensionID>androidx.cardview</extensionID>
     <extensionID>androidx.core</extensionID>
+    <extensionID>androidx.concurrent</extensionID>
     <extensionID>androidx.recyclerview</extensionID>
     <extensionID>androidx.room</extensionID>
     <extensionID>androidx.vectordrawable</extensionID>
@@ -140,58 +124,43 @@ The following should be added to your `extensions` node in your application desc
 </extensions>
 ```
 
+# iOS
 
-# iOS 
+Firstly make sure you have generated your iOS Push Certificates. You can follow the guide by OneSignal:
 
-Firstly make sure you have generated your iOS Push Certificates. You can follow the guide by OneSignal: 
-
-- [Generate an iOS Push Certificate](https://documentation.onesignal.com/docs/generate-an-ios-push-certificate) 
-
-
-
+- [Generate an iOS Push Certificate](https://documentation.onesignal.com/docs/generate-an-ios-push-certificate)
 
 ## Info Additions and Entitlements
 
-Push notifications require a few additions to the Info plist and Entitlements section 
-of your application to correctly configure your application for push notifications. 
+Push notifications require a few additions to the Info plist and Entitlements section
+of your application to correctly configure your application for push notifications.
 
 You should add the listing below to application descriptor iPhone node.
 
 You must replace the `BUNDLE_SEED_ID` and `BUNDLE_IDENTIFIER` with the information you
-gathered when setting up your application. Also make sure you set the environment 
-correctly either using production or development, both are shown in the example 
+gathered when setting up your application. Also make sure you set the environment
+correctly either using production or development, both are shown in the example
 below with the production version commented out. More on this below.
 
 ```xml
 <iPhone>
 	<InfoAdditions><![CDATA[
-		<key>UIPrerenderedIcon</key>
-		<true/>
-		
-		<key>UIDeviceFamily</key>
-		<array>
-			<string>1</string>
-			<string>2</string>
-		</array>
-        
-        <key>MinimumOSVersion</key>
-        <string>9.0</string>
 
         <key>UIBackgroundModes</key>
 		<array>
 			<string>remote-notification</string>
 		</array>
-		
+
 	]]></InfoAdditions>
 	<requestedDisplayResolution>high</requestedDisplayResolution>
 	<Entitlements><![CDATA[
-		
+
 		<!-- DEVELOPMENT -->
 		<key>get-task-allow</key>
 		<true/>
 		<key>aps-environment</key>
 		<string>development</string>
-		
+
 		<!-- PRODUCTION -->
 		<!--
 		<key>get-task-allow</key>
@@ -199,40 +168,35 @@ below with the production version commented out. More on this below.
 		<key>aps-environment</key>
 		<string>production</string>
 		-->
-		
+
 		<key>application-identifier</key>
 		<string>BUNDLE_SEED_ID.BUNDLE_IDENTIFIER</string>
 		<key>keychain-access-groups</key>
 		<array>
 			<string>BUNDLE_SEED_ID.*</string>
 		</array>
-		
+
 	]]></Entitlements>
 </iPhone>
 ```
 
-
-The first entitlement field is the `aps-environment`. This field indicates whether 
-we are using the development or the production environment. It must be either 
-`development` or `production` and depends on which configuration you are using. 
-If you are running a debug build you should use development. If you are looking 
+The first entitlement field is the `aps-environment`. This field indicates whether
+we are using the development or the production environment. It must be either
+`development` or `production` and depends on which configuration you are using.
+If you are running a debug build you should use development. If you are looking
 to publish the application to the AppStore, you should use production.
 
-You should have noted the `BUNDLE_SEED_ID` (or App ID Prefix) and `BUNDLE_IDENTIFIER` 
-when you were setting up your application in the iOS developer center. 
-The seed id should be a unique ten character string and the identifier should be 
+You should have noted the `BUNDLE_SEED_ID` (or App ID Prefix) and `BUNDLE_IDENTIFIER`
+when you were setting up your application in the iOS developer center.
+The seed id should be a unique ten character string and the identifier should be
 similar to your AIR application id.
 
+# Android
 
-
-
-# Android 
-
-Firstly make sure you have generated your Google Service API Key. You can follow the guide by OneSignal: 
+Firstly make sure you have generated your Google Service API Key. You can follow the guide by OneSignal:
 
 - [Generate a Google Server API Key](https://documentation.onesignal.com/docs/generate-a-google-server-api-key)
 - [Use an existing Firebase project](https://documentation.onesignal.com/docs/firebase-cloud-messaging-fcm#section-sender-id-server-key)
-
 
 ## Manifest Additions
 
@@ -240,7 +204,6 @@ You must add all the OneSignal related manifest additions along with several add
 
 The following shows the complete manifest additions node. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`.
 Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-
 
 ```xml
 <manifest android:installLocation="auto">
@@ -259,22 +222,22 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
     <!-- BADGE -->
 	<uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
-    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> 
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
     <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> 
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
     <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
-    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> 
-    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> 
-    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> 
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
     <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> 
-    <uses-permission android:name="android.permission.READ_APP_BADGE" /> 
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
     <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> 
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
-	
+
 
 	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -289,8 +252,8 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 			android:authorities="APPLICATION_PACKAGE.pushnotificationsfileprovider"
 			android:grantUriPermissions="true"
 			android:exported="false">
-			<meta-data 
-				android:name="android.support.FILE_PROVIDER_PATHS" 
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
 				android:resource="@xml/distriqt_pushnotifications_paths" />
 		</provider>
 
@@ -540,17 +503,15 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
 
 	</application>
-	
+
 </manifest>
 ```
 
-
-### MultiDex Applications 
+### MultiDex Applications
 
 If you have a large application and are supporting Android 4.x then you will need to ensure you enable your application to correctly support MultiDex to allow the application to be broken up into smaller dex packages.
 
 This is enabled by default with releases of AIR v25+, except in the Android 4.x case where you need to change the manifest additions for the application tag to match the following and use the `MultiDexApplication`.
-
 
 #### Using AndroidX
 

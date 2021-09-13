@@ -1,3 +1,15 @@
+###### 2021.09.13 [v10.4.1]
+
+```
+Added AIR Package currently the base version with 2 variants, (FCM and OneSignal)
+
+OneSignal SDK update:
+ - iOS v3.7.0
+ - Android v4.6.0
+
+Fixed error event that was incorrectly dispatched (resolves #496)   
+```
+
 
 
 ###### 2021.04.15 [v10.3.048]
