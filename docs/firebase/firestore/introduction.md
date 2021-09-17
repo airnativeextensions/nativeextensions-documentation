@@ -5,33 +5,21 @@ sidebar_label: Introduction
 
 ## Cloud Firestore
 
-> 
 > Cloud Firestore is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud Platform. Like Firebase Realtime Database, it keeps your data in sync across client apps through realtime listeners and offers offline support for mobile and web so you can build responsive apps that work regardless of network latency or Internet connectivity. Cloud Firestore also offers seamless integration with other Firebase and Google Cloud Platform products, including Cloud Functions.
->
->
-
->
-> **Cloud Firestore is currently in beta release. Feature availability and support for product integrations and platforms will continue to improve as the product matures. For more information on existing limitations in Cloud Firestore, see the [limits and quotas documentation](https://firebase.google.com/docs/firestore/quotas)**
->
-
-
 
 [![YOUTUBE](https://img.youtube.com/vi/QcsAb2RR52c/0.jpg)](https://www.youtube.com/watch?v=QcsAb2RR52c)
 
 [https://firebase.google.com/docs/storage/](https://firebase.google.com/docs/storage/)
 
-
 ## Key capabilities
 
-| | |
-|---|---|
-| Flexibility   | The Cloud Firestore data model supports flexible, hierarchical data structures. Store your data in documents, organized into collections. Documents can contain complex nested objects in addition to subcollections. |
-| Expressive querying   | In Cloud Firestore, you can use queries to retrieve individual, specific documents or to retrieve all the documents in a collection that match your query parameters. Your queries can include multiple, chained filters and combine filtering and sorting. They're also indexed by default, so query performance is proportional to the size of your result set, not your data set. |
-| Realtime updates   | Like Realtime Database, Cloud Firestore uses data synchronization to update data on any connected device. However, it's also designed to make simple, one-time fetch queries efficiently. |
-| Offline support   | Cloud Firestore caches data that your app is actively using, so the app can write, read, listen to, and query data even if the device is offline. When the device comes back online, Cloud Firestore synchronizes any local changes back to Cloud Firestore. |
-| Designed to scale   | Cloud Firestore brings you the best of Google Cloud Platform's powerful infrastructure: automatic multi-region data replication, strong consistency guarantees, atomic batch operations, and real transaction support. We've designed Cloud Firestore to handle the toughest database workloads from the world's biggest apps. |
-
-
+|                     |                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Flexibility         | The Cloud Firestore data model supports flexible, hierarchical data structures. Store your data in documents, organized into collections. Documents can contain complex nested objects in addition to subcollections.                                                                                                                                                                |
+| Expressive querying | In Cloud Firestore, you can use queries to retrieve individual, specific documents or to retrieve all the documents in a collection that match your query parameters. Your queries can include multiple, chained filters and combine filtering and sorting. They're also indexed by default, so query performance is proportional to the size of your result set, not your data set. |
+| Realtime updates    | Like Realtime Database, Cloud Firestore uses data synchronization to update data on any connected device. However, it's also designed to make simple, one-time fetch queries efficiently.                                                                                                                                                                                            |
+| Offline support     | Cloud Firestore caches data that your app is actively using, so the app can write, read, listen to, and query data even if the device is offline. When the device comes back online, Cloud Firestore synchronizes any local changes back to Cloud Firestore.                                                                                                                         |
+| Designed to scale   | Cloud Firestore brings you the best of Google Cloud Platform's powerful infrastructure: automatic multi-region data replication, strong consistency guarantees, atomic batch operations, and real transaction support. We've designed Cloud Firestore to handle the toughest database workloads from the world's biggest apps.                                                       |
 
 ## How does it work?
 
@@ -43,11 +31,6 @@ Additionally, querying in Cloud Firestore is expressive, efficient, and flexible
 
 Protect access to your data in Cloud Firestore with Firebase Authentication and Cloud Firestore Security Rules for Android, iOS, and JavaScript, or Identity and Access Management (IAM) for server-side languages.
 
-
-
-## Next Steps 
+## Next Steps
 
 - [Add the extension](add-the-extension)
-
-
-

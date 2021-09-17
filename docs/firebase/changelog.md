@@ -1,3 +1,12 @@
+###### 2021.09.17 [v6.0.8]
+
+```
+Added air package
+Corrected issues with processing json responses causing delays and errors (resolves #370)
+Corrected FCM documentation link (resolves #368)
+Corrected conversion tool link (resolves #369)
+```
+
 
 
 ###### 2021.06.14 [v6.0.006]

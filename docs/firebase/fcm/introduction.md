@@ -58,5 +58,5 @@ The core and config Firebase ANEs are required to include the neccessary SDK and
 Follow the guide in the Push Notifications ANE wiki to get started with Firebase Cloud Messaging:
 
 - Get the [Push Notifications ANE](https://airnativeextensions.com/extension/com.distriqt.PushNotifications)
-- Follow the FCM setup guide in the [Push Notifications documentation](https://docs.airnativeextensions.com/docs/pushnotifications/firebase-cloud-messaging/) 
+- Follow the FCM setup guide in the [Push Notifications documentation](https://docs.airnativeextensions.com/docs/pushnotifications/firebase/firebase-cloud-messaging) 
 
