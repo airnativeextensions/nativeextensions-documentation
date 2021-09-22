@@ -4,7 +4,6 @@ sidebar_label: Login with Apple Id
 ---
 
 
-
 ## Login 
 
 To initiate login call the `loginWithAppleId()` function:
@@ -100,6 +99,20 @@ function errorHandler( event:AppleSignInErrorEvent ):void
 
 You can access the "nonce" used to initiate this authorisation request in the success handler via the `event.rawNonce` property. This can be used to further authenticate with services such as Firebase. 
 
+
+:::info Encoding
+
+**Please note that the `identityToken` and `authorizationCode` are Base64 encoded.** 
+
+This ensures we preserve the contents of the byte data correctly. Some endpoints will use the Base64 encoded string whereas others will require the decoded version.
+
+To decode it you can use the [utility class](https://github.com/distriqt/ANE-AppleSignIn/blob/master/example/starling/src/com/distriqt/utils/Base64.as):
+
+```actionscript
+var decoded:String = Base64.decode( event.appleIdCredential.identityToken )
+```
+
+:::
 
 
 ## User Revoke

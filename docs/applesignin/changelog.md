@@ -1,3 +1,10 @@
+###### 2021.09.22 [v2.2.93]
+
+```
+Added air package 
+Updated documentation
+```
+
 
 
 ###### 2021.02.05 [v2.2.088]
