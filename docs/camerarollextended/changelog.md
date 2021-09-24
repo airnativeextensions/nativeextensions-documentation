@@ -1,3 +1,11 @@
+###### 2021.09.24 [v6.1.10]
+
+```
+Added air package 
+Updated build to latest
+Removed ios minimum version flag
+```
+
 
 
 ###### 2021.06.29 [v6.1.9]
