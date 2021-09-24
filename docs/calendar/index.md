@@ -4,16 +4,15 @@ hide_title: true
 slug: /calendar
 ---
 
-
 ![](images/hero.png)
 
 # Calendar
 
-This extension gives you the ability to access the user's calendar. You can retrieve details on the events, 
-add new events (using the native UI or directly) and delete existing events. 
+This extension gives you the ability to access the user's calendar. You can retrieve details on the events,
+add new events (using the native UI or directly) and delete existing events.
 Included in this functionality is all the ability to request the correct permissions.
 
-The simple API allows you to quickly integrate calendar access in your AIR application in just a few lines of code. 
+The simple API allows you to quickly integrate calendar access in your AIR application in just a few lines of code.
 Identical code base can be used across all platforms allowing you to concentrate on your application and not device specifics.
 
 We provide complete guides to get you up and running with asset selection quickly and easily.
@@ -28,18 +27,15 @@ We provide complete guides to get you up and running with asset selection quickl
 - Request the appropriate runtime permissions on Android and iOS;
 - Sample project code and ASDocs reference
 
-
-As with all our extensions you get access to a year of support and updates as we are 
+As with all our extensions you get access to a year of support and updates as we are
 continually improving and updating the extensions for OS updates and feature requests.
-
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-Calendar/wiki) forms the best source of detailed documentation for the extension along with the
- [ASDocs](https://docs.airnativeextensions.com/asdocs/calendar/). 
+The [documentation site](https://docs.airnativeextensions.com/docs/calendar) forms the best source of detailed documentation for the extension along with the
+[ASDocs](https://docs.airnativeextensions.com/asdocs/calendar/).
 
-
-Quick Example: 
+Quick Example:
 
 ```actionscript
 var e:EventObject = new EventObject();
@@ -52,10 +48,9 @@ e.endDate.hours = e.endDate.hours+1;
 Calendar.service.addEventWithUI( e );
 ```
 
-More information here: 
+More information here:
 
 [com.distriqt.Calendar](https://airnativeextensions.com/extension/com.distriqt.Calendar)
-
 
 ## License
 
@@ -64,7 +59,5 @@ You can purchase a license for using this extension:
 [airnativeextensions.com](https://airnativeextensions.com/)
 
 distriqt retains all copyright.
-
-
 
 ![](images/promo.png)

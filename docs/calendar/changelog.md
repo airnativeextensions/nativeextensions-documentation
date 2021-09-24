@@ -1,3 +1,11 @@
+###### 2021.09.24 [v5.0.12]
+
+```
+Added air package 
+Updated build to latest
+Removed ios minimum version flag
+```
+
 
 
 ###### 2020.03.23 [v5.0.010]
