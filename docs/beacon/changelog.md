@@ -1,3 +1,12 @@
+###### 2021.09.24 [v5.0.17]
+
+```
+Added air package
+Added Android x64 
+Removed iOS minimum version linker option
+Updated iOS builds
+```
+
 
 
 ###### 2020.03.23 [v5.0.014]
