@@ -1,3 +1,9 @@
+###### 2021.09.28 [v7.2.7]
+
+```
+Corrected timestamp negative value issues (resolves #204)
+```
+
 ###### 2021.09.01 [v7.2.2]
 
 ```
