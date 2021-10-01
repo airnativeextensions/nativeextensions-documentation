@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[86997],{64444:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/apm","name":"apm","count":6,"permalink":"/news/tags/apm"}')}}]);
