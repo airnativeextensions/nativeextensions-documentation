@@ -18,7 +18,7 @@ I am hope you aren't sick of hearing about APM, we are really excited for this t
 
 ![](images/adobeair.png)
 
-### [AIR SDK Developer Site]()
+### [AIR SDK Developer Site](https://airsdk.dev)
 
 Now that a lot of the existing documentation has been marked as deprecated by Adobe we believe it is very important for a modern site to be available for AIR. AIR is in no way "deprecated" so it's important that this information is available.
 
