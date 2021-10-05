@@ -1,3 +1,11 @@
+###### 2021.10.05 [v3.1.47]
+
+```
+Add air package
+Remove ios minimum version flag
+Add android x64
+```
+
 
 
 ###### 2020.05.13 [v3.1.046]
