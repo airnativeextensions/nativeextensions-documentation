@@ -1,3 +1,9 @@
+###### 2021.10.05 [v13.3.32]
+
+```
+Updated package to correctly include admob android application id (resolves #334)
+```
+
 ###### 2021.09.13 [v13.3.31]
 
 ```
