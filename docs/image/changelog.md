@@ -1,3 +1,13 @@
+###### 2021.10.05 [v5.1.79]
+
+```
+Add air package
+Add windows implementation
+Add default decoding functionality
+Remove ios minimum version flag
+Add android activity security
+```
+
 
 
 ###### 2020.03.21 [v5.0.007]
