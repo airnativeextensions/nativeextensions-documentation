@@ -1,3 +1,11 @@
+###### 2021.10.07 [v4.4.8]
+
+```
+Add air package
+Returned better error messages from exoplayer on android
+Added system control stop functionality
+```
+
 
 
 ###### 2021.04.08 [v4.4.006]
