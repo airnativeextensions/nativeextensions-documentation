@@ -515,6 +515,8 @@ This is enabled by default with releases of AIR v25+, except in the Android 4.x 
 
 #### Using AndroidX
 
+> Note: The `androidx.multidex` extension is no longer required with recent AIR 33.1. AIR will include this library by default. If you have a conflict / duplicate class issue mentioning multidex make sure you have removed this extension.
+
 This will require the addition of the `androidx.multidex` extension which contains the `androidx.multidex.MultiDexApplication` implementation.
 
 ```xml
@@ -528,3 +530,51 @@ This will require the addition of the `androidx.multidex` extension which contai
 	</application>
 </manifest>
 ```
+
+## Amazon
+
+Amazon is a specific implementation of Android and requires some additional manifest additions if you are distributing your application via the Amazon AppStore.
+
+Firstly add the amazon namespace to your manifest tag:
+
+```xml
+<manifest android:installLocation="auto"
+    xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+>
+```
+
+Add the following permissions:
+
+```xml
+<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
+<permission android:name="APPLICATION_PACKAGE.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature" />
+<uses-permission android:name="APPLICATION_PACKAGE.permission.RECEIVE_ADM_MESSAGE" />
+```
+
+In the `application` tag, add the following:
+
+```xml
+<amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false"/>
+<service android:name="com.onesignal.ADMMessageHandler" android:exported="false" />
+<service android:name="com.onesignal.ADMMessageHandlerJob"
+         android:permission="android.permission.BIND_JOB_SERVICE"
+         android:exported="false" />
+<receiver android:name="com.onesignal.ADMMessageHandler$Receiver"
+          android:permission="com.amazon.device.messaging.permission.SEND" >
+    <intent-filter>
+        <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+        <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+        <category android:name="APPLICATION_PACKAGE" />
+    </intent-filter>
+</receiver>
+```
+
+Follow the [guide here](https://documentation.onesignal.com/docs/generate-an-amazon-api-key) to generate your Amazon API Key. You should end up with a file (`api_key.txt`) that you will need to add to the root of your application and ensure it is packaged into your application.
+
+:::warning
+Do not place the `api_key.txt` file in an `assets` folder as mentioned in the OneSignal documentation. Any assets from AIR are automatically added into this directory.
+:::
+
+:::info
+You will need to be using a recent version of AIR to be able to support these additional manifest namespaces and tags.
+:::
