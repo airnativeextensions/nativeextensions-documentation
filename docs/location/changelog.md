@@ -1,3 +1,12 @@
+###### 2021.10.07 [v4.2.20]
+
+```
+Add air package
+Update Android permission requests
+Add security flag to auth activity
+Remove iOS minimum version flag
+```
+
 
 
 ###### 2020.08.12 [v4.1.009]
