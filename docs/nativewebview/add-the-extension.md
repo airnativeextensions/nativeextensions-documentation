@@ -93,23 +93,23 @@ You should make sure your manifest contains the following:
 
 ```xml
 <manifest android:installLocation="auto">
-	<uses-permission android:name="android.permission.INTERNET"/>
-	
-	<!-- android:hardwareAccelerated is highly recommended for video playback and scroll performance -->
-	<!-- android:windowSoftInputMode is used to push the content up when an input appears below the keyboard -->
-	<application 
-		android:hardwareAccelerated="true"
-		android:windowSoftInputMode="adjustResize">
-					
-		<activity 
-			android:name="com.distriqt.extension.nativewebview.activities.BrowseActivity" 
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+  <uses-permission android:name="android.permission.INTERNET"/>
 
-    <activity 
-      android:name="com.distriqt.extension.nativewebview.permissions.AuthorisationActivity" 
-      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+  <!-- android:hardwareAccelerated is highly recommended for video playback and scroll performance -->
+  <!-- android:windowSoftInputMode is used to push the content up when an input appears below the keyboard -->
+  <application 
+      android:hardwareAccelerated="true"
+      android:windowSoftInputMode="adjustResize">
+            
+      <activity 
+          android:name="com.distriqt.extension.nativewebview.activities.BrowseActivity" 
+          android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-	</application>
+      <activity 
+          android:name="com.distriqt.extension.nativewebview.permissions.AuthorisationActivity" 
+          android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+  </application>
 </manifest>
 ```
 
