@@ -10,10 +10,7 @@ The type of key you need is an API key with restriction for Android apps.
 The key is free. You can use it with any of your applications that call the 
 Google Maps Android API, and it supports an unlimited number of users.
 
-
 The Google Play Developer Console is where you enable the various Google APIs for your application.
-
-
 
 https://console.developers.google.com
 

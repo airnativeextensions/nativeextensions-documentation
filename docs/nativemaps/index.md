@@ -44,8 +44,7 @@ Identical code base can be used across all supported platforms allowing you to c
 ## Documentation
 
 
-The [wiki](https://github.com/distriqt/ANE-NativeMaps/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/nativemaps). 
-
+The [documentation site](https://docs.airnativeextensions.com/docs/nativemaps) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/nativemaps). 
 
 
 More information here: 
