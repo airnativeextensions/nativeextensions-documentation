@@ -32,12 +32,21 @@ As with all our extensions you get access to a year of support and updates as we
 
 ## Documentation
 
-The [Wiki](https://github.com/distriqt/ANE-NetworkInfo/wiki) forms the best source of detailed documentation for the extension along with 
-the [asdocs](https://docs.airnativeextensions.com/asdocs/networkinfo). 
+The [documentation site](https://docs.airnativeextensions.com/docs/networkinfo) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/networkinfo). 
 
 Quick Example:
 
 ```actionscript
+NetworkInfo.networkInfo.addEventListener( 
+        NetworkInfoEvent.CHANGE,
+        networkChangeHandler 
+    );
+
+function networkChangeHandler( event:NetworkInfoEvent ):void
+{
+    trace( "isReachable=" + NetworkInfo.networkInfo.isReachable() );
+    trace( "isWWAN=" + NetworkInfo.networkInfo.isWWAN() );
+}
 ```
 
 More information here: 
