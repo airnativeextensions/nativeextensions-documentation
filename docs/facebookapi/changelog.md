@@ -1,3 +1,10 @@
+###### 2021.10.12 [v9.3.1]
+
+```
+Update documentation around manifest additions for AAB issue (resolves #321)
+Update air package with new manifest additions
+```
+
 ###### 2021.09.06 [v9.3.0]
 
 ```

@@ -111,8 +111,8 @@ You will need to replace the instances of `APPLICATION_PACKAGE` with your applic
 		android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 		android:hardwareAccelerated="true">
 
-		<!-- IMPORTANT: Do not remove the backslash and space at the beginning of the following value string. -->
-		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\ FACEBOOK_APP_ID"/>
+		<!-- IMPORTANT: Do not remove the \u003 at the beginning of the following value string. -->
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\u003FACEBOOK_APP_ID"/>
 
 		<!-- OPTIONAL SETTINGS -->
 		<meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="false"/>
