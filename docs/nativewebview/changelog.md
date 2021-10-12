@@ -1,22 +1,12 @@
-###### 2021.10.08 [v5.3.7]
+###### 2021.10.12 [v5.3.7]
 
 ```
 Add air package
-Windows 64bit support (resolves #255)
 Android: Activity window security flag updates (resolves #250)
 Android: Corrected draw viewport functionality on android
-
-```
-
-
-
-###### 2021.05.18 [v5.3.006]
-
-```
 Windows: Added windows 64bit support (resolves #255)
-Android: Activity window security flag updates (resolves #250)
-Android: Corrected draw viewport functionality on android
 ```
+
 
 
 ###### 2021.04.21 [v5.2.383]
