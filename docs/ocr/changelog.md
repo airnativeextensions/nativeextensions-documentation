@@ -1,3 +1,10 @@
+###### 2021.10.12 [v3.0.24]
+
+```
+Add air package 
+Remove ios minimum version flag
+```
+
 
 
 ###### 2020.03.20 [v3.0.020]

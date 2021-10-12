@@ -27,7 +27,7 @@ The simple API allows you to quickly scan an image for textural content, using t
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-OCR/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](http://docs.airnativeextensions.com/ocr/docs). 
+The [documentation site](https://docs.airnativeextensions.com/docs/ocr) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/ocr). 
 
 Quick Example: 
 
