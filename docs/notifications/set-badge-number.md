@@ -12,7 +12,7 @@ This was originally part of iOS and is built into the operating system there, bu
 To set the badge number use the `setBadgeNumber()` method:
 
 ```actionscript
-PushNotifcations.service.setBadgeNumber( 4 );
+Notifcations.service.setBadgeNumber( 4 );
 ```
 
 - [iOS](#ios)
