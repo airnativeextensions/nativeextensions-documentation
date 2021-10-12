@@ -1,3 +1,10 @@
+###### 2021.10.12 [v1.3.0]
+
+```
+Add air package
+Add windows 64 bit support
+```
+
 
 
 ###### 2020.03.20 [v1.2.115]

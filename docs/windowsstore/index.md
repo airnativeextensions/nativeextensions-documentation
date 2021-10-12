@@ -18,11 +18,7 @@ gives your UWP packaged AIR application the ability to make purchases of applica
 - Retrieve user's purchases
 - Make a purchase of a product
 
-
-
-This Wiki forms the best source of detailed documentation for the extension along with 
-the [asdocs](https://docs.airnativeextensions.com/asdocs/windowsstore). 
-
+The [documentation site](https://docs.airnativeextensions.com/docs/windowsstore/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/windowsstore). 
 
 
 ![](images/promo.png)
