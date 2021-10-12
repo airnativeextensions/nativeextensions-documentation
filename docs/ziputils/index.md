@@ -35,13 +35,11 @@ continually improving and updating the extensions for OS updates and feature req
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-ZipUtils/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/ziputils). 
-
+The [documentation site](https://docs.airnativeextensions.com/docs/ziputils) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/ziputils). 
 
 More information here: 
 
 [com.distriqt.ZipUtils](https://airnativeextensions.com/extension/com.distriqt.ZipUtils)
-
 
 
 ## License
