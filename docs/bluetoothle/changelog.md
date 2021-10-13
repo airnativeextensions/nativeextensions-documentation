@@ -1,3 +1,9 @@
+###### 2021.10.13 [v4.1.23]
+
+```
+iOS authorisation process update (resolves #59)
+```
+
 ###### 2021.09.24 [v4.1.21]
 
 ```
