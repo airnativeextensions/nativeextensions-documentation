@@ -49,6 +49,7 @@ This extension requires the following extensions:
 
 - [`androidx.core`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
 - [`androidx.appcompat`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.appcompat.ane)
+- [`androidx.constraintlayout`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.constraintlayout.ane)
 - [`androidx.browser`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
 - [`androidx.cardview`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.cardview.ane)
 - [`androidx.vectordrawable`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.vectordrawable.ane)
@@ -89,6 +90,7 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.core</extensionID>
 	<extensionID>androidx.browser</extensionID>
 	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>androidx.constraintlayout</extensionID>
 	<extensionID>androidx.cardview</extensionID>
 	<extensionID>androidx.vectordrawable</extensionID>
 </extensions>

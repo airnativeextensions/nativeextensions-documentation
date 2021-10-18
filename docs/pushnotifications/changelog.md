@@ -1,3 +1,9 @@
+###### 2021.10.18 [v10.4.3]
+
+```
+Fix issue with authorisation event not being dispatched with OneSignal (resolves #507)
+```
+
 ###### 2021.09.13 [v10.4.1]
 
 ```
