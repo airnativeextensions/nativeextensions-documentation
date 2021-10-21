@@ -1,3 +1,9 @@
+###### 2021.10.22 [v6.0.8]
+
+```
+Update builds that failed to be deployed correctly (resolves #390)
+```
+
 ###### 2021.09.17 [v6.0.8]
 
 ```
