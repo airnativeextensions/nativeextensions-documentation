@@ -93,23 +93,34 @@ You should make sure your manifest contains the following:
 
 ```xml
 <manifest android:installLocation="auto">
-  <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
-  <!-- android:hardwareAccelerated is highly recommended for video playback and scroll performance -->
-  <!-- android:windowSoftInputMode is used to push the content up when an input appears below the keyboard -->
-  <application 
-      android:hardwareAccelerated="true"
-      android:windowSoftInputMode="adjustResize">
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+    </queries>
+
+    <!-- android:hardwareAccelerated is highly recommended for video playback and scroll performance -->
+    <!-- android:windowSoftInputMode is used to push the content up when an input appears below the keyboard -->
+    <application 
+        android:hardwareAccelerated="true"
+        android:windowSoftInputMode="adjustResize">
             
-      <activity 
-          android:name="com.distriqt.extension.nativewebview.activities.BrowseActivity" 
-          android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity 
+            android:name="com.distriqt.extension.nativewebview.activities.BrowseActivity" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-      <activity 
-          android:name="com.distriqt.extension.nativewebview.permissions.AuthorisationActivity" 
-          android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity 
+            android:name="com.distriqt.extension.nativewebview.permissions.AuthorisationActivity" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-  </application>
+    </application>
 </manifest>
 ```
 

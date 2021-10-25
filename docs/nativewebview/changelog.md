@@ -1,3 +1,10 @@
+###### 2021.10.25 [v5.3.8]
+
+```
+Update Android for API 30, include queries requirement in docs (resolves #271)
+Add new airbridge.js to add a message stack to handling multiple messages (resolves #267)
+```
+
 ###### 2021.10.12 [v5.3.7]
 
 ```

@@ -31,9 +31,27 @@ the Browser View for the following reasons:
 
 
 
+## Support 
+
+You can check if the current device supports the browser view by calling `NativeWebView.service.browserView.isSupported`. This will check the device version and required components to make sure the browser view can be presented.
+
+```actionscript
+if (NativeWebView.service.browserView.isSupported)
+{
+	// Browser view available
+}
+```
+
+This may return `false` if :
+- You are on an unsupported device (eg desktop machine);
+- Android: The `androidx.browser` dependency is missing;
+- Android 30+: The `queries` tags in the manifest are missing;
+- iOS: The `SFSafariViewController` is unavailable (generally only on iOS < 9);
+
+
 ## Android Additions
 
-To make sure this functionality works on Android you must add the `androidx.browser.ane` to your application. See the [Add the Extension](add-the-extension) section for information on including this ANE.
+To make sure this functionality works on Android you must add the `androidx.browser` to your application. See the [Add the Extension](add-the-extension) section for information on including this ANE.
 
 
 
@@ -51,20 +69,18 @@ if (NativeWebView.service.browserView.isSupported)
 	NativeWebView.service.browserView.prepare();
 }
 
-...
-
-private function browserView_readyHandler( event:BrowserViewEvent ):void
+function browserView_readyHandler( event:BrowserViewEvent ):void
 {
 	NativeWebView.service.browserView.removeEventListener( BrowserViewEvent.READY, browserView_readyHandler );
 	// Browser views are now ready to be used in your application
 }
 ```
 
->
-> This is not 100% required however if you don't do this before opening a url you may 
-> find you don't receive any of the `BrowserViewEvent`s. If you don't need those 
-> events then you can skip this process.
->
+:::info 
+This is not 100% required however if you don't do this before opening a url you may 
+find you don't receive any of the `BrowserViewEvent`s. If you don't need those 
+events then you can skip this process.
+:::
 
 
 
@@ -86,9 +102,7 @@ NativeWebView.service.browserView.addEventListener( BrowserViewEvent.OPENED, bro
 NativeWebView.service.browserView.addEventListener( BrowserViewEvent.LOADED, browserView_eventHandler );
 NativeWebView.service.browserView.addEventListener( BrowserViewEvent.ERROR, browserView_eventHandler );
 
-...
-
-private function browserView_eventHandler( event:BrowserViewEvent ):void
+function browserView_eventHandler( event:BrowserViewEvent ):void
 {
 	trace( "browserView_eventHandler( " +event.type + " )");
 }
@@ -167,7 +181,7 @@ Potential values are:
 
 The defaults are `SLIDE_LEFT` and `SLIDE_RIGHT` for the `animationIn` and `animationOut` properties respectively, so that the view will slide in from the left and back out towards the left.
 
->
-> Note: The out animation is only used when the user presses the close button. If you programmatically close the view using the `close` function the animation will not be shown.
->
+:::note
+The **out** animation is only used when the user presses the close button. If you programmatically close the view using the `close()` function the animation will not be shown.
+:::
 

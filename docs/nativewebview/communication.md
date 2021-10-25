@@ -105,34 +105,82 @@ communicating with the following html page:
 This is the contents of the `airbridge.js` file
 
 ```javascript
-var AirBridge = (function() {
-	var instance;
-	function createInstance() {
-		var object = new Object();
-		object.useWindowLocation = true;
-		return object;
-	}
-	
-	return {
-		setUseWindowLocation: function( $shouldUseWindowLocation ) {
-			if (!instance) {
-				instance = createInstance();
-			}
-			instance.useWindowLocation = $shouldUseWindowLocation;	
-		},
-		
-		message: function( $message ) {
-			if (!instance) {
-				instance = createInstance();
-			}
-			if (!instance.useWindowLocation) {
-				NativeWebView.airBridge( $message );
-			}
-			else {
-				window.location = "airBridge:" + $message;
-			}
-		}
-	};
+/**
+ * Air Bridge interface to communicate to actionscript through the NativeWebView ANE
+ */
+
+var AirBridge = (function () {
+  var instance;
+
+  function createInstance() {
+    var object = {};
+    object.useWindowLocation = true;
+
+    object.isWKWebView = false;
+    if (navigator.platform.substr(0, 2) === "iP") {
+      if (window.indexedDB) {
+        object.isWKWebView = window.webkit && window.webkit.messageHandlers;
+      }
+    }
+
+    object.messageStack = [];
+    object.messageStackInterval = 1; // milliseconds interval
+    object.messageInProgress = false;
+
+    object.message = function (message) {
+      object.messageStack.push(message);
+      if (!object.messageInProgress) {
+        object._checkNextMessageInStackTimeout();
+      }
+    };
+
+    object._sendMessage = function (message) {
+      object.messageInProgress = true;
+
+      try {
+        if (object.isWKWebView) {
+          window.webkit.messageHandlers.airbridge.postMessage(message);
+        } else if (!object.useWindowLocation) {
+          NativeWebView.airBridge(message);
+        } else {
+          window.location = "airBridge:" + message;
+        }
+      } catch (err) {
+        window.location = "airBridge:" + message;
+      }
+
+      setTimeout(
+        object._checkNextMessageInStackTimeout,
+        object.messageStackInterval
+      );
+    };
+
+    object._checkNextMessageInStackTimeout = function () {
+      object.messageInProgress = false;
+
+      if (object.messageStack.length) {
+        object._sendMessage(object.messageStack.shift());
+      }
+    };
+
+    return object;
+  }
+
+  return {
+    setUseWindowLocation: function (shouldUseWindowLocation) {
+      if (!instance) {
+        instance = createInstance();
+      }
+      instance.useWindowLocation = shouldUseWindowLocation;
+    },
+
+    message: function (message) {
+      if (!instance) {
+        instance = createInstance();
+      }
+      instance.message(message);
+    },
+  };
 })();
 ```
 
