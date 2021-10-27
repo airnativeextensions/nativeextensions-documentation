@@ -1,3 +1,12 @@
+###### 2021.10.27 [v3.2.0]
+
+```
+Add handling of WRITE_SETTINGS permission (resolves #20)
+Add openDirectory function for access to a file  (resolves #19)
+Add air package
+Update permissions activity security settings
+```
+
 
 
 ###### 2020.03.20 [v3.0.011]

@@ -2305,7 +2305,11 @@ module.exports = {
       "Get Started": ["permissions/add-the-extension"],
     },
     {
-      Usage: ["permissions/set-permissions", "permissions/requesting-access"],
+      Usage: [
+        "permissions/set-permissions",
+        "permissions/requesting-access", 
+        "permissions/system-settings"
+      ],
     },
     {
       Troubleshooting: ["permissions/migrating-to-androidx"],
