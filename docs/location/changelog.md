@@ -1,3 +1,9 @@
+###### 2021.11.09 [v4.3.0]
+
+```
+Add isMockLocation detection on reported location (resolves #66)
+```
+
 ###### 2021.10.07 [v4.2.20]
 
 ```

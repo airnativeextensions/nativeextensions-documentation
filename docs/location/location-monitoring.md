@@ -110,10 +110,27 @@ The extension will send a json payload to the url containing the following struc
 ```
 
 
+## Mock Locations 
 
+In some circumstances it is possible for a user to download an app and send mock locations to your application. 
 
+We can detect if the location reported is from a mock location provider by checking the `isMockLocation` property of the reported `Position`:
 
+```actionscript
+function location_updateHandler( event:LocationEvent ):void
+{
+	if (event.position.isMockLocation)
+	{
+		// This is a mock location - handle as appropriate for your application 
+	}
+}
+```
 
+If you are using the location for some specific user tracking you may find it important to ignore any mock location values.
+
+:::note
+Currently supported on Android only. iOS will always return `false` for this value
+:::
 
 
 
