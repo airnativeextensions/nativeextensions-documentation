@@ -1,3 +1,10 @@
+###### 2021.11.09 [v6.2.0]
+
+```
+Implement iOS native browse view controller on iOS 14+ (resolves #138)
+Update iOS load asset resizing process for iOS 15 changes (resolves #135)
+```
+
 ###### 2021.09.24 [v6.1.10]
 
 ```

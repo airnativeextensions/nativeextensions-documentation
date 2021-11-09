@@ -4,7 +4,6 @@ sidebar_label: Loading an Asset
 ---
 
 
-
 To load an image asset use the `loadAsset()` function passing an `Asset` reference and a constructed `AssetRequest`.
 
 To load an asset you firstly need to have retrieved an `Asset` reference from the extension. 
@@ -26,6 +25,10 @@ or
 ```actionscript
 var request:AssetRequest = new AssetRequest( 400, 400, AssetRequest.RESIZE_FILL );
 ```
+
+:::note 
+The width and height requested may not exactly be the size of the image returned. The native system may opimise the request and provide a slightly smaller image in order to improve the speed of the request. You should make sure to correctly handle the size of the returned image and not rely on the request size.
+:::
 
 
 Once you have your `Asset` and `AssetRequest` you can initiate the load:
@@ -75,38 +78,28 @@ To simplify creating requests there are some common preset requests that you may
 To use these presets simply pass the preset to the `loadAsset()` function instead of a constructed request:
 
 ```actionscript
-CameraRollExtended.service.assets.loadAsset( asset, AssetRequest.ASPECT_RATIO_THUMBNAIL );
+CameraRollExtended.service.assets.loadAsset( 
+	asset, 
+	AssetRequest.ASPECT_RATIO_THUMBNAIL
+);
 ```
 
 
+## Resize Methods 
+
+When constructing your `AssetRequest` you can pass several different values to the `setResizeMethod()` which controls how the asset will be resized to the specified width and height.
+
+- `RESIZE_NONE`: The image will not be resized and the original image data returned
+- `RESIZE_BEST_FIT`: This method will best fit the image to inside the specified width and height dimensions. The result will be smaller than or equal to the specified dimensions. No cropping will occur
+- `RESIZE_FILL_NO_CROP`: This method takes the smallest size of the image (either width or height) and makes it equal to the specified width or height value. This is very similar to the `RESIZE_BEST_FIT` method except that rather than **fitting** inside the width and height, the result will **fill** the width and height specified.
+- `RESIZE_FILL`: This method fills the specified size, scaling content to fill the entire area and cropping any content falling outside.
 
 
---- 
-
-## Deprecated API
-
-**Historical reference only - DO NOT USE this functionality anymore**
-
-Once your user has selected an asset you can then load the asset from the device. 
-Image assets can be loaded into a `BitmapData` structure using the `loadAssetByURL` function.
-
-The example below shows loading an image Asset using this method:
+Example: 
 
 ```actionscript
-var asset:Asset = ... ; // Asset retrieved via user selection (browseForAsset)
-
-if (asset.type == Asset.IMAGE)
-{
-	CameraRollExtended.service.addEventListener( CameraRollExtendedEvent.ASSET_LOADED, assetLoadedHandler );
-	CameraRollExtended.service.loadAssetByURL( asset.url, AssetRepresentation.THUMBNAIL );
-}
-
-...
-
-private function assetLoadedHandler( event:CameraRollExtendedEvent ):void
-{
-	var asset:Asset = event.assets[0];
-	var bitmap:Bitmap = new Bitmap( asset.bitmapData );
-	addChild( bitmap );
-}
+var request:AssetRequest = new AssetRequest()
+		.setResizeMethod( AssetRequest.RESIZE_FILL_NO_CROP )
+		.setWidth( 400 )
+		.setHeight( 400 );
 ```

@@ -15,8 +15,8 @@ This is not as simple as it would seem as both operating systems restrict access
 ```actionscript
 var asset:Asset = ... ; // Asset retrieved via user selection (browseForAsset)
 
-CameraRollExtended.service.addEventListener( AssetFileEvent.FILE_FOR_ASSET_COMPLETE,    assetFile_completeHandler );
-CameraRollExtended.service.addEventListener( AssetFileEvent.FILE_FOR_ASSET_ERROR,       assetFile_errorHandler );
+CameraRollExtended.service.addEventListener( AssetFileEvent.FILE_FOR_ASSET_COMPLETE, assetFile_completeHandler );
+CameraRollExtended.service.addEventListener( AssetFileEvent.FILE_FOR_ASSET_ERROR, assetFile_errorHandler );
 
 CameraRollExtended.service.getFileForAssetAsync( asset ); 
 

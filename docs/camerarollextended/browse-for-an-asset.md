@@ -44,6 +44,15 @@ function selectHandler( event:CameraRollExtendedEvent ):void
 ```
 
 
+## iOS
+
+From iOS 14, Apple provides a very functional native picker (`PHPickerViewController`) which will now be used when available. 
+
+Previous versions of iOS will use a custom UI asset picker. 
+
+The functionality in the native implementation is slightly different in that the "auto close on count reached" feature will only work when only one asset is being selected and cannot be disabled in this case. 
+
+
 ## Android
 
 With Android there are a two distinct implementations, a custom UI built to provide similar functionality as on iOS, and the native implementation.
