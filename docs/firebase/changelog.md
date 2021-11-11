@@ -1,3 +1,10 @@
+###### 2021.11.11 [v6.0.9]
+
+```
+Update Auth Facebook example with complete apm usage
+Update Auth examples and documentation for Facebook auth provider (resolves #395)
+```
+
 ###### 2021.10.22 [v6.0.8]
 
 ```

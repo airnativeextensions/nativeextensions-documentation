@@ -21,25 +21,37 @@ You can let your users authenticate with Firebase using their Facebook accounts 
 In order to sign in using Facebook you will need to integrate **Facebook Login**. You can do this using the [Facebook API](https://airnativeextensions.com/extension/com.distriqt.FacebookAPI) native extension. The following guide uses this ANE however you can use any method you currently have to attain the Facebook access token.
 
 
-Firstly, integrate Facebook in your application by following the steps outlined in the FacebookAPI ANE documentation, this includes setting up your Facebook application in the Facebook developers site and initialising the Facebook application using `FacebookAPI.service.initialiseApp()`. 
+Firstly, integrate Facebook in your application by following the steps outlined in the Facebook extension documentation, this includes setting up your Facebook application in the Facebook developers site and initialising the Facebook application using `Facebook.instance.initialise()`. 
 
-
+- [Reference](https://docs.airnativeextensions.com/docs/facebookapi/core/overview)
 
 When you are logging in your users, you must ensure that you request at least the `public_profile` and `email` permissions. 
 
 For example:
 
 ```actionscript
-var permissions:Array = [ "public_profile", FacebookPermissions.USER_EMAIL ];
+FacebookLogin.instance.addEventListener( FacebookLoginEvent.SUCCESS, successHandler );
+FacebookLogin.instance.addEventListener( FacebookLoginEvent.CANCEL, cancelHandler );
+FacebookLogin.instance.addEventListener( FacebookLoginErrorEvent.ERROR, errorHandler );
 
-FacebookAPI.service.addEventListener( FacebookAPISessionEvent.SESSION_OPENED, sessionOpenedHandler );
-				
-FacebookAPI.service.createSession( permissions, true );
+FacebookLogin.instance.logInWithReadPermissions(
+        [ "public_profile", "email" ]
+);
 
-function sessionOpenedHandler( event:FacebookAPISessionEvent ):void
+function successHandler( event:FacebookLoginEvent ):void
 {
     // Grab the access token to use for Firebase authentication
     accessToken = event.accessToken.token;
+}
+
+function cancelHandler( event:FacebookLoginEvent ):void
+{
+    // Handle as required
+}
+
+function errorHandler( event:FacebookLoginErrorEvent ):void
+{
+    // Handle as required
 }
 ```				
 
@@ -49,7 +61,7 @@ It is also useful to check if there is already a session opened for the user, in
 ```actionscript
 if (FacebookAPI.service.isSessionOpen())
 {
-    accessToken = FacebookAPI.service.getAccessToken().token;
+    accessToken = FacebookLogin.instance.getAccessToken().token;
 }
 ```
 
@@ -60,19 +72,19 @@ if (FacebookAPI.service.isSessionOpen())
 
 Once you have logged in your user into Facebook you can use the Facebook Access Token to authenticate your user with Firebase. You will use the access token to create an `AuthCredential` that you can pass to the `FirebaseAuth` `signInWithCredential` function.
 
-To create an `AuthCredential` for Facebook use the `FacebookAuthProvider.getCredential` method:
+To create an `AuthCredential` for Facebook use the `FacebookAuthProvider.getCredential()` method:
 
 ```actionscript
 var credential:AuthCredential = FacebookAuthProvider.getCredential( accessToken ); 
 ```
 
-The passs this to `signInWithCredential`
+Then pass this to `signInWithCredential()`:
 
 ```actionscript
 FirebaseAuth.service.signInWithCredential( credential );
 ```
 
-The `signInWithCredential` method will return the `FirebaseAuthEvent.SIGNIN_WITH_CREDENTIAL_COMPLETE` event.
+The `signInWithCredential()` method will return the `FirebaseAuthEvent.SIGNIN_WITH_CREDENTIAL_COMPLETE` event.
 
 For example, after acquiring the access token from Facebook:
 
@@ -121,7 +133,7 @@ user's unique user ID from the auth variable, and use it to control what data a 
 You can allow users to sign in to your app using multiple authentication providers by linking 
 auth provider credentials to an existing user account.
 
-To sign out a user, call `signOut`:
+To sign out a user, call `signOut()`:
 
 ```actionscript
 FirebaseAuth.service.signOut();
