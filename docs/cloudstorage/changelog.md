@@ -1,9 +1,14 @@
+###### 2021.11.12 [v6.0.98]
+
+```
+Unity: Corrected getKeys method on Android implementation (not supported yet)
+```
+
 ###### 2021.09.24 [v6.0.97]
 
 ```
 Added air package
 ```
-
 
 
 ###### 2021.04.06 [v6.0.095]
