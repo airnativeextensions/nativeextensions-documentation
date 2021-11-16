@@ -1,3 +1,10 @@
+###### 2021.11.16 [v13.4.0]
+
+```
+Update AdMob iOS SDK to v8.12.0
+Add AdMob iOS support for inline adaptive banner sizes (resolves #322)
+```
+
 ###### 2021.10.05 [v13.3.32]
 
 ```
