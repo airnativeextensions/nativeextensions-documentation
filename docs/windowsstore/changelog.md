@@ -1,3 +1,9 @@
+###### 2021.11.22 [v1.3.1]
+
+```
+Fix for bug with Purchase.toString function (resolves #7)
+```
+
 ###### 2021.10.12 [v1.3.0]
 
 ```
