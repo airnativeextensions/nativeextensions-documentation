@@ -1,3 +1,9 @@
+###### 2021.12.15 [v3.2.1]
+
+```
+Resolve conflict with package manager ane (resolves #21)
+```
+
 ###### 2021.10.27 [v3.2.0]
 
 ```
