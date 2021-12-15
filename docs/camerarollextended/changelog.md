@@ -1,3 +1,9 @@
+###### 2021.12.15 [v6.2.1]
+
+```
+Update air package parameter descriptions
+```
+
 ###### 2021.11.09 [v6.2.0]
 
 ```
