@@ -1,3 +1,10 @@
+###### 2021.12.15 [v10.4.4]
+
+```
+Add air package parameter descriptions
+Correct issue with legacy FcmInstanceIDService inclusion in manifest (resolves #520)
+```
+
 ###### 2021.10.18 [v10.4.3]
 
 ```

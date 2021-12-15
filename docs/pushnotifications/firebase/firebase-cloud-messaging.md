@@ -170,13 +170,8 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 				<action android:name="com.google.firebase.MESSAGING_EVENT"/>
 			</intent-filter>
 		</service>
-		<service
-			android:name="com.distriqt.extension.pushnotifications.fcm.FcmInstanceIDService"
-			android:exported="true">
-			<intent-filter>
-				<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-			</intent-filter>
-		</service>
+
+		
 		<receiver
 			android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
 			android:exported="true"
