@@ -1,3 +1,9 @@
+###### 2021.12.17 [v10.4.5]
+
+```
+Fix missing dependencies from base air package (resolves #522)
+```
+
 ###### 2021.12.15 [v10.4.4]
 
 ```
