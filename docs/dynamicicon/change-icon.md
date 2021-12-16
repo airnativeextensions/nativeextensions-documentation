@@ -25,7 +25,7 @@ Example images:
 
 | Primary | Confirmation | Alternate
 |---|---|---|
-| [images/icon_primary.png]] ](-![](images/icon_change_dialog.png) | [[images/icon_alternate.png) |
+| ![](images/icon_primary.png) | ![](images/icon_change_dialog.png) | ![](images/icon_alternate.png) |
 
 
 
