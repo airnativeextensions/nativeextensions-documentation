@@ -1,3 +1,9 @@
+###### 2021.12.21 [v6.8.2]
+
+```
+Add minimise function for Android (resolves #231)
+```
+
 ###### 2021.09.02 [v6.8.1]
 
 ```
