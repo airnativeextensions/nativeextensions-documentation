@@ -1,3 +1,9 @@
+###### 2021.12.23 [v13.4.1]
+
+```
+Update documentation and examples on manifest additions for admob (#352)
+```
+
 ###### 2021.11.16 [v13.4.0]
 
 ```
