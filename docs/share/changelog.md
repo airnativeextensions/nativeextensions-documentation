@@ -1,3 +1,9 @@
+###### 2022.01.07 [v7.1.0]
+
+```
+Add scAddress to the SMS object to specify the service center address (resolves #189)
+```
+
 ###### 2021.10.12 [v7.0.12]
 
 ```

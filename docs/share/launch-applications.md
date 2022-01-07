@@ -103,6 +103,27 @@ You should add the `LSApplicationQueriesSchemes` value to your `Info.plist`, and
 ```
 
 
+## Android 
+
+Android 11 introduces changes related to package visibility. These changes affect apps only if they target Android 11. In order for you to correctly query if an application is installed you will need to add the package names you wish to query to the manifest.
+
+
+```xml
+<queries>
+    <package android:name="PACKAGENAME" />
+</queries>
+```
+
+For example if you are querying whatsapp and instagram:
+
+```xml
+<queries>
+    <package android:name="com.whatsapp" />
+    <package android:name="com.instagram.android" />
+</queries>
+```
+
+
 
 ## Start Actvity 
 
