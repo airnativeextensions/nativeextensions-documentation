@@ -1,4 +1,11 @@
-###### 2021.10.12 [v3.0.24]
+### 2022.01.14 [v4.0.0]
+
+```
+Update to latest tesseract and support v4 of tessdata (resolves #5)
+Add documentation and example for using apm
+```
+
+### 2021.10.12 [v3.0.24]
 
 ```
 Add air package 
@@ -7,14 +14,14 @@ Remove ios minimum version flag
 
 
 
-###### 2020.03.20 [v3.0.020]
+### 2020.03.20 [v3.0.020]
 
 ```
 Android X migration (resolves #4)
 ```
 
 
-###### 2019.07.03 [v2.0.014]
+### 2019.07.03 [v2.0.014]
 
 ```
 Android 64bit support (resolves #2)
@@ -24,7 +31,7 @@ Removed application keys
 ```
 
 
-###### 2019.07.03 [v2.0.014]
+### 2019.07.03 [v2.0.014]
 
 ```
 Android 64bit support (resolves #2)
@@ -34,7 +41,7 @@ Removed application keys
 ```
 
 
-###### 2019.07.03 [v2.0.011]
+### 2019.07.03 [v2.0.011]
 
 ```
 Android 64bit support (resolves #2)
@@ -44,21 +51,21 @@ Removed application keys
 ```
 
 
-###### 2017.07.10 [v1.0.007]
+### 2017.07.10 [v1.0.007]
 
 ```
 Updated for compatibility with new Core library (for Notifications/PushNotifications fix)
 ```
 
 
-###### 2016.12.21 [v1.0.006]
+### 2016.12.21 [v1.0.006]
 
 ```
 Updated documentation
 ```
 
 
-###### 2016.12.21 [v1.0.006]
+### 2016.12.21 [v1.0.006]
 
 ```
 Updated documentation
@@ -66,14 +73,14 @@ Updated documentation
 
 
 
-###### 2016.12.21 [v1.0.006]
+### 2016.12.21 [v1.0.006]
 
 ```
 Updating docs
 ```
 
 
-###### 2016.12.21 [v1.0.006]
+### 2016.12.21 [v1.0.006]
 
 ```
 Initial Release v1.0

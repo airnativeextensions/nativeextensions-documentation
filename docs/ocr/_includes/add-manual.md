@@ -1,10 +1,10 @@
----
-title: Add the Extension
-sidebar_label: Add the Extension
----
 
-First step is always to add the extension to your development environment. 
-To do this use the tutorial located [here](/docs/tutorials/getting-started).
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
+
+
+First step is always to add the extension to your development environment. Download the extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
 
 
 
@@ -57,6 +57,25 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>androidx.core</extensionID>
 </extensions>
 ```
+
+
+
+## iOS 
+
+### Dynamic Frameworks
+
+Tesseract is based on a dynamic framework so you must include the framework in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+It should contain all the `dylib` files in the supplied `Frameworks` directory and the `TesseractOCR.framework` .
+
+Your `Frameworks` directory should at least contain:
+
+```
+TesseractOCR.framework
+```
+
 
 
 
