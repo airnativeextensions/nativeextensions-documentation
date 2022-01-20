@@ -1,27 +1,12 @@
----
-title: Add the Extension
-sidebar_label: Add the Extension
----
+
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
 
 
-First step is always to add the extension to your development environment. 
-To do this use the tutorial located [here](/docs/tutorials/getting-started).
+First step is always to add the extension to your development environment. Download the extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
 
 
-## Checking for Support
-
-You should check whether the extension is supported before making calls with the `isSupported` property.
-This allows you to react to whether the functionality is available on the device.
-
-We always implement this function to allow you to dynamically switch functionality and fallback to other methods if the extension is not supported on the current platform and version.
-
-
-```actionscript
-if (Image.isSupported)
-{
-	//	Functionality here
-}
-```
 
 
 ## Dependencies
@@ -123,7 +108,7 @@ when certain permissions are requested. If you are sharing images then there is 
 the user may select to save to their camera roll in which case the following is displayed 
 the first time your user attempts to access the camera roll.
 
-![](images/ios-permission-dialog.png)
+![](../images/ios-permission-dialog.png)
 
 There are 2 keys required here that control the text in this dialog:
 
@@ -135,5 +120,4 @@ There are 2 keys required here that control the text in this dialog:
 ```
 
 The second key was added in iOS 11.2. You should add both keys to your info additions.
-
 
