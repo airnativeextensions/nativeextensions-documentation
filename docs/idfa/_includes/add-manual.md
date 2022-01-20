@@ -1,11 +1,10 @@
----
-title: Add the Extension
-sidebar_label: Add the Extension
----
+
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
 
 
-First step is always to add the extension to your development environment. 
-To do this use the tutorial located [here](/docs/tutorials/getting-started).
+First step is always to add the extension to your development environment. Download the extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
 
 
 
@@ -120,7 +119,7 @@ You need to make sure you add the `android.permission.INTERNET` permission and t
 
 This ANE has been updated for iOS 14 and requires a minimum of the iOS 14 SDK to be linked with your application in order to have access to the iOS 14 app tracking transparency features.
 
-Make sure you provide a valid iOS 14+ SDK when packagaging. Currently you do this by packaging with the iOS SDK, see [here](/docs/tutorials/ios-sdk-custom) for more.
+Make sure you provide a valid iOS 14+ SDK when packaging. Currently you do this by packaging with the iOS SDK, see [here](/docs/tutorials/ios-sdk-custom) for more.
 
 
 

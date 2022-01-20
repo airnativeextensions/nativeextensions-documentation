@@ -46,7 +46,7 @@ switch (IDFA.service.authorisationStatus())
 
 ### Requesting Authorisation
 
-You can request user authorisation by calling the `requestAuthorisation()` function. If possible, this will present a dialog to request permission from the user.
+You can request user authorisation by calling the `requestAuthorisation()` function. If possible, this will present a dialog to request permission from the user. The text in this dialog can be customised through the "usage description" text in your info additions. (See [Add the Extension](add-the-extension) for details on setting this value).
 
 ![](images/ios_authorisation_dialog.png)
 
