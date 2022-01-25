@@ -1,11 +1,10 @@
----
-title: Add the Extension
-sidebar_label: Add the Extension
----
+
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
 
 
-First step is always to add the extension to your development environment. 
-To do this use the tutorial located [here](/docs/tutorials/getting-started).
+First step is always to add the extension to your development environment. Download the extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
 
 
 
@@ -70,7 +69,7 @@ The following should be added to your `extensions` node in your application desc
 
 ### Manifest Additions
 
-The Contacts ANE requires a few additions to the manifest to request permissions to access the user's contacts.
+The Contacts extension requires a few additions to the manifest to request permissions to access the user's contacts.
 You should add the listing below to your application descriptor.
 
 
@@ -86,9 +85,16 @@ You should add the listing below to your application descriptor.
 		<!-- Optional: Needed if you are planning to save contact images -->
 		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 		
+		<queries>
+			<intent>
+				<action android:name="android.intent.action.PICK" />
+				<data android:mimeType="*/*" />
+			</intent>
+		</queries>
+
 		<application>
-			<activity android:name="com.distriqt.extension.contacts.activities.ContactPickerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-			<activity android:name="com.distriqt.extension.contacts.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+			<activity android:name="com.distriqt.extension.contacts.activities.ContactPickerActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+			<activity android:name="com.distriqt.extension.contacts.permissions.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 		</application>
 		
 	</manifest>
@@ -129,20 +135,3 @@ This should be added to the Info Additions node :
 	</Entitlements>
 </iPhone>
 ```
-
-
-
-## Checking for Support
-
-You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
-
-This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
-
-
-```actionscript
-if (Contacts.isSupported)
-{
-	// Functionality here
-}
-```
-

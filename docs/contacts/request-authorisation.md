@@ -23,6 +23,7 @@ The following code will work across both platforms:
 ```actionscript
 Contacts.service.addEventListener( AuthorisationEvent.CHANGED, contacts_authorisationChangedHandler );
 
+
 switch (Contacts.service.authorisationStatus())
 {
 	case AuthorisationStatus.SHOULD_EXPLAIN:
@@ -42,9 +43,8 @@ switch (Contacts.service.authorisationStatus())
 		break;						
 }
 
-...
 
-private function contacts_authorisationChangedHandler( event:AuthorisationEvent ):void
+function contacts_authorisationChangedHandler( event:AuthorisationEvent ):void
 {
 	// Check event.status
 }
