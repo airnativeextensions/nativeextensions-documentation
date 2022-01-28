@@ -1,3 +1,10 @@
+### 2022.01.28 [v6.8.4]
+
+```
+Update for Android 31 exported attribute requirement
+Add docs for apm usage
+```
+
 ### 2022.01.18 [v6.8.3]
 
 ```
