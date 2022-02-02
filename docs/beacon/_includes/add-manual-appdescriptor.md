@@ -1,44 +1,5 @@
----
-title: Add the Extension
-sidebar_label: Add the Extension
----
 
-First step is always to add the extension to your development environment.
-To do this use the tutorial located [here](/docs/tutorials/getting-started).
-
-## Required ANEs
-
-### Core ANE
-
-The Core ANE is required by this ANE. You must include and package this extension in your application.
-
-The Core ANE doesn't provide any functionality in itself but provides support libraries and frameworks used by our extensions.
-It also includes some centralised code for some common actions that can cause issues if they are implemented in each individual extension.
-
-You can access this extension here: [https://github.com/distriqt/ANE-Core](https://github.com/distriqt/ANE-Core).
-
-### Android Support ANE
-
-Due to several of our ANE's using the Android Support library the library has been separated
-into a separate ANE allowing you to avoid conflicts and duplicate definitions.
-This means that you need to include the some of the android support native extensions in
-your application along with this extension.
-
-You will add these extensions as you do with any other ANE, and you need to ensure it is
-packaged with your application. There is no problems including this on all platforms,
-they are just **required** on Android.
-
-This ANE requires the following Android Support extensions:
-
-- [`androidx.core`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
-
-You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
-
-> **Note:** The Google Play Services and Android Support ANEs are only **required** on Android devices.
-> There is no problem packaging these ANEs with all platforms as there are default implementations available which will allow your code to package without errors
-> however if you are only building an iOS application feel free to remove the Google Play Services ANEs from your application.
-
-## Extension IDs
+### Extension IDs
 
 The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
 
@@ -50,9 +11,9 @@ The following should be added to your `extensions` node in your application desc
 </extensions>
 ```
 
-## Android
+### Android
 
-### Manifest Additions
+#### Manifest Additions
 
 Listening for beacons requires several permission and application additions to the Android manifest.
 You will need to add the following to your application descriptor.
@@ -68,7 +29,7 @@ You will need to add the following to your application descriptor.
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
 	<application>
-		<receiver android:name="com.distriqt.extension.beacon.services.StartupBroadcastReceiver">
+		<receiver android:name="com.distriqt.extension.beacon.services.StartupBroadcastReceiver" android:exported="false" >
 			<intent-filter>
 				<action android:name="android.intent.action.BOOT_COMPLETED"/>
 				<action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
@@ -79,20 +40,19 @@ You will need to add the following to your application descriptor.
 		<service android:name="com.distriqt.extension.beacon.services.BeaconService" android:enabled="true" android:exported="false" android:isolatedProcess="false" android:label="beacon" />
 		<service android:name="com.distriqt.extension.beacon.services.BeaconIntentProcessor" android:enabled="true" android:exported="false" />
 
-		<activity android:name="com.distriqt.extension.beacon.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<activity android:name="com.distriqt.extension.beacon.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
 	</application>
 
 </manifest>
 ```
 
-## iOS
+### iOS
 
-### InfoAdditions
+#### InfoAdditions
 
 The following additions are required to support the authorisation process introduced in iOS 8.
-You can customise the `NSLocationAlwaysUsageDescription` and `NSLocationWhenInUseUsageDescription`
-messages as you see fit to suit your application.
+You can customise the usage description messages as you see fit to suit your application. 
 
 ```xml
 <key>UIDeviceFamily</key>
@@ -127,16 +87,3 @@ If you are using the broadcasting functionality you will also need to add the bl
 ```
 
 These are not required for the NoCoreBluetooth variant of the ANE.
-
-## Checking for Support
-
-You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
-
-This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
-
-```actionscript
-if (Beacon.isSupported)
-{
-	// Functionality here
-}
-```
