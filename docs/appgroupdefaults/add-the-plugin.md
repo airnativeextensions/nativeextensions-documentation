@@ -15,7 +15,7 @@ Open the Package Manager (Window > Package Manager) in the Unity Editor and sele
 
 ## Manual Installation
 
-In unity you import the package by selecting `Assets / Import Package / Custom Package ...` and then browsing to the unity plugin package file: `com.distriqt.Share.unitypackage`.
+In unity you import the package by selecting `Assets / Import Package / Custom Package ...` and then browsing to the unity plugin package file: `com.distriqt.AppGroupDefaults.unitypackage`.
 
 ![](images/unity-import-package.png)
 
@@ -33,33 +33,21 @@ This will present the import dialog and display all the files for the plugin, ma
 The plugin will be added to your project and you can now use the plugins functionality in your application.
 
 
-### iOS Setup
+### iOS
 
-iOS requires set up of an "App Group" for your application(s).
+In unity you can add the application groups either through scripts or through the Xcode project generated from the build.
 
-Log into the developer member center and go to your application identifiers.
+To do it through Xcode simply select **Capabilities** in your project settings and enable the App Group capability. Then select your application groups you plan to use in this application. 
 
-Firstly you will need to create an App Group.
+![](images/unity-xcode-capabilities.png)
 
-- Go to [App Groups](https://developer.apple.com/account/ios/identifier/applicationGroup)
-- Click the "+" in the top right to register a new group
-- Enter a description and an identifier.
-  - The identifier is recommended to be a reverse domain style and starting with `group.`
-  - eg: `group.com.distriqt.test`
+However we suggest use the automatic configuration method by setting your values in the `/Assets/distriqt/AppGroupDefaultsUnity/AppGroupDefaults/Editor/AppGroupDefaultsConfig.cs` script.
+
+This script will be run when your application's Xcode project is built and automatically enable the app group capability and insert the app groups specified. Using this script means you won't have to update each time you build the Xcode project. See the [configuration](#configuration) information later as to how to set the group identifier in these scripts.
 
 
-Once you have created a group you need to enable it for the applications that are going to be placed in this group.
 
-- Go to [App IDs](https://developer.apple.com/account/ios/identifier/bundle)
-- Select the application of interest and click edit
-- Enable "App Groups" in the "iOS App ID Settings"
-- Click "Edit" in the "App Groups" row
-  - Select the App Group you created previously
-  - Click "Continue" and then "Assign"
 
-You will need to regenerate your provisioning profiles and download them again so make sure you do this now.
-
-Next you will need to add this group identifier to the plugin configuration for your application.
 
 
 ### Android
@@ -71,6 +59,66 @@ If you are using a custom proguard configuration you may need to add the followi
 -keep class com.distriqt.extension.appgroupdefaults.AppGroupDefaultsUnityPlugin {*;}
 ```
 :::
+
+
+#### Manifest Additions 
+
+:::note 
+For standard unity builds these additions will be automatically added to your build. 
+
+However if you manually control your manifest then you should follow the documentation below to place these additions in your custom application `AndroidManifest.xml` file. 
+::: 
+
+You should place the following in your manifests `application` tag:
+
+```xml
+<!-- For the content provider and broadcast receiver method -->
+<application>
+				
+	<meta-data android:name="app_group" android:value="[APPGROUP]" />
+	<meta-data android:name="app_authority" android:value="group.[APPID].provider" />
+	<meta-data android:name="app_authority_matcher" android:value="group\\.(?:[a-z,1-9]{1,}\\.)*provider" />
+
+	<provider
+		android:name="com.distriqt.extension.appgroupdefaults.provider.SharedProvider"
+		android:authorities="group.[APPID].provider"
+		android:exported="true" >
+	</provider>
+		
+	<receiver
+		android:name="com.distriqt.extension.appgroupdefaults.provider.SharedContentChangedReceiver"
+		android:enabled="true"
+		android:exported="true" >
+		<intent-filter>
+			<action android:name="[APPGROUP]"/>
+		</intent-filter>
+	</receiver>
+
+</application>
+```
+
+
+You should replace `[APPGROUP]` with your application group.
+This must be done in the meta-data tag and in the receiver. 
+For example: `group.com.distriqt.test`
+
+```xml
+	<meta-data android:name="app_group" android:value="group.com.distriqt.test" />
+```
+
+
+You also need to define an **application authority**, this must be different for
+each of your applications but must be matchable using the matcher. We suggest using 
+the example above replacing `[APPID]` with your application id, for example an app_authority 
+may be, `group.com.distriqt.test.app1.provider` as below:
+
+```xml
+	<meta-data android:name="app_authority" android:value="group.com.distriqt.test.app1.provider" />
+```
+
+You must place the application authority both in the meta-data tag and in the provider.
+
+
 
 
 
@@ -126,3 +174,6 @@ The `applicationAuthority` uniquely identifies this application content provider
 - `group.com.distriqt.authority.unity2.provider`
 - `group.com.distriqt.authority.unity3.provider`
 
+:::info
+If you are manually managing the manifest for your Android application make sure you set these values directly in the manifest as described above
+:::

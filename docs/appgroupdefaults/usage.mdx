@@ -3,6 +3,9 @@ title: Usage
 sidebar_label: Usage
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 ## Setup 
 
 To correctly configure the extension you will need to inform it about your group and a salt value to use for encryption.
@@ -15,7 +18,13 @@ For the group, you should use the identifier of your AppGroup setup in the iOS m
 
 This is used to identify the correct group to use on iOS and similarly on Android it's used as the name of the file containing the preferences.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 AppGroupDefaults.service.setup( 
 	"12345678", 
 	"group.com.distriqt.test", 
@@ -23,7 +32,10 @@ AppGroupDefaults.service.setup(
 );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 AppGroupDefaults.Instance.Setup( 
 	"12345678", 
 	"group.com.distriqt.test", 
@@ -31,13 +43,21 @@ AppGroupDefaults.Instance.Setup(
 );
 ```
 
+  </TabItem>
+</Tabs>
+
 
 The setup call can take a short amount of time to initialise the encryption algorithms so you should wait for the initialised event before attempting to read or write values.
 
 With AIR you listen for the `AppGroupDefaultsEvent.INITIALISED` event and with Unity add a listener to the `OnInitialised` event.
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 AppGroupDefaults.service.addEventListener( AppGroupDefaultsEvent.INITIALISED, initialisedHandler );
 AppGroupDefaults.service.setup( 
 	"12345678", 
@@ -51,8 +71,10 @@ function initialisedHandler( event:AppGroupDefaultsEvent ):void
 }
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp title="Unity"
+```csharp 
 AppGroupDefaults.Instance.OnInitialised += Instance_OnInitialised;
 AppGroupDefaults.Instance.Setup(
 	"12345678", // salt
@@ -66,18 +88,35 @@ void Instance_OnInitialised(distriqt.plugins.appgroupdefaults.events.AppGroupDef
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
 
 ## Get Values
 
 Retrieving a value is as simple as calling `getValue()` with the key of interest.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 trace( "value = " + AppGroupDefaults.service.getValue( "some_key" ) );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 Debug.Log("value = " + AppGroupDefaults.Instance.GetValue( "some_key" ));
 ```
+
+  </TabItem>
+</Tabs>
 
 
 This will return `null` if the key hasn't been set before or if you haven't called `setup` beforehand.
@@ -87,14 +126,25 @@ This will return `null` if the key hasn't been set before or if you haven't call
 
 Setting a value is likewise as simple, calling the `setValue` function.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var success:Boolean = AppGroupDefaults.service.setValue( "some_key", "some_value" );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 bool success = AppGroupDefaults.Instance.SetValue("some_key", "some_value");
 ```
 
+  </TabItem>
+</Tabs>
 
 This will return `true` if the value was set correctly and `false` if there was an issue, most likely 
 that the `setup` function hasn't been called, or if the `isSupported` flag is `false`.
@@ -107,7 +157,13 @@ set in the defaults.
 
 This allows you to list all settings currently stored in the defaults.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var keys:Array = AppGroupDefaults.service.getKeys();
 for each (var key:String in keys)
 {
@@ -116,7 +172,10 @@ for each (var key:String in keys)
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 string[] keys = AppGroupDefaults.Instance.GetKeys();
 foreach (string key in keys)
 {
@@ -125,39 +184,72 @@ foreach (string key in keys)
 }
 ```
 
+  </TabItem>
+</Tabs>
+
 ## Removing a Value
 
 If you wish to clear a value and remove it from the defaults, simply call the `remove` function with the key of interest.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 AppGroupDefaults.service.remove( "some_key" );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 AppGroupDefaults.Instance.Remove("some_key");
 ```
+
+  </TabItem>
+</Tabs>
+
 
 ## Removing All Values
 
 If you wish to remove all values from the defaults, simply call the `removeAll` function:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 AppGroupDefaults.service.removeAll();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 AppGroupDefaults.Instance.RemoveAll();
 ```
 
+  </TabItem>
+</Tabs>
 
 
-## AIR Example
+## Example
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 The following example shows the core concepts, i.e. the setup process, listening to the `AppGroupDefaultsEvent.INITIALISED` event, 
 and getting and setting values.
 
 
-```actionscript title="AIR"
+```actionscript 
 if (AppGroupDefaults.isSupported)
 {
 	AppGroupDefaults.service.addEventListener( AppGroupDefaultsEvent.INITIALISED, initialisedHandler );
@@ -179,13 +271,15 @@ function initialisedHandler( event:AppGroupDefaultsEvent ):void
 ```
 
 
-## Unity Example
+  </TabItem>
+  <TabItem value="unity" >
+
 
 The following example shows the core concepts, i.e. the setup process, listening to the `OnInitialised` event, 
 and getting and setting values.
 
 
-```csharp title="Unity"
+```csharp 
 if (AppGroupDefaults.isSupported)
 {
 	AppGroupDefaults.Instance.OnInitialised += Instance_OnInitialised;
@@ -210,3 +304,7 @@ private void Instance_OnInitialised(AppGroupDefaultsEvent e)
 ```
 
 
+
+  </TabItem>
+  
+</Tabs>

@@ -1,153 +1,31 @@
 ---
-title: Android
+title: Android Setup
 sidebar_label: Android
 ---
 
-## Android Setup
 
 There are two methods available on Android to share settings between applications.
 
 - Provider Method - uses a content provider and broadcast receiver to share variables
-- File Method - uses an encrypted file to share variables. 
-
->
-> ### Unity
-> 
-> For unity these additions will be automatically added to your build. 
->
-> However if you have a manually control your manifest then these should be placed in your custom application `AndroidManifest.xml` file. 
-> 
-
+- File Method - uses an encrypted file to share variables.  **Deprecated**
 
 
 
 ### Provider Method
 
-The provider method requires that you add several additions to the manifest. This 
-includes a content provider and a broadcast receiver, along with some permissions 
-and settings.
+This method requires that you define a string value for an `APPGROUP` or `groupIdentifier`. Similar to iOS it should be a unique string that you share between your applications, eg `group.com.distriqt.test`. The group identifier can be anything you require, generally for simplicity we suggest leaving it as the same identifier as for the iOS group. This value should be the same for every application you use inside this group.
 
-This method requires that you sign all of the applications with the same certificate.
-This is required so that the settings are secured between your applications.
+The `applicationAuthority` uniquely identifies this application content provider, while being in a specific pattern that the plugin uses to identify other providers that it can potentially synchronise with. To this end we suggest using `group.COMMON.UNIQUE.provider` as this value, replacing `COMMON` with some common value used across all your applications and `UNIQUE` with something unique for this application, for example:
 
-```xml
-<!-- For the content provider and broadcast receiver method -->
-<application>
-				
-	<meta-data android:name="app_group" android:value="[APPGROUP]" />
-	<meta-data android:name="app_authority" android:value="group.[APPID].provider" />
-	<meta-data android:name="app_authority_matcher" android:value="group\\.(?:[a-z,1-9]{1,}\\.)*provider" />
-
-	<provider
-		android:name="com.distriqt.extension.appgroupdefaults.provider.SharedProvider"
-		android:authorities="group.[APPID].provider"
-		android:exported="true" >
-	</provider>
-		
-	<receiver
-		android:name="com.distriqt.extension.appgroupdefaults.provider.SharedContentChangedReceiver"
-		android:enabled="true"
-		android:exported="true" >
-		<intent-filter>
-			<action android:name="[APPGROUP]"/>
-		</intent-filter>
-	</receiver>
-
-</application>
-```
+- `group.com.distriqt.authority.unity1.provider`
+- `group.com.distriqt.authority.unity2.provider`
+- `group.com.distriqt.authority.unity3.provider`
 
 
-You should replace `[APPGROUP]` with your application group.
-This must be done in the meta-data tag and in the receiver. 
-For example: `group.com.distriqt.test`
-
-```xml
-	<meta-data android:name="app_group" android:value="group.com.distriqt.test" />
-```
-
-
-You also need to define an **application authority**, this must be different for
-each of your applications but must be matchable using the matcher. We suggest using 
-the example above replacing `[APPID]` with your application id, for example an app_authority 
-may be, `group.com.distriqt.test.app1.provider` as below:
-
-```xml
-	<meta-data android:name="app_authority" android:value="group.com.distriqt.test.app1.provider" />
-```
-
-You must place the application authority both in the meta-data tag and in the provider.
+You then place this information in your configuration for you platform or directly in the manifest depending on how you have setup your application. 
 
 
 
-
-
-### File Method
-
-
-The default is the provider method however if you wish to use the shared file method you 
-can specify the type in the `setup` call:
-
-```actionscript title="AIR"
-AppGroupDefaults.service.setup( 
-	"12345678", 
-	"group.com.distriqt.test", 
-	AppGroupDefaults.TYPE_FILE 
-);
-```
-
-```csharp title="Unity"
-AppGroupDefaults.Instance.Setup( 
-	"12345678", // salt
-	"group.com.distriqt.test", // app group identifier
-	AppGroupDefaults.TYPE_FILE // Android type
-);
-```
-
-
-This method writes to a public file with the content encrypted.
-
-This requires read / write permissions to the external storage:
-
-```xml
-<android>
-	<manifestAdditions><![CDATA[
-		<manifest android:installLocation="auto">
-			<uses-permission android:name="android.permission.INTERNET"/>
-			
-			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-		</manifest>
-	]]></manifestAdditions>
-</android>
-```
-
->
-> With recent versions of Android you will need to request runtime permissions to access the storage.
->
-> With AIR you can use the Permissions ANE to request the permissions at runtime.
->
-> ```actionscript title="AIR"
-> Permissions.service.setPermissions( [
-> 		"android.permission.READ_EXTERNAL_STORAGE",
-> 		"android.permission.WRITE_EXTERNAL_STORAGE"
-> 		]);
-> 
-> if (!Permissions.service.hasAuthorisation())
-> 	Permissions.service.requestAuthorisation();
-> ```
->
->
-> Unity you can use the  `UnityEngine.Android.Permission` helper class to request permissions.
-> 
-> ```csharp title="Unity"
-> if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite) 
->     || !Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead))
-> {
-> 	Permission.RequestUserPermission(Permission.ExternalStorageWrite);
-> 	Permission.RequestUserPermission(Permission.ExternalStorageRead);
-> }
-> ```
->
 
 
 

@@ -165,10 +165,14 @@ module.exports = {
 		{ type: "doc", id: "appgroupdefaults/index" },
 		{
 			"Get Started": [
+				{
+					type: "category",
+					label: "Setup",
+					collapsed: false,
+					items: ["appgroupdefaults/ios", "appgroupdefaults/android"],
+				},
 				"appgroupdefaults/add-the-extension",
 				"appgroupdefaults/add-the-plugin",
-				"appgroupdefaults/ios",
-				"appgroupdefaults/android",
 			],
 		},
 		{
@@ -2086,10 +2090,10 @@ module.exports = {
 		{ type: "ref", id: "index" },
 		{ type: "doc", id: "ocr/index" },
 		{
-			"Get Started": [ "ocr/add-the-extension", "ocr/training-data"],
+			"Get Started": ["ocr/add-the-extension", "ocr/training-data"],
 		},
 		{
-			Usage: ["ocr/recognising-text",  "ocr/tips-for-improving-ocr-results"],
+			Usage: ["ocr/recognising-text", "ocr/tips-for-improving-ocr-results"],
 		},
 		{
 			Troubleshooting: ["ocr/migrating-to-androidx"],
