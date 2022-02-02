@@ -48,10 +48,25 @@ switch (BluetoothLE.service.authorisationStatus())
 		break;
 }
 
-...
 
-private function authorisationChangedHandler( event:AuthorisationEvent ):void
+function authorisationChangedHandler( event:AuthorisationEvent ):void
 {
 	// Authorisation status has now changed
 }
 ```
+
+
+
+## Usage Description
+
+You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
+
+The image below is an example of the authorisation dialog. The content *"Access to photo library is required to save images."* is the usage description message you can set.
+
+![](images/ios-permission-dialog.png)
+
+You set these values through adding the usage description keys to your info additions or simply by setting up your configuration options in your `apm` project. 
+
+
+
+

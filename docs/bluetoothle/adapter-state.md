@@ -34,9 +34,8 @@ switch (BluetoothLE.service.state)
 		// All of these indicate the Bluetooth LE is not available
 }
 
-...
 
-private function stateChangedHandler( event:BluetoothLEEvent ):void
+function stateChangedHandler( event:BluetoothLEEvent ):void
 {
 	trace( "stateChangedHandler(): "+BluetoothLE.service.state );
 }
