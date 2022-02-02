@@ -3,6 +3,10 @@ title: Application Rate Dialog
 sidebar_label: Application Rate Dialog
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
 With this extension you can ask users of your application to return to the application stores and rate your application. 
 
 You must be careful to set the limits in this extension to be appropriate to your users, not to
@@ -37,17 +41,33 @@ application ID and correctly set that in the `setApplicationId()` call (see the 
 section).
 
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.setApplicationId( 
-  "XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
+	"XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS );
 ApplicationRater.service.applicationLaunched();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 ApplicationRater.Instance.SetApplicationId(
 	"XXXXXXXXX", ApplicationRater.IMPLEMENTATION_IOS);
 ApplicationRater.Instance.ApplicationLaunched();
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
 
 
 The `applicationLaunched()` function should be called when your application launches, after your application has initialised. It will increment the launch count and if `autoPrompt` is set will cause the rate dialog to be displayed if the conditions are met.
@@ -60,13 +80,31 @@ By default the extension will automatically prompt the user when the conditions 
 
 If you wish to disable this, you do so by setting `autoPrompt` to be `false`:
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.autoPrompt = false;
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 ApplicationRater.Instance.autoPrompt = false;
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
+
 
 
 When disabled you are responsible for displaying the dialog as in the section below.
@@ -80,19 +118,34 @@ called and the conditions have been met.
 
 Alternatively if you wish to control when to display the dialog you can set `autoPrompt` to be false and instead query the `hasMetConditions()` function, calling `showRateDialog()` if appropriate. Eg:
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 if (ApplicationRater.service.hasMetConditions())
 {
 	ApplicationRater.service.showRateDialog();
 } 
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 if (ApplicationRater.Instance.HasMetConditions())
 {
 	ApplicationRater.Instance.ShowRateDialog();
 } 
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 
 ### iOS
@@ -117,14 +170,28 @@ To set the number of application launches that will trigger the dialog you use t
 For example:
 
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.setLaunchesUntilPrompt( 10 );
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp title="Unity"
+```csharp 
 ApplicationRater.Instance.SetLaunchesUntilPrompt( 10 );
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
 
 Each time `applicationLaunched` is called, the internal count will be incremented and compared against this value. 
 
@@ -141,25 +208,52 @@ function.
 
 For example, to set it to be 2 weeks after initial launch:
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.setDaysUntilPrompt( 14 );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 ApplicationRater.Instance.SetDaysUntilPrompt( 14 );
 ```
+
+  </TabItem>
+</Tabs>
+
 
 If you wish to disable the number of days condition and rely on the other conditions (eg, application launches 
 or significant user events) you should set this value to `-1`:
 
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.setDaysUntilPrompt( -1 );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 ApplicationRater.Instance.SetDaysUntilPrompt( -1 );
 ```
+
+  </TabItem>
+</Tabs>
+
 
 The default value is `5`.
 
@@ -174,23 +268,55 @@ You can change the value of the number of events until prompt by using the `setS
 
 For example, to set the condition that after 5 events the dialog should be displayed:
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.setSignificantEventsUntilPrompt( 5 );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 ApplicationRater.Instance.SetSignificantEventsUntilPrompt( 5 );
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
+
+
 When you wish to log a significant event, simply call:
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.userDidSignificantEvent();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 ApplicationRater.Instance.UserDidSignificantEvent();
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 
 ### Require All Conditions
@@ -212,8 +338,6 @@ For example, if you call `setDaysUntilPrompt( 5 )`, setting the days until promp
 
 
 
-
-
 ### Reminder Period
 
 If a user presses the "Remind me later" button then the interval until the user is presented with
@@ -222,13 +346,31 @@ of days and is from the date that the user pressed the "Remind me later" button.
 
 For example, to remind a user one week later, set this value to 7:
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.setTimeBeforeReminding( 7 );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 ApplicationRater.Instance.SetTimeBeforeReminding( 7 );
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
+
 
 
 

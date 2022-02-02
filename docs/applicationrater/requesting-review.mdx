@@ -3,6 +3,9 @@ title: Requesting Review
 sidebar_label: Requesting Review
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 If you don't wish to use the rate dialog you can use this extension to simply open the appropriate store page for your user to review your application. 
 
 You should still set the application id by one of the methods described in the [Application ID](application-id) section.
@@ -10,10 +13,24 @@ You should still set the application id by one of the methods described in the [
 Once you have set the application id you can call `rate()` to direct the user to the appropriate place for them to rate and review your application.
 
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 ApplicationRater.service.rate();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp
 ApplicationRater.Instance.Rate();
 ```
+
+  </TabItem>
+</Tabs>
+
+

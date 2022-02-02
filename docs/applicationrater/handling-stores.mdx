@@ -3,6 +3,11 @@ title: Handling Stores
 sidebar_label: Handling Stores
 ---
 
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
 ## Retrieving the Store
 
 You can retrieve the store that the application was installed through by using the `getInstallerStore()` function.
@@ -17,19 +22,37 @@ This function will attempt to determine which store the application was installe
 
 Example:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var store:String = ApplicationRater.service.getInstallerStore();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp
 string store = ApplicationRater.Instance.GetInstallerStore();
 ```
+
+  </TabItem>
+</Tabs>
 
 You can then use this value to set the appropriate application id if you use different application id's in different stores.
 
 For example, say we have `air.com.distriqt.test` in the Google Play Store and `air.com.distriqt.amazon` in the Amazon store:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var store:String = ApplicationRater.service.getInstallerStore();
 switch (store)
 {
@@ -45,7 +68,10 @@ switch (store)
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp
 string store = ApplicationRater.Instance.GetInstallerStore();
 switch (store)
 {
@@ -61,7 +87,6 @@ switch (store)
 }
 ```
 
-
-
-
+  </TabItem>
+</Tabs>
 

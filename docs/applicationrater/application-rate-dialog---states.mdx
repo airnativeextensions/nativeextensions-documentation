@@ -4,6 +4,9 @@ sidebar_label: Application Rate Dialog - States
 ---
 
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 There are several states that the service can be in:
 
 - `ApplicationRater.STATE_MONITORING` : monitoring the system for conditions to display the rate dialog
@@ -15,13 +18,26 @@ There are several states that the service can be in:
 
 You can access the current state by calling, `state` :
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var state:String = ApplicationRater.service.state;
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 string state = ApplicationRater.Instance.state;
 ```
+
+  </TabItem>
+</Tabs>
 
 
 The particular states control how the `hasMetConditions` function processes the conditions and 
