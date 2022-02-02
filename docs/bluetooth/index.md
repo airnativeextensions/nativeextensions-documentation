@@ -51,8 +51,7 @@ This extension is supported on the following platforms:
 
 ## Documentation
 
-The Wiki forms the best source of detailed documentation for the extension along 
-with the [asdocs](https://docs.airnativeextensions.com/asdocs/bluetooth). 
+The [documentation site](https://docs.airnativeextensions.com/docs/bluetooth) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/bluetooth). 
 
 
 More information here: 
