@@ -18,8 +18,3 @@ You should backup your application descriptor before running this command to ens
 If you need to insert custom data into these sections see the guides for [Android](https://github.com/airsdk/apm/wiki/Usage-Generate#android) and [iOS](https://github.com/airsdk/apm/wiki/Usage-Generate#ios)
 :::
 
-
-
-:::note 
-`apm` does not support the legacy file provider method without some additional configuration. If you need to use this legacy method please contact our support and we will guide you through the usage.
-::: 
