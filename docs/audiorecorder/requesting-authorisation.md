@@ -11,6 +11,7 @@ On Android these permissions are listed through the manifest additions.
 On older versions of Android these permissions are accepted when the user installs the application. 
 More modern versions (Marshmallow 6 [v23]+) require that you request the permissions similar to iOS. 
 You will still need to list them in your manifest and then follow the same code below as for iOS, except that on Android you will be able to ask multiple times. 
+
 You should respect the `SHOULD_EXPLAIN` status by displaying additional information to your user about why you require this functionality.
 
 
@@ -35,10 +36,8 @@ switch (AudioRecorder.service.authorisationStatus())
 		// AUTHORISED: Microphone will be available
 		break;						
 }
-```
 
-```actionscript
-private function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
+function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
 {
 	trace( "authorisationStatus_changedHandler: "+event.status );
 }
