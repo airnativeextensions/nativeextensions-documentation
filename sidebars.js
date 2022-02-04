@@ -661,7 +661,11 @@ module.exports = {
 			"Get Started": ["compass/add-the-extension"],
 		},
 		{
-			Usage: ["compass/heading", "compass/magnetic-field-sensor"],
+			Usage: [
+				"compass/heading", 
+				"compass/request-authorisation", 
+				"compass/magnetic-field-sensor"
+			],
 		},
 		{
 			Other: [

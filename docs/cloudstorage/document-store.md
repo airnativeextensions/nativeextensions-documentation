@@ -5,7 +5,7 @@ sidebar_label: Document Store
 
 
 Make sure you have added the entitlements to your application descriptor before attempting to 
-use the document store. See the section: [Add the Extension](add-the-extension.md).
+use the document store. See the section: [Add the Extension](add-the-extension.mdx).
 
 > 
 > Note: **Document storage is not supported on Apple's tvOS or through the Unity plugin**

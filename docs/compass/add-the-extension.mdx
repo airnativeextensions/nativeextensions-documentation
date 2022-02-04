@@ -1,0 +1,152 @@
+---
+title: Add the Extension
+sidebar_label: Add the Extension
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.md'
+import InstallManual from './_includes/add-manual.md'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.md'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.md'
+
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+## Install
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+## True Heading
+
+On iOS you can access the "true heading" rather than the magnetic heading.
+
+If you are going to be accessing the "true heading" you must add some additional configuration values to your application.
+
+If not, or you are only interested in Android, you can skip this section.
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+Firstly add a custom iOS configuration file by running:
+
+```
+apm generate config ios
+```
+
+Edit the `config/ios/InfoAdditions.xml` file that was generated to resemble the following:
+```xml
+<plist version="1.0">
+    <dict>
+
+			<key>NSLocationUsageDescription</key>
+			<string>${locationUsageDescription}</string>
+			<key>NSLocationWhenInUseUsageDescription</key>
+			<string>${locationWhenInUseUsageDescription}</string>
+			<key>NSLocationAlwaysUsageDescription</key>
+			<string>${locationAlwaysUsageDescription}</string>
+			<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+			<string>${locationAlwaysAndWhenInUseUsageDescription}</string> 
+
+    </dict>
+</plist>
+```
+
+> The values, eg `locationUsageDescription`, will get inserted from your apm project configuration.
+
+Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
+
+  </TabItem>
+  <TabItem value="manual" >
+
+You must add the following usage descriptions to your application otherwise your application may crash on launch or when attempting to access the compass functionality. These must be added to the `InfoAdditions` node in your application descriptor.
+
+```xml
+<key>NSLocationUsageDescription</key>
+<string>This application would like to use your location.</string>
+
+<!-- iOS 8 + -->
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This application would like to use your location when in use.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>This application would like to use your location in the background.</string>
+
+<!-- iOS 11 + -->
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>This application would like to use your location in the background and the foreground.</string>
+```
+
+
+  </TabItem>
+  
+</Tabs>
+
+
+You can adjust the usage description strings as you need. See [request authorisation](request-authorisation.md) for more.
+
+
+
+## Checking for Support
+
+You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
+
+This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
+
+
+```actionscript
+if (Compass.isSupported)
+{
+	// Functionality here
+}
+```
+
+
+
