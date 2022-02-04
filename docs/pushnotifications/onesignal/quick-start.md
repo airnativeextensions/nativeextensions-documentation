@@ -5,7 +5,7 @@ sidebar_label: Quick Start
 
 - [Setup OneSignal Account](https://onesignal.com)
   - Get your App ID: [Keys & IDs](https://documentation.onesignal.com/docs/accounts-and-keys#section-app-id)
-- [Add Required ANEs](onesignal#required-anes)
+- [Add Required ANEs](onesignal.md#required-anes)
   - `com.distriqt.Core`
   - `com.distriqt.playservices.Base`
   - `com.distriqt.playservices.AdsIdentifier`
@@ -26,9 +26,9 @@ sidebar_label: Quick Start
   - `com.jetbrains.kotlin`
 - Use AIR 33+
 - iOS
-  - [Info Additions and Entitlements](onesignal#info-additions-and-entitlements)
+  - [Info Additions and Entitlements](onesignal.md#info-additions-and-entitlements)
 - Android
-  - [Manifest Additions](onesignal#manifest-additions)
+  - [Manifest Additions](onesignal.md#manifest-additions)
 
 ## Setup the Extension and Service
 

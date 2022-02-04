@@ -11,7 +11,7 @@ sidebar_label: Soft Keyboard
 This functionality is a native implementation for getting access to the keyboard size and activation events.
 
 >
-> **In order to use this functionality on Android you must use this extension to set a [display mode](display). If you don't set a display mode through this extension then the keyboard information may not be correct.**
+> **In order to use this functionality on Android you must use this extension to set a [display mode](display.md). If you don't set a display mode through this extension then the keyboard information may not be correct.**
 >
 > ```actionscript
 > Application.service.display.setDisplayMode( DisplayMode.FULLSCREEN );

@@ -26,7 +26,7 @@ This means you will need to add the Firebase dependencies to your application an
 
 
 - Add the Firebase core ANE: [com.google.firebase.core.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane)
-- Add the Firebase core [manifest additions](onesignal#manifest-additions) 
+- Add the Firebase core [manifest additions](onesignal.md#manifest-additions) 
 - Ensure you are using a Firebase server key in your OneSignal configuration: https://documentation.onesignal.com/docs/firebase-cloud-messaging-fcm
 
 

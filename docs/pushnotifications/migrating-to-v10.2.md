@@ -9,7 +9,7 @@ v10.2 brings the latest release of OneSignal:
 - Android v4.1.0
 - iOS v3.1.1
 
-If you are updating from a version < 10 make sure you check out the changes for Firebase Cloud Messaging as well in the [Migrating to v10.1](migrating-to-v10.1)
+If you are updating from a version < 10 make sure you check out the changes for Firebase Cloud Messaging as well in the [Migrating to v10.1](migrating-to-v10.1.md)
 
 
 We have managed to hide any major implementation changes within the native code however there are some changes to the [dependencies](#update-dependencies), to the [manifest additions](#update-manifest-additions) and to the [payload data structure](#payload).
@@ -99,7 +99,7 @@ You need to ensure you have the following extensions in your application. There 
 - `androidx.work`
 - `com.jetbrains.kotlin`
 
-See [Add Required ANEs](onesignal/onesignal#required-anes) for more information.
+See [Add Required ANEs](onesignal/onesignal.md#required-anes) for more information.
 
 
 
@@ -355,6 +355,6 @@ You must replace `APPLICATION_PACKAGE` with your AIR application's Java package 
 ```
 
 
-For more information see the detail in the [Manifest Additions](onesignal/onesignal#manifest-additions) section.
+For more information see the detail in the [Manifest Additions](onesignal/onesignal.md#manifest-additions) section.
 
 

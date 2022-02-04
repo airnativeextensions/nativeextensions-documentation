@@ -3,6 +3,7 @@ module.exports = {
 	tagline: "Documentation for distriqt's Native Extensions",
 	url: "https://docs.airnativeextensions.com",
 	baseUrl: "/",
+	// trailingSlash: true,
 	onBrokenLinks: "throw",
 	favicon: "img/favicon.ico",
 	organizationName: "airnativeextensions", // Usually your GitHub org/user name.

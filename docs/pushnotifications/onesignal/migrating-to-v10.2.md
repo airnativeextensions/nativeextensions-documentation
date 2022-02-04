@@ -34,7 +34,7 @@ You need to ensure you have the following extensions in your application. There 
 - `androidx.work`
 - `com.jetbrains.kotlin`
 
-See [Add Required ANEs](onesignal#required-anes) for more information.
+See [Add Required ANEs](onesignal.md#required-anes) for more information.
 
 
 
@@ -290,6 +290,6 @@ You must replace `APPLICATION_PACKAGE` with your AIR application's Java package 
 ```
 
 
-For more information see the detail in the [Manifest Additions](onesignal#manifest-additions) section.
+For more information see the detail in the [Manifest Additions](onesignal.md#manifest-additions) section.
 
 
