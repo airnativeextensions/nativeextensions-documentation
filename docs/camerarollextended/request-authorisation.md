@@ -63,6 +63,22 @@ function authorisationChangedHandler( event:AuthorisationEvent ):void
 ```
 
 
+
+## Usage Description
+
+You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
+
+The image below is an example of the authorisation dialog. The content *"Access to photo library is required to save images."* is the usage description message you can set.
+
+![](images/ios-permission-dialog.png)
+
+You set these values through adding the usage description keys to your info additions or simply by setting up your configuration options in your `apm` project. 
+
+The text is controlled via the `NSPhotoLibraryUsageDescription` and `NSPhotoLibraryAddUsageDescription` keys or their equivalent `apm` config parameters. 
+
+
+
+
 ## Device Settings
 
 If your user has denied permission you can direct them to the device application settings to change them, particularly in the iOS case where you cannot force the request dialog to appear again.

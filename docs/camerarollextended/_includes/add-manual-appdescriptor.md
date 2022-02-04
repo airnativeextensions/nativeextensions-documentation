@@ -1,0 +1,78 @@
+
+## Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.CameraRollExtended</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>androidx.appcompat</extensionID>
+    <extensionID>androidx.exifinterface</extensionID>
+	<extensionID>com.distriqt.square.okhttp3</extensionID>
+    <extensionID>com.distriqt.square.picasso</extensionID>
+</extensions>
+```
+
+
+## Android 
+
+### Manifest Additions
+
+The Camera Roll Extended ANE requires a few additions to the manifest to be able to start certain activities 
+and get access to the users media. You should add the listing below to your manifest.
+
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS"/>
+
+	<!-- OPTIONAL: Only add this one if you want to add to the camera roll -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+	<application>
+		
+		<activity android:name="com.distriqt.extension.camerarollextended.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+		<activity android:name="com.distriqt.extension.camerarollextended.activities.MultiImagePickerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|screenSize" android:exported="false" />
+		<activity android:name="com.distriqt.extension.camerarollextended.activities.SelectorActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|screenSize" android:exported="false" />
+		
+	</application>
+</manifest>
+```
+
+
+## iOS 
+
+### Info Additions
+
+The following additions are for the `InfoAdditions` node of the iPhone section in your application descriptor:
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+
+		HERE
+
+	]]></InfoAdditions>
+</iPhone>
+```
+
+If you are using iOS 10 you now need to add some strings to display messages to the user 
+when certain permissions are requested. If you are sharing images then there is a chance 
+the user may select to save to their camera roll in which case a dialog is displayed 
+the first time your user attempts to access the camera roll.
+
+There are 2 keys required here that control the text in this dialog:
+
+```xml
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Access to photo library is required to save images.</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Access to photo library is required to save images.</string>
+```
+
+The second key was added in iOS 11.2. You should add both keys to your info additions.
+
