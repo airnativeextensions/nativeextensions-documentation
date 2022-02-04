@@ -1,4 +1,8 @@
-built by [distriqt //](https://airnativeextensions.com) 
+---
+title: Debug
+hide_title: true
+slug: /debug
+---
 
 ![](images/hero.png)
 

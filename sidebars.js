@@ -716,6 +716,14 @@ module.exports = {
 		},
 	],
 
+	debug: [
+		{ type: "ref", id: "index" },
+		{ type: "doc", id: "debug/index" },
+		{
+			"Get Started": ["debug/add-the-extension"],
+		},
+	],
+
 	devicemotion: [
 		{ type: "ref", id: "index" },
 		{ type: "doc", id: "devicemotion/index" },
