@@ -41,10 +41,9 @@ switch (CameraUI.service.authorisationStatus())
 		// AUTHORISED: Camera will be available
 		break;						
 }
-```
 
-```actionscript
-private function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
+
+function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
 {
 	trace( "authorisationStatus_changedHandler: "+event.status );
 }
@@ -78,6 +77,35 @@ If however you added this permission to your manifest, Android requires that you
 for permission otherwise will deny this offloading. Hence if you add it to your manifest 
 you will get an extra permission request dialog when requesting permissions. If you don't add
 it then you will only get the dialog for write permissions to save files appropriately.
+
+
+
+## Usage Description
+
+You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
+
+The image below is an example of the authorisation dialog. The content *"Access storage"* is the usage description message you can set.
+
+![](images/ios-permission-dialog-photos.png)
+
+You set these values through adding the usage description keys to your info additions or simply by setting up your configuration options in your `apm` project. 
+
+
+The most important string is the camera usage description 
+
+![](images/ios-permission-dialog-camera.png)
+
+Set the `NSCameraUsageDescription` key or equivalent `apm` config parameter to set this text.
+
+To be able to record audio along with your video you will need to add the microphone usage description key `NSMicrophoneUsageDescription` (or equivalent `apm` config parameter).
+
+If you are saving images to the camera roll the following dialog will be displayed the first time you attempt to save a captured image to the camera roll:
+
+![](images/ios-permission-dialog-photos.png)
+
+There are 2 keys required here that control the text in this dialog, `NSPhotoLibraryUsageDescription` and `NSPhotoLibraryAddUsageDescription` (and equivalent `apm` config parameters). The second key was added in iOS 11.2. You should add both keys to your info additions.
+
+
 
 
 
