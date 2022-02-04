@@ -15,6 +15,8 @@ The simplest way to install and manage your AIR native extensions and libraries 
 
 However you can choose to install it manually, as you would have done in the past. 
 
+## Install
+
 <Tabs
   groupId="packagemanager"
   defaultValue="apm"
@@ -28,6 +30,26 @@ However you can choose to install it manually, as you would have done in the pas
   </TabItem>
   <TabItem value="manual" >
 	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
   </TabItem>
   
 </Tabs>

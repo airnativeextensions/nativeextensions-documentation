@@ -63,35 +63,14 @@ Once complete `apm` will have created something like the following file structur
 
 - Add the `ane` directory to your IDE. *See the tutorials located [here](/docs/tutorials/getting-started) on adding an extension to your IDE.*
 
-- For iOS you will need to set the usage description for the contacts authorisation dialog. You can leave them as the defaults if you wish. Call the following to step through the configuration values for this extension:
-
-```
-apm project config set com.distriqt.Contacts
-```
-
-
 :::info
 We suggest you use the locations directly in your builds rather than copying the files elsewhere. The reason for this is if you ever go to update the extensions using `apm` that these updates will be pulled into your build automatically.
 :::
 
 
-### Update your application descriptor
-
-Updating your application descriptor will insert the required `extensionID`'s and generate the manifest and info additions for your application. 
-
-You update your application descriptor by running:
+- For iOS you will need to set the usage description for the contacts authorisation dialog. You can leave them as the defaults if you wish. Call the following to step through the configuration values for this extension:
 
 ```
-apm generate app-descriptor src/MyApp-app.xml
+apm project config set com.distriqt.Contacts
 ```
-
-Change the path (`src/MyApp-app.xml`) to point to your application descriptor.
-
-:::caution
-This will modify your application descriptor replacing the manifest additions and info additions with the ones generated from `apm`. 
-
-You should backup your application descriptor before running this command to ensure you don't lose any information.
-
-If you need to insert custom data into these sections see the guides for [Android](https://github.com/airsdk/apm/wiki/Usage-Generate#android) and [iOS](https://github.com/airsdk/apm/wiki/Usage-Generate#ios)
-:::
 
