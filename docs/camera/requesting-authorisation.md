@@ -13,8 +13,7 @@ More modern versions (Marshmallow 6 [v23]+) require that you request the permiss
 You will still need to list them in your manifest and then follow the same code below as for iOS, except that on Android you will be able to ask multiple times. 
 You should respect the `SHOULD_EXPLAIN` status by displaying additional information to your user about why you require this functionality.
 
-On iOS the user must be asked at runtime, which you only get one chance to ask, 
-after which you must direct the user to manually change the permissions in the settings.
+On iOS the user must be asked at runtime, which you only get one chance to ask, after which you must direct the user to manually change the permissions in the settings.
 
 The following code will work across both platforms:
 
@@ -40,15 +39,12 @@ switch (Camera.instance.authorisationStatus())
 		// AUTHORISED: Camera will be available
 		break;						
 }
-```
 
-```actionscript
-private function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
+function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
 {
 	trace( "authorisationStatus_changedHandler: "+event.status );
 }
 ```
-
 
 
 ### Authorisation Types
@@ -62,6 +58,30 @@ as appropriate for your application:
 
 You will need to run through the above process for each of the permissions your application 
 requires!
+
+
+
+## Usage Description
+
+You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
+
+The image below is an example of the authorisation dialog. The content *"Require Camera"* is the usage description message you can set.
+
+![](images/ios-permission-dialog-camera.png)
+
+You set these values through adding the usage description keys to your info additions or simply by setting up your configuration options in your `apm` project. 
+
+
+The most important string is the camera usage description which is controlled via the `NSCameraUsageDescription` key or the matching `apm` config parameter.
+
+If you are saving images to the camera roll the following dialog will be displayed the first time you attempt to save a captured image to the camera roll:
+
+![](images/ios-permission-dialog-photos.png)
+
+There are 2 keys required here that control the text in this dialog, `NSPhotoLibraryUsageDescription` and `NSPhotoLibraryAddUsageDescription` (and equivalent `apm` config parameters). The second key was added in iOS 11.2. You should add both keys to your info additions and they can be set to the same content if you wish.
+
+
+
 
 
 
@@ -82,6 +102,3 @@ if (Camera.instance.canOpenDeviceSettings)
 	Camera.instance.openDeviceSettings();
 }
 ```
-
-
-

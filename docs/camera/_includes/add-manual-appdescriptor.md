@@ -1,0 +1,82 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.Camera</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+</extensions>
+```
+
+### Android
+
+#### Manifest Additions
+
+The following additions must be added to your applications manifest additions.
+
+```xml
+<manifestAdditions><![CDATA[
+	<manifest android:installLocation="auto">
+		<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="31"/>
+
+		<uses-permission android:name="android.permission.INTERNET"/>
+
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+		<uses-permission android:name="android.permission.CAMERA"/>
+		<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+		<!-- Add this if your application requires a Camera -->
+		<uses-feature android:name="android.hardware.camera" />
+
+		<application>
+			<activity 	android:name="com.distriqt.extension.camera.permissions.AuthorisationActivity"
+						android:theme="@android:style/Theme.Translucent.NoTitleBar"
+						android:exported="false" />
+		</application>
+
+	</manifest>
+]]></manifestAdditions>
+```
+
+### iOS
+
+#### Info Additions
+
+The following additions are for the `InfoAdditions` node of the iPhone section in your application descriptor:
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+
+		HERE
+
+	]]></InfoAdditions>
+</iPhone>
+```
+
+If you are using iOS 10 you now need to add some strings to display messages to the user when certain permissions are requested.
+
+The most important string is the camera usage description which will get displayed during the request authorisation process (later).
+The key that controls the text in this dialog is:
+
+```xml
+	<key>NSCameraUsageDescription</key>
+	<string>Require Camera</string>
+```
+
+If you are saving images to the camera roll another dialog will be displayed the first time you attempt to save a captured image to the camera roll.
+There are 2 keys required here that control the text in this dialog:
+
+```xml
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access to photo library is required to save images.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Access to photo library is required to save images.</string>
+```
+
+The second key was added in iOS 11.2. You should add both keys to your info additions.
+
+For more on authorisation see the documentation on [requesting authorisation](requesting-authorisation).
