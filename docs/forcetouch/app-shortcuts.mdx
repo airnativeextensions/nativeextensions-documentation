@@ -3,6 +3,9 @@ title: App Shortcuts
 sidebar_label: App Shortcuts
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 ![](images/shortcuts.png)
 
 ## Application Shortcuts
@@ -139,15 +142,35 @@ If your application wasn't running, it will be launched and brought to the foreg
 
 This event will be dispatched after the first time you call `addEventListener()` for the `SHORTCUT_SELECTED` event, so you should be prepared to handle this event as soon as you add the listener.
 
-## iOS
+## Static Shortcuts
 
-### Adding Static Shortcuts
+### iOS 
 
-The ForceTouch ANE supports static shortcut items, which can be added directly to your app descriptor.
-If included, these items are always present in the shortcut menu for your app.
+The ForceTouch extension supports static shortcut items on iOS.  If included, these items are always present in the shortcut menu for your app.
 
-To add static shortcuts you must modify your application descriptor and add the details
-of your short cuts to the iPhone Info Additions.
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+Firstly add a custom iOS configuration file by running:
+
+```
+apm generate config ios
+```
+
+Edit the `config/ios/InfoAdditions.xml` file that was generated add the content below as required.
+
+  </TabItem>
+  <TabItem value="manual" >
+
+To add static shortcuts you must modify your application descriptor and add the details of your short cuts to the iPhone Info Additions.
 
 These additions go into your application descriptor inside the iPhone / InfoAdditions node:
 
@@ -158,6 +181,11 @@ These additions go into your application descriptor inside the iPhone / InfoAddi
 	]]></InfoAdditions>
 </iPhone>
 ```
+
+  </TabItem>
+  
+</Tabs>
+
 
 This is an example of how to add static shortcut items in your descriptor:
 
