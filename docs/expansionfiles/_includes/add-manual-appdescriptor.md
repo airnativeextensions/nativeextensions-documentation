@@ -1,0 +1,161 @@
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensionID>com.distriqt.ExpansionFiles</extensionID>
+
+<extensionID>com.distriqt.Core</extensionID>
+<extensionID>androidx.core</extensionID>
+<extensionID>com.distriqt.playservices.Licensing</extensionID>
+```
+
+
+
+### Android Manifest Additions
+
+The following additions must be added to your applications manifest additions.
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="14" />
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+	
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	
+	<application>
+	
+		<!-- EXPANSION FILES -->
+		<activity android:name="com.distriqt.extension.expansionfiles.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+		<service android:name="com.distriqt.extension.expansionfiles.services.ExpansionFilesDownloaderService" android:exported="false" />
+		<receiver android:name="com.distriqt.extension.expansionfiles.receivers.ExpansionFilesAlarmReceiver" android:exported="false" />
+	
+	</application>
+    
+</manifest>
+```
+
+
+
+
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.BluetoothLE</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+
+    <extensionID>androidx.core</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+There are several additions required for using Bluetooth LE on Android. You will need to add the permissions (you can selectively add them if you do not use all of the features of this extension) and if you wish to limit the devices your application can be installed on you can add the hardware requirement.
+
+Note: Since Android 23, you need to add `ACCESS_COARSE_LOCATION` to be able to scan for devices.
+
+```xml
+<manifest android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="18" />
+
+	<!-- Request legacy Bluetooth permissions on older devices. -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+
+    <!-- Needed only if your app looks for Bluetooth devices.
+         If your app doesn't use Bluetooth scan results to derive physical
+         location information, you can strongly assert that your app
+         doesn't derive physical location. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <!-- Needed only if your app makes the device discoverable to Bluetooth devices. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <!-- Needed only if your app communicates with already-paired Bluetooth devices. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Needed only if your app uses Bluetooth scan results to derive physical location. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- For Android 10 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <application>
+    
+        <activity 
+            android:name="com.distriqt.extension.bluetoothle.permissions.AuthorisationActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:exported="false" />
+
+    </application>
+
+</manifest>
+```
+
+
+### iOS
+
+#### InfoAdditions
+
+The following additions are required to enable the background operation modes of the application 
+as either a peripheral or a central or both.
+
+The `NSBluetoothAlwaysUsageDescription` and `NSBluetoothPeripheralUsageDescription` keys let you describe the reason your app uses Bluetooth. 
+- `NSBluetoothAlwaysUsageDescription` is required for iOS versions 13+;
+- if you are also deploying to earlier versions you should also include `NSBluetoothPeripheralUsageDescription`.
+
+When the system prompts the user to allow usage, the value that you provide for this key is displayed as part of the alert.
+
+```xml
+<InfoAdditions><![CDATA[
+	
+	<!-- OTHER SETTINGS --> 
+
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Usage description</string>
+
+	<!-- For iOS versions earlier than 13 -->
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Usage description</string>
+
+
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+	</array>
+	
+
+]]></InfoAdditions>
+<requestedDisplayResolution>high</requestedDisplayResolution>
+<Entitlements>
+	<![CDATA[
+	]]>
+</Entitlements>
+```
+
+
+>
+> Important: To protect user privacy, an iOS app linked on or after iOS 10.0, and which accesses 
+> the Bluetooth interface, must statically declare the intent to do so. 
+> Include the `NSBluetoothPeripheralUsageDescription` key in your app’s Info.plist file and provide 
+> a purpose string for this key. 
+> **If your app attempts to access the Bluetooth interface without a corresponding purpose string, your app exits.**
+>
