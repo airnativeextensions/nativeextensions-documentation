@@ -5,6 +5,13 @@ Add air package
 Update docs to use apm
 ```
 
+### 2022.02.05 [v1.0.28]
+
+```
+Add air package
+Update docs to use apm
+```
+
 ### 2021.12.16 [v1.0.27]
 
 ```
