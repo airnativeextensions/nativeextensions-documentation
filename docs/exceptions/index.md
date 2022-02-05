@@ -6,7 +6,6 @@ slug: /exceptions/
 
 ![Exceptions](images/promo.png)
 
-
 # Exceptions
 
 Exceptions is an AIR Native Extension to enable a global exception handler for iOS and Android.
@@ -24,20 +23,15 @@ your application to your own error logging server.
 - Sample project code and ASDocs reference
 
 
-
-
 ## Documentation
 
-Latest documentation can be found in the [documentation site](https://docs.airnativeextensions.com/docs/exceptions)
-along with the [asdocs](https://docs.airnativeextensions.com/asdocs/exceptions). 
+Latest documentation can be found in the [documentation site](https://docs.airnativeextensions.com/docs/exceptions) along with the [asdocs](https://docs.airnativeextensions.com/asdocs/exceptions). 
 
 Quick Example: 
 
 ```actionscript
 Exceptions.service.setUncaughtExceptionHandler();
-
 ```
-
 
 
 ## Acknowledgements

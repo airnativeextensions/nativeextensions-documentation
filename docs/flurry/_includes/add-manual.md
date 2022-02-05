@@ -1,14 +1,15 @@
----
-title: Add the Extension
-sidebar_label: Add the Extension
----
 
-First step is always to add the extension to your development environment. 
-To do this use the tutorial located [here](/docs/tutorials/getting-started).
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
 
 
+First step is always to add the extension to your development environment. Download the extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
 
-## Dependencies
+
+
+
+### Dependencies
 
 Many of our extensions use some common libraries, for example, the Android Support libraries.
 
@@ -17,7 +18,8 @@ We have to separate these libraries into separate extensions in order to avoid m
 You will add these extensions as you do with any other extension, and you need to ensure it is packaged with your application.
 
 
-### Core 
+
+#### Core 
 
 The Core ANE is required by this ANE. You must include and package this extension in your application.
 
@@ -28,8 +30,7 @@ You can access this extension here: [https://github.com/distriqt/ANE-Core](https
 
 
 
-
-### Google Play Services 
+#### Google Play Services 
 
 This extension requires usage of certain aspects of the Google Play Services client library. 
 The client library is available as a series of extensions that you add into your applications packaging options. 
@@ -39,8 +40,8 @@ will avoid conflicts, allowing you to use multiple extensions in the one applica
 
 This extension requires the following Google Play Services:
 
-- [com.distriqt.playservices.Base.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
-- [com.distriqt.playservices.Analytics.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Analytics.ane)
+- [`com.distriqt.playservices.Base`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.distriqt.playservices.Analytics`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Analytics.ane)
 
 You must include the above native extensions in your application along with this extension, 
 and you need to ensure they are packaged with your application.
@@ -52,63 +53,3 @@ You can access the Google Play Services client library extensions here: [https:/
 > **Note:** The Google Play Services and Android Support ANEs are only **required** on Android devices. 
 > There are no issues packaging these extensions with all platforms as there are default implementations available which will allow your code to package without errors however if you are only building an iOS application feel free to remove the Google Play Services and Android Support ANEs from your application.
 >
-
-
-
-## Extension IDs
-
-The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
-
-```xml
-<extensions>
-    <extensionID>com.distriqt.Flurry</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
-    
-    <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.distriqt.playservices.Analytics</extensionID>
-    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
-</extensions>
-```
-
-
-
-## Android 
-
-### Manifest Additions
-
-
-The Flurry API requires a few additions to the manifest. 
-
-:::warning
-You need to replace `APPLICATION_PACKAGE` with your applications package name, generally your air application id prefixed by `air.`, eg `air.com.distriqt.test`.
-:::
-
-You should add the listing below to your manifest:
-
-
-```xml
-<manifest android:installLocation="auto">
-	<!-- Required permissions - Internet access -->
-	<uses-permission android:name="android.permission.INTERNET" /> 
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> 
-				
-    <!-- Optional permission - Location based ad targeting -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- OR -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-    <application>
-
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-    
-        <provider
-            android:name="com.flurry.android.agent.FlurryContentProvider"
-            android:authorities="APPLICATION_PACKAGE.FlurryContentProvider"
-            android:exported="false" />
-    
-    </application>
-
-</manifest>
-```
-
-Make sure you only have one `application` node in your manifest additions.

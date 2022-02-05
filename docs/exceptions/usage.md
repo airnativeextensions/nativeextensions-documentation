@@ -26,15 +26,10 @@ if (Exceptions.service.hasPendingException())
 }
 ```
 
->
-> ### Note
->
-> You can generally only have **one** exception handler in an application.
-> 
-> So if you are using another library that tracks exceptions (Google Analytics or a bug tracker)
-> then the functionality provided here may not work or may stop the library from working.
->
-> You should decide which is the more important method and ensure only one method is used 
-> in your application. 
->
+:::note 
+You can generally only have **one** exception handler in an application.
+ 
+So if you are using another library that tracks exceptions (Google Analytics or a bug tracker) then the functionality provided here may not work or may stop the library from working.
 
+You should decide which is the more important method and ensure only one method is used in your application. 
+:::
