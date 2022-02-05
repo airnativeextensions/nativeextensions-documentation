@@ -722,6 +722,21 @@ module.exports = {
 		{
 			"Get Started": ["debug/add-the-extension"],
 		},
+		{
+			Other: [
+				{ type: "doc", id: "debug/changelog" },
+				{
+					type: "link",
+					label: "asdocs",
+					href: "https://docs.airnativeextensions.com/asdocs/debug/",
+				},
+				{
+					type: "link",
+					label: "Contact Support",
+					href: "http://github.com/distriqt/ANE-Debug/issues/new",
+				},
+			],
+		},
 	],
 
 	devicemotion: [
