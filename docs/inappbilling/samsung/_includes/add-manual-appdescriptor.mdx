@@ -1,0 +1,114 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.InAppBilling</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+
+Add the following permissions to your manifest additions, these permissions indicate that Samsung In-App Purchases are used in this application:
+
+```xml
+<uses-permission android:name="com.samsung.android.iap.permission.BILLING" />
+```
+
+Add the following queries:
+
+```xml
+<queries>
+	<package android:name="com.sec.android.app.samsungapps" />
+</queries>
+```
+
+Add the following inside the `application` node in your manifest additions:
+
+```xml
+<!-- SAMSUNG -->
+<activity
+    android:name="com.samsung.android.sdk.iap.lib.activity.DialogActivity"
+    android:theme="@style/Theme.Empty"
+    android:configChanges="orientation|screenSize"/>
+
+<activity
+    android:name="com.samsung.android.sdk.iap.lib.activity.CheckPackageActivity"
+    android:theme="@style/Theme.Empty"
+    android:configChanges="orientation|screenSize"/>
+
+<activity
+    android:name="com.samsung.android.sdk.iap.lib.activity.AccountActivity"
+    android:theme="@style/Theme.Transparent"
+    android:configChanges="orientation|screenSize"/>
+
+<activity
+    android:name="com.samsung.android.sdk.iap.lib.activity.PaymentActivity"
+    android:theme="@style/Theme.Empty"
+    android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden|locale|uiMode|fontScale|density"/>
+```
+
+
+##### Manifest Example 
+
+The following example uses our test application id `air.com.distriqt.test`:
+
+```xml
+<android>
+	<manifestAdditions><![CDATA[
+		<manifest android:installLocation="auto">
+
+			<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29" />
+
+			<uses-permission android:name="android.permission.INTERNET"/>
+
+			<uses-permission android:name="com.samsung.android.iap.permission.BILLING" />
+
+			<queries>
+				<package android:name="com.sec.android.app.samsungapps" />
+			</queries>
+
+			<application>
+
+				<!-- SAMSUNG -->
+				<activity
+					android:name="com.samsung.android.sdk.iap.lib.activity.DialogActivity"
+					android:theme="@style/Theme.Empty"
+					android:configChanges="orientation|screenSize"/>
+
+				<activity
+					android:name="com.samsung.android.sdk.iap.lib.activity.CheckPackageActivity"
+					android:theme="@style/Theme.Empty"
+					android:configChanges="orientation|screenSize"/>
+
+				<activity
+					android:name="com.samsung.android.sdk.iap.lib.activity.AccountActivity"
+					android:theme="@style/Theme.Transparent"
+					android:configChanges="orientation|screenSize"/>
+
+				<activity
+					android:name="com.samsung.android.sdk.iap.lib.activity.PaymentActivity"
+					android:theme="@style/Theme.Empty"
+					android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden|locale|uiMode|fontScale|density"/>
+
+			</application>
+
+		</manifest>
+	]]></manifestAdditions>
+</android>
+```
+
+
+### iOS
+
+#### InfoAdditions
+
+There are no required iOS additions to the application descriptor.

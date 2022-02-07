@@ -1,9 +1,9 @@
 ---
-title: Billing Service
-sidebar_label: Billing Service
+title: Setup Billing Service
+sidebar_label: Setup Billing Service
 ---
 
-## Setting up a Billing Service
+## Billing Service
 
 Before starting here you should make sure you have already setup the service for your application 
 as outlined in earlier sections. 
@@ -41,14 +41,14 @@ to a misconfiguration and is to help you get an application working correctly ho
 sure that you handle the event appropriately.
 
 
-### Events
+## Events
 
 We suggest you listen to the following four events before calling setup:
 
 - `InAppBillingEvent.SETUP_SUCCESS`: Dispatched when setup is successfully completed;
 - `InAppBillingEvent.SETUP_FAILURE`: Dispatched when there was an error during setup;
 - `PurchaseEvent.PURCHASES_UPDATED`: Dispatched if there are pending purchases needing to be processed;
-- `PurchaseRequestEvent.SHOULD_ADD_PURCHASE`: Dispatched if the app was launched from an AppStore promotional purchase (see [Promotions](promotions)).
+- `PurchaseRequestEvent.SHOULD_ADD_PURCHASE`: Dispatched if the app was launched from an AppStore promotional purchase (see [Promotions](promotions.md)).
 
 
 ```actionscript
@@ -65,7 +65,7 @@ InAppBilling.service.setup(
 
 
 
-### Service Type
+## Service Type
 
 The billing service type will be automatically selected based on the default of the current device platform. However we suggest you specify the service type in your `BillingService` using `setServiceType()` to specify a particular service:
 
@@ -77,20 +77,18 @@ var service:BillingService = new BillingService(  )
 var success:Boolean = InAppBilling.service.setup( service );
 ```
 
->
-> **Note**: 
->
-> You do not need to call `setServiceType`. 
-> If you do not call it then the default for the current platform will be used, 
-> i.e. Apple InApp Purchases on iOS and Google's Play InApp Billing on Android.
-> 
-> We suggest that you do specify a service type, particularly on Android where there are multiple stores involved.
-> This is so that you ensure you are utilising the correct store for your application, otherwise you may find that the extension incorrectly assumes you are using the default store on the device (eg Huawei AppGallery on a Huawei device), which may not be what you intend.
->
+:::note 
+You do not need to call `setServiceType`. 
+If you do not call it then the default for the current platform will be used, 
+i.e. Apple InApp Purchases on iOS and Google's Play InApp Billing on Android.
+
+We suggest that you do specify a service type, particularly on Android where there are multiple stores involved.
+This is so that you ensure you are utilising the correct store for your application, otherwise you may find that the extension incorrectly assumes you are using the default store on the device (eg Huawei AppGallery on a Huawei device), which may not be what you intend.
+:::
 
 
 
-### Pending Purchases
+## Pending Purchases
 
 Note that the pending purchases may not be available to you at the  `InAppBillingEvent.SETUP_SUCCESS` event, as they may be updated after setup has completed. This is particularly true on iOS/tvOS where the payment queue update (which populates the pending purchases) will occur a short time after setup succeeds.
 

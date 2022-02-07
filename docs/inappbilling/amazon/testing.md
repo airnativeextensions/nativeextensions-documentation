@@ -1,5 +1,5 @@
 ---
-title: Testing Amazon In-App Purchasing
+title: Testing Amazon IAP
 sidebar_label: Testing
 ---
 

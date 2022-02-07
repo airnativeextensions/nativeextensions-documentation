@@ -8,7 +8,7 @@ function to retrieve them directly from the service.
 
 >
 > This is not supported on services like Apple's InAppPurchases where the only method of retrieving 
-> purchases is through a user initiated restore purchases process. See [Restore Purchases](restore-purchases)
+> purchases is through a user initiated restore purchases process. See [Restore Purchases](restore-purchases.md)
 > for more on this.
 >
 > Except in the situation where you are using the application receipt variant of the ANE. In that variant on iOS

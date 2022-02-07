@@ -19,7 +19,7 @@ if (InAppBilling.service.isChangePurchaseSupported)
 }
 ```
 
-> Note: only call this after [setting up your billing service](billing-service).
+> Note: only call this after [setting up your billing service](billing-service.md).
 
 
 ## Changing a Purchase

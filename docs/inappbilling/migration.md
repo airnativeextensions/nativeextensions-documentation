@@ -25,7 +25,7 @@ Make sure you add the following to your `application` node in your android manif
 <meta-data android:name="com.google.android.play.billingclient.version" android:value="3.0.0" />
 ```
 
-Check [Add the Extension](add-the-extension) for more information.
+Check [Add the Extension](add-the-extension.mdx) for more information.
 
 
 
@@ -33,7 +33,7 @@ Check [Add the Extension](add-the-extension) for more information.
 
 ### In-App Updates
  
-If you are looking to add In-App Updates make sure you add the additional extensions and manifest additions as outlined in the [documentation](in-app-updates#additional-requirements)
+If you are looking to add In-App Updates make sure you add the additional extensions and manifest additions as outlined in the [documentation](in-app-updates.md#additional-requirements)
 
 
 

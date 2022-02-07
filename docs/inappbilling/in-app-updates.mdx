@@ -3,6 +3,10 @@ title: In App Updates
 sidebar_label: In App Updates
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
 In-App Updates is a method for your application to check with the store as to whether there is a newer version of your application available. Although some users enable background updates when their device is connected to an unmetered connection, other users may need to be reminded to update.
 
 This feature allows you to check and prompt active users to update your app.
@@ -10,6 +14,24 @@ This feature allows you to check and prompt active users to update your app.
 ![](images/inappupdates_googleplay.png)
 
 ## Additional Requirements
+
+There may be some additional requirements here depending on how you installed the extension.
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+Nothing additional required if using apm.
+
+  </TabItem>
+  <TabItem value="manual" >
+
 
 ### Google Play
 
@@ -44,6 +66,7 @@ And add the following to the manifest additions inside the `application` node:
     android:enabled="false"
     android:exported="false" />
 ```
+
 
 ### Huawei App-Gallery
 
@@ -83,6 +106,12 @@ For Huawei you will need to add the [`com.huawei.hms.game`](https://github.com/d
         android:name="hwc-theme"
         android:value="androidhwext:style/Theme.Emui.Translucent" />
 ```
+
+
+  </TabItem>
+  
+</Tabs>
+
 
 ## Usage
 

@@ -43,7 +43,7 @@ One of the most common situations that this will occur on is when the product is
 by the user on Android. This case you should check for the `ITEM_ALREADY_OWNED` error code and 
 then load the purchases to retrieve the purchase.
 
-See the section on [Get Purchases](get-purchases) for more information on this process of retrieving purchases.
+See the section on [Get Purchases](get-purchases.md) for more information on this process of retrieving purchases.
 
 
 ---

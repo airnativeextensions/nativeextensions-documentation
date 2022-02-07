@@ -1616,30 +1616,41 @@ module.exports = {
 		{ type: "ref", id: "index" },
 		{ type: "doc", id: "inappbilling/index" },
 		"inappbilling/overview",
+		"inappbilling/add-the-extension",
 		{
 			"Billing Services": [
 				{
 					"Apple In-App Purchases": [
+						"inappbilling/add-the-extension",
 						"inappbilling/apple/apple-in-app-purchases",
 						"inappbilling/apple/server-side-verification",
-						"inappbilling/apple/testing-subscriptions",
+						"inappbilling/apple/testing",
 						"inappbilling/apple/troubleshooting",
 					],
 				},
 				{
-					"Google Play Billing": ["inappbilling/google/google-play-inapp-billing"],
+					"Google Play Billing": [
+						"inappbilling/add-the-extension",
+						"inappbilling/google/google-play-inapp-billing"
+					],
 				},
 				{
 					"Amazon In-App Purchasing": [
+						"inappbilling/amazon/add-the-extension",
 						"inappbilling/amazon/amazon-in-app-purchasing",
 						"inappbilling/amazon/testing",
 					],
 				},
 				{
-					"Huawei AppGallery": ["inappbilling/huawei/huawei-appgallery", "inappbilling/huawei/testing"],
+					"Huawei AppGallery": [
+						"inappbilling/huawei/add-the-extension",
+						"inappbilling/huawei/huawei-appgallery", 
+						"inappbilling/huawei/testing"
+					],
 				},
 				{
 					"Samsung In-App Purchases": [
+						"inappbilling/samsung/add-the-extension",
 						"inappbilling/samsung/samsung-in-app-purchases",
 						"inappbilling/samsung/testing",
 					],
@@ -1648,15 +1659,10 @@ module.exports = {
 		},
 		{
 			type: "category",
-			label: "Setup the Extension",
-			collapsed: false,
-			items: ["inappbilling/add-the-extension", "inappbilling/billing-service"],
-		},
-		{
-			type: "category",
 			label: "Usage",
 			collapsed: false,
 			items: [
+				"inappbilling/billing-service",
 				"inappbilling/products",
 				"inappbilling/make-a-purchase",
 				"inappbilling/pending-purchases",

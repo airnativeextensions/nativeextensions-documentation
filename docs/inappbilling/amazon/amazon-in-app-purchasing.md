@@ -1,5 +1,5 @@
 ---
-title: Amazon In-App Purchasing
+title: Setup Amazon IAP
 sidebar_label: Setup
 ---
 

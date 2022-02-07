@@ -36,7 +36,7 @@ and returns your application to the normal state.
 
 You will need to handle several scenarios here, including a cancelled purchase and a cancelled error.
 
-See [Handling User Cancellations](make-a-purchase#handling-user-cancellations) for implementation details.
+See [Handling User Cancellations](make-a-purchase.md#handling-user-cancellations) for implementation details.
 
 
 ### Testing Deferred Purchases
