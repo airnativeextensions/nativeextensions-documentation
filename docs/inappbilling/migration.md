@@ -33,7 +33,7 @@ Check [Add the Extension](add-the-extension.mdx) for more information.
 
 ### In-App Updates
  
-If you are looking to add In-App Updates make sure you add the additional extensions and manifest additions as outlined in the [documentation](in-app-updates.md#additional-requirements)
+If you are looking to add In-App Updates make sure you add the additional extensions and manifest additions as outlined in the [documentation](in-app-updates.mdx#additional-requirements)
 
 
 
@@ -74,7 +74,7 @@ Google Play Billing uses this concept as a deferred payment state.
 >
 > For example, a user might choose to purchase your in-app product at a physical store using cash. This means that the transaction is completed outside of your app. In this scenario, you should grant entitlement only after the user has completed the transaction.
 >
-> For pending transactions (new in version 2.0), the three-day window (for acknowleding the purchase) starts when the purchase has moved to the SUCCESS state and does not apply while the purchase is in a PENDING state.
+> For pending transactions (new in version 2.0), the three-day window (for acknowledging the purchase) starts when the purchase has moved to the SUCCESS state and does not apply while the purchase is in a PENDING state.
 >
 
 To better match the concepts across Apple's In App Purchases and Google Play Billing, we represent Android Pending Purchases as Deferred Purchases, ie. a purchase will have the state `STATE_DEFERRED`. 
