@@ -1,0 +1,82 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.IDFA</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+
+    <extensionID>androidx.core</extensionID>
+</extensions>
+```
+
+
+
+### Android 
+
+#### Manifest Additions 
+
+You need to make sure you add the `android.permission.INTERNET` permission and the 
+`com.google.android.gms.version` tags to your manifest additions as below:
+
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-permission android:name="android.permission.INTERNET"/>
+    
+    <application>
+
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+    </application>
+</manifest>
+```
+
+
+
+### iOS 
+
+:::note iOS SDK
+This ANE has been updated for iOS 14 and requires a minimum of the iOS 14 SDK to be linked with your application in order to have access to the iOS 14 app tracking transparency features.
+
+Make sure you provide a valid iOS 14+ SDK when packaging. Currently you do this by packaging with the iOS SDK, see [here](/docs/tutorials/ios-sdk-custom) for more.
+
+**This is not required if you are using AIR 33+ as it contains a recent version of the iOS SDK.**
+:::
+
+
+#### Info Additions
+
+You must specify the usage descriptions for authorisation dialog by adding the following string to your InfoAdditions:
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>This identifier will be used to deliver personalized ads to you.</string>
+```
+
+You can customise the value of this string as you require for your application.
+
+This should be added to the Info Additions node :
+
+```xml
+<iPhone>
+    <InfoAdditions><![CDATA[
+
+        <key>NSUserTrackingUsageDescription</key>
+        <string>This identifier will be used to deliver personalized ads to you.</string>
+
+    ]]></InfoAdditions>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+    <Entitlements>
+        <![CDATA[
+        ]]>
+    </Entitlements>
+</iPhone>
+```
+
+

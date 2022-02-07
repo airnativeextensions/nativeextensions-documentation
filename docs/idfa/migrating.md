@@ -14,7 +14,7 @@ You will need to add the usage description to your info additions:
 <string>This identifier will be used to deliver personalized ads to you.</string>
 ```
 
-([Reference](add-the-extension))
+([Reference](add-the-extension.mdx))
 
 And to ensure you have authorisation before attempting to retrieve the IDFA:
 
@@ -25,7 +25,7 @@ if (IDFA.service.authorisationStatus() == TrackingAuthorisationStatus.AUTHORISED
 }
 ```
 
-[Reference](get-advertising-identifier#authorisation)
+[Reference](get-advertising-identifier.md#authorisation)
 
 
 
