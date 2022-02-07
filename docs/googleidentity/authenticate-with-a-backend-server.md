@@ -7,9 +7,10 @@ sidebar_label: Authenticate with a backend server
 If you use Google Sign-In with an app or site that communicates with a backend server, you might need to identify the currently signed-in user on the server. To do so securely, after a user successfully signs in, send the user's ID token to your server using HTTPS. Then, on the server, verify the integrity of the ID token and use the user information contained in the token to establish a session or create a new account.
 
 
->
-> Warning: Do not accept plain user IDs, such as those you can get with the GoogleSignInAccount.getId() method, on your backend server. A modified client application can send arbitrary user IDs to your server to impersonate users, so you must instead use verifiable ID tokens to securely get the user IDs of signed-in users on the server side.
->
+:::warning
+Do not accept plain user IDs, such as those you can get with the `GoogleSignInAccount.getId()` method, on your backend server. A modified client application can send arbitrary user IDs to your server to impersonate users, so you must instead use verifiable ID tokens to securely get the user IDs of signed-in users on the server side.
+:::
+
 
 
 ## Setup
@@ -39,7 +40,7 @@ GoogleIdentity.service.setup( options );
 
 ## Sign In
 
-Follow the normal process to [sign in](signing-in) and in your sign in success handler ensure you grab the user and the id token:
+Follow the normal process to [sign in](signing-in.md) and in your sign in success handler ensure you grab the user and the id token:
 
 ```actionscript
 function signInHandler( event:GoogleIdentityEvent ):void

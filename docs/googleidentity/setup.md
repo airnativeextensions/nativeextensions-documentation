@@ -22,9 +22,9 @@ GoogleIdentity.service.setup( options );
 
 The options here specify the permissions and scopes that you require from your users. This information will get displayed as part of the sign in process. 
 
-For more information on these options see the [Google Identity Options](google-identity-options) section.
+For more information on these options see the [Google Identity Options](google-identity-options.md) section.
 
-After setup you may wish to attempt to [sign in silently](signing-in#sign-in-silently).
+After setup you may wish to attempt to [sign in silently](signing-in.md#sign-in-silently).
 
 
 
@@ -41,14 +41,14 @@ var options:GoogleIdentityOptions = new GoogleIdentityOptionsBuilder( GoogleIden
 	.build();
 ```
 
->
-> Note: You will most likely want to request the profile so you can retrieve the player information so make sure you add the `requestProfile()` call to the builder (as above).
->
+:::note
+You will most likely want to request the profile so you can retrieve the player information so make sure you add the `requestProfile()` call to the builder (as above).
+:::
 
 Utilising this method automatically adds the required scopes and permissions for games sign in along with any other options you add to the builder.
 
 
->
-> **iOS**: As Play Games is no longer supported on iOS this addition does nothing on iOS and you will simply get the normal Google signin on iOS.
->
+:::info iOS
+As Play Games is no longer supported on iOS this addition does nothing on iOS and you will simply get the normal Google signin on iOS.
+:::
 

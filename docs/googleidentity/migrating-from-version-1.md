@@ -53,6 +53,6 @@ The ability to set the server client id has been added to specify it's differenc
 
 The `getToken` functionality has been deprecated. 
 
-You should instead migrate to using the Server Auth Code and exchanging that code for your users' access token on your server to enable [Server-Side Access](enabling-server-side-access)
+You should instead migrate to using the Server Auth Code and exchanging that code for your users' access token on your server to enable [Server-Side Access](enabling-server-side-access.md)
 .
 

@@ -19,5 +19,5 @@ To verify:
 
 1. Open the [credentials](https://console.developers.google.com/project/_/apiui/credential) page in your console project;
 
-2. Make sure your certificate / package name has an Android typed OAuth 2.0 client ID. To create a new ID follow the instructions in [setup](https://github.com/distriqt/ANE-GoogleIdentity/wiki/u.Setup)
+2. Make sure your certificate / package name has an Android typed OAuth 2.0 client ID. To create a new ID follow the instructions in [setup](setup.md)
 

@@ -28,7 +28,7 @@ to your API project.
 
 		![](images/project-simple-enablesignin.png)
 
-	- You will need to enter the fingerprint of your signing certificate here (see [Android Certificate](android-certificate) section for more)
+	- You will need to enter the fingerprint of your signing certificate here (see [Android Certificate](android-certificate.md) section for more)
 	- then finally **Enable Google Sign-In**
 
 
@@ -43,7 +43,7 @@ to your API project.
 
 Following this will add the required APIs and the 3 credentials to your Google APIs project.
 
-You can now jump to the section [Google Identity Options](google-identity-options) to get 
+You can now jump to the section [Google Identity Options](google-identity-options.md) to get 
 the information for configuring this extension.
 
 
@@ -93,30 +93,32 @@ required to fully support all the functionality in this extension:
 
 ![](images/apisconsole-createcredentials.png)
 
->
->	1. iOS:
->		- Create credential / **OAuth client ID** / iOS 
->		- Enter your bundle id: eg: `com.distriqt.test`
->		- Take note of the "Client ID", you will need to pass this to the `GoogleIdentityOptions` as the iOS client ID
->
->	2. Android:
->
->		- Create credential / **OAuth client ID** / Android
->		- Enter the SHA1 fingerprint of your certificate (See [Android Certificate](android-certificate))
->		- Enter the package name of your application: eg: `air.com.distriqt.test`. Please note that this 
->		  is related to your AIR application ID but can be very different. We suggest making sure you use 
->		  a valid Java package name for your AIR application ID. 
->		- You do not directly need to supply any information from this credential to the ANE. 
->		  The matching is made completely on the package name and the certificate fingerprint.
+:::info Create Credentials
+1. iOS:
+	- Create credential / **OAuth client ID** / iOS 
+	- Enter your bundle id: eg: `com.distriqt.test`
+	- Take note of the "Client ID", you will need to pass this to the `GoogleIdentityOptions` as the iOS client ID
 
->		![](images/apisconsole-createcredentials-android.png)
->
->	3. Web Application:
->		- Create credential / **OAuth client ID** / Web application
->		- Take note of the "Client ID" for the "Web application", you will need this value for your `GoogleIdentityOptions`
->
->		![](images/apisconsole-createcredentials-webapp.png)
->
+2. Android:
+
+	- Create credential / **OAuth client ID** / Android
+	- Enter the SHA1 fingerprint of your certificate (See [Android Certificate](android-certificate))
+	- Enter the package name of your application: eg: `air.com.distriqt.test`. Please note that this 
+		is related to your AIR application ID but can be very different. We suggest making sure you use 
+		a valid Java package name for your AIR application ID. 
+	- You do not directly need to supply any information from this credential to the ANE. 
+		The matching is made completely on the package name and the certificate fingerprint.
+
+![](images/apisconsole-createcredentials-android.png)
+
+3. Web Application:
+	- Create credential / **OAuth client ID** / Web application
+	- Take note of the "Client ID" for the "Web application", you will need this value for your `GoogleIdentityOptions`
+
+![](images/apisconsole-createcredentials-webapp.png)
+
+:::
+
 
 
 

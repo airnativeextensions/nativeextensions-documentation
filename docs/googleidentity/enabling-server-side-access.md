@@ -36,7 +36,7 @@ Ensure you add any additional scopes your backend server requires using the `add
 
 ## Sign In
 
-Follow the normal process to [sign in](signing-in) and in your sign in success handler ensure you grab the user and the server auth code:
+Follow the normal process to [sign in](signing-in.md) and in your sign in success handler ensure you grab the user and the server auth code:
 
 ```actionscript
 function signInHandler( event:GoogleIdentityEvent ):void

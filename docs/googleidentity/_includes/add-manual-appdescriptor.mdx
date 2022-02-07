@@ -1,0 +1,95 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.GoogleIdentity</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>androidx.appcompat</extensionID>
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.distriqt.playservices.Auth</extensionID>
+    <extensionID>com.distriqt.playservices.Identity</extensionID>
+    <extensionID>com.distriqt.square.okhttp</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+Making requests and accessing the Google Identity functionality requires the some additional permissions, so these must also be declared in the manifest. Additionally you will need to add the activities to the manifest as in the section below:
+
+```xml
+<manifest android:installLocation="auto">
+
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31"/>
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	
+	<application>
+	
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+		<activity
+			android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+			android:excludeFromRecents="true"
+			android:exported="false"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<service
+			android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+			android:exported="true"
+			android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+		<activity
+			android:name="com.google.android.gms.common.api.GoogleApiActivity"
+			android:exported="false"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+				
+	</application>
+
+</manifest>
+```
+
+
+### iOS 
+
+#### Info Additions
+
+Accessing the Google Identity functionality requires some additions to the InfoAdditions on iOS. 
+This allows callbacks from external applications that may handle signin and sign outs. You should 
+replace the `URL_SCHEME` and `URL_NAME` in the additions with the ones you created when setting 
+up your application in the Google developer console.
+
+```xml
+<InfoAdditions><![CDATA[
+	<key>UIDeviceFamily</key>
+	<array>
+		<string>1</string>
+	</array>
+	
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>URL_SCHEME</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>URL_NAME</string>
+		</dict>
+	</array>
+	
+]]></InfoAdditions>
+```
+
+The `URL_SCHEME` should be your reversed ios client id, along the lines of the following: 
+`com.googleusercontent.apps.XXXXXXXXXXX-xxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+The `URL_NAME` should be your application identifier, eg: `com.distriqt.test`
+
+See the example application for our test application implementation.

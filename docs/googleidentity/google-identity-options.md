@@ -20,9 +20,9 @@ Take note of the following identifiers from the *OAuth 2.0 client IDs*:
 - The *Client ID* for the **Web client**. This is the `serverClientID`. 
     - If you have different servers and hence ids for applications you may have 2 different server client IDs 
 
->
-> Note: YOU DO NOT NEED TO USE THE *ANDROID CLIENT*. Android applications are identified through their package name and certificate signature so ensure those properties match the configuration of your application in the console.
->
+:::note 
+YOU DO NOT NEED TO USE THE *ANDROID CLIENT*. Android applications are identified through their package name and certificate signature so ensure those properties match the configuration of your application in the console.
+:::
 
 
 
@@ -53,7 +53,7 @@ var options:GoogleIdentityOptions = new GoogleIdentityOptionsBuilder()
     .build();
 ```
 
-See the section on [authenticating with a backend server](authenticate-with-a-backend-server).
+See the section on [authenticating with a backend server](authenticate-with-a-backend-server.md).
 
 
 
@@ -70,7 +70,7 @@ var options:GoogleIdentityOptions = new GoogleIdentityOptionsBuilder()
     .build();
 ```
 
-See the section on [enabling server-side access](enabling-server-side-access).
+See the section on [enabling server-side access](enabling-server-side-access.md).
 
 
 
