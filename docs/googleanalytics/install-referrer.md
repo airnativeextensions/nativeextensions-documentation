@@ -27,7 +27,7 @@ have added the correct manifest additions, in particular the install referrer re
 </receiver>
 ```
 
-Check the following for more details: [Add the Extension](add-the-extension) 
+Check the following for more details: [Add the Extension](add-the-extension.mdx) 
 
 
 ### Referrer string

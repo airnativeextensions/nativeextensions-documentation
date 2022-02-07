@@ -4,9 +4,9 @@ sidebar_label: Ecommerce
 ---
 
 
->
-> Warning: Ecommerce SDK is deprecated. You still can use this functionality however it is suggested to use **Enhanced Ecommerce**.
-> 
+:::warning Deprecated
+Warning: Ecommerce SDK is deprecated. You still can use this functionality however it is suggested to use **Enhanced Ecommerce**.
+::: 
 
 Ecommerce measurement allows you to send in-app purchases and sales to Google Analytics. 
 Ecommerce data in Google Analytics is comprised of transaction and item hits, related 

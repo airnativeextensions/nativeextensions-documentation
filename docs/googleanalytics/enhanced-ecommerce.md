@@ -6,7 +6,7 @@ sidebar_label: Enhanced Ecommerce
 
 Enhanced ecommerce enables the measurement of user interactions with products across the user's shopping experience, which include product impressions, product clicks, viewing product details, adding a product to a shopping cart, initiating the checkout process, transactions, and refunds.
 
-Below we cover the main concepts involved with Enhanced Ecommerce. The API is very similar to the Android Google Analytics API so you should be able to refer to that for any advanced usage: https://developers.google.com/analytics/devguides/collection/android/v4/enhanced-ecommerce
+Below we cover the main concepts involved with Enhanced Ecommerce. The API is very similar to the Android Google Analytics API so you should be able to refer to that for any [advanced usage](https://developers.google.com/analytics/devguides/collection/android/v4/enhanced-ecommerce).
 
 
 
