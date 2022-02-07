@@ -18,7 +18,7 @@ In order to save to the camera roll you should make sure that the user has grant
 your application permission to save to the camera roll. On Android this is a "dangerous"
 permission and requires runtime permission. On iOS it should always be granted.
 
-Take a look at the [Request Authorisation](request-authorisation) section for more information.
+Take a look at the [Request Authorisation](request-authorisation.md) section for more information.
 
 
 

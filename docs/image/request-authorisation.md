@@ -25,9 +25,20 @@ after which you must direct the user to manually change the permissions in the s
 > **This changed in iOS 10 and you are now required to request permissions.**
 >
 
+
+## Usage Description
+
+You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
+
+The image below is an example of the authorisation dialog. The content *"This app would like to access your photos"* is the usage description message you can set.
+
 ![](images/ios-permission-dialog.png)
 
-You can customise the text in this dialog by setting the usage strings in your info additions. (See [Add the Extension](add-the-extension) for details on setting these values). 
+You set these values through adding the usage description keys to your info additions or simply by setting up your configuration options in your `apm` project. (See [Add the Extension](add-the-extension.mdx) for details on setting these values).
+
+
+
+
 
 
 ## Authorisation Status
