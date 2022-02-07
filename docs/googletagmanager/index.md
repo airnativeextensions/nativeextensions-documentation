@@ -31,7 +31,7 @@ As with all our extensions you get access to a year of support and updates as we
 
 ## Documentation
 
-The [documentation site](https://docs.airnativeextensions.com/docs/googletagmanager) forms the best source of detailed documentation for the extension along with the [asdocs](https://distriqt.github.io/ANE-GoogleTagManager/asdocs).
+The [documentation site](https://docs.airnativeextensions.com/docs/googletagmanager) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/googletagmanager).
 
 Simple example of pushing to the data layer:
 
