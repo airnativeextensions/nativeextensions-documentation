@@ -3,6 +3,10 @@ title: Reader Mode
 sidebar_label: Reader Mode
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
 Reader mode can be used to active scan for tags and read them multiple times. This is useful in the cases where the data changes on the tag so you may need to re-read it at a later point. 
 
 :::info
@@ -15,18 +19,41 @@ It is important to note that using reader mode may interfere with the other NFC 
 To initiate reader mode call `enableReaderMode()`:
 
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 NFC.service.enableReaderMode();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 NFC.Instance.EnableReaderMode();
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
+
 
 
 While active any detected tags will dispatch a `NFCEvent.ACTION_NDEF_DISCOVERED` event:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 NFC.service.addEventListener( NFCEvent.ACTION_NDEF_DISCOVERED, discoveredHandler );
 
 function discoveredHandler( event:NFCEvent ):void
@@ -35,7 +62,10 @@ function discoveredHandler( event:NFCEvent ):void
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 NFC.Instance.OnNdefDiscovered += Instance_OnNdefDiscovered;
 
 void Instance_OnNdefDiscovered(NFCEvent e)
@@ -44,32 +74,68 @@ void Instance_OnNdefDiscovered(NFCEvent e)
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
+
+
 
 ## Stop scanning
 
 You should make sure to disable reader mode once you have completed scanning by calling `disableReaderMode()`:
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 NFC.service.disableReaderMode();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 NFC.Instance.DisableReaderMode();
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
 
 
 ## Restart scanning
 
 If you have scanned a tag and wish to re-read it, you will need to call `restart()` to invalidate any scanned tags and rescan them:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript
 NFC.service.restart();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 NFC.Instance.Restart();
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 If a tag scanned previously is still within range then another `NFCEvent.ACTION_NDEF_DISCOVERED` event will be dispatched with the latest payload data.
 

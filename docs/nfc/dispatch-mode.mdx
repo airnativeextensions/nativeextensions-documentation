@@ -3,6 +3,9 @@ title: Dispatch Mode
 sidebar_label: Dispatch Mode
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Dispatch mode relies on the system dispatching data about the tags and responding to these events. Additionally you can use this method to register your application to launch when specific tags are detected by the system.
 
 
@@ -29,18 +32,71 @@ The extension provides an activity that you can use to inform your application a
 In order to get your application to automatically launch and handle NFC tags without having to be running you need to add the `NFCActionActivity` to your applications Android manifest and apply the appropriate filters for your application. There are some examples below.
 
 
-#### AIR 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-You should construct your intent filters in your manifest additions in order to correctly start this activity and launch your application when a tag of interest is detected by Android. Remove the line referenced in the "Add the extension" manifest additions and replace it with your version with intent filters. 
+You should construct your intent filters in your manifest additions in order to correctly start this activity and launch your application when a tag of interest is detected by Android. 
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+To add these additions you need to add some additional configuration. Firstly add a custom Android configuration file by running:
+
+```
+apm generate config android
+```
+
+Edit the `config/android/AndroidManifest.xml` file that was generated to resemble the following, adding the activity as you require:
 
 
-#### Unity 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+
+		<!-- Add your NFCActionActivity here -->
+
+    </application>
+
+</manifest>
+```
+
+Once you have added this configuration run the steps above to update / generate your [application descriptor](add-the-extension.mdx#application-descriptor).
+
+
+  </TabItem>
+  <TabItem value="manual" >
+
+
+Remove the `NFCActionActivity` line referenced in the "Add the extension" manifest additions and replace it with your version with intent filters. 
+
+
+  </TabItem>
+</Tabs>
+
+  </TabItem>
+  <TabItem value="unity" >
 
 Adding these additions to your manifest can be achieved in several ways.
 
 You can use the `NFCManifest.androidlib` directory in our example to simply merge in the additions to your application. Copy this folder, to your application Assets under `Plugins/Android` and edit the `AndroidManifest.xml` file in the directory to match your requirements. 
 
 Alternatively, if you are using a custom android manifest file then simply add the activity to that file.
+
+  </TabItem>
+</Tabs>
+
 
 
 
@@ -52,7 +108,7 @@ Some examples of intent filters are below.
 An NDEF record with a url pointing to `https://airnativeextensions.com`:
 
 ```xml
-<activity android:name="com.distriqt.extension.nfc.activities.NFCActionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+<activity android:name="com.distriqt.extension.nfc.activities.NFCActionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true" >
     <intent-filter>
         <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
         <category android:name="android.intent.category.DEFAULT"/>
@@ -66,7 +122,7 @@ An NDEF record with a url pointing to `https://airnativeextensions.com`:
 An NDEF record with a plain text:
 
 ```xml
-<activity android:name="com.distriqt.extension.nfc.activities.NFCActionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+<activity android:name="com.distriqt.extension.nfc.activities.NFCActionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true" >
     <intent-filter>
         <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
         <category android:name="android.intent.category.DEFAULT"/>
@@ -87,19 +143,33 @@ This involves calling the `registerForegroundDispatch()` method to register your
 
 Similar to the intent filters above, you need to specify the urls or mimetypes that are relevant to your application. This is done through setting the options in an instance of the `ScanOptions` class.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var options:ScanOptions = new ScanOptions();
 options.urls.push( "https://airnativeextensions.com" );  
 
 NFC.service.registerForegroundDispatch( options );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 ScanOptions options = new ScanOptions();
 options.urls = new string[] { "https://airnativeextensions.com" };
 
 NFC.Instance.RegisterForegroundDispatch(options);
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 
 
@@ -142,7 +212,16 @@ If there are no installed apps associated with the universal link, the system op
 
 In order for this to work you must setup a universal link for your application and included the domain in the `com.apple.developer.associated-domains` entitlements section of your iphone additions.
 
-With AIR this is simply a matter of adding the fields to the entitlements section in your application descriptor, (see [Add the Extension](add-the-extension#ios) for more details).
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+With AIR this is simply a matter of adding the fields to the entitlements section in your application descriptor, (see [Add the Extension](add-the-extension.mdx#universal-links) for more details).
+
+  </TabItem>
+  <TabItem value="unity" >
 
 With Unity you will need to add your domain to the `NFCConfig.cs` class in the `Assets/distriqt/NFCUnity/NFC/Editor` folder. Set your domains into the `associatedAppDomains` array, for example:
 
@@ -156,6 +235,8 @@ public static string[] associatedAppDomains = new string[]
 
 These domains will be applied to the entitlements for your application by our post build scripts.
 
+  </TabItem>
+</Tabs>
 
 
 
@@ -164,14 +245,29 @@ These domains will be applied to the entitlements for your application by our po
 
 To initiate reading tags on iOS you call the `registerForegroundDispatch()` method. There are no filtering methods on iOS so any NDEF formatted tags will be detected and events dispatched to your application, and any options provided (as in the Android case) will be ignored.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 NFC.service.registerForegroundDispatch();
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp title="Unity"
+```csharp 
 NFC.Instance.RegisterForegroundDispatch();
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
 
 
 While scanning on iOS the following dialog will be presented to your user: 
@@ -179,23 +275,37 @@ While scanning on iOS the following dialog will be presented to your user:
 ![](images/ios_scanning_dialog.png)
 
 
-
 You can customise the message displayed in this dialog by setting the `message` in the options passed to `registerForegroundDispatch()`:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var options:ScanOptions = new ScanOptions();
 options.message = "Hold your device near the item to learn more about it.";
 
 NFC.service.registerForegroundDispatch( options );
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp title="Unity"
+```csharp 
 ScanOptions options = new ScanOptions();
 options.message = "Hold your device near the item to learn more about it.";
 
 NFC.Instance.RegisterForegroundDispatch(options);
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
 
 
 
@@ -209,19 +319,30 @@ This allows you to ensure you are ready to handle the event before it gets dispa
 
 So on first run of your application, setup your handlers for the events and then call `checkStartupData()`. If the application was launched from a background tag scan then you will immediately receive the appropriate event.
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 NFC.service.addEventListener( NFCEvent.ACTION_NDEF_DISCOVERED, discoveredHandler );
 
 NFC.service.checkStartupData();
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp title="Unity"
+```csharp 
 NFC.Instance.OnNdefDiscovered += Instance_OnNdefDiscovered;
 
 NFC.Instance.CheckStartupData();
 ```
+
+  </TabItem>
+</Tabs>
+
 
 
 :::warning

@@ -4,6 +4,10 @@ sidebar_label: Overview
 ---
 
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
 ## Tags
 
 NFC tags come in a wide array of technologies and can also have data written to them in many different ways. Android and iOS has the most support for the NDEF standard, which is defined by the [NFC Forum](https://nfc-forum.org/home).
@@ -17,7 +21,13 @@ Your application will get notified about NFC tag detection events via the `NFCEv
 
 The `NFCEvent` will contain a `Tag` object in the `tag` variable. This contains all the information available about the detected tag, including `NdefMessage`s and `NdefRecord`s contained in the tag. 
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 NFC.service.addEventListener( NFCEvent.ACTION_NDEF_DISCOVERED, discoveredHandler );
 
 function discoveredHandler( event:NFCEvent ):void
@@ -33,7 +43,10 @@ function discoveredHandler( event:NFCEvent ):void
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 NFC.Instance.OnNdefDiscovered += Instance_OnNdefDiscovered;
 
 void Instance_OnNdefDiscovered(NFCEvent e)
@@ -49,13 +62,19 @@ void Instance_OnNdefDiscovered(NFCEvent e)
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
+
 
 ## Modes
 
 There are two modes of scanning for tags, which we reference as:
 
-- ["dispatch mode"](dispatch-mode), where you are listening for system dispatched events;
-- ["reader mode"](reader-mode), where you are actively reading tags; 
+- ["dispatch mode"](dispatch-mode.mdx), where you are listening for system dispatched events;
+- ["reader mode"](reader-mode.mdx), where you are actively reading tags; 
 
 Both are very similar, and will communicate via the same events as above. The main differences being that:
 1. reader mode active reads tags and can read a tag multiple times if required, however;
