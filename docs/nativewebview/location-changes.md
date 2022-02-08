@@ -41,7 +41,7 @@ function webView_locationChangeHandler( event:NativeWebViewEvent ):void
 
 
 >
-> You may wish to see the `WebViewOptions.linkTargetAction` setting and handle `BLOCKED` links as well. See the documentation in the [Web View Options](create-a-webview#link-target-action)
+> You may wish to see the `WebViewOptions.linkTargetAction` setting and handle `BLOCKED` links as well. See the documentation in the [Web View Options](create-a-webview.md#link-target-action)
 >
 
 

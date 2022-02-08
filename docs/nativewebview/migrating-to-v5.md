@@ -28,5 +28,5 @@ NativeWebView.service.initialisePlatform( options, function(success:Boolean):voi
 This will correctly setup any libraries required by the platform and initialise the extension.
 
 
-More information here: [Initialise the Extension](initialise-the-extension)
+More information here: [Initialise the Extension](initialise-the-extension.md)
 

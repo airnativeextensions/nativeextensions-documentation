@@ -51,7 +51,7 @@ This may return `false` if :
 
 ## Android Additions
 
-To make sure this functionality works on Android you must add the `androidx.browser` to your application. See the [Add the Extension](add-the-extension) section for information on including this ANE.
+To make sure this functionality works on Android you must add the `androidx.browser` to your application. See the [Add the Extension](add-the-extension.mdx) section for information on including this ANE.
 
 
 
@@ -150,7 +150,7 @@ options.primaryColour = 0xFF0000;
 The primary colour is used on iOS 10+ and Android as the background colour of the toolbar.
 
 
-You can change the text in the toolbar by specifying the secondard colour. This is currently only supported on iOS 10+.
+You can change the text in the toolbar by specifying the secondary colour. This is currently only supported on iOS 10+.
 
 ```actionscript
 options.secondaryColour = 0x000000;

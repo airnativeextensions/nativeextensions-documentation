@@ -1,0 +1,110 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.NativeWebView</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+
+    <!-- ANDROID -->
+    <extensionID>androidx.browser</extensionID>
+    <extensionID>androidx.core</extensionID>
+
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+
+The NativeWebView will require a small addition to the manifest to be able to browse for files.
+If you are looking to play videos in your webpage on Android we highly recommend adding the 
+`android:hardwareAccelerated="true"` flag to your application. 
+
+You should make sure your manifest contains the following:
+
+```xml
+<manifest android:installLocation="auto">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+    </queries>
+
+    <!-- android:hardwareAccelerated is highly recommended for video playback and scroll performance -->
+    <!-- android:windowSoftInputMode is used to push the content up when an input appears below the keyboard -->
+    <application 
+        android:hardwareAccelerated="true"
+        android:windowSoftInputMode="adjustResize">
+            
+        <activity 
+            android:name="com.distriqt.extension.nativewebview.activities.BrowseActivity" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+			android:exported="false" />
+
+        <activity 
+            android:name="com.distriqt.extension.nativewebview.permissions.AuthorisationActivity" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:exported="false" />
+
+    </application>
+</manifest>
+```
+
+
+
+### iOS
+
+#### InfoAdditions
+
+Since iOS 9, Apple has introduced the concept of App Transport Security (ATS). is encouraging the use of HTTPS
+
+App Transport Security (ATS) lets an app add a declaration to its Info.plist file that specifies 
+the domains with which it needs secure communication. ATS prevents accidental disclosure, provides 
+secure default behaviour, and is easy to adopt. You should adopt ATS as soon as possible, regardless 
+of whether you're creating a new app or updating an existing one. 
+
+If you're developing a new app, you should use HTTPS exclusively. If you have an existing app, you 
+should use HTTPS as much as you can right now, and create a plan for migrating the rest of your app 
+as soon as possible.
+
+In simple terms, this means that if your application attempts to connect to any HTTP server 
+(in this example, `yourserver.com`) that doesn’t support the latest SSL technology (TLSv1.2), 
+your connections will fail with an error.
+
+Basically the repercussions mean that you will need to add exceptions in for any non secure domain 
+you access. For example the following adds an exception for the `yourserver.com` domain and subdomains.
+
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSExceptionDomains</key>
+  <dict>
+    <key>yourserver.com</key>
+    <dict>
+      <!--Include to allow subdomains-->
+      <key>NSIncludesSubdomains</key>
+      <true/>
+      <!--Include to allow HTTP requests-->
+      <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+      <true/>
+    </dict>
+  </dict>
+</dict>
+```
+
+To read more about this there is a great article [here](https://medium.com/@squeakytoy/configuring-app-transport-security-exceptions-in-ios-9-and-osx-10-11-94a62f844944)
+
+

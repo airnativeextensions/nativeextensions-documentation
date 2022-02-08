@@ -37,7 +37,7 @@ for (var cookieName:String in cookies)
 
 ## HTML Source
 
-You can retrieve the current page source using the `htmlSource` property. This may be useful if you just want to inspect the contents of the loaded page, however if you need to interact with the content you should look into using the [javascript communication interface](communication).
+You can retrieve the current page source using the `htmlSource` property. This may be useful if you just want to inspect the contents of the loaded page, however if you need to interact with the content you should look into using the [javascript communication interface](communication.md).
 
 ```actionscript
 trace( webView.htmlSource );
