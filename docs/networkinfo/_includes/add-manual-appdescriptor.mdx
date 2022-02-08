@@ -1,0 +1,33 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.NetworkInfo</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+Depending on the functionality you will be using in your application you may 
+require the following permissions added to your manifest additions in your
+application descriptor:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+```
+
+### iOS
+
+#### InfoAdditions
+
+Nothing required 
