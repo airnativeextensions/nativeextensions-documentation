@@ -4,7 +4,7 @@ sidebar_label: Overlays - Polygons
 ---
 
 
-Polygons are an extension of a [polyline](overlays---polylines) allowing you to fill the area contained within the line, so they can be used to draw shapes on the map.
+Polygons are an extension of a [polyline](overlays---polylines.md) allowing you to fill the area contained within the line, so they can be used to draw shapes on the map.
 
 A polygon is represented by the `Polygon` class.
 

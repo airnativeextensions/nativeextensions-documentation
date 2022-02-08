@@ -22,7 +22,7 @@ https://console.developers.google.com
 - Create Credentials
   - Select Credentials
   - Click "Create credentials" and select "API key"
-  - Copy the generated API key and use it to replace `YOUR_API_KEY` in your manifest additions below
+  - Copy the generated **API key** and use it to configure your application later
 
 
 ## Restricting the API Key
@@ -55,49 +55,5 @@ keytool -exportcert -keystore /Applications/Adobe\ Flash\ Builder\ 4.7/eclipse/p
 
 
 Read more about restricting the API key [here](https://developers.google.com/maps/documentation/android-api/signup#restrict-key)
-
-
-
-
-## Manifest Additions 
-
-You need to add the following to the `android` node in your application descriptor. 
-
-Make sure you replace `YOUR_PACKAGE_NAME` with your application's package name eg `air.com.distriqt.test`
-and `YOUR_API_KEY` with your Google Maps API key from above.
-
-
-```xml
-<manifest android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="12" android:targetSdkVersion="24" />
-
-	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-	<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
-	<uses-permission android:name="android.permission.WAKE_LOCK"/>
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-
-	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-	
-	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-
-	<!-- Replace 'YOUR_PACKAGE_NAME' here with your application package eg: 'air.your.app.id'  -->
-	<uses-permission android:name="YOUR_PACKAGE_NAME.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
-
-	<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
-	
-	<application>
-		<!-- Replace "YOUR_API_KEY" with your Android Google Maps API Key -->
-		<meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR_API_KEY" />
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-
-		<activity android:name="com.distriqt.extension.nativemaps.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-	</application>
-
-</manifest>
-```
 
 
