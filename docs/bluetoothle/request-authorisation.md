@@ -56,7 +56,6 @@ function authorisationChangedHandler( event:AuthorisationEvent ):void
 ```
 
 
-
 ## Usage Description
 
 You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
