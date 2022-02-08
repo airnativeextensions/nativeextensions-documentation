@@ -1,0 +1,128 @@
+---
+title: Add the Extension
+sidebar_label: Add the Extension
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+
+:::info AIR SDK
+This ANE currently requires at least AIR 33+. This is required in order to support versions of Android > 9.0 (API 28). We always recommend using the most recent build with AIR especially for mobile development where the OS changes rapidly.
+:::
+
+
+## Install
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+### iOS Background Updates
+
+If you are planning to setup your application to receive background updates then you should include the `UIBackgroundModes` key, (however it is not required). If it is enabled, you will be able to receive updates in the background to trigger an event when your application is running in the background (and you have been granted the `ALWAYS` authorisation by the user, see later). If you don't add it, then you will only receive the updates when the application is running in the foreground. 
+
+Currently due to an AIR bug we can't receive location updates on iOS when the application isn't running. This is due to a bug where AIR applications cannot "start into the background" on iOS.
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+  
+To add these additions you need to add some additional configuration. Firstly add a custom iOS configuration file by running:
+
+```
+apm generate config ios
+```
+
+Edit the `config/ios/InfoAdditions.xml` file that was generated to resemble the following, adding the `UIBackgroundModes` node:
+
+```xml
+<plist version="1.0">
+    <dict>
+
+		<!-- Required if you wish to receive background location updates -->
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>location</string>
+		</array>
+
+    </dict>
+</plist>
+```
+
+Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
+
+
+  </TabItem>
+  <TabItem value="manual" >
+
+To add these additions you need to add some additional configuration. Then edit your info additions in your application descriptor to add the following: 
+
+```xml
+<!-- Required if you wish to receive background location updates -->
+<key>UIBackgroundModes</key>
+<array>
+	<string>location</string>
+</array>
+```
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+
+

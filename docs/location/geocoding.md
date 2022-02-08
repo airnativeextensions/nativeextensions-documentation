@@ -3,7 +3,6 @@ title: Geocoding
 sidebar_label: Geocoding
 ---
 
-## Geocoding
 
 Geocoding is the process of transforming a street address or other description of a location into a (latitude, longitude) coordinate. Reverse geocoding is the process of transforming a (latitude, longitude) coordinate into a (partial) address. The amount of detail in a reverse geocoded location description may vary, for example one might contain the full street address of the closest building, while another might contain only a city name and postal code.
 
@@ -12,7 +11,7 @@ Geocoding is provided through the `Location.service.geocoder` variable which is 
 
 
 
-### Support
+## Support
 
 Not every device will support geocoding. Android devices require a backend service that is not included in the core android framework, however most of the major handset providers do provide this.
 
@@ -29,7 +28,7 @@ If geocoding returns false you should not expect any of the other functionality 
 
 
 
-### Reverse Geocoding
+## Reverse Geocoding
 
 Reverse-geocoding requests take a latitude and longitude value and find a user-readable address.
 
@@ -72,7 +71,7 @@ function completeHandler( event:GeocoderEvent ):void
 
 
 
-### Forward Geocoding
+## Forward Geocoding
 
 Forward-geocoding requests take a user-readable address and find the corresponding latitude and longitude value. Forward-geocoding requests may also return additional information about the specified location, such as a point of interest or building at that location.
 

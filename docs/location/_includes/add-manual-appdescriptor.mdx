@@ -1,0 +1,111 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.Location</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.distriqt.playservices.Location</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+The Location extension requires a few additions to the manifest. These additions are to request permissions for the location information and to list receivers for the location updates. You should add the listing below to your manifest, you only need one of the permission 
+strings (coarse/fine) however both are listed below.
+
+> 
+> Make sure you replace `APPLICATION_PACKAGE` with your applications package eg. `air.com.distriqt.test`.
+> This is generally your AIR application id prefixed with `air.`
+>
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+
+	<application>
+	
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		
+        <receiver android:name="com.distriqt.extension.location.receivers.LocationReceiver" android:exported="true" >
+            <intent-filter>
+                <action android:name="APPLICATION_PACKAGE.LOCATION_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.distriqt.extension.location.services.LocationUpdateService" android:enabled="true" android:exported="true" />
+
+        <receiver android:name="com.distriqt.extension.location.receivers.GeofenceTransitionReceiver" android:exported="true" >
+            <intent-filter>
+                <action android:name="APPLICATION_PACKAGE.GEOFENCE_TRANSITION_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.distriqt.extension.location.receivers.BootReceiver" android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.distriqt.extension.location.services.GeofenceRestartService" android:exported="true" />
+
+        <activity android:name="com.distriqt.extension.location.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
+		
+	</application>
+	
+</manifest>
+```
+
+
+### iOS
+
+#### InfoAdditions
+
+Location updates require a few additions to the Info plist and Entitlements section of your application to correctly configure your application for location. You should add the listing below to your application descriptor iPhone info additions node.
+
+```xml
+<!-- iOS 6,7 -->
+<key>NSLocationUsageDescription</key>
+<string>This application would like to use your location.</string>
+
+<!-- iOS 8 + -->
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This application would like to use your location when in use.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>This application would like to use your location in the background.</string>
+
+<!-- iOS 11 + -->
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>This application would like to use your location in the background and the foreground.</string>
+```
+
+
+:::note
+If you are going to be sending data to a url don't forget to add the appropriate `NSAppTransportSecurity` definitions to your info additions.
+
+For example to allow all http requests:
+
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
+</dict>
+```
+
+:::
+
