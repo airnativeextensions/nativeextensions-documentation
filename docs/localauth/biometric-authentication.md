@@ -34,9 +34,9 @@ on the user's device including:
 
 
 
->
-> Note: Most devices support fingerprint **or** face biometric authentication and not both. 
->
+:::note
+Most devices support fingerprint **or** face biometric authentication and not both. 
+:::
 
 
 ## Authenticating
@@ -91,9 +91,9 @@ LocalAuth.service.authenticateWithBiometryType(
 );
 ```
 
->
-> Note: specifying the biometry type may return `false` when the biometry type is not supported 
->
+:::note
+Specifying the biometry type may return `false` when the biometry type is not supported 
+:::
 
 
 

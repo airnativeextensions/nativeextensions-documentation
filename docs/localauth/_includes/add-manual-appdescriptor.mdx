@@ -1,0 +1,43 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.LocalAuth</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+Fingerprint Authentication requires the application has the following android permission in your 
+application's manifest additions 
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+</manifest> 
+```
+
+
+### iOS
+
+#### InfoAdditions
+
+Using FaceID on iOS requires the addition of the FaceID usage string to your info additions:
+
+
+```xml
+<key>NSFaceIDUsageDescription</key>
+<string>This app uses Face ID to authenticate using facial recognition.</string>
+```
+
+For more details see [authorisation](../request-authorisation.md).
+

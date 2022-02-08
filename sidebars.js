@@ -1780,7 +1780,10 @@ module.exports = {
 			"Get Started": ["localauth/add-the-extension"],
 		},
 		{
-			Usage: ["localauth/biometric-authentication"],
+			Usage: [
+				"localauth/biometric-authentication",
+				"localauth/request-authorisation"
+			],
 		},
 		{
 			Other: [
