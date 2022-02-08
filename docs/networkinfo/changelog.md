@@ -1,3 +1,27 @@
+### 2022.02.08 [v4.0.12]
+
+```
+Update docs to use apm
+Fix air package to use correct manifest additions
+```
+
+
+
+### 2021.10.11 [v4.0.11]
+
+```
+Add air package 
+Remove ios minimum version flag
+```
+
+
+
+### 2020.12.10 [v4.1.010]
+
+```
+Android x64 support (resolves #34)
+Deprecated wiki
+```
 
 
 ### 2020.03.20 [v4.0.006]
