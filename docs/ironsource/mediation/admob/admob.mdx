@@ -1,0 +1,89 @@
+---
+title: Mediation - AdMob
+sidebar_label: AdMob
+slug: /ironsource/mediation/admob
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+
+This guide shows how to add mediation through AdMob to your IronSource integration.
+
+## Step 1: Create an AdMob Account
+
+1. To access AdMob’s ad inventory through ironSource‘s Mediation platform, you must create an account with AdMob. You can do so [here](https://www.google.com/admob/).
+
+2. We recommend to adjust the time zone of your AdMob’s account to UTC to align with the ironSource dashboard. This will ensure accurate reporting. More info [here](https://support.google.com/admob/answer/7276705?hl=en).
+
+## Step 2: Create an Application and Ad Zone in Admob
+
+Next, you must add your app and set up Ad Zones in your Admob account.
+
+https://developers.ironsrc.com/ironsource-mobile/android/admob-mediation-guide/#step-2
+
+## Step 3: Activate AdMob in Your ironSource Network Setup Module
+
+Serving Admob’s ads through the ironSource Mediation platform has never been this easy. Sign in to your Google account when setting up Admob on the ironSource SDK Networks Setup and we’ll retrieve all the necessary parameters to run Admob’s Interstitials, Rewarded Video and Banners for you!
+
+See the following guide for more information:
+
+https://developers.ironsrc.com/ironsource-mobile/android/admob-mediation-guide/#step-3
+
+
+## Step 4: Add the AdMob Adapter to Your Build
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+### Add the Extension
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+### Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+## Step 5: Additional code required
+
+There is no additional code required.

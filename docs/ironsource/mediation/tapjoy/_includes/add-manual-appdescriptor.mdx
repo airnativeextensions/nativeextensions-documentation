@@ -1,0 +1,81 @@
+
+#### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>com.distriqt.IronSource</extensionID>
+
+    <extensionID>com.distriqt.ironsource.Tapjoy</extensionID>
+
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.distriqt.playservices.Ads</extensionID>
+    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+
+    <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+
+
+#### Android
+
+##### Manifest Additions
+
+Add the following to your manifest additions inside the `application` tag. 
+
+```xml
+<!-- TAPJOY -->
+<activity
+	android:name="com.tapjoy.TJAdUnitActivity"
+	android:configChanges="orientation|keyboardHidden|screenSize"
+	android:hardwareAccelerated="true"
+	android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+<activity
+	android:name="com.tapjoy.TJContentActivity"
+	android:configChanges="orientation|keyboardHidden|screenSize"
+	android:hardwareAccelerated="true"
+	android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+<receiver android:name="com.tapjoy.TapjoyReceiver" />
+```
+
+#### iOS 
+
+##### Info Additions
+
+
+Add the following to your `InfoAdditions` node updating the usage description strings as required for your application:
+
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSExceptionDomains</key>
+   <dict>
+       <key>localhost</key>
+       <dict>           
+           <key>NSExceptionAllowsInsecureHTTPLoads</key>
+           <true/>
+       </dict>
+   </dict>
+</dict>
+
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+    <dict>
+        <!-- Tapjoy -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>ECPZ2SRF59.skadnetwork</string>
+    </dict>
+</array>
+```
+

@@ -1,44 +1,7 @@
----
-title: Mediation - UnityAds
-sidebar_label: UnityAds
----
 
-This guide shows how to add mediation through UnityAds to your IronSource integration.
+#### Extension IDs
 
-
-## Step 1: Create a UnityAds Account
-
-1. Create an account with UnityAds. You can do so [here](https://operate.dashboard.unity3d.com/).
-
-2. Once your account has been verified you can log in at their partner login [here](https://operate.dashboard.unity3d.com/).
-
-
-
-
-
-## Step 2: Create an Application and Placement in UnityAds
-
-Follow these steps to create your UnityAds application:
-
-https://developers.ironsrc.com/ironsource-mobile/android/unityads-mediation-guide/#step-2
-
-
-
-## Step 3: Activate UnityAds on ironSource Network SDK Setup
-
-https://developers.ironsrc.com/ironsource-mobile/android/unityads-mediation-guide/#step-3
-
-
-
-## Step 4: Add the UnityAds Adapter to Your Build
-
-The `com.distriqt.ironsource.UnityAds` ANE includes the UnityAds SDK and the IronSource UnityAds mediation adapter. This is everything you need to get UnityAds mediation working in your application.
-
-To add the ANE download it from the repository and add it to your application:
-
-- [com.distriqt.ironsource.UnityAds](https://github.com/distriqt/ANE-IronSource/raw/master/lib/unityads/com.distriqt.ironsource.UnityAds.ane)
-
-Add the extension id to your application descriptor:
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
 
 ```xml
 <extensions>
@@ -56,16 +19,11 @@ Add the extension id to your application descriptor:
 </extensions>
 ```
 
-More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
 
 
+#### Android
 
-## Step 5: Additional code required
-
-There is no additional code required just a few additional configuration options and files that need to be packaged with your application.
-
-
-### Android
+##### Manifest Additions
 
 Add the following to your manifest additions inside the `application` tag. 
 
@@ -94,7 +52,9 @@ Add the following to your manifest additions inside the `application` tag.
 ```
 
 
-### iOS 
+#### iOS 
+
+##### Info Additions
 
 
 Add the following to your `InfoAdditions` node updating the usage description strings as required for your application:
@@ -127,6 +87,3 @@ Add the following to your `InfoAdditions` node updating the usage description st
     </dict>
 </array>
 ```
-
-
-

@@ -1,57 +1,5 @@
----
-title: Mediation - AdMob
-sidebar_label: AdMob
----
 
-This guide shows how to add mediation through AdMob to your IronSource integration.
-
-## Step 1: Create an AdMob Account
-
-1. To access AdMob’s ad inventory through ironSource‘s Mediation platform, you must create an account with AdMob. You can do so [here](https://www.google.com/admob/).
-
-2. We recommend to adjust the time zone of your AdMob’s account to UTC to align with the ironSource dashboard. This will ensure accurate reporting. More info [here](https://support.google.com/admob/answer/7276705?hl=en).
-
-## Step 2: Create an Application and Ad Zone in Admob
-
-Next, you must add your app and set up Ad Zones in your Admob account.
-
-https://developers.ironsrc.com/ironsource-mobile/android/admob-mediation-guide/#step-2
-
-## Step 3: Activate AdMob in Your ironSource Network Setup Module
-
-Serving Admob’s ads through the ironSource Mediation platform has never been this easy. Sign in to your Google account when setting up Admob on the ironSource SDK Networks Setup and we’ll retrieve all the necessary parameters to run Admob’s Interstitials, Rewarded Video and Banners for you!
-
-See the following guide for more information:
-
-https://developers.ironsrc.com/ironsource-mobile/android/admob-mediation-guide/#step-3
-
-## Step 4. Add the AdMob Adapter to Your Build
-
-The `com.distriqt.ironsource.AdMob` ANE includes the IronSource AdMob mediation adapter. This is everything you need to get AdMob mediation working in your application.
-
-To add the ANE download it from the repository and add it to your application:
-
-- [com.distriqt.ironsource.AdMob](https://github.com/distriqt/ANE-IronSource/raw/master/lib/admob/com.distriqt.ironsource.AdMob.ane)
-
-### Android Support
-
-The Android Support libraries encompass the Android Support, Android X and common Google libraries.
-
-These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
-
-This extension requires the following extensions:
-
-- [androidx.core](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
-- [androidx.browser](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
-- [androidx.room](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.room.ane)
-- [androidx.work](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.work.ane)
-- [com.google.guava](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.guava.ane)
-
-You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
-
-> **Note**: if you have been using the older `com.distriqt.androidsupport.*` (Android Support) extensions you should remove these extensions and replace it with the `androidx` extensions listed above. This is the new version of the android support libraries and moving forward all our extensions will require AndroidX.
-
-### Extension IDs
+#### Extension IDs
 
 Add the extension id to your application descriptor:
 
@@ -74,13 +22,12 @@ Add the extension id to your application descriptor:
 </extensions>
 ```
 
-More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
 
-## Step 5: Additional code required
 
-There is no additional code required just a few additional configuration options and files that need to be packaged with your application.
+#### Android
 
-### Android
+##### Manifest Additions
+
 
 Add the following to your manifest additions inside the `application` tag.
 
@@ -205,7 +152,9 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
     android:exported="false" />
 ```
 
-### iOS
+#### iOS 
+
+##### Info Additions
 
 Add the following to your `InfoAdditions` node updating the usage description strings as required for your application:
 

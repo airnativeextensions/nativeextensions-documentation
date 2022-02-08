@@ -1,0 +1,101 @@
+---
+title: Mediation - AppLovin
+sidebar_label: AppLovin
+slug: /ironsource/mediation/applovin
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+
+This guide shows how to add mediation through AppLovin to your IronSource integration.
+
+
+## Step 1: Create an AppLovin Account 
+
+1. Create an account with AppLovin. You can do so [here](https://www.applovin.com/signup).
+
+2. Once your account has been verified you can login at their partner login [here](https://www.applovin.com/login).
+
+
+## Step 2: Retrieve Your AppLovin SDK and Report Keys
+
+There are 2 pieces of data from the AppLovin account which need to be inserted into your ironSource Network Setup Module in order for AppLovin to work correctly in connection with ironSource:
+
+- Report Key: This is a unique identifier for your AppLovin account, which allows your ironSource Mediation Platform to import performance data from your AppLovin account to use in reporting & optimization.
+- SDK Key: This is a unique identifier for your AppLovin account. This is used by the ironSource Mediation SDK to Init the AppLovin Adapter for your apps.
+
+Once you obtain this information, you must configure the AppLovin parameters in your ironSource Account. By adding the above information correctly, you will be able to take full advantage of AppLovin’s ad inventory and reporting data on ironSource’s Mediation platform.
+
+
+https://developers.ironsrc.com/ironsource-mobile/android/applovin-mediation-guide/#step-2
+
+
+## Step 3: Activate AppLovin on the ironSource SDK Networks Module
+
+Configure AppLovin’s Parameters into ironSource Account
+
+See the following guide for more information:
+
+https://developers.ironsrc.com/ironsource-mobile/android/applovin-mediation-guide/#step-3
+
+
+
+## Step 4: Add the AppLovin Adapter to Your Build
+
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+### Add the Extension
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+### Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+## Step 5: Additional code required
+
+There is no additional code required.
+

@@ -1,0 +1,35 @@
+
+#### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>com.distriqt.IronSource</extensionID>
+
+    <extensionID>com.distriqt.ironsource.Amazon</extensionID>
+
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.distriqt.playservices.Ads</extensionID>
+
+    <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+
+
+#### Android
+
+##### Manifest Additions
+
+Add the following to your manifest additions inside the `application` tag. 
+
+
+```xml
+<!-- AMAZON -->
+<activity
+    android:name="com.amazon.device.ads.AdActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize" />
+```

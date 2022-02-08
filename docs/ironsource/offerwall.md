@@ -170,4 +170,4 @@ If you turn on server-to-server callbacks in addition to the client-side callbac
 
 ## Errors
 
-See the complete description of the ironSource errors [here](errors).
+See the complete description of the ironSource errors [here](errors.md).

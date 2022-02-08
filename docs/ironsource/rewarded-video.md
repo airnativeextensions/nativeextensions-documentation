@@ -116,4 +116,4 @@ function onRewardedVideoAdClicked( event:RewardedVideoAdEvent ):void
 
 ## Errors
 
-See the complete description of the ironSource errors [here](errors).
+See the complete description of the ironSource errors [here](errors.md).

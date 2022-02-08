@@ -1,0 +1,137 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+	<extensionID>com.distriqt.IronSource</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.playservices.Ads</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
+	
+    <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+
+The IronSource ANE requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your manifest additions. 
+
+You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+<application android:hardwareAccelerated="true">
+
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+    <activity
+        android:name="com.ironsource.sdk.controller.ControllerActivity"
+        android:configChanges="orientation|screenSize"
+        android:hardwareAccelerated="true" />
+    <activity
+        android:name="com.ironsource.sdk.controller.InterstitialActivity"
+        android:configChanges="orientation|screenSize"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Translucent" />
+    <activity
+        android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+        android:configChanges="orientation|screenSize"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Translucent" />
+	<provider
+		android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+		android:authorities="APPLICATION_PACKAGE.IronsourceLifecycleProvider" />
+
+</application>
+```
+
+
+### iOS 
+
+#### Info Additions
+
+
+App Transport Security (ATS) is a privacy feature introduced in iOS 9. It's enabled 
+by default for new applications and enforces secure connections.
+
+All iOS 9 or higher devices running apps that don't disable ATS will be affected by 
+this change. This may affect your app's integration with the Google Mobile Ads SDK.
+
+The following log message appears when a non-ATS compliant app attempts to serve an 
+ad via HTTP on iOS 9 or iOS 10:
+
+> App Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.
+
+To ensure your ads are not impacted by ATS, add the following to the `InfoAdditions`
+node in your `iPhone` settings of your application descriptor:
+
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
+	<key>NSAllowsArbitraryLoadsForMedia</key>
+	<true/>
+	<key>NSAllowsArbitraryLoadsInWebContent</key>
+	<true/>
+</dict>
+
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <!-- IronSource -->
+        <key>SKAdNetworkIdentifier</key>
+        <string>SU67R6K2V3.skadnetwork</string> 
+    </dict>
+</array>
+```
+
+The `NSAllowsArbitraryLoads` exception is required to make sure your ads are not 
+impacted by ATS on iOS 9 devices, while `NSAllowsArbitraryLoadsForMedia` and 
+`NSAllowsAribtraryLoadsInWebContent` are required to make sure your ads are 
+not impacted by ATS on iOS 10 devices.
+
+
+Example:
+
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+		<key>UIDeviceFamily</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+		</array>
+
+		<key>NSAppTransportSecurity</key>
+		<dict>
+			<key>NSAllowsArbitraryLoads</key>
+			<true/>
+			<key>NSAllowsArbitraryLoadsForMedia</key>
+			<true/>
+			<key>NSAllowsArbitraryLoadsInWebContent</key>
+			<true/>
+		</dict>
+
+		<key>GADApplicationIdentifier</key>
+		<string>ca-app-pub-AAAAAAAAAAAAAAAA~XXXXXXXXXX</string>
+	]]></InfoAdditions>
+	<requestedDisplayResolution>high</requestedDisplayResolution>
+	<Entitlements>
+		<![CDATA[
+		]]>
+	</Entitlements>
+</iPhone>
+```
