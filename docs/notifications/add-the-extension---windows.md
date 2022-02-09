@@ -7,8 +7,8 @@ sidebar_label: Add the Extension - Windows
 There are several additional things to consider on Windows:
 
 - [Appx Packaging](/docs/tutorials/windows-appx-packaging)
-- Additional Dll [Dependencies](add-the-extension---windows#dependencies)
-- [AppxManifest additions](add-the-extension---windows#appxmanifest)
+- Additional Dll [Dependencies](#dependencies)
+- [AppxManifest additions](#appxmanifest)
 
 
 

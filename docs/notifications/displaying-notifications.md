@@ -41,15 +41,13 @@ Notifications.service.notify(
 );
 ```
 
->
-> Note: 
-> 
-> On Android, if a notification with the same `id` has already been posted by your application 
-> and has not yet been canceled, it will be replaced by the updated information. 
-> 
-> On iOS < 10, a new notification will always be displayed. On iOS 10 the old notification will be 
-> replaced with the new notification.
->
+:::note
+On Android, if a notification with the same `id` has already been posted by your application 
+and has not yet been canceled, it will be replaced by the updated information. 
+ 
+On iOS < 10, a new notification will always be displayed. On iOS 10 the old notification will be 
+replaced with the new notification.
+:::
 
 
 ## Alert, Title, Body, What goes where?
@@ -127,7 +125,7 @@ Notifications.service.notify(
 );
 ```
 
-The payload is return in the notification events, more on this in the [Receiving Notifications](receiving-notifications) section.
+The payload is return in the notification events, more on this in the [Receiving Notifications](receiving-notifications.md) section.
 
 
 

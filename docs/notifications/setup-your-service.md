@@ -44,8 +44,9 @@ service.categories.push(
 Notifications.service.setup( service );
 ```
 
-> Note: `setDestructive()` is only supported on some platforms. 
-
+:::note
+`setDestructive()` is only supported on some platforms. 
+:::
 
 ### Actions
 
@@ -104,16 +105,17 @@ service.enableNotificationsWhenActive = true;
 
 New to Android `8.0` (API level 26) is the concept of a notification channel. 
 
->
-> Notification channels provide a unified system to help users manage notifications. When you target Android 8.0 (API level 26), you must implement one or more notification channels to display notifications to your users. If you don't target Android 8.0 (API level 26) but your app is used on devices running Android 8.0 (API level 26), your app behaves the same as it would on devices running Android 7.1 (API level 25) or lower.
->
+:::info
+Notification channels provide a unified system to help users manage notifications. When you target Android 8.0 (API level 26), you must implement one or more notification channels to display notifications to your users. If you don't target Android 8.0 (API level 26) but your app is used on devices running Android 8.0 (API level 26), your app behaves the same as it would on devices running Android 7.1 (API level 25) or lower.
+:::
 
-
-> Note: The user interface refers to notification channels as notification categories.
+:::note
+The user interface refers to notification channels as notification categories.
+:::
 
 You can create an instance of a `Channel` for each distinct type of notification you need to send. You can also create notification channels to reflect choices made by users of your app. For example, you may set up separate notification channels for each conversation group created by a user in a messaging app.
 
-Users can manage most of the settings associated with notifications using a consistent system UI. All notifications posted to the same notification channel have the same behavior. When a user modifies the behavior for any of the following characteristics, it applies to the notification channel:
+Users can manage most of the settings associated with notifications using a consistent system UI. All notifications posted to the same notification channel have the same behaviour. When a user modifies the behaviour for any of the following characteristics, it applies to the notification channel:
 
 - Importance
 - Sound
@@ -124,7 +126,7 @@ Users can manage most of the settings associated with notifications using a cons
 
 ![](images/android-channels-settings.png)
 
-Users can visit Settings, or long-press a notification to change these behaviors, or even block a notification channel at any time. You can't programmatically modify the behavior of a notification channel after it's created and submitted to the notification manager; the user is in charge of those settings after creation. You can however rename a notification channel or update its description after creation.
+Users can visit Settings, or long-press a notification to change these behaviors, or even block a notification channel at any time. You can't programmatically modify the behaviour of a notification channel after it's created and submitted to the notification manager; the user is in charge of those settings after creation. You can however rename a notification channel or update its description after creation.
 
 
 #### Creating Channels
@@ -146,6 +148,8 @@ service.channels.push(
 );
 ```
 
-**You must add at least one channel.**
+:::caution
+You must add at least one channel.
+:::
 
 

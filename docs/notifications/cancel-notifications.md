@@ -37,16 +37,15 @@ You can use that `id` to then cancel the notification, by calling `cancel`
 Notifications.service.cancel( id );
 ```
 
->
-> Note:
-> 
-> On iOS < 10, this function can only cancel delayed or recurring notifications that 
-> are yet to be delivered. Any notifications that have already been displayed in the 
-> notification area are not removed.
->
-> With iOS < 10 they can only be removed from the notification area either by the
-> user or by calling `cancelAll`.
->
+
+:::note
+On iOS < 10, this function can only cancel delayed or recurring notifications that 
+are yet to be delivered. Any notifications that have already been displayed in the 
+notification area are not removed.
+
+With iOS < 10 they can only be removed from the notification area either by the
+user or by calling `cancelAll`.
+:::
 
 
 

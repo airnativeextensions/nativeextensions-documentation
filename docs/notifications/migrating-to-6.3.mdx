@@ -1,0 +1,91 @@
+---
+title: Migrating to v6.3
+sidebar_label: Migrating to v6.3
+---
+
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+## Android 31
+
+When users interact with notifications, our extension responds to notification taps by launching an app component that eventually starts the AIR activity that the user finally sees and interacts with. This app component is known as a notification trampoline.
+
+With Android 12 (API 31) the system prevents the activity from starting, and the following message appears in Logcat: 
+
+```
+Indirect notification activity start (trampoline) from PACKAGE_NAME, \
+this should be avoided for performance reasons.
+```
+
+More information [here](https://developer.android.com/about/versions/12/behavior-changes-12#notification-trampolines)
+
+
+To resolve this we have needed to completely redesign the notification system on Android 12. While this is a major refactor internally to the extension there are only a few things you need to manage. The API has not changed and you won't see any change to the events or order of the events. 
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you are using [`apm`](https://github.com/airsdk/apm) all you need to do is update to the latest build and regenerate your application descriptor. `apm` will handle the rest.
+
+```
+apm update 
+apm generate app-descriptor src/Main-app.xml
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+If you are manually managing your application descriptor (and manifest additions) then you need to find the following in your manifest:
+
+```xml
+<receiver android:name="com.distriqt.extension.notifications.notifications.receivers.NotificationReceiver" android:exported="false">
+	<intent-filter>
+		<action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED" />
+		<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELETED" />
+		<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
+		<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELAYED" />
+		<data android:scheme="dtn" />
+	</intent-filter>
+	<intent-filter>
+		<action android:name="android.intent.action.BOOT_COMPLETED" />
+		<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+	</intent-filter>
+</receiver>
+```
+
+
+And replace it with this (ensuring you replace `APPLICATION_PACKAGE` with your application's package name):
+
+```xml
+<receiver android:name="com.distriqt.extension.notifications.notifications.receivers.NotificationReceiver" android:exported="false">
+	<intent-filter>
+		<action android:name="android.intent.action.BOOT_COMPLETED" />
+		<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+	</intent-filter>
+</receiver>
+<activity android:name="com.distriqt.extension.notifications.notifications.NotificationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false">
+	<intent-filter>
+		<action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED" />
+		<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELETED" />
+		<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
+		<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELAYED" />
+		<data android:scheme="dtn" />
+	</intent-filter>
+</activity>
+```
+
+
+  </TabItem>
+  
+</Tabs>
+

@@ -45,9 +45,7 @@ switch (Notifications.service.authorisationStatus())
 		break;
 }
 
-...
-
-private function authorisationChangedHandler( event:AuthorisationEvent ):void
+function authorisationChangedHandler( event:AuthorisationEvent ):void
 {
 	// Check the authorisation state again (as above)
 }

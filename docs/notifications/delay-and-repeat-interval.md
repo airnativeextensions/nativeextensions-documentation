@@ -44,22 +44,21 @@ Notifications.service.notify(
 ```
 
 
->
-> **Note**:
->
-> On Android when a device is restarted or killed (force kill) the delayed/repeated notifications are 
-> cleared from the Android AlarmManager. We have implemented two checks to handle these cases.
-> 
-> The first is upon device boot, as long as your application has been run once and has not been 
-> force killed, the notifications will be restored at boot, as long as you have the boot permission 
-> in your manifest.
->
-> The second check is implemented in the register function. This is to account for the force kill 
-> scenario when the user restarts your application, any previously scheduled notifications will be 
-> restored at this point.
-> 
-> This should happen seemlessly as long as you have followed this guide and this information is more for your information.
-> 
+:::info
+On Android when a device is restarted or killed (force kill) the delayed/repeated notifications are 
+cleared from the Android AlarmManager. We have implemented two checks to handle these cases.
+
+The first is upon device boot, as long as your application has been run once and has not been 
+force killed, the notifications will be restored at boot, as long as you have the boot permission 
+in your manifest.
+
+The second check is implemented in the register function. This is to account for the force kill 
+scenario when the user restarts your application, any previously scheduled notifications will be 
+restored at this point.
+
+This should happen seemlessly as long as you have followed this guide and this information is more for your information.
+:::
+
 
 
 
@@ -109,13 +108,13 @@ Notifications.service.notify(
 ``` 
 
 
-### iOS 10
+### iOS 
 
-With iOS 10 and higher, Apple have severly limited the ability to schedule **and** repeat notifications. 
+With iOS 10 and higher, Apple have severely limited the ability to schedule **and** repeat notifications. 
 
 Instead of being able to specify the first notification date and then a repeat interval we can only use the fire date to specify the details of the repeat interval. 
 
-So we cannot specify an initial delay to the first notification occurence. If the above example was called before 7am then the first notification would occur today and not tomorrow on iOS 10+ device. The day specified in the fire date for the daily repeat interval will be ignored.  
+So we cannot specify an initial delay to the first notification occurrence. If the above example was called before 7am then the first notification would occur today and not tomorrow on iOS 10+ device. The day specified in the fire date for the daily repeat interval will be ignored.  
 
 
 The issue becomes more prevalent if you were attempting to set reminders for important events eg, remind your user to take their medication at 7am by setting a reminder every minute after 7am:
@@ -136,18 +135,18 @@ Notifications.service.notify(
 );
 ``` 
 
-Instead of waiting until 7am tomorrow this alarm would immediately start occuring every minute. 
+Instead of waiting until 7am tomorrow this alarm would immediately start occurring every minute. 
 
 
 Please be aware of this limitation if you are combining delays and repeat intervals. 
 
-> 
-> If you are wanting to have consistent repeating notifications across platforms we suggest considering the repeat interval as the priority and the fire date and specifying the time components of the interval smaller than the repeat interval. 
->
-> For example, create:
-> - a daily notification at a particular time (hour / minute eg `07:00`)
-> - an hourly notification at a particular minute (eg quarter past the hour, `:15`)
->
+:::caution
+If you are wanting to have consistent repeating notifications across platforms we suggest considering the repeat interval as the priority and the fire date and specifying the time components of the interval smaller than the repeat interval. 
+
+For example, create:
+- a daily notification at a particular time (hour / minute eg `07:00`)
+- an hourly notification at a particular minute (eg quarter past the hour, `:15`)
+:::
 
 If you have any concerns or need some help on creating a specific repeating notification feel free to ask our support team.
 

@@ -2103,7 +2103,10 @@ module.exports = {
 			"Other features": ["notifications/set-badge-number"],
 		},
 		{
-			Troubleshooting: ["notifications/migrating-to-androidx"],
+			Troubleshooting: [
+				"notifications/migrating-to-androidx",
+		        "notifications/migrating-to-6.3",
+			],
 		},
 		{
 			Other: [

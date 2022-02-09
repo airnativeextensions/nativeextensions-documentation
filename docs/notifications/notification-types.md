@@ -11,7 +11,7 @@ On Android the icon must be customised by adding some resources to your applicat
 
 ![](images/android-notification.png)
 
-- Read more here: [Icons](notification-icons)
+- Read more here: [Icons](notification-icons.md)
 
 
 ### Large Icon
@@ -111,6 +111,7 @@ Notifications.service.notify(
 
 
 #### Support: 
+
 - Android v5.0 + 
 - iOS
 - Windows 10
@@ -307,9 +308,9 @@ Notifications.service.notify(
 
 The parameter for the `setBackgroundImage` method should be a path to the packaged image asset relative to your application root or a URL to a public image. URL's are discouraged due to the network access and download required.
 
->
-> Note: On Android setting the background image of a notification will remove the notification icon and large icon. If you need to display these you should add them to your image.
->
+:::note
+On Android setting the background image of a notification will remove the notification icon and large icon. If you need to display these you should add them to your image.
+:::
 
 #### Text Colour
 
@@ -327,6 +328,7 @@ Colour supported formats are:
 The following names are also accepted: red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray, darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy, olive, purple, silver, and teal.
 
 #### Support: 
+
 - Android v5.0+
 - Windows Anniversary Update 
 
