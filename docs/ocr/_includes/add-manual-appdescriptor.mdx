@@ -1,0 +1,30 @@
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.OCR</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+</extensions>
+```
+
+
+
+### iOS 
+
+#### Dynamic Frameworks
+
+Tesseract is based on a dynamic framework so you must include the framework in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+It should contain all the `dylib` files in the supplied `Frameworks` directory and the `TesseractOCR.framework` .
+
+Your `Frameworks` directory should at least contain:
+
+```
+TesseractOCR.framework
+```
+
