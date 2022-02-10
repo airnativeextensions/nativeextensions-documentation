@@ -35,7 +35,7 @@ improving and updating the extensions for OS updates and feature requests.
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-Location/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/pdfreader). 
+The [documentation site](https://docs.airnativeextensions.com/docs/pdfreader/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/pdfreader). 
 
 
 Quick Example:
