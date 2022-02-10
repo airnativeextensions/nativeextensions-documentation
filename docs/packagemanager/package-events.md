@@ -20,7 +20,7 @@ function packageRemovedHandler( event:PackageManagerEvent ):void
 
 The extension can also dispatch events for any package that was removed while your application was not running. These events will get dispatched straight after you add a listener for the package removed event.
 
-In order for your application to receive events while your application is not running, you must add the following to your Android applications manifest additions. You should have done this as part of the [Add the Extension](add-the-extension) section but we will list the important receiver again here.
+In order for your application to receive events while your application is not running, you must add the following to your Android applications manifest additions. You should have done this as part of the [Add the Extension](add-the-extension.mdx) section but we will list the important receiver again here.
 
 ```xml
 <receiver android:name="com.distriqt.extension.packagemanager.receivers.PackageManagerReceiver" android:enabled="true" android:exported="true" >
@@ -31,8 +31,7 @@ In order for your application to receive events while your application is not ru
 </receiver>
 ``` 
 
-
->
-> **Note**: This event is **not** dispatched when your application is removed. You cannot detect your own application's removal using this process only other applications.
->
+:::caution
+This event is **not** dispatched when *your* application is removed. You cannot detect your own application removal using this process only other applications.
+:::
 
