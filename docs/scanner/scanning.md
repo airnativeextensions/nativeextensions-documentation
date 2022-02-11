@@ -19,10 +19,10 @@ The second is to show a preview contained within an area (viewport) of your appl
 The third is to scan an image directly by passing bitmap data to the extension. 
 
 
-Below we describe the methods using the camera. You can find information on bitmap data scanning [here](scanning-bitmap-data).
+Below we describe the methods using the camera. You can find information on bitmap data scanning [here](scanning-bitmap-data.md).
 
 :::info Authorisation
-Ensure you have [requested authorisaton](requesting-access) to use the camera before attempting to use these methods. 
+Ensure you have [requested authorisaton](requesting-access.md) to use the camera before attempting to use these methods. 
 :::
 
 

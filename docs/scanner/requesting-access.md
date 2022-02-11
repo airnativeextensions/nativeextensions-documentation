@@ -79,3 +79,15 @@ private function authorisationChangedHandler( event:AuthorisationEvent ):void
 }
 ```
 
+
+
+## Usage Description
+
+You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
+
+The image below is an example of the authorisation dialog. The content *"Require Camera"* is the usage description message you can set.
+
+![](images/ios-permission-dialog-camera.png)
+
+You set these values through adding the usage description keys to your application descriptor's info additions or simply by setting up your configuration options in your `apm` project. 
+
