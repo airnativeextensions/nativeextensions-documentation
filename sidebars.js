@@ -59,7 +59,6 @@ module.exports = {
 
 				{ type: "ref", id: "mediaplayer/index" },
 				{ type: "ref", id: "memory/index" },
-				{ type: "ref", id: "message/index" },
 
 				{ type: "ref", id: "nativemaps/index" },
 				{ type: "ref", id: "nativewebview/index" },
@@ -74,6 +73,7 @@ module.exports = {
 				{ type: "ref", id: "permissions/index" },
 				{ type: "ref", id: "pushnotifications/index" },
 
+				{ type: "ref", id: "restartapp/index" },
 				{ type: "ref", id: "rootchecker/index" },
 
 				{ type: "ref", id: "scanner/index" },
@@ -2344,6 +2344,30 @@ module.exports = {
 			],
 		},
 	],
+
+
+	restartapp: [
+		{ type: "ref", id: "index" },
+		{ type: "doc", id: "restartapp/index" },
+		{ type: "doc", id: "restartapp/add-the-extension" },
+		{ type: "doc", id: "restartapp/restart-application" },
+		{
+			Other: [
+				{ type: "doc", id: "restartapp/changelog" },
+				{
+					type: "link",
+					label: "asdocs",
+					href: "https://docs.airnativeextensions.com/asdocs/restartapp/",
+				},
+				{
+					type: "link",
+					label: "Contact Support",
+					href: "http://github.com/distriqt/ANE-RestartApp/issues/new",
+				},
+			],
+		},
+	],
+
 
 	rootchecker: [
 		{ type: "ref", id: "index" },
