@@ -3,6 +3,8 @@ title: Positioning
 sidebar_label: Positioning
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
 In general the share dialog is presented as a slide up dialog presenting the available sharing options.
 
@@ -22,8 +24,13 @@ For example if we had a button located at x,y `100,100` of width `200` and heigh
 the following will use the best positioning for the dialog and display a small arrow pointing 
 to the button:
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript  title="AIR"
+```actionscript  
 var options:ShareOptions = new ShareOptions();
 options.position = new Rectangle( 100, 100, 200, 50 );
 options.arrowDirection = ShareOptions.ARROWDIRECTION_ANY;
@@ -31,13 +38,21 @@ options.arrowDirection = ShareOptions.ARROWDIRECTION_ANY;
 Share.service.share( "Share text", null, "http://airnativeextensions.com", options );
 ```
 
-```csharp  title="Unity"
+
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp  
 ShareOptions options = new ShareOptions();
 options.position = new Rect(100, 100, 200, 50);
 options.arrowDirection = ShareOptions.ARROWDIRECTION_ANY;
 
 Share.Instance.share( "Share text", null, "http://airnativeextensions.com", options );
 ```
+
+  </TabItem>
+</Tabs>
+
 
 
 ![](images/Share_ios_positioning_any.png)
@@ -46,14 +61,33 @@ Share.Instance.share( "Share text", null, "http://airnativeextensions.com", opti
 Or we could limit the dialog to only appear to the left or right of the position by using 
 bitwise-OR to combine the required directions:
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 var options:ShareOptions = new ShareOptions();
 options.position = new Rectangle( 100, 100, 200, 50 );
 options.arrowDirection = ShareOptions.ARROWDIRECTION_LEFT | ShareOptions.ARROWDIRECTION_RIGHT;
 
 Share.service.share( "Share text", null, "http://airnativeextensions.com", options );
 ```
+
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp  
+ShareOptions options = new ShareOptions();
+options.position = new Rect(100, 100, 200, 50);
+options.arrowDirection = ShareOptions.ARROWDIRECTION_LEFT | ShareOptions.ARROWDIRECTION_RIGHT;
+
+Share.Instance.share( "Share text", null, "http://airnativeextensions.com", options );
+```
+
+  </TabItem>
+</Tabs>
 
 ![](images/Share_ios_positioning_left.png)
 
@@ -68,8 +102,13 @@ If you need to center the dialog you can simply use the center of the screen as 
 
 For example:
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 var options:ShareOptions = new ShareOptions();
 options.position = new Rectangle( stage.stageWidth*0.5, stage.stageHeight * 0.5, 0, 0 );
 options.arrowDirection = ShareOptions.ARROWDIRECTION_NONE;
@@ -77,15 +116,19 @@ options.arrowDirection = ShareOptions.ARROWDIRECTION_NONE;
 Share.service.share( "Share text", null, "http://airnativeextensions.com", options );
 ```
 
-Unity: 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp  title="Unity"
+```csharp  
 ShareOptions options = new ShareOptions();
 options.position = new Rect(centerX, centerY, 0, 0);
 options.arrowDirection = ShareOptions.ARROWDIRECTION_NONE;
 
 Share.Instance.share( "Share text", null, "http://airnativeextensions.com", options );
 ```
+
+  </TabItem>
+</Tabs>
 
 
 ![](images/Share_ios_positioning_centered.png)

@@ -3,6 +3,9 @@ title: Launch Applications
 sidebar_label: Launch Applications
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 This function allows your application to start another application on the device. 
 It uses different methods on iOS and Android however both will allow you to specify start up parameters to an application:
 
@@ -11,8 +14,13 @@ It uses different methods on iOS and Android however both will allow you to spec
 
 The simplest example of launching another application if installed.
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 var app:Application = new Application( "com.instagram.android", "instagram://" );
  
 if (Share.service.applications.isInstalled( app ))
@@ -21,7 +29,10 @@ if (Share.service.applications.isInstalled( app ))
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 plugins.share.applications.Application app
         = new plugins.share.applications.Application(
             "com.instagram.android",
@@ -33,10 +44,23 @@ if (Share.Instance.Applications.IsInstalled(app))
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
+
+
+
 An example of launching Instagram and opening a specific user profile
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 var app:Application = new Application( "com.instagram.android", "instagram://" );
 
 var options:ApplicationOptions = new ApplicationOptions();
@@ -50,7 +74,10 @@ if (Share.service.applications.isInstalled( app ))
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 plugins.share.applications.Application app
         = new plugins.share.applications.Application(
             "com.instagram.android",
@@ -67,30 +94,37 @@ if (Share.Instance.Applications.IsInstalled(app))
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
 
 ## iOS 
 
 On iOS you must add the application schemes you wish to query or launch to your info additions. 
 If you don't perform these additions you will always receive `false` from the `isInstalled()` and the launch functions.
 
-
-### AIR
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 You should add the `LSApplicationQueriesSchemes` value to your `InfoAdditions` in your application descriptor, and include the schemes for the applications you intend to query.
 
 ```xml
-<iPhone>
-	<InfoAdditions><![CDATA[
-		<key>LSApplicationQueriesSchemes</key>
-		<array>
-			<string>instagram</string>
-			<string>whatsapp</string>
-		</array>
-	]]></InfoAdditions>
-</iPhone>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+	<string>instagram</string>
+	<string>whatsapp</string>
+</array>
 ```
 
-### Unity
+For more information see [Add the Extension](add-the-extension.mdx#query-schemes)
+
+  </TabItem>
+  <TabItem value="unity" >
 
 You should add the `LSApplicationQueriesSchemes` value to your `Info.plist`, and include the schemes for the applications you intend to query.
 
@@ -101,6 +135,9 @@ You should add the `LSApplicationQueriesSchemes` value to your `Info.plist`, and
     <string>whatsapp</string>
 </array>
 ```
+
+  </TabItem>
+</Tabs>
 
 
 ## Android 
@@ -123,6 +160,7 @@ For example if you are querying whatsapp and instagram:
 </queries>
 ```
 
+For more information see [Add the Extension](add-the-extension.mdx#queries)
 
 
 ## Start Actvity 
@@ -133,8 +171,11 @@ This functionality allows you to use the Android Intent system to launch an Inte
 
 This is sometimes required when you need particular control over how the data is passed to an Intent.
 
-
-### AIR 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 Use the `Intent` class to create an Intent and then pass it to the `startActivity` function.
 
@@ -160,8 +201,8 @@ intent.extras = {
 };
 ```
 
-
-### Unity
+  </TabItem>
+  <TabItem value="unity" >
 
 Use the `Intent` class to create an Intent and then pass it to the `StartActivity` function.
 
@@ -177,4 +218,8 @@ Share.Instance.Applications.StartActivity(intent);
 ```
 
 The return value of the `StartActivity` function will be `false` if no activity could be launched matching the `Intent` and will be `true` if an activity was started.
+
+  </TabItem>
+</Tabs>
+
 

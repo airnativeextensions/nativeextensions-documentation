@@ -3,13 +3,20 @@ title: Simple Share
 sidebar_label: Simple Share
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Displaying an action to share text, image data or/and URL is simply a process of calling `share()` with data you wish to share.
 
 An action dialog will be displayed with a list of applications that will accept the content for sharing. 
 This generally includes applications like: Messaging, Email, Twitter, Facebook.
 
 
-## AIR
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 ```actionscript
 [Embed("assets/image.png")]
@@ -35,10 +42,8 @@ function share_shareHandler( event:ShareEvent ):void
 }
 ```
 
-
-
-## Unity
-
+  </TabItem>
+  <TabItem value="unity" >
 
 To share a URL:
 
@@ -60,3 +65,8 @@ Share.Instance.share(
     image
 );
 ```
+
+  </TabItem>
+</Tabs>
+
+

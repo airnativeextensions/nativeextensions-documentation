@@ -3,25 +3,41 @@ title: Email
 sidebar_label: Email
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 ## Support
 
 You can check whether the current user can send emails using the `isMailSupported` call.
 
 This performs some basic checks as to whether the user can send an email.
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 if (Share.service.email.isMailSupported)
 {
 	// You should be able to send an email
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 if (Share.Instance.Email.IsMailSupported)
 {
 	// You should be able to send an email
 }
 ```
+
+  </TabItem>
+</Tabs>
 
 
 - On Apple devices this checks that the user has an email account setup in the settings.
@@ -32,7 +48,13 @@ if (Share.Instance.Email.IsMailSupported)
 
 Sending an email is a simple task of calling the `sendMail()` function, specifying the subject, body and recipients.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var email:String = "emailaddress@test.com";
 var subject:String = "Sending HTML email from AIR using the distriqt Message ANE";
 var body:String = "The body content of the email";
@@ -44,8 +66,10 @@ Share.service.email.sendMail(
 );
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp title="Unity"
+```csharp 
 string subject = "Test email from unity";
 string body = "Some awesome message I want to send";
 string toRecipients = "unityplugins@distriqt.com";
@@ -67,6 +91,11 @@ private void Email_OnAttachmentError(EmailEvent e)
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
 
 ## Send Email with Options
 
@@ -81,8 +110,14 @@ If you wish to send html content you can set the `isHTML` flag in the `sendMailW
 
 The following example shows the supported HTML content:
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+
+```actionscript 
 var email:String = "emailaddress@test.com";
 var subject:String = "Sending HTML email from AIR using the distriqt Message ANE";
 var ccRecipients:String = "";
@@ -113,8 +148,10 @@ Share.service.email.sendMailWithOptions(
 	);
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp title="Unity"
+```csharp 
 string subject = "Test email from unity";
 string body = "Some awesome message I want to send";
 string toRecipients = "unityplugins@distriqt.com";
@@ -146,12 +183,15 @@ Share.Instance.Email.SendMailWithOptions(
 	);
 ```
 
+  </TabItem>
+</Tabs>
 
->
-> HTML content can depend on the client the user has installed. As this can vary greatly (on Android in particular) the HTML content functionality can have unexpected results in clients that don't respect or accept html content.
->
-> Our extension uses the underlying standard method to format and flag the content as html however there are still cases you may encounter issues. We highly recommend you throughly test this feature to make sure it suits your needs.
-> 
+
+:::caution
+HTML content can depend on the client the user has installed. As this can vary greatly (on Android in particular) the HTML content functionality can have unexpected results in clients that don't respect or accept html content.
+
+Our extension uses the underlying standard method to format and flag the content as html however there are still cases you may encounter issues. We highly recommend you thoroughly test this feature to make sure it suits your needs.
+::: 
 
 
 ### Attachments
@@ -160,7 +200,11 @@ You can specify an `Array` of `Attachment` objects each representing a file to a
 
 You create an attachment using the constructor and passing the native path to the file and we suggest passing a mime type.
 
-#### AIR
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 ```actionscript 
 var attachmentImage:File = File.applicationStorage.resolvePath( "image.jpg" );
@@ -183,7 +227,8 @@ Share.service.email.sendMailWithOptions(
 	);
 ```
 
-#### Unity
+  </TabItem>
+  <TabItem value="unity" >
 
 ```csharp
 Attachment attachment = new Attachment();
@@ -205,5 +250,11 @@ Share.Instance.Email.SendMailWithOptions(
 		attachments
 	);
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
 
 

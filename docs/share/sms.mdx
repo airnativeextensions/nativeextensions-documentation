@@ -3,23 +3,40 @@ title: SMS
 sidebar_label: SMS
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 ## SMS Supported
 
 You can check whether the current user can send sms using the `isSMSSupported` call.
 
-```actionscript  title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript  
 if (Share.service.sms.isSMSSupported)
 {
 	// You should be able to send an sms
 }
 ```
 
-```csharp  title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp  
 if (Share.Instance.SMS.IsSMSSupported)
 {
 	// You should be able to send an sms
 }
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 
 
@@ -27,7 +44,14 @@ if (Share.Instance.SMS.IsSMSSupported)
 
 The example below shows how to send an SMS using the native UI:
 
-```actionscript  title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+
+```actionscript  
 if (Share.service.sms.isSMSSupported)
 {
 	Share.service.sms.addEventListener( SMSEvent.MESSAGE_SMS_CANCELLED, smsEventHandler );
@@ -47,7 +71,10 @@ function smsEventHandler( event:SMSEvent ):void
 }
 ```
 
-```csharp  title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp  
 if (Share.Instance.SMS.IsSMSSupported)
 {
     Share.Instance.SMS.OnSMSSent += SMS_OnSMSSent;
@@ -81,6 +108,11 @@ private void SMS_OnSMSSent(SMSEvent e)
     Debug.Log("SMS_OnSMSSent");
 }
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 
 
@@ -130,7 +162,11 @@ These are optional and so should be added manually currently.
 
 Firstly you must request authorisation to send and receive messages. 
 
-#### AIR 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 On Android these permissions are listed through the manifest additions. 
 On older versions of Android these permissions are accepted when the user installs the application. 
@@ -169,7 +205,8 @@ function authorisationStatus_changedHandler( event:AuthorisationEvent ):void
 }
 ```
 
-#### Unity 
+  </TabItem>
+  <TabItem value="unity" >
 
 You can do this using the normal `Permission` process through Unity, eg to check whether you have permission to send sms directly:
 
@@ -182,14 +219,21 @@ if (Permission.HasUserAuthorizedPermission("android.permission.SEND_SMS"))
 
 More information here: [https://docs.unity3d.com/Manual/android-RequestingPermissions.html](https://docs.unity3d.com/Manual/android-RequestingPermissions.html)
 
-
+  </TabItem>
+</Tabs>
 
 
 ### Sending an SMS
 
 Once you have authorisation, sending an SMS is a simple matter of calling `sendSMS`:
 
-```actionscript  title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript  
 if (Share.service.sms.isSMSSupported)
 {
 	var sms:SMS = new SMS();
@@ -200,8 +244,10 @@ if (Share.service.sms.isSMSSupported)
 }
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp  title="Unity"
+```csharp  
 if (Share.service.sms.isSMSSupported)
 {
 	SMS sms = new SMS();
@@ -211,6 +257,11 @@ if (Share.service.sms.isSMSSupported)
 	Share.Instance.SMS.SendSMS( sms );
 }
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 
 ### Subscription Info
@@ -222,7 +273,13 @@ Firstly you must add the additional permission to `READ_PHONE_STATE` to be able 
 
 Then call `getSubscriptions()` to retrieve an array of `SubscriptionInfo` objects representing the different sims.
 
-```actionscript  title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript  
 var subs:Array = Share.service.sms.getSubscriptions();
 for each (var sub:SubscriptionInfo in subs)
 {
@@ -230,7 +287,10 @@ for each (var sub:SubscriptionInfo in subs)
 }
 ```
 
-```csharp  title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp  
 SubscriptionInfo[] subs = Share.Instance.SMS.GetSubscriptions();
 foreach (SubscriptionInfo sub in subs)
 {
@@ -238,21 +298,38 @@ foreach (SubscriptionInfo sub in subs)
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
 
 When sending an SMS you can specify the subscription id to use to send the SMS:
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 Share.service.sms.sendSMS( sms, sub.id );
 ```
 
-```csharp title="Unity" 
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp  
 Share.Instance.SMS.SendSMS( sms, sub.id );
 ```
 
->
-> Note: This is only supported on Android API v22+. If it is not supported (or if you haven't requested the additional permission) `getSubscriptions()` will return an empty array and the default sim will be used to send messages.
->
+  </TabItem>
+</Tabs>
+
+
+:::note
+This is only supported on Android API v22+. If it is not supported (or if you haven't requested the additional permission) `getSubscriptions()` will return an empty array and the default sim will be used to send messages.
+:::
 
 
 ### Events
@@ -260,7 +337,13 @@ Share.Instance.SMS.SendSMS( sms, sub.id );
 You can listen for several events, as defined in the `SMSEvent` class, see the documentation
 in that class for more information on the events.
 
-```actionscript  title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript  
 Share.service.sms.addEventListener( SMSEvent.MESSAGE_SMS_CANCELLED, 	smsEventHandler );
 Share.service.sms.addEventListener( SMSEvent.MESSAGE_SMS_DELIVERED, 	smsEventHandler );
 Share.service.sms.addEventListener( SMSEvent.MESSAGE_SMS_RECEIVED, 		smsEventHandler );
@@ -273,3 +356,11 @@ function smsEventHandler( event:SMSEvent ):void
 	trace( event.type +"::"+ event.details + "::"+event.sms.toString() );
 }
 ```
+
+  </TabItem>
+  <TabItem value="unity" >
+
+
+  </TabItem>
+</Tabs>
+

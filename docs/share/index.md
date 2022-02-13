@@ -58,7 +58,7 @@ The [documentation site](https://docs.airnativeextensions.com/docs/share) forms 
 
 Quick Example: 
 
-```actionscript title="AIR"
+```actionscript 
 Share.service.share( "some text", null, "https://airnativeextensions.com" );
 ```
 

@@ -3,6 +3,9 @@ title: Share Files
 sidebar_label: Share Files
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 There are two operations regarding files exposed by this ANE, referred to as sharing a file (`shareFile`) and opening a file (`showOpenIn`).
 
 Both of these will display a list of applications however they are subtly different.
@@ -23,8 +26,11 @@ The system will then only display applications that can handle that type of file
 
 On iOS this uses the `UIActivityViewController` to display a list of services that support the supplied data.
 
-
-### AIR
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 ```actionscript
 Share.service.addEventListener( ShareEvent.COMPLETE,	share_shareHandler );
@@ -45,8 +51,8 @@ private function share_shareHandler( event:ShareEvent ):void
 }
 ```
 
-
-### Unity
+  </TabItem>
+  <TabItem value="unity" >
 
 ```csharp
 // Here we have an image file in the streaming assets (iOS only)
@@ -68,6 +74,8 @@ private void Share_OnComplete(ShareEvent e)
 }
 ```
 
+  </TabItem>
+</Tabs>
 
 
 
@@ -81,7 +89,11 @@ Generally this operation gives better functionality than the share file.
 
 On iOS this uses the `UIDocumentInteractionController` to display a list of applications that can open the specified file.
 
-### AIR
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 ```actionscript
 var path:String = File.applicationDirectory.nativePath + File.separator + "assets" + File.separator + "TestDocument.pdf";
@@ -89,8 +101,8 @@ var path:String = File.applicationDirectory.nativePath + File.separator + "asset
 Share.service.showOpenIn( path, "TestDocument.pdf", "application/pdf" );
 ```
 
-
-### Unity
+  </TabItem>
+  <TabItem value="unity" >
 
 ```csharp
 // Here we have an image file in the streaming assets (iOS only)
@@ -104,14 +116,21 @@ Share.Instance.OnComplete += Share_OnComplete;
 Share.Instance.showOpenIn( filePath, "image.png", "image/png" );
 ```
 
+  </TabItem>
+</Tabs>
+
 
 ## Opening a File: Example
 
 The below shows an example of opening an `igo` (instagram only file) and setting the packageName and UTI to limit the applications
 displayed to only be Instagram. We also use the `isApplicationInstalled` to check that Instagram is installed.
-More on this function in the [Launch Applications](launch-applications) section.
+More on this function in the [Launch Applications](launch-applications.md) section.
 
-### AIR 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 ```actionscript
 if (Share.service.isApplicationInstalled( "com.instagram.android", "instagram://app" ))
@@ -126,7 +145,8 @@ if (Share.service.isApplicationInstalled( "com.instagram.android", "instagram://
 }
 ```
 
-### Unity 
+  </TabItem>
+  <TabItem value="unity" >
 
 ```csharp
 plugins.share.applications.Application app
@@ -145,3 +165,6 @@ if (Share.Instance.Applications.IsInstalled(app))
 	Share.Instance.showOpenIn( filePath, "", "image/*", options );
 }
 ```
+
+  </TabItem>
+</Tabs>

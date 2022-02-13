@@ -1,0 +1,240 @@
+---
+title: Add the Extension
+sidebar_label: AIR
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+
+:::info AIR SDK
+This ANE currently requires at least AIR 33+. This is required in order to support versions of Android > 9.0 (API 28). We always recommend using the most recent build with AIR especially for mobile development where the OS changes rapidly.
+:::
+
+
+## Install
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Android 
+
+### Queries
+
+Android 11 introduces changes related to package visibility. These changes affect apps only if they target Android 11. In order for you to correctly query if an application is installed you will need to add the package names you wish to query to the manifest.
+
+If you are going to be launching or querying installed applications then you must define the package name of these applications in your additions. For example the following adds WhatsApp and Instagram:
+
+```xml
+<queries>
+    <package android:name="com.whatsapp" />
+    <package android:name="com.instagram.android" />
+</queries>
+```
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+To add these additions you need to add some additional configuration. Firstly add a custom Android configuration file by running:
+
+```
+apm generate config android
+```
+
+Edit the `config/android/AndroidManifest.xml` file that was generated to resemble the following, adding the `queries` node:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+	<queries>
+		<package android:name="com.whatsapp" />
+		<package android:name="com.instagram.android" />
+	</queries>
+
+</manifest>
+```
+
+Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
+
+
+  </TabItem>
+  <TabItem value="manual" >
+
+To add these additions you need to add some additional configuration. Then edit your manifest additions in your application descriptor to add the following: 
+
+```xml
+<android>
+	<manifestAdditions><![CDATA[
+		<manifest android:installLocation="auto">
+
+			<queries>
+				<package android:name="com.whatsapp" />
+				<package android:name="com.instagram.android" />
+			</queries>
+
+		</manifest>
+	]]></manifestAdditions>
+</android>
+```
+
+  </TabItem>
+  
+</Tabs>
+
+
+## iOS 
+
+### Usage Description
+
+You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
+
+The image below is an example of the authorisation dialog. The content *"Access to photo library is required to save images."* is the usage description message you can set.
+
+![](images/ios-permission-dialog.png)
+
+You set these values through adding the usage description keys to your application descriptor's info additions or simply by setting up your configuration options in your `apm` project. 
+
+
+
+### Query Schemes
+
+If you are going to be launching or querying installed applications then you must define the schemes of these applications in your additions. For example the following adds WhatsApp and Instagram:
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+	<string>instagram</string>
+	<string>whatsapp</string>
+</array>
+```
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+To add these additions you need to add some additional configuration. Firstly add a custom iOS configuration file by running:
+
+```
+apm generate config ios
+```
+
+Edit the `config/ios/InfoAdditions.xml` file that was generated to resemble the following, adding the `LSApplicationQueriesSchemes` node:
+
+```xml
+<plist version="1.0">
+	<dict>
+
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>instagram</string>
+			<string>whatsapp</string>
+		</array>
+
+	</dict>
+</plist>
+```
+
+Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
+
+
+  </TabItem>
+  <TabItem value="manual" >
+
+To add these additions you need to add some additional configuration. Then edit your info additions in your application descriptor to add the following: 
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>instagram</string>
+			<string>whatsapp</string>
+		</array>
+
+	]]></InfoAdditions>
+</iPhone>
+```
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+
+## Checking for Support
+
+You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
+
+This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
+
+
+```actionscript
+Core.init();
+if (Share.isSupported)
+{
+	// Functionality here
+}
+```
+
