@@ -3,6 +3,9 @@ title: Feedback Generators
 sidebar_label: Feedback Generators
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Haptic feedback provides a tactile response, such as a tap, that draws attention and reinforces both actions and events. While many system-provided interface elements (for example, pickers, switches, and sliders) automatically provide haptic feedback, you can use feedback generators to add your own feedback to custom views and controls.
 
 When providing feedback:
@@ -19,14 +22,28 @@ To create a feedback generator you call the `createFeedbackGenerator()` function
 
 For example, to create an impact feedback generator:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 var generator:FeedbackGenerator = Vibration.service.createFeedbackGenerator( FeedbackGeneratorType.IMPACT );
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
 
-```csharp title="Unity"
+```csharp 
 FeedbackGenerator generator = Vibration.Instance.CreateFeedbackGenerator( FeedbackGeneratorType.IMPACT );
 ```
+
+  </TabItem>
+</Tabs>
+
+
+
 
 
 
@@ -34,20 +51,34 @@ FeedbackGenerator generator = Vibration.Instance.CreateFeedbackGenerator( Feedba
 
 Once you have created your generator, performing feedback is a simple matter of calling the `performFeedback` function:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 generator.performFeedback();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 generator.PerformFeedback();
 ```
 
->
-> Note: calling these methods does not play haptics directly. Instead, it informs the system of the event.
-> The system then determines whether to play the haptics based on the device, the application’s state, the amount of battery power remaining, and other factors.
->
-> On Android this will additionally depend on whether the user has disabled haptic feedback in the device settings.
->
+  </TabItem>
+</Tabs>
+
+
+
+:::info
+Calling these methods does not play haptics directly. Instead, it informs the system of the event.
+The system then determines whether to play the haptics based on the device, the application’s state, the amount of battery power remaining, and other factors.
+
+On Android this will additionally depend on whether the user has disabled haptic feedback in the device settings.
+:::
 
 
 
@@ -80,11 +111,25 @@ This is currently mainly required on iOS, however it is intended to perform the 
 
 To prepare your generator simply call the `prepare()` function:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 generator.prepare();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 generator.Prepare();
 ```
+
+  </TabItem>
+</Tabs>
+
+
 

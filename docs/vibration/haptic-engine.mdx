@@ -3,6 +3,9 @@ title: Haptic Engine
 sidebar_label: Haptic Engine
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Compose and play haptic patterns to customize your app’s feedback.
 
 Use haptics to engage users physically, with tactile feedback that gets attention and reinforces actions.
@@ -15,52 +18,76 @@ Your app can play custom haptic patterns crafted from basic building blocks call
 
 You should check whether the current device supports the haptic engine by checking the `isSupported` property on the `HapticEngine` instance.
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 if (Vibration.service.hapticEngine.isSupported)
 {
     // Haptic Engine is supported
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 if (Vibration.Instance.HapticEngine.IsSupported)
 {
     // Haptic Engine is supported
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
 If it is not supported you should fall back to other feedback methods, such as simple vibrations.
 
->
->   Haptic Engine is only supported on iOS currently
->
+:::warning
+Haptic Engine is only supported on iOS currently
+:::
 
 
 ## Create a player
 
 To create a player call the `createAdvancedPlayer()` method passing in your pattern and initial params.
 
+:::caution
+Currently the parameters to this method including the pattern are ignored. 
+A haptic player with a single continuous pattern containing intensity and sharpness parameters will be created.
+:::
 
->
-> Currently the parameters to this method including the pattern are ignored. 
-> A haptic player with a single continuous pattern containing intensity and sharpness parameters will be created.
->  
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 var pattern:HapticPattern = new HapticPattern(); 
 
 var player:HapticAdvancedPlayer 
     = Vibration.service.hapticEngine.createAdvancedPlayer( pattern );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 HapticPattern pattern = new HapticPattern();
 
 HapticAdvancedPlayer player 
     = Vibration.Instance.HapticEngine.createAdvancedPlayer(pattern);
 ```
+
+  </TabItem>
+</Tabs>
 
 
 
@@ -68,31 +95,62 @@ HapticAdvancedPlayer player
 
 To start the haptic call the `start()` method on the `HapticAdvancedPlayer` instance.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 player.start();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 player.Start();
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
 To stop the player, call the `stop()` method.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 player.stop();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 player.Stop();
 ```
+
+  </TabItem>
+</Tabs>
 
 
 ## Updating
 
 To update a continuous haptic pattern with new dynamic parameters, call the `sendParameters()` method passing in the new dynamic paramaters.
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 player.sendParameters(
         new HapticDynamicParams()
                 .setParameter( HapticDynamicParams.INTENSITY, 0.4 )
@@ -100,13 +158,21 @@ player.sendParameters(
 );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 player?.SendParameters(
         new HapticDynamicParams()
             .SetParameter(HapticDynamicParams.INTENSITY, 0.4)
             .SetParameter(HapticDynamicParams.SHARPNESS, 0.2)
         );
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 
 ## Events 
@@ -115,7 +181,13 @@ The haptic engine may be stopped at any time due to external factors such as an 
 
 When this occurs any of your players will become invalid and you should dispose them and recreate them before responding to user feedback again.
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 Vibration.service.hapticEngine.addEventListener(
         HapticEngineEvent.STOPPED,
         hapticEngineStoppedHandler
@@ -131,7 +203,10 @@ function hapticEngineStoppedHandler( event:HapticEngineEvent ):void
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 Vibration.Instance.HapticEngine.OnStopped += HapticEngine_OnStopped;
 
 void HapticEngine_OnStopped(HapticEngineEvent e)
@@ -144,11 +219,21 @@ void HapticEngine_OnStopped(HapticEngineEvent e)
 }
 ```
 
+  </TabItem>
+</Tabs>
+
+
+
 
 Additionally each individual player will complete it's pattern playback after an amount of time. When this occurs the complete event will be dispatched allowing you to start the player again if you wish to continue haptic feedback.
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
-```actionscript title="AIR"
+```actionscript 
 _player.addEventListener( HapticPlayerEvent.COMPLETE, playerCompleteHandler );
 _player.start();
 
@@ -158,7 +243,10 @@ function playerCompleteHandler( event:HapticPlayerEvent ):void
 }
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 _player.OnComplete += player_OnComplete;
 _player.Start();
 
@@ -167,6 +255,9 @@ void player_OnComplete(HapticPlayerEvent e)
     _player?.Start();
 }
 ```
+
+  </TabItem>
+</Tabs>
 
 
 

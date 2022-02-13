@@ -3,15 +3,33 @@ title: Vibrate
 sidebar_label: Vibrate
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 To make the device vibrate is a simple matter of calling the `vibrate` function.
 
-```actionscript title="AIR"
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 Vibration.service.vibrate();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 Vibration.Instance.Vibrate();
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 ## Android 
 
@@ -22,37 +40,78 @@ You can control the length of the vibration by passing the first parameter to th
 
 For example, vibrate for 1 second: 
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 Vibration.service.vibrate( 1000 );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 Vibration.Instance.Vibrate(1000);
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 You can set vibration patterns to control the length and gap between vibrations.
 For example, the following sets a vibrate pattern on for 200 milliseconds then off for 500 twice:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 Vibration.service.vibrate( 0, [0, 200, 500, 200, 500] );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 Vibration.Instance.Vibrate( 0, new long[] { 0, 200, 500, 200, 500 } );
 ```
+
+  </TabItem>
+</Tabs>
+
 
 
 The last parameter allows you to repeat the pattern. The value is the index into the pattern array at which to repeat. The default `-1` will not repeat the pattern, and `0` will repeat the complete pattern. 
 
 The following example will vibrate with the pattern, repeating the entire pattern:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 Vibration.service.vibrate( 0, [0, 200, 500, 200, 500], 0 );
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 Vibration.Instance.Vibrate( 0, new long[] { 0, 200, 500, 200, 500 }, 0 );
 ```
+
+  </TabItem>
+</Tabs>
+
+
 
 If you are repeating the pattern you must call `cancel()` to stop the vibration.
 
@@ -61,13 +120,26 @@ If you are repeating the pattern you must call `cancel()` to stop the vibration.
 
 You can cancel an active vibration by calling `cancel`:
 
-```actionscript title="AIR"
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript 
 Vibration.service.cancel();
 ```
 
-```csharp title="Unity"
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
 Vibration.Instance.Cancel();
 ```
+
+  </TabItem>
+</Tabs>
+
 
 
 ## iOS 

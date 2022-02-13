@@ -37,14 +37,14 @@ The [documentation site](https://docs.airnativeextensions.com/docs/vibration/) f
 
 Quick Example:
 
-```actionscript title="AIR"
+```actionscript 
 if (Vibration.isSupported)
 {
 	Vibration.service.vibrate();
 }
 ```
 
-```csharp title="Unity"
+```csharp 
 if (Vibration.isSupported)
 {
 	Vibration.Instance.Vibrate();
