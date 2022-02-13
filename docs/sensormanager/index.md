@@ -24,8 +24,7 @@ The objective is to centralise some of the simpler sensors to provide a simple c
 
 ## Documentation
 
-The [Wiki](https://github.com/distriqt/ANE-SensorManager/wiki) forms the best source of detailed documentation for the extension 
-along with the [asdocs](https://docs.airnativeextensions.com/asdocs/sensormanager). 
+The [documentation site](https://docs.airnativeextensions.com/docs/sensormanager) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/sensormanager). 
 
 
 Quick Example:

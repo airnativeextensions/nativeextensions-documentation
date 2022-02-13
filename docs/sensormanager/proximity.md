@@ -49,12 +49,9 @@ The values of the proximity state are definded in the `ProximityState` class:
 
 
 
-
-
->
-> Note: On iOS the screen will be automatically dimmed when the proximity sensor is enabled and the proximity state is determined to be "near" (close to the user).
->
-
+:::caution
+On iOS the screen will be automatically dimmed when the proximity sensor is enabled and the proximity state is determined to be "near" (close to the user).
+:::
 
 
 

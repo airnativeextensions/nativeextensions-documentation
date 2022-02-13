@@ -2420,6 +2420,34 @@ module.exports = {
 		},
 	],
 
+
+	sensormanager: [
+		{ type: "ref", id: "index" },
+		{ type: "doc", id: "sensormanager/index" },
+		{
+			"Get Started": ["sensormanager/add-the-extension"],
+		},
+		{
+			Usage: ["sensormanager/proximity"],
+		},
+		{
+			Other: [
+				{ type: "doc", id: "sensormanager/changelog" },
+				{
+					type: "link",
+					label: "asdocs",
+					href: "https://docs.airnativeextensions.com/asdocs/sensormanager/",
+				},
+				{
+					type: "link",
+					label: "Contact Support",
+					href: "http://github.com/airnativeextensions/ANE-SensorManager/issues/new",
+				},
+			],
+		},
+	],
+
+
 	share: [
 		{ type: "ref", id: "index" },
 		{ type: "doc", id: "share/index" },
