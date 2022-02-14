@@ -3,34 +3,65 @@ title: Add the Extension
 sidebar_label: Add the Extension
 ---
 
-First step is always to add the extension to your development environment. 
-To do this use the tutorial located [here](/docs/tutorials/getting-started).
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
 
 
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
 
-## Dependencies
-
-### Core ANE
-
-The Core ANE is required by this ANE. You must include and package this extension in your application.
-
-The Core ANE doesn't provide any functionality in itself but provides support libraries and frameworks used by our extensions.
-It also includes some centralised code for some common actions that can cause issues if they are implemented in each individual extension.
-
-You can access this extension here: [https://github.com/distriqt/ANE-Core](https://github.com/distriqt/ANE-Core).
+However you can choose to install it manually, as you would have done in the past. 
 
 
+:::info AIR SDK
+This ANE currently requires at least AIR 33+. This is required in order to support versions of Android > 9.0 (API 28). We always recommend using the most recent build with AIR especially for mobile development where the OS changes rapidly.
+:::
 
-## Extension IDs
 
-The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+## Install
 
-```xml
-<extensions>
-    <extensionID>com.distriqt.WindowsStore</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
-</extensions>
-```
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
 
 
 
