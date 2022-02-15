@@ -1887,6 +1887,7 @@ module.exports = {
 	memory: [
 		{ type: "ref", id: "index" },
 		{ type: "doc", id: "memory/index" },
+		{ type: "doc", id: "memory/add-the-extension" },
 		{ type: "doc", id: "memory/usage" },
 		{
 			Other: [
