@@ -81,6 +81,20 @@ Updated to support latest Admob mediation adapters (resolves #25)
 ```
 
 
+###### 2021.03.07 [v5.3.0]
+
+```
+Added TapJoy mediation (resolves #26)
+```
+
+
+###### 2021.02.08 [v5.2.0]
+
+```
+Updated to support latest Admob mediation adapters (resolves #25)
+```
+
+
 ###### 2020.11.25 [v5.1.0]
 
 ```

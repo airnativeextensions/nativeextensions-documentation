@@ -1,3 +1,9 @@
+### 2022.02.18 [v8.6.10]
+
+```
+Resolved issue with android text field KeyboardType.NAME_PHONE_PAD (resolves #283)
+```
+
 ### 2022.02.05 [v8.6.9]
 
 ```

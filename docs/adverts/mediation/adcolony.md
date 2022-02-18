@@ -68,10 +68,12 @@ Add the following to your manifest additions inside the `application` tag:
 <activity
     android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
     android:configChanges="keyboardHidden|orientation|screenSize"
+	android:exported="false"
     android:hardwareAccelerated="true" />
 <activity
     android:name="com.adcolony.sdk.AdColonyAdViewActivity"
     android:configChanges="keyboardHidden|orientation|screenSize"
+	android:exported="false"
     android:hardwareAccelerated="true" />
 ```
 
