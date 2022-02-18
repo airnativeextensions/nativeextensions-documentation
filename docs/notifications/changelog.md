@@ -1,3 +1,9 @@
+### 2022.02.18 [v6.3.1]
+
+```
+Android: Fix for issue with Android 12 trampoline incorrectly resolved (resolves #193)
+```
+
 ### 2022.02.10 [v6.3.0]
 
 ```

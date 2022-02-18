@@ -66,16 +66,21 @@ The Notifications extension requires a few additions to the manifest to be able 
 					<action android:name="android.intent.action.BOOT_COMPLETED" />
 					<action android:name="android.intent.action.QUICKBOOT_POWERON" />
 				</intent-filter>
-			</receiver>
-			<activity android:name="com.distriqt.extension.notifications.notifications.NotificationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false">
 				<intent-filter>
-					<action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED" />
+					<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELAYED" />
 					<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELETED" />
 					<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
-					<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELAYED" />
+					<data android:scheme="dtn" />
+				</intent-filter>
+			</receiver>
+			<activity android:name="com.distriqt.extension.notifications.notifications.NotificationActivity" android:exported="false">
+				<intent-filter>
+					<action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED" />
+					<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
 					<data android:scheme="dtn" />
 				</intent-filter>
 			</activity>
+
 			<provider
 				android:name="com.distriqt.extension.notifications.content.FileProvider"
 				android:authorities="APPLICATION_PACKAGE.notificationsfileprovider"
