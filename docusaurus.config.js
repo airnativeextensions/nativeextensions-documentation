@@ -37,15 +37,11 @@ module.exports = {
 			appId: "WGX2M70X7C",
 			apiKey: "f971c0416d41b295925d2ce7350e386d",
 			indexName: "airnativeextensions",
-
 			placeholder: "Search...",
-			// Optional: see doc section bellow
-			contextualSearch: true,
-
-			// Optional: Algolia search parameters
-			// searchParameters: {},
-
-			//... other Algolia params
+			contextualSearch: false,
+			searchParameters: {
+				facetFilters: ['language:en'],
+			},
 		},
 		navbar: {
 			title: "AIR Native Extensions",
