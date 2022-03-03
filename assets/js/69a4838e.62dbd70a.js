@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[82003],{72709:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/airsdk-dev","name":"airsdk.dev","count":4,"permalink":"/news/tags/airsdk-dev"}')}}]);
