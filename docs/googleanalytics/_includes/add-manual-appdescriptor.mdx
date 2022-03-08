@@ -33,15 +33,10 @@ along with the other additions below:
 	
 	<application>
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-		
-		<service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="true" />
-		<service android:name="com.google.android.gms.analytics.AnalyticsJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE" />
 
-		<receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true" android:exported="false">
-			<intent-filter>
-				<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
-			</intent-filter>
-		</receiver>
+		<receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true" android:exported="false" > </receiver>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false" />
+        <service android:name="com.google.android.gms.analytics.AnalyticsJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE" />
 
 
 		<service android:name="com.google.android.gms.analytics.CampaignTrackingService" android:exported="false"/>
