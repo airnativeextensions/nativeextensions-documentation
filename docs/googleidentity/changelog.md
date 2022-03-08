@@ -1,3 +1,12 @@
+### 2022.03.08 [v5.3.0]
+
+```
+Updated SDK
+  - Android v20.1.0
+  
+Android 31 documentation updates
+```
+
 ### 2022.02.07 [v5.2.5]
 
 ```

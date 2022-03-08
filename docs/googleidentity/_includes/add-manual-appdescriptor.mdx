@@ -9,6 +9,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>androidx.core</extensionID>
     <extensionID>androidx.appcompat</extensionID>
+    <extensionID>androidx.vectordrawable</extensionID>
     <extensionID>com.distriqt.playservices.Base</extensionID>
     <extensionID>com.distriqt.playservices.Auth</extensionID>
     <extensionID>com.distriqt.playservices.Identity</extensionID>
@@ -43,7 +44,8 @@ Making requests and accessing the Google Identity functionality requires the som
 		<service
 			android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
 			android:exported="true"
-			android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+			android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" 
+			android:visibleToInstantApps="true" />
 
 		<activity
 			android:name="com.google.android.gms.common.api.GoogleApiActivity"
