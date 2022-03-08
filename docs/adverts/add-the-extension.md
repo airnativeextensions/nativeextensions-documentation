@@ -3,12 +3,9 @@ title: Add the Extension
 sidebar_label: Add the Extension
 ---
 
+Here we will show you how to add the extension to your development environment and make the necessary changes to your application descriptor to correctly support the extension.
 
-First step is always to add the extension to your development environment. To do this use the tutorial located [here](/docs/tutorials/getting-started).
-
-
-
-The dependencies and manifest additions are specific to the platform you are utilising so we have separated the guides here based on the platforms:
+The dependencies and manifest additions are specific to the service you are utilising so we have separated the guides here based on the services:
 
 - [AdMob](platform/admob)
 - [Huawei](platform/huawei)
@@ -29,26 +26,3 @@ if (Adverts.isSupported)
 }
 ```
 
-
-
-## MultiDex Applications
-
-If you have a large application and are supporting Android 4.x then you will need to ensure you enable your application to correctly support MultiDex to allow the application to be broken up into smaller dex packages.
-
-This is enabled by default with releases of AIR v25+, except in the Android 4.x case where you need to change the manifest additions for the application tag to match the following and use the `MultiDexApplication`.
-
-### Using AndroidX#
-
-This will require the addition of the `androidx.multidex` extension which contains the `androidx.multidex.MultiDexApplication` implementation.
-
-```xml
-<manifest android:installLocation="auto">
-    <!-- PERMISSIONS -->
-
-    <application android:name="androidx.multidex.MultiDexApplication">
-
-        <!-- ACTIVITIES / RECEIVERS / SERVICES -->
-
-    </application>
-</manifest>
-```

@@ -1,0 +1,119 @@
+---
+title: Google AdMob
+sidebar_label: Google AdMob
+slug: /adverts/platform/admob
+---
+
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.md'
+import InstallManual from './_includes/add-manual.md'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.md'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.md'
+
+
+This section describes how to setup your AIR application to use AdMob with this extension.
+
+> You work hard on your app. AdMob makes earning revenue easy with in-app ads, actionable insights, and powerful, easy-to-use tools that grow your app business.
+
+You should make sure you have been through the process of creating an AdMob account by following the guide below:
+
+- https://admob.google.com/home/get-started/
+
+
+
+## Install
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Checking for Support
+
+You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
+
+This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
+
+
+```actionscript
+if (Adverts.isSupported)
+{
+	// Functionality here
+}
+```
+
+
+## Check Google Play Services Availability
+
+This extension requires the use of Google Play Services.
+
+You should use the `GoogleApiAvailability` helper in the `com.distriqt.playservices.Base` ANE. The documentation for this class is available in the [Google Play Services wiki](https://github.com/distriqt/ANE-GooglePlayServices/wiki/API-Availability).
+
+For example:
+
+```actionscript
+import com.distriqt.extension.playservices.base.ConnectionResult;
+import com.distriqt.extension.playservices.base.GoogleApiAvailability;
+```
+
+```actionscript
+var result:int = GoogleApiAvailability.instance.isGooglePlayServicesAvailable();
+if (result != ConnectionResult.SUCCESS)
+{
+    if (GoogleApiAvailability.instance.isUserRecoverableError( result ))
+    {
+        GoogleApiAvailability.instance.showErrorDialog( result );
+    }
+    else
+    {
+        trace( "Google Play Services aren't available on this device" );
+    }
+}
+else
+{
+    trace( "Google Play Services are Available" );
+}
+```
+
+If Google Play Services aren't available then you may not be able to use the functionality in this extension.
