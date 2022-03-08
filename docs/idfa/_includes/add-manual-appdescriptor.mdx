@@ -5,13 +5,13 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-    <extensionID>com.distriqt.IDFA</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.IDFA</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
 
-    <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
-    <extensionID>androidx.core</extensionID>
+	<extensionID>androidx.core</extensionID>
 </extensions>
 ```
 
@@ -28,12 +28,18 @@ You need to make sure you add the `android.permission.INTERNET` permission and t
 ```xml
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
-    
-    <application>
+	
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	<application>
 
-    </application>
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity"
+				android:theme="@android:style/Theme.Translucent.NoTitleBar"
+				android:exported="false" />
+
+	</application>
 </manifest>
 ```
 
@@ -65,17 +71,17 @@ This should be added to the Info Additions node :
 
 ```xml
 <iPhone>
-    <InfoAdditions><![CDATA[
+	<InfoAdditions><![CDATA[
 
-        <key>NSUserTrackingUsageDescription</key>
-        <string>This identifier will be used to deliver personalized ads to you.</string>
+		<key>NSUserTrackingUsageDescription</key>
+		<string>This identifier will be used to deliver personalized ads to you.</string>
 
-    ]]></InfoAdditions>
-    <requestedDisplayResolution>high</requestedDisplayResolution>
-    <Entitlements>
-        <![CDATA[
-        ]]>
-    </Entitlements>
+	]]></InfoAdditions>
+	<requestedDisplayResolution>high</requestedDisplayResolution>
+	<Entitlements>
+		<![CDATA[
+		]]>
+	</Entitlements>
 </iPhone>
 ```
 
