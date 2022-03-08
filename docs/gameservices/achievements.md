@@ -56,7 +56,7 @@ Achievements have a point value associated with them. The player's score must be
 
 To access the achievements functionality you will be using the functionality defined in the `Achievements` interface accessed by `GameServices.service.achievements`.
 
-You must have a [signed in player](sign-in) in order to access the achievements functionality.
+You must have a [signed in player](sign-in.md) in order to access the achievements functionality.
 
 Generally it is good practice to define the achievement IDs as static strings in your application. This reduces the requirement for you to load an achievement from the service. Most of the calls do not require usage of the `Achievement` object but just specify the ID. 
 

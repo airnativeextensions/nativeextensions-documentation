@@ -39,7 +39,7 @@ These orders are defined in the Leaderboard class:
 
 To access the leaderboards functionality you will be using the functionality defined in the `Leaderboards` interface accessed by `GameServices.service.leaderboards`.
 
-You must have a [signed in player](sign-in) in order to access the leaderboards functionality.
+You must have a [signed in player](sign-in.md) in order to access the leaderboards functionality.
 
 Generally it is good practice to define the leaderboard IDs as static strings in your application. This reduces the requirement for you to load the leaderboards from the service. Most of the calls do not require usage of a `Leaderboard` object but just specify the ID.
 

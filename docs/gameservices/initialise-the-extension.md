@@ -3,7 +3,7 @@ title: Initialise the Extension
 sidebar_label: Initialise the Extension
 ---
 
-## Supported
+## Support
 
 You should always check whether the extension is supported before making calls. 
 This allows you to react to whether the functionality is available on the device.
@@ -16,7 +16,7 @@ if (GameServices.isSupported)
 ```
 
 
-### Check Google Play Services Availability
+## Check Google Play Services Availability
 
 This extension requires the use of Google Play Services.
 

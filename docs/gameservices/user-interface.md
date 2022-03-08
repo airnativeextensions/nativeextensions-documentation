@@ -5,11 +5,11 @@ sidebar_label: UI Elements
 
 There are several user interface elements you can use. Some of these can be accessed from other parts of the API eg:
 
-- [Display Achievements UI](achievements#displaying-achievements-ui)
-- [Display Leaderboard UI](leaderboards#displaying-leaderboard-ui)
-- [Saved Games UI](saved-games#saved-games-ui)
+- [Display Achievements UI](achievements.md#displaying-achievements-ui)
+- [Display Leaderboard UI](leaderboards.md#displaying-leaderboard-ui)
+- [Saved Games UI](saved-games.md#saved-games-ui)
 
-However there are some general elements that can be accessed here directly. This is broken into two major functionality pieces, a [Show UI](#show-ui) function that allows you to show fullscreen user interface elements and the [Access Point](access-point) functionality that overlays user interface elements on your application. 
+However there are some general elements that can be accessed here directly. This is broken into two major functionality pieces, a [Show UI](#show-ui) function that allows you to show fullscreen user interface elements and the [Access Point](access-point.md) functionality that overlays user interface elements on your application. 
 
 
 ## Show UI
@@ -26,7 +26,7 @@ The possible states are:
 
 - `dashboard`: The default dashboard screen if available (Game Center has a dashboard, whereas Play Games will present a profile icon);
 - `achievements`: Will launch the achievements UI;
-- `leaderboards`: Will launch the "all" leaderboards UI (Note: if you want to display a specific leaderboard see the [Display Leaderboard UI](leaderboards#displaying-leaderboard-ui) functionality);
+- `leaderboards`: Will launch the "all" leaderboards UI (Note: if you want to display a specific leaderboard see the [Display Leaderboard UI](leaderboards.md#displaying-leaderboard-ui) functionality);
 - `profile`: Will launch a player profile UI;
 
 

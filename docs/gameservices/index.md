@@ -41,7 +41,7 @@ As with all our extensions you get access to a year of support and updates as we
 
 ## Documentation
 
-The [documentation site](https://github.com/distriqt/ANE-GameServices/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/gameservices).
+The [documentation site](https://docs.airnativeextensions.com/docs/gameservices) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/gameservices).
 
 More information here:
 

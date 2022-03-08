@@ -79,47 +79,7 @@ In your developer console:
 
 ![](images/gamecenter_icloud_container_3.png)
 
-- Then edit your application descriptor and add the identifier to the entitlements, using the values applicable to your application.
-
-```xml
-<key>com.apple.developer.ubiquity-kvstore-identifier</key>
-<string>X5LW23Q6CJ.com.distriqt.test</string>
-<key>com.apple.developer.ubiquity-container-identifiers</key>
-<array>
-    <string>iCloud.com.distriqt.test.testcontainer</string>
-</array>
-```
-
-It should resemble the following:
-
-```xml
-<iPhone>
-	<InfoAdditions><![CDATA[
-		<key>UIDeviceFamily</key>
-		<array>
-			<string>1</string>
-			<string>2</string>
-		</array>
-		
-	]]></InfoAdditions>
-	<requestedDisplayResolution>high</requestedDisplayResolution>
-	<Entitlements><![CDATA[
-	
-		<!-- GAME CENTER SAVED GAMES ADDITIONS -->
-		<!-- You only need the following lines if you are going to support GameCenter Saves -->
-		<key>com.apple.developer.ubiquity-container-identifiers</key>
-		<array>
-			<string>CONTAINER_IDENTIFIER</string>
-		</array>
-		
-		<key>com.apple.developer.ubiquity-kvstore-identifier</key>
-		<string>YOUR_APPLICATION_IDENTIFIER</string>
-		<!-- END GAME CENTER SAVED GAMES ADDITIONS -->
-		
-	]]></Entitlements>
-</iPhone>
-```
-
+- Then follow the instructions in [add the extension](add-the-extension.mdx) to correctly add these values to your application. 
 
 **Make sure you re-download your provisioning profile after making those changes.**
 

@@ -109,7 +109,7 @@ private function acceptInvitationSuccessHandler( event:TurnBasedMatchEvent ):voi
 }
 ```
 
-You can now process the match object: [Add Turn-based Multplayer Support](turn-based-multiplayer---implementation)
+You can now process the match object: [Add Turn-based Multplayer Support](turn-based-multiplayer---implementation.md)
 
 
 
