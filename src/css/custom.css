@@ -48,11 +48,11 @@ html[data-theme='dark'] .ane__logo  { content: url(/img/ane-icon-white.png) }
 
 
 html, body { 
-  font-family: 'Maison-Neue-Book', sans-serif;
+  font-family: 'Montserrat-Regular', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Maison-Neue-Bold';
+  font-family: 'Montserrat-Bold';
 }
 
 .hero--primary {
@@ -61,23 +61,15 @@ h1, h2, h3, h4, h5 {
 }
 
 @font-face {
-	font-family: 'Maison-Neue-Light';
-	src: url('/fonts/maison-neue/maison-neue-light.eot?') format('eot'),
-	     url('/fonts/maison-neue/maison-neue-light.woff') format('woff'),
-	     url('/fonts/maison-neue/maison-neue-light.ttf')  format('truetype'),
-	     url('/fonts/maison-neue/maison-neue-light.svg#maison-neue-light') format('svg');
+	font-family: 'Montserrat-Regular';
+	src: url('/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'Maison-Neue-Book';
-	src: url('/fonts/maison-neue/maison-neue-book.eot?') format('eot'),
-	     url('/fonts/maison-neue/maison-neue-book.woff') format('woff'),
-	     url('/fonts/maison-neue/maison-neue-book.ttf')  format('truetype'),
-	     url('/fonts/maison-neue/maison-neue-book.svg#maison-neue-book') format('svg');
+	font-family: 'Montserrat-Light';
+	src: url('/fonts/montserrat/Montserrat-Light.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'Maison-Neue-Bold';
-	src: url('/fonts/maison-neue/maison-neue-bold.eot?') format('eot'),
-	     url('/fonts/maison-neue/maison-neue-bold.woff') format('woff'),
-	     url('/fonts/maison-neue/maison-neue-bold.ttf')  format('truetype'),
-	     url('/fonts/maison-neue/maison-neue-bold.svg#maison-neue-bold') format('svg');
+	font-family: 'Montserrat-Bold';
+	src: url('/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
 }
+
