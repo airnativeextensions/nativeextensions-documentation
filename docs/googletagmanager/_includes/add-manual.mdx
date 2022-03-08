@@ -34,6 +34,24 @@ It also includes some centralised code for some common actions that can cause is
 You can access this extension here: [https://github.com/distriqt/ANE-Core](https://github.com/distriqt/ANE-Core).
 
 
+#### Android Support
+
+The Android Support libraries encompass the Android Support, Android X and common Google libraries. 
+
+These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
+
+This extension requires the following extensions:
+
+- [`androidx.core`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+
+You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
+
+
+>
+> **Note**: if you have been using the older `com.distriqt.androidsupport.*` (Android Support) extensions you should remove these extensions and replace it with the `androidx` extensions listed above. This is the new version of the android support libraries and moving forward all our extensions will require AndroidX.
+>
+
+
 #### Google Play Services 
 
 This extension requires usage of certain aspects of the Google Play Services client library. 
@@ -45,8 +63,10 @@ will avoid conflicts, allowing you to use multiple extensions in the one applica
 This extension requires the following Google Play Services:
 
 - [`com.distriqt.playservices.Base`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.distriqt.playservices.AdsIdentifier`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AdsIdentifier.ane)
 - [`com.distriqt.playservices.Analytics`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Analytics.ane)
 - [`com.distriqt.playservices.TagManager`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.TagManager.ane)
+- [`com.google.firebase.core`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane)
 
 You must include the above native extensions in your application along with this extension, 
 and you need to ensure they are packaged with your application.

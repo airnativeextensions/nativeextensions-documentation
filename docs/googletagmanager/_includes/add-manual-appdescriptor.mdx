@@ -5,11 +5,14 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-    <extensionID>com.distriqt.GoogleTagManager</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
-    <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.distriqt.playservices.Analytics</extensionID>
-    <extensionID>com.distriqt.playservices.TagManager</extensionID>
+	<extensionID>com.distriqt.GoogleTagManager</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.Analytics</extensionID>
+	<extensionID>com.distriqt.playservices.TagManager</extensionID>
+	<extensionID>com.google.firebase.core</extensionID>
 </extensions>
 ```
 
@@ -27,8 +30,48 @@ so these must also be declared in the manifest.
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
 	<application>
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+		<service
+			android:name="com.google.android.gms.tagmanager.TagManagerService"
+			android:enabled="true"
+			android:exported="false" />
+
+		<activity
+			android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity"
+			android:exported="true"
+			android:noHistory="true" > <!-- optional, removes the previewActivity from the activity stack. -->
+			<intent-filter>
+				<data android:scheme="tagmanager.c.APPLICATION_PACKAGE" />
+
+				<action android:name="android.intent.action.VIEW" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+			</intent-filter>
+		</activity>
+
+
+		<!-- firebase core -->
+		<provider
+			android:name="com.google.firebase.provider.FirebaseInitProvider"
+			android:authorities="APPLICATION_PACKAGE.firebaseinitprovider"
+			android:directBootAware="true"
+			android:exported="false"
+			android:initOrder="100" />
+
+		<service
+			android:name="com.google.firebase.components.ComponentDiscoveryService"
+			android:exported="false" >
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+
+
 	</application>
 
 </manifest>

@@ -1,3 +1,12 @@
+### 2022.03.08 [v2.2.0]
+
+```
+Update SDK:
+  - Android v18.0.1
+
+Update docs for Android 31 and to use apm
+```
+
 ### 2021.10.05 [v2.1.0]
 
 ```
