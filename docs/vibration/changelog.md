@@ -1,3 +1,10 @@
+### 2022.03.09 [v5.0.74]
+
+```
+Updates for Android 31
+Update documentation for Android 31 and using apm
+```
+
 ### 2021.10.12 [v5.0.73]
 
 ```
