@@ -25,6 +25,3 @@ view.setPage( 4 );
 
 
 
-
-
-

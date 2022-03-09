@@ -1,3 +1,12 @@
+### 2022.03.09 [v5.1.0]
+
+```
+Update docs to use apm
+Update package dependencies
+Corrected links in documentation (resolves #91)
+Fixed some issues with launching activities on Android 30+
+```
+
 ### 2021.10.12 [v5.0.26]
 
 ```
