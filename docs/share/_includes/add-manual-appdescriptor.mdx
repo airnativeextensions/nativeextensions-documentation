@@ -26,6 +26,14 @@ You will need to replace any occurances of `APPLICATION_PACKAGE` with your appli
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
 	
+	<queries>
+		<!-- query for checking email apps -->
+		<intent>
+			<action android:name="android.intent.action.SEND" />
+			<data android:mimeType="message/rfc822" />
+		</intent>
+	</queries>
+
 	<application android:hardwareAccelerated="true">
 		
 		<provider

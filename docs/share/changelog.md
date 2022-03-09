@@ -1,3 +1,11 @@
+### 2022.03.09 [v7.1.2]
+
+```
+Android: Add missing queries entry for email availability check
+Update air package dependencies
+Correct links in documentation
+```
+
 ### 2022.02.13 [v7.1.1]
 
 ```

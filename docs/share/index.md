@@ -8,8 +8,7 @@ slug: /share/
 
 # Share
 
-The [Share](https://airnativeextensions.com/extension/com.distriqt.Share) extension gives you access to the default share menu to send files and information to other applications. You can use one simple line of AS3 / C# to display the built-in native share dialogs 
-allowing your user to share files and content with other applications.
+The [Share](https://airnativeextensions.com/extension/com.distriqt.Share) extension gives you access to the default share menu to send files and information to other applications. You can use one simple line of AS3 / C# to display the built-in native share dialogs allowing your user to share files and content with other applications.
 
 
 For example, your user could use this to:
@@ -21,9 +20,7 @@ For example, your user could use this to:
 
 Additionally this extension now has the ability to launch other applications on the user's device allowing you to deeply integrate with other applications. 
 
-You can pass detailed extras to an explicit Intent on Android allowing amazing integration with other applications, 
-launching specific views in other applications or sending detailed information for another application to use within an activity.
-
+You can pass detailed extras to an explicit Intent on Android allowing amazing integration with other applications, launching specific views in other applications or sending detailed information for another application to use within an activity.
 
 The email and sms APIs allow you to quickly integrate sending emails and sms in your application with just a few lines of code. Identical code base can be used across all supported platforms allowing you to concentrate on your application and not device specifics.
 
