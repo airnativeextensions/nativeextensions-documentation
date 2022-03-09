@@ -1,0 +1,134 @@
+---
+title: Add the Extension
+sidebar_label: Add the Extension
+---
+
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+## Install
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+### Background Audio
+
+If you require playback of background audio, i.e. if you plan to support playing audio when your application is not in the foreground. This is generally not required however if you are making a music player application then this may be applicable.
+
+To enable background audio on iOS you need to add the `audio` string to the `UIBackgroundModes` as below.
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+  
+To add these additions you need to add some additional configuration. Firstly add a custom iOS configuration file by running:
+
+```
+apm generate config ios
+```
+
+Edit the `config/ios/InfoAdditions.xml` file that was generated to resemble the following, adding the `UIBackgroundModes` node:
+
+```xml
+<plist version="1.0">
+    <dict>
+
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>audio</string>
+		</array>
+
+    </dict>
+</plist>
+```
+
+Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
+
+  </TabItem>
+  <TabItem value="manual" >
+
+Manually add the following to the iOS section of your application descriptor XML file. These should be added or modified in the `InfoAdditions` node, under the `iPhone` node:
+
+```xml
+<key>UIBackgroundModes</key>
+<array>
+	<string>audio</string>
+</array>
+```
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+
+
+## Checking for Support
+
+You can use the `isSupported` flag to determine if this extension is supported on the current platform and device.
+
+This allows you to react to whether the functionality is available on the device and provide an alternative solution if not.
+
+
+```actionscript
+if (MediaPlayer.isSupported)
+{
+	// Functionality here
+}
+```

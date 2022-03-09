@@ -10,7 +10,7 @@ The major difference is that you now will create an `MediaPlayerView` instance a
 
 ## Dependencies
 
-There are new ANE dependencies with version 2. In particular the Android support libraries are now required. Check the details in the [Add the Extension](add-the-extension) section.
+There are new ANE dependencies with version 2. In particular the Android support libraries are now required. Check the details in the [Add the Extension](add-the-extension.mdx) section.
 
 
 

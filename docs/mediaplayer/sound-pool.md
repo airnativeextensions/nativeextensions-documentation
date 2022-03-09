@@ -6,7 +6,7 @@ sidebar_label: Sound Pool
 A SoundPool is a collection of samples that can be loaded into memory. It allows you to play short sound effects and samples. The sounds are loaded into memory for low-latency playback.
 
 This is well suited to short sound effects and playback where trigger time is important. 
-If you want to playback longer sounds and music look at the [AudioPlayer](audio-player) class for a more complete audio playback solution.
+If you want to playback longer sounds and music look at the [AudioPlayer](audio-player.md) class for a more complete audio playback solution.
 Sounds played through the sound pool may not complete if they are too long. 
 
 

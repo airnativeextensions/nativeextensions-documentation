@@ -1,0 +1,47 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.MediaPlayer</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>androidx.vectordrawable</extensionID>
+	<extensionID>com.google.guava</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+Displaying video on Android requires that we enable hardware acceleration on most devices. 
+You can check whether this is required for your supported device list however generally we advise you enable acceleration.
+
+You also need to add a service. This service is only required if you are using background audio playback on Android, however it doesn't hurt to add the service either way.
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+	
+	<application android:hardwareAccelerated="true">
+
+		<service android:name="com.distriqt.extension.mediaplayer.audio.AudioPlayerService" android:enabled="true" android:exported="true" />
+
+	</application>
+
+</manifest>
+```
+
+
+### iOS
+
+#### InfoAdditions
+
+Nothing additional required here.

@@ -9,7 +9,7 @@ Using the native audio player gives you access to a high performance player that
 streaming from http sources and playback of music and audio files packaged with your 
 application.
 
-Additionally it allows playback of [audio in the background](audio-player---background-audio).
+Additionally it allows playback of [audio in the background](audio-player---background-audio.md).
 
 Here we will cover the basics of creating and using an `AudioPlayer` instance.
 

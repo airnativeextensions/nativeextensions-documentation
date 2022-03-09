@@ -32,45 +32,22 @@ If you wish to set more advance controls including setting the media information
 
 ### iOS 
 
-In order to play audio in the background you will firstly need to add the `audio` background mode to the `UIBackgroundModes` key in your info additions section of your application descriptor.
+In order to play audio in the background you will firstly need to add the `audio` background mode to the `UIBackgroundModes` key in your info additions section of your application descriptor. 
 
 ```xml
-<iPhone>
-    <InfoAdditions><![CDATA[
-
-        <!-- OTHER NODES -->
-
-
-        <key>UIBackgroundModes</key>
-        <array>
-            <string>audio</string>
-        </array>
-
-
-
-    ]]></InfoAdditions>
-    <requestedDisplayResolution>high</requestedDisplayResolution>
-    <Entitlements>
-        <![CDATA[
-        ]]>
-    </Entitlements>
-</iPhone>
+<key>UIBackgroundModes</key>
+<array>
+	<string>audio</string>
+</array>
 ```
 
-Secondly you will have to inform the ANE to change the audio session to support background audio. This is done by enabling the background audio in the `AudioPlayerOptions`:
+See [Add the Extension](add-the-extension.mdx#background-audio)
 
-```actionscript
-var options:AudioPlayerOptions = new AudioPlayerOptions()
-    .enableBackgroundAudio();
+Secondly you will have to inform the ANE to change the audio session to support background audio. This is done by enabling the background audio in the `AudioPlayerOptions` as above. This will change the audio session mode to support background audio. 
 
-var player:AudioPlayer = MediaPlayer.service.createAudioPlayer( options ); 
-```
-
-This will change the audio session mode to support background audio. 
-
-> 
-> Be aware that this mode change will affect your entire application not just this player.
->
+:::caution
+Be aware that this mode change will affect your entire application not just this player. 
+:::
 
 
 ### Android

@@ -3,7 +3,7 @@ title: Media Player - Loading Media
 sidebar_label: Media Player - Loading Media
 ---
 
-Once you have [created a `MediaPlayerView`](media-player---create) instance then you will need to load your media into the player. In the following code `player` is assumed to be the `MediaPlayerView` instance you created:
+Once you have [created a `MediaPlayerView`](media-player---create.md) instance then you will need to load your media into the player. In the following code `player` is assumed to be the `MediaPlayerView` instance you created:
 
 ```actionscript
 var player:MediaPlayerView = MediaPlayer.service.createPlayerView(
