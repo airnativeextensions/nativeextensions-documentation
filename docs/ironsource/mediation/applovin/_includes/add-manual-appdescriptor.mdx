@@ -26,69 +26,80 @@ The following should be added to your `extensions` node in your application desc
 ##### Manifest Additions
 
 
-Add the following to your manifest additions inside the `application` tag. 
+Add the following to your manifest additions, ensuring there is only one `application` tag. 
 
 You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`.
 Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 
 ```xml
-<!-- AppLovin -->
-<provider
-    android:name="com.applovin.sdk.AppLovinInitProvider"
-    android:authorities="APPLICATION_PACKAGE.applovincontentprovider"
-    android:exported="false"
-    android:grantUriPermissions="true"
-    android:initOrder="101" />
 
-<activity
-    android:name="com.applovin.adview.AppLovinInterstitialActivity"
-    android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
-    android:hardwareAccelerated="true"
-    android:screenOrientation="behind" />
-<activity
-    android:name="com.applovin.adview.AppLovinFullscreenActivity"
-    android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-    android:exported="false"
-    android:hardwareAccelerated="true"
-    android:launchMode="singleTop"
-    android:screenOrientation="behind" />
-<activity
-    android:name="com.applovin.sdk.AppLovinWebViewActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
-<activity
-    android:name="com.applovin.mediation.MaxDebuggerActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-<activity
-    android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-<activity
-    android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-<activity
-    android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-<activity
-    android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-<activity
-    android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
-<service
-    android:name="com.applovin.impl.sdk.utils.AppKilledService"
-    android:exported="false"
-    android:stopWithTask="false" />
-<service
-    android:name="com.applovin.impl.adview.activity.FullscreenAdService"
-    android:exported="false"
-    android:stopWithTask="false" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+<application>
+
+	<!-- AppLovin -->
+	<provider
+		android:name="com.applovin.sdk.AppLovinInitProvider"
+		android:authorities="APPLICATION_PACKAGE.applovincontentprovider"
+		android:exported="false"
+		android:grantUriPermissions="true"
+		android:initOrder="101" /> <!-- Init order is 101 so we're before Firebase/Google which uses 100 -->
+
+	<activity
+		android:name="com.applovin.adview.AppLovinInterstitialActivity"
+		android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
+		android:hardwareAccelerated="true"
+		android:screenOrientation="behind" />
+	<activity
+		android:name="com.applovin.adview.AppLovinFullscreenActivity"
+		android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+		android:exported="false"
+		android:hardwareAccelerated="true"
+		android:launchMode="singleTop"
+		android:screenOrientation="behind" />
+	<activity
+		android:name="com.applovin.sdk.AppLovinWebViewActivity"
+		android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
+	<activity
+		android:name="com.applovin.mediation.MaxDebuggerActivity"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+	<activity
+		android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+	<activity
+		android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+	<activity
+		android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+	<activity
+		android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+	<activity
+		android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+
+	<service
+		android:name="com.applovin.impl.sdk.utils.AppKilledService"
+		android:exported="false"
+		android:stopWithTask="false" />
+	<service
+		android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+		android:exported="false"
+		android:stopWithTask="false" />
+		
+</application>
 ```
 
 

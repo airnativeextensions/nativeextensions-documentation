@@ -27,24 +27,34 @@ Add the `audience_network.dex` file to the root of your application package. (Th
 
 ##### Manifest Additions
 
-Add the following to your manifest additions inside the `application` tag. 
+Add the following to your manifest additions, ensuring you only have one `application` tag. 
 
 You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`.
 Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 
 
 ```xml
-<!-- Facebook -->
-<activity
-    android:name="com.facebook.ads.AudienceNetworkActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:exported="false"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+ <queries>
+	<package android:name="com.facebook.katana" />
+</queries>
 
-<provider
-    android:name="com.facebook.ads.AudienceNetworkContentProvider"
-    android:authorities="APPLICATION_PACKAGE.AudienceNetworkContentProvider"
-    android:exported="false" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+<application>
+
+	<activity
+		android:name="com.facebook.ads.AudienceNetworkActivity"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:exported="false"
+		android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+	<provider
+		android:name="com.facebook.ads.AudienceNetworkContentProvider"
+		android:authorities="APPLICATION_PACKAGE.AudienceNetworkContentProvider"
+		android:exported="false" />
+
+</application>
 ```
 
 
