@@ -1,3 +1,12 @@
+### 2022.03.09 [v5.1.0]
+
+```
+Android: Updated Maps SDK to v18.0.2
+
+Update package and docs for Android 31 and latest dependencies
+Added descriptions to air package parameters
+```
+
 ### 2022.02.08 [v5.0.18]
 
 ```
