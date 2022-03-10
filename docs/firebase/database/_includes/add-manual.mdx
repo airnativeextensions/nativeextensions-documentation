@@ -1,0 +1,26 @@
+
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
+
+
+First step is always to add the extension to your development environment. 
+
+:::caution Firebase Core
+You must have gone through the setup of the Firebase Core extension before attempting to proceed with this extension.
+
+Make sure you have added all the extensions required for the Firebase Core extension as outlined [here](../../core/add-the-extensions.mdx).
+:::
+
+
+### Firebase Realtime Database
+
+The main additional extension is the Realtime Database ANE, however you must add the Auth extension as well:
+
+- [`com.distriqt.firebase.Database`](https://github.com/distriqt/ANE-Firebase/raw/master/lib/com.distriqt.firebase.Database.ane)
+- [`com.distriqt.firebase.Auth`](https://github.com/distriqt/ANE-Firebase/raw/master/lib/com.distriqt.firebase.Auth.ane)
+
+Download the extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
+
+
+

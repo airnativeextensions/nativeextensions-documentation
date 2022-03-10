@@ -26,7 +26,7 @@ if (Firebase.isSupported)
 The call to `initialiseApp` returns a Boolean value indicating whether you have a configured 
 Firebase application available.
 
-If the call returns `false`, you should return to the [Configuration Files](../setup/configuration-files) section and ensure you have correctly setup all the appropriate options.
+If the call returns `false`, you should return to the [Configuration Files](../setup/configuration-files.md) section and ensure you have correctly setup all the appropriate options.
 
 
 ### Checking the configuration

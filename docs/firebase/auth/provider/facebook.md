@@ -23,7 +23,7 @@ In order to sign in using Facebook you will need to integrate **Facebook Login**
 
 Firstly, integrate Facebook in your application by following the steps outlined in the Facebook extension documentation, this includes setting up your Facebook application in the Facebook developers site and initialising the Facebook application using `Facebook.instance.initialise()`. 
 
-- [Reference](https://docs.airnativeextensions.com/docs/facebookapi/core/overview)
+- [Reference](/docs/facebookapi/core/overview)
 
 When you are logging in your users, you must ensure that you request at least the `public_profile` and `email` permissions. 
 

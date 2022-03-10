@@ -22,7 +22,7 @@ Firebase Invites are an out-of-the-box solution for app referrals and sharing vi
 
 Firebase Invites are an out-of-the-box solution for app referrals and sharing via email or SMS. 
 To customize the invitation user experience, or to generate links programmatically, 
-use [Firebase Dynamic Links](../dynamiclinks/introduction).
+use [Firebase Dynamic Links](../dynamiclinks/introduction.mdx).
 
 >
 > Word of mouth is one of the most effective ways of getting users to install your app. 

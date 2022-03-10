@@ -1,0 +1,38 @@
+
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
+
+
+First step is always to add the extension to your development environment. 
+
+:::caution Firebase Core
+You must have gone through the setup of the Firebase Core extension before attempting to proceed with this extension.
+
+Make sure you have added all the extensions required for the Firebase Core extension as outlined [here](../../core/add-the-extensions.mdx).
+:::
+
+
+### Firebase Auth
+
+The main additional extension is the Auth ANE located here:
+
+- [`com.distriqt.firebase.Auth`](https://github.com/distriqt/ANE-Firebase/raw/master/lib/com.distriqt.firebase.Auth.ane)
+
+Download the extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
+
+This extension contains all the required libraries for the main Firebase authentication functionality, however some of the authentication providers (such as Facebook and Google) may require additional extensions. We list these in the documentation in each of the specific providers so you only include the required extensions for your situation.
+
+
+
+### Android Support
+
+The Android Support libraries encompass the Android Support, Android X and common Google libraries. 
+
+These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
+
+This extension requires the following extensions:
+
+- [`androidx.browser`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
+
+You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).

@@ -1,0 +1,362 @@
+---
+title: DynamicLinks - Add the extension
+sidebar_label: Add the extension
+---
+
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+## Add the Extension
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Android 
+
+As with plain deep links, you must add an intent filter to the activity that handles deep links for your app. 
+The intent filter should catch deep links of your domain, since the Dynamic Link will redirect to your domain 
+if your app is installed. This is required for your app to receive the Dynamic Link data after it is installed 
+from the Play Store. In your manifest:
+
+
+```xml
+<activity>
+	<intent-filter>
+		<action android:name="android.intent.action.VIEW"/>
+		<category android:name="android.intent.category.DEFAULT"/>
+		<category android:name="android.intent.category.BROWSABLE"/>
+
+		<data android:host="airnativeextensions.com" android:scheme="http"/>
+		<data android:host="airnativeextensions.com" android:scheme="https"/>
+	</intent-filter>
+</activity>
+```
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+Firstly add a custom Android configuration file by running:
+
+```
+apm generate config android
+```
+
+Edit the `config/android/AndroidManifest.xml` file that was generated to resemble the following, adding the `activity`:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+
+		<activity>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+
+				<data android:host="airnativeextensions.com" android:scheme="http"/>
+				<data android:host="airnativeextensions.com" android:scheme="https"/>
+			</intent-filter>
+		</activity>
+
+    </application>
+
+</manifest>
+```
+
+Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
+
+
+  </TabItem>
+  <TabItem value="manual" >
+
+
+This `activity` should be added directly after the `<application>` tag in your manifest additions. 
+(Note: This is not the main `<application>` tag in your AIR application descriptor but the one inside 
+your manifest additions!) 
+
+For example:
+
+```xml
+<android>
+	<manifestAdditions><![CDATA[
+		<manifest android:installLocation="auto">
+			<uses-permission android:name="android.permission.INTERNET"/>
+			
+			<!-- OTHER PERMISSIONS / REQUIREMENTS -->
+
+			<application>
+				<activity>
+					<intent-filter>
+						<action android:name="android.intent.action.VIEW"/>
+						<category android:name="android.intent.category.DEFAULT"/>
+						<category android:name="android.intent.category.BROWSABLE"/>
+
+						<data android:host="airnativeextensions.com" android:scheme="http"/>
+						<data android:host="airnativeextensions.com" android:scheme="https"/>
+					</intent-filter>
+				</activity>
+
+				<!-- OTHER ADDITIONS -->
+
+			</application>
+		</manifest>
+	]]></manifestAdditions>
+</android>
+```
+
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+When users open a link to the scheme and host you specify, your app will start an activity to handle the link.
+
+For more details on these fields and how to handle other types of App Links you can
+read the official Android documentation on [Handling App Links](https://developer.android.com/training/app-links/index.html)
+
+
+
+## iOS 
+
+Ensure that your app's App Store ID and your Apple Developer Team ID is specified in your app's settings. To view and edit your app's settings, go to your Firebase project's Settings page and select your iOS app.
+
+You can confirm that your Firebase project is properly configured to use Dynamic Links in your iOS app by opening the following URL (replacing `app_code` with your app code):
+
+```
+https://app_code.app.goo.gl/apple-app-site-association
+```
+
+If your app is connected, the apple-app-site-association file contains a reference to your app's App Store ID and bundle ID. For example:
+
+```
+{"applinks":{"apps":[],"details":[{"appID":"1234567890.com.example.ios","paths":["/*"]}]}}
+```
+
+If the details field is empty, double-check that you specified your Team ID.
+
+
+
+### Developer Console
+
+
+Ensure your application identifier in the iOS developer member center has enabled "Associated Domains".
+Enabling Associated Domains allows an app to be associated with a specified domain for specified services
+such as accessing Safari saved passwords and activity continuation.
+
+To do this, log into the member center and open your [App IDs](https://developer.apple.com/account/ios/identifier/bundle)
+
+Select your App ID and select "Edit". You need to enable the "Associated Domains" service as below:
+
+![](images/dynamiclinks-ios-associateddomains.png)
+
+>
+> Note: You will need to regenerate and download your provisioning profiles after making this change. 
+>
+
+
+### Info Additions and Entitlements
+
+You will firstly need to add any custom url scheme to your info additions, by adding
+the following and replacing `APP_SCHEME` with your applications custom url scheme:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>APP_SCHEME</string>
+		</array>
+	</dict>
+</array>
+```
+
+You need to add the associated domain to your iOS Entitlements section, replacing 
+`APP_CODE` below with your Dynamic Links domain.
+
+```xml
+<key>com.apple.developer.associated-domains</key>
+<array>
+	<string>applinks:APP_CODE.app.goo.gl</string>
+</array>
+```
+
+If you want to receive Dynamic Links with a fully-custom domain you will need to add the `FirebaseDynamicLinksCustomDomains` key to your info additions and specify your app's Dynamic Links URL prefixes:
+
+```xml
+<key>FirebaseDynamicLinksCustomDomains</key>
+<array>
+	<string>https://example.com/link</string>
+	<string>https://example.com/promos</string>
+</array>
+```
+
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+Firstly add a custom iOS configuration file by running:
+
+```
+apm generate config ios
+```
+
+Edit the `config/ios/InfoAdditions.xml` file that was generated to resemble the following, adding the `CFBundleURLTypes` and `FirebaseDynamicLinksCustomDomains` (if required) replacing `APP_SCHEME` as required:
+
+```xml
+<plist version="1.0">
+	<dict>
+
+		<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<string>APP_SCHEME</string>
+				</array>
+			</dict>
+		</array>
+
+		<key>FirebaseDynamicLinksCustomDomains</key>
+		<array>
+			<string>https://example.com/link</string>
+			<string>https://example.com/promos</string>
+		</array>
+
+	</dict>
+</plist>
+```
+
+Edit the `config/ios/Entitlements.xml` file that was generated to resemble the following, replacing `APP_CODE` as required:
+
+```xml
+<plist version="1.0">
+	<dict>
+
+		<key>com.apple.developer.associated-domains</key>
+		<array>
+			<string>applinks:APP_CODE.app.goo.gl</string>
+		</array>
+
+	</dict>
+</plist>
+```
+
+Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
+
+
+  </TabItem>
+  <TabItem value="manual" >
+
+Update your info additions and entitlements sections in your application descriptor directly to resemble the following, replacing `APP_CODE` and `APP_SCHEME` as required:
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+
+		<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<string>APP_SCHEME</string>
+				</array>
+			</dict>
+		</array>
+
+		<key>FirebaseDynamicLinksCustomDomains</key>
+		<array>
+			<string>https://example.com/link</string>
+			<string>https://example.com/promos</string>
+		</array>
+
+	]]></InfoAdditions>
+	<requestedDisplayResolution>high</requestedDisplayResolution>
+	<Entitlements><![CDATA[
+		
+		<key>com.apple.developer.associated-domains</key>
+		<array>
+			<string>applinks:APP_CODE.app.goo.gl</string>
+		</array>
+
+	]]></Entitlements>
+</iPhone>
+```
+
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+
+
+

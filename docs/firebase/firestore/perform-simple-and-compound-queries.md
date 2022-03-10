@@ -3,7 +3,7 @@ title: Firestore - Perform simple and compound queries
 sidebar_label: Perform simple and compound queries
 ---
 
-Cloud Firestore provides powerful query functionality for specifying which documents you want to retrieve from a collection. These queries can also be used with either `query()` or `addSnapshotListener()`, as described in [Get Data](get-data) and [Get Realtime Updates](get-realtime-updates).
+Cloud Firestore provides powerful query functionality for specifying which documents you want to retrieve from a collection. These queries can also be used with either `query()` or `addSnapshotListener()`, as described in [Get Data](get-data.md) and [Get Realtime Updates](get-realtime-updates.md).
 
 
 ## Simple queries

@@ -33,4 +33,4 @@ Protect access to your data in Cloud Firestore with Firebase Authentication and 
 
 ## Next Steps
 
-- [Add the extension](add-the-extension)
+- [Add the extension](add-the-extension.mdx)

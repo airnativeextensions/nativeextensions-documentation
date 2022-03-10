@@ -3,7 +3,7 @@ title: Firestore - Order and limit data
 sidebar_label: Order and limit data
 ---
 
-Cloud Firestore provides powerful query functionality for specifying which documents you want to retrieve from a collection. These queries can also be used with either `query()` or `addSnapshotListener()`, as described in [Get Data](get-data).
+Cloud Firestore provides powerful query functionality for specifying which documents you want to retrieve from a collection. These queries can also be used with either `query()` or `addSnapshotListener()`, as described in [Get Data](get-data.md).
 
 ## Order and limit data
 

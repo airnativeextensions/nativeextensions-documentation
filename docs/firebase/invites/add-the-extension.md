@@ -18,7 +18,7 @@ sidebar_label: Add the extension
 
 You should have been through the setup of the Firebase Core before attempting to proceed with Invites.
 
-Make sure you have added all the extensions required for the Firebase Core extension as outlined [here](../core/add-the-extensions).
+Make sure you have added all the extensions required for the Firebase Core extension as outlined [here](../core/add-the-extensions.mdx).
 
 The Invites extension is not compatible with the Dynamic Links extension. You should use one or the other.
 Invites is built on top of the Firebase dynamic links functionality so the invites extension includes all the dynamic link functionality as well as the invites functionality.
@@ -34,7 +34,7 @@ This ANE contains all the required libraries for the main Firebase Invites funct
 
 You cannot use the Dynamic Links ANE with this ANE. Instead the functionality of the Dynamic Links ANE is replicated in this ANE.
 
-See the notes on [dynamic links](dynamic-links).
+See the notes on [dynamic links](dynamic-links.md).
 
 
 
@@ -72,7 +72,7 @@ Each separate ANE provides a component from the Play Services client library and
 These client libraries aren't packaged with this ANE as they are used by multiple ANEs and separating them 
 will avoid conflicts, allowing you to use multiple ANEs in the one application.
 
-This ANE requires the following Google Play Services in addition to the ones required by the [Firebase Core](../core/add-the-extensions#google-play-services):
+This ANE requires the following Google Play Services in addition to the ones required by the [Firebase Core](../core/add-the-extensions.mdx#add-the-extension):
 
 - [`com.distriqt.playservices.AppInvite.ane`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AppInvite.ane)
 

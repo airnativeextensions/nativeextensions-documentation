@@ -1,0 +1,40 @@
+
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
+
+
+First step is always to add the extension to your development environment. 
+
+:::caution Firebase Core
+You must have gone through the setup of the Firebase Core extension before attempting to proceed with this extension.
+
+Make sure you have added all the extensions required for the Firebase Core extension as outlined [here](../../core/add-the-extensions.mdx).
+:::
+
+
+### Firebase Crashlytics
+
+The main additional extension is the Crashlytics ANE located here:
+
+- [`com.distriqt.firebase.Crashlytics`](https://github.com/distriqt/ANE-Firebase/raw/master/lib/com.distriqt.firebase.Crashlytics.ane)
+
+Download the extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
+
+This ANE contains all the required libraries for the main Firebase Crashlytics functionality.
+
+
+
+### Android Support
+
+The Android Support libraries encompass the Android Support, Android X and common Google libraries. 
+
+These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
+
+This extension requires the following extensions:
+
+- [`com.google.android.datatransport`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.android.datatransport.ane)
+- [`com.google.dagger`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.dagger.ane)
+
+You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
+

@@ -20,7 +20,7 @@ sidebar_label: Initialise
 
 On iOS you must set the `deepLinkURLScheme` in the extension to correctly handle opened links.
 This is the same url scheme (`APP_SCHEME`) that you added to the info additions previously when 
-[adding the extension](../dynamiclinks/add-the-extension)
+[adding the extension](../dynamiclinks/add-the-extension.mdx)
 
 The easiest way to do this is set as below, before calling `initialiseApp()`:
 

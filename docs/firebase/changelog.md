@@ -1,3 +1,16 @@
+###### 2022.03.10 [v7.0.0]
+
+```
+Update Firebase SDK
+ - Android BOM v29.0.4 (resolves #396, resolves #360, potential #362)
+
+Updates for Android 31
+Documentation update to use apm and changes for Android 31 (resolves #397)
+
+DynamicLinks: Add ability to decode a short url using getDynamicLink function (resolves #399)
+Remote Config: Add getByteArray implementation on Android (resolves #402)
+```
+
 ###### 2021.11.11 [v6.0.9]
 
 ```

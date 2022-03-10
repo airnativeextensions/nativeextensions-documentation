@@ -8,14 +8,14 @@ sidebar_label: Apple
 You can let your users authenticate with Firebase using their Apple ID by using the Firebase SDK and the Apple Sign In extension to carry out the end-to-end OAuth 2.0 sign-in flow.
 
 
->
-> Important: To sign in with an Apple account, users must:
-> 
-> - Have an Apple ID with two-factor authentication (2FA) enabled.
-> - Be signed in to iCloud on an Apple device.
->
-> See [How to use Sign in with Apple](https://support.apple.com/en-us/HT210318). You will also need to meet these requirements to test your integration with Sign In with Apple.
->
+:::info Important
+To sign in with an Apple account, users must:
+ 
+ - Have an Apple ID with two-factor authentication (2FA) enabled.
+ - Be signed in to iCloud on an Apple device.
+
+See [How to use Sign in with Apple](https://support.apple.com/en-us/HT210318). You will also need to meet these requirements to test your integration with Sign In with Apple.
+:::
 
 
 ## Setup
@@ -23,9 +23,8 @@ You can let your users authenticate with Firebase using their Apple ID by using 
 To sign in users using Apple, first configure Sign In with Apple on Apple's developer site, then enable Apple as a sign-in provider for your Firebase project.
 
 Follow the guide in the:
-- [Apple Sign In extension](https://github.com/distriqt/ANE-AppleSignIn/wiki/i.Setup-Application)
+- [Apple Sign In extension](/docs/applesignin/setup-application)
 - or [Firebase documentation](https://firebase.google.com/docs/auth/android/apple#configure-sign-in-with-apple)
-
 
 
 ## iOS
@@ -34,11 +33,10 @@ For iOS devices you will need access to the AppleSignIn extension to perform the
 
 The iOS authentication with Firebase is a two step process similar to many of the other providers. You will firstly perform the normal Sign in with Apple process and then authenticate with Firebase.
 
+
 ### Sign in with Apple
 
-To perform this step you will need to add the AppleSignIn extension.  
-
-- https://github.com/distriqt/ANE-AppleSignIn/wiki/i.Add-the-Extension#ios
+To perform this step you will need to [add the AppleSignIn extension](/docs/applesignin/add-the-extension).  
 
 
 Then to perform the actual sign in setup the standard  `AppleSignInOptions` and call `loginWithAppleId()`:

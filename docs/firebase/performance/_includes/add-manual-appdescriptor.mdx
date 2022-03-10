@@ -1,0 +1,123 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+	<extensionID>com.distriqt.firebase.Performance</extensionID>
+	<extensionID>com.distriqt.firebase.RemoteConfig</extensionID>
+
+	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>androidx.vectordrawable</extensionID>
+	<extensionID>com.google.android.datatransport</extensionID>
+	<extensionID>com.google.dagger</extensionID>
+	<extensionID>com.google.protobuflite</extensionID>
+	<extensionID>com.distriqt.square.okhttp3</extensionID>
+
+
+	<!-- Firebase Core -->
+	<extensionID>com.distriqt.Firebase</extensionID>
+
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>com.google.firebase.core</extensionID>
+
+	<extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+Add the following additions to the `application` node in the manifest additions:
+
+:::caution
+Ensure you:
+- replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options;
+- you only have one `<application>` node in your manifest additions combining them if you have ones from other extensions;
+:::
+
+```xml
+<provider
+	android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
+	android:authorities="APPLICATION_PACKAGE.firebaseperfprovider"
+	android:exported="false"
+	android:initOrder="101" />
+
+<!-- data transport -->
+<service
+	android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+	android:exported="false" >
+	<meta-data
+		android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+		android:value="cct" />
+</service>
+<service
+	android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+	android:exported="false"
+	android:permission="android.permission.BIND_JOB_SERVICE" >
+</service>
+
+<receiver
+	android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+	android:exported="false" />
+```
+
+##### Component Discovery Service
+
+Then locate the `ComponentDiscoveryService` service you added as part of the core Firebase manifest additions and add the following meta data tag:
+
+```xml
+<meta-data
+	android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+	android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data
+	android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+	android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data
+	android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+	android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data
+	android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+	android:value="com.google.firebase.components.ComponentRegistrar" />
+```
+
+It should now appear like the following at a minimum (it may have other meta-data tags from other components):
+
+```xml
+<service android:name="com.google.firebase.components.ComponentDiscoveryService" 
+		android:directBootAware="true"
+		android:exported="false">
+	<meta-data
+		android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+		android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data
+		android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+		android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data
+		android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+		android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data
+		android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+		android:value="com.google.firebase.components.ComponentRegistrar" />
+
+    <meta-data
+		android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+		android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data
+		android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+		android:value="com.google.firebase.components.ComponentRegistrar" />
+</service>
+```
+
+
+
+### iOS 
+
+No particular additions are required for iOS

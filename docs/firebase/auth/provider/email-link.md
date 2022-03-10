@@ -96,7 +96,7 @@ Firebase Auth uses Firebase Dynamic Links when sending a link that is meant to b
 
 Follow the guide to add the Dynamic Links extension to your application:
 
-- [DynamicLinks](../../dynamiclinks/add-the-extension)
+- [DynamicLinks](../../dynamiclinks/add-the-extension.mdx)
 
 
 Now you can listen for the user to click on the link in the email 

@@ -20,7 +20,7 @@ sidebar_label: Add the extensions
 You should have been through the setup of the Firebase Core before attempting to proceed with Crash Reporting.
 
 Make sure you have added all the extensions required for the Firebase Core 
-extension as outlined [here](../core/add-the-extensions).
+extension as outlined [here](../core/add-the-extensions.mdx).
 
 
 ### Firebase Crash Reporting

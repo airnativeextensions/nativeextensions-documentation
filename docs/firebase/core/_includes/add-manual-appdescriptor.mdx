@@ -1,0 +1,172 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.Firebase</extensionID>
+    
+	<extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>com.google.firebase.core</extensionID>
+
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+Add the following to your manifest additions. 
+
+:::caution
+Ensure you:
+- replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options;
+- you only have one `<application>` node in your manifest additions combining them if you have ones from other extensions;
+:::
+
+
+
+```xml
+<manifest android:installLocation="auto">
+
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31" />
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+	<!-- Include required permissions for Advertising Id -->
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+
+		<provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:authorities="APPLICATION_PACKAGE.lifecycle-process" android:exported="false" android:multiprocess="true"/>
+    	<provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false"/>
+    
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version" />
+
+		<meta-data
+			android:name="google_analytics_automatic_screen_reporting_enabled"
+			android:value="false" />
+
+
+		<!-- FIREBASE CORE -->
+		<receiver
+			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+			android:enabled="true"
+			android:exported="false" >
+		</receiver>
+
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementService"
+			android:enabled="true"
+			android:exported="false" />
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+			android:enabled="true"
+			android:exported="false"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service
+			android:name="com.google.firebase.components.ComponentDiscoveryService"
+			android:directBootAware="true"
+			android:exported="false" >
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+
+		<provider
+			android:name="com.google.firebase.provider.FirebaseInitProvider"
+			android:authorities="APPLICATION_PACKAGE.firebaseinitprovider"
+			android:directBootAware="true"
+			android:exported="false"
+			android:initOrder="100" />
+
+	</application>
+
+</manifest>
+```
+
+
+
+##### Component Discovery Service
+
+The `com.google.firebase.components.ComponentDiscoveryService` is particularly important for Firebase configuration.
+
+The `meta-data` tags that are added to this service specify the components that should be initialised by Firebase and you must ensure that you have added the appropriate tags for the services you are using.
+
+Firebase depends on Analytics so you must at least include the following tags:
+
+
+- Analytics:
+
+```xml
+<meta-data
+	android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+	android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data
+	android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+	android:value="com.google.firebase.components.ComponentRegistrar" />
+```
+
+
+Each of the component extensions will outline whether they have additional `meta-data` tags to add to the service.
+
+
+
+### iOS 
+
+#### Info Additions
+
+In order for the Firebase system to work well with AIR and other extensions we need
+to disable the automatic delegate proxy that Firebase implements on iOS. To do so 
+you must add the following to your InfoAdditions:
+
+```xml
+<key>FirebaseAppDelegateProxyEnabled</key>
+<false/>
+<key>FirebaseAutomaticScreenReportingEnabled</key>
+<false/>
+```
+
+Eg:
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+		<key>UIDeviceFamily</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+		</array>
+		
+		<key>FirebaseAppDelegateProxyEnabled</key>
+		<false/>
+		<key>FirebaseAutomaticScreenReportingEnabled</key>
+		<false/>
+			
+	]]></InfoAdditions>
+	<requestedDisplayResolution>high</requestedDisplayResolution>
+	<Entitlements>
+	<![CDATA[
+	]]>
+	</Entitlements>
+</iPhone>
+```
+
+You may wish to add a minimum iOS version to restrict your application to the 
+minimum Firebase version.
+

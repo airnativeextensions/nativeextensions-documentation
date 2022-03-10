@@ -10,7 +10,7 @@ Query cursors define the start and end points for a query, allowing you to:
 - Return a subset of the data.
 - Paginate query results.
 
-However, to define a specific range for a query, you should use the where() method described in [Simple Queries](perform-simple-and-compound-queries).
+However, to define a specific range for a query, you should use the where() method described in [Simple Queries](perform-simple-and-compound-queries.md).
 
 
 ## Add a simple cursor to a query

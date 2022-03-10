@@ -5,7 +5,7 @@ sidebar_label: Create a Firebase Project
 
 It's time to add Firebase to your app. To do this you'll need a Firebase project and a Firebase configuration file for your app.
 
-At the end, you'll download a configuration file which we will use in the next section [Configuration Files](configuration-files).
+At the end, you'll download a configuration file which we will use in the next section [Configuration Files](configuration-files.md).
 You can download this file again at any time.
 
 To start go to the [Firebase console](https://console.firebase.google.com/).
