@@ -11,6 +11,7 @@ DynamicLinks: Add ability to decode a short url using getDynamicLink function (r
 Remote Config: Add getByteArray implementation on Android (resolves #402)
 ```
 
+
 ###### 2021.11.11 [v6.0.9]
 
 ```
