@@ -1,3 +1,9 @@
+### 2022.03.11 [v8.0.2]
+
+```
+Fix for issue creating save games caused by an undocumented Play Games change (resolves #210)
+```
+
 ### 2022.03.08 [v8.0.0]
 
 ```

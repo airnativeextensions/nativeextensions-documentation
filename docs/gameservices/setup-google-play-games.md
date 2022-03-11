@@ -10,13 +10,41 @@ You must setup your application for Play Services, the following guide will help
 - https://developers.google.com/games/services/console/enabling
 
 
-## Getting the SHA1 signature:
+## Getting the SHA1 signature
+
+If you are using the current Play App signing approach you can get the signatures of your certificates directly from the Play console, in the "App integrity" section. 
+
+
+### keytool
+
+You can use the keytool utility to get the details of your `p12` certificate directly:
+
+```
+keytool -list -v -keystore /path/to/your/certificate.p12 
+```
+
+<details><summary><code>keytool</code> location</summary>
+<p>
+
+`keytool` is a key and certificate management utility. 
+
+You will find it in `$JAVA_HOME/bin/keytool`.
+
+</p>
+</details>
+
+
+### Flash Builder Debug Certificate
+
+If you are attempting to use the default debug certificate in Flash Builder then it can be useful to add the signature of this certificate to your configuration as well.
 
 The following command retrieves the SHA1 signature for the debug certificate used in Flash Builder. This will allow you to test your application from debug builds.
 
-
 ```
-keytool -exportcert -keystore /Applications/Adobe\ Flash\ Builder\ 4.7/eclipse/plugins/com.adobe.flexide.multiplatform.android_4.7.0.349722/resources/debug-certificate-android.p12 -storepass debug  -list -v -storetype PKCS12
+keytool -list -v 
+		-keystore /Applications/Adobe\ Flash\ Builder\ 4.7/eclipse/plugins/com.adobe.flexide.multiplatform.android_4.7.0.349722/resources/debug-certificate-android.p12 
+		-storepass debug 
+		-storetype PKCS12
 ```
 
 
