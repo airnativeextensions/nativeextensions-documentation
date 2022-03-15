@@ -1,3 +1,9 @@
+###### 2022.03.15 [v7.0.1]
+
+```
+Correct crashlytics package dependency
+```
+
 ###### 2022.03.10 [v7.0.0]
 
 ```
