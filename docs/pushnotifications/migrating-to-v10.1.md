@@ -15,7 +15,7 @@ This requires the following updates for Android:
 
 - Addition of `com.distriqt.playservices.CloudMessaging` dependency;
 - Changes to the manifest additions for the `ComponentDiscoveryService`, mainly the inclusion of the `DynamicLoadingRegistrar`. We recommend carefully going through the manifest additions again to ensure your additions are correct:
-  - [Manifest Additions](firebase/firebase-cloud-messaging#manifest-additions)
+  - [Manifest Additions](firebase/add-the-extension.mdx#application-descriptor)
 
 
 No changes are necessary for iOS. 

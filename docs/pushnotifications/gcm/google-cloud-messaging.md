@@ -4,12 +4,13 @@ sidebar_label: Google Cloud Messaging
 ---
 
 
->
-> Google is advising you use [Firebase Cloud Messaging](../firebase/firebase-cloud-messaging) in place of GCM and have deprecated the GCM service.
-> You should move to the more powerful FCM platform.
->
-> We will no longer be maintaining the development of the GCM service.
->
+:::warning 
+Google has deprecated GCM and it is no longer supported and is advising you use [Firebase Cloud Messaging](../firebase/firebase-cloud-messaging.md) in place of GCM.
+
+We have removed the code from the extension and it will no longer function.
+:::
+
+
 
 Google Cloud Messaging (GCM) is Android’s push notification system. 
 The GCM system is a very simple system to get up and running.

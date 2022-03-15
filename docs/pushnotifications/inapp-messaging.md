@@ -16,7 +16,7 @@ The In-App Messaging functionality is provided through the `InAppMessaging` sing
 
 ## Setup
 
-You must [setup your service](setup-your-service) before attempting to access In-App Messaging. Any attempts to access it before calling setup will fail.
+You must [setup your service](setup-your-service.md) before attempting to access In-App Messaging. Any attempts to access it before calling setup will fail.
 
 
 ## Support

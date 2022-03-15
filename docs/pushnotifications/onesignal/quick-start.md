@@ -5,54 +5,35 @@ sidebar_label: Quick Start
 
 - [Setup OneSignal Account](https://onesignal.com)
   - Get your App ID: [Keys & IDs](https://documentation.onesignal.com/docs/accounts-and-keys#section-app-id)
-- [Add Required ANEs](onesignal.md#required-anes)
-  - `com.distriqt.Core`
-  - `com.distriqt.playservices.Base`
-  - `com.distriqt.playservices.AdsIdentifier`
-  - `com.distriqt.playservices.CloudMessaging`
-  - `com.google.firebase.core`
-  - `com.google.android.datatransport`
-  - `com.google.dagger`
-  - `com.google.guava`
-  - `androidx.appcompat`
-  - `androidx.browser`
-  - `androidx.cardview`
-  - `androidx.core`
-  - `androidx.concurrent`
-  - `androidx.recyclerview`
-  - `androidx.room`
-  - `androidx.vectordrawable`
-  - `androidx.work`
-  - `com.jetbrains.kotlin`
 - Use AIR 33+
-- iOS
-  - [Info Additions and Entitlements](onesignal.md#info-additions-and-entitlements)
-- Android
-  - [Manifest Additions](onesignal.md#manifest-additions)
+- Install with apm:
+	- `apm install com.distriqt.PushNotifications-OneSignal`
+- Configure apm:
+	- `apm project config set com.distriqt.PushNotifications`
+	- `apm -b development project config set apsEnvironment development`
+	- `apm -b development project config set getTaskAllow true`
+
+- Generate app descriptor:
+	- `apm generate app-descriptor src/MyApp-app.xml`
+
 
 ## Setup the Extension and Service
 
 - replace `ONESIGNAL_APP_ID` with your OneSignal App ID:
 
 ```actionscript
-try
+Core.init();
+if (PushNotifications.isSupported)
 {
-    Core.init();
-    if (PushNotifications.isSupported)
-    {
-        var service:Service = new Service(
-            Service.ONESIGNAL,
-            ONESIGNAL_APP_ID );
-        service.enableNotificationsWhenActive = true;
+	var service:Service = new Service(
+		Service.ONESIGNAL,
+		ONESIGNAL_APP_ID );
+	service.enableNotificationsWhenActive = true;
 
-        PushNotifications.service.setup( service );
-    }
-}
-catch (e:Error)
-{
-    trace( e );
+	PushNotifications.service.setup( service );
 }
 ```
+
 
 ## Request Authorisation
 

@@ -3,6 +3,11 @@ title: Azure Notifications
 sidebar_label: Azure Notifications
 ---
 
+:::warning Unmaintained
+The Azure implementation is currently unmaintained, if you require an update to this service please contact our support and we will look into it for you.
+:::
+
+
 Azure Notification Hubs provide an easy-to-use, multi-platform, scaled-out push engine. 
 With a single cross-platform API call, you can easily send targeted and personalized 
 push notifications to any mobile platform from any cloud or on-premises backend.

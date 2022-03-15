@@ -3,6 +3,13 @@ title: Pushy
 sidebar_label: Pushy
 ---
 
+
+:::warning Unmaintained
+The pushy implementation is currently unmaintained, if you require an update to this service please contact our support and we will look into it for you.
+:::
+
+
+
 This ANE implements the Pushy iOS and Android SDKs for usage in your mobile AIR applications.
 
 Pushy has an advantage over some of the other services as it does not require Google Play Services and as such is important to deliver notifications to users in countries like China where Google Play Services may not be fully supported.
@@ -200,7 +207,6 @@ similar to your AIR application id.
 You must add all the Pushy related manifest additions. 
 
 The following shows the complete manifest additions node. You must replace `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-
 
 
 ```xml

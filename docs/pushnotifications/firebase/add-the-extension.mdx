@@ -1,0 +1,76 @@
+---
+title: Firebase Cloud Messaging
+sidebar_label: Add the extension
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.md'
+import InstallManual from './_includes/add-manual.md'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.md'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.md'
+
+:::info About
+Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably send messages at no cost. 
+
+It is the default push notification platform for Android devices, but can also be used on iOS devices.
+:::
+
+This section describes how to setup your AIR application to use Firebase Cloud Messaging with this extension.
+
+This service is supported by the following variants of this extension:
+
+- FCM 
+- base (i.e. the main extension) 
+  - **Android only**: use the base variant if you plan on using APNS on iOS separately from FCM 
+
+
+## Setup
+
+You should firstly setup a Firebase project for your application. See the [setup](firebase-cloud-messaging) documentation to guide you through this process.
+
+
+## Install
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>

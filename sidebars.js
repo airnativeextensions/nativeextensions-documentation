@@ -2250,17 +2250,22 @@ module.exports = {
 		"pushnotifications/add-the-extension",
 		{
 			"Notification services": [
-				"pushnotifications/apple/apple-push-notification-service",
+				{
+					"Apple Push Notification Service": [
+						"pushnotifications/apple/add-the-extension",
+						"pushnotifications/apple/apple-push-notification-service",
+					]
+				},
 				{
 					"Firebase Messaging": [
+						"pushnotifications/firebase/add-the-extension",
 						"pushnotifications/firebase/firebase-cloud-messaging",
-						"pushnotifications/firebase/firebase-inapp-messaging",
 						"pushnotifications/migrating-to-v10.1",
 					],
 				},
 				{
 					"One Signal": [
-						"pushnotifications/onesignal/quick-start",
+						"pushnotifications/onesignal/add-the-extension",
 						"pushnotifications/onesignal/onesignal",
 						"pushnotifications/migrating-to-v10.2",
 					],

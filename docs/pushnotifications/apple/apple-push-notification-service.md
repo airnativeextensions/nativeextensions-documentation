@@ -1,13 +1,7 @@
 ---
-title: Apple Push Notification Service
-sidebar_label: Apple Push Notification Service
+title: Setup
+sidebar_label: Setup
 ---
-
-## Required ANEs
-
-APNS is supported by all of the ANEs in the repository. It is integrated into the iOS SDK so requires no additional SDKs or frameworks so we have included it in every ANE.  
-
-Make sure you have added the common ANEs from the [Add the Extension](../add-the-extension) section. This includes the Core and Android Support ANEs. There are no additional ANEs required to use APNS.
 
 
 # Setup 
@@ -41,18 +35,15 @@ Before we start, it’s important to check that you have all of the following:
 - An iOS Developer program membership
 - A server connected to the internet, ideally that can run background processes 
   (for testing this can simply be a local installation of Apache + PHP)
-- Access to an OSX machine.
+- Access to a macOS machine.
 
-It’s important that you have all of these organised before starting the APNS setup. 
-It is potentially possible to do parts of this without an OSX machine but we won’t 
-be showing that in this tutorial.
+It is important that you have all of these organised before starting the APNS setup. 
+It is potentially possible to do parts of this without an macOS machine but we won’t be showing that in this tutorial.
 
 
 ## APNS Data Packet
 
-It’s important to understand that at the very base of the APNS implementation is a 
-very simple JSON packet. They are intended to be small, delivering only the simplest 
-amount of information and can be no more than 256 bytes.
+Firstly it is important to understand that at the very base of the APNS implementation is a very simple JSON packet. They are intended to be small, delivering only the simplest amount of information.
 
 ```
 {
@@ -64,8 +55,7 @@ amount of information and can be no more than 256 bytes.
 }
 ```
 
-The notification packet can contain a range of information that will determine what 
-happens on the phone when the packet is received.
+The notification packet can contain a range of information that will determine what happens on the phone when the packet is received.
 
 Details on the notification payload are best described in the *“Local and Push Notification Programming Guide”* 
 as part of the iOS Developer Library Documentation. 
@@ -94,7 +84,7 @@ Lastly, you must abide by the Apple App Store Review Guidelines for Push Notific
 They are all fairly reasonable but it’s always important to check before you design 
 your application requirements.
 
-- [Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html)
+- [Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)
 
 
 
@@ -116,6 +106,7 @@ If you use the wrong certificate then the push notification will fail and your
 application won’t receive the notification. The process for creating these certificates 
 is very similar for both cases so we’ll just concentrate on the development profiles 
 and certificates.
+
 
 ### Certificate Signing Request (CSR)
 
@@ -311,124 +302,4 @@ type a few characters and the server should disconnect.
 
 
 
-
-
-
-
-
-
-
-## Info Additions and Entitlements
-
-Push notifications require a few additions to the Info plist and Entitlements section 
-of your application to correctly configure your application for push notifications. 
-
-You should add the listing below to application descriptor iPhone node.
-
-You must replace the `BUNDLE_SEED_ID` and `BUNDLE_IDENTIFIER` with the information you
-gathered when setting up your application. Also make sure you set the environment 
-correctly either using production or development, both are shown in the example 
-below with the production version commented out. More on this below.
-
-```xml
-<iPhone>
-	<InfoAdditions><![CDATA[
-		<key>UIPrerenderedIcon</key>
-		<true/>
-		
-		<key>UIDeviceFamily</key>
-		<array>
-			<string>1</string>
-			<string>2</string>
-		</array>
-	
-		
-	]]></InfoAdditions>
-	<requestedDisplayResolution>high</requestedDisplayResolution>
-	<Entitlements><![CDATA[
-		
-		<!-- DEVELOPMENT -->
-		<key>get-task-allow</key>
-		<true/>
-		<key>aps-environment</key>
-		<string>development</string>
-		
-		<!-- PRODUCTION -->
-		<!--
-		<key>get-task-allow</key>
-		<false/>
-		<key>aps-environment</key>
-		<string>production</string>
-		-->
-		
-		<key>application-identifier</key>
-		<string>BUNDLE_SEED_ID.BUNDLE_IDENTIFIER</string>
-		<key>keychain-access-groups</key>
-		<array>
-			<string>BUNDLE_SEED_ID.*</string>
-		</array>
-		
-	]]></Entitlements>
-</iPhone>
-```
-
-
-The first entitlement field is the `aps-environment`. This field indicates whether 
-we are using the development or the production environment. It must be either 
-`development` or `production` and depends on which configuration you are using. 
-If you are running a debug build you should use development. If you are looking 
-to publish the application to the AppStore, you should use production.
-
-You should have noted the `BUNDLE_SEED_ID` (or App ID Prefix) and `BUNDLE_IDENTIFIER` 
-when you were setting up your application in the iOS developer center. 
-The seed id should be a unique ten character string and the identifier should be 
-similar to your AIR application id.
-
-
-### Background notifications
-
-If you are planning to setup your application to receive background notifications 
-then you should include the UIBackgroundModes key:
-
-```xml
-		<key>UIBackgroundModes</key>
-		<array>
-			<string>remote-notification</string>
-		</array>
-```
-
-However it is not required if you do not wish to include it. 
-
-If it is enabled, you will be able to send silent notifications in the background 
-to trigger an event when your application is running in the background. 
-If you do not include it, then you will only receive the notification events in 
-the background when the user clicks a notification.
-
-
-
-### Critical Alerts
-
-Critical alerts are important notifications that will ignore Do Not Disturb mode, and ringer settings, so they cannot be muted.
-
-This is an opt-in service and developers must request approval from Apple in order to add this feature to an application. Generally only applications that send notifications related to health, public safety and home security are approved.
-
-![](images/apns_critical_alerts.jpg)
-
-If you are approved by Apple then to enable critical alerts you will need to add the following to your `Entitlements` section:
-
-```xml
-<key>com.apple.developer.usernotifications.critical-alerts</key>
-<true/>
-```
-
-Additionally you will need to request authorisation from the user. This is handled as part of the normal authorisation process however you need to inform the extension that you require critical alerts by calling `setShouldRequestCriticalAlerts()` on your `Service` configuration:
-
-```actionscript
-var service:Service = new Service() 
-	.setShouldRequestCriticalAlerts();
-
-// Other service options
-
-
-```
 

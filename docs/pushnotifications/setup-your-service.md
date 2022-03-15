@@ -3,9 +3,21 @@ title: Setup your Service
 sidebar_label: Setup your Service
 ---
 
-When you are setting up your `Service` there are a few additional options you can set
-to use some of the advanced features of the services.
 
+## Core Initialisation
+
+It is important that before attempting to use any of this extensions functionality that your initialise the Core extension by calling at some point early in your application, generally at the same time as the initialisation of this extension. If you are using other extensions that also require the Core extension, you only need to initialise it once, before initialising the other extensions.
+
+```actionscript
+Core.init();
+```
+
+The Core extension doesn't provide any functionality in itself but provides support libraries and frameworks used by our extensions. This initialisation ensures that the functionality to support application level communication is enabled eg from launch notifications and events.
+
+
+## Service
+
+When you are setting up your `Service` there are a few additional options you can set to use some of the advanced features of the services.
 
 
 ### Service Type
@@ -21,8 +33,8 @@ The available services are listed in the `Service` class, include:
   - iOS only
 - `FCM` : Firebase Cloud Messaging 
   - Android and iOS
-- `GCM` : Google Cloud Messaging **Deprecated** 
-  - Android only 
+- `GCM` : Google Cloud Messaging 
+  - **No longer supported**  
 - `ONESIGNAL` : One Signal
   - Android and iOS 
   - (Windows manually through WNS)
@@ -56,6 +68,49 @@ else
 }
 PushNotifications.service.setup( service );
 ```
+
+
+
+### Checking Service Support
+
+You can check whether the current application/device supports a particular service by using the `isServiceSupported` function.
+
+```actionscript 
+if (PushNotifications.service.isServiceSupported( Service.FCM ))
+{
+	// FCM is supported on the current device
+}
+```
+
+The return value of this function will be different not only between devices and platforms but also between the variants of the extension. For example, the Azure variant will return false for support for FCM, whereas the FCM variant will return true.
+
+You can use this to prioritise services as your application requires.
+
+For example: 
+
+```actionscript
+if (PushNotifications.isSupported)
+{
+	var service:Service;
+	if (PushNotifications.service.isServiceSupported( Service.FCM ))
+	{
+		service = new Service( Service.FCM );
+	}
+	else if (PushNotifications.service.isServiceSupported( Service.APNS ))
+	{
+		service = new Service( Service.APNS );
+	}
+	else 
+	{
+		// Handle the case where no service supported. 
+		// Eg: turn off notifications in this application
+	}
+}
+```
+
+
+
+
 
 
 
@@ -265,43 +320,4 @@ service.channels.push(
 
 PushNotifications.service.setup( service );
 ```
-
-
-### Checking Service Support
-
-You can check whether the current application/device supports a particular service by using the `isServiceSupported` function.
-
-```actionscript 
-if (PushNotifications.service.isServiceSupported( Service.GCM ))
-{
-	// GCM is supported on the current device
-}
-```
-
-You can use this to prioritise services as your application requires.
-
-For example: 
-
-```actionscript
-if (PushNotifications.isSupported)
-{
-	var service:Service;
-	if (PushNotifications.service.isServiceSupported( Service.GCM ))
-	{
-		service = new Service( Service.GCM, Config.gcmSenderId );
-	}
-	else if (PushNotifications.service.isServiceSupported( Service.APNS ))
-	{
-		service = new Service( Service.APNS );
-	}
-	else 
-	{
-		// Handle the case where no service supported. 
-		// Eg: turn off notifications in this application
-	}
-}
-```
-
-
-
 

@@ -1,0 +1,76 @@
+---
+title: OneSignal
+sidebar_label: Add the extension
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.md'
+import InstallManual from './_includes/add-manual.md'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.md'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.md'
+
+:::info About
+OneSignal is a high volume and reliable push notification service for websites and mobile applications. They support all major native and mobile platforms by providing dedicated SDKs for each platform, a RESTful server API, and an online dashboard for marketers to design and send push notifications.
+
+OneSignal provides a simple interface to push notifications, letting content creators focus on quality user engagement instead of complex implementation.
+:::
+
+This section describes how to setup your AIR application to use OneSignal with this extension.
+
+This service is supported by the following variants of this extension:
+
+- OneSignal 
+
+
+## Setup
+
+You should firstly setup OneSignal for your application. See the [setup](onesignal.md) documentation to guide you through this process.
+
+At the end of this process you should have your *OneSignal App ID* which will be required later.
+
+
+## Install
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>

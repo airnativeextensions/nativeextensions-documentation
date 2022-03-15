@@ -76,7 +76,7 @@ new ChannelBuilder()
 	.build()
 ```
 
-[Channel Sounds](setup-your-service#channel-sounds)
+[Channel Sounds](setup-your-service.md#channel-sounds)
 
 
 ## FCM

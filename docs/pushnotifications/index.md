@@ -11,7 +11,7 @@ slug: /pushnotifications/
 The [Push Notifications](https://airnativeextensions.com/extension/com.distriqt.PushNotifications) extension allows you to  receive and process push notifications using push notification services. 
 
 The simple API will have you up and running with push notifications in just a few lines of code. 
-Identical code base can be used across all platforms without any platfrom specific code, allowing you to develop once and deploy everywhere!
+Identical code base can be used across all platforms without any platform specific code, allowing you to develop once and deploy everywhere!
 
 Advanced users have in depth access to permissions, payloads, and even silent notifications. 
 You can control how to process the data and how to display the notification including many customisations allowing you to create useful push notifications for your users increasing user engagement and bringing them back to your application.

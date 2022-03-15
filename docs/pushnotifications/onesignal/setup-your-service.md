@@ -21,9 +21,9 @@ PushNotifications.service.setup( service );
 
 The `ONESIGNAL_APP_ID` will be your OneSignal App ID which you can retrieve from your App Settings under **Keys & IDs**.
 
-
 ![](images/onesignal_servicevalues.png)
 
+See the [setup guide](onesignal.md) for more information on retrieving this value.
 
 
 
@@ -53,7 +53,7 @@ service.channels.push(
 		.setImportance( Channel.IMPORTANCE_HIGH )
 		.build()
 );
-						
+
 PushNotifications.service.setup( service );
 ```
 
@@ -62,9 +62,6 @@ Then when sending your notification set the channel id to the id defined in your
 
 - Using REST set the "existing_android_channel_id"
 - Using the dashboard set the Category to "(Created In App)" and set the Local Channel Id to your channel id.
-
-
-
 
 
 
