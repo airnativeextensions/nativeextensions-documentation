@@ -6,10 +6,10 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-    <extensionID>com.distriqt.Application</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.Application</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
 
-    <extensionID>androidx.core</extensionID>
+	<extensionID>androidx.core</extensionID>
 </extensions>
 ```
 
@@ -30,42 +30,45 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
 ```xml
 <manifest android:installLocation="auto">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <application>
-        
-        <!-- AUTO START and ALARM MANAGER -->
-        <receiver android:enabled="true"
-            android:name="com.distriqt.extension.application.receivers.ApplicationStartupReceiver"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+	<application>
+		
+		<!-- AUTO START and ALARM MANAGER -->
+		<receiver android:enabled="true"
+			android:name="com.distriqt.extension.application.receivers.ApplicationStartupReceiver"
+			android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
 			android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </receiver>
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
 
-        <!-- AUTHORISATION -->
-        <activity android:name="com.distriqt.extension.application.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+		<!-- AUTHORISATION -->
+		<activity android:name="com.distriqt.extension.application.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
-        <!-- ALARM MANAGER -->
-        <receiver android:name="com.distriqt.extension.application.alarms.AlarmReceiver" android:enabled="true" android:exported="false" />
-        <activity android:name="com.distriqt.extension.application.alarms.AlarmActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+		<!-- ALARM MANAGER -->
+		<receiver android:name="com.distriqt.extension.application.alarms.AlarmReceiver" android:enabled="true" android:exported="false" />
+		<activity android:name="com.distriqt.extension.application.alarms.AlarmActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
-        <!-- SETTINGS -->
-        <activity android:name="com.distriqt.extension.application.settings.SettingsActivity" android:label="Settings" android:exported="false" />
+		<!-- SETTINGS -->
+		<activity android:name="com.distriqt.extension.application.settings.SettingsActivity" android:label="Settings" android:exported="false" />
 
-        <!-- APPLICATION STATE EVENTS -->
-        <provider
-            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="APPLICATION_PACKAGE.lifecycle-process"
-            android:exported="false"
-            android:multiprocess="true" />
+		<!-- APPLICATION STATE EVENTS -->
+		<provider
+			android:name="androidx.startup.InitializationProvider"
+			android:authorities="APPLICATION_PACKAGE.androidx-startup"
+			android:exported="false" >
+			<meta-data
+				android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+				android:value="androidx.startup" />
+		</provider>
 
 
-    </application>
+	</application>
 
 </manifest>
 ```

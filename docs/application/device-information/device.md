@@ -122,25 +122,25 @@ This can be useful if you are attempting to check the accuracy of the time on th
 
 ### Year Class
 
-[Year Class](year-class)
+[Year Class](year-class.md)
 
 
 ### Phone Number 
 
-[Phone Number](phone-number)
+[Phone Number](phone-number.md)
 
 
 ### Operating system
 
-[Operating System](operating-system)
+[Operating System](operating-system.md)
 
 
 ### Device State
 
-[Device State](device-state)
+[Device State](device-state.md)
 
 
 ### Device Orientation
 
-[Device Orientation](orientation-events)
+[Device Orientation](orientation-events.md)
 

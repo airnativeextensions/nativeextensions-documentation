@@ -69,7 +69,7 @@ var statusBarHeight:int = Application.service.display.getStatusBarHeight();
 ```
 
 >
-> Note: you may also need to consider the [display cutout](display/cutouts) on modern devices.
+> Note: you may also need to consider the [display cutout](display/cutouts.md) on modern devices.
 >
 
 

@@ -37,10 +37,13 @@ You will need to replace `APPLICATION_PACKAGE` with your AIR applications Java p
 ```xml
 <!-- APPLICATION STATE EVENTS -->
 <provider
-    android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-    android:authorities="APPLICATION_PACKAGE.lifecycle-process"
-    android:exported="false"
-    android:multiprocess="true" />
+	android:name="androidx.startup.InitializationProvider"
+	android:authorities="APPLICATION_PACKAGE.androidx-startup"
+	android:exported="false" >
+	<meta-data
+		android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+		android:value="androidx.startup" />
+</provider>
 ```
 
 

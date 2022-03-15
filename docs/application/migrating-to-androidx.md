@@ -61,3 +61,17 @@ It should be removed and changed to be the following (not the change both in the
     android:exported="false"
     android:multiprocess="true" />
 ```
+
+With the latest release this should now be:
+
+```xml
+<!-- APPLICATION STATE EVENTS -->
+<provider
+	android:name="androidx.startup.InitializationProvider"
+	android:authorities="APPLICATION_PACKAGE.androidx-startup"
+	android:exported="false" >
+	<meta-data
+		android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+		android:value="androidx.startup" />
+</provider>
+```

@@ -1,3 +1,9 @@
+### 2022.03.15 [v6.8.5]
+
+```
+Android: Update to make compatible with latest androidx.core lifecycle library 
+```
+
 ### 2022.01.28 [v6.8.4]
 
 ```
