@@ -10,6 +10,7 @@ The following should be added to your `extensions` node in your application desc
     
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.emoji2</extensionID>
 	<extensionID>androidx.vectordrawable</extensionID>
 </extensions>
 ```
