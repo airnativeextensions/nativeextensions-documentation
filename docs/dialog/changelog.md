@@ -1,8 +1,9 @@
 ### 2022.03.16 [v8.6.11]
 
 ```
-Add missing android emoji2 dependency to air package
+Add missing android emoji2 dependency to air package (resolves #285)
 ```
+
 
 ### 2022.02.18 [v8.6.10]
 
