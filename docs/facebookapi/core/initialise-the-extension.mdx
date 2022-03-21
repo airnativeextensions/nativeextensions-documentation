@@ -3,6 +3,9 @@ title: Initialise the Extension
 sidebar_label: Initialise the Extension
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 
 ## Core Extension
 
@@ -31,6 +34,7 @@ Facebook.instance.initialise();
 
 If you plan to gather permission to track the user or other such consent you should do this before calling `initialise()`.
 
+### Automatic initialisation
 
 :::warning
 Previously you may have relied on the Facebook Platform SDKs automatically initialising on launch.
@@ -40,9 +44,30 @@ If you currently rely on the Facebook Platform SDKs being automatically initiali
 :::
 
 
-### 
-
 To produce consistent results we suggest you ensure you have disabled automatic initialisation in your application by setting set the `AutoInitEnabled` flag to `false` in the application descriptor. These flags should be ignored however it appears Android may still auto initialise in some cases. 
+
+
+<Tabs
+groupId="packagemanager"
+defaultValue="apm"
+values={[
+	{label: 'APM', value: 'apm'},
+	{label: 'Manual', value: 'manual'},
+]}>
+
+<TabItem value="apm" >
+
+This is the default value used by apm, but you can change it through your project configuration. 
+
+```
+apm project config set facebookAutoInitEnabled false
+```
+
+Once you have added this configuration run the steps to update / generate your [application descriptor](add-the-extension.mdx#application-descriptor). This will apply to both iOS and Android.
+
+
+</TabItem>
+<TabItem value="manual" >
 
 For iOS you set the `FacebookAutoInitEnabled` key to `false` in your `InfoAdditions`
 
@@ -61,4 +86,5 @@ For Android you set the `com.facebook.sdk.AutoInitEnabled` meta-data value to `f
 
 This value should be inside the `application` node in your manifest additions.
 
-
+</TabItem>
+</Tabs>

@@ -19,7 +19,7 @@ if (FacebookLogin.isSupported)
 For the prefined permissions you can see the constants defined in the [`FacebookPermissions` class](https://docs.airnativeextensions.com/asdocs/facebookapi/com/distriqt/extension/facebook/login/FacebookPermissions.html).
 
 >
-> As of April 24,2018, the `pubish_actions` permission has been removed. Please see the [Breaking Changes Changelog](https://developers.facebook.com/docs/graph-api/changelog/breaking-changes#login-4-24) for more details. To provide a way for your app users to share content to Facebook, you should use Facebook's [Sharing products](../share/overview) instead.
+> As of April 24,2018, the `pubish_actions` permission has been removed. Please see the [Breaking Changes Changelog](https://developers.facebook.com/docs/graph-api/changelog/breaking-changes#login-4-24) for more details. To provide a way for your app users to share content to Facebook, you should use Facebook's [Sharing products](../share/overview.md) instead.
 >
 
 
@@ -112,7 +112,7 @@ Permissions are strings that are passed along with a login request or an API cal
 - `email` - Access to a person's primary email address.
 - `user_likes` - Access to the list of things a person likes.
 
-You can get the list of granted and denied permissions at any time by using the current [`AccessToken`](access-token).
+You can get the list of granted and denied permissions at any time by using the current [`AccessToken`](access-token.md).
 
 
 ### When to ask for Permissions

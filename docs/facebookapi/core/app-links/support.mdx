@@ -1,0 +1,183 @@
+---
+title: Support Incoming Links 
+sidebar_label: Support Incoming Links 
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+
+When people tap the Open / Play button on the invite or the Is Ready installation notification, 
+they will be taken to your app. The URL defined in the App Link will be passed in. 
+
+In order to support incoming links you need to add some additions to your application descriptor,
+that will ensure your application receives the links correctly.
+
+
+
+## Android
+
+To respond to opening links for your custom URL scheme, add an intent-filter for that specific URL. For example in the following we will add an intent-filter to accept `distriqttestapp://` urls. 
+
+
+<Tabs
+groupId="packagemanager"
+defaultValue="apm"
+values={[
+	{label: 'APM', value: 'apm'},
+	{label: 'Manual', value: 'manual'},
+]}>
+
+<TabItem value="apm" >
+
+Firstly add a custom Android configuration file by running:
+
+```
+apm generate config android
+```
+
+Edit the `config/android/AndroidManifest.xml` file that was generated to resemble the following, adding the `activity`:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+	<application>
+
+		<activity>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+
+			<!-- This intent filter is for your custom url -->
+			<intent-filter android:autoVerify="true">
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+
+				<!-- Accepts URIs "distriqttestapp://" -->
+				<data android:scheme="distriqttestapp" />
+			</intent-filter>
+
+		</activity>
+
+	</application>
+
+</manifest>
+```
+
+Once you have added this configuration run the steps to update / generate your [application descriptor](../add-the-extension.mdx#application-descriptor).
+
+
+</TabItem>
+<TabItem value="manual" >
+
+
+This should be added within the `application` node of your manifest additions.
+
+For example:
+
+```xml
+<manifest android:installLocation="auto" >
+
+	<!-- YOUR PERMISSIONS -->
+
+	<application 
+		android:appComponentFactory="androidx.core.app.CoreComponentFactory" 
+		android:hardwareAccelerated="true" >
+
+		<!-- HERE -->
+		<activity>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter android:autoVerify="true">
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="distriqttestapp" />
+			</intent-filter>
+		</activity>
+
+
+		<!-- OTHER APPLICATION ADDITIONS -->
+
+	</application>
+</manifest>
+```
+
+
+</TabItem>
+</Tabs>
+
+
+
+## iOS 
+
+You'll need to add a custom url that you will use to open your application. In the following 
+you would be able to open the application using the `distriqttestapp://` url.
+
+
+<Tabs
+groupId="packagemanager"
+defaultValue="apm"
+values={[
+	{label: 'APM', value: 'apm'},
+	{label: 'Manual', value: 'manual'},
+]}>
+
+<TabItem value="apm" >
+
+Firstly add a custom iOS configuration file by running:
+
+```
+apm generate config ios
+```
+
+Edit the `config/ios/InfoAdditions.xml` file that was generated to resemble the following:
+
+```xml
+<plist version="1.0">
+    <dict>
+
+			<key>CFBundleURLTypes</key>
+			<array>
+				<dict>
+					<key>CFBundleURLSchemes</key>
+					<array>
+						<string>distriqttestapp</string>
+					</array>
+				</dict>
+			</array>
+
+    </dict>
+</plist>
+```
+
+Once you have added this configuration run the steps to update / generate your [application descriptor](../add-the-extension.mdx#application-descriptor).
+
+
+</TabItem>
+<TabItem value="manual" >
+
+Add an additional `CFBundleURLSchemes` value to the `InfoAdditions` in your application descriptor. It can be placed alongside your facebook scheme you added when adding the extension:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>fbXXXXXXXXXX</string>
+			<string>distriqttestapp</string>
+		</array>
+	</dict>
+</array>
+```
+
+</TabItem>
+</Tabs>
+

@@ -10,7 +10,7 @@ This guide details how to enable sharing from your app to Facebook. When someone
 
 ## Share Dialog
 
-The [Share Dialog](share-dialog) is an easy way to let people share content without having them to log into your app or grant any permissions. It works on web, Android and iOS.
+The [Share Dialog](share-dialog.md) is an easy way to let people share content without having them to log into your app or grant any permissions. It works on web, Android and iOS.
 
 People can share the following kinds of content to Facebook:
 

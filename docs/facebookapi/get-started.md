@@ -21,10 +21,23 @@ You will need:
 
 [Create a Facebook for Developers Account](https://developers.facebook.com)
 
-- **An App ID for Your App** click this button and follow the steps to register your app and get an App ID
 
-[Get an App ID for your app](https://developers.facebook.com/apps/)
+### Get Your App ID 
 
+Each app that you create has a unique ID. To get the ID for an app, do the following:
+
+- Sign into your [developer account](https://developers.facebook.com/).
+- Open the [Apps page](https://developers.facebook.com/apps/).
+- Find your app and click the **App ID**. The app ID is copied to the clipboard.
+
+
+### Get Your Client Token 
+
+Each app that you create has a unique client token that you use to access Facebook. For more information, see Access Tokens. To get the Client Token for an app, do the following:
+
+- Sign into your [developer account](https://developers.facebook.com/).
+- On the [Apps page](https://developers.facebook.com/apps/), select an app to open the dashboard for that app.
+- On the **Dashboard**, navigate to **Settings** > **Advanced** > **Security** > **Client token**.
 
 
 

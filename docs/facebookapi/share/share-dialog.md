@@ -4,7 +4,7 @@ sidebar_label: Share Dialog
 ---
 
 
-To use the Facebook-built sharing experiences, you want to define your content as in the [modeling content section](content), and then call the Share Dialog.
+To use the Facebook-built sharing experiences, you want to define your content as in the [modeling content section](content.md), and then call the Share Dialog.
 
 
 

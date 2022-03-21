@@ -1,3 +1,14 @@
+###### 2022.03.21 [v10.0.0]
+
+```
+Facebook SDK update
+ - Android v13.0.0
+ - iOS v13.0.0
+
+Update documentation to use apm
+Update for Android 12 (API 31) support including latest androidx dependencies
+```
+
 ###### 2021.12.13 [v9.3.3]
 
 ```

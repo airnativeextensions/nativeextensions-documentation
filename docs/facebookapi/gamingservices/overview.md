@@ -14,8 +14,8 @@ For more information see the [Facebook Gaming Services documentation](https://de
 
 Currently this supports:
 
-- [Game Request Dialog](game-request-dialog)
-- [Friend Finder Dialog](friend-finder-dialog)
+- [Game Request Dialog](game-request-dialog.md)
+- [Friend Finder Dialog](friend-finder-dialog.md)
 
 
 

@@ -1,0 +1,229 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.facebook.Core</extensionID>
+
+	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>androidx.browser</extensionID>
+	<extensionID>androidx.cardview</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.emoji2</extensionID>
+	<extensionID>androidx.vectordrawable</extensionID>
+	<extensionID>com.android.installreferrer</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+
+
+
+### Android
+
+#### Manifest Additions
+
+Add the following to your manifest additions in your application descriptor.
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+- You will need to replace the instances of `FACEBOOK_APP_ID`, `FACEBOOK_APP_NAME` and `FACEBOOK_CLIENT_TOKEN` with the relevant settings from your Facebook app. See [Get Started](../../get-started.md) for details. 
+:::
+
+
+```xml
+<manifest android:installLocation="auto" >
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31" />
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+	<queries>
+		<provider android:authorities="com.facebook.katana.provider.PlatformProvider" /> <!-- allows app to access Facebook app features -->
+		<provider android:authorities="com.facebook.orca.provider.PlatformProvider" /> <!-- allows sharing to Messenger app -->
+	</queries>
+
+	<application
+		android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+		android:hardwareAccelerated="true">
+
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="FACEBOOK_APP_ID"/>
+		<meta-data android:name="com.facebook.sdk.ClientToken" android:value="FACEBOOK_CLIENT_TOKEN"/>
+
+		<meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="false"/>
+		<meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>
+		<meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="false"/>
+
+		<activity
+			android:name="com.facebook.FacebookActivity"
+			android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+			android:theme="@style/com_facebook_activity_theme"
+			android:exported="false" />
+		<activity android:name="com.facebook.CustomTabMainActivity" android:exported="false" />
+		<activity
+			android:name="com.facebook.CustomTabActivity"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+
+				<data
+					android:host="cct.APPLICATION_PACKAGE"
+					android:scheme="fbconnect" />
+			</intent-filter>
+		</activity>
+		<provider
+			android:name="com.facebook.internal.FacebookInitProvider"
+			android:authorities="APPLICATION_PACKAGE.FacebookInitProvider"
+			android:exported="false" />
+
+		<receiver
+			android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+			android:exported="false" >
+			<intent-filter>
+				<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+			android:exported="false" >
+			<intent-filter>
+				<action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+			</intent-filter>
+		</receiver>
+
+	</application>
+
+</manifest>
+```
+
+
+
+
+### iOS 
+
+#### Dynamic Frameworks
+
+Facebook is based on a dynamic framework so you must include the framework and dependent swift libs in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+If should contain any of the files in the supplied `Frameworks` directory (including `dylib` and `framework` directories) and any of the Facebook SDK components that you are using in your application.
+
+The Core extension requires several frameworks so your `Frameworks` directory should contain:
+
+```
+FBAEMKit.framework
+FBSDKCoreKit.framework
+FBSDKCoreKit_Basics.framework
+```
+
+
+#### Info Additions
+
+The Facebook Core extension requires some additions to the iOS section of your application
+descriptor XML file. These settings should be added or modified in the `InfoAdditions` node,
+under the `iPhone` node.
+
+:::caution
+Ensure you replace:
+- You will need to replace the instances of `FACEBOOK_APP_ID`, `FACEBOOK_APP_NAME` and `FACEBOOK_CLIENT_TOKEN` with the relevant settings from your Facebook app. See [Get Started](../../get-started.md) for details. 
+:::
+
+This is the required additions for the InfoAdditions section:
+
+```xml
+<key>MinimumOSVersion</key>
+<string>12.2</string>
+
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<!-- Don't remove the 'fb' prefix -->
+			<string>fbFACEBOOK_APP_ID</string>
+		</array>
+	</dict>
+</array>
+<key>FacebookAppID</key>
+<string>FACEBOOK_APP_ID</string>
+<key>FacebookClientToken</key>
+<string>FACEBOOK_CLIENT_TOKEN</string>
+<key>FacebookDisplayName</key>
+<string>FACEBOOK_APP_NAME</string>
+
+<!-- OPTIONAL SETTINGS -->
+<key>FacebookAutoInitEnabled</key>
+<false/>
+<key>FacebookAutoLogAppEventsEnabled</key>
+<false/>
+<key>FacebookAdvertiserIDCollectionEnabled</key>
+<false/>
+
+<key>NSAppTransportSecurity</key>
+<dict>
+	<key>NSExceptionDomains</key>
+	<dict>
+		<key>facebook.com</key>
+		<dict>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+			<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+			<false/>
+		</dict>
+		<key>fbcdn.net</key>
+		<dict>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+			<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+			<false/>
+		</dict>
+		<key>akamaihd.net</key>
+		<dict>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+			<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+			<false/>
+		</dict>
+	</dict>
+</dict>
+
+<!-- Required to check availability and communicate with other Facebook applications -->
+<key>LSApplicationQueriesSchemes</key>
+<array>
+	<string>fb</string>
+	<string>fbapi</string>
+	<string>fbapi20130214</string>
+	<string>fbapi20130410</string>
+	<string>fbapi20130702</string>
+	<string>fbapi20131010</string>
+	<string>fbapi20131219</string>
+	<string>fbapi20140410</string>
+	<string>fbapi20140116</string>
+	<string>fbapi20150313</string>
+	<string>fbapi20150629</string>
+	<string>fbapi20160328</string>
+	<string>fbauth</string>
+	<string>fb-messenger-share-api</string>
+	<string>fbauth2</string>
+	<string>fbshareextension</string>
+</array>
+```
+
+We also suggest adding the photo usage description string in case you will be sharing photos using the share dialogs:
+
+```xml
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Access to photo library is required to save images and videos.</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Access to photo library is required to save images and videos.</string>
+```
