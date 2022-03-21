@@ -48,8 +48,14 @@ Ensure you:
 
 	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
 
-		<provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:authorities="APPLICATION_PACKAGE.lifecycle-process" android:exported="false" android:multiprocess="true"/>
-    	<provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false"/>
+		<provider
+			android:name="androidx.startup.InitializationProvider"
+			android:authorities="APPLICATION_PACKAGE.androidx-startup"
+			android:exported="false" >
+			<meta-data
+				android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+				android:value="androidx.startup" />
+		</provider>
     
 		<meta-data
 			android:name="com.google.android.gms.version"
