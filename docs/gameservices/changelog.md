@@ -1,3 +1,9 @@
+### 2022.03.22 [v8.0.3]
+
+```
+Correct missing dependency in air package (resolves #214)
+```
+
 ### 2022.03.11 [v8.0.2]
 
 ```

@@ -9,6 +9,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>androidx.core</extensionID>
     <extensionID>androidx.appcompat</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
     <extensionID>com.distriqt.playservices.Base</extensionID>
     <extensionID>com.distriqt.playservices.Drive</extensionID>
     <extensionID>com.distriqt.playservices.Games</extensionID>
