@@ -1,3 +1,9 @@
+### 2022.03.23 [v5.3.10]
+
+```
+Correct reporting of isSupported for M1 macOS (resolves #283)
+```
+
 ### 2022.02.08 [v5.3.9]
 
 ```
