@@ -62,6 +62,20 @@ Ensure you replace:
 
 ### iOS
 
+#### Dynamic Frameworks
+
+Facebook is based on a dynamic framework so you must include the framework and dependent swift libs in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+If should contain any of the files in the supplied `Frameworks` directory (including `dylib` and `framework` directories) and any of the Facebook SDK components that you are using in your application.
+
+Your `Frameworks` directory should contain:
+
+```
+FBAudienceNetwork.framework
+```
+
 #### Info Additions
 
 

@@ -59,6 +59,9 @@ Once complete `apm` will have created something like the following file structur
 |____ assets
 | |____ android 
 | | |____ audience_network.dex
+| |____ ios 
+| | |____ Frameworks
+| | | |____ [dynamic frameworks]
 |____ ane
 | |____ com.distriqt.admob.FacebookAudience.ane	# Facebook Audience AdMob mediation extension
 | |____ [dependencies]
