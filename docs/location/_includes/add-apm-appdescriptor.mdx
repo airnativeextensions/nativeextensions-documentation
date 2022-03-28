@@ -18,3 +18,31 @@ You should backup your application descriptor before running this command to ens
 If you need to insert custom data into these sections see the guides for [Android](https://github.com/airsdk/apm/wiki/Usage-Generate#android) and [iOS](https://github.com/airsdk/apm/wiki/Usage-Generate#ios)
 :::
 
+
+#### Background Location
+
+On Android, if you require access to the location data in the background or if you are using geofences then you must also add the background permission:
+
+```xml
+<!-- NEEDED FOR BACKGROUND LOCATION AND GEOFENCES -->
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+```
+
+To add this you need to add some additional configuration to apm. Firstly add a custom Android configuration file by running:
+
+```
+apm generate config android
+```
+
+Edit the `config/android/AndroidManifest.xml` file that was generated to resemble the following, adding the required permissions, i.e.:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+	<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+</manifest>
+```
+
+You can add any other additions you require in your application here and these will be merged by `apm` when you generate your application descriptor (see above). 

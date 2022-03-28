@@ -60,11 +60,39 @@ function authorisationChangedHandler( event:AuthorisationEvent ):void
 
 ## Usage Description
 
+> This applies to the iOS implementation 
+
 You can customise the usage description messages as you see fit to suit your application. These messages are displayed in the main body area of the iOS authorisation dialog with the title and buttons being standard (and not customisable).
 
 The image below is an example of the authorisation dialog. The content *"Access to photo library is required to save images."* is the usage description message you can set.
 
 ![](images/ios-permission-dialog.png)
 
-You set these values through adding the usage description keys to yourcode  info additions or simply by setting up your configuration options in your `apm` project. 
+You set these values through adding the usage description keys to your application descriptor's info additions or simply by setting up your configuration options in your `apm` project. 
 
+
+
+## Background Authorisation 
+
+> This applies to the Android implementation 
+
+Requesting "always" or "background" location access on Android has changed with recent releases of Android. 
+
+When requesting permission your user will firstly be presented with the "in use" permission request, which will allow the user to select the accuracy of your location requests and allow or deny the request:
+
+![](images/android_permission_inuse.png)
+
+
+If you have included the background permission in your manifest and request the "always" permission then an additional step is required where the user will need to manually change the location permission to be "Allow all the time":
+
+![](images/android_permission_always.png)
+
+
+You should step through this process for your user, firstly requesting the "in use" permission and then explaining the need for the background permission before requesting the "always" permission.
+
+If you simply request the "always" permission to start with, then the extension will firstly show the "in use" dialog and then, if granted, will display the settings for the user to change to the "always" permission.
+
+
+:::info
+It is worth noting that if a user removes a location permission your Android application will likely be restarted by the system to ensure these decreased permission levels are applied.
+:::

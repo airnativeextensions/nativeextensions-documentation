@@ -45,7 +45,7 @@ This includes position from wifi and gps.
 
 The heading is not related to the device position, but the device travel. This is using the changes
 in position of the device over time. If you need device position / orientation information have a
-look at the [DeviceMotion](https://airnativeextensions.com/extension/com.distriqt.DeviceMotion) ANE.
+look at the [DeviceMotion](https://airnativeextensions.com/extension/com.distriqt.DeviceMotion) extension.
 
 The altitude is the most inaccurate coordinate. Due to the way GPS works the vertical accuracy
 is the least precise (http://gpsinformation.net/main/altitude.htm)

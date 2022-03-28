@@ -1,3 +1,10 @@
+### 2022.03.28 [v4.4.0]
+
+```
+Update documentation for Android 31
+Update Android permissions process to support new location permissions
+```
+
 ### 2022.02.08 [v4.3.1]
 
 ```

@@ -42,12 +42,16 @@ strings (coarse/fine) however both are listed below.
 	
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		
-        <receiver android:name="com.distriqt.extension.location.receivers.LocationReceiver" android:exported="true" >
+        <receiver android:name="com.distriqt.extension.location.receivers.LocationReceiver" android:exported="false" >
             <intent-filter>
                 <action android:name="APPLICATION_PACKAGE.LOCATION_UPDATE" />
             </intent-filter>
         </receiver>
-        <service android:name="com.distriqt.extension.location.services.LocationUpdateService" android:enabled="true" android:exported="true" />
+        <service
+			android:name="com.distriqt.extension.location.services.LocationUpdateService"
+			android:foregroundServiceType="location"
+			android:enabled="true"
+			android:exported="true" />
 
         <receiver android:name="com.distriqt.extension.location.receivers.GeofenceTransitionReceiver" android:exported="true" >
             <intent-filter>
@@ -60,7 +64,7 @@ strings (coarse/fine) however both are listed below.
                 <action android:name="android.location.PROVIDERS_CHANGED"/>
             </intent-filter>
         </receiver>
-        <service android:name="com.distriqt.extension.location.services.GeofenceRestartService" android:exported="true" />
+        <service android:name="com.distriqt.extension.location.services.GeofenceRestartService" android:exported="false" />
 
         <activity android:name="com.distriqt.extension.location.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
@@ -69,6 +73,15 @@ strings (coarse/fine) however both are listed below.
 	
 </manifest>
 ```
+
+If you require access to the location data in the background or if you are using geofences then you must also add the background permission:
+
+```xml
+<!-- NEEDED FOR BACKGROUND LOCATION AND GEOFENCES -->
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+```
+
+
 
 
 ### iOS
