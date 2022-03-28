@@ -1,3 +1,9 @@
+### 2022.03.29 [v5.3.1]
+
+```
+Correct air package dependencies (resolves #72)
+```
+
 ### 2022.03.08 [v5.3.0]
 
 ```
