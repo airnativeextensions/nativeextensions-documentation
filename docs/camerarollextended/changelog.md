@@ -1,3 +1,10 @@
+### 2022.03.29 [v6.3.0]
+
+```
+Add support for limited authorisation on iOS where a user selects a subset of photos for access 
+Add ability to display limited selection change dialog 
+```
+
 ### 2022.02.04 [v6.2.2]
 
 ```

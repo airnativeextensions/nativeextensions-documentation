@@ -22,6 +22,7 @@ The following code will work across both platforms:
 
 ```actionscript
 CameraRollExtended.service.addEventListener( AuthorisationEvent.CHANGED, authorisationChangedHandler );
+
 switch (CameraRollExtended.service.authorisationStatus())
 {
 	case AuthorisationStatus.SHOULD_EXPLAIN:
@@ -37,7 +38,9 @@ switch (CameraRollExtended.service.authorisationStatus())
 		return;
 		
 	case AuthorisationStatus.AUTHORISED:
+	case AuthorisationStatus.LIMITED:
 		// AUTHORISED: Media access is available
+		// LIMITED: Media access is available for a subset of the library
 		break;						
 }
 
@@ -51,7 +54,9 @@ function authorisationChangedHandler( event:AuthorisationEvent ):void
 			break;
 			
 		case AuthorisationStatus.AUTHORISED:
+		case AuthorisationStatus.LIMITED:
 			// AUTHORISED: Media access is available
+			// LIMITED: Media access is available for a subset of the library
 			break;
 			
 		case AuthorisationStatus.RESTRICTED:
@@ -61,6 +66,20 @@ function authorisationChangedHandler( event:AuthorisationEvent ):void
 	}
 }
 ```
+
+
+## Limited Authorisation
+
+With iOS 14+ users' can now select a range of assets that your application has access to. This results in an authorisation status of `LIMITED`. This still allows you to access photo data, however only for a subset of the users' entire library.
+
+![](images/ios-permission-dialog-limited.png)
+
+When the user selects "Select Photos..." they are presented with a dialog that allows them to select the assets your application can access:
+
+![](images/ios-permission-dialog-selection.png)
+
+
+When your application has this `LIMITED` authorisation you can present the above selection dialog by calling `requestAuthorisation()`. This gives your user the opportunity to change their selection giving you access to different assets.
 
 
 

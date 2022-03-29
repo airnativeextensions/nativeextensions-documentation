@@ -39,6 +39,7 @@ This extension requires the following extensions:
 - [`androidx.core`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
 - [`androidx.appcompat`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.appcompat.ane)
 - [`androidx.exifinterface`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.exifinterface.ane)
+- [`com.jetbrains.kotlin`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlin.ane)
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 

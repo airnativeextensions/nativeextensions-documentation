@@ -53,6 +53,39 @@ Previous versions of iOS will use a custom UI asset picker.
 The functionality in the native implementation is slightly different in that the "auto close on count reached" feature will only work when only one asset is being selected and cannot be disabled in this case. 
 
 
+### Limited Authorisation
+
+When presenting the photo picker unfortunately iOS does not apply this limitation to the assets the user can select. So your **user may select assets that you don't have access to**.
+
+In order to identify this situation you can access a `limited` property on the `SELECT` event that informs you that the user selected some assets that your application cannot access. 
+
+```as3
+CameraRollExtended.service.addEventListener( CameraRollExtendedEvent.SELECT, selectHandler );
+
+function selectHandler( event:CameraRollExtendedEvent ):void
+{
+	if (event.limited)
+	{
+		// User selected assets that cannot be accessed
+	}
+}
+```
+
+You then can inform your user of the situation and if allow them to change their limitation by changing the selection of the limited assets or by changing the permissions.
+
+To present a dialog to change the selection of limited assets you can call `requestAuthorisation()`. When the authorisation status is "limited" this method will display the selection dialog:
+
+![](images/ios-permission-dialog-selection.png)
+
+You will receive an authorisation changed event on completion and can use that to proceed to browse for an asset again. 
+
+
+Alternatively you may ask the user to change the permission level through the [device settings](request-authorisation.md#device-settings).
+
+
+
+
+
 ## Android
 
 With Android there are a two distinct implementations, a custom UI built to provide similar functionality as on iOS, and the native implementation.
