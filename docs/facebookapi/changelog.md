@@ -1,3 +1,9 @@
+###### 2022.04.05 [v10.0.1]
+
+```
+Android: Fix issue with air package and facebook application id meta-data value (resolves #341) 
+```
+
 ###### 2022.03.21 [v10.0.0]
 
 ```

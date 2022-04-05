@@ -32,6 +32,7 @@ Add the following to your manifest additions in your application descriptor.
 Ensure you replace:
 -  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
 - You will need to replace the instances of `FACEBOOK_APP_ID`, `FACEBOOK_APP_NAME` and `FACEBOOK_CLIENT_TOKEN` with the relevant settings from your Facebook app. See [Get Started](../../get-started.md) for details. 
+- Ensure the `\u003` remains in front of the app id and client token (this ensures the value is treated as a string correctly).
 :::
 
 
@@ -53,8 +54,8 @@ Ensure you replace:
 		android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 		android:hardwareAccelerated="true">
 
-		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="FACEBOOK_APP_ID"/>
-		<meta-data android:name="com.facebook.sdk.ClientToken" android:value="FACEBOOK_CLIENT_TOKEN"/>
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\u003FACEBOOK_APP_ID"/>
+		<meta-data android:name="com.facebook.sdk.ClientToken" android:value="\u003FACEBOOK_CLIENT_TOKEN"/>
 
 		<meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="false"/>
 		<meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>
