@@ -124,7 +124,30 @@ The other files are just the different sized image resources for the different d
 
 ## Packaging 
 
-### Resources in ANEs 
+
+There are several approaches you can take to package the resources you have created above with your application. The modern approach in AIR uses a "resources directory", a specific directory that you can inform AIR to treat as resources that should be added to your application package.
+
+Simply place all the resources you created above into this resources directory and follow this guide on [adding the resources directory](https://airsdk.dev/docs/tutorials/platform/android/custom-resources) to your application. 
+
+Summary:
+- Create a directory called `res` (or similar) in your application source;
+- Add your resources into this directory;
+- Add the `<resdir>res</resdir>` node to your application descriptor;
+- Package your application as normal.
+
+
+<details><summary>Legacy approaches</summary>
+<p>
+
+### Legacy approaches 
+
+The following methods have been used in the past prior to the ability of using the resources directory. 
+
+:::caution
+Do not use these approaches unless you cannot move to the new resources directory approach. These are deprecated and are no longer recommended.
+:::
+
+#### Resources in ANEs 
 
 It is possible to to package your adaptive icon in a [Custom Resources ANE](https://github.com/distriqt/ANE-CustomResources). 
 
@@ -134,7 +157,7 @@ All that is required here is adding the resources created above to your custom r
 
 
 
-### Modifying the AIR SDK
+#### Modifying the AIR SDK
 
 The simplest method to give your AIR application an adaptive icon is to add your adaptive icon resources to the AIR SDK.
 
@@ -143,3 +166,6 @@ This method requires no creation of an ANE and similarly requires no changes to 
 To get started open up the AIR SDK Android resources directory located at `AIRSDK/lib/android/lib/resources/app_entry/res/`. This directory contains all of the resources that AIR will package with your application.
 
 Copy all the resources you generated earlier in the `mipmap` folders into the AIR SDK directory, being careful to merge any existing folders. Now repackage your application with the modified SDK and you should now see the adaptive icon.
+
+</p>
+</details>
