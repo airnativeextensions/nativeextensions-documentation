@@ -1,3 +1,9 @@
+### 2022.04.13 [v7.1.3]
+
+```
+Android: Fix preview image security exception when displayed in application chooser (resolves #194)
+```
+
 ### 2022.03.09 [v7.1.2]
 
 ```
