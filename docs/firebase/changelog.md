@@ -1,3 +1,9 @@
+###### 2022.04.29 [v7.1.0]
+
+```
+Firestore: Changed Date object operation from being converted to a string to being converted to and from a timestamp object (resolves #408)
+```
+
 ###### 2022.03.15 [v7.0.1]
 
 ```
