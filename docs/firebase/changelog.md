@@ -1,3 +1,9 @@
+###### 2022.04.29 [v7.1.1]
+
+```
+fix(firestore): critical fix for issue with processing data from queries (resolves #408) 
+```
+
 ###### 2022.04.29 [v7.1.0]
 
 ```
