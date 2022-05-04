@@ -1,3 +1,23 @@
+###### 2022.05.04 [v4.1.0]
+
+```
+feat(sdk): updated SDK versions
+ - okhttp v2.7.5
+ - okhttp v3.12.1
+ - okio v1.17.5
+ - picasso v2.71828
+```
+
+###### 2022.05.04 [v4.1.0]
+
+```
+feat(sdk): updated SDK versions
+ - okhttp v2.7.5
+ - okhttp v3.12.1
+ - okio v1.17.5
+ - picasso v2.71828
+```
+
 ###### 2021.08.20 [v4.0.2]
 
 ```
