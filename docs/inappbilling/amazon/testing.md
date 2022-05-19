@@ -52,6 +52,26 @@ The location of the download link is as in the following screenshot:
 You can easily review the contents of the JSON file. From the App Tester main menu, tap the **IAP Items in JSON File** option to display a human-readable list of the item data in the JSON file.
 
 
+### Enter sandbox mode
+
+Sandbox mode constrains calls that would normally go to the Appstore client to route to the Amazon App Tester app instead. Use this mode only for testing locally.
+
+In the same terminal where you connected to your Fire device through ADB, enter sandbox mode:
+
+```
+adb shell setprop debug.amazon.sandboxmode debug
+```
+
+(Note that if you need to exit sandbox mode, run the following: `adb shell setprop debug.amazon.sandboxmode none`.)
+
+Every time you reconnect to your Fire device through ADB, you need to reinitiate sandbox mode.
+
+
+:::note
+We haven't been able to test successfully using an AIR build directly, instead we have had to use the AndroidStudioProject output from AIR and run a debug build from there. For some reason Amazon is detecting the debug build from AIR as a release build.
+:::
+
+
 ### Next Steps
 
 Familiarize yourself with the App Tester tool and the test options for IAP:

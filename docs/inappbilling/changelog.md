@@ -1,3 +1,13 @@
+### 2022.05.19 [v13.2.3]
+
+```
+feat(amazon): update to Amazon Appstore SDK v3.0.2 (resolves #445)
+fix(amazon): correct android exported tags for Amazon receiver
+fix(docs,amazon): add information on adding AppstoreAuthenticationKey.pem and new testing process (#459)
+fix(googleplay): updates for handling odd case where closing app may lose purchase (#451)
+fix(docs): corrected references to REQUEST_INSTALL_PACKAGES permission (resolves #461)
+```
+
 ### 2022.02.07 [v13.2.1]
 
 ```

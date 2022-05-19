@@ -66,6 +66,26 @@ However you can choose to install it manually, as you would have done in the pas
 </Tabs>
 
 
+## Appstore Authentication Key
+
+To add the PEM file to your application:
+
+- Log into the Developer Console with your developer account.
+- Go to Apps & Services > My Apps. Then click your app.
+- Go to the APK Files tab.
+- Click Public Key in the upper-right area.
+- In the Public Key dialog box that appears, click the **AppstoreAuthenticationKey.pem** link to download the PEM file. This file contains your public key.
+
+:::note
+The link to the public key appears only when you create a new version or when you create a new app. If you had a new version in progress prior to the release of the Appstore SDK, you must complete your existing version and then create a new version — then the public key link will appear. Alternatively, for this tutorial you can just create a new Android app.
+:::
+
+![](images/amazon-public-key.png)
+
+- Copy the `AppstoreAuthenticationKey.pem` file to the root folder of your project and ensure it is packaged with your amazon application.
+
+
+
 
 ## Checking for Support
 
@@ -84,5 +104,4 @@ if (InAppBilling.isSupported)
 :::note 
 This only checks if there is some functionality supported, not whether a particular billing service is available.
 :::
-
 

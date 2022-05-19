@@ -37,6 +37,12 @@ Nothing additional required if using apm.
 
 You will need to add the common Play Core extension ([`com.google.android.play`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.android.play.ane)).
 
+Add the following permission:
+
+```xml
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+```
+
 And add the following to the manifest additions inside the `application` node:
 
 ```xml

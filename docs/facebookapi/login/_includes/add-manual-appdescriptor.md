@@ -53,4 +53,14 @@ FBSDKLoginKit.framework
 
 #### Info Additions
 
-The Facebook Login extension doesn't require any info additions beyond the ones you have added for the Facebook Core extension.
+The Facebook Login extension requires some entitlements in order to save the current user's access token. Add the following to the `Entitlements` section in your application descriptor:
+
+
+```xml
+<key>keychain-access-groups</key>
+<array>
+	<string>BUNDLE_SEED_ID.*</string>
+</array>
+```
+
+You will need to set the iOS App ID Prefix or `BUNDLE_SEED_ID` for your application. This will be a unique ten character string and you can find it in the developer center in the details for your App ID.
