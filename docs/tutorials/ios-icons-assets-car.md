@@ -27,30 +27,58 @@ Contents:
 
 ## Method 1 Command Line
 
->
-> Note: You will need a macOS machine with Xcode 9+ for this method to generate the `Assets.car` file
->
+:::note
+You will need a macOS machine with Xcode 9+ for this method to generate the `Assets.car` file
+:::
 
-This is the method we prefer as it is simpler to update and create than having to drag files into Xcode. 
+This is the method we prefer as it is simpler to update and create than having to drag files into Xcode. We have a  script that downloads the required assets, resizes an icon and launch screen image appropriately and calls the xcode utilities to generate the Assets.car (and launch screen).
 
-It uses the same directory structure (`Assets.xcassets`) as in your Xcode application however uses the command line to convert this into the `Assets.car`, so you can simply replace the files in the directory and run the script to create your `Assets.car`. 
+The script is available in the [AIR-ImageScripts repository](https://github.com/distriqt/AIR-ImageScripts) 
 
-- Download the following zip and extract it to a working directory somewhere on your machine.
-  - [assets-car-build.zip](resources/ios/assets-car-build.zip)
-  - You should find a script and a directory called `Assets.xcassets` which contains another directory called `AppIcon.appiconset`.
+You will need to have installed `imagemagick` and the **xcode command line utilities** (see details in the repository if you need help installing them).
 
-- Replace all the images in the `AppIcon.appiconset` directory with your own icons. You must replace them with the correctly sized images. You can do this manually or we suggest you use an online tool: [appicon.build](https://www.appicon.build/). This tool will generate all the icons at the correct sizes from a single 1024x1024 image.
-
-- If you are planning on using our simple `LaunchScreen.storyboardc`, replace the `LaunchImage.png` in the `LaunchImage.imageset` directory with your launch image. This will form the launch image on all iOS devices so should be large enough to scale appropriately. If you are planning on implementing your own, simply delete the `LaunchImage.imageset` directory.
-
-- Run the `createAssetsCar` script. This will create a `build` directory and run the following command to build the `Assets.car` file:
+To use it, create an `icon.png` file that is a high resolution icon file (we suggest 1024x1024) and a `launch.png` launch screen image (we suggest a large 2732x2732 pixel image). Place them in a directory and open a terminal at this location. You can either clone the repository and use the `generate.sh` script directly or call it as below:
 
 ```
-xcrun actool Assets.xcassets --compile build --platform iphoneos --minimum-deployment-target 8.0 --app-icon AppIcon --output-partial-info-plist build/partial.plist
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/distriqt/AIR-ImageScripts/master/generate.sh)"
 ```
 
+Once complete this will have generated an `out` directory that contains 
 
+- `Assets.car` your asset catalogue 
+- `LaunchScreen.storyboardc` directory is your custom launch screen storyboard
+- `icons` directory containing icon images sized for AIR.
 
+Copy these into your application as you require.
+
+You can use the `icons` directory in your application descriptor by adding the following:
+
+```xml
+<icon>
+    <image16x16>icons/icon16x16.png</image16x16>
+    <image29x29>icons/icon29x29.png</image29x29>
+    <image32x32>icons/icon32x32.png</image32x32>
+    <image36x36>icons/icon36x36.png</image36x36>
+    <image40x40>icons/icon40x40.png</image40x40>
+    <image48x48>icons/icon48x48.png</image48x48>
+    <image57x57>icons/icon57x57.png</image57x57>
+    <image58x58>icons/icon58x58.png</image58x58>
+    <image60x60>icons/icon60x60.png</image60x60>
+    <image72x72>icons/icon72x72.png</image72x72>
+    <image76x76>icons/icon76x76.png</image76x76>
+    <image80x80>icons/icon80x80.png</image80x80>
+    <image87x87>icons/icon87x87.png</image87x87>
+    <image114x114>icons/icon114x114.png</image114x114>
+    <image120x120>icons/icon120x120.png</image120x120>
+    <image128x128>icons/icon128x128.png</image128x128>
+    <image144x144>icons/icon144x144.png</image144x144>
+    <image152x152>icons/icon152x152.png</image152x152>
+    <image167x167>icons/icon167x167.png</image167x167>
+    <image180x180>icons/icon180x180.png</image180x180>
+    <image512x512>icons/icon512x512.png</image512x512>
+    <image1024x1024>icons/icon1024x1024.png</image1024x1024>
+</icon>
+```
 
 ## Method 2 Using Xcode
 
