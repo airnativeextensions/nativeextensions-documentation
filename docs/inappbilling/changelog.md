@@ -1,3 +1,9 @@
+### 2022.05.20 [v13.2.4]
+
+```
+fix(apple): correct closing of product view on older versions of ios (#467)
+```
+
 ### 2022.05.19 [v13.2.3]
 
 ```
