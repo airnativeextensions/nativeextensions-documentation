@@ -1,3 +1,9 @@
+### 2022.06.15 [v5.3.11]
+
+```
+fix(android): set default text zoom on webview settings - appears to have changed the default appearance to match chrome more closely (resolves #287)
+```
+
 ### 2022.03.23 [v5.3.10]
 
 ```
