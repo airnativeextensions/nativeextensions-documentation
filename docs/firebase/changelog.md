@@ -1,3 +1,10 @@
+###### 2022.06.23 [v7.2.1]
+
+```
+feat(ios): update ios sdk to v8.1.5 (#358)
+feat(storage): add ability to list items and directories (resolves #414)
+```
+
 ###### 2022.04.29 [v7.1.1]
 
 ```

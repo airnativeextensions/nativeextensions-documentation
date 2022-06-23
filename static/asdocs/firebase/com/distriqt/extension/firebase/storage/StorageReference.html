@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="StorageReference,com.distriqt.extension.firebase.storage.StorageReference,cancel,cancel,child,deleteReference,dispose,fromObject,getBucket,getBytes,getCustomMetadata,getCustomMetadataKeys,getDownloadUrl,getFile,getMaxDownloadRetryTime,getMaxOperationRetryTime,getMaxUploadRetryTime,getMetadata,getName,getParent,getPath,getReference,getReferenceFromUrl,getResult,getResult,getRoot,getSnapshot,getSnapshot,init,isCanceled,isCanceled,isComplete,isComplete,isInProgress,isInProgress,isPaused,isPaused,isSuccessful,isSuccessful,pause,pause,putBytes,putFile,resume,resume,setCustomMetadata,setMaxDownloadRetryTime,setMaxOperationRetryTime,setMaxUploadRetryTime"><title>com.distriqt.extension.firebase.storage.StorageReference</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="StorageReference,com.distriqt.extension.firebase.storage.StorageReference,cancel,cancel,child,deleteReference,dispose,fromObject,getBucket,getBytes,getCustomMetadata,getCustomMetadataKeys,getDownloadUrl,getFile,getMaxDownloadRetryTime,getMaxOperationRetryTime,getMaxUploadRetryTime,getMetadata,getName,getParent,getPath,getReference,getReferenceFromUrl,getResult,getResult,getRoot,getSnapshot,getSnapshot,init,isCanceled,isCanceled,isComplete,isComplete,isInProgress,isInProgress,isPaused,isPaused,isSuccessful,isSuccessful,list,listAll,pause,pause,putBytes,putFile,resume,resume,setCustomMetadata,setMaxDownloadRetryTime,setMaxOperationRetryTime,setMaxUploadRetryTime"><title>com.distriqt.extension.firebase.storage.StorageReference</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
 				asdocTitle = 'StorageReference - distriqt // Firebase';
 				var baseRef = '../../../../../';
 				window.onload = configPage;
@@ -11,41 +11,29 @@
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("StorageReference"); titleBar_setSubNav(false,false,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
 				-->
 			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.firebase.storage</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  StorageReference extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
-	              <p>
-	 Represents a reference to a Google Cloud Storage object. 
-	 </p>
-	              <p>
-	 Developers can upload and download objects, get/set object metadata, 
+	 Represents a reference to a Google Cloud Storage object.
+	 
+	 	 Developers can upload and download objects, get/set object metadata,
 	 and delete an object at a specified path.
-	 </p>
-	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#child()" class="signatureLink">child</a>(path:String):<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></div><div class="summaryTableDescription">
-		 
+	 
+	 <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#child()" class="signatureLink">child</a>(path:String):<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></div><div class="summaryTableDescription">
 		 Returns a new instance of StorageReference pointing to a child location of the current reference.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#deleteReference()" class="signatureLink">deleteReference</a>():void</div><div class="summaryTableDescription">
-		 
 		 Deletes the object at this StorageReference.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getBucket()" class="signatureLink">getBucket</a>():String</div><div class="summaryTableDescription">
-		 
 		 Return the Google Cloud Storage bucket that holds this object.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getBytes()" class="signatureLink">getBytes</a>(maxDownloadSizeBytes:int):<a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></div><div class="summaryTableDescription">
-		 
 		 Asynchronously downloads the object from this StorageReference.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDownloadUrl()" class="signatureLink">getDownloadUrl</a>():Boolean</div><div class="summaryTableDescription">
-		 
 		 Asynchronously retrieves a long lived download URL with a revokable token.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getFile()" class="signatureLink">getFile</a>(destinationFile:File):<a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></div><div class="summaryTableDescription">
-		 
 		 Asynchronously downloads the object at this StorageReference to a specified system filepath.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getMetadata()" class="signatureLink">getMetadata</a>():void</div><div class="summaryTableDescription">
-		 
 		 Retrieves metadata associated with an object at this StorageReference.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getName()" class="signatureLink">getName</a>():String</div><div class="summaryTableDescription">
-		 
 		 Returns the short name of this object.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getParent()" class="signatureLink">getParent</a>():<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></div><div class="summaryTableDescription">
-		 
-		 Returns a new instance of StorageReference pointing to the 
-		 parent location or null if this instance references the root 
+		 Returns a new instance of StorageReference pointing to the
+		 parent location or null if this instance references the root
 		 location.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPath()" class="signatureLink">getPath</a>():String</div><div class="summaryTableDescription">
-		 
 		 Returns the full path to this object, not including the Google Cloud Storage bucket.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getRoot()" class="signatureLink">getRoot</a>():<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></div><div class="summaryTableDescription">
-		 
-		 Returns a new instance of StorageReference pointing to the root location.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#putBytes()" class="signatureLink">putBytes</a>(data:ByteArray, metadata:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a> = null):<a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></div><div class="summaryTableDescription">
-		 
+		 Returns a new instance of StorageReference pointing to the root location.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#list()" class="signatureLink">list</a>(maxResults:int, pageToken:String = null):void</div><div class="summaryTableDescription">
+		 List the child items and prefixes in this reference.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#listAll()" class="signatureLink">listAll</a>():void</div><div class="summaryTableDescription">
+		 List all the child items and prefixes in this reference by recursively
+		 performing list operations.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#putBytes()" class="signatureLink">putBytes</a>(data:ByteArray, metadata:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a> = null):<a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></div><div class="summaryTableDescription">
 		 Asynchronously uploads byte data to this StorageReference.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#putFile()" class="signatureLink">putFile</a>(file:File, metadata:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a> = null):<a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></div><div class="summaryTableDescription">
-		 
 		 Asynchronously uploads from a content URI to this StorageReference.</div></td><td class="summaryTableOwnerCol">StorageReference</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:storagereference:delete:error" class="signatureLink">storagereference:delete:error</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 </td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:storagereference:delete:success" class="signatureLink">storagereference:delete:success</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 </td><td class="summaryTableOwnerCol">StorageReference</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:storagereference:getDownloadUrl:error" class="signatureLink">storagereference:getDownloadUrl:error</a></div></td><td class="summaryTableDescription summaryTableCol">
@@ -55,132 +43,115 @@
 		 </td><td class="summaryTableOwnerCol">StorageReference</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="child()"></a><a name="child(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">child</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function child(path:String):<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code><p></p><p></p><p>
-		 <p>
 		 Returns a new instance of <code>StorageReference</code> pointing to a child location of the current reference.
-		 </p>
-		 <p>
-		 All leading and trailing slashes will be removed, and consecutive slashes will be compressed to single slashes. 
+		 
+		 		 All leading and trailing slashes will be removed, and consecutive slashes will be compressed to single slashes.
 		 For example:
-		 </p>
+		 
 <pre>
- child = /foo/bar     path = foo/bar
+   child = /foo/bar     path = foo/bar
    child = foo/bar/     path = foo/bar
    child = foo///bar    path = foo/bar
 </pre>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">path</span>:String</code> &mdash; The relative path from this reference.
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code> &mdash; The child <code>StorageReference</code>
-		 
-		 </td></tr></table></div><a name="deleteReference()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">deleteReference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function deleteReference():void</code><p></p><p></p><p>
-		 <p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">path</span>:String</code> &mdash; The relative path from this reference.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code> &mdash; The child <code>StorageReference</code>
+		 		 </td></tr></table></div><a name="deleteReference()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">deleteReference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function deleteReference():void</code><p></p><p></p><p>
 		 Deletes the object at this <code>StorageReference</code>.
-		 </p> 
 		 
-		 </p></div><a name="getBucket()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getBucket</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getBucket():String</code><p></p><p></p><p>
-		 <p>
+		 		 </p></div><a name="getBucket()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getBucket</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getBucket():String</code><p></p><p></p><p>
 		 Return the Google Cloud Storage bucket that holds this object.
-		 </p>
-		  
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the bucket
 		 
-		 </td></tr></table></div><a name="getBytes()"></a><a name="getBytes(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getBytes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getBytes(maxDownloadSizeBytes:int):<a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></code><p></p><p></p><p>
-		 <p>
-		 Asynchronously downloads the object from this <code>StorageReference</code>. 
-		 A byte array will be allocated large enough to hold the entire file in memory. 
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the bucket
+		 		 </td></tr></table></div><a name="getBytes()"></a><a name="getBytes(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getBytes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getBytes(maxDownloadSizeBytes:int):<a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></code><p></p><p></p><p>
+		 Asynchronously downloads the object from this <code>StorageReference</code>.
+		 A byte array will be allocated large enough to hold the entire file in memory.
 		 Therefore, using this method will impact memory usage of your process.
-		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">maxDownloadSizeBytes</span>:int</code> &mdash; The maximum allowed size in bytes that will be allocated. 
-		 					Set this parameter to prevent out of memory conditions from occurring. 
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">maxDownloadSizeBytes</span>:int</code> &mdash; The maximum allowed size in bytes that will be allocated.
+		 					Set this parameter to prevent out of memory conditions from occurring.
 		 					If the download exceeds this limit, the task will fail
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></code> &mdash; A <code>DownloadTask</code> to monitor the download process
-		 
-		 </td></tr></table></div><a name="getDownloadUrl()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDownloadUrl</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDownloadUrl():Boolean</code><p></p><p></p><p>
-		 <p>
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></code> &mdash; A <code>DownloadTask</code> to monitor the download process
+		 		 </td></tr></table></div><a name="getDownloadUrl()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDownloadUrl</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDownloadUrl():Boolean</code><p></p><p></p><p>
 		 Asynchronously retrieves a long lived download URL with a revokable token.
 		 This can be used to share the file with others, but can be revoked by a
 		 developer in the Firebase Console if desired.
-		 </p>
-		 		 <p>
-		 This asynchronous process will result in either a <code>StorageReferenceEvent.GET_DOWNLOAD_URL_SUCCESS</code> on success
+		 
+		 		 This asynchronous process will result in either a <code>StorageReferenceEvent.GET_DOWNLOAD_URL_SUCCESS</code> on success
 		 or <code>StorageReferenceEvent.GET_DOWNLOAD_URL_ERROR</code> on failure.
-		 </p>
+		 
 		 		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the retrieval of the download url started successfully
 		 			and <code>false</code> if there was an error
 		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#GET_DOWNLOAD_URL_SUCCESS" target="">com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.GET_DOWNLOAD_URL_SUCCESS</a><br/><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#GET_DOWNLOAD_URL_ERROR" target="">com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.GET_DOWNLOAD_URL_ERROR</a></div></div><a name="getFile()"></a><a name="getFile(flash.filesystem.File)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getFile(destinationFile:File):<a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></code><p></p><p></p><p>
-		 <p>
 		 Asynchronously downloads the object at this StorageReference to a specified system filepath.
-		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">destinationFile</span>:File</code> &mdash; 	A File representing the path the object should be downloaded to.
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></code> &mdash; A <code>DownloadTask</code> that can be used to monitor or manage the download.
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">destinationFile</span>:File</code> &mdash; 	A File representing the path the object should be downloaded to.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/DownloadTask.html">DownloadTask</a></code> &mdash; A <code>DownloadTask</code> that can be used to monitor or manage the download.
 		 </td></tr></table></div><a name="getMetadata()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getMetadata</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getMetadata():void</code><p></p><p></p><p>
-		 <p>
 		 Retrieves metadata associated with an object at this <code>StorageReference</code>.
-		 </p> 
+		 
 		 </p></div><a name="getName()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getName():String</code><p></p><p></p><p>
-		 <p>
 		 Returns the short name of this object.
-		 </p>
-		  
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The name of this object
 		 
-		 </td></tr></table></div><a name="getParent()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getParent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getParent():<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code><p></p><p></p><p>
-		 <p>
-		 Returns a new instance of <code>StorageReference</code> pointing to the 
-		 parent location or <code>null</code> if this instance references the root 
-		 location. 
-		 </p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The name of this object
+		 		 </td></tr></table></div><a name="getParent()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getParent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getParent():<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code><p></p><p></p><p>
+		 Returns a new instance of <code>StorageReference</code> pointing to the
+		 parent location or <code>null</code> if this instance references the root
+		 location.
 		 
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code> &mdash; The parent <code>StorageReference</code>.
-		 
-		 </td></tr></table></div><a name="getPath()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPath</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPath():String</code><p></p><p></p><p>
-		 <p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code> &mdash; The parent <code>StorageReference</code>.
+		 		 </td></tr></table></div><a name="getPath()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPath</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPath():String</code><p></p><p></p><p>
 		 Returns the full path to this object, not including the Google Cloud Storage bucket.
-		 </p>
 		 
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The path
-		 
-		 </td></tr></table></div><a name="getRoot()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getRoot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getRoot():<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code><p></p><p></p><p>
-		 <p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The path
+		 		 </td></tr></table></div><a name="getRoot()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getRoot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getRoot():<a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code><p></p><p></p><p>
 		 Returns a new instance of <code>StorageReference</code> pointing to the root location.
-		 </p>
-		  
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code> &mdash; The root <code>StorageReference</code>.
 		 
-		 </td></tr></table></div><a name="putBytes()"></a><a name="putBytes(flash.utils.ByteArray,com.distriqt.extension.firebase.storage.StorageMetadata)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">putBytes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function putBytes(data:ByteArray, metadata:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a> = null):<a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></code><p></p><p></p><p>
-		 <p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/StorageReference.html">StorageReference</a></code> &mdash; The root <code>StorageReference</code>.
+		 		 </td></tr></table></div><a name="list()"></a><a name="list(int,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">list</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function list(maxResults:int, pageToken:String = null):void</code><p></p><p></p><p>
+		 List the child items and prefixes in this reference.
+		 
+		 <ul>
+		     <li>items are actual file items</li>
+		     <li>prefixes are similar to a directory concept</li>
+		 </ul>
+		 
+		 		 Note: You must be using version 2 of the rules for your storage bucket
+		 in order to use the list functionality.
+		 
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">maxResults</span>:int</code> &mdash; The maximum number of results to return
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">pageToken</span>:String</code> (default = <code>null</code>)<code></code> &mdash; 	If continuing from a previous list call, provide the
+		 						page token from the event to retrieve the next page of results.
+		 </td></tr></table></p></div><a name="listAll()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">listAll</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function listAll():void</code><p></p><p></p><p>
+		 List all the child items and prefixes in this reference by recursively
+		 performing list operations. This may end in an error if there are a lot
+		 of objects.
+		 
+		 <ul>
+		     <li>items are actual file items</li>
+		     <li>prefixes are similar to a directory concept</li>
+		 </ul>
+		 
+		 		 Note: You must be using version 2 of the rules for your storage bucket
+		 in order to use the list functionality.
+		 
+		 </p></div><a name="putBytes()"></a><a name="putBytes(flash.utils.ByteArray,com.distriqt.extension.firebase.storage.StorageMetadata)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">putBytes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function putBytes(data:ByteArray, metadata:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a> = null):<a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></code><p></p><p></p><p>
 		 Asynchronously uploads byte data to this <code>StorageReference</code>.
-		 </p>
-		  
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">data</span>:ByteArray</code> &mdash; 	The byte array to upload
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">data</span>:ByteArray</code> &mdash; 	The byte array to upload
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">metadata</span>:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a></code> (default = <code>null</code>)<code></code> &mdash; [optional] <code>StorageMetadata</code> containing additional information (MIME type, etc.) about the object being uploaded.
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></code> &mdash; An instance of <code>UploadTask</code> which can be used to monitor or manage the upload.
-		 
-		 </td></tr></table></div><a name="putFile()"></a><a name="putFile(flash.filesystem.File,com.distriqt.extension.firebase.storage.StorageMetadata)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">putFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function putFile(file:File, metadata:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a> = null):<a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></code><p></p><p></p><p>
-		 <p>
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></code> &mdash; An instance of <code>UploadTask</code> which can be used to monitor or manage the upload.
+		 		 </td></tr></table></div><a name="putFile()"></a><a name="putFile(flash.filesystem.File,com.distriqt.extension.firebase.storage.StorageMetadata)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">putFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function putFile(file:File, metadata:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a> = null):<a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></code><p></p><p></p><p>
 		 Asynchronously uploads from a content URI to this <code>StorageReference</code>.
-		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:File</code> &mdash; 	The source <code>File</code> of the upload.
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:File</code> &mdash; 	The source <code>File</code> of the upload.
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">metadata</span>:<a href="../../../../../com/distriqt/extension/firebase/storage/StorageMetadata.html">StorageMetadata</a></code> (default = <code>null</code>)<code></code> &mdash; [optional] <code>StorageMetadata</code> containing additional information (MIME type, etc.) about the object being uploaded.
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></code> &mdash; An instance of <code>UploadTask</code> which can be used to monitor or manage the upload.
-		 
-		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:storagereference:delete:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:delete:error</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#DELETE_ERROR"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.DELETE_ERROR</code></a><br/><p></p><p></p><p> 
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/firebase/storage/UploadTask.html">UploadTask</a></code> &mdash; An instance of <code>UploadTask</code> which can be used to monitor or manage the upload.
+		 		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:storagereference:delete:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:delete:error</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#DELETE_ERROR"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.DELETE_ERROR</code></a><br/><p></p><p></p><p>
 	 </p>
-		 </div><a name="event:storagereference:delete:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:delete:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#DELETE_SUCCESS"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.DELETE_SUCCESS</code></a><br/><p></p><p></p><p> 
+		 </div><a name="event:storagereference:delete:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:delete:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#DELETE_SUCCESS"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.DELETE_SUCCESS</code></a><br/><p></p><p></p><p>
 	 </p>
 		 </div><a name="event:storagereference:getDownloadUrl:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:getDownloadUrl:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#GET_DOWNLOAD_URL_ERROR"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.GET_DOWNLOAD_URL_ERROR</code></a><br/><p></p><p></p><p>
 	 </p>
 		 </div><a name="event:storagereference:getDownloadUrl:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:getDownloadUrl:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#GET_DOWNLOAD_URL_SUCCESS"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.GET_DOWNLOAD_URL_SUCCESS</code></a><br/><p></p><p></p><p>
 	 </p>
-		 </div><a name="event:storagereference:getMetadata:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:getMetadata:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#GET_METADATA_ERROR"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.GET_METADATA_ERROR</code></a><br/><p></p><p></p><p> 
+		 </div><a name="event:storagereference:getMetadata:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:getMetadata:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#GET_METADATA_ERROR"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.GET_METADATA_ERROR</code></a><br/><p></p><p></p><p>
 	 </p>
-		 </div><a name="event:storagereference:getMetadata:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:getMetadata:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#GET_METADATA_SUCCESS"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.GET_METADATA_SUCCESS</code></a><br/><p></p><p></p><p> 
+		 </div><a name="event:storagereference:getMetadata:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">storagereference:getMetadata:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent</code></a><br/><span class="label">StorageReferenceEvent.type property = </span><a href="../../../../../com/distriqt/extension/firebase/storage/events/StorageReferenceEvent.html#GET_METADATA_SUCCESS"><code>com.distriqt.extension.firebase.storage.events.StorageReferenceEvent.GET_METADATA_SUCCESS</code></a><br/><p></p><p></p><p>
 	 </p>
-		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Apr 29 2022, 03:42 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Apr 29 2022, 03:42 PM +10:00  -->
+		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Thu Jun 23 2022, 01:16 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Thu Jun 23 2022, 01:16 PM +10:00  -->
