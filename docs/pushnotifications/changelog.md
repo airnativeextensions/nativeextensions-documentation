@@ -1,3 +1,10 @@
+### 2022.06.23 [v11.1.0]
+
+```
+feat(onesignal,android): onesignal android sdk update v4.7.3
+feat(fcm,ios): update firebase messaging sdk to v8.1.5
+```
+
 ### 2022.03.15 [v11.0.0]
 
 ```
