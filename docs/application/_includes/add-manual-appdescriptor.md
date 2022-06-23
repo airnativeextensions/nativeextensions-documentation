@@ -10,6 +10,8 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>com.distriqt.Core</extensionID>
 
 	<extensionID>androidx.core</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.distriqt.playservices.AppSet</extensionID>
 </extensions>
 ```
 
@@ -36,6 +38,10 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
 	<application>
 		
+		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+
 		<!-- AUTO START and ALARM MANAGER -->
 		<receiver android:enabled="true"
 			android:name="com.distriqt.extension.application.receivers.ApplicationStartupReceiver"

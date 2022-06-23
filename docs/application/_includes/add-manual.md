@@ -46,7 +46,26 @@ You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSu
 
 
 
+#### Google Play Services
+
+This ANE requires usage of certain aspects of the Google Play Services client library. 
+The client library is available as a series of ANEs that you add into your applications packaging options. 
+Each separate ANE provides a component from the Play Services client library and are used by different ANEs. 
+These client libraries aren't packaged with this ANE as they are used by multiple ANEs and separating them 
+will avoid conflicts, allowing you to use multiple ANEs in the one application.
+
+This ANE requires the following Google Play Services:
+
+- [`com.distriqt.playservices.Base`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.distriqt.playservices.AppSet`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AppSet.ane)
+
+You must include the above native extensions in your application along with this extension, 
+and you need to ensure they are packaged with your application.
+
+You can access the Google Play Services client library extensions here: [https://github.com/distriqt/ANE-GooglePlayServices](https://github.com/distriqt/ANE-GooglePlayServices).
+
 >
 > **Note:** The Google Play Services and Android Support ANEs are only **required** on Android devices. 
-> There are no issues packaging these extensions with all platforms as there are default implementations available which will allow your code to package without errors however if you are only building an iOS application feel free to remove the Google Play Services and Android Support ANEs from your application.
+> There is no problem packaging these ANEs with all platforms as there are default implementations available which will allow your code to package without errors 
+> however if you are only building an iOS application feel free to remove the Google Play Services ANEs from your application.
 >

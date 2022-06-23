@@ -4,7 +4,7 @@ sidebar_label: Defaults
 ---
 
 The defaults allow you to setup some information for the user, to allow an application to
-customize its behavior to match a user's preferences. For example, units of measurement,
+customize its behaviour to match a user's preferences. For example, units of measurement,
 or refresh intervals. This storage is very similar to the SharedObject concept,
 it allows you to store key-value data.
 
@@ -13,6 +13,31 @@ It stores information using the native "preferences" style data storage. It uses
 - Android: `SharedPreferences`
 - iOS: `NSUserDefaults`
 - default: `SharedObject`
+
+
+## Shared or Custom
+
+By default, the `defaults` are placed in a custom object to separate them from other settings and avoid conflicts with other native components. However there are times where this behaviour is not desirable. 
+
+For example, if you are trying to retrieve the shared values stored by advertising or data collection 
+services in the "IAB Europe Transparency and Consent Framework". This includes values like the GDPR 
+personalisation settings and other user data sharing requirements. 
+
+When you need access to these values we suggest changing the behaviour to use the shared values by 
+setting the value of `useSharedDefaults` to `true`:
+
+```actionscript
+Application.service.defaults.useSharedDefaults = true;
+```
+
+:::note
+You will not be able to access values that were stored when this value is changed, i.e. if you have previously saved values in the custom object, and then change to the shared object, they will no longer be available.
+
+You can change this value as you require before accessing values, however be aware that changing this value does dispose and create objects so will have a performance hit if you do this regularly.
+
+We suggest moving to one consistent method to avoid switching methods. 
+:::
+
 
 ## Access
 

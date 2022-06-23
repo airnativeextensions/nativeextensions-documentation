@@ -1,3 +1,13 @@
+### 2022.06.23 [v6.9.2]
+
+```
+feat(defaults): add ability to use shared preferences on android to access gdpr values
+feat(defaults): add docs for changing shared preferences approach
+feat(device): add ability to retrieve unique id through the appset play services library
+fix(ios): update device database to add iPad12,1,2 ipad models (resolves #248)
+fix(ios): update device database to add iPad13,4,5,6,7,8,9,10,11 (iPad Pro 2021) iPad13,16,17 (iPad AIR 2022) iPhone14,6 (SE 3rd) (resolves #248)
+```
+
 ### 2022.03.15 [v6.8.5]
 
 ```
