@@ -1,3 +1,10 @@
+### 2022.06.23 [v13.6.0]
+
+```
+feat(ios,admob): update ios sdk to v9.2.0 (#371)
+feat(admob): add life time value implementation (resolves #361)
+```
+
 ### 2022.03.08 [v13.5.0]
 
 ```

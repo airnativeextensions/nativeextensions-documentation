@@ -109,9 +109,6 @@ Also we suggest you enable hardware acceleration so videos are displayed correct
 			<meta-data
 				android:name="androidx.work.WorkManagerInitializer"
 				android:value="androidx.startup" />
-			<meta-data
-				android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-				android:value="androidx.startup" />
 		</provider>
 
 		<service
