@@ -49,10 +49,3 @@ We suggest you use the locations directly in your builds rather than copying the
 apm project config set com.distriqt.facebook.Core
 ```
 
-- You will need to set the iOS App ID Prefix or "bundle id" for your application. This will be a unique ten character string and you can find it in the developer center in the details for your App ID. To set this value call:
-
-```
-apm project config set com.distriqt.facebook.Login
-```
-
-
