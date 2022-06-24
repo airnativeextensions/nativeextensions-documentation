@@ -108,15 +108,21 @@ from the Play Store. In AndroidManifest.xml:
 
 
 ```xml
-<intent-filter>
-	<action android:name="android.intent.action.VIEW"/>
-	<category android:name="android.intent.category.DEFAULT"/>
-	<category android:name="android.intent.category.BROWSABLE"/>
+<activity>
+	<intent-filter>
+		<action android:name="android.intent.action.MAIN"></action>
+		<category android:name="android.intent.category.LAUNCHER"></category>
+	</intent-filter>
+	<intent-filter>
+		<action android:name="android.intent.action.VIEW"/>
+		<category android:name="android.intent.category.DEFAULT"/>
+		<category android:name="android.intent.category.BROWSABLE"/>
 
-	<data android:scheme="http" android:host="airnativeextensions.com" />
-	<data android:scheme="https" android:host="airnativeextensions.com" />
-	<data android:scheme="distriqt" android:host="appinvite" />
-</intent-filter>
+		<data android:scheme="http" android:host="airnativeextensions.com" />
+		<data android:scheme="https" android:host="airnativeextensions.com" />
+		<data android:scheme="distriqt" android:host="appinvite" />
+	</intent-filter>
+</activity>
 ```
 
 This intent filter should be added directly after the `<application>` tag in your manifest additions. 
@@ -156,16 +162,21 @@ For example:
 			<!-- OTHER PERMISSIONS / REQUIREMENTS -->
 
 			<application>
+				<activity>
+					<intent-filter>
+						<action android:name="android.intent.action.MAIN"></action>
+						<category android:name="android.intent.category.LAUNCHER"></category>
+					</intent-filter>
+					<intent-filter>
+						<action android:name="android.intent.action.VIEW"/>
+						<category android:name="android.intent.category.DEFAULT"/>
+						<category android:name="android.intent.category.BROWSABLE"/>
 
-				<intent-filter>
-					<action android:name="android.intent.action.VIEW"/>
-					<category android:name="android.intent.category.DEFAULT"/>
-					<category android:name="android.intent.category.BROWSABLE"/>
-
-					<data android:scheme="http" android:host="airnativeextensions.com" />
-	                <data android:scheme="https" android:host="airnativeextensions.com" />
-                    <data android:scheme="distriqt" android:host="appinvite" />
-				</intent-filter>
+						<data android:scheme="http" android:host="airnativeextensions.com" />
+						<data android:scheme="https" android:host="airnativeextensions.com" />
+						<data android:scheme="distriqt" android:host="appinvite" />
+					</intent-filter>
+				</activity>
 
 
 				<activity

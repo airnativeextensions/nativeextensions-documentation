@@ -3,71 +3,70 @@ title: DynamicLinks - Add the extension
 sidebar_label: Add the extension
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
+import InstallAPM from "./_includes/add-apm.mdx";
+import InstallManual from "./_includes/add-manual.mdx";
 
-import InstallAPM from './_includes/add-apm.mdx'
-import InstallManual from './_includes/add-manual.mdx'
-
-import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
-import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
-
+import AppDescriptorAPM from "./_includes/add-apm-appdescriptor.mdx";
+import AppDescriptorManual from "./_includes/add-manual-appdescriptor.mdx";
 
 The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
 
-However you can choose to install it manually, as you would have done in the past. 
+However you can choose to install it manually, as you would have done in the past.
 
 ## Add the Extension
 
 <Tabs
-  groupId="packagemanager"
-  defaultValue="apm"
-  values={[
-    {label: 'APM', value: 'apm'},
-    {label: 'Manual', value: 'manual'},
-  ]}>
+groupId="packagemanager"
+defaultValue="apm"
+values={[
+	{label: 'APM', value: 'apm'},
+	{label: 'Manual', value: 'manual'},
+]}>
 
-  <TabItem value="apm" >
-	<InstallAPM/>
-  </TabItem>
-  <TabItem value="manual" >
-	<InstallManual/>
-  </TabItem>
-  
+<TabItem value="apm">
+  <InstallAPM />
+</TabItem>
+<TabItem value="manual">
+  <InstallManual />
+</TabItem>
+
 </Tabs>
-
 
 ## Application Descriptor
 
 <Tabs
-  groupId="packagemanager"
-  defaultValue="apm"
-  values={[
-    {label: 'APM', value: 'apm'},
-    {label: 'Manual', value: 'manual'},
-  ]}>
+groupId="packagemanager"
+defaultValue="apm"
+values={[
+	{label: 'APM', value: 'apm'},
+	{label: 'Manual', value: 'manual'},
+]}>
 
-  <TabItem value="apm" >
-	<AppDescriptorAPM/>
-  </TabItem>
-  <TabItem value="manual" >
-	<AppDescriptorManual/>
-  </TabItem>
-  
+<TabItem value="apm">
+  <AppDescriptorAPM />
+</TabItem>
+<TabItem value="manual">
+  <AppDescriptorManual />
+</TabItem>
+
 </Tabs>
 
+## Android
 
-## Android 
-
-As with plain deep links, you must add an intent filter to the activity that handles deep links for your app. 
-The intent filter should catch deep links of your domain, since the Dynamic Link will redirect to your domain 
-if your app is installed. This is required for your app to receive the Dynamic Link data after it is installed 
+As with plain deep links, you must add an intent filter to the activity that handles deep links for your app.
+The intent filter should catch deep links of your domain, since the Dynamic Link will redirect to your domain
+if your app is installed. This is required for your app to receive the Dynamic Link data after it is installed
 from the Play Store. In your manifest:
-
 
 ```xml
 <activity>
+	<intent-filter>
+		<action android:name="android.intent.action.MAIN"></action>
+		<category android:name="android.intent.category.LAUNCHER"></category>
+	</intent-filter>
 	<intent-filter>
 		<action android:name="android.intent.action.VIEW"/>
 		<category android:name="android.intent.category.DEFAULT"/>
@@ -79,16 +78,20 @@ from the Play Store. In your manifest:
 </activity>
 ```
 
+:::note
+You must leave the first `intent-filter` (with the `MAIN` action) as is.
+It ensures the rest of the details in the activity get merged into the main AIR activity when the android application is created by AIR.
+:::
 
 <Tabs
-  groupId="packagemanager"
-  defaultValue="apm"
-  values={[
-    {label: 'APM', value: 'apm'},
-    {label: 'Manual', value: 'manual'},
-  ]}>
+groupId="packagemanager"
+defaultValue="apm"
+values={[
+	{label: 'APM', value: 'apm'},
+	{label: 'Manual', value: 'manual'},
+]}>
 
-  <TabItem value="apm" >
+<TabItem value="apm" >
 
 Firstly add a custom Android configuration file by running:
 
@@ -102,9 +105,13 @@ Edit the `config/android/AndroidManifest.xml` file that was generated to resembl
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
 
-    <application>
+	<application>
 
 		<activity>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category android:name="android.intent.category.LAUNCHER"></category>
+			</intent-filter>
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW"/>
 				<category android:name="android.intent.category.DEFAULT"/>
@@ -115,21 +122,19 @@ Edit the `config/android/AndroidManifest.xml` file that was generated to resembl
 			</intent-filter>
 		</activity>
 
-    </application>
+	</application>
 
 </manifest>
 ```
 
 Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
 
+</TabItem>
+<TabItem value="manual" >
 
-  </TabItem>
-  <TabItem value="manual" >
-
-
-This `activity` should be added directly after the `<application>` tag in your manifest additions. 
-(Note: This is not the main `<application>` tag in your AIR application descriptor but the one inside 
-your manifest additions!) 
+This `activity` should be added directly after the `<application>` tag in your manifest additions.
+(Note: This is not the main `<application>` tag in your AIR application descriptor but the one inside
+your manifest additions!)
 
 For example:
 
@@ -138,11 +143,15 @@ For example:
 	<manifestAdditions><![CDATA[
 		<manifest android:installLocation="auto">
 			<uses-permission android:name="android.permission.INTERNET"/>
-			
+
 			<!-- OTHER PERMISSIONS / REQUIREMENTS -->
 
 			<application>
 				<activity>
+					<intent-filter>
+						<action android:name="android.intent.action.MAIN"></action>
+						<category android:name="android.intent.category.LAUNCHER"></category>
+					</intent-filter>
 					<intent-filter>
 						<action android:name="android.intent.action.VIEW"/>
 						<category android:name="android.intent.category.DEFAULT"/>
@@ -161,21 +170,16 @@ For example:
 </android>
 ```
 
+</TabItem>
 
-  </TabItem>
-  
 </Tabs>
-
-
 
 When users open a link to the scheme and host you specify, your app will start an activity to handle the link.
 
 For more details on these fields and how to handle other types of App Links you can
 read the official Android documentation on [Handling App Links](https://developer.android.com/training/app-links/index.html)
 
-
-
-## iOS 
+## iOS
 
 Ensure that your app's App Store ID and your Apple Developer Team ID is specified in your app's settings. To view and edit your app's settings, go to your Firebase project's Settings page and select your iOS app.
 
@@ -193,10 +197,7 @@ If your app is connected, the apple-app-site-association file contains a referen
 
 If the details field is empty, double-check that you specified your Team ID.
 
-
-
 ### Developer Console
-
 
 Ensure your application identifier in the iOS developer member center has enabled "Associated Domains".
 Enabling Associated Domains allows an app to be associated with a specified domain for specified services
@@ -208,10 +209,7 @@ Select your App ID and select "Edit". You need to enable the "Associated Domains
 
 ![](images/dynamiclinks-ios-associateddomains.png)
 
->
-> Note: You will need to regenerate and download your provisioning profiles after making this change. 
->
-
+> Note: You will need to regenerate and download your provisioning profiles after making this change.
 
 ### Info Additions and Entitlements
 
@@ -230,7 +228,7 @@ the following and replacing `APP_SCHEME` with your applications custom url schem
 </array>
 ```
 
-You need to add the associated domain to your iOS Entitlements section, replacing 
+You need to add the associated domain to your iOS Entitlements section, replacing
 `APP_CODE` below with your Dynamic Links domain.
 
 ```xml
@@ -250,17 +248,15 @@ If you want to receive Dynamic Links with a fully-custom domain you will need to
 </array>
 ```
 
-
-
 <Tabs
-  groupId="packagemanager"
-  defaultValue="apm"
-  values={[
-    {label: 'APM', value: 'apm'},
-    {label: 'Manual', value: 'manual'},
-  ]}>
+groupId="packagemanager"
+defaultValue="apm"
+values={[
+	{label: 'APM', value: 'apm'},
+	{label: 'Manual', value: 'manual'},
+]}>
 
-  <TabItem value="apm" >
+<TabItem value="apm" >
 
 Firstly add a custom iOS configuration file by running:
 
@@ -311,9 +307,8 @@ Edit the `config/ios/Entitlements.xml` file that was generated to resemble the f
 
 Once you have added this configuration run the steps above to update / generate your [application descriptor](#application-descriptor).
 
-
-  </TabItem>
-  <TabItem value="manual" >
+</TabItem>
+<TabItem value="manual" >
 
 Update your info additions and entitlements sections in your application descriptor directly to resemble the following, replacing `APP_CODE` and `APP_SCHEME` as required:
 
@@ -340,7 +335,7 @@ Update your info additions and entitlements sections in your application descrip
 	]]></InfoAdditions>
 	<requestedDisplayResolution>high</requestedDisplayResolution>
 	<Entitlements><![CDATA[
-		
+
 		<key>com.apple.developer.associated-domains</key>
 		<array>
 			<string>applinks:APP_CODE.app.goo.gl</string>
@@ -350,13 +345,6 @@ Update your info additions and entitlements sections in your application descrip
 </iPhone>
 ```
 
+</TabItem>
 
-  </TabItem>
-  
 </Tabs>
-
-
-
-
-
-
