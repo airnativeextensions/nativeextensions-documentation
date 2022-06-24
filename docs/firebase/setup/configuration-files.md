@@ -5,14 +5,14 @@ sidebar_label: Configuration Files
 
 There are two ways to configure an application.
 
-- Using a packaged plist file on iOS and packaged resources (custom resources ANE) on Android;
+- Using a packaged plist file on iOS and packaged resources on Android;
 - Manual configuration passing in values at runtime.
 
 The first method is the preferred method as it ensures your application is always correctly configured.
 
 The second method will rely on a function call from your code which can be delayed and may cause some errors in background and initialisation operations particular with analytics. You may find Analytics doesn't work at all using the manual method.
 
-We highly suggest you use the first method whenever possible. It does require slightly more work on Android however it ensures your application is always running with the correct configuration. However if you are willing to sacrifice some functionality it is easier to use the manual method of initialisation.
+We highly suggest you use the first method whenever possible. It does require slightly more work however it ensures your application is always running with the correct configuration. 
 
 ## Configuration Files
 
@@ -22,8 +22,12 @@ Once you have created your project in the console you will be able to navigate t
 
 These files contain configuration details such as keys and identifiers, for the services you have enabled in your applications.
 
-Ideally you should be able to automatically configure your application using the configuration files downloaded from the Firebase console.
-However there are some slight complications that we will explain in the following sections.
+- iOS: `GoogleService-Info.plist`
+- Android: `google-services.json`
+
+Ideally you should be able to automatically configure your application using the configuration files downloaded from the Firebase console. However there are some slight complications that we will explain in the following sections.
+
+
 
 ## iOS
 
@@ -33,7 +37,6 @@ Download this file and place it in the root of your application package and ensu
 
 This is all that is required for iOS and packaging this file with your application ensures your application is using the first method mentioned above.
 
-You can also use Manual Configuration (see below) if you require.
 
 ## Android
 
@@ -41,54 +44,17 @@ For an Android project this configuration file takes the form of a json file cal
 
 When an Android developer adds this file to his application part of the build process constructs resources file `values.xml` from this `json` file and packages them in their application.
 
-As we don't have this option there are two available avenues to setup your application:
+As we don't have this option we have to manually convert this json file to the xml resources.
 
-- Creating the Android Resource
-- Manual Configuration
 
-### Android Create Resource ANE
+### Create `values.xml`
 
-The first is the preferred method using Android resources.
+We need to create the `values.xml` file from the details in the `google-services.json` file.
 
-Here we manually create the `values.xml` file from the details in the `google-services.json` file and then package this into an ANE using a custom resources build script.
-This is slightly more complex as you need to create an ANE containing your configuration resources
-however it is a simple process using the provided ant build scripts and ensures your application is correctly configured.
+To create your values file (`res/values/values.xml`) you can either:
 
-If you are wanting to use custom notification icons you are going to have to generate this ANE anyway so
-it's a good idea to use this method from the start.
-
-> **If you have any issues with this process, please send us your `values.xml` along with any custom icons and we can create the custom resources ANE for you.**
-
-1. Check out the Custom Resources script and make a copy for yourself from the [repository here](https://github.com/distriqt/ANE-CustomResources).
-
-2. You will need to make sure you have all the tools installed to run `ant`
-
-- see details in the [CustomResources tutorial](https://github.com/distriqt/ANE-CustomResources)
-
-3. Open `build_config/build.config` and perform the following changes:
-
-- Change the AIR SDK and Android SDK paths to match your environment
-- You should have something like the following:
-
-> ```
-> # AIR SDK
-> air.sdk = /Users/marchbold/work/sdks/air/current
-> # ANDROID
-> android.sdk = /Users/marchbold/work/sdks/android/android-sdk-macosx
-> ```
-
-4. Create your values file at `res/values/values.xml` [see below](#android-values-xml)
-
-5. Run `ant` in the repository directory and you will generate an ANE file in the `build` directory (the name will be based on your package name).
-   This extension contains your configuration values resource and will be automatically loaded by the Firebase extension.
-
-6. Add that ANE to your AIR application and ensure it's packaged with your Android application
-
-7. More information on the `google-services.json` format [here](https://developers.google.com/android/guides/google-services-plugin#processing_the_json_file)
-
-### Android Values XML
-
-To create your values file (`res/values/values.xml`) you can either use the conversion tool [available here](https://docs.airnativeextensions.com/firebase/tools/google-services-json-to-xml.html) or you can create it manually by copying the example below:
+- use the conversion tool [available here](https://docs.airnativeextensions.com/firebase/tools/google-services-json-to-xml.html);
+- create it manually by copying the example below;
 
 > Complete `values.xml` example:
 >
@@ -121,14 +87,34 @@ The values from your `google-services.json` file coincide with the values in you
 > | **`google_storage_bucket`**          | `project_info/storage_bucket`                                             |
 > | **`project_id`**                     | `project_info/project_id`                                                 |
 
-### Android Manual Configuration
 
-The second method is a delayed configuration method which is the same as the manual configuration in the next section however the values are read directly from the json file if you package it with your Android application.
 
-This method requires that you package the `google-services.json` at the root level of your application.
-When you call `initialiseApp()`, the extension will look for this file and if found will read the values appropriate for your application.
+
+### Package Resources
+
+Now that you have your `values.xml` you need to package it with your AIR application. 
+
+If you are using a recent version of AIR then you can specify a directory to add to the build and AIR will include the resources automatically: 
+- see details in the [Custom Resources tutorial on airsdk.dev](https://airsdk.dev/docs/tutorials/platform/android/custom-resources)
+
+
+If you are using an older version of AIR you must create an custom resources ANE and add that extension to your application:
+- see details in the [Custom Resources ANE tutorial](https://github.com/distriqt/ANE-CustomResources)
+
+:::note Location
+Whichever method you use it is important that the `values.xml` file is places at `values/values.xml` in your resources directory. 
+:::
+
+
+
+### Alternative: Loaded Configuration
+
+This method is a manual configuration method which is the same as the manual configuration in the next section however the values are read directly from the json file if you package it with your Android application.
+
+This method requires that you package the `google-services.json` at the root level of your application. When you call `initialiseApp()`, the extension will look for this file and if found will read the values appropriate for your application.
 
 See the notes on the manual configuration below as all the points there apply to this method.
+
 
 ## Manual Configuration
 
@@ -136,6 +122,8 @@ See the notes on the manual configuration below as all the points there apply to
 This method while appearing simple is not advised.
 
 Firebase has issues with some aspects of it's functionality when initialised in this manner. Particularly it seems that Analytics will fail and you will get error messages about a missing `google_app_id`. This appears to be well known and no current solution is available.
+
+As we understand this process is provided to be able to access a secondary Firebase project in an application. 
 :::
 
 If you wish you can manually setup your application.
