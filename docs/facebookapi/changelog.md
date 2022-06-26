@@ -1,3 +1,11 @@
+###### 2022.06.27 [v10.2.0]
+
+```
+feat(ios): update ios sdk v13.2.0
+feat(login,ios): correct issue with not picking up previous login session on ios (resolves #343)
+feat(share): add legacy game request dialog for legacy game implementations 
+```
+
 ###### 2022.04.05 [v10.0.1]
 
 ```
