@@ -31,9 +31,6 @@ Once complete `apm` will have created something like the following file structur
 |____ ane
 | |____ com.distriqt.facebook.Core.ane	# Facebook Core extension
 | |____ [dependencies]
-| |____ ios 
-| | |____ Frameworks
-| | | |____ [dynamic frameworks]
 |____ apm_packages						# cache directory - ignore
 |____ project.apm						# apm project file
 ```
