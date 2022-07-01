@@ -1,3 +1,9 @@
+### 2022.07.01 [v11.1.1]
+
+```
+fix(onesignal): airpackage fix for onesignal manifest missing tools namespace
+```
+
 ### 2022.06.23 [v11.1.0]
 
 ```
