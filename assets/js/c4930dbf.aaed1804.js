@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[13267],{25070:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/google-play-services","name":"google play services","count":1,"permalink":"/news/tags/google-play-services"}')}}]);
