@@ -1289,6 +1289,7 @@ module.exports = {
             "firebase/storage/download-files",
             "firebase/storage/file-metadata",
             "firebase/storage/delete-files",
+            "firebase/storage/list-files",
           ],
         },
       ],

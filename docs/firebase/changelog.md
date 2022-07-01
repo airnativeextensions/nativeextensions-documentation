@@ -1,29 +1,35 @@
-###### 2022.06.23 [v7.2.1]
+### 2022.07.01 [v7.2.2]
+
+```
+feat(docs,version): update version references + docs for storage list files functionality
+```
+
+### 2022.06.23 [v7.2.1]
 
 ```
 feat(ios): update ios sdk to v8.1.5 (#358)
 feat(storage): add ability to list items and directories (resolves #414)
 ```
 
-###### 2022.04.29 [v7.1.1]
+### 2022.04.29 [v7.1.1]
 
 ```
 fix(firestore): critical fix for issue with processing data from queries (resolves #408) 
 ```
 
-###### 2022.04.29 [v7.1.0]
+### 2022.04.29 [v7.1.0]
 
 ```
 Firestore: Changed Date object operation from being converted to a string to being converted to and from a timestamp object (resolves #408)
 ```
 
-###### 2022.03.15 [v7.0.1]
+### 2022.03.15 [v7.0.1]
 
 ```
 Correct crashlytics package dependency
 ```
 
-###### 2022.03.10 [v7.0.0]
+### 2022.03.10 [v7.0.0]
 
 ```
 Update Firebase SDK
@@ -37,20 +43,20 @@ Remote Config: Add getByteArray implementation on Android (resolves #402)
 ```
 
 
-###### 2021.11.11 [v6.0.9]
+### 2021.11.11 [v6.0.9]
 
 ```
 Update Auth Facebook example with complete apm usage
 Update Auth examples and documentation for Facebook auth provider (resolves #395)
 ```
 
-###### 2021.10.22 [v6.0.8]
+### 2021.10.22 [v6.0.8]
 
 ```
 Update builds that failed to be deployed correctly (resolves #390)
 ```
 
-###### 2021.09.17 [v6.0.8]
+### 2021.09.17 [v6.0.8]
 
 ```
 Added air package
@@ -61,28 +67,28 @@ Corrected conversion tool link (resolves #369)
 
 
 
-###### 2021.06.14 [v6.0.006]
+### 2021.06.14 [v6.0.006]
 
 ```
 Database: Resolved iOS crash with null param passed to child function (resolves #366)
 ```
 
 
-###### 2021.04.21 [v6.0.005]
+### 2021.04.21 [v6.0.005]
 
 ```
 Corrected issue with realtime database startAt query (resolves #361)
 ```
 
 
-###### 2021.01.26 [v6.0.003]
+### 2021.01.26 [v6.0.003]
 
 ```
 Corrected issue in remote config setConfigSettings on iOS (resolves #352)
 ```
 
 
-###### 2021.01.22 [v6.0.002]
+### 2021.01.22 [v6.0.002]
 
 ```
 Auth: Corrected documentation on manifest changes (resolves #350)
@@ -91,7 +97,7 @@ Analytics: Updated event and param definitions
 ```
 
 
-###### 2021.01.20 [v6.0.0]
+### 2021.01.20 [v6.0.0]
 
 ```
 Updated Firebase SDK 
@@ -100,7 +106,7 @@ Updated Firebase SDK
 ```
 
 
-###### 2020.12.18 [v5.2.046]
+### 2020.12.18 [v5.2.046]
 
 ```
 Crashlytics: iOS updated to v6.30.0 migration from Fabric to Firebase (requires AIR update to 33.1.1.345) (resolves #317)
@@ -109,28 +115,28 @@ Analytics: Automatically convert deprecated setCurrentScreen function to event (
 ```
 
 
-###### 2020.10.20 [v5.1.044]
+### 2020.10.20 [v5.1.044]
 
 ```
 Updated docs for Microsoft Auth and Crashlytics
 ```
 
 
-###### 2020.09.17 [v5.1.042]
+### 2020.09.17 [v5.1.042]
 
 ```
 Firestore: Added Blob handling (resolves #319)
 ```
 
 
-###### 2020.09.14 [v5.0.038]
+### 2020.09.14 [v5.0.038]
 
 ```
 Crashlytics: iOS rollback to fix issue with current release and AIR (resolves #317)
 ```
 
 
-###### 2020.09.01 [v5.0.036]
+### 2020.09.01 [v5.0.036]
 
 ```
 SDK update:
@@ -147,7 +153,7 @@ Firebase Crashlytics (resolves #304)
 ```
 
 
-###### 2020.06.18 [v4.2.028]
+### 2020.06.18 [v4.2.028]
 
 ```
 Auth
@@ -158,7 +164,7 @@ Analytics
 ```
 
 
-###### 2020.05.25 [v4.1.025]
+### 2020.05.25 [v4.1.025]
 
 ```
 SDK update:
@@ -166,7 +172,7 @@ SDK update:
 ```
 
 
-###### 2020.05.04 [v4.0.020]
+### 2020.05.04 [v4.0.020]
 
 ```
 Updated SDK:
@@ -176,21 +182,21 @@ Firestore: Corrected issue with multiple queries on same (or similar) collection
 ```
 
 
-###### 2020.03.30 [v4.0.015]
+### 2020.03.30 [v4.0.015]
 
 ```
 Corrected iOS build inclusion of incorrect frameworks (resolves #274)
 ```
 
 
-###### 2020.03.24 [v4.0.013]
+### 2020.03.24 [v4.0.013]
 
 ```
 Updated docs
 ```
 
 
-###### 2020.03.24 [v4.0.012]
+### 2020.03.24 [v4.0.012]
 
 ```
 Android X migration (resolves #268)
@@ -199,14 +205,14 @@ New versioning system
 ```
 
 
-###### 2020.03.12 [v3.1.016]
+### 2020.03.12 [v3.1.016]
 
 ```
 Android: Update for slow setCurrentScreen call (resolves #266)
 ```
 
 
-###### 2019.12.11 [v3.1.013]
+### 2019.12.11 [v3.1.013]
 
 ```
 Updated SDK:
@@ -217,7 +223,7 @@ Removed deprecated Crash functionality
 ```
 
 
-###### 2019.09.06 [v3.0.003]
+### 2019.09.06 [v3.0.003]
 
 ```
 Android 64bit support (resolves #220)
@@ -225,14 +231,14 @@ Updated minimum iOS version to 9.0
 ```
 
 
-###### 2019.03.11 [v2.4.078]
+### 2019.03.11 [v2.4.078]
 
 ```
 Updated minimum iOS version to 8.0 (resolves #207)
 ```
 
 
-###### 2019.03.02 [v2.4.077]
+### 2019.03.02 [v2.4.077]
 
 ```
 Clearer GPS Requirement Documentation (resolves #201)
@@ -240,28 +246,28 @@ Embedded iOS bitcode
 ```
 
 
-###### 2019.01.24 [v2.4.074]
+### 2019.01.24 [v2.4.074]
 
 ```
 Updated documentation for latest ANEs (resolves #193)
 ```
 
 
-###### 2019.01.15 [v2.4.072]
+### 2019.01.15 [v2.4.072]
 
 ```
 iOS: Performance: Resolved invalid bundle packaging issue (resolves #186)
 ```
 
 
-###### 2018.12.12 [v2.4.070]
+### 2018.12.12 [v2.4.070]
 
 ```
 Firestore: Corrected issue with queries not returning document references in snapshots (resolves #179)
 ```
 
 
-###### 2018.11.27 [v2.4.069]
+### 2018.11.27 [v2.4.069]
 
 ```
 Updated SDK:
@@ -272,7 +278,7 @@ Updated to Google Play Services v16.0.5
 ```
 
 
-###### 2018.11.18 [v2.3.065]
+### 2018.11.18 [v2.3.065]
 
 ```
 Added Firestore implementation (resolves #111)
@@ -280,14 +286,14 @@ Crashlytics: Added custom error report (resolves #167)
 ```
 
 
-###### 2018.09.01 [v2.2.060]
+### 2018.09.01 [v2.2.060]
 
 ```
 Updated documentation
 ```
 
 
-###### 2018.09.01 [v2.2.059]
+### 2018.09.01 [v2.2.059]
 
 ```
 Updated SDK:
@@ -301,7 +307,7 @@ Storage: Resolved crash when uploading to unauthorised location (resolves #160)
 ```
 
 
-###### 2018.06.01 [v2.1.055]
+### 2018.06.01 [v2.1.055]
 
 ```
 Updated SDK:
@@ -312,14 +318,14 @@ Storage : Add getDownloadUrl to storage reference
 ```
 
 
-###### 2018.04.20 [v2.0.043]
+### 2018.04.20 [v2.0.043]
 
 ```
 Database: updateChildren Android performance improvements (resolves #141)
 ```
 
 
-###### 2018.03.15 [v2.0.042]
+### 2018.03.15 [v2.0.042]
 
 ```
 Updated SDK: 
@@ -332,21 +338,21 @@ Updates:
 ```
 
 
-###### 2017.12.17 [v1.9.029]
+### 2017.12.17 [v1.9.029]
 
 ```
 Updated documentation for Facebook Auth (resolves #126)
 ```
 
 
-###### 2017.11.24 [v1.9.029]
+### 2017.11.24 [v1.9.029]
 
 ```
 Corrected Database iOS build
 ```
 
 
-###### 2017.11.24 [v1.9.027]
+### 2017.11.24 [v1.9.027]
 
 ```
 Updated SDK: Android v11.0.4 iOS v4.6.0
@@ -356,14 +362,14 @@ Updated documentation
 ```
 
 
-###### 2017.09.02 [v1.8.019]
+### 2017.09.02 [v1.8.019]
 
 ```
 Database: Added getKey functionality (resolves #100)
 ```
 
 
-###### 2017.08.04 [v1.8.017]
+### 2017.08.04 [v1.8.017]
 
 ```
 Updated SDK: Android v11.0.4 iOS v4.0.4 
@@ -372,14 +378,14 @@ RemoteConfig: Added  (resolves #87)
 ```
 
 
-###### 2017.07.14 [v1.7.029]
+### 2017.07.14 [v1.7.029]
 
 ```
 Database: Removed debug traces (resolves #86)
 ```
 
 
-###### 2017.07.10 [v1.7.027]
+### 2017.07.10 [v1.7.027]
 
 ```
 Updated SDK: Android v11.0.2 iOS v4.0.3 
@@ -389,21 +395,21 @@ Auth: Added more error information for better error handling (#84)
 ```
 
 
-###### 2017.06.27 [v1.6.019]
+### 2017.06.27 [v1.6.019]
 
 ```
 Dynamic Links implementation (resolves #4)
 ```
 
 
-###### 2017.06.19 [v1.5.003]
+### 2017.06.19 [v1.5.003]
 
 ```
 Database update to correctly handle invalid references (#61)
 ```
 
 
-###### 2017.06.16 [v1.5.001]
+### 2017.06.16 [v1.5.001]
 
 ```
 Updated SDK: iOS v4.0.2 
@@ -412,7 +418,7 @@ Fixed issue with incorrectly loading config files (#67)
 
 
 
-###### 2017.06.10 [v1.4.005]
+### 2017.06.10 [v1.4.005]
 
 ```
 RemoteConfig implementation (resolves #6)
@@ -421,56 +427,56 @@ Correct operation for '.info' properties (resolves #64)
 ```
 
 
-###### 2017.05.31 [v1.3.0]
+### 2017.05.31 [v1.3.0]
 
 ```
 Updated SDK: Android v10.2.6, iOS v4.0.0 (#30, #45, #57)
 ```
 
 
-###### 2017.05.17 [v1.2.011]
+### 2017.05.17 [v1.2.011]
 
 ```
 Database: Added onDisconnect functionality (resolves #55)
 ```
 
 
-###### 2017.03.23 [v1.1.011]
+### 2017.03.23 [v1.1.011]
 
 ```
 Minor framework updates
 ```
 
 
-###### 2017.03.23 [v1.1.011]
+### 2017.03.23 [v1.1.011]
 
 ```
 Analytics: Added additional functionality (resolves #52)
 ```
 
 
-###### 2017.03.15 [v1.1.009]
+### 2017.03.15 [v1.1.009]
 
 ```
 Database: Added once functionality (resolves #47)
 ```
 
 
-###### 2017.03.06 [v1.1.007]
+### 2017.03.06 [v1.1.007]
 
 ```
 Corrected release error (#39)
 ```
 
 
-###### 2017.03.06 [v1.1.007]
+### 2017.03.06 [v1.1.007]
 
 ```
 Database: Added ServerValue TIMESTAMP (resolves #34)
 ```
 
 
-###### 2017.03.06 [v1.1.003]
+### 2017.03.06 [v1.1.003]
 
 ```
 Implemented core default lib (resolves #39)
@@ -480,21 +486,21 @@ Updated config script (resolves #28)
 ```
 
 
-###### 2017.03.02 [v1.1.003]
+### 2017.03.02 [v1.1.003]
 
 ```
 Corrected build removing duplicate libraries (resolves #38)
 ```
 
 
-###### 2017.03.01 [v1.1.002]
+### 2017.03.01 [v1.1.002]
 
 ```
 Android Update for Google Play Services and Firebase v10.2.0
 ```
 
 
-###### 2017.02.28 [v1.1.0]
+### 2017.02.28 [v1.1.0]
 
 ```
 Storage: iOS implementation (resolves #18)
@@ -502,7 +508,7 @@ Auth: Changed photoUri reference to photoUrl for consistency (resolves #32)
 ```
 
 
-###### 2017.02.28 [v1.1.0]
+### 2017.02.28 [v1.1.0]
 
 ```
 Storage: iOS implementation (resolves #18)
@@ -510,14 +516,14 @@ Auth: Changed photoUri reference to photoUrl for consistency (resolves #32)
 ```
 
 
-###### 2017.02.20 [v1.0.0]
+### 2017.02.20 [v1.0.0]
 
 ```
 Updated documentation
 ```
 
 
-###### 2017.02.20 [v1.0.0]
+### 2017.02.20 [v1.0.0]
 
 ```
 Updated iOS SDK to v3.13 which now gives analytics on iOS (resolves #27)
@@ -525,42 +531,42 @@ Implementation of Crash Reporting v1.0 (resolves #26)
 ```
 
 
-###### 2017.02.09 [v1.0.0]
+### 2017.02.09 [v1.0.0]
 
 ```
 Updating documentation
 ```
 
 
-###### 2017.02.09 [v1.0.0]
+### 2017.02.09 [v1.0.0]
 
 ```
 Android Implementation of Storage (#18)
 ```
 
 
-###### 2017.02.03 [v1.0.0]
+### 2017.02.03 [v1.0.0]
 
 ```
 Realtime Databases complete implementation (resolves #1)
 ```
 
 
-###### 2017.01.30 [v..]
+### 2017.01.30 [v..]
 
 ```
 Realtime Databases for Android release + update to v10.0.1
 ```
 
 
-###### 2016.11.22 [v..]
+### 2016.11.22 [v..]
 
 ```
 Added Firebase Auth
 ```
 
 
-###### 2016.10.28 [v..]
+### 2016.10.28 [v..]
 
 ```
 Initial release
