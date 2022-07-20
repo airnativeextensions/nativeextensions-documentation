@@ -1,3 +1,9 @@
+### 2022.07.20 [v13.7.1]
+
+```
+fix(build): build with AIR 33.1.1.856 due to issue with SWC generation in 889 (resolves #409)
+```
+
 ### 2022.06.24 [v13.7.0]
 
 ```
