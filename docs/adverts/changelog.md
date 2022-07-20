@@ -1,3 +1,9 @@
+### 2022.07.20 [v13.7.2]
+
+```
+fix(airpackage): correct airpackage assets overlap between admob and huawei implementations
+```
+
 ### 2022.07.20 [v13.7.1]
 
 ```
