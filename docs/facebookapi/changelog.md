@@ -1,3 +1,15 @@
+###### 2022.07.18 [v10.2.1]
+
+```
+feat(all): add ios simulator implementation and required dynamic frameworks to packages (resolves #352)
+```
+
+###### 2022.07.18 [v10.2.1]
+
+```
+feat(all): add ios simulator implementation and required dynamic frameworks to packages (resolves #352)
+```
+
 ###### 2022.06.27 [v10.2.0]
 
 ```
