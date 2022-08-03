@@ -1,3 +1,9 @@
+### 2022.08.03 [v7.2.3]
+
+```
+fix(build): rebuild with AIR 33.1.1.856 due to swc build issue in 889 (resolves #421)
+```
+
 ### 2022.07.01 [v7.2.2]
 
 ```
