@@ -2,12 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2022-06-30T00:00:00.000Z</updated>
+    <updated>2022-07-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2022 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[July 2022]]></title>
+        <id>2022-07</id>
+        <link href="https://docs.airnativeextensions.com/news/2022-07"/>
+        <updated>2022-07-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Extension Updates]]></summary>
+        <content type="html"><![CDATA[<blockquote><p>SWC Build issues, InApp Billing changes, iOS Simulator</p></blockquote><p>There is a lot of work in progress at the moment with some major changes coming up later this year, particularly for Android and the Google Play store. </p><p><img src="/assets/images/adobeair-560b5a615cfc3f0c5f01ecbedd2aaca8.png" width="700" height="333"></p><h3 class="anchor anchorWithStickyNavbar_mojV" id="swc-compilation">SWC Compilation<a class="hash-link" href="#swc-compilation" title="Direct link to heading">​</a></h3><p>AIR 33.1.1.889 was released with some changes to the way SWC's are packaged and this affected our ANEs. Several of our updates went out with this version and caused issues in certain circumstances with errors such as circular references or duplicate definitions. </p><p>We found that SWC's that relied on other SWC's also had runtime errors such as "ABC data is corrupt, attempt to read out of bounds".</p><p>We have updated the extensions we believe were affected but if you find any issues like this with any of our ANEs please let us know as we likely will need to rebuild them with a different AIR SDK.  </p><hr><p><img src="/assets/images/inappbilling-e07bc439ce3ba1b7ee8ff46a69b36350.png" width="700" height="350"></p><h3 class="anchor anchorWithStickyNavbar_mojV" id="inappbilling"><a href="https://airnativeextensions.com/extension/com.distriqt.InAppBilling" target="_blank" rel="noopener noreferrer">InAppBilling</a><a class="hash-link" href="#inappbilling" title="Direct link to heading">​</a></h3><div class="admonition admonition-info alert alert--info"><div class="admonition-heading"><h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</h5></div><div class="admonition-content"><p><strong>Reminder:</strong> Starting on August 2, 2022, all new apps must use Billing Library version 4 or newer. By November 1, 2022, all updates to existing apps must use Billing Library version 4 or newer. <a href="https://developer.android.com/google/play/billing/deprecation-faq" target="_blank" rel="noopener noreferrer">Learn more.</a></p></div></div><p>Currently our extension uses version 3 of the billing library and we are in progress of a major update to bring it to the latest version 5 (released in May). This is requiring some restructuring of the calls (particularly as some of the previously synchronous calls are now asynchronous) which we are endeavouring to manage internally to the extension however we may have to introduce some API changes here. </p><p>We are hoping to have this ready for developers by the end of August, well before the November deadline for all applications.</p><hr><p><img src="/assets/images/airpackagemanager-765f6711e71d9c6e836ef114e816207f.png" width="700" height="333"></p><h3 class="anchor anchorWithStickyNavbar_mojV" id="air-package-manager"><a href="https://github.com/airsdk/apm" target="_blank" rel="noopener noreferrer">AIR Package Manager</a><a class="hash-link" href="#air-package-manager" title="Direct link to heading">​</a></h3><p>We are working through further development on the <code>apm</code> tool at the moment, mainly around cleaning up some of the processes. If you have been using the tool and have any suggestions as to improvements we would love to hear from you on the <a href="https://github.com/airsdk/apm/discussions" target="_blank" rel="noopener noreferrer">discussion forum</a>.</p><hr><p><img src="/assets/images/ios-7c93a988d34981fc16055cd9d0c6a57f.png" width="800" height="400"></p><h3 class="anchor anchorWithStickyNavbar_mojV" id="ios-simulator">iOS Simulator<a class="hash-link" href="#ios-simulator" title="Direct link to heading">​</a></h3><p>We have recently let the iOS simulator implementations of some of our extensions slip and this month we have updated all our build processes to ensure the iOS simulator builds are kept inline with the main build. </p><p>Previously this was difficult when dynamic frameworks were involved but we have devised a new system to handle these and correctly include them in both the repository and the airpackage's for all our extensions.</p><p>These updates will roll out with the next release of our extensions, starting with the Facebook extensions in July. If there are any that you are concerned about let us know and we will get them updated immediately. </p><hr><p>As always, if you have any native development needs for AIR, Unity, Flutter or Haxe, please feel free to contact us at <a href="mailto:airnativeextensions@distriqt.com" target="_blank" rel="noopener noreferrer">airnativeextensions@distriqt.com</a>.</p>]]></content>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
+        <category label="newsletter" term="newsletter"/>
+        <category label="ios-simulator" term="ios-simulator"/>
+        <category label="inappbilling" term="inappbilling"/>
+        <category label="google-play-billing" term="google-play-billing"/>
+        <category label="swc" term="swc"/>
+        <category label="apm" term="apm"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[June 2022]]></title>
         <id>2022-06</id>
