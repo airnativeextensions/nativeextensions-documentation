@@ -874,12 +874,14 @@ module.exports = {
     {
       "Get Started": [
         "dynamicicon/add-the-extension",
-        "dynamicicon/adding-icons",
-        "dynamicicon/packaging",
       ],
     },
     {
-      Usage: ["dynamicicon/change-icon"],
+      Usage: [
+        "dynamicicon/adding-icons",
+        "dynamicicon/change-icon",
+        "dynamicicon/packaging",
+      ],
     },
     {
       Other: [

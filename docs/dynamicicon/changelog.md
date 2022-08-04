@@ -1,3 +1,10 @@
+### 2022.08.04 [v1.0.29]
+
+```
+feat(docs,build): updated docs to use asset catalogue with xcode 13 tools
+feat(docs): deprecated wiki
+```
+
 ### 2022.02.05 [v1.0.28]
 
 ```
