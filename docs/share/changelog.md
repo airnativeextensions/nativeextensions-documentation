@@ -1,3 +1,10 @@
+### 2022.08.08 [v7.2.0]
+
+```
+fix(ios): fix issue with new page style views dismissal not being detected
+feat(android): add ability to clear cached files (resolves #196)
+```
+
 ### 2022.04.13 [v7.1.3]
 
 ```
