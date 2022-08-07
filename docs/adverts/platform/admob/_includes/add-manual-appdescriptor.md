@@ -46,7 +46,9 @@ Also we suggest you enable hardware acceleration so videos are displayed correct
 	<!-- Include required permissions for Google Mobile Ads to run -->
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
- 	<uses-permission android:name="com.google.android.gms.permission.AD_ID" /> <!-- Android package visibility setting -->
+ 	<uses-permission android:name="com.google.android.gms.permission.AD_ID" /> 
+	
+	<!-- Android package visibility setting -->
 	<queries>
 		<!-- For browser content -->
 		<intent>

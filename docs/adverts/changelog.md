@@ -1,3 +1,10 @@
+### 2022.08.08 [v13.7.3]
+
+```
+feat(docs): add documentation on removing AD_ID permission using apm (resolves #407)
+fix(android,admob): correct issue with not handling nativead error dispatch (resolves #413)
+```
+
 ### 2022.07.20 [v13.7.2]
 
 ```
