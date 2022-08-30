@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[19679],{76440:function(n){n.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/inappbilling","name":"inappbilling","count":2,"permalink":"/news/tags/inappbilling"}')}}]);

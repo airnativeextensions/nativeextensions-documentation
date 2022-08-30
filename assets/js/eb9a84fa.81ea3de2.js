@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[22771],{26660:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/google-play-billing","name":"google-play-billing","count":1,"permalink":"/news/tags/google-play-billing"}')}}]);

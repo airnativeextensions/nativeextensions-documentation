@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[95829],{65660:function(n){n.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/dynamicicon","name":"dynamicicon","count":1,"permalink":"/news/tags/dynamicicon"}')}}]);
