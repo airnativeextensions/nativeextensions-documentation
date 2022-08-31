@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[89800],{32736:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/admob","name":"admob","count":2,"permalink":"/news/tags/admob"}')}}]);

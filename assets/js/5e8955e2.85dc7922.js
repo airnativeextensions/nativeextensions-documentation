@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[16080],{83689:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/firebase","name":"firebase","count":3,"permalink":"/news/tags/firebase"}')}}]);

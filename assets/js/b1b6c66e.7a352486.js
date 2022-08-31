@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[70270],{28386:function(s){s.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/samsung","name":"samsung","count":1,"permalink":"/news/tags/samsung"}')}}]);

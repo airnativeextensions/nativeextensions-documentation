@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[24813],{62241:function(e){e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/gameservices","name":"gameservices","count":2,"permalink":"/news/tags/gameservices"}')}}]);

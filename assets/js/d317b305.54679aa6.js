@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[27015],{57338:function(s){s.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/ios-simulator","name":"ios-simulator","count":1,"permalink":"/news/tags/ios-simulator"}')}}]);

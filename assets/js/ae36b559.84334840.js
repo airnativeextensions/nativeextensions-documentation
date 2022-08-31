@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[19879],{51365:function(s){s.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"/news/tags/swc","name":"swc","count":1,"permalink":"/news/tags/swc"}')}}]);
