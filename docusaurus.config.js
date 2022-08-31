@@ -21,10 +21,10 @@ module.exports = {
     image: "img/ane-icon-black.png",
     colorMode: {
       disableSwitch: false,
-      switchConfig: {
-        darkIcon: " ",
-        lightIcon: " ",
-      },
+      // switchConfig: {
+      //   darkIcon: " ",
+      //   lightIcon: " ",
+      // },
     },
 
     prism: {
