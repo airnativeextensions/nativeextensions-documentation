@@ -5,7 +5,7 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-    <extensionID>com.distriqt.BluetoothLE</extensionID>
+    <extensionID>com.distriqt.CameraUI</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>androidx.core</extensionID>
 </extensions>
