@@ -1,0 +1,100 @@
+---
+title: Set Permissions
+sidebar_label: Set Permissions
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+You must inform the extension which permissions you wish to request.
+This is done by passing an array of `String`s each being the permission required.
+
+For example to set the camera permission:
+
+```actionscript
+Permissions.service.setPermissions( 
+    [ 
+        "android.permission.CAMERA" 
+    ] 
+);
+```
+
+A complete list of the possible permissions is found [here](https://developer.android.com/reference/android/Manifest.permission).
+
+
+## Adding Permissions 
+
+In addition to informing the extension of the permissions you must add these permissions to your application's manifest.
+
+Permissions are represented with a tag like the following:
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+```
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+To add these permissions you need to add some additional configuration to apm. 
+Firstly add a custom Android configuration file by running:
+
+```
+apm generate config android
+```
+
+Edit the `config/android/AndroidManifest.xml` file that was generated to resemble the following, adding the required permissions, eg:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+	<uses-permission android:name="android.permission.CAMERA" />
+
+</manifest>
+```
+
+You can add any other additions you require in your application here and these will be merged by `apm` when you generate your application descriptor.
+
+:::info
+Make sure you regenerate your application descriptor after modifying this file. See the section in [add the extension](add-the-extension.mdx#application-descriptor) for details.
+:::
+
+  </TabItem>
+  <TabItem value="manual" >
+
+To manually add permissions to your application, you will need to edit the manifest additions node in your application descriptor. 
+For example, to add the camera permission:
+
+
+```xml
+<android>
+  <manifestAdditions><![CDATA[
+    <manifest android:installLocation="auto">
+
+      <!-- PERMISSIONS -->
+      <uses-permission android:name="android.permission.CAMERA" />
+
+
+      <!-- OTHER MANIFEST ADDITIONS -->
+
+
+    </manifest>
+  ]]></manifestAdditions>
+</android>
+```
+
+
+  </TabItem>
+  
+</Tabs>
+
+
+

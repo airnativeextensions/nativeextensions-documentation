@@ -12,16 +12,12 @@ The following should be added to your `extensions` node in your application desc
 ```
 
 
-
 ### Android
 
 #### Manifest Additions
 
 Making authorisation requests requires the some additions to the manifest, in
 particular you need to add the `activity` in the listing below.
-
-Additionally you will need to add your application permissions as normal.
-**Using this ANE does not eliminate the need to define your permissions in the manifest!**
 
 ```xml
 <manifest android:installLocation="auto">
@@ -42,4 +38,9 @@ Additionally you will need to add your application permissions as normal.
 </manifest>
 ```
 
-A complete list of the possible permissions is found [here](https://developer.android.com/reference/android/Manifest.permission).
+Additionally you will need to add your application permissions as normal.
+**Using this ANE does not eliminate the need to define your permissions in the manifest!** 
+See the documentation on "set permissions" for more details.
+
+
+
