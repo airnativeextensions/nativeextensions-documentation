@@ -4,6 +4,12 @@
 feat(android): add permissions for managing all files on a storage device (resolves #22)
 ```
 
+### 2022.09.01 [v3.3.0]
+
+```
+feat(android): add permissions for managing all files on a storage device (resolves #22)
+```
+
 ### 2022.02.11 [v3.2.2]
 
 ```
