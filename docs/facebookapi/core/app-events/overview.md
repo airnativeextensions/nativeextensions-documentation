@@ -60,3 +60,22 @@ See the documentation for [Facebook Analytics for Apps](https://developers.faceb
 
 ![](images/appevents-dashboard.png)
 
+
+
+## iOS App Tracking Transparency
+
+With iOS 14+ you now need to request authorisation to track users. This applies directly to app events and you won't be able to receive them on iOS without having gained this authorisation. 
+
+To do so, add the [`com.distriqt.IDFA`](https://airnativeextensions.com/extension/com.distriqt.IDFA) extension to your application (it's a free extension). Then request authorisation and inform Facebook as below :
+
+
+```actionscript
+IDFA.service.requestAuthorisation( function( authorisationStatus:String ):void 
+{
+	Facebook.instance.setAdvertiserTrackingEnabled(
+			authorisationStatus == TrackingAuthorisationStatus.AUTHORISED
+	);
+});
+```
+
+More information on this [here](https://docs.airnativeextensions.com/docs/idfa/get-advertising-identifier#requesting-authorisation).
