@@ -1,3 +1,9 @@
+### 2022.09.05 [v6.10.0]
+
+```
+feat(display): add ability to retrieve bounding rectangle dimensions for screen cutouts/notches (resolves #241) 
+```
+
 ### 2022.06.23 [v6.9.2]
 
 ```

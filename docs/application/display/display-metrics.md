@@ -1,6 +1,6 @@
 ---
-title: Display - Display Metrics
-sidebar_label: Display - Display Metrics
+title: Display Metrics
+sidebar_label: Display Metrics
 ---
 
 This allows you to get information about the display on the current device.

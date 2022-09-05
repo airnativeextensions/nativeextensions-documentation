@@ -1,6 +1,6 @@
 ---
-title: Display - Dark Mode
-sidebar_label: Display - Dark Mode
+title: Dark Mode
+sidebar_label: Dark Mode
 ---
 
 ## User Interface Style - Dark Mode 

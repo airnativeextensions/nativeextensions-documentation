@@ -184,22 +184,9 @@ Ensure you place this within the `application` tag eg:
 ```
 
 
-
-
-
-
-
-
-
-
->
-> If you encounter this on iOS then most likely you are missing a "Default.png" matching the resolution of the device.
->
-
-
-
-
-
+:::info iOS
+If you encounter this on iOS then most likely you are missing the launch storyboard or a "Default.png" matching the resolution of the device.
+:::
 
 
 ---
