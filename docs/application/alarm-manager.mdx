@@ -3,6 +3,8 @@ title: Alarm Manager
 sidebar_label: Alarm Manager
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
 The Alarm Manager functionality allows you to use the Android Alarm manager to set your application to receive events
 at a particular time. It also allows you to launch your application into the foreground if you require. 
@@ -101,6 +103,11 @@ Application.service.alarmManager.setAlarm(
 );
 ```
 
+:::note
+`setAlarm` may return `false` if some of the parameters in the alarm are not supported on the current device.
+This is particularly relevant for exact alarms on Android 12+
+::: 
+
 
 ## Cancelling an Alarm
 
@@ -147,5 +154,97 @@ To cancel all previously set alarms, simply call the `cancelAllAlarms` function.
 ```actionscript
 Application.service.alarmManager.cancelAllAlarms();
 ```
+
+
+
+## Exact Alarms
+
+The system invokes an exact alarm at a precise moment in the future. 
+Using exact alarms will affect the performance and battery life of the device so you are suggested to use them only if necessary. 
+
+To set an exact alarm, call `setExact( true )` on your `AlarmBuilder`:
+
+```actionscript
+Application.service.alarmManager.cancelAlarm(
+	new AlarmBuilder()
+		.setTime( timestamp )
+		.setExact( true )
+		.build()
+);
+```
+
+### Exact Alarm Permissions
+
+If your app targets Android 12 (API level 31) or higher, you must declare one of the "Alarms & reminders" permissions; otherwise, a SecurityException occurs and your alarm will not be registered.
+
+To do so, declare the `SCHEDULE_EXACT_ALARM` permission in your manifest additions, as shown in the following code snippet:
+
+```xml
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+```
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+To add these permissions you need to add some additional configuration to apm. 
+Firstly add a custom Android configuration file by running:
+
+```
+apm generate config android
+```
+
+Edit the `config/android/AndroidManifest.xml` file that was generated to resemble the following, adding the required permissions, eg:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+	<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+</manifest>
+```
+
+You can add any other additions you require in your application here and these will be merged by `apm` when you generate your application descriptor.
+
+:::info
+Make sure you regenerate your application descriptor after modifying this file. See the section in [add the extension](add-the-extension.mdx#application-descriptor) for details.
+:::
+
+
+  </TabItem>
+  <TabItem value="manual" >
+
+To manually add permissions to your application, you will need to edit the manifest additions node in your application descriptor. 
+For example:
+
+
+```xml
+<android>
+  <manifestAdditions><![CDATA[
+    <manifest android:installLocation="auto">
+
+      <!-- PERMISSIONS -->
+      <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+
+
+      <!-- OTHER MANIFEST ADDITIONS -->
+
+
+    </manifest>
+  ]]></manifestAdditions>
+</android>
+```
+
+
+  </TabItem>
+  
+</Tabs>
 
 

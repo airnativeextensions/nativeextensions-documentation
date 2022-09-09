@@ -1,3 +1,9 @@
+### 2022.09.09 [v6.11.0]
+
+```
+fix(alarms): Android 12+ alarms require additional permissions, this adds checks for the permission and error event if missing (resolves #255)
+```
+
 ### 2022.09.05 [v6.10.0]
 
 ```
