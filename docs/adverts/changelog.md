@@ -1,3 +1,9 @@
+### 2022.09.16 [v13.7.4]
+
+```
+feat(rewarded): add information on the reward to the LOADED event for rewarded video/interstitial ads (resolves #421)
+```
+
 ### 2022.08.08 [v13.7.3]
 
 ```
