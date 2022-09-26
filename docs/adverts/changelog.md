@@ -1,3 +1,10 @@
+### 2022.09.26 [v13.7.5]
+
+```
+ fix(android,nativeads,admob): resolve issue with native ads set to not visible reappearing after main activity resume (resolves #424)
+ fix(docs): remove unnecessary permissions
+```
+
 ### 2022.09.16 [v13.7.4]
 
 ```
