@@ -2104,6 +2104,36 @@ module.exports = {
     },
   ],
 
+  nativetext: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "nativetext/index" },
+    {
+      "Get Started": [
+        "nativetext/add-the-extension",
+      ],
+    },
+    {
+      Usage: [
+        "nativetext/keyboard-input",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "nativetext/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/nativetext/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-NativeText/issues/new",
+        },
+      ],
+    },
+  ],
+
   nativewebview: [
     { type: "ref", id: "index" },
     { type: "doc", id: "nativewebview/index" },
