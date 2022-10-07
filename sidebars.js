@@ -1784,7 +1784,10 @@ module.exports = {
       "In-App Updates": ["inappbilling/in-app-updates"],
     },
     {
-      Help: ["inappbilling/migration"],
+      Help: [
+        "inappbilling/migration-v14",
+        "inappbilling/migration"
+      ],
     },
     {
       Advanced: ["inappbilling/user-data"],

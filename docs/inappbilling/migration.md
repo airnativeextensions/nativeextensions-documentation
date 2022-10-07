@@ -1,6 +1,6 @@
 ---
-title: Migration
-sidebar_label: Migration
+title: Migration (v12 and below)
+sidebar_label: Migration (v12 and below)
 ---
 
 ## Version 12.0

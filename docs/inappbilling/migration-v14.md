@@ -1,6 +1,6 @@
 ---
-title: Migration
-sidebar_label: Migration
+title: Migration v14
+sidebar_label: Migration v14
 ---
 
 ## Version 14.0
