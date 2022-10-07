@@ -102,17 +102,19 @@ Set `fullScreen` in your app descriptor to be `false` and use the [Application](
 To summarise, have the following in your application descriptor:
 
 ```xml
-  <initialWindow>
+<initialWindow>
     <fullScreen>false</fullScreen>
     <softKeyboardBehavior>none</softKeyboardBehavior>
-  </initialWindow>
+</initialWindow>
 ```
 
-Set your display mode using the Application extension: 
+Set your display mode using the Application extension, for example: 
 
 
 ```actionscript
-Application.service.display.setDisplayMode( DisplayMode.FULLSCREEN );
+Application.service.display.setDisplayMode( 
+    DisplayMode.FULLSCREEN
+);
 ```
 
 
