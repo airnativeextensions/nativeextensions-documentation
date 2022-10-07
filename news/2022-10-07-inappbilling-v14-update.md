@@ -3,8 +3,10 @@ title: InAppBilling v14
 description: Update Play Billing SDK to v5.0.0
 image: images/playbilling.png
 authors: [ marchbold ]
-tags: [ airsdk, gdpr, ane, advertising ]
+tags: [ airsdk, inappbilling, playbilling ]
 ---
+
+![](images/playbilling.png)
 
 Many of you will have received the following notice from Google over the previous months:
 
