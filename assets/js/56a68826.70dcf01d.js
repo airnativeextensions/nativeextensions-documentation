@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[76556],{74703:function(e){e.exports=JSON.parse('{"label":"gdpr","permalink":"/news/tags/gdpr","allTagsPath":"/news/tags","count":1}')}}]);
