@@ -37,10 +37,9 @@ function consumePurchase_failedHandler( event:InAppBillingEvent ):void
 }
 ```
 
->
-> Note: You must have completed the purchase by calling `finishPurchase()` before
-> attempting to consume a purchase.
->
+:::info Note
+You must have completed the purchase by calling `finishPurchase()` before attempting to consume a purchase.
+:::
 
 
 

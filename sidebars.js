@@ -1734,7 +1734,7 @@ module.exports = {
         {
           "Google Play Billing": [
             "inappbilling/add-the-extension",
-            "inappbilling/google/google-play-inapp-billing",
+            "inappbilling/google/google-play-inapp-billing"
           ],
         },
         {
@@ -1747,8 +1747,8 @@ module.exports = {
         {
           "Huawei AppGallery": [
             "inappbilling/huawei/add-the-extension",
-            "inappbilling/huawei/huawei-appgallery",
-            "inappbilling/huawei/testing",
+            "inappbilling/huawei/huawei-appgallery", 
+            "inappbilling/huawei/testing"
           ],
         },
         {
@@ -1775,10 +1775,7 @@ module.exports = {
         "inappbilling/change-a-purchase",
         "inappbilling/promotions",
         {
-          "Subscription Discounts and Offers": [
-            "inappbilling/discounts",
-            "inappbilling/introductory-prices",
-          ],
+          "Subscription Offers": ["inappbilling/subscription-offers", "inappbilling/introductory-prices"],
         },
         "inappbilling/testing",
       ],
@@ -1808,6 +1805,7 @@ module.exports = {
       ],
     },
   ],
+  
 
   ironsource: [
     { type: "ref", id: "index" },

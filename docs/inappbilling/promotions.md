@@ -62,9 +62,9 @@ You can hold onto the `event.request` property and call the `shouldAddPurchase()
 
 For example, you may need to defer a transaction if the user is in the middle of onboarding, and continue it after onboarding is completed.
 
->
-> This delay will not work across application restarts or disposal of the extension.
->
+:::warning Warning
+This delay will not work across application restarts or disposal of the extension.
+:::
 
 
 
@@ -248,6 +248,22 @@ function getStoreOrder_errorHandler( event:PromotionsEvent ):void
 ```
 
 
+<img align="right" src="images/ios_showCodeRedemptionDialog.jpg" />
+
+## Offer Codes
+
+Offer codes can help you acquire, retain, and win back subscribers by providing a subscription at a discount or for free for a limited time. 
+
+You'll distribute offer codes using your channels, such as email or offline marketing campaigns. Consider which channels might be most effective at reaching your intended customers and be sure to mention eligibility or availability limits.
+
+You can provide a place in your application to redeem offer codes by presenting the offer code redemption dialog via the following:
+
+```actionscript
+var success:Boolean = 
+  InAppBilling.service.promotions.showCodeRedemptionDialog();
+```
+
+The value of `success` will be `true` if the redemption dialog is presented or `false` if the current platform / version doesn't support offer codes, eg iOS < 14.
 
 
 ## Imports

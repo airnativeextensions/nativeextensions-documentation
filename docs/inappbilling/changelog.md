@@ -1,3 +1,19 @@
+### 2022.10.07 [v14.0.0]
+
+```
+Google Play Billing update
+- v5.0.0
+
+feat(playbilling): update play billing sdk to v5.0.0 (resolves #482)
+feat(subscriptionoffers): introduce subscription offers across all services replacing product discounts
+feat(getpurchases): play billing purchases should be more accurately retrieved from the store
+feat(productdiscounts): product discounts have been removed 
+feat(ios): add ability to show offer code redemption dialog (resolves #464)
+feat(product): add some fallbacks for product priceString
+feat(ios): skoverlay integration
+feat(ios,productoverlay): add event callbacks for product overlay lifecycle
+```
+
 ### 2022.05.20 [v13.2.4]
 
 ```

@@ -79,12 +79,11 @@ For example, if the `numberOfUnits` was `2` and the `unit` was  `SubscriptionPer
 
 
 
-## Discounts
+## Subscription Offers
 
-A `Product` may contain information about available discounts for the subscription.
+A `Product` that represents a subscription will contain information about available offers for the subscription. 
 
-See the section on "Introductory Prices" and "Discounts" for more information.
-
+See the section on [Subscription Offers](subscription-offers.md) and [Introductory Prices](introductory-prices.md) for more information.
 
 
 

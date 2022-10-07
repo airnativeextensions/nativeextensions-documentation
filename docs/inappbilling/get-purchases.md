@@ -3,18 +3,13 @@ title: Get Purchases
 sidebar_label: Get Purchases
 ---
 
-On services where you can directly query the service for user purchases you can call the `getPurchases` 
-function to retrieve them directly from the service.
+On services where you can directly query the service for user purchases you can call the `getPurchases()` function to retrieve them directly from the service.
 
->
-> This is not supported on services like Apple's InAppPurchases where the only method of retrieving 
-> purchases is through a user initiated restore purchases process. See [Restore Purchases](restore-purchases.md)
-> for more on this.
->
-> Except in the situation where you are using the application receipt variant of the ANE. In that variant on iOS
-> this functionality will extract all the purchase information from the application receipt by decoding the receipt
-> locally on the device. 
->
+:::info
+This is not supported on services like Apple's InAppPurchases where the only method of retrieving purchases is through a user initiated restore purchases process or via a server. See [Restore Purchases](restore-purchases.md) for more on user initiated purchases restoring.
+
+There is an exception to this, in the situation where you are using the application receipt variant of the extension. In that variant this functionality will extract all the purchase information from the "application receipt" by decoding the receipt locally on the device. 
+:::
 
 
 To query the purchases, simply call `getPurchases` and wait for one of the following events:
@@ -70,3 +65,17 @@ if (purchase.transactionState == Purchase.STATE_PURCHASED)
 	//  Deliver product to user
 }
 ```
+
+
+
+### Application Receipt Variant
+
+A small note for the iOS application receipt variant. This variant uses the "application receipt" which is encoded data provided by the App Store for your application. There are certain circumstances where it may be out-of-date or not available, eg initial install on the iOS simulator.
+
+When it is not available get purchases will fail. 
+
+It will be updated any time you interact with the App Store, eg via making a purchase or restoring purchases, or you can manually refresh it using the `InAppBilling.service.applicationReceipt.refresh()` method. 
+
+If you wish you can manually decode the receipt for more information. Access it via `InAppBilling.service.applicationReceipt.getAppReceipt()`. 
+
+> Decoding this receipt is beyond the scope of our support.

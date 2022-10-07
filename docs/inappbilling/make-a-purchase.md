@@ -14,14 +14,6 @@ This will initiate the purchase flow, most likely leaving your application and t
 
 As the state of the purchase transaction changes you will be notified through the `PurchaseEvent.PURCHASES_UPDATED` event.
 
->
-> Note: We have deprecated all of the old `PurchaseEvent`'s such as `PURCHASE_SUCCESS` in favour 
-> of a processing queue through the `PURCHASES_UPDATED` event.
->
-> If you use any of the old events they will still work in the near future however we 
-> suggest you migrate to the `PURCHASES_UPDATED` event to better handle purchase transaction states.
->
-
 
 ```actionscript
 InAppBilling.service.addEventListener( PurchaseEvent.PURCHASES_UPDATED, purchases_updatedHandler );
@@ -33,6 +25,11 @@ request.quantity = 1;
 
 var success:Boolean = InAppBilling.service.makePurchase( request );
 ```
+
+:::note Subscriptions
+If you are purchasing a subscription you must provide an offer as part of the `PurchaseRequest`. 
+See [Subscription Offers](subscription-offers.md) for more information.
+:::
 
 
 It is also important that you listen for the `PURCHASE_FAILED` event. This will be dispatched 

@@ -4,16 +4,19 @@ sidebar_label: Restore Purchases
 ---
 
 Restoring purchases is a process that you should allow for user's who have either changed devices 
-or reinstalled your application and hence need to gain access to their purchases again.
+or reinstalled your application and hence need to gain access to their purchases again. It should not be an automatic process but one done through user interaction. 
 
-This process must require user interaction in order to pass the App Store review process. 
-You should provide a button somewhere in your application to initiate this process.
+:::caution App Store Review
+**This process must be available to your users and must initiated by user interaction in order to pass App Store review.**
+
+To satisfy this requirement, you must provide a button somewhere in your application to initiate this restore process. Generally somewhere like your application settings is an appropriate place to have a restore purchases functionality.
 
 For more information on the concepts you can read the Apple documentation [here](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Chapters/Restoring.html).
+:::
 
+For retrieving purchases without user interaction see the [Get Purchases](get-purchases.md) functionality.
 
-The restoring purchases process starts by calling the `restorePurchases` function and concludes with either 
-a success (`InAppBillingEvent.RESTORE_PURCHASES_SUCCESS`) or failure (`InAppBillingEvent.RESTORE_PURCHASES_FAILED`) event. 
+The restoring purchases process starts by calling the `restorePurchases` function and concludes with either a success (`InAppBillingEvent.RESTORE_PURCHASES_SUCCESS`) or failure (`InAppBillingEvent.RESTORE_PURCHASES_FAILED`) event. 
 
 After calling `restorePurchases` you will a receive `PurchaseEvent.PURCHASES_UPDATED` dispatched 
 which will contained `Purchase` objects in the restored state having the original purchase 
