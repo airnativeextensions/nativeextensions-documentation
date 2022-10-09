@@ -1,0 +1,113 @@
+---
+title: Mediation - Vungle
+sidebar_label: Vungle
+slug: /ironsource/mediation/vungle
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+This guide shows how to add mediation through Vungle to your IronSource integration.
+
+
+## Step 1: Create a UnityAds Account
+
+1. Create an account with Vungle. You can do so [here](https://v.vungle.com/dashboard/login#newUser).
+
+2. Once your account has been verified you can log in at their partner login [here](https://v.vungle.com/dashboard/login).
+
+
+
+
+
+## Step 2: Create an Application in Vungle
+
+Follow these steps to create your UnityAds application:
+
+https://developers.is.com/ironsource-mobile/android/vungle-mediation-guide/#step-2
+
+
+
+## Step 3: Add a Placement
+
+https://developers.is.com/ironsource-mobile/android/vungle-mediation-guide/#step-3
+
+
+
+## Step 4: Activate Vungle on ironSource SDK Networks Module
+
+https://developers.is.com/ironsource-mobile/android/vungle-mediation-guide/#step-4
+
+
+
+## Step 5: Add the Vungle Adapter to Your Build
+
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+### Add the Extension
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+### Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+## Step 5: Vungle Additional Settings
+
+### COPPA User status
+
+ironSource's mediation lets publishers communicate Vungle COPPA settings directly to the Vungle network. This feature is enabled using ironSource SDK 7.1.12+, Vungle Android Adapter 4.3.15+. Read more about Vungle COPPA API [here](https://support.vungle.com/hc/en-us/articles/360047780372#coppa-api-0-8).
+
+Use the following syntax, to update Vungle's COPPA User Status with the parameter “True”:
+
+```actionscript
+IronSource.service.setMetaData( "Vungle_coppa", "true" );
+```
+
+Use the following syntax, to update Vungle's COPPA User Status with the parameter “False”:
+
+```actionscript
+IronSource.service.setMetaData( "Vungle_coppa", "false" );
+```

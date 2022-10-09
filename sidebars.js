@@ -1836,6 +1836,7 @@ module.exports = {
         "ironsource/mediation/facebook-audience/facebook-audience",
         "ironsource/mediation/tapjoy/tapjoy",
         "ironsource/mediation/unityads/unityads",
+        "ironsource/mediation/vungle/vungle",
       ],
     },
     {
