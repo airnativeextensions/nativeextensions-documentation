@@ -1,0 +1,87 @@
+---
+title: Pangle
+sidebar_label: Pangle
+slug: /adverts/mediation/pangle
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.md'
+import InstallManual from './_includes/add-manual.md'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.md'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.md'
+
+
+This guide is intended for publishers who want to use the Google Mobile Ads SDK to load and display ads from Pangle Ads via mediation.
+
+## Step 1: Set up Pangle
+
+The Google documentation contains a very detailed guide as to the process to setup your properties and Pangle account to display adverts.
+
+Make sure you follow this guide closely.
+
+- Android: https://developers.google.com/admob/android/mediation/pangle#step_1_set_up_pangle
+- iOS: https://developers.google.com/admob/ios/mediation/pangle#step_1_set_up_pangle
+
+
+## Step 2: Configure mediation settings for your AdMob ad unit
+
+You need to add Pangle to the mediation configuration for your ad unit.
+
+- Android: https://developers.google.com/admob/android/mediation/pangle#configure_mediation
+- iOS: https://developers.google.com/admob/ios/mediation/pangle#configure_mediation
+
+
+## Step 3: Import the Pangle SDK and adapter ANE
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+### Add the Extension
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+### Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+## Step 4: Additional code required
+
+There is no additional code required.
+

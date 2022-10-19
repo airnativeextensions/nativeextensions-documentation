@@ -5,7 +5,7 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-    <extensionID>com.distriqt.admob.AppLovin</extensionID>
+    <extensionID>com.distriqt.admob.UnityAds</extensionID>
 	
 	<!-- ADVERTS EXTENSIONS -->
 	<extensionID>com.distriqt.Adverts</extensionID>

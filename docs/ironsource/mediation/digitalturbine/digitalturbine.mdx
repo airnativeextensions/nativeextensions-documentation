@@ -1,0 +1,197 @@
+---
+title: Mediation - Digital Turbine (Fyber)
+sidebar_label: Digital Turbine (Fyber)
+slug: /ironsource/mediation/digitalturbine
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+This guide shows how to add mediation through Digital Turbine (Fyber) to your IronSource integration.
+
+
+## Step 1: Create a Digital Turbine Account
+
+1. Create an account with Digital Turbine. You can do so [here](https://console.fyber.com/sign-up).
+
+2. Once your account has been verified you can log in at their partner login [here](https://console.fyber.com/login).
+
+
+
+
+
+## Step 2: Create an Application and Ad Spot in Digital Turbine
+
+To gain access to Digital Turbine inventory within ironSource's Mediation platform, you must first add your app and set up Ad Spots in your Digital Turbine account.
+
+1. Add Your App
+  - Log into your Digital Turbine account, navigate to 'Inventory' ➣ 'Manage Apps & Sites'. select 'Add App Or Site'.
+  - Define the settings of your app.
+2. Create an Ad Spot
+  Once your application has been added, you can create an Ad Spot. In Digital Turbine system Ad Spots defines the Placement & Ad Unit to which Digital Turbine delivers ads.
+  - Select '+ New Ad Sopt'
+  - Create the Ad Spot settings:
+    - Ad Spot Name
+    - Select Ad Units: Make sure to chose a single Ad Unit to use in this Ad Spot
+3. Setup Ad Unit:
+  - Interstitial:
+    - Select between Display, Video or both
+  - Banner:
+    - Keep 'Request Intervals' Disabled
+4. Save Ad Unit
+5. Continue twice
+
+
+
+## Step 3: Activate Digital Turbine in the SDK Networks Setup Module
+
+https://developers.is.com/ironsource-mobile/android/fyber-mediation-integration-guide/#step-3
+
+
+
+## Step 4: Add the Digital Turbine Adapter to Your Build
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+### Add the Extension
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+### Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+## Step 5: Network Security Settings
+
+:::info 
+This applies to Android only. You will be adding an android resource to your application.
+:::
+
+Digital Turbine SDK requires clear text traffic permission to localhost, when targeting Android P and using video ads. 
+This should be done by adding an exception rule to 'localhost', that can be found in your apps Network Security Configuration.
+
+Define the Network Security Configuration xml, by creating a file in your resources folder: `res/xml/network_security_config.xml` 
+and populating it with the following: 
+
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">127.0.0.1</domain>
+    </domain-config>
+</network-security-config>
+```
+
+You must ensure this resource is packaged correctly with your application. See the tutorial on this process [here](https://airsdk.dev/docs/tutorials/platform/android/custom-resources).
+
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you haven't already generated an additional manifest for apm to merge in your application descriptor then run:
+
+```
+apm generate config android
+```
+
+Edit the file at `config/android/AndroidManifest.xml` and add the following:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+  ...
+
+	<application android:networkSecurityConfig="@xml/network_security_config">
+
+...
+```
+
+Regenerate your app descriptor to apply this additional configuration:
+
+```
+apm generate app-descriptor src/MyApp-app.xml
+```
+
+
+  </TabItem>
+  <TabItem value="manual" >
+
+Edit your application descriptor and update the manifest additions to include the following attribute on the `application` tag:
+
+```xml
+...
+
+	<application android:networkSecurityConfig="@xml/network_security_config">
+
+...
+```
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+
