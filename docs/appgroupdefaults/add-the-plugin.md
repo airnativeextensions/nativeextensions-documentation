@@ -119,7 +119,25 @@ may be, `group.com.distriqt.test.app1.provider` as below:
 You must place the application authority both in the meta-data tag and in the provider.
 
 
+##### Queries
 
+Since Android API v30, Google has limited the ability to discover other applications via use of the `<queries>` tag in your manifest. You must specify the applications you wish to access in this area otherwise the application won't be able to discover other applications.
+
+Add the following to your manifest:
+
+```xml
+<queries>
+	<provider android:authorities="app_authority" />
+</queries>
+```
+
+You should add a provider line for each application you are communicating with and replacing `app_authority` with the `app_authority` value for that application.
+
+Alternatively you can add the `QUERY_ALL_PACKAGES` permission, however this is discouraged.
+
+```xml
+<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+```
 
 
 
@@ -177,3 +195,4 @@ The `applicationAuthority` uniquely identifies this application content provider
 :::info
 If you are manually managing the manifest for your Android application make sure you set these values directly in the manifest as described above
 :::
+

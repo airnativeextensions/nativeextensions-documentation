@@ -61,7 +61,7 @@ The provider method requires that you add several additions to the manifest. Thi
 includes a content provider and a broadcast receiver, along with some permissions 
 and settings.
 
-This method requires that you sign all of the applications with the same certificate.
+**This method requires that you sign all of the applications with the same certificate.**
 This is required so that the settings are secured between your applications.
 
 ```xml
@@ -111,6 +111,26 @@ may be, `group.com.distriqt.test.app1.provider` as below:
 
 You must place the application authority both in the meta-data tag and in the provider.
 
+
+##### Queries
+
+Since Android API v30, Google has limited the ability to discover other applications via use of the `<queries>` tag in your manifest. You must specify the applications you wish to access in this area otherwise the application won't be able to discover other applications.
+
+To do so you must add the following:
+
+```xml
+<queries>
+	<provider android:authorities="app_authority" />
+</queries>
+```
+
+adding a provider line for each application you are communicating with and replacing `app_authority` with the `app_authority` value for that application.
+
+Alternatively you can add the `QUERY_ALL_PACKAGES` permission, however this is discouraged.
+
+```xml
+<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+```
 
 
 #### File Method
