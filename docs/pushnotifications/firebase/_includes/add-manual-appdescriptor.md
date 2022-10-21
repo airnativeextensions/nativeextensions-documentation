@@ -109,6 +109,11 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 				FirebaseMessagingService performs security checks at runtime,
 				but set to not exported to explicitly avoid allowing another app to call it.
 		-->
+		<service android:name="com.distriqt.extension.pushnotifications.fcm.FcmMessagingService" android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
 		<service
 			android:name="com.google.firebase.messaging.FirebaseMessagingService"
 			android:exported="false" >
