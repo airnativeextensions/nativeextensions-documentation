@@ -777,6 +777,7 @@ module.exports = {
     { type: "doc", id: "debug/index" },
     {
       "Get Started": ["debug/add-the-extension"],
+      "Usage": ["debug/usage"],
     },
     {
       Other: [
