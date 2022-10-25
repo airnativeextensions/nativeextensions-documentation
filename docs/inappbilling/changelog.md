@@ -1,3 +1,10 @@
+### 2022.10.25 [v14.0.1]
+
+```
+fix(android): remove usage of String.join (resolves #500)
+fix(docs): update docs to reflect latest testing process with AIR 33.1.1.889+ (#459)
+```
+
 ### 2022.10.07 [v14.0.0]
 
 ```

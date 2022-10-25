@@ -66,9 +66,21 @@ adb shell setprop debug.amazon.sandboxmode debug
 
 Every time you reconnect to your Fire device through ADB, you need to reinitiate sandbox mode.
 
+To confirm you have sandbox mode enabled have a look in the adb logs for something like the following line:
+
+```
+D/Kiwi    (12294): AppstoreSDK: Sandbox Mode: Debug build and debug.amazon.sandboxmode property is set on device
+```
+
+If it is in production mode you will see something like the following:
+
+```
+D/Kiwi    (11971): AppstoreSDK: Production Mode: Release build or debug.amazon.sandboxmode property is not set on devic
+```
+
 
 :::note
-We haven't been able to test successfully using an AIR build directly, instead we have had to use the AndroidStudioProject output from AIR and run a debug build from there. For some reason Amazon is detecting the debug build from AIR as a release build.
+You must be using a recent release of AIR, version 33.1.1.889 or higher. APK's produced in older versions of AIR are incorrectly packaged as production builds. You can work around this by using the AndroidStudioProject output if required.
 :::
 
 
