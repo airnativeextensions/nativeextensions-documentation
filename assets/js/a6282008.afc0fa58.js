@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[16486],{16930:function(e){e.exports=JSON.parse('{"permalink":"/news/tags/google-play-billing","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);
