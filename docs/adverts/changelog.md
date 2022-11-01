@@ -1,3 +1,11 @@
+### 2022.11.01 [v13.7.7]
+
+```
+fix(ios,admob): correct issue setting server side verification options on rewarded video ads (resolves #371)
+feat(docs): update docs for admob move from funding choices to privacy and messaging
+fix(docs,package): add appset extension dependency
+```
+
 ### 2022.09.26 [v13.7.5]
 
 ```

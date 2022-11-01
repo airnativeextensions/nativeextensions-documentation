@@ -10,7 +10,7 @@ The following should be added to your `extensions` node in your application desc
 
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.Ads</extensionID>
-	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.AppSet</extensionID>
 
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.browser</extensionID>

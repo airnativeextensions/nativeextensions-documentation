@@ -29,7 +29,6 @@ however should work with any recent AdMob implementation.
     - [App Lovin](applovin)
     - [Facebook Audience](facebookaudience)
     - [IronSource](ironsource)
-    - [Pangle](pangle)
     - [TapJoy](tapjoy)
     - [Unity Ads](unityads)
 

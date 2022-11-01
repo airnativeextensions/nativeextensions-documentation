@@ -58,7 +58,7 @@ This extension requires the following Google Play Services:
 
 - [com.distriqt.playservices.Base.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
 - [com.distriqt.playservices.Ads.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Ads.ane)
-- [com.distriqt.playservices.AdsIdentifier.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AdsIdentifier.ane)
+- [com.distriqt.playservices.AppSet.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AppSet.ane)
 
 You must include the above native extensions in your application along with this extension,
 and you need to ensure they are packaged with your application.

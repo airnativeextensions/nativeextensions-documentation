@@ -5,13 +5,7 @@ sidebar_label: User Messaging Platform
 
 ## Obtaining Consent with the User Messaging Platform
 
->
-> Important: You must have a [Funding Choices](https://support.google.com/fundingchoices/answer/9180084) account linked to your AdMob account.
->
-> To create a Funding Choices account, go to **Privacy & messaging** in the AdMob UI and select **Go to Funding Choices**. The Funding Choices account is then created automatically in the background. 
->
-
-Before attempting to integrate the SDK you should ensure Funding Choices is enabled on your application and that you have created at least one form.
+Before attempting to integrate the SDK you should ensure you have created at least one form in the "Privacy & messaging" tab for your AdMob account.
 
 
 
@@ -24,8 +18,10 @@ Before attempting to integrate the SDK you should ensure Funding Choices is enab
 >
 > It is a best practice to load a form every time the user launches your app, even if you determine consent is not required, so that the form is ready to display in case the user wishes to change their consent setting.
 >
-> This guide walks you through how to install the SDK, implement the IAB solutions, and enable testing features.
->
+
+The following guide only shows usage of the UMP SDK, it does not show you how to setup these forms and what forms you should present to your users.
+
+For detailed instructions and guidance on these topics we suggest you read the guides created by Google [about privacy & messaging](https://support.google.com/admob/answer/10107561).
 
 
 ## Usage
