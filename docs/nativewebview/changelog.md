@@ -4,6 +4,12 @@
 fix(android): update to fix some minor focus issues with the latest AIR SDK (resolves #289)
 ```
 
+### 2022.11.02 [v5.3.12]
+
+```
+fix(android): update to fix some minor focus issues with the latest AIR SDK (resolves #289)
+```
+
 ### 2022.06.15 [v5.3.11]
 
 ```
