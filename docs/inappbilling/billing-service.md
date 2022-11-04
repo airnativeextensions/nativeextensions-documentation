@@ -10,9 +10,9 @@ as outlined in earlier sections.
 This is where you would have added products to your application in the appropriate developer console.
 
 The next step to using the functionality in this extension is to setup a billing (or purchasing) service. 
-This simply requires you to set the service you plan on using and calling `setup` with the service key (if required).
+This simply requires you to set the service you plan on using and calling `setup()` with any service configuration required.
 
-The following uses the default for the current platform and specifies the Google Play Billing Public License key:
+The following uses the default service for the current device and specifies the Google Play Billing Public License key:
 
 ```actionscript
 var service:BillingService = new BillingService()
@@ -25,10 +25,10 @@ This call performs a few things internally
 
 - Initialises the billing service
 - Initialises the purchase queue 
-- Adds appropriate purchase handlers
+- Adds appropriate native purchase handlers
 - Checks the state of any pending purchases
 
-The return value of the `setup` function indicates if the configured service type is supported on 
+The return value of the `setup()` function indicates if the configured service type is supported on 
 the current device. This may return `false` if you have for example requests Apple In-App Purchases on
 an Android device. 
 
@@ -84,6 +84,54 @@ i.e. Apple InApp Purchases on iOS and Google's Play InApp Billing on Android.
 
 We suggest that you do specify a service type, particularly on Android where there are multiple stores involved.
 This is so that you ensure you are utilising the correct store for your application, otherwise you may find that the extension incorrectly assumes you are using the default store on the device (eg Huawei AppGallery on a Huawei device), which may not be what you intend.
+:::
+
+
+## Availability
+
+Once you have completed setup it is important to check whether the user on the current device can make payments. There are certain factors that can limit the functionality which can have consequences for all product and purchasing functionality.
+
+For example, the latest version of Play Billing is only supported with an updated version of the Play Store app. If an older version is on the user's device the billing api will not be available.
+
+To check the status call the `checkAvailability()` function and await the result. This function will dispatch an `AvailabilityEvent.COMPLETE` event or call a callback function passed as the parameter to the function.
+
+Callback:
+
+```actionscript
+InAppBilling.service.checkAvailability(
+        function ( availability:String ):void
+        {
+            trace( "availability = " + availability );
+        }
+);
+```
+
+Event:
+
+
+```actionscript
+InAppBilling.service.addEventListener( AvailabilityEvent.COMPLETE, function( event:AvailabilityEvent ):void
+{
+    trace( "availability = " + event.availability );
+});
+InAppBilling.service.checkAvailability();
+```
+
+
+The `availability` value will be one of the values defined in the `InAppBillingAvailability` class:
+
+- `InAppBillingAvailability.AVAILABLE`: Service is available for products and purchases;
+- `InAppBillingAvailability.NOT_AVAILABLE`: Service is unavailable on the device;
+- `InAppBillingAvailability.STORE_UPGRADE_REQUIRED`: An update is required to the store application for this service;
+
+
+You should handle the response as required and inform your users if purchasing isn't available or steps to upgrade the store application.
+
+
+:::note
+If you don't check for the availability you will find certain aspects of the extension will fail. For example, if a store upgrade is required you will likely get failed events from functions like `getProducts()` with the error code `FEATURE_NOT_SUPPORTED`. 
+
+It is equally appropriate to handle those error events however we suggest an upfront approach using this function can provide a better user experience.
 :::
 
 

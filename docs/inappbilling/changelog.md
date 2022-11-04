@@ -1,3 +1,9 @@
+### 2022.11.04 [v14.0.2]
+
+```
+feat: add check availability function to check for feature availability and required store upgrades
+```
+
 ### 2022.10.25 [v14.0.1]
 
 ```
