@@ -1,3 +1,9 @@
+### 2022.11.14 [v8.0.4]
+
+```
+fix(airpackage,docs): fix missing queries manifest additions required to check Play Games install state (resolves #227)
+```
+
 ### 2022.03.22 [v8.0.3]
 
 ```

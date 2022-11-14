@@ -35,6 +35,10 @@ You should make sure your manifest contains the following:
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
 	
+	<queries>
+		<package android:name="com.google.android.play.games" />
+	</queries>
+
 	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
 		
 		<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\u003XXXXXXXXXXXX" />
