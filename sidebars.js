@@ -2387,6 +2387,7 @@ module.exports = {
       Usage: [
         "permissions/set-permissions",
         "permissions/requesting-access",
+        "permissions/file-folder-access", 
         "permissions/system-settings",
       ],
     },

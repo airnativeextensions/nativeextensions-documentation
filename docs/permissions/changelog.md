@@ -1,3 +1,10 @@
+### 2022.11.14 [v3.3.1]
+
+```
+feat: add openDirectory result event (PermissionsEvent.OPEN_DOCUMENT) with path
+feat(docs): add documentation on openDirectory functionality
+```
+
 ### 2022.09.01 [v3.3.0]
 
 ```
