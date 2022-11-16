@@ -655,6 +655,7 @@ This function will attempt to determine which store the application was installe
 - `STORE_GOOGLEPLAY`: The application was installed from the Google Play Store;
 - `STORE_AMAZON`: The application was installed from the Amazon Store;
 - `STORE_HUAWEI_APPGALLERY`: The application was installed from the Huawei App Gallery;
+- `STORE_SAMSUNG`: The application was installed from the Samsung Galaxy Store;
 - `STORE_APPSTORE`: The application was installed from the Apple AppStore. This is the default for all iOS / macOS devices and will be returned on iOS / macOS whether the application was installed through the AppStore or not;
 - `STORE_UNKNOWN`: Returned if the store could not be determined. This will happen when your application wasn't installed through a store eg when testing on Android.
 

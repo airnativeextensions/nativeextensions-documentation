@@ -1,3 +1,9 @@
+### 2022.11.16 [v6.2.0]
+
+```
+feat: add ability to use the Samsung Galaxy Store (resolves #73)
+```
+
 ### 2022.02.02 [v6.1.3]
 
 ```
