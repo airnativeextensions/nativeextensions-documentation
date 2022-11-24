@@ -1,3 +1,9 @@
+### 2022.11.24 [v5.3.2]
+
+```
+fix(docs,airpackage): correct dependency on kotlin library (resolves #73)
+```
+
 ### 2022.03.29 [v5.3.1]
 
 ```
