@@ -57,3 +57,23 @@ You should add the listing below to your manifest:
 ```
 
 Make sure you only have one `application` node in your manifest additions.
+
+
+
+### iOS 
+
+#### Info Additions
+
+All our extensions now use iOS 11 as a minimum so you will need to ensure you add the `MinimumOSVersion` key to be at least `11.0` in your info additions as below:
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+
+		<key>MinimumOSVersion</key>
+		<string>11.0</string>
+
+	]]></InfoAdditions>
+
+	...
+```

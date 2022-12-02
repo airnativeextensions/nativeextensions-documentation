@@ -1,3 +1,9 @@
+### 2022.12.02 [v7.0.0]
+
+```
+feat(sdk): update sdk versions, android: v14.0.0, ios: v12.1.1 (resolves #24)
+```
+
 ### 2022.03.08 [v6.3.0]
 
 ```
