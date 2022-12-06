@@ -1,3 +1,9 @@
+### 2022.12.06 [v7.3.0]
+
+```
+feat(android): add ability to add description to share file functionality (resolves #195)
+```
+
 ### 2022.08.08 [v7.2.0]
 
 ```
