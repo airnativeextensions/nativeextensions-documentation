@@ -55,7 +55,8 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
 	<!-- OPTIONAL -->
 	<uses-permission android:name="android.permission.VIBRATE"/>
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -101,7 +102,7 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 				android:name="android.support.FILE_PROVIDER_PATHS"
 				android:resource="@xml/distriqt_pushnotifications_paths" />
 		</provider>
-
+		<activity android:name="com.distriqt.extension.notifications.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
 
 		<!-- FIREBASE CLOUD MESSAGING -->

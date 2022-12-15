@@ -130,7 +130,8 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 	<permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 	<uses-permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" />
 	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+	
     <!-- BADGE -->
 	<uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />

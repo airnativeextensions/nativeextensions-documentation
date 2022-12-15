@@ -218,7 +218,7 @@ The following shows the complete manifest additions node. You must replace `APPL
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application>
 
@@ -282,6 +282,7 @@ The following shows the complete manifest additions node. You must replace `APPL
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/distriqt_pushnotifications_paths" />
         </provider>
+        <activity android:name="com.distriqt.extension.notifications.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
     </application>
     

@@ -1,3 +1,12 @@
+### 2022.12.15 [v11.2.0]
+
+```
+feat(onesignal): sdk update android v4.8.3, ios v3.12.3 (resolves #549)
+feat(android): add android 13 notification permission request 
+fix(swc): update build scripts and air version used to build swcs (resolves #545)
+fix(ios): add null checks for device / service tokens (resolves #542)
+```
+
 ### 2022.07.01 [v11.1.1]
 
 ```

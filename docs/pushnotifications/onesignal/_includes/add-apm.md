@@ -56,6 +56,10 @@ Once complete `apm` will have created something like the following file structur
 
 ```
 .
+|____ assets
+| |____ ios 
+| | |____ Frameworks
+| | | |____ [dynamic frameworks]
 |____ ane
 | |____ com.distriqt.PushNotifications.OneSignal.ane	# PushNotifications extension
 | |____ [dependencies]
@@ -64,6 +68,9 @@ Once complete `apm` will have created something like the following file structur
 ```
 
 - Add the `ane` directory to your IDE. *See the tutorials located [here](/docs/tutorials/getting-started) on adding an extension to your IDE.*
+
+- You will have an `assets` directory that contains required assets for the installed extensions. You must add the `assets/ios` folder to the root of your iOS application package. (The `ios` folder contains a `Frameworks` folder with the required iOS dynamic frameworks). 
+
 
 :::info
 We suggest you use the locations directly in your builds (rather than copying the files elsewhere) so that updates with `apm` will be pulled automatically into your build.

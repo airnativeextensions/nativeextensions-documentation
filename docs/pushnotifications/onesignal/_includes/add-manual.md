@@ -110,3 +110,14 @@ To use Firebase Cloud Messaging you must include the core Firebase libraries. Th
 - [`com.google.firebase.core`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane)
 
 You do not need to initialise or configure this.
+
+
+
+
+
+### Dynamic Frameworks
+
+The OneSignal SDK requires several dynamic frameworks that need to be packaged and signed with your application.
+
+To do so you must add the `Frameworks` folder at the root of your application package. This folder is found alongside the `ane` in the `assets/ios/` folder.  
+

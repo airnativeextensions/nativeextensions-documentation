@@ -136,6 +136,7 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 	<permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 	<uses-permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" />
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 	
 	<application>
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -181,7 +182,7 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 				android:name="android.support.FILE_PROVIDER_PATHS" 
 				android:resource="@xml/distriqt_pushnotifications_paths" />
 		</provider>
-
+		<activity android:name="com.distriqt.extension.notifications.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
 			
 
