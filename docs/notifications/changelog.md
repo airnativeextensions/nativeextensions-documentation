@@ -1,3 +1,9 @@
+### 2022.12.15 [v6.4.0]
+
+```
+feat(android): add android 13 notification permission request
+```
+
 ### 2022.02.18 [v6.3.1]
 
 ```

@@ -1,7 +1,10 @@
 ---
-title: Migrating to v10.2
-sidebar_label: Migrating to v10.2
+title: Migrating to v11.2
+sidebar_label: Migrating to v11.2
 ---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
 
 v11.2 brings the latest release of OneSignal:
@@ -20,10 +23,9 @@ See the OneSignal "Add the extension" documentation for more details.
 
 
 
+## Android 13 (API 33) Permissions
 
-## Android Permissions
-
-From Android 13 developers are required to get permission to send a user notifications. 
+With Android 13 comes a new runtime user permission required to present a user with notifications. 
 
 If you do not update your users will be presented with the permission notification on launch of your application. 
 
@@ -31,13 +33,34 @@ Authorisation process follows exactly the same code you have used for iOS and fr
 
 See the documentation on [requesting authorisation](request-authorisation.md) for more information.
 
-Importantly, if manually managing the manifest (not using `apm`) you will be required to make some additions to your manifest. Firstly the permission:
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you are using [`apm`](https://github.com/airsdk/apm) all you need to do is update to the latest build and regenerate your application descriptor. `apm` will handle the rest.
+
+```
+apm update 
+apm generate app-descriptor src/Main-app.xml
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+If you are manually managing your application descriptor (and manifest additions) then you will be required to make some additions to your manifest. Firstly the permission:
 
 ```xml
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 ```
 
-And an additional activity to be able to correctly request the permission:
+And an additional activity inside the application tag to be able to correctly request the permission:
 
 ```xml
 <application ... >
@@ -46,6 +69,13 @@ And an additional activity to be able to correctly request the permission:
 
 </application>
 ```
+
+
+  </TabItem>
+  
+</Tabs>
+
+
 
 
 

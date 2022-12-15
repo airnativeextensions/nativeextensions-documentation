@@ -29,7 +29,7 @@ The Notifications extension requires a few additions to the manifest to be able 
 		<uses-permission android:name="android.permission.INTERNET"/>
 		<uses-permission android:name="android.permission.VIBRATE"/>
 		<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
+		<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
 		<!--for Samsung-->
 		<uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
@@ -90,6 +90,8 @@ The Notifications extension requires a few additions to the manifest to be able 
 					android:name="android.support.FILE_PROVIDER_PATHS" 
 					android:resource="@xml/distriqt_notifications_paths" />
 			</provider>
+
+			<activity android:name="com.distriqt.extension.notifications.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 			
 		</application>
 		
