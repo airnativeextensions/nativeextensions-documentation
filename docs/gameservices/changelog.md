@@ -1,3 +1,9 @@
+### 2022.12.15 [v8.0.5]
+
+```
+fix(desktop): fix issue with isSupported flag with adl on macOS
+```
+
 ### 2022.11.14 [v8.0.4]
 
 ```
