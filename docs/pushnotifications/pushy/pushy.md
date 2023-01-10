@@ -211,17 +211,17 @@ The following shows the complete manifest additions node. You must replace `APPL
 
 ```xml
 <manifest android:installLocation="auto">
-    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
+    <uses-sdk android:minSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" /> 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application>
-
+        <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+        
         <!-- Pushy Declarations -->
 
         <!-- Pushy Notification Receiver -->
@@ -258,7 +258,6 @@ The following shows the complete manifest additions node. You must replace `APPL
         <!-- Do not modify - internal service -->
         <service android:name="me.pushy.sdk.services.PushyJobService"
             android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true"
             android:stopWithTask="false" />
 
         <!-- End Pushy Declarations -->
@@ -282,7 +281,7 @@ The following shows the complete manifest additions node. You must replace `APPL
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/distriqt_pushnotifications_paths" />
         </provider>
-        <activity android:name="com.distriqt.extension.notifications.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
 
     </application>
     

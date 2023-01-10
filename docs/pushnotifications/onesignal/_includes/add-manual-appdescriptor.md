@@ -118,7 +118,7 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
 ```xml
 <manifest android:installLocation="auto">
-    <uses-sdk android:targetSdkVersion="31" />
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31" />
 
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -152,6 +152,9 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
 
 	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+		
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
 		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity"

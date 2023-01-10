@@ -1,3 +1,13 @@
+### 2023.01.10 [v11.3.0]
+
+```
+feat(ios): remove bitcode and add no-objc-msgsend-selector-stubs compiler flag (resolves #551, resolves #552)
+feat(android): update to new cleaner authorisation process in latest AIR SDK
+fix(docs): correct issue with android manifest docs (#555)
+feat(pushy): update Android SDK v1.0.89 
+feat(pushy): correct operation of Android startup events (resolves #553)
+```
+
 ### 2022.12.15 [v11.2.0]
 
 ```

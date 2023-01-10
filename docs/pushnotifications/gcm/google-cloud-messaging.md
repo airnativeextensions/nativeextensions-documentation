@@ -203,7 +203,7 @@ It will be of the form `air.com.distriqt.test`
 
 ```xml
 <manifest android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="14" />
+	<uses-sdk android:minSdkVersion="19" />
 	
 	<uses-permission android:name="android.permission.INTERNET"/>
 	
