@@ -211,90 +211,93 @@ The following shows the complete manifest additions node. You must replace `APPL
 
 ```xml
 <manifest android:installLocation="auto">
-    <uses-sdk android:minSdkVersion="19" />
+	<uses-sdk android:minSdkVersion="19" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" /> 
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <application>
-        <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
-        
-        <!-- Pushy Declarations -->
-
-        <!-- Pushy Notification Receiver -->
-        <!-- Incoming push notifications will invoke the following BroadcastReceiver -->
-        <receiver android:name="com.distriqt.extension.pushnotifications.pushy.PushyReceiver" android:exported="false">
-            <intent-filter>
-                <!-- Do not modify this -->
-                <action android:name="pushy.me" />
-            </intent-filter>
-        </receiver>
-
-        <!-- Pushy Update Receiver -->
-        <!-- Do not modify - internal BroadcastReceiver that restarts the listener service -->
-        <receiver android:name="me.pushy.sdk.receivers.PushyUpdateReceiver" android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-            </intent-filter>
-        </receiver>
-
-        <!-- Pushy Boot Receiver -->
-        <!-- Do not modify - internal BroadcastReceiver that restarts the listener service -->
-        <receiver android:name="me.pushy.sdk.receivers.PushyBootReceiver" android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-            </intent-filter>
-        </receiver>
-
-        <!-- Pushy Socket Service -->
-        <!-- Do not modify - internal service -->
-        <service android:name="me.pushy.sdk.services.PushySocketService" android:stopWithTask="false" />
-
-        <!-- Pushy Job Service (added in Pushy SDK 1.0.35) -->
-        <!-- Do not modify - internal service -->
-        <service android:name="me.pushy.sdk.services.PushyJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:stopWithTask="false" />
-
-        <!-- End Pushy Declarations -->
+	<application>
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+		
+		<!-- NOTIFICATIONS -->
+		<receiver android:name="com.distriqt.extension.pushnotifications.notifications.receivers.NotificationReceiver" android:exported="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELETED" />
+				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
+				<data android:scheme="dtpn" />
+			</intent-filter>
+		</receiver>
+		<activity android:name="com.distriqt.extension.pushnotifications.notifications.NotificationActivity" android:exported="false">
+			<intent-filter>
+				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED" />
+				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
+				<data android:scheme="dtpn" />
+			</intent-filter>
+		</activity>
+		<provider
+			android:name="com.distriqt.extension.pushnotifications.content.FileProvider"
+			android:authorities="APPLICATION_PACKAGE.pushnotificationsfileprovider"
+			android:grantUriPermissions="true"
+			android:exported="false">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/distriqt_pushnotifications_paths" />
+		</provider>
 
 
-        <!-- NOTIFICATIONS -->
-        <receiver android:name="com.distriqt.extension.pushnotifications.notifications.receivers.NotificationReceiver">
-            <intent-filter>
-                <action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED" />
-                <action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELETED" />
-                <action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
-                <data android:scheme="dtpn" />
-            </intent-filter>
-        </receiver>
-        <provider
-            android:name="com.distriqt.extension.pushnotifications.content.FileProvider"
-            android:authorities="APPLICATION_PACKAGE.pushnotificationsfileprovider"
-            android:grantUriPermissions="true"
-            android:exported="false">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/distriqt_pushnotifications_paths" />
-        </provider>
+		<!-- Pushy Declarations -->
+
+		<!-- Pushy Notification Receiver -->
+		<!-- Incoming push notifications will invoke the following BroadcastReceiver -->
+		<receiver android:name="com.distriqt.extension.pushnotifications.pushy.PushyReceiver" android:exported="false">
+			<intent-filter>
+				<!-- Do not modify this -->
+				<action android:name="pushy.me" />
+			</intent-filter>
+		</receiver>
+
+		<!-- Pushy Update Receiver -->
+		<!-- Do not modify - internal BroadcastReceiver that restarts the listener service -->
+		<receiver android:name="me.pushy.sdk.receivers.PushyUpdateReceiver" android:exported="false">
+			<intent-filter>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+			</intent-filter>
+		</receiver>
+
+		<!-- Pushy Boot Receiver -->
+		<!-- Do not modify - internal BroadcastReceiver that restarts the listener service -->
+		<receiver android:name="me.pushy.sdk.receivers.PushyBootReceiver" android:exported="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+			</intent-filter>
+		</receiver>
+
+		<!-- Pushy Socket Service -->
+		<!-- Do not modify - internal service -->
+		<service android:name="me.pushy.sdk.services.PushySocketService" android:stopWithTask="false" />
+
+		<!-- Pushy Job Service (added in Pushy SDK 1.0.35) -->
+		<!-- Do not modify - internal service -->
+		<service android:name="me.pushy.sdk.services.PushyJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:stopWithTask="false" />
+
+		<!-- End Pushy Declarations -->
 
 
-    </application>
-    
+
+	</application>
+	
 </manifest>
 ```
-
-
->
-> Note: `android.permission.WRITE_EXTERNAL_STORAGE` is optional - it is necessary only for persisting device tokens in the external storage for when your app is reinstalled, so Pushy doesn't charge you twice for the same device. If this permission is not declared, the SDK will persist device tokens only within your app's SharedPreferences, which are cleared when your app is uninstalled.
->
-> If you do add this permission you must also request runtime permission for it using the Permissions ANE or similar on newer Android devices.
->
-
 
 
 
