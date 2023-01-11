@@ -1,3 +1,11 @@
+### 2023.01.11 [v6.3.0]
+
+```
+feat(dialog): add ability to set the dialog theme (resolves #75)
+feat(ios): remove bitcode and add no-objc-msgsend-selector-stubs compiler flag (resolves #74)
+feat(android): update to android-play v1.10.3
+```
+
 ### 2022.11.16 [v6.2.0]
 
 ```
