@@ -1,3 +1,17 @@
+### 2023.01.12 [v4.2.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(docs): update docs for android 30 queries (resolves #14)
+```
+
+### 2023.01.12 [v4.2.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(docs): update docs for android 30 queries (resolves #14)
+```
+
 ### 2022.02.02 [v4.1.68]
 
 ```

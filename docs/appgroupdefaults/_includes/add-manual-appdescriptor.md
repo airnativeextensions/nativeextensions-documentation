@@ -28,6 +28,9 @@ Update the iPhone node to be as below:
 		<array>
 			<string>1</string>
 		</array>
+
+		<key>MinimumOSVersion</key>
+		<string>11.0</string>
 	]]></InfoAdditions>
 	<requestedDisplayResolution>high</requestedDisplayResolution>
 	<Entitlements>
