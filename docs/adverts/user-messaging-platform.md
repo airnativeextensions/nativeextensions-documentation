@@ -8,7 +8,6 @@ sidebar_label: User Messaging Platform
 Before attempting to integrate the SDK you should ensure you have created at least one form in the "Privacy & messaging" tab for your AdMob account.
 
 
-
 ## Introduction
 
 >
@@ -22,6 +21,19 @@ Before attempting to integrate the SDK you should ensure you have created at lea
 The following guide only shows usage of the UMP SDK, it does not show you how to setup these forms and what forms you should present to your users.
 
 For detailed instructions and guidance on these topics we suggest you read the guides created by Google [about privacy & messaging](https://support.google.com/admob/answer/10107561).
+
+
+## Dependencies
+
+:::caution Ad Identifier
+UMP requires additional dependencies that aren't installed by default with the Adverts extension.
+If you don't add the advertising identifier library the UMP calls will fail.
+:::
+
+UMP uses the advertising identifier which isn't installed by default with the Adverts extension now as it defaults to the new AppSet identifier.
+
+In order to use UMP you will need to add the advertising identifier dependencies. We suggest you install the [IDFA](/docs/idfa/) extension to achieve this. 
+
 
 
 ## Usage

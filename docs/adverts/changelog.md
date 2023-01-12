@@ -1,3 +1,12 @@
+### 2023.01.12 [v13.8.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): update android admob sdk v21.3.0 (resolves #427)
+feat(huawei,android): update huawei ads sdk v13.4.58.301
+fix(android): add UMP fail gracefully if ad identifier dependency not included (resolves #444)
+```
+
 ### 2022.11.01 [v13.7.7]
 
 ```
