@@ -141,6 +141,7 @@ module.exports = {
         "adverts/mediation/applovin/index",
         "adverts/mediation/facebookaudience/index",
         "adverts/mediation/ironsource/index",
+        "adverts/mediation/pangle/index",
         "adverts/mediation/tapjoy/index",
         "adverts/mediation/unityads/index",
       ],
