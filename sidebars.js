@@ -351,6 +351,9 @@ module.exports = {
       Usage: ["audiorecorder/recording-audio", "audiorecorder/playback"],
     },
     {
+      Help: ["audiorecorder/migrating-to-v3.1"],
+    },
+    {
       Other: [
         { type: "doc", id: "audiorecorder/changelog" },
         {

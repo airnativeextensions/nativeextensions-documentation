@@ -37,10 +37,7 @@ request permissions at runtime.
 
 	<application>
 
-		<activity 
-			android:name="com.distriqt.extension.audiorecorder.permissions.AuthorisationActivity" 
-			android:exported="false"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
 	</application>
 
