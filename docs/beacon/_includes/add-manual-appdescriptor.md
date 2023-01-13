@@ -29,6 +29,9 @@ You will need to add the following to your application descriptor.
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
 	<application>
+
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
 		<receiver android:name="com.distriqt.extension.beacon.services.StartupBroadcastReceiver" android:exported="false" >
 			<intent-filter>
 				<action android:name="android.intent.action.BOOT_COMPLETED"/>
@@ -39,8 +42,6 @@ You will need to add the following to your application descriptor.
 
 		<service android:name="com.distriqt.extension.beacon.services.BeaconService" android:enabled="true" android:exported="false" android:isolatedProcess="false" android:label="beacon" />
 		<service android:name="com.distriqt.extension.beacon.services.BeaconIntentProcessor" android:enabled="true" android:exported="false" />
-
-		<activity android:name="com.distriqt.extension.beacon.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
 	</application>
 

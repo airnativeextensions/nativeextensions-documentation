@@ -3,8 +3,6 @@ title: Tools and Resources
 sidebar_label: Tools and Resources
 ---
 
-## Tools and Resources
-
 The following list are some useful tools for use during development
 
 - BeaconOSX: https://github.com/mttrb/BeaconOSX

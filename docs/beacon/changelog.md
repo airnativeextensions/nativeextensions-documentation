@@ -1,3 +1,17 @@
+### 2023.01.13 [v5.1.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): Move to new permissions request process
+```
+
+### 2023.01.13 [v5.1.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): Move to new permissions request process
+```
+
 ### 2022.02.02 [v5.0.19]
 
 ```

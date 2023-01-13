@@ -17,4 +17,3 @@ You should backup your application descriptor before running this command to ens
 
 If you need to insert custom data into these sections see the guides for [Android](https://github.com/airsdk/apm/wiki/Usage-Generate#android) and [iOS](https://github.com/airsdk/apm/wiki/Usage-Generate#ios)
 :::
-

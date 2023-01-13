@@ -414,6 +414,9 @@ module.exports = {
       ],
     },
     {
+      Help: ["beacon/migrating-to-v5.1"],
+    },
+    {
       Other: [
         { type: "doc", id: "beacon/changelog" },
         {

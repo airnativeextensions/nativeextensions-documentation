@@ -3,8 +3,6 @@ title: Events
 sidebar_label: Events
 ---
 
-## Events
-
 When the application is running the application will receive region and ranging events directly. 
 Region exit events can take up to a minute, however an entry event should be quick (~1 second).
 

@@ -3,8 +3,6 @@ title: Monitoring a Region
 sidebar_label: Monitoring a Region
 ---
 
-## Monitoring a Region
-
 A region of beacons is designated by a UUID and a simple identifier. You should always supply 
 a valid UUID string that matches the UUID used in your beacons and a simple identifier to allow 
 the system to distinguish regions internally.

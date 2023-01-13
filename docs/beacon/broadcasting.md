@@ -3,10 +3,7 @@ title: Broadcasting
 sidebar_label: Broadcasting
 ---
 
-## Broadcasting
-
 Broadcasting will make the device act as a beacon so that other devices can detect the device as if it were a beacon.
-
 
 
 ### Availability 
