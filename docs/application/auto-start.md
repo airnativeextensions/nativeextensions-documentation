@@ -92,3 +92,16 @@ if (!Application.service.hasAutoStartPermission())
 Unfortunately there is no feedback from this process but you should be able to use the application state events to handle an activation of your application after calling this.
 
 Once you have this permission, then auto start will work as above.
+
+:::note
+Some Android TV devices don't support this permission request. We have added an additional function to check if the auto start permission request is available:
+
+```actionscript
+if (Application.service.canRequestAutoStartPermission())
+{
+	Application.service.requestAutoStartPermission();
+}
+```
+
+Also the `requestAutoStartPermission()` method will return false if the permission request isn't supported or not required
+::: 

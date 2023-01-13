@@ -1,3 +1,11 @@
+### 2023.01.13 [v6.12.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): Add ability to check for availability of the request auto start permission (resolves #240)
+feat(android): Move to new permissions request process
+```
+
 ### 2022.09.09 [v6.11.0]
 
 ```
