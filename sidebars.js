@@ -480,7 +480,10 @@ module.exports = {
       ],
     },
     {
-      Help: ["bluetoothle/migrating-to-androidx"],
+      Help: [
+        "bluetoothle/migrating-to-androidx",
+        "bluetoothle/migrating-to-v4.2",
+      ],
     },
     {
       Other: [

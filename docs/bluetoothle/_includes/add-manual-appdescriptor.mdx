@@ -7,7 +7,6 @@ The following should be added to your `extensions` node in your application desc
 <extensions>
     <extensionID>com.distriqt.BluetoothLE</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
-
     <extensionID>androidx.core</extensionID>
 </extensions>
 ```
@@ -24,16 +23,17 @@ Note: Since Android 23, you need to add `ACCESS_COARSE_LOCATION` to be able to s
 
 ```xml
 <manifest android:installLocation="auto">
-  <uses-sdk android:minSdkVersion="18" />
+    
+    <uses-sdk android:minSdkVersion="18" />
 
-	<!-- Request legacy Bluetooth permissions on older devices. -->
+    <!-- Request legacy Bluetooth permissions on older devices. -->
     <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
 
     <!-- Needed only if your app looks for Bluetooth devices.
-         If your app doesn't use Bluetooth scan results to derive physical
-         location information, you can strongly assert that your app
-         doesn't derive physical location. -->
+        If your app doesn't use Bluetooth scan results to derive physical
+        location information, you can strongly assert that your app
+        doesn't derive physical location. -->
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
 
     <!-- Needed only if your app makes the device discoverable to Bluetooth devices. -->
@@ -53,10 +53,7 @@ Note: Since Android 23, you need to add `ACCESS_COARSE_LOCATION` to be able to s
 
     <application>
     
-        <activity 
-            android:name="com.distriqt.extension.bluetoothle.permissions.AuthorisationActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-			android:exported="false" />
+        <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
     </application>
 
@@ -79,29 +76,31 @@ When the system prompts the user to allow usage, the value that you provide for 
 
 ```xml
 <InfoAdditions><![CDATA[
-	
-	<!-- OTHER SETTINGS --> 
+    
+    <!-- OTHER SETTINGS --> 
 
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Usage description</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Usage description</string>
 
-	<!-- For iOS versions earlier than 13 -->
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Usage description</string>
+    <!-- For iOS versions earlier than 13 -->
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Usage description</string>
 
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>bluetooth-central</string>
+        <string>bluetooth-peripheral</string>
+    </array>
 
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>bluetooth-central</string>
-		<string>bluetooth-peripheral</string>
-	</array>
-	
+    <key>MinimumOSVersion</key>
+    <string>11.0</string>
+    
 
 ]]></InfoAdditions>
 <requestedDisplayResolution>high</requestedDisplayResolution>
 <Entitlements>
-	<![CDATA[
-	]]>
+    <![CDATA[
+    ]]>
 </Entitlements>
 ```
 
@@ -109,7 +108,7 @@ When the system prompts the user to allow usage, the value that you provide for 
 >
 > Important: To protect user privacy, an iOS app linked on or after iOS 10.0, and which accesses 
 > the Bluetooth interface, must statically declare the intent to do so. 
-> Include the `NSBluetoothPeripheralUsageDescription` key in your app’s Info.plist file and provide 
+> Include the `NSBluetoothPeripheralUsageDescription` key in your app's Info.plist file and provide 
 > a purpose string for this key. 
 > **If your app attempts to access the Bluetooth interface without a corresponding purpose string, your app exits.**
 >
