@@ -638,7 +638,10 @@ module.exports = {
       ],
     },
     {
-      Help: ["camerarollextended/migrating-to-androidx"],
+      Help: [
+        "camerarollextended/migrating-to-v6.4",
+        "camerarollextended/migrating-to-androidx"
+      ],
     },
     {
       Other: [
