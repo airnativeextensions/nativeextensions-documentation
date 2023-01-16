@@ -599,7 +599,9 @@ module.exports = {
       ],
     },
     {
-      Help: ["camera/migrating-to-androidx"],
+      Help: [
+        "camera/migrating-to-v6.1", 
+        "camera/migrating-to-androidx"],
     },
     {
       Other: [

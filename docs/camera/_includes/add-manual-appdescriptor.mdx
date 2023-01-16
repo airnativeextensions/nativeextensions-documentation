@@ -20,7 +20,7 @@ The following additions must be added to your applications manifest additions.
 ```xml
 <manifestAdditions><![CDATA[
 	<manifest android:installLocation="auto">
-		<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="31"/>
+		<uses-sdk android:minSdkVersion="19" />
 
 		<uses-permission android:name="android.permission.INTERNET"/>
 
@@ -32,9 +32,9 @@ The following additions must be added to your applications manifest additions.
 		<uses-feature android:name="android.hardware.camera" />
 
 		<application>
-			<activity 	android:name="com.distriqt.extension.camera.permissions.AuthorisationActivity"
-						android:theme="@android:style/Theme.Translucent.NoTitleBar"
-						android:exported="false" />
+
+			<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
 		</application>
 
 	</manifest>
