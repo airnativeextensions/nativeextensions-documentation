@@ -548,10 +548,16 @@ module.exports = {
       ],
     },
     {
-      Usage: ["calendar/get-events", "calendar/add-events"],
+      Usage: [
+        "calendar/get-events", 
+        "calendar/add-events"
+      ],
     },
     {
-      Help: ["calendar/migrating-to-androidx"],
+      Help: [
+        "calendar/migrating-to-v5.1", 
+        "calendar/migrating-to-androidx"
+      ],
     },
     {
       Other: [
