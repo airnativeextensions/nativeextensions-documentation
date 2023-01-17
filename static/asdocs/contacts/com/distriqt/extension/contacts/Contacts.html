@@ -223,16 +223,16 @@ if (contact != null)
 		 
 		 Dispatched when the user changes the authorisation status.</td><td class="summaryTableOwnerCol">Contacts</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:contacts:access:denied" class="signatureLink">contacts:access:denied</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 
-		 Dispatched when the user DENIES permission for the application to 
+		 Dispatched when the user DENIES permission for the application to
 		 access the contact information.</td><td class="summaryTableOwnerCol">Contacts</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:contacts:access:granted" class="signatureLink">contacts:access:granted</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 
-		 Dispatched when the user GRANTS permission for the application to 
+		 Dispatched when the user GRANTS permission for the application to
 		 access the contact information.</td><td class="summaryTableOwnerCol">Contacts</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:contacts:contact:selected" class="signatureLink">contacts:contact:selected</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 
 		 Dispatched when a contact has been selected from the contact picker.</td><td class="summaryTableOwnerCol">Contacts</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:contacts:contactpicker:cancel" class="signatureLink">contacts:contactpicker:cancel</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 
 		 Dispatched when the user cancels the contact picker selection.</td><td class="summaryTableOwnerCol">Contacts</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:contacts:contactpicker:closed" class="signatureLink">contacts:contactpicker:closed</a></div></td><td class="summaryTableDescription summaryTableCol">
-		  
+		 
 		 Dispatched when the contact picker is closed.</td><td class="summaryTableOwnerCol">Contacts</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:contacts:get:contacts:basic" class="signatureLink">contacts:get:contacts:basic</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 
 		 Dispatched after a successful call to getContactListAsync
@@ -262,8 +262,7 @@ if (contact != null)
 		 
 		 Dispatched if an error occurred when saving the contact images
 		 
-		 
-		 </td><td class="summaryTableOwnerCol">Contacts</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.Contacts<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Contacts</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 5.0.12<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Contacts</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+		 		 </td><td class="summaryTableOwnerCol">Contacts</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.Contacts<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Contacts</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 5.1.0<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Contacts</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
@@ -623,64 +622,56 @@ private function saveImagesCompleteHandler( event:ContactsEvent ):void
 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACT_SELECTED" target="">com.distriqt.extension.contacts.events.ContactsEvent.CONTACT_SELECTED</a><br/><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACTPICKER_CLOSED" target="">com.distriqt.extension.contacts.events.ContactsEvent.CONTACTPICKER_CLOSED</a><br/><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACTPICKER_CANCEL" target="">com.distriqt.extension.contacts.events.ContactsEvent.CONTACTPICKER_CANCEL</a></div></div><div class="detailSectionHeader"> Event Detail </div><a name="event:authorisation:changed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">authorisation:changed</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/AuthorisationEvent.html"><code>com.distriqt.extension.contacts.events.AuthorisationEvent</code></a><br/><span class="label">AuthorisationEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/AuthorisationEvent.html#CHANGED"><code>com.distriqt.extension.contacts.events.AuthorisationEvent.CHANGED</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
-		 Dispatched when the user changes the authorisation status. 
+		 Dispatched when the user changes the authorisation status.
 		 The <code>status</code> will indicate the new authorisation status.
-		 </p> 
-		 
-		 </div><a name="event:contacts:access:denied"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:access:denied</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#ACCESS_DENIED"><code>com.distriqt.extension.contacts.events.ContactsEvent.ACCESS_DENIED</code></a><br/><p></p><p></p><p>
+		 </p>
+		 		 </div><a name="event:contacts:access:denied"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:access:denied</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#ACCESS_DENIED"><code>com.distriqt.extension.contacts.events.ContactsEvent.ACCESS_DENIED</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
-		 Dispatched when the user DENIES permission for the application to 
-		 access the contact information. This will occur after a call to 
+		 Dispatched when the user DENIES permission for the application to
+		 access the contact information. This will occur after a call to
 		 request access.
 		 </p>
-		 
-		 <p>
-		 Note: On iOS, once a user has denied access to the application they must 
+		 		 <p>
+		 Note: On iOS, once a user has denied access to the application they must
 		 manually reset the permissions in the settings.
 		 </p>
-		 
-		 </div><a name="event:contacts:access:granted"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:access:granted</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#ACCESS_GRANTED"><code>com.distriqt.extension.contacts.events.ContactsEvent.ACCESS_GRANTED</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:access:granted"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:access:granted</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#ACCESS_GRANTED"><code>com.distriqt.extension.contacts.events.ContactsEvent.ACCESS_GRANTED</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
-		 Dispatched when the user GRANTS permission for the application to 
-		 access the contact information. This will occur after a call to 
+		 Dispatched when the user GRANTS permission for the application to
+		 access the contact information. This will occur after a call to
 		 request access.
 		 </p>
-		 
-		 </div><a name="event:contacts:contact:selected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:contact:selected</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACT_SELECTED"><code>com.distriqt.extension.contacts.events.ContactsEvent.CONTACT_SELECTED</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:contact:selected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:contact:selected</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACT_SELECTED"><code>com.distriqt.extension.contacts.events.ContactsEvent.CONTACT_SELECTED</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when a contact has been selected from the contact picker.
 		 <code>data[0]</code> will contain the contact selected.
 		 </p>
-		 
-		 </div><a name="event:contacts:contactpicker:cancel"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:contactpicker:cancel</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACTPICKER_CANCEL"><code>com.distriqt.extension.contacts.events.ContactsEvent.CONTACTPICKER_CANCEL</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:contactpicker:cancel"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:contactpicker:cancel</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACTPICKER_CANCEL"><code>com.distriqt.extension.contacts.events.ContactsEvent.CONTACTPICKER_CANCEL</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when the user cancels the contact picker selection.
-		 </p> 
-		 
-		 </div><a name="event:contacts:contactpicker:closed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:contactpicker:closed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACTPICKER_CLOSED"><code>com.distriqt.extension.contacts.events.ContactsEvent.CONTACTPICKER_CLOSED</code></a><br/><p></p><p></p><p>
+		 </p>
+		 		 </div><a name="event:contacts:contactpicker:closed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:contactpicker:closed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#CONTACTPICKER_CLOSED"><code>com.distriqt.extension.contacts.events.ContactsEvent.CONTACTPICKER_CLOSED</code></a><br/><p></p><p></p><p>
 	 </p>
-		 <p> 
-		 Dispatched when the contact picker is closed. This should 
+		 <p>
+		 Dispatched when the contact picker is closed. This should
 		 follow either a cancel or a select event.
 		 </p>
-		 
-		 </div><a name="event:contacts:get:contacts:basic"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:basic</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#GET_CONTACTS"><code>com.distriqt.extension.contacts.events.ContactsEvent.GET_CONTACTS</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:get:contacts:basic"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:basic</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#GET_CONTACTS"><code>com.distriqt.extension.contacts.events.ContactsEvent.GET_CONTACTS</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched after a successful call to <code>getContactListAsync</code>
 		 The <code>data</code> field will contain the array of contacts that were
 		 retrieved.
 		 </p>
-		 
-		 </div><a name="event:contacts:get:contacts:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#GET_CONTACTS_ERROR"><code>com.distriqt.extension.contacts.events.ContactsEvent.GET_CONTACTS_ERROR</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:get:contacts:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#GET_CONTACTS_ERROR"><code>com.distriqt.extension.contacts.events.ContactsEvent.GET_CONTACTS_ERROR</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when an error occurs while retrieving the contact
-		 list. The <code>message</code> field will contain a description 
+		 list. The <code>message</code> field will contain a description
 		 of the error that occurred.
 		 </p>
 		 </div><a name="event:contacts:get:contacts:extended"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:extended</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#GET_CONTACTS_EXTENDED"><code>com.distriqt.extension.contacts.events.ContactsEvent.GET_CONTACTS_EXTENDED</code></a><br/><p></p><p></p><p>
@@ -690,8 +681,7 @@ private function saveImagesCompleteHandler( event:ContactsEvent ):void
 		 The <code>data</code> field will contain the array of contacts that were
 		 retrieved.
 		 </p>
-		 
-		 </div><a name="event:contacts:get:contacts:json"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:json</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent</code></a><br/><span class="label">ContactsJSONEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html#GET_CONTACTS_JSON"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent.GET_CONTACTS_JSON</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:get:contacts:json"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:json</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent</code></a><br/><span class="label">ContactsJSONEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html#GET_CONTACTS_JSON"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent.GET_CONTACTS_JSON</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when the JSON representation of the contact
@@ -700,32 +690,28 @@ private function saveImagesCompleteHandler( event:ContactsEvent ):void
 		 <p>
 		 The <code>json</code> variable will contain the json string representation of the contact list
 		 </p>
-		 
-		 </div><a name="event:contacts:get:contacts:json:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:json:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent</code></a><br/><span class="label">ContactsJSONEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html#GET_CONTACTS_JSON_ERROR"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent.GET_CONTACTS_JSON_ERROR</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:get:contacts:json:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:json:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent</code></a><br/><span class="label">ContactsJSONEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html#GET_CONTACTS_JSON_ERROR"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent.GET_CONTACTS_JSON_ERROR</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when an error occurs retrieving the JSON representation of the contact list.
 		 </p>
-		 
-		 </div><a name="event:contacts:get:contacts:modified"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:modified</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#GET_CONTACTS_MODIFIED"><code>com.distriqt.extension.contacts.events.ContactsEvent.GET_CONTACTS_MODIFIED</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:get:contacts:modified"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:modified</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#GET_CONTACTS_MODIFIED"><code>com.distriqt.extension.contacts.events.ContactsEvent.GET_CONTACTS_MODIFIED</code></a><br/><p></p><p></p><p>
 	 </p>
 		  <p>
 		 Dispatched after a successful call to <code>getContactListModifiedSince</code>
 		 The <code>data</code> field will contain the array of contacts that were
 		 retrieved.
 		 </p>
-		 
-		 </div><a name="event:contacts:get:contacts:modified:json"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:modified:json</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent</code></a><br/><span class="label">ContactsJSONEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html#GET_CONTACTS_MODIFIED_JSON"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent.GET_CONTACTS_MODIFIED_JSON</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:get:contacts:modified:json"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:get:contacts:modified:json</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent</code></a><br/><span class="label">ContactsJSONEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsJSONEvent.html#GET_CONTACTS_MODIFIED_JSON"><code>com.distriqt.extension.contacts.events.ContactsJSONEvent.GET_CONTACTS_MODIFIED_JSON</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when the JSON representation of the modified contact
 		 list has been retrieved.
-		 </p> 
+		 </p>
 		 <p>
 		 The <code>json</code> variable will contain the json string representation of the contact list
-		 </p> 
-		 
-		 </div><a name="event:contacts:save:images:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:save:images:complete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#SAVE_IMAGES_COMPLETE"><code>com.distriqt.extension.contacts.events.ContactsEvent.SAVE_IMAGES_COMPLETE</code></a><br/><p></p><p></p><p>
+		 </p>
+		 		 </div><a name="event:contacts:save:images:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:save:images:complete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#SAVE_IMAGES_COMPLETE"><code>com.distriqt.extension.contacts.events.ContactsEvent.SAVE_IMAGES_COMPLETE</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when a call to <code>saveContactImages</code> completes successfully.
@@ -734,14 +720,12 @@ private function saveImagesCompleteHandler( event:ContactsEvent ):void
 		 <code>data</code> will contain an array of objects, each containing a <code>contactId</code>
 		 and an <code>imagePath</code> that can be used to access the contact image
 		 </p>
-		 
-		 </div><a name="event:contacts:save:images:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:save:images:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#SAVE_IMAGES_ERROR"><code>com.distriqt.extension.contacts.events.ContactsEvent.SAVE_IMAGES_ERROR</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:contacts:save:images:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contacts:save:images:error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html"><code>com.distriqt.extension.contacts.events.ContactsEvent</code></a><br/><span class="label">ContactsEvent.type property = </span><a href="../../../../com/distriqt/extension/contacts/events/ContactsEvent.html#SAVE_IMAGES_ERROR"><code>com.distriqt.extension.contacts.events.ContactsEvent.SAVE_IMAGES_ERROR</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched if an error occurred when saving the contact images
 		 </p>
-		 
-		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.Contacts</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 5.0.12</code><p></p></div><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><div class="detailBody">
+		 		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.Contacts</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 5.1.0</code><p></p></div><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><div class="detailBody">
 	 
 	 <p>
 	 The following example demonstrates the process of initialising, checking for access 
@@ -902,4 +886,4 @@ private function contacts_contactPickerCancelHandler( event:ContactsEvent ):void
 }
      </pre></div>
 	 
-	 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Feb 4 2022, 08:27 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Feb 4 2022, 08:27 PM +10:00  -->
+	 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Jan 17 2023, 02:19 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Jan 17 2023, 02:19 PM +10:00  -->

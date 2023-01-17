@@ -780,7 +780,10 @@ module.exports = {
       "Contact Selection": ["contacts/contact-picker-ui"],
     },
     {
-      Help: ["contacts/migrating-to-androidx"],
+      Help: [
+        "contacts/migrating-to-v5.1",
+        "contacts/migrating-to-androidx"
+      ],
     },
     {
       Other: [
