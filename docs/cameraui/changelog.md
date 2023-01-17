@@ -1,3 +1,11 @@
+### 2023.01.17 [v3.5.0]
+
+```
+fix(docs): correct extension id reference in manual add extension docs (#88)
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): Move to new permissions request process
+```
+
 ### 2022.02.04 [v3.4.16]
 
 ```

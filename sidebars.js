@@ -670,10 +670,16 @@ module.exports = {
       ],
     },
     {
-      Usage: ["cameraui/capture-media", "cameraui/camera-ui-options"],
+      Usage: [
+        "cameraui/capture-media", 
+        "cameraui/camera-ui-options"
+      ],
     },
     {
-      Help: ["cameraui/migrating-to-androidx"],
+      Help: [
+        "cameraui/migrating-to-v3.5",
+        "cameraui/migrating-to-androidx"
+      ],
     },
     {
       Other: [

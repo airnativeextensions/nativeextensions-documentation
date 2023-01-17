@@ -37,6 +37,8 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
 	<application android:hardwareAccelerated="true">
 
+	    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
 		<provider
 			android:name="com.distriqt.extension.cameraui.content.FileProvider"
 			android:authorities="YOUR_APPLICATION_PACKAGE.camerauifileprovider"
@@ -46,10 +48,6 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 				android:name="android.support.FILE_PROVIDER_PATHS"
 				android:resource="@xml/distriqt_cameraui_paths" />
 		</provider>
-
-		<activity 	android:name="com.distriqt.extension.cameraui.permissions.AuthorisationActivity"
-					android:theme="@android:style/Theme.Translucent.NoTitleBar"
-					android:exported="false" />
 
 	</application>
 </manifest>
@@ -66,13 +64,16 @@ The following additions are for the `InfoAdditions` node of the iPhone section i
 <iPhone>
 	<InfoAdditions><![CDATA[
 
-		HERE
+		<key>MinimumOSVersion</key>
+		<string>11.0</string>
+
+		<!-- HERE -->
 
 	]]></InfoAdditions>
 </iPhone>
 ```
 
-If you are using **iOS 10** you now need to add some strings to display messages to the user
+If you are using **iOS 10 or higher** you now need to add some strings to display messages to the user
 when certain permissions are requested.
 
 The most important string is the camera usage description which will get displayed during
