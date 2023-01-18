@@ -30,9 +30,10 @@ The following additions must be added to your applications manifest additions.
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	
 	<application>
-	
+
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
 		<!-- EXPANSION FILES -->
-		<activity android:name="com.distriqt.extension.expansionfiles.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 		<service android:name="com.distriqt.extension.expansionfiles.services.ExpansionFilesDownloaderService" android:exported="false" />
 		<receiver android:name="com.distriqt.extension.expansionfiles.receivers.ExpansionFilesAlarmReceiver" android:exported="false" />
 	

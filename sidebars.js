@@ -979,7 +979,10 @@ module.exports = {
       ],
     },
     {
-      Help: ["expansionfiles/migrating-to-androidx"],
+      Help: [
+        "expansionfiles/migrating-to-v4.2",
+        "expansionfiles/migrating-to-androidx"
+      ],
     },
     {
       Other: [

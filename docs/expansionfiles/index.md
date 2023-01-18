@@ -6,6 +6,14 @@ slug: /expansionfiles
 
 ![](images/hero.png)
 
+
+:::warning DEPRECATED
+Please note this extension is still functional however Google has deprecated the expansion files functionality in favour of the newer "Play Asset Delivery". 
+
+You should likely have a look at the "Play Asset Delivery extension" available from Harman here: https://github.com/airsdk/ANE-PlayAssetDelivery
+:::
+
+
 # Expansion Files
 
 The [Expansion Files](http://airnativeextensions.com/extension/com.distriqt.ExpansionFiles) extension gives access to Android APK Expansion Files from your AIR application.

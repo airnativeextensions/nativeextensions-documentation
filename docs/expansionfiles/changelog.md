@@ -1,3 +1,12 @@
+### 2023.01.18 [v4.2.0]
+
+```
+NOTE THIS EXTENSION IS DEPRECATED IN FAVOUR OF PLAY ASSET DELIVERY
+
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): Move to new permissions request process
+```
+
 ### 2022.02.05 [v4.1.16]
 
 ```
