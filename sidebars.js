@@ -1730,7 +1730,10 @@ module.exports = {
       ],
     },
     {
-      Help: ["image/migrating-to-androidx"],
+      Help: [
+        "image/migrating-to-v5.2",
+        "image/migrating-to-androidx"
+      ],
     },
     {
       Other: [
