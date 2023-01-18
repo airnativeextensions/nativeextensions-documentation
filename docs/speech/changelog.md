@@ -1,0 +1,10 @@
+### 2023.01.18 [v1.2.0]
+
+```
+feat(ios): add additional transcription result possibilities
+feat(android): add dispatch of partial results
+feat: add isListening flag to check if the recogniser is active 
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): Move to new permissions request process
+```
+
