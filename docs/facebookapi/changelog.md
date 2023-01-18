@@ -1,3 +1,12 @@
+###### 2023.01.18 [v15.1.0]
+
+```
+feat(android): update facebook android sdk v15.2.0
+feat(ios): update facebook ios sdk v15.1.0
+feat(docs): add notes about requesting ATT auth on iOS for event tracking (#351)
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag (resolves #368)
+```
+
 ###### 2022.07.18 [v10.2.1]
 
 ```
