@@ -11,8 +11,7 @@
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("HitBuilder"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
 				-->
 			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.googleanalytics.builders</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  HitBuilder</td></tr><tr><td class="classHeaderTableLabel">Implementors</td><td> <a href="../../../../../com/distriqt/extension/googleanalytics/builders/EventBuilder.html">EventBuilder</a>,  <a href="../../../../../com/distriqt/extension/googleanalytics/builders/ExceptionBuilder.html">ExceptionBuilder</a>,  <a href="../../../../../com/distriqt/extension/googleanalytics/builders/ItemBuilder.html">ItemBuilder</a>,  <a href="../../../../../com/distriqt/extension/googleanalytics/builders/ScreenViewBuilder.html">ScreenViewBuilder</a>,  <a href="../../../../../com/distriqt/extension/googleanalytics/builders/SocialBuilder.html">SocialBuilder</a>,  <a href="../../../../../com/distriqt/extension/googleanalytics/builders/TimingBuilder.html">TimingBuilder</a>,  <a href="../../../../../com/distriqt/extension/googleanalytics/builders/TransactionBuilder.html">TransactionBuilder</a></td></tr></table><p></p><p></p><p></p>
-	 
-	 <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addImpression()" class="signatureLink">addImpression</a>(product:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a>, impressionList:String = null):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
+	 	 <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addImpression()" class="signatureLink">addImpression</a>(product:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a>, impressionList:String = null):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
 		 
 		 Adds a product impression to the hit.</div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addProduct()" class="signatureLink">addProduct</a>(product:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a>):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
 		 
@@ -20,11 +19,9 @@
 		 
 		 Adds promotion related information to the hit
 		 
-		 
-		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#build()" class="signatureLink">build</a>():<a href="../../../../../com/distriqt/extension/googleanalytics/Hit.html">Hit</a></div><div class="summaryTableDescription">
-		 Builds a Hit object of parameters and values that can be used to send to a Tracker object 
-		 
-		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCampaignParamsFromUrl()" class="signatureLink">setCampaignParamsFromUrl</a>(utmParams:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
+		 		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#build()" class="signatureLink">build</a>():<a href="../../../../../com/distriqt/extension/googleanalytics/Hit.html">Hit</a></div><div class="summaryTableDescription">
+		 Builds a Hit object of parameters and values that can be used to send to a Tracker object
+		 		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCampaignParamsFromUrl()" class="signatureLink">setCampaignParamsFromUrl</a>(utmParams:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
 		 
 		 Parses and translates utm campaign parameters to analytics campaign param
 		 
@@ -42,16 +39,13 @@
 		 gmob_t
 		 
 		 
-		 
-		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCustomDimension()" class="signatureLink">setCustomDimension</a>(index:int, dimension:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
+		 		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCustomDimension()" class="signatureLink">setCustomDimension</a>(index:int, dimension:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
 		 
 		 Adds a custom dimension to the current hit builder.</div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCustomMetric()" class="signatureLink">setCustomMetric</a>(index:int, metric:Number):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
 		 
 		 Adds a custom metric to the current hit builder.</div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setNewSession()" class="signatureLink">setNewSession</a>():<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
-		 
-		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setNonInteraction()" class="signatureLink">setNonInteraction</a>(nonInteraction:Boolean):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
-		 
-		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setParam()" class="signatureLink">setParam</a>(key:String, value:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
+		 		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setNonInteraction()" class="signatureLink">setNonInteraction</a>(nonInteraction:Boolean):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
+		 		 </div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setParam()" class="signatureLink">setParam</a>(key:String, value:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
 		 
 		 Sets the value for the given parameter name.</div></td><td class="summaryTableOwnerCol">HitBuilder</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setProductAction()" class="signatureLink">setProductAction</a>(action:<a href="../../../../../com/distriqt/extension/googleanalytics/ProductAction.html">ProductAction</a>):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></div><div class="summaryTableDescription">
 		 
@@ -59,37 +53,29 @@
 										showHideInherited();
 										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addImpression()"></a><a name="addImpression(com.distriqt.extension.googleanalytics.Product,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addImpression</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addImpression(product:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a>, impressionList:String = null):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
 		 <p>
-		 Adds a product impression to the hit. 
+		 Adds a product impression to the hit.
 		 The product can be optionally associated with a named impression list.
 		 </p>
-		  
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">product</span>:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a></code> &mdash; 		Product to associate with this impression
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">product</span>:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a></code> &mdash; 		Product to associate with this impression
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">impressionList</span>:String</code> (default = <code>null</code>)<code></code> &mdash; 	(optional) Named impression list
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="addProduct()"></a><a name="addProduct(com.distriqt.extension.googleanalytics.Product)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addProduct</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addProduct(product:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a>):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
+		 		 </td></tr></table></div><a name="addProduct()"></a><a name="addProduct(com.distriqt.extension.googleanalytics.Product)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addProduct</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addProduct(product:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a>):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
 		 <p>
-		 Adds product information to be sent with a given hit. 
+		 Adds product information to be sent with a given hit.
 		 </p>
 		 <p>
 		 The action provided in setProductAction(ProductAction) affects how the products passed in through this method get processed
-		 </p> 
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">product</span>:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="addPromotion()"></a><a name="addPromotion(com.distriqt.extension.googleanalytics.Promotion)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addPromotion</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addPromotion(promotion:<a href="../../../../../com/distriqt/extension/googleanalytics/Promotion.html">Promotion</a>):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">product</span>:<a href="../../../../../com/distriqt/extension/googleanalytics/Product.html">Product</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
+		 		 </td></tr></table></div><a name="addPromotion()"></a><a name="addPromotion(com.distriqt.extension.googleanalytics.Promotion)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addPromotion</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addPromotion(promotion:<a href="../../../../../com/distriqt/extension/googleanalytics/Promotion.html">Promotion</a>):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
 		 <p>
 		 Adds promotion related information to the hit
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">promotion</span>:<a href="../../../../../com/distriqt/extension/googleanalytics/Promotion.html">Promotion</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="build()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">build</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function build():<a href="../../../../../com/distriqt/extension/googleanalytics/Hit.html">Hit</a></code><p></p><p></p><p>
-		 Builds a Hit object of parameters and values that can be used to send to a Tracker object 
-		 
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/Hit.html">Hit</a></code> &mdash; A Hit object to send to a Tracker
-		 
-		 </td></tr></table></div><a name="setCampaignParamsFromUrl()"></a><a name="setCampaignParamsFromUrl(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCampaignParamsFromUrl</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setCampaignParamsFromUrl(utmParams:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">promotion</span>:<a href="../../../../../com/distriqt/extension/googleanalytics/Promotion.html">Promotion</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
+		 		 </td></tr></table></div><a name="build()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">build</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function build():<a href="../../../../../com/distriqt/extension/googleanalytics/Hit.html">Hit</a></code><p></p><p></p><p>
+		 Builds a Hit object of parameters and values that can be used to send to a Tracker object
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/Hit.html">Hit</a></code> &mdash; A Hit object to send to a Tracker
+		 		 </td></tr></table></div><a name="setCampaignParamsFromUrl()"></a><a name="setCampaignParamsFromUrl(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCampaignParamsFromUrl</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setCampaignParamsFromUrl(utmParams:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
 		 <p>
 		 Parses and translates utm campaign parameters to analytics campaign param
 		 </p>
@@ -107,73 +93,58 @@
 		 <li>gmob_t</li>
 		 </ul>
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">utmParams</span>:String</code> &mdash; url containing utm campaign parameters
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">utmParams</span>:String</code> &mdash; url containing utm campaign parameters
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">
-		 <div class="listing"><pre>
+		 		 </td></tr></table><br/><span class="label"> Example </span><br/><div class="detailBody">		 <div class="listing"><pre>
          builder.setCampaignParamsFromUrl( "http://my.site.com/index.html?utm_campaign=wow&utm_source=source" );
          </pre></div>
 		 </div></div><a name="setCustomDimension()"></a><a name="setCustomDimension(int,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCustomDimension</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setCustomDimension(index:int, dimension:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
 		 <p>
-		 Adds a custom dimension to the current hit builder. 
+		 Adds a custom dimension to the current hit builder.
 		 </p>
 		 <p>
-		 Calling this method with the same index will overwrite the previous 
-		 dimension with the new one. 
+		 Calling this method with the same index will overwrite the previous
+		 dimension with the new one.
 		 Refer http://goo.gl/igziD2 for details on how to set the custom dimensions up.
-		 </p> 
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; 	The index/slot in which the dimension will be set
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; 	The index/slot in which the dimension will be set
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">dimension</span>:String</code> &mdash; The value of the dimension for the given index
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="setCustomMetric()"></a><a name="setCustomMetric(int,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCustomMetric</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setCustomMetric(index:int, metric:Number):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
+		 		 </td></tr></table></div><a name="setCustomMetric()"></a><a name="setCustomMetric(int,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCustomMetric</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setCustomMetric(index:int, metric:Number):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
 		 <p>
-		 Adds a custom metric to the current hit builder. 
+		 Adds a custom metric to the current hit builder.
 		 </p>
 		 <p>
-		 Calling this method with the same index will overwrite the previous 
-		 metric with the new one. 
+		 Calling this method with the same index will overwrite the previous
+		 metric with the new one.
 		 Refer http://goo.gl/igziD2 for details on how to set the custom metrics up.
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; 	The index/slot in which the metric will be set
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; 	The index/slot in which the metric will be set
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">metric</span>:Number</code> &mdash; The value of the metric for the given index
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="setNewSession()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setNewSession</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setNewSession():<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
-		 
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="setNonInteraction()"></a><a name="setNonInteraction(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setNonInteraction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setNonInteraction(nonInteraction:Boolean):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">nonInteraction</span>:Boolean</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="setParam()"></a><a name="setParam(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setParam</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setParam(key:String, value:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
+		 		 </td></tr></table></div><a name="setNewSession()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setNewSession</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setNewSession():<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
+		 		 </td></tr></table></div><a name="setNonInteraction()"></a><a name="setNonInteraction(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setNonInteraction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setNonInteraction(nonInteraction:Boolean):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">nonInteraction</span>:Boolean</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
+		 		 </td></tr></table></div><a name="setParam()"></a><a name="setParam(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setParam</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setParam(key:String, value:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
 		 <p>
-		 Sets the value for the given parameter name. 
+		 Sets the value for the given parameter name.
 		 </p>
 		 <p>
-		 These values will be added to the hit when it is built. 
-		 This function should only be used for advanced cases where none 
-		 of the explicit setters do not work. This function should usually 
+		 These values will be added to the hit when it is built.
+		 This function should only be used for advanced cases where none
+		 of the explicit setters do not work. This function should usually
 		 be called after all the explicit setter have been called
 		 </p>
-		  
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; 	The name of the parameter that should be sent over wire. This value should start with an ampersand (&)
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; 	The name of the parameter that should be sent over wire. This value should start with an ampersand (&)
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; 	The value to be sent over the wire for the given parameter.
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="setProductAction()"></a><a name="setProductAction(com.distriqt.extension.googleanalytics.ProductAction)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setProductAction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setProductAction(action:<a href="../../../../../com/distriqt/extension/googleanalytics/ProductAction.html">ProductAction</a>):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
+		 		 </td></tr></table></div><a name="setProductAction()"></a><a name="setProductAction(com.distriqt.extension.googleanalytics.ProductAction)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setProductAction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setProductAction(action:<a href="../../../../../com/distriqt/extension/googleanalytics/ProductAction.html">ProductAction</a>):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p></p><p>
 		 <p>
-		 Sets a product action for all the products included in this hit. 
+		 Sets a product action for all the products included in this hit.
 		 </p>
 		 <p>
 		 The action and its associated properties affect how the products added through addProduct(Product) are processed
-		 </p> 
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">action</span>:<a href="../../../../../com/distriqt/extension/googleanalytics/ProductAction.html">ProductAction</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
-		 
-		 </td></tr></table></div><a name="setPromotionAction()"></a><a name="setPromotionAction(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setPromotionAction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setPromotionAction(action:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">action</span>:String</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code></td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Mar 8 2022, 06:14 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Mar 8 2022, 06:14 PM +10:00  -->
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">action</span>:<a href="../../../../../com/distriqt/extension/googleanalytics/ProductAction.html">ProductAction</a></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code> &mdash; The builder object for chaining calls
+		 		 </td></tr></table></div><a name="setPromotionAction()"></a><a name="setPromotionAction(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setPromotionAction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setPromotionAction(action:String):<a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code><p></p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">action</span>:String</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../../com/distriqt/extension/googleanalytics/builders/HitBuilder.html">HitBuilder</a></code></td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 20 2023, 09:41 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 20 2023, 09:41 PM +10:00  -->
