@@ -1,3 +1,11 @@
+### 2023.01.20 [v7.3.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag (resolves #435)
+fix(crashlytics): ios add nil check for error in recordError (#429)
+feat(auth): Add user reload functionality (resolves #430)
+```
+
 ### 2022.08.03 [v7.2.3]
 
 ```
