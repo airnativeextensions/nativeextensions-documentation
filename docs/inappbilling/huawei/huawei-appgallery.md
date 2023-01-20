@@ -52,7 +52,7 @@ keytool.exe -exportcert -keystore PATH_TO_CERTIFICATE.p12 -storepass PASSWORD -l
 
 - Sign in to [AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html) and select My projects.
 - Find your project from the project list and click the app for which you need to enable a service on the project card.
-- Click the Manage APIs tab and toggle the "In App Purchases" switch
+- Click the Manage APIs tab and toggle the "In-App Purchases" switch
 
 ![](images/huawei-appgallery-enableservice.png)
 
@@ -61,12 +61,12 @@ keytool.exe -exportcert -keystore PATH_TO_CERTIFICATE.p12 -storepass PASSWORD -l
 
 ## AppGallery Connect Configuration File
 
-- Sign in to [AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html) and select My apps.
-- Find your app from the list and click the app name.
+- Sign in to [AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html) and select My projects.
+- Find your project from the project list and click the app.
 
-![](images/huawei-appgallery-connect-config-download-1.jpg)
+![](images/huawei-appgallery-connect-config-download-1.png)
 
-- Go to Development > Overview > App information.
+- Go to Project settings > App information.
 - Click `agconnect-services.json` to download the configuration file.
 
 ![](images/huawei-appgallery-connect-config-download-2.png)

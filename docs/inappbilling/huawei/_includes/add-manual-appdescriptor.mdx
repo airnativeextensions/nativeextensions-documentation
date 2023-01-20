@@ -8,6 +8,8 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.InAppBilling</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>com.huawei.hms.base</extensionID>
+    <extensionID>com.huawei.hms.coreinstaller</extensionID>
+    <extensionID>com.huawei.hms.game</extensionID>
 </extensions>
 ```
 
@@ -24,7 +26,32 @@ Add the following permissions to your manifest additions, these permissions are 
 <uses-permission android:name="com.android.vending.BILLING" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
 <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> 
+<uses-permission android:name="com.huawei.hwid.permission.gameservice.archive.access.provider" />
 <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
+```
+
+Add the following queries section:
+
+```xml
+<queries>
+    <intent>
+        <action android:name="com.apptouch.intent.action.update_hms" />
+    </intent>
+    <intent>
+        <action android:name="com.huawei.appmarket.intent.action.AppDetail" />
+    </intent>
+    <package android:name="com.hisilicon.android.hiRMService" />
+    <intent>
+        <action android:name="com.huawei.hms.core.aidlservice" />
+    </intent>
+    <intent>
+        <action android:name="com.huawei.hms.core" />
+    </intent>
+</queries>
+
+<meta-data
+    android:name="com.huawei.hms.min_api_level:apptouch:apptouch"
+    android:value="1" />
 ```
 
 
@@ -33,32 +60,15 @@ These should be added to the `application` node in your manifest additions. Repl
 
 ```xml
 <!-- HUAWEI APP GALLERY -->
-<meta-data android:name="com.huawei.hms.client.service.name:iap" android:value="iap:4.0.2.300" />
-<meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:4.0.2.300" />
-<meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1" />
+<meta-data
+    android:name="com.huawei.hms.client.service.name:iap"
+    android:value="iap:6.6.0.301" />
+<meta-data
+    android:name="com.huawei.hms.min_api_level:iap:iap"
+    android:value="1" />
 
-<activity
-    android:name="com.huawei.hms.activity.BridgeActivity"
-    android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout"
-    android:excludeFromRecents="true"
-    android:exported="false"
-    android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.Translucent" >
-    <meta-data
-        android:name="hwc-theme"
-        android:value="androidhwext:style/Theme.Emui.Translucent" />
-</activity>
-<activity
-    android:name="com.huawei.hms.activity.EnableServiceActivity"
-    android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout" >
-</activity>
 
-<provider
-    android:name="com.huawei.hms.update.provider.UpdateProvider"
-    android:authorities="APPLICATION_PACKAGE.hms.update.provider"
-    android:exported="false"
-    android:grantUriPermissions="true" >
-</provider>
+<!-- HUAWEI BASE -->
 <provider
     android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
     android:authorities="APPLICATION_PACKAGE.AGCInitializeProvider"
@@ -68,24 +78,119 @@ These should be added to the `application` node in your manifest additions. Repl
     android:name="com.huawei.agconnect.core.ServiceDiscovery"
     android:exported="false" />
 
+<meta-data
+    android:name="availableLoaded"
+    android:value="yes" />
+
+<meta-data
+    android:name="com.huawei.hms.client.service.name:base"
+    android:value="base:6.8.0.300" />
+
+<meta-data
+    android:name="com.huawei.hms.min_api_level:base:hmscore"
+    android:value="1" />
+
+<activity
+    android:name="com.huawei.hms.activity.BridgeActivity"
+    android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode"
+    android:excludeFromRecents="true"
+    android:exported="false"
+    android:hardwareAccelerated="true"
+    android:screenOrientation="behind"
+    android:theme="@style/Base_Translucent" >
+    <meta-data
+        android:name="hwc-theme"
+        android:value="androidhwext:style/Theme.Emui.Translucent" />
+</activity>
+<activity
+    android:name="com.huawei.hms.activity.EnableServiceActivity"
+    android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout"
+    android:exported="false" >
+</activity>
+
+
+<!-- HUAWEI CORE INSTALLER -->
+<meta-data
+    android:name="componentverify_ag_cbg_root"
+    android:value="@string/ag_sdk_cbg_root" />
+<meta-data
+    android:name="availableHMSCoreInstaller"
+    android:value="yes" />
+
+<provider
+    android:name="com.huawei.hms.update.provider.UpdateProvider"
+    android:authorities="APPLICATION_PACKAGE.hms.update.provider"
+    android:exported="false"
+    android:grantUriPermissions="true" >
+</provider>
+
 <activity
     android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"
     android:configChanges="orientation|screenSize"
     android:exported="false"
-    android:theme="@style/upsdkDlDialog" >
+    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
     <meta-data
         android:name="hwc-theme"
         android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />
+    <meta-data
+        android:name="hnc-theme"
+        android:value="androidhnext:style/Theme.Magic.Translucent.NoTitleBar" />
 </activity>
 <activity
     android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"
     android:configChanges="orientation|keyboardHidden|screenSize"
     android:exported="false"
-    android:theme="@style/upsdkDlDialog" >
+    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+    <meta-data
+        android:name="hwc-theme"
+        android:value="androidhwext:style/Theme.Emui.Translucent" />
+    <meta-data
+        android:name="hnc-theme"
+        android:value="androidhnext:style/Theme.Magic.Translucent" />
+</activity>
+
+<provider
+    android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
+    android:authorities="APPLICATION_PACKAGE.updateSdk.fileProvider"
+    android:exported="false"
+    android:grantUriPermissions="true" />
+
+
+
+
+<!-- HUAWEI GAME -->
+<meta-data
+    android:name="com.huawei.hms.client.service.name:game"
+    android:value="game:6.8.0.300" />
+<service
+    android:name="com.huawei.hms.jos.games.service.GameService"
+    android:exported="true" >
+    <intent-filter>
+        <action android:name="com.huawei.hms.games.service" />
+    </intent-filter>
+</service>
+
+<provider
+    android:name="com.huawei.hms.jos.games.archive.ArchiveRemoteAccessProvider"
+    android:authorities="APPLICATION_PACKAGE.hmssdk.jos.archive"
+    android:exported="true" >
+</provider>
+
+<activity
+    android:name="com.huawei.appmarket.component.buoycircle.impl.delegete.BuoyBridgeActivity"
+    android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+    android:excludeFromRecents="true"
+    android:exported="false"
+    android:hardwareAccelerated="true"
+    android:theme="@android:style/Theme.Translucent" >
     <meta-data
         android:name="hwc-theme"
         android:value="androidhwext:style/Theme.Emui.Translucent" />
 </activity>
+
+<meta-data
+    android:name="com.huawei.hms.jos.versioncode"
+    android:value="60800300" />
 ```
 
 
@@ -98,44 +203,60 @@ The following example uses our test applicaiton id `air.com.distriqt.test`:
     <manifestAdditions><![CDATA[
         <manifest android:installLocation="auto">
 
-            <uses-sdk android:targetSdkVersion="28" />
+            <uses-sdk android:targetSdkVersion="31" />
 
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="com.android.vending.BILLING" />
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
-            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> 
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+            <uses-permission android:name="com.huawei.hwid.permission.gameservice.archive.access.provider" />
             <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
+
+
+            <queries>
+                <intent>
+                    <action android:name="com.apptouch.intent.action.update_hms" />
+                </intent>
+                <intent>
+                    <action android:name="com.huawei.appmarket.intent.action.AppDetail" />
+                </intent>
+
+                <package android:name="com.hisilicon.android.hiRMService" />
+                <intent>
+                    <action android:name="com.huawei.hms.core.aidlservice" />
+                </intent>
+                <intent>
+                    <action android:name="com.huawei.hms.core" />
+                </intent>
+            </queries>
+
+
+            <meta-data
+                android:name="com.huawei.hms.min_api_level:apptouch:apptouch"
+                android:value="1" />
 
             <application>
 
+                <meta-data android:name="android.max_aspect" android:value="2.5" />
+
+
+                <activity
+                    android:name="com.distriqt.extension.inappbilling.activities.ProductViewActivity"
+                    android:theme="@android:style/Theme.Translucent.NoTitleBar">
+                </activity>
+
+
                 <!-- HUAWEI APP GALLERY -->
+                <meta-data
+                    android:name="com.huawei.hms.client.service.name:iap"
+                    android:value="iap:6.6.0.301" />
+                <meta-data
+                    android:name="com.huawei.hms.min_api_level:iap:iap"
+                    android:value="1" />
 
-                <meta-data android:name="com.huawei.hms.client.service.name:iap" android:value="iap:4.0.2.300" />
-                <meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:4.0.2.300" />
-                <meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1" />
 
-                <activity
-                    android:name="com.huawei.hms.activity.BridgeActivity"
-                    android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout"
-                    android:excludeFromRecents="true"
-                    android:exported="false"
-                    android:hardwareAccelerated="true"
-                    android:theme="@android:style/Theme.Translucent" >
-                    <meta-data
-                        android:name="hwc-theme"
-                        android:value="androidhwext:style/Theme.Emui.Translucent" />
-                </activity>
-                <activity
-                    android:name="com.huawei.hms.activity.EnableServiceActivity"
-                    android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout" >
-                </activity>
-
-                <provider
-                    android:name="com.huawei.hms.update.provider.UpdateProvider"
-                    android:authorities="air.com.distriqt.test.hms.update.provider"
-                    android:exported="false"
-                    android:grantUriPermissions="true" >
-                </provider>
+                <!-- HUAWEI BASE -->
                 <provider
                     android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
                     android:authorities="air.com.distriqt.test.AGCInitializeProvider"
@@ -145,25 +266,119 @@ The following example uses our test applicaiton id `air.com.distriqt.test`:
                     android:name="com.huawei.agconnect.core.ServiceDiscovery"
                     android:exported="false" />
 
+                <meta-data
+                    android:name="availableLoaded"
+                    android:value="yes" />
+
+                <meta-data
+                    android:name="com.huawei.hms.client.service.name:base"
+                    android:value="base:6.8.0.300" />
+
+                <meta-data
+                    android:name="com.huawei.hms.min_api_level:base:hmscore"
+                    android:value="1" />
+
+                <activity
+                    android:name="com.huawei.hms.activity.BridgeActivity"
+                    android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode"
+                    android:excludeFromRecents="true"
+                    android:exported="false"
+                    android:hardwareAccelerated="true"
+                    android:screenOrientation="behind"
+                    android:theme="@style/Base_Translucent" >
+                    <meta-data
+                        android:name="hwc-theme"
+                        android:value="androidhwext:style/Theme.Emui.Translucent" />
+                </activity>
+                <activity
+                    android:name="com.huawei.hms.activity.EnableServiceActivity"
+                    android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout"
+                    android:exported="false" >
+                </activity>
+
+
+                <!-- HUAWEI CORE INSTALLER -->
+                <meta-data
+                    android:name="componentverify_ag_cbg_root"
+                    android:value="@string/ag_sdk_cbg_root" />
+                <meta-data
+                    android:name="availableHMSCoreInstaller"
+                    android:value="yes" />
+
+                <provider
+                    android:name="com.huawei.hms.update.provider.UpdateProvider"
+                    android:authorities="air.com.distriqt.test.hms.update.provider"
+                    android:exported="false"
+                    android:grantUriPermissions="true" >
+                </provider>
+
                 <activity
                     android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"
                     android:configChanges="orientation|screenSize"
                     android:exported="false"
-                    android:theme="@style/upsdkDlDialog" >
+                    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
                     <meta-data
                         android:name="hwc-theme"
                         android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />
+                    <meta-data
+                        android:name="hnc-theme"
+                        android:value="androidhnext:style/Theme.Magic.Translucent.NoTitleBar" />
                 </activity>
                 <activity
                     android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"
                     android:configChanges="orientation|keyboardHidden|screenSize"
                     android:exported="false"
-                    android:theme="@style/upsdkDlDialog" >
+                    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+                    <meta-data
+                        android:name="hwc-theme"
+                        android:value="androidhwext:style/Theme.Emui.Translucent" />
+                    <meta-data
+                        android:name="hnc-theme"
+                        android:value="androidhnext:style/Theme.Magic.Translucent" />
+                </activity>
+
+                <provider
+                    android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
+                    android:authorities="air.com.distriqt.test.updateSdk.fileProvider"
+                    android:exported="false"
+                    android:grantUriPermissions="true" />
+
+
+
+
+                <!-- HUAWEI GAME -->
+                <meta-data
+                    android:name="com.huawei.hms.client.service.name:game"
+                    android:value="game:6.8.0.300" />
+                <service
+                    android:name="com.huawei.hms.jos.games.service.GameService"
+                    android:exported="true" >
+                    <intent-filter>
+                        <action android:name="com.huawei.hms.games.service" />
+                    </intent-filter>
+                </service>
+
+                <provider
+                    android:name="com.huawei.hms.jos.games.archive.ArchiveRemoteAccessProvider"
+                    android:authorities="air.com.distriqt.test.hmssdk.jos.archive"
+                    android:exported="true" >
+                </provider>
+
+                <activity
+                    android:name="com.huawei.appmarket.component.buoycircle.impl.delegete.BuoyBridgeActivity"
+                    android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+                    android:excludeFromRecents="true"
+                    android:exported="false"
+                    android:hardwareAccelerated="true"
+                    android:theme="@android:style/Theme.Translucent" >
                     <meta-data
                         android:name="hwc-theme"
                         android:value="androidhwext:style/Theme.Emui.Translucent" />
                 </activity>
 
+                <meta-data
+                    android:name="com.huawei.hms.jos.versioncode"
+                    android:value="60800300" />
 
             </application>
 

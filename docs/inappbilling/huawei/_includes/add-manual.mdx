@@ -15,13 +15,17 @@ These assets are required by the Huawei SDK and if not included an error will be
 
 Copy all the files in the `assets` folder (alongside the extension):
 
+- `grs_sdk_global_route_config_apptouchupdatesdk.json`
+- `grs_sdk_global_route_config_hmscoreInstallerSDK.json`
 - `grs_sdk_global_route_config_opensdkService.json`
+- `grs_sdk_global_route_config_updatesdk.json`
 - `grs_sdk_server_config.json`
 - `grs_sp.bks`
-- `hianalytics_njjn`
+- `hmsincas.bks`
+- `hmsrootcas.bks`
 - `updatesdkcas.bks`
 
-These need to be added at the root level of your application and packaged with your application. 
+These need to be added at the root level of your application and packaged with your application. You will find these assets in the [HMS repository](https://github.com/distriqt/ANE-HuaweiMobileServices) under `lib/assets/android` alongside the HMS extensions. 
 
 
 
@@ -60,6 +64,8 @@ The HMS SDK is available as a series of extensions that you add into your applic
 This extension requires the following HMS extensions:
 
 - [`com.huawei.hms.base`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.base.ane)
+- [`com.huawei.hms.coreinstaller`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.coreinstaller.ane)
+- [`com.huawei.hms.game`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.game.ane)
 
 
 You must include the above native extensions in your application along with this extension, and you need to ensure they are packaged with your application.

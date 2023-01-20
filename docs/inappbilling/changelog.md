@@ -1,3 +1,12 @@
+### 2023.01.20 [v14.3.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag (resolves #520)
+feat(huawei): update huawei in-app purchases to v6.6.0.301 (resolves #514, resolves #495, resolves #494)
+fix(playbilling): fix for change purchase flow to correctly supply subscription offer for new purchase (resolves #506)
+feat(playbilling): add fallback to legacy implementation when play store is outdated (resolves #489)
+```
+
 ### 2022.11.04 [v14.0.2]
 
 ```
