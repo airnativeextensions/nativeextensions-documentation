@@ -1,3 +1,10 @@
+### 2023.01.23 [v4.5.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): Move to new permissions request process
+```
+
 ### 2022.03.28 [v4.4.0]
 
 ```
