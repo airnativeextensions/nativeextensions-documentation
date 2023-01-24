@@ -1,3 +1,10 @@
+### 2023.01.24 [v4.7.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(android): update exoplayer library to v2.18.2 (#230)
+```
+
 ### 2022.03.09 [v4.6.0]
 
 ```

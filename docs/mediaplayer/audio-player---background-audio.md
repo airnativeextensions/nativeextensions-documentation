@@ -1,13 +1,10 @@
 ---
-title: Background Audio 
-sidebar_label: Background Audio
+title: Audio Player - Background Audio
+sidebar_label: Audio Player - Background Audio
 ---
 
-The Audio Player can be used to playback audio files using the native audio player in the background. This allows you to introduce background audio playback, and remote control center display of audio media information.
+The Audio Player can be used to play back audio files using the native audio player in the background. This allows you to introduce background audio playback, and remote control center display of audio media information.
 
-:::note 
-Background audio means playing audio when your application isn't the foreground application, i.e. when your **application is in the background**. It is not audio played in the background of your application, such as game music. You can use a normal audio player for that type of playback.
-:::
 
 
 ## Background Audio

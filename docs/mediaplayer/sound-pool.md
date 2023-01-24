@@ -7,13 +7,8 @@ A SoundPool is a collection of samples that can be loaded into memory. It allows
 
 This is well suited to short sound effects and playback where trigger time is important. 
 If you want to playback longer sounds and music look at the [AudioPlayer](audio-player.md) class for a more complete audio playback solution.
-
-
-:::info Sound Size
-Soundpool sounds are expected to be short as they are predecoded into memory. Each decoded sound is internally limited to one megabyte storage, which represents approximately 5.6 seconds at 44.1kHz stereo (the duration is proportionally longer at lower sample rates or a channel mask of mono).
-
 Sounds played through the sound pool may not complete if they are too long. 
-:::
+
 
 
 ## Creating Sounds
@@ -26,10 +21,11 @@ To create a `Sound` call `createSound()`:
 var sound:Sound = MediaPlayer.service.soundPool.createSound();
 ```
 
-:::caution
-This is the `com.distriqt.extension.mediaplayer.sound.Sound` class and not `flash.media.Sound`. 
-We have used the same name to be able to quickly replace sounds in your application with the native equivalent.
-:::
+>
+> Note: This is the `com.distriqt.extension.mediaplayer.sound.Sound` class and not `flash.media.Sound`. 
+> We have used the same name to be able to quickly replace sounds in your application with the native equivalent.
+>
+
 
 
 ## Loading
@@ -69,35 +65,20 @@ function sound_errorHandler( event:IOErrorEvent ):void
 
 
 
-## Playback
+## Controlling Playback
 
-Once a sound is loaded you can call `play()` to play the sound. This will return a `com.distriqt.extension.mediaplayer.sound.SoundChannel` instance that you can use to stop and get completion events for the playback:
-
-```actionscript
-var channel:SoundChannel = sound.play();
-```
-
-To stop playback call `stop()` on the channel:
+Once a sound is loaded you can call `play()` to play the sound:
 
 ```actionscript
-channel.stop();
+sound.play();
 ```
 
 
-A `Event.SOUND_COMPLETE` event will be dispatched from a `SoundChannel` when the sound completes playback. 
+To stop a sound call `stop()`:
 
 ```actionscript
-channel.addEventListener( Event.SOUND_COMPLETE, channel_completeHandler );
-
-function channel_completeHandler( event:Event ):void
-{
-    // Sound channel completed playback
-    event.currentTarget.removeEventListener( event.type, channel_completeHandler );
-}
+sound.stop();
 ```
-
-(Note: this event is not super precise but should be adequate for the majority of use cases).
-
 
 
 ## Unloading
@@ -113,25 +94,26 @@ Once a sound has been unloaded the `Sound` instance is no longer valid. You will
 
 
 
+
 ## Fallback
 
 If the device doesn't support native sound pool implementation a fallback implementation will be used which uses the `flash.media.Sound` implementation to playback sounds.
 
 You can check what implementation will be used by checking the `isSupportedNatively` flag on the sound pool. If this is `true` then the native implementation will be used and if it is `false` then the `flash.media.Sound` implementation will be used. 
 
-:::info Native Support
-Currently only Android has a native implementation 
-:::
+>
+> Currently only Android has a native implementation 
+>
 
 
 
 
-## Migrating from `flash.media.Sound`
+## Migrating from flash.media.Sound
 
 
 ### Loading
 
-Loading a sound using the `flash.media.Sound` class:
+Loading a sound using the flash.media.Sound class:
 
 ```actionscript
 var effect:Sound = new Sound();
@@ -151,13 +133,14 @@ Becomes the following using the `com.distriqt.extension.mediaplayer.sound.Sound`
 var effect:Sound = MediaPlayer.service.soundPool.createSound();
 effect.addEventListener( Event.COMPLETE, sound_loadCompleteHandler );
 effect.addEventListener( IOErrorEvent.IO_ERROR, sound_loadErrorHandler );
-effect.loadFile( File.applicationDirectory.resolvePath("sounds/effect.mp3") );
+effect.loadFile( File.applicationDirectory.resolvePath("sounds/effect.mp3"));
 
 function sound_loadCompleteHandler( event:Event ):void 
 {
     effect.play();
 }
 ```
+
 
 ### Playback
 
@@ -168,16 +151,14 @@ var transform:SoundTransform = new SoundTransform();
 var channel:SoundChannel = effect.play( 0, loops, transform );
 ```
 
-becomes:
+becomes (still using flash.media.SoundTransform):
 
 ```actionscript
 var loops:int = 1;
 var transform:SoundTransform = new SoundTransform();
 
-var channel:SoundChannel = effect.play( loops, transform );
+effect.play( loops, transform );
 ```
-
-(still using `flash.media.SoundTransform` but the `com.distriqt.extension.mediaplayer.sound.SoundChannel` class)
 
 
 ### Stopping
@@ -188,11 +169,28 @@ Stopping a sound using flash requires the sound channel:
 channel.stop();
 ```
 
-Similarly here we use the same process:
+This is simplified to using the sound instance:
 
 ```actionscript
-channel.stop();
+effect.stop();
 ```
+
+
+### Events
+
+The Event.COMPLETE and IOErrorEvent.IO_ERROR are both dispatched from the sounds.
+
+There is no way to detect the end of playback with the sound pool.
+
+
+
+
+
+
+
+
+
+
 
 
 
