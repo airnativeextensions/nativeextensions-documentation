@@ -184,7 +184,7 @@ For example to launch a url in the Chrome application
 ```actionscript
 var intent:Intent = new Intent();
 intent.action = "android.intent.action.VIEW";
-intent.data = "http://distriqt.com";
+intent.data = "https://distriqt.com";
 intent.packageName = "com.android.chrome";
 
 var success:Boolean = Share.service.applications.startActivity( intent );

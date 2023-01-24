@@ -2691,6 +2691,7 @@ module.exports = {
     },
     {
       Troubleshooting: [
+        "share/migrating-to-v7.4",
         "share/migrating-from-message",
         "share/migrating-to-androidx",
       ],

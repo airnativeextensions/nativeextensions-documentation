@@ -36,6 +36,10 @@ You will need to replace any occurances of `APPLICATION_PACKAGE` with your appli
 
 	<application android:hardwareAccelerated="true">
 		
+		<!-- PERMISSIONS -->
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+		
+
 		<provider
 			android:name="com.distriqt.extension.share.content.ShareFileProvider"
 			android:authorities="APPLICATION_PACKAGE.sharefileprovider"
@@ -46,8 +50,6 @@ You will need to replace any occurances of `APPLICATION_PACKAGE` with your appli
 				android:resource="@xml/distriqt_share_paths" />
 		</provider>
 
-		<!-- PERMISSIONS -->
-		<activity android:name="com.distriqt.extension.share.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 		
 	</application>
 </manifest>
