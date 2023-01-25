@@ -2618,6 +2618,7 @@ module.exports = {
     },
     {
       Troubleshooting: [
+        "scanner/migrating-to-v5.1",
         "scanner/migrating-to-version-5",
         "scanner/migrating-to-androidx",
       ],
