@@ -2205,8 +2205,9 @@ module.exports = {
     },
     {
       Troubleshooting: [
-        "nativewebview/migrating-to-androidx",
+        "nativewebview/migrating-to-v5.4",
         "nativewebview/migrating-to-v5",
+        "nativewebview/migrating-to-androidx",
       ],
     },
     {
