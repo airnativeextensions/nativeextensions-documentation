@@ -2127,7 +2127,10 @@ module.exports = {
       ],
     },
     {
-      Troubleshooting: ["nativemaps/migrating-to-androidx"],
+      Troubleshooting: [
+        "nativemaps/migrating-to-v5.2",
+        "nativemaps/migrating-to-androidx"
+      ],
     },
     {
       Other: [

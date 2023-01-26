@@ -46,6 +46,9 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
 	<application>
 
+        <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
+
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity"
                   android:theme="@android:style/Theme.Translucent.NoTitleBar"
@@ -59,9 +62,6 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 
         <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
-
-
-		<activity android:name="com.distriqt.extension.nativemaps.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
 	</application>
 </manifest>
