@@ -2308,9 +2308,10 @@ module.exports = {
     },
     {
       Troubleshooting: [
-        "notifications/migrating-to-androidx",
-        "notifications/migrating-to-6.3",
+        "notifications/migrating-to-6.5",
         "notifications/migrating-to-6.4",
+        "notifications/migrating-to-6.3",
+        "notifications/migrating-to-androidx",
       ],
     },
     {
