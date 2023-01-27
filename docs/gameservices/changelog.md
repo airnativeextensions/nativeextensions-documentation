@@ -1,3 +1,9 @@
+### 2023.01.27 [v8.1.1]
+
+```
+fix(air): reverted extension namespace to air 33.1
+```
+
 ### 2023.01.20 [v8.1.0]
 
 ```
