@@ -1,3 +1,9 @@
+### 2023.01.30 [v5.2.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag
+```
+
 ### 2022.03.09 [v5.1.0]
 
 ```
