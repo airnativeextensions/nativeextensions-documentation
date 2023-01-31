@@ -2437,7 +2437,10 @@ module.exports = {
       ],
     },
     {
-      Troubleshooting: ["permissions/migrating-to-androidx"],
+      Troubleshooting: [
+        "permissions/migrating-to-v3.4",
+        "permissions/migrating-to-androidx"
+      ],
     },
     {
       Other: [
