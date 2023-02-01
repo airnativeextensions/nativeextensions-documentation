@@ -1,3 +1,9 @@
+### 2023.02.01 [v3.4.1]
+
+```
+fix(airpackage): correct android manifest additions for changes to permissions process
+```
+
 ### 2023.01.31 [v3.4.0]
 
 ```
