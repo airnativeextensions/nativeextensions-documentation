@@ -1,13 +1,20 @@
 
 
-###### 2021.12.07 [v5.0.68]
+### 2023.02.02 [v5.1.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag
+```
+
+
+### 2021.12.07 [v5.0.68]
 
 ```
 Add airpackage
 ```
 
 
-###### 2021.03.12 [v5.0.067]
+### 2021.03.12 [v5.0.067]
 
 ```
 SDK Update
@@ -18,14 +25,14 @@ SDK Update
 ```
 
 
-###### 2020.03.25 [v4.0.040]
+### 2020.03.25 [v4.0.040]
 
 ```
 Android X migration (resolves #9)
 ```
 
 
-###### 2020.02.14 [v3.2.032]
+### 2020.02.14 [v3.2.032]
 
 ```
 SDK Update
@@ -37,7 +44,7 @@ Updates:
 ```
 
 
-###### 2019.09.30 [v3.1.023]
+### 2019.09.30 [v3.1.023]
 
 ```
 SDK Update
@@ -48,14 +55,14 @@ Removed dynamic framework dependency (no resigning now required) (resolves #2)
 ```
 
 
-###### 2019.07.04 [v3.0.003]
+### 2019.07.04 [v3.0.003]
 
 ```
 Android 64bit support (resolves #5)
 ```
 
 
-###### 2018.08.05 [v2.0.054]
+### 2018.08.05 [v2.0.054]
 
 ```
 v2.0 release
