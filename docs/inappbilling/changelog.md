@@ -1,3 +1,10 @@
+### 2023.02.02 [v14.4.0]
+
+```
+feat(ios,appreceipt): add callback to ApplicationReceipt refresh function
+feat(docs): add documentation for the application receipt functionality
+```
+
 ### 2023.01.20 [v14.3.0]
 
 ```

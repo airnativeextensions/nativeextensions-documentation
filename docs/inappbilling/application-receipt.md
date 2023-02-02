@@ -3,3 +3,126 @@ title: Application Receipt
 sidebar_label: Application Receipt
 ---
 
+:::note 
+The concepts here are relevant only to iOS, iPadOS and macOS using Apple's In-App Purchasing
+:::
+
+The application receipt provides a record of the sale of an app and any purchases the person makes within the app.
+
+You can use this receipt to verify purchases and check expiration of subscriptions. 
+
+There are two ways to verify a receipt’s authenticity:
+
+
+- On your server with the App Store. Validating receipts with the App Store requires secure connections between your app and your server, and between your server and the App Store. For more information, see [Validating receipts with the App Store](https://developer.apple.com/documentation/storekit/in-app_purchase/original_api_for_in-app_purchase/validating_receipts_with_the_app_store?language=objc).
+
+
+- Locally, on the device. Validating receipts locally requires code that reads and validates a binary file that Apple encodes and signs as a PKCS #7 container. For more information, see [Validating receipts on the device](https://developer.apple.com/documentation/appstorereceipts/validating_receipts_on_the_device?language=objc).
+
+
+It is up to you to decide if this is required for your situation. 
+
+
+:::info
+The "Application Receipt" variant performs local validation of the application receipt to retrieve purchase information and makes this information available through the [Get Purchases](get-purchases.md) API.
+:::
+
+
+### Checking for support
+
+You can check if the current device supports the application receipt by checking the `isSupported` flag:
+
+```actionscript
+if (InAppBilling.service.applicationReceipt.isSupported)
+{
+    // Application Receipt functionality is supported
+}
+```
+
+
+### Fetch the receipt data
+
+To retrieve the receipt call the `getAppReceipt()` method:
+
+```actionscript
+var appReceipt:String = InAppBilling.service.applicationReceipt.getAppReceipt();
+```
+
+This returns the base 64 encoded contents of the application receipt file. Generally this is the string that you will likely send to Apple to verify the receipt.
+
+
+
+> The app receipt is always present in the production environment on devices running macOS, iOS, and iPadOS. The app receipt is also always present in TestFlight on devices running macOS. In the sandbox environment and in StoreKit Testing in Xcode, the app receipt is present only after the tester makes the first in-app purchase. If the app calls SKReceiptRefreshRequest or restoreCompletedTransactions, the app receipt is present only if the app has at least one in-app purchase.
+
+If the receipt is empty i.e. `appReceipt == ""` then you will need to refresh the receipt. 
+
+
+
+### Refreshing the receipt
+
+To refresh the receipt you call the `refresh()` method:
+
+
+```actionscript
+InAppBilling.service.applicationReceipt.refresh();
+```
+
+You can specify some properties for the refresh process through the first optional parameter to this function which is an instance of the `ApplicationReceiptProperties` class,
+
+```actionscript
+var props:ApplicationReceiptProperties = new ApplicationReceiptProperties();
+props.isVolumePurchase = true;
+
+InAppBilling.service.applicationReceipt.refresh( props );
+```
+
+The default value is `null`.
+
+You can monitor the result of the refresh call either through the dispatched events or a callback.
+
+
+#### Events
+
+The `refresh()` method will dispatch one of two possible events:
+
+- `ApplicationReceiptEvent.REFRESH_SUCCESS`: Dispatched if the refresh succeeded;
+- `ApplicationReceiptEvent.REFRESH_FAILED`: Dispatched if the refresh failed;
+
+
+```actionscript
+InAppBilling.service.applicationReceipt.addEventListener( 
+    ApplicationReceiptEvent.REFRESH_FAILED,
+    refreshFailedHandler );
+InAppBilling.service.applicationReceipt.addEventListener( 
+    ApplicationReceiptEvent.REFRESH_SUCCESS,
+    refreshSuccessHandler );
+
+function refreshSuccessHandler( event:ApplicationReceiptEvent ):void
+{
+    var appReceipt:String = InAppBilling.service.applicationReceipt.getAppReceipt();
+    trace( "getAppReceipt() = " + appReceipt );
+}
+
+function refreshFailedHandler( event:ApplicationReceiptEvent ):void
+{
+    trace( "application receipt refresh failed" + event.error );
+}
+```
+
+
+#### Callback 
+
+You can pass a callback function as the second parameter to the `refresh()` function, which will be called once the refresh process is complete. It must be of the form `function( success:Boolean, error:Error ):void` for the function callback to be successful:
+
+```actionscript
+InAppBilling.service.applicationReceipt.refresh( 
+    null, 
+    function( success:Boolean, error:Error ):void 
+    {
+        // refresh complete, check success and error for any issues
+    });
+```
+
+
+
+

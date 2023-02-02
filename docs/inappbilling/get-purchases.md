@@ -79,3 +79,5 @@ It will be updated any time you interact with the App Store, eg via making a pur
 If you wish you can manually decode the receipt for more information. Access it via `InAppBilling.service.applicationReceipt.getAppReceipt()`. 
 
 > Decoding this receipt is beyond the scope of our support.
+
+See [Application Receipt](application-receipt.md) for more information.

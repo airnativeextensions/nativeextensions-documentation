@@ -11,20 +11,14 @@
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ApplicationReceipt"); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,true,false	,false,false,false,false,false);}	
 				-->
 			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.inappbilling</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  ApplicationReceipt extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
-	              <p>
 	 Access to the Application Receipt, for iOS > 7
-	 </p>
 	 
-	           <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
-		 
-		 Whether the application receipt function is supported on the current 
+	 
+	 <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 Whether the application receipt function is supported on the current
 		 device.</div></td><td class="summaryTableOwnerCol">ApplicationReceipt</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getAppReceipt()" class="signatureLink">getAppReceipt</a>():String</div><div class="summaryTableDescription">
-		 
 		 Retrieves the current value of the application receipt
-		 
-		 
-		 </div></td><td class="summaryTableOwnerCol">ApplicationReceipt</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#refresh()" class="signatureLink">refresh</a>(options:<a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceiptProperties.html">ApplicationReceiptProperties</a> = null):Boolean</div><div class="summaryTableDescription">
-		 
+		 		 </div></td><td class="summaryTableOwnerCol">ApplicationReceipt</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#refresh()" class="signatureLink">refresh</a>(options:<a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceiptProperties.html">ApplicationReceiptProperties</a> = null, onComplete:Function = null):Boolean</div><div class="summaryTableDescription">
 		 This will refresh the application receipt value, populating it with the most recent
 		 values.</div></td><td class="summaryTableOwnerCol">ApplicationReceipt</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:applicationreceipt:refresh:failed" class="signatureLink">applicationreceipt:refresh:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 		 </td><td class="summaryTableOwnerCol">ApplicationReceipt</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:applicationreceipt:refresh:success" class="signatureLink">applicationreceipt:refresh:success</a></div></td><td class="summaryTableDescription summaryTableCol">
@@ -32,36 +26,28 @@
 		 Dispatched when the Application Receipt has been successfully updated.</td><td class="summaryTableOwnerCol">ApplicationReceipt</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
-		 <p>
-		 Whether the application receipt function is supported on the current 
+		 Whether the application receipt function is supported on the current
 		 device.
-		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isSupported():Boolean</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="getAppReceipt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getAppReceipt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function getAppReceipt():String</code><p></p><p></p><p>
-		 <p>
 		 Retrieves the current value of the application receipt
-		 </p>
-		 
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The base64 encoded string from the appStoreReceiptURL
-		 
-		 </td></tr></table></div><a name="refresh()"></a><a name="refresh(com.distriqt.extension.inappbilling.ApplicationReceiptProperties)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">refresh</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function refresh(options:<a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceiptProperties.html">ApplicationReceiptProperties</a> = null):Boolean</code><p></p><p></p><p>
-		 <p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The base64 encoded string from the appStoreReceiptURL
+		 </td></tr></table></div><a name="refresh()"></a><a name="refresh(com.distriqt.extension.inappbilling.ApplicationReceiptProperties,Function)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">refresh</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function refresh(options:<a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceiptProperties.html">ApplicationReceiptProperties</a> = null, onComplete:Function = null):Boolean</code><p></p><p></p><p>
 		 This will refresh the application receipt value, populating it with the most recent
 		 values.
-		 </p>
+		 
 		 
 		 <b>Events</b>
-		 <p>
-		 Calling this function may potentially dispatch any of the following:
+		 
+		 		 Calling this function may potentially dispatch any of the following:
 		 <ul>
 		 <li><code>ApplicationReceiptEvent.REFRESH_SUCCESS</code></li>
 		 <li><code>ApplicationReceiptEvent.REFRESH_FAILED</code></li>
 		 </ul>
-		 </p>
 		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceiptProperties.html">ApplicationReceiptProperties</a></code> (default = <code>null</code>)<code></code> &mdash; Debugging options
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">options</span>:<a href="../../../../com/distriqt/extension/inappbilling/ApplicationReceiptProperties.html">ApplicationReceiptProperties</a></code> (default = <code>null</code>)<code></code> &mdash; 	Debugging options
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">onComplete</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; Function called when refresh operation is complete, <code>function c(success:Boolean, error:Error ):void</code>
 		 
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the refresh was successfully started
-		 
 		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:applicationreceipt:refresh:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">applicationreceipt:refresh:failed</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/ApplicationReceiptEvent.html"><code>com.distriqt.extension.inappbilling.events.ApplicationReceiptEvent</code></a><br/><span class="label">ApplicationReceiptEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/ApplicationReceiptEvent.html#REFRESH_FAILED"><code>com.distriqt.extension.inappbilling.events.ApplicationReceiptEvent.REFRESH_FAILED</code></a><br/><p></p><p></p><p>
 	 </p>
 		 		 </div><a name="event:applicationreceipt:refresh:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">applicationreceipt:refresh:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/inappbilling/events/ApplicationReceiptEvent.html"><code>com.distriqt.extension.inappbilling.events.ApplicationReceiptEvent</code></a><br/><span class="label">ApplicationReceiptEvent.type property = </span><a href="../../../../com/distriqt/extension/inappbilling/events/ApplicationReceiptEvent.html#REFRESH_SUCCESS"><code>com.distriqt.extension.inappbilling.events.ApplicationReceiptEvent.REFRESH_SUCCESS</code></a><br/><p></p><p></p><p>
@@ -76,15 +62,15 @@ InAppBilling.service.applicationReceipt.addEventListener( ApplicationReceiptEven
 InAppBilling.service.applicationReceipt.addEventListener( ApplicationReceiptEvent.REFRESH_SUCCESS, refreshSuccessHandler );
 InAppBilling.service.applicationReceipt.refresh();
 ...
-private function refreshSuccessHandler( event:ApplicationReceiptEvent ):void
+function refreshSuccessHandler( event:ApplicationReceiptEvent ):void
 {
     var appReceipt:String = InAppBilling.service.applicationReceipt.getAppReceipt();
     trace( "getAppReceipt() = " + appReceipt );
 }
-private function refreshFailedHandler( event:ApplicationReceiptEvent ):void
+function refreshFailedHandler( event:ApplicationReceiptEvent ):void
 {
     trace( "application receipt refresh failed" + event.error );
 }
      </pre></div>
 	 
-	 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 20 2023, 02:54 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 20 2023, 02:54 PM +10:00  -->
+	 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Thu Feb 2 2023, 03:59 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Thu Feb 2 2023, 03:59 PM +10:00  -->

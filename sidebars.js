@@ -1811,6 +1811,7 @@ module.exports = {
         "inappbilling/consuming-purchases",
         "inappbilling/change-a-purchase",
         "inappbilling/promotions",
+        "inappbilling/application-receipt",
         {
           "Subscription Offers": ["inappbilling/subscription-offers", "inappbilling/introductory-prices"],
         },
