@@ -2485,7 +2485,6 @@ module.exports = {
             "pushnotifications/onesignal/onesignal",
             "pushnotifications/migrating-to-v10.2",
             "pushnotifications/migrating-to-v11.2",
-            "pushnotifications/migrating-to-v11.3",
           ],
         },
         {
@@ -2548,6 +2547,7 @@ module.exports = {
         "pushnotifications/migrating-to-v10.2",
         "pushnotifications/migrating-to-v10.1",
         "pushnotifications/migrating-to-v11.2",
+        "pushnotifications/migrating-to-v11.3",
         "pushnotifications/migrating-to-androidx",
       ],
     },
