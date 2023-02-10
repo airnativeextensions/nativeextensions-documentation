@@ -1,3 +1,9 @@
+### 2023.02.10 [v11.3.1]
+
+```
+feat(onesignal): forced removal of bitcode from dynamic frameworks (resolves #558)
+```
+
 ### 2023.01.10 [v11.3.0]
 
 ```
