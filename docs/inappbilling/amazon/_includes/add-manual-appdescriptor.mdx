@@ -29,6 +29,11 @@ If you aren't using either of those services you can remove those additions if y
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="com.android.vending.BILLING" />
 
+	<queries>
+		<package android:name="com.amazon.venezia"/>
+		<package android:name="com.amazon.sdktestclient" />
+	</queries>
+
 	<application>
 
 		<activity 
@@ -47,6 +52,7 @@ If you aren't using either of those services you can remove those additions if y
 
 
 		<!-- AMAZON IN APP PURCHASING -->
+		<activity android:name="com.distriqt.extension.inappbilling.controller.amazon.AmazonActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 		<receiver android:name="com.amazon.device.iap.ResponseReceiver"
 				android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY"
 				android:exported="true" >

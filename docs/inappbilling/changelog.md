@@ -1,3 +1,13 @@
+### 2023.02.13 [v14.4.1]
+
+```
+feat(macos): add apple silicon support (resolves #517)
+feat(android): update gradle version to support building on apple silicon
+feat(amazon): update amazon sdk version 3.0.3
+feat(amazon): add retrieval of product promotions, free trials and introductory offers
+fix(amazon): add workaround to resolve purchase UI not appearing in some circumstances (resolves #470, resolves #521)
+```
+
 ### 2023.02.02 [v14.4.0]
 
 ```

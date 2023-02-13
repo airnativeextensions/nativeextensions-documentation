@@ -38,6 +38,20 @@ You need to ensure that every purchasable item you define has a unique SKU. The 
 Before a SKU can be used, it must be configured via the developer portal. Refer to the developer portal section of the Frequently Asked Questions for information on how to configure SKUs.
 
 
+#### Subscription SKUs
+
+Subscriptions will have a "parent SKU" which is the main subscription IAP in the console. You shouldn't use this SKU directly. Instead when you create a "Subscription Term" you will create a secondary SKU for the particular subscription term. This is the identifier you should use for `getProducts()` and when making a purchase. 
+
+Unfortunately there is no functionality in the SDK to retrieve the parent subscription currently so you must understand the relationship between your subscriptions and the subscription terms.
+
+:::note Recommendation
+We recommend you use a convention on naming these subscriptions so you can easily determine which is the parent subscription and ensure you deliver the correct content. 
+
+For example, if your parent subscription has an SKU of `com.application.subscription1`, then make your term SKUs extend this identifier, eg : `com.application.subscription1.monthly`, `com.application.subscription1.annually` etc. 
+:::
+
+
+
 
 ### App Submission Process
 
