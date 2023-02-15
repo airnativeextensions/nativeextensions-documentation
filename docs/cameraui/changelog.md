@@ -1,3 +1,9 @@
+### 2023.02.15 [v3.5.1]
+
+```
+fix(android,auth): correct issue with fallback authorisation events being dispatched to wrong extension (resolves #90)
+```
+
 ### 2023.01.17 [v3.5.0]
 
 ```
