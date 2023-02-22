@@ -1,3 +1,9 @@
+### 2023.02.22 [v5.5.0]
+
+```
+feat(macos): add support for apple silicon processors (resolves #283)
+```
+
 ### 2023.01.26 [v5.4.0]
 
 ```
