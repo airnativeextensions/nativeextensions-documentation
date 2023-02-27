@@ -1,3 +1,9 @@
+### 2023.02.27 [v3.6.0]
+
+```
+feat(android): update permission requirements for latest android versions (resolves #91)  
+```
+
 ### 2023.02.15 [v3.5.1]
 
 ```

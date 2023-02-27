@@ -29,8 +29,8 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
 
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
 
 	<!-- optional if your application REQUIRES the camera -->
 	<uses-feature android:name="android.hardware.camera" android:required="true" />
