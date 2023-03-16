@@ -168,6 +168,35 @@ module.exports = {
     },
   ],
 
+  appconfig: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "appconfig/index" },
+    {
+      "Get Started": [
+        "appconfig/add-the-extension",
+        "appconfig/setup",
+      ],
+    },
+    {
+      Usage: ["appconfig/usage"],
+    },
+    {
+      Other: [
+        { type: "doc", id: "appconfig/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/appconfig/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/distriqt/ANE-AppConfig/issues/new",
+        },
+      ],
+    },
+  ],
+
   appgroupdefaults: [
     { type: "ref", id: "index" },
     { type: "doc", id: "appgroupdefaults/index" },
