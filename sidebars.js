@@ -2007,16 +2007,16 @@ module.exports = {
     },
     {
       Other: [
-        { type: "doc", id: "localauth/changelog" },
+        { type: "doc", id: "location/changelog" },
         {
           type: "link",
           label: "asdocs",
-          href: "https://docs.airnativeextensions.com/asdocs/localauth/",
+          href: "https://docs.airnativeextensions.com/asdocs/location/",
         },
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-LocalAuth/issues/new",
+          href: "http://github.com/distriqt/ANE-Location/issues/new",
         },
       ],
     },
