@@ -10,6 +10,12 @@ fix(ios): correct frameworks published in the repository (#373)
 fix(ios): correct frameworks published in the repository (#373)
 ```
 
+###### 2023.04.04 [v16.0.101]
+
+```
+fix(ios): correct frameworks published in the repository (#373)
+```
+
 ###### 2023.04.03 [v16.0.1]
 
 ```
