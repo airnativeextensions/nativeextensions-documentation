@@ -1,3 +1,21 @@
+###### 2023.04.04 [v16.0.101]
+
+```
+fix(ios): correct frameworks published in the repository (#373)
+```
+
+###### 2023.04.04 [v16.0.101]
+
+```
+fix(ios): correct frameworks published in the repository (#373)
+```
+
+###### 2023.04.03 [v16.0.1]
+
+```
+feat(sdk): update sdk, android v16.0.1, ios v16.0.1
+```
+
 ###### 2023.01.18 [v15.1.0]
 
 ```
