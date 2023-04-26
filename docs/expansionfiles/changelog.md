@@ -1,3 +1,10 @@
+### 2023.04.26 [v4.2.1]
+
+```
+fix(docs): remove incorrectly included bluetooth documentation (resolves #37)
+feature: update to latest build process
+```
+
 ### 2023.01.18 [v4.2.0]
 
 ```
