@@ -1,3 +1,9 @@
+### 2023.04.26 [v5.1.1]
+
+```
+fix(unity): fix manifest additions for latest android versions
+```
+
 ### 2023.01.27 [v5.1.0]
 
 ```

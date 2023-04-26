@@ -245,7 +245,7 @@ Some examples of intent filters are below.
 An NDEF record with a url pointing to `https://airnativeextensions.com`:
 
 ```xml
-<activity android:name="com.distriqt.extension.nfc.activities.NFCActionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+<activity android:name="com.distriqt.extension.nfc.activities.NFCActionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true" >
     <intent-filter>
         <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
         <category android:name="android.intent.category.DEFAULT"/>
@@ -259,7 +259,7 @@ An NDEF record with a url pointing to `https://airnativeextensions.com`:
 An NDEF record with a plain text:
 
 ```xml
-<activity android:name="com.distriqt.extension.nfc.activities.NFCActionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+<activity android:name="com.distriqt.extension.nfc.activities.NFCActionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true" >
     <intent-filter>
         <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
         <category android:name="android.intent.category.DEFAULT"/>
