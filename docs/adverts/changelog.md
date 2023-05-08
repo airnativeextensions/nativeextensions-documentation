@@ -1,3 +1,10 @@
+### 2023.05.08 [v14.0.3]
+
+```
+feat(android): background thread handling (resolves #456)
+feat(ios,android,admob): add function to set admob network extras (resolves #461)
+```
+
 ### 2023.01.12 [v13.8.1]
 
 ```

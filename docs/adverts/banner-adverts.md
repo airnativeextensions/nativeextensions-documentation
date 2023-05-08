@@ -9,10 +9,15 @@ Banner advertisements are represented by the `AdView` class. You create an insta
 
 ## Creating an AdView
 
-To create an `AdView` use the `createAdView` function.
+To create an `AdView` use the `createAdView` function. This function takes a callback function of the form `function( adView:AdView ):void` and will be called as soon as the AdView has been created and is ready to use.
+
 
 ```actionscript
-var adView:AdView = Adverts.service.createAdView();
+Adverts.service.createAdView(
+        function( adView:AdView ):void
+        {
+                // Set properties and load ads as required
+        });
 ```
 
 This will instanciate an instance of the `AdView` class. 
@@ -45,12 +50,14 @@ To use adaptive banners, replace any calls to `setAdSize()` with `setAdaptiveAdS
 
 
 ```actionscript
-var adView:AdView = Adverts.service.createAdView();
-adView.setAdaptiveAdSize();
-adView.setAdUnitId( "ca-app-pub-3940256099942544/6300978111" );
+Adverts.service.createAdView(
+        function( adView:AdView ):void
+        {
+			adView.setAdaptiveAdSize();
+			adView.setAdUnitId( "ca-app-pub-3940256099942544/6300978111" );
 
-...
-
+			...
+		});
 ```
 
 If you wish to preload an advert for a different width / orientation you can pass in the appropriate values, eg to set the :
