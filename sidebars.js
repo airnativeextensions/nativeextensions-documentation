@@ -2752,6 +2752,38 @@ module.exports = {
     },
   ],
 
+  singular: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "singular/index" },
+    {
+      "Get Started": [
+        "singular/add-the-extension",
+        "singular/initialise",
+      ],
+    },
+    {
+      Usage: [
+        "singular/tracking-events",
+        "singular/advanced-options",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "singular/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/singular/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-Singular/issues/new",
+        },
+      ],
+    },
+  ],
+
   speech: [
     { type: "ref", id: "index" },
     { type: "doc", id: "speech/index" },

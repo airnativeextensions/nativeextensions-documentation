@@ -1,0 +1,195 @@
+---
+title: Advanced Options
+sidebar_label: Advanced Options
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+## Creating Short Referrer Links
+
+Use the createReferrerShortLink method to generate a shortened share link for the User to share the app with friends. Define the referring user details in your app code when the link is created. This allows for tracking referrer attributions in reporting.
+
+
+To create a short link:
+
+- Build a Singular Custom Source Link with defined deep links, that leads to your app download (see the Singular Links FAQ). This link will be referred to as a base link in the code below.
+- Any campaign override parameters to add to the link dynamically (see Tracking Link Parameters for the list of options).
+- The Name and ID of the referring user, in order to track new app installs back to the user who shared the link.
+
+```actionscript
+// Define your Singular tracking link to be used as a base link
+var baseLink:String = "https://sample.sng.link/D52wc/cuvk?pcn=test";
+
+// Add your Referrer ID and Name
+var referrerId:String = "ref id";
+var referrerName:String = "referrer name";
+
+var passthroughParams:Object = {
+            "param": "value"
+        };
+
+Singular.instance.createReferrerShortLink(
+        baseLink,
+        referrerName,
+        referrerId,
+        passthroughParams,
+        function ( success:Boolean, data:String ):void
+        {
+            trace( "createReferrerShortLink: " + success + " :: " + data );
+        }
+);
+```
+
+
+## Adding Ad Revenue Attribution Support
+
+To add ad revenue attribution support in the Singular SDK or must first contact your Singular Customer manager to enable ad revenue attribution and then add the relevant code to your application.
+
+To track revenue, create a `SingularAdData` object with the appropriate parameters and pass it to the `adRevenue()` method.
+
+<Tabs
+  Id="adplatform"
+  defaultValue="admob"
+  values={[
+    {label: 'AdMob', value: 'admob'},
+    {label: 'AppLovin', value: 'applovin'},
+    {label: 'IronSource', value: 'ironsource'},
+    {label: 'Other (Generic)', value: 'generic'},
+  ]}>
+
+  <TabItem value="admob" >
+
+```actionscript 
+var data:SingularAdData = new SingularAdData( SingularAdData.ADMOB, "USD", 1.23 )
+        .withAdUnitId( "admob-unit-id" )
+        .withNetworkName( "mediation-adapter-name" );
+
+Singular.instance.adRevenue( data );
+```
+
+  </TabItem>
+  <TabItem value="applovin" >
+
+```actionscript 
+var data:SingularAdData = new SingularAdData( SingularAdData.APPLOVIN, "USD", 1.23 )
+        .withAdUnitId( "max_ad_unit_id" )
+        .withNetworkName( "network_name" )
+        .withAdType( "ad_format" );
+
+Singular.instance.adRevenue( data );
+```
+
+  </TabItem>
+  <TabItem value="ironsource" >
+
+```actionscript 
+var data:SingularAdData = new SingularAdData( SingularAdData.IRONSOURCE, "USD", 1.23 )
+        .withAdUnitId( "instance_id" )
+        .withAdUnitName( "instance_name" )
+        .withImpressionId( "auction_id" )
+        .withNetworkName( "mediation-adapter-name" )
+        .withAdPlacementName( "placement" )
+        .withAdType( "ad_unit" );
+
+Singular.instance.adRevenue( data );
+```
+
+  </TabItem>
+  <TabItem value="generic" >
+
+```actionscript 
+// Initialize the SingularAdData object with the relevant data
+var data:SingularAdData = new SingularAdData( "YOUR_AD_PLATFORM", "USD", 1.23 );
+
+// The more ad data you add, the greater the granularity
+data.withAdGroupId( "AD_GROUP_ID" )
+    .withNetworkName( "AD_NETWORK_NAME" );
+
+Singular.instance.adRevenue( data );
+```
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+
+
+
+## Tracking Uninstalls
+
+:::note
+Uninstall tracking is only available to Enterprise customers. Additionally, uninstall tracking requires the app to support push notifications.
+:::
+
+You will need to integrate push notifications into your application using FCM on Android and Apple push notifications on iOS.
+
+You will also need to add the necessary configuration in the Singular dashboard.
+
+Once you have registered the device for push notifications, pass the device token to Singular SDK:
+
+```actionscript
+Singular.instance.setDeviceToken( "fcm_or_ios_device_token" );
+```
+
+
+
+## Complying with Data Privacy Laws
+
+Singular provides privacy-safeguarding functionality to help you cooperate with any partners who may be complying with consumer privacy laws such as GDPR and CCPA (California Consumer Privacy Act). These partners want to be notified if the end-user has consented to share their private information.
+
+If you have implemented a way to ask users for consent to share their information, use the `limitDataSharing()` method to notify Singular of the user's choice.
+
+To indicate that the user consented (opted in) to share their information:
+
+```actionscript
+Singular.instance.limitDataSharing( false );
+```
+
+Or, if the user did not consent:
+
+```actionscript
+Singular.instance.limitDataSharing( true );
+```
+
+:::note 
+The use of the method is optional, but there may be attribution information that the partner will share with Singular only if specifically notified that the user has opted in.
+:::
+
+
+### Additional Methods for GDPR Compliance
+
+The Singular SDK provides several methods to help you comply with GDPR policies and let Singular know about user consent or non-consent for tracking.
+
+
+To notify Singular of user consent (opt-in) for tracking
+
+```actionscript
+Singular.instance.trackingOptIn();
+```
+
+To stop all tracking activities for this user on this app:
+
+```actionscript
+Singular.instance.stopAllTracking();
+```
+
+:::note
+Calling this method effectively disables the SDK, even after the app restarts (the state is persistent)! The only way to re-enable tracking is by calling `resumeAllTracking()`.
+:::
+
+To resume tracking for this user on this app.
+
+```actionscript
+Singular.instance.resumeAllTracking();
+```
+
+Check the tracking status for this user on this app. Returns `true` if tracking has been stopped using `stopAllTracking()` and not resumed.
+
+```actionscript
+var isAllTrackingStopped:Boolean = Singular.instance.isAllTrackingStopped();
+```
+
