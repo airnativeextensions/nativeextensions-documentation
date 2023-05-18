@@ -1,3 +1,9 @@
+### 2023.05.18 [v6.3.1]
+
+```
+fix(android): remove unused encryption code
+```
+
 ### 2023.01.11 [v6.3.0]
 
 ```
