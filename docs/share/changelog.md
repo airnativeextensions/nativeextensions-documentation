@@ -1,3 +1,9 @@
+### 2023.05.19 [v7.4.1]
+
+```
+fix(android): update implicit pending intents to explicit
+```
+
 ### 2023.01.24 [v7.4.0]
 
 ```
