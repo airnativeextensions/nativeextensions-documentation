@@ -1,0 +1,107 @@
+---
+title: Mediation - Facebook Audience
+sidebar_label: Facebook Audience
+slug: /applovinsdk/mediation/facebook
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+
+## Add the Facebook Audience Adapter to Your Build
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+### Add the Extension
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+### Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+## Additional code required
+
+
+Make sure to follow Facebook Audience Network instructions, as described [here](https://developers.facebook.com/docs/marketing-apis/data-processing-options#audience-network-sdk). Please note that setting FAN Limited Data Use flag, should be done before initializing App Lovin SDK.
+
+To set this in actionscript call the `setDataProcessingOptions()` method on the `AdSettings` instance.
+
+To explicitly not enable Limited Data Use (LDU) mode, use:
+
+```actionscript
+Facebook.instance.adSettings.setDataProcessingOptions( [] ); 
+```
+
+To enable LDU for users and specify user geography, use:
+- Country: 1 to indicate USA
+- State: 1000 to indicate California.
+
+```actionscript
+Facebook.instance.adSettings.setDataProcessingOptions( ["LDU"], 1, 1000 ); 
+```
+
+To enable LDU for users with geolocation, use:
+- Country: 0 to request that we geolocate that event
+- State: 0 to request that we geolocate that event.
+
+```actionscript
+Facebook.instance.adSettings.setDataProcessingOptions( ["LDU"], 0, 0 ); // enable LDU for users with geolocation
+```
+
+
+### iOS 14+ Support
+
+If you are building for iOS14+, FAN requires you to set the `setAdvertiserTrackingEnabled` flag.
+This allows you to inform Facebook whether to use the data to deliver personalized ads. 
+If the flag is set to `false` FAN will not be able to deliver personalized ads. 
+
+Please note that setting the `setAdvertiserTrackingEnabled` flag should be done before initializing the AppLovin SDK. 
+Learn more about Advertising Tracking Enabled for Audience Network [here](https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/ios/advertising-tracking-enabled). 
+
+
+```actionscript
+Facebook.instance.adSettings.setAdvertiserTrackingEnabled( true );
+```
+

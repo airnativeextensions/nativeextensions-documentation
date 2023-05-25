@@ -367,6 +367,44 @@ module.exports = {
     },
   ],
 
+  applovinsdk: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "applovinsdk/index" },
+    {
+      "Get Started": ["applovinsdk/add-the-extension"],
+    },
+    {
+      Usage: [
+        "applovinsdk/initialise",
+        "applovinsdk/interstitials",
+        "applovinsdk/rewarded-video",
+      ],
+    },
+    {
+      Mediation: [
+        "applovinsdk/mediation/admob/admob",
+        "applovinsdk/mediation/facebook/facebook",
+        "applovinsdk/mediation/ironsource/ironsource",
+        "applovinsdk/mediation/unityads/unityads",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "applovinsdk/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/applovinsdk/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/distriqt/ANE-AppLovinSDK/issues/new",
+        },
+      ],
+    },
+  ],
+
   audiorecorder: [
     { type: "ref", id: "index" },
     { type: "doc", id: "audiorecorder/index" },
