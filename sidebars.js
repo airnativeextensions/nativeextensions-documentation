@@ -127,6 +127,7 @@ module.exports = {
     {
       Troubleshooting: [
         "adverts/troubleshooting",
+        "adverts/migrating-to-version-14.0",
         "adverts/migrating-to-version-13.6",
         "adverts/migrating-to-version-13",
         "adverts/migrating-to-version-12",
