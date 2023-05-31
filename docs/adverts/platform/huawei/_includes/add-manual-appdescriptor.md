@@ -6,16 +6,17 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-        <extensionID>com.distriqt.Adverts</extensionID>
-        <extensionID>com.distriqt.Core</extensionID>
+  <extensionID>com.distriqt.Adverts</extensionID>
+  <extensionID>com.distriqt.Core</extensionID>
 
-        <extensionID>com.huawei.hms.base</extensionID>
-        <extensionID>com.huawei.hms.adsidentifier</extensionID>
-        <extensionID>com.huawei.hms.adslite</extensionID>
+  <extensionID>com.huawei.hms.base</extensionID>
+  <extensionID>com.huawei.hms.adsidentifier</extensionID>
+  <extensionID>com.huawei.hms.adslite</extensionID>
 
-        <extensionID>androidx.appcompat</extensionID>
-        <extensionID>androidx.core</extensionID>
-        <extensionID>androidx.constraintlayout</extensionID>
+  <extensionID>androidx.appcompat</extensionID>
+  <extensionID>androidx.core</extensionID>
+  <extensionID>androidx.constraintlayout</extensionID>
+  <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
