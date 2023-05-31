@@ -33,14 +33,15 @@ These libraries are specific to Android. There are no issues including these on 
 
 This extension requires the following extensions:
 
-- [androidx.appcompat.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.appcompat.ane)
-- [androidx.browser.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
-- [androidx.core.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
-- [androidx.constraintlayout.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.constraintlayout.ane)
-- [androidx.vectordrawable.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.vectordrawable.ane)
-- [androidx.room.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.room.ane)
-- [androidx.work.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.work.ane)
-- [com.google.code.gson.ane](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.code.gson.ane)
+- [androidx.appcompat](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.appcompat.ane)
+- [androidx.browser](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane)
+- [androidx.core](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [androidx.constraintlayout](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.constraintlayout.ane)
+- [androidx.vectordrawable](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.vectordrawable.ane)
+- [androidx.room](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.room.ane)
+- [androidx.work](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.work.ane)
+- [com.google.code.gson](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.code.gson.ane)
+- [com.jetbrains.kotlin](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlin.ane)
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 
@@ -56,9 +57,9 @@ will avoid conflicts, allowing you to use multiple extensions in the one applica
 
 This extension requires the following Google Play Services:
 
-- [com.distriqt.playservices.Base.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
-- [com.distriqt.playservices.Ads.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Ads.ane)
-- [com.distriqt.playservices.AppSet.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AppSet.ane)
+- [com.distriqt.playservices.Base](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [com.distriqt.playservices.Ads](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Ads.ane)
+- [com.distriqt.playservices.AppSet](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AppSet.ane)
 
 You must include the above native extensions in your application along with this extension,
 and you need to ensure they are packaged with your application.
