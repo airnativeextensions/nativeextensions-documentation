@@ -1,3 +1,50 @@
+###### 2023.06.02 [v6.7.0]
+
+```
+feat(android): update to support AIR background thread implementation
+```
+
+###### 2023.02.24 [v6.6.2]
+
+```
+fix(pangle): corrected ios implementation missing dependency (resolves #56)
+```
+
+###### 2023.02.24 [v6.6.1]
+
+```
+fix(pangle): corrected ios implementation missing dependency (resolves #56)
+```
+
+###### 2023.02.17 [v6.6.1]
+
+```
+feat(ios): strip bitcode from dynamic frameworks that haven't been updated yet (resolves #58) 
+```
+
+###### 2023.01.12 [v6.6.0]
+
+```
+feat(ios): Xcode 14 update, remove bitcode and add no-objc-msgsend-selector-stubs compiler flag 
+feat(adverts): update to support Adverts v13.8.0
+
+feat(adcolony): update sdk: android v4.8.0 ios v4.9.0
+feat(applovin): update sdk: android v11.6.1 ios v11.6.1
+feat(facebook): update sdk: android v6.12.0 ios v6.12.0
+feat(ironsource): update sdk: android v7.2.6 ios v7.2.6
+feat(pangle): update sdk: android v4.9.0.7 ios v5.0.0.3
+feat(tapjoy): update sdk: android v12.11.1 ios v12.11.1
+feat(unityads): update sdk: android v4.5.0 ios v4.3.0
+```
+
+###### 2022.11.05 [v6.5.0]
+
+```
+feat(pangle): add pangle mediation network (resolves #44)
+feat(docs): update pangle docs
+fix(adcolony): correct dependencies of airpackage and update docs
+```
+
 ###### 2022.07.20 [v6.4.2]
 
 ```
