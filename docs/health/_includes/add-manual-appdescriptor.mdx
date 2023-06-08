@@ -1,0 +1,133 @@
+
+## Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.Health</extensionID>
+	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.emoji2</extensionID>
+	<extensionID>androidx.healthconnect</extensionID>
+	<extensionID>androidx.vectordrawable</extensionID>
+	<extensionID>com.google.guava</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+
+
+## iOS 
+
+
+### Info Additions 
+
+
+The following additions are for the `InfoAdditions` node of the iPhone section in your application descriptor:
+
+```xml
+<InfoAdditions><![CDATA[
+
+	<key>MinimumOSVersion</key>
+	<string>11.0</string>
+
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>healthkit</string>
+	</array>
+
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>App needs permission to save samples to the HealthKit store</string>
+	
+	<key>NSHealthShareUsageDescription</key>
+	<string>App needs permission to read samples from the HealthKit store</string>
+
+]]></InfoAdditions>
+```
+
+
+### Entitlements
+
+The following additions are for the `Entitlements` node of the iPhone section in your application descriptor:
+
+```xml
+<Entitlements><![CDATA[
+
+	<key>com.apple.developer.healthkit</key>
+	<true/>
+	<key>com.apple.developer.healthkit.access</key>
+	<array>
+		<string>health-records</string>
+	</array>
+
+]]></Entitlements>
+```
+
+
+
+## Android 
+
+### Manifest Additions
+
+The Health extension requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your manifest.
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+:::
+
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-permission android:name="android.permission.INTERNET"/>
+	
+	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="33"/>
+	
+	<queries>
+		<package android:name="com.google.android.apps.healthdata"/>
+	</queries>
+	
+	<permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+	<uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+	
+	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+
+
+		<service android:name="androidx.health.platform.client.impl.sdkservice.HealthDataSdkService" android:enabled="true" android:exported="true">
+			<intent-filter>
+				<action android:name="androidx.health.platform.client.ACTION_BIND_SDK_SERVICE"/>
+			</intent-filter>
+		</service>
+		<activity android:name="com.distriqt.extension.health.AuthorisationActivity" android:enabled="true" android:exported="true" android:theme="@style/Theme.AppCompat.Light"/>
+		<activity android:name="com.distriqt.extension.health.PermissionsRationaleActivity" android:enabled="true" android:exported="true" android:theme="@style/Theme.AppCompat.Light">
+			<intent-filter>
+				<action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE"/>
+			</intent-filter>
+		</activity>
+
+
+		<provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.distriqt.test.androidx-startup" android:exported="false">
+			<meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+			<meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+		</provider>
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+	</application>
+</manifest>
+```
+
+
+### Permissions 
+
+In addition to the above you will need to add the permissions for the health data you require access to, for example, to read and write the step data you need the following permissions:
+
+
+```xml
+	<uses-permission android:name="android.permission.health.READ_STEPS"/>
+	<uses-permission android:name="android.permission.health.WRITE_STEPS"/>
+```
+
+
+
+

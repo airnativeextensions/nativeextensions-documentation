@@ -1750,6 +1750,38 @@ module.exports = {
     },
   ],
 
+  health: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "health/index" },
+    {
+      "Get Started": [
+        "health/add-the-extension"
+      ],
+    },
+    {
+      Usage: [
+        "health/check-for-updates",
+        "health/authorisation",
+        "health/queries"
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "health/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/health/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/distriqt/ANE-Health/issues/new",
+        },
+      ],
+    },
+  ],
+
   idfa: [
     { type: "ref", id: "index" },
     { type: "doc", id: "idfa/index" },

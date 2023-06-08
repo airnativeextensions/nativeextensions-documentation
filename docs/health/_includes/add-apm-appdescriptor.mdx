@@ -1,0 +1,52 @@
+
+### Add Android Permissions 
+
+You will need to add the Android permissions to your android manifest for the health data you require access to. 
+
+Firstly, generate an apm config for android:
+
+```
+apm generate config android
+```
+
+Then edit the file created at `config/android/AndroidManifest.xml` and add in the required permissions, 
+for example, to read and write the step data you need the following permissions:
+
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="33" />
+
+
+    <uses-permission android:name="android.permission.health.READ_STEPS"/>
+    <uses-permission android:name="android.permission.health.WRITE_STEPS"/>
+
+
+</manifest>
+```
+
+### Create Application Descriptor 
+
+Updating your application descriptor will insert the required `extensionID`'s and generate the manifest and info additions for your application. 
+
+You update your application descriptor by running:
+
+```
+apm generate app-descriptor src/MyApp-app.xml
+```
+
+Change the path (`src/MyApp-app.xml`) to point to your application descriptor.
+
+:::caution
+This will modify your application descriptor replacing the manifest additions and info additions with the ones generated from `apm`. 
+
+You should backup your application descriptor before running this command to ensure you don't lose any information.
+
+If you need to insert custom data into these sections see the guides for [Android](https://github.com/airsdk/apm/wiki/Usage-Generate#android) and [iOS](https://github.com/airsdk/apm/wiki/Usage-Generate#ios)
+:::
+
+
+
+
