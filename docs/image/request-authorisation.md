@@ -4,6 +4,13 @@ sidebar_label: Authorisation
 ---
 
 
+:::warning Deprecated
+This functionality has been deprecated and will be removed in an upcoming release. 
+
+You should migrate to the [CameraRollExtended](/docs/camerarollextended/request-authorisation/) extension for adding images to the Camera Roll.
+:::
+
+
 When you are going to be accessing the user's media you must check that your application has been allowed access. 
 To this end the extension provides several helpers to check and request access to the camera roll. 
 

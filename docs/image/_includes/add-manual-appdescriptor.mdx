@@ -23,7 +23,6 @@ add the following to your manifest additions:
 ```xml
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	
 	<application>
 		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
@@ -48,23 +47,4 @@ The following additions are for the `InfoAdditions` node of the iPhone section i
 	]]></InfoAdditions>
 </iPhone>
 ```
-
-
-If you are using iOS 10+ you now need to add some strings to display messages to the user 
-when certain permissions are requested. If you are sharing images then there is a chance 
-the user may select to save to their camera roll in which case the following is displayed 
-the first time your user attempts to access the camera roll.
-
-![](../images/ios-permission-dialog.png)
-
-There are 2 keys required here that control the text in this dialog:
-
-```xml
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access to photo library is required to save images.</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Access to photo library is required to save images.</string>
-```
-
-The second key was added in iOS 11.2. You should add both keys to your info additions.
 

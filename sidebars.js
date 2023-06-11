@@ -1819,16 +1819,15 @@ module.exports = {
     },
     {
       Usage: [
-        "image/request-authorisation",
         "image/saving-bitmapdata-to-file",
         "image/loading-bitmapdata-from-file",
         "image/encoding-bitmapdata-to-bytearray",
         "image/decoding-bytearray-to-bitmapdata",
-        "image/saving-bitmapdata-to-the-camera-roll",
         "image/transformations",
         "image/capturing-a-screenshot",
-      ],
+      ]
     },
+    
     {
       Help: [
         "image/migrating-to-v5.2",
@@ -1848,6 +1847,12 @@ module.exports = {
           label: "Contact Support",
           href: "http://github.com/distriqt/ANE-Image/issues/new",
         },
+      ],
+    },
+    {
+      Deprecated: [
+        "image/saving-bitmapdata-to-the-camera-roll",
+        "image/request-authorisation",
       ],
     },
   ],

@@ -4,6 +4,15 @@ sidebar_label: Saving BitmapData to the Camera Roll
 ---
 
 
+:::warning
+This functionality has been deprecated and will be removed in an upcoming release. 
+
+You should move to the [CameraRollExtended](/docs/camerarollextended/adding-files) extension for adding images to the Camera Roll.
+
+Migration should be relatively straight forward, just replace the `Image.service.saveToCameraRoll()` with `CameraRollExtended.service.addBitmapData()`.
+:::
+
+
 Encoding bitmap data to a file can be a slow process when using AS3 operations. 
 This extension provides functionality to use the native encoders to save `BitmapData` 
 directly to the user's Camera Roll allowing them to have access to this image 
