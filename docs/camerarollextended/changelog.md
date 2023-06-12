@@ -1,3 +1,10 @@
+### 2023.06.12 [v7.0.1]
+
+```
+fix(android): update authorisation process for Android 33+ (resolves #141)
+feat(android,ios): add native addBitmapData and improve addFile functionality to support latest Android implementations 
+```
+
 ### 2023.01.16 [v6.4.0]
 
 ```

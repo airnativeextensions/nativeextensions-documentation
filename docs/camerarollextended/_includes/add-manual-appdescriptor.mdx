@@ -12,6 +12,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>androidx.exifinterface</extensionID>
 	<extensionID>com.distriqt.square.okhttp3</extensionID>
     <extensionID>com.distriqt.square.picasso</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
@@ -30,10 +31,12 @@ and get access to the users media. You should add the listing below to your mani
 	
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+	<uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
 	<uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS"/>
 
 	<!-- OPTIONAL: Only add this one if you want to add to the camera roll -->
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
 
 	<application>
 		

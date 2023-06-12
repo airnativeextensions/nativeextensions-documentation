@@ -1,7 +1,9 @@
 ---
-title: Adding Files
-sidebar_label: Adding Files
+title: Adding Images and Video
+sidebar_label: Adding Images and Video
 ---
+
+## Adding BitmapData
 
 With the standard `CameraRoll` implementation you can easily add a `BitmapData` reference to the camera roll, using the `addBitmapData` function. 
 
@@ -12,6 +14,20 @@ var bd:BitmapData = ...;
 
 CameraRollExtended.service.addBitmapData( bd );
 ```
+
+We have added some additional options around this function that allow you to control the format, quality and filename.
+
+```actionscript 
+CameraRollExtended.service.addBitmapData( bd, "png", 1, "plane.png" );
+```
+
+The format can either be `"png"` or `"jpg"` and the quality should be a number between 0 (lowest quality) and 1 (highest quality). The default is `"jpg"` at `0.8`
+
+The filename is used as the name of the file on Android.
+
+
+
+## Adding files
 
 You may have image files that you wish to add to the camera roll without have to load the bitmap data into memory, and you may also have video content that you want to add to the camera roll.
 
@@ -46,3 +62,50 @@ function addFile_errorHandler( event:CameraRollExtendedEvent ):void
 }
 ```
 
+
+## Android 
+
+If you are supporting Android < API v28 then you will need to ensure you add the `WRITE_EXTERNAL_FILES` permission to your application.
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you are using [`apm`](https://github.com/airsdk/apm) all you can generate a custom configuration manifest and then add the additional permission to that. 
+
+
+```
+apm generate config android 
+```
+
+Open the file generated at `config/android/AndroidManfiest.xml` and ensure you add the following line:
+
+```xml
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+```
+
+Then regenerate your application descriptor:
+
+```
+apm generate app-descriptor src/MyApp-app.xml
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+If you are manually managing your application descriptor (and manifest additions) then you will need to add the following line to the `<manifestAdditions>` tag in your application descriptor: 
+
+```xml
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+```
+
+  </TabItem>
+  
+</Tabs>

@@ -1,0 +1,51 @@
+---
+title: Migrating to v7.0
+sidebar_label: Migrating to v7.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+v7.0 brings a complete rewrite of the authorisation process for Android. The API remains the same however there is a change to the manifest.
+
+**This update requires the latest version of the Core ANE (v7+).**
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you are using [`apm`](https://github.com/airsdk/apm) all you need to do is update to the latest build and regenerate your application descriptor. `apm` will handle the rest.
+
+```
+apm update 
+apm generate app-descriptor src/Main-app.xml
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+If you are manually managing your application descriptor (and manifest additions) then you will be required to make some changes to your manifest. 
+Add the following permissions:
+
+```xml
+<uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+```
+
+And if you are using the `WRITE_EXTERNAL_STORAGE` permission update it to be as below:
+
+```xml
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+```
+
+  </TabItem>
+  
+</Tabs>
+
