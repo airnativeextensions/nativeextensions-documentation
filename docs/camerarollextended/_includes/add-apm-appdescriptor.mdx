@@ -20,4 +20,23 @@ If you need to insert custom data into these sections see the guides for [Androi
 
 
 
+### Writing to the Camera Roll
+
+If you need to write to the camera roll on Android versions < 29 then you will also need to add the `WRITE_EXTERNAL_STORAGE` permission to your manifest.
+
+Create a custom config for Android by running:
+
+```
+apm generate config android
+```
+
+Then edit the file at `config/android/AndroidManifest.xml` and add the following permission.
+
+```xml
+<!-- OPTIONAL: Only add this one if you want to add to the camera roll -->
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+```
+
+Once complete regenerate your app descriptor (as above).
+
 
