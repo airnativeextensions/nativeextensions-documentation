@@ -1,3 +1,9 @@
+### 2023.06.13 [v6.3.2]
+
+```
+fix(android): add additional error checking when dispatching events to catch background app crash (#79)
+```
+
 ### 2023.05.18 [v6.3.1]
 
 ```
