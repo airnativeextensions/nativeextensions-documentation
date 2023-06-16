@@ -1,3 +1,10 @@
+### 2023.06.16 [v7.4.2]
+
+```
+fix(unity,android): update manifest requirements
+fix(unity,ios): correct activity type returned from sharing on iOS
+```
+
 ### 2023.05.19 [v7.4.1]
 
 ```

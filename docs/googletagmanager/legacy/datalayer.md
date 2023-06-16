@@ -3,6 +3,11 @@ title: DataLayer
 sidebar_label: DataLayer
 ---
 
+:::caution
+This documentation is for the legacy SDK and is no longer supported.
+:::
+
+
 ## Pushing to the DataLayer
 
 Google Tag Manager also provides a dataLayer, into which you can push information 

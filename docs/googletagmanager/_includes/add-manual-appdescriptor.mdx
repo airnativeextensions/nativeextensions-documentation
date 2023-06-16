@@ -8,6 +8,7 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>com.distriqt.GoogleTagManager</extensionID>
 	<extensionID>com.distriqt.Core</extensionID>
 	<extensionID>androidx.core</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 	<extensionID>com.distriqt.playservices.Analytics</extensionID>
@@ -22,8 +23,13 @@ The following should be added to your `extensions` node in your application desc
 
 #### Manifest Additions
 
-Making requests and accessing the Google Tag API requires the some additional permissions, 
-so these must also be declared in the manifest.
+The Google Tag Manager SDK requires a few additions to the manifest. You should add the listing below to your manifest.
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+:::
+
 
 ```xml
 <manifest android:installLocation="auto">
@@ -55,21 +61,8 @@ so these must also be declared in the manifest.
 		</activity>
 
 
-		<!-- firebase core -->
-		<provider
-			android:name="com.google.firebase.provider.FirebaseInitProvider"
-			android:authorities="APPLICATION_PACKAGE.firebaseinitprovider"
-			android:directBootAware="true"
-			android:exported="false"
-			android:initOrder="100" />
 
-		<service
-			android:name="com.google.firebase.components.ComponentDiscoveryService"
-			android:exported="false" >
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-		</service>
+		<!-- Include all the Firebase additions here as well -->
 
 
 	</application>
@@ -80,5 +73,27 @@ so these must also be declared in the manifest.
 
 ### iOS 
 
-No additions are required for iOS
+Add the following to your InfoAdditions, 
+
+:::caution
+Ensure you replace:
+- `APPLICATION_IDENTIFIER` with your application id, eg. `com.distriqt.test`
+:::
+
+```xml
+<key>MinimumOSVersion</key>
+<string>11.0</string>
+
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleURLName</key>
+		<string>APPLICATION_IDENTIFIER</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>tagmanager.c.APPLICATION_IDENTIFIER</string>
+		</array>
+	</dict>
+</array>
+```
 

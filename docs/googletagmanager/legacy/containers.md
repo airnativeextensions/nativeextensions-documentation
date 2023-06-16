@@ -3,6 +3,10 @@ title: Containers
 sidebar_label: Containers
 ---
 
+:::caution
+This documentation is for the legacy SDK and is no longer supported.
+:::
+
 ## Loading a Container
 
 The process for opening a container is fairly straight forward, simply involves 

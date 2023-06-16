@@ -1706,10 +1706,14 @@ module.exports = {
   googletagmanager: [
     { type: "ref", id: "index" },
     { type: "doc", id: "googletagmanager/index" },
-    "googletagmanager/google-tag-manager-setup",
-    "googletagmanager/add-the-extension",
     {
-      Usage: ["googletagmanager/containers", "googletagmanager/datalayer"],
+      "Get Started": [
+        "googletagmanager/google-tag-manager-setup",
+        "googletagmanager/add-the-extension",
+      ]
+    },
+    {
+      Usage: ["googletagmanager/log-events"],
     },
     {
       Other: [
@@ -1724,6 +1728,12 @@ module.exports = {
           label: "Contact Support",
           href: "http://github.com/distriqt/ANE-GoogleTagManager/issues/new",
         },
+        {
+          "Legacy": [
+            "googletagmanager/legacy/containers",
+            "googletagmanager/legacy/datalayer"
+          ]
+        }
       ],
     },
   ],
