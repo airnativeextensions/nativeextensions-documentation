@@ -1,3 +1,10 @@
+### 2023.06.22 [v5.2.0]
+
+```
+feat(ios): add new singleRead option to foreground dispatch mode to close ui after a tag read occurs - makes sure ui doesn't block
+fix(android): correct usage of pending intent on recent android versions to include mutable flag
+```
+
 ### 2023.04.26 [v5.1.1]
 
 ```
