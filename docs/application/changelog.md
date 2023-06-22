@@ -1,3 +1,10 @@
+### 2023.06.22 [v7.0.0]
+
+```
+feat(accessibility): add guided mode detection (resolves #273)
+feat(android): air background thread handling (resolves #274)
+```
+
 ### 2023.01.13 [v6.12.0]
 
 ```
