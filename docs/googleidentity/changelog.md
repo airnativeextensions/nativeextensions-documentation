@@ -1,3 +1,10 @@
+### 2023.07.05 [v5.5.0]
+
+```
+feat(android): update google play services auth version to v20.5.0
+feat(ios): update google sign in version to v7.0.0
+```
+
 ### 2023.01.20 [v5.4.0]
 
 ```

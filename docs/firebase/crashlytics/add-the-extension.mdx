@@ -62,3 +62,14 @@ However you can choose to install it manually, as you would have done in the pas
 </Tabs>
 
 
+
+## Android 
+
+On Android you will need to add a unique "build_id" to the `values.xml` resources file you created for your project Firebase configuration.
+Generate a random UUID and add the following line to the `values.xml` with your UUID:
+
+```xml
+<string name="com.crashlytics.android.build_id" translatable="false">f76fbceb-74da-4db8-bd6a-def417dd104e</string>
+```
+
+You can generate a random UUID here: https://www.uuidgenerator.net/version4

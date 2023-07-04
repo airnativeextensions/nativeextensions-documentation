@@ -28,7 +28,7 @@ Making requests and accessing the Google Identity functionality requires the som
 ```xml
 <manifest android:installLocation="auto">
 
-	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31"/>
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="33"/>
 
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -36,6 +36,12 @@ Making requests and accessing the Google Identity functionality requires the som
 	<application>
 	
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+		<activity
+			android:name="com.google.android.gms.common.api.GoogleApiActivity"
+			android:exported="false"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+				
 
 		<activity
 			android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
@@ -48,11 +54,7 @@ Making requests and accessing the Google Identity functionality requires the som
 			android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" 
 			android:visibleToInstantApps="true" />
 
-		<activity
-			android:name="com.google.android.gms.common.api.GoogleApiActivity"
-			android:exported="false"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-				
+			
 	</application>
 
 </manifest>
@@ -74,6 +76,9 @@ up your application in the Google developer console.
 	<array>
 		<string>1</string>
 	</array>
+
+	<key>GIDClientID</key>
+    <string>IOS_CLIENT_ID</string>
 	
 	<key>CFBundleURLTypes</key>
 	<array>
@@ -90,9 +95,23 @@ up your application in the Google developer console.
 ]]></InfoAdditions>
 ```
 
+The `IOS_CLIENT_ID` should be your iOS OAuth client id, eg `XXXXXXXXXXX-xxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com`.
+
 The `URL_SCHEME` should be your reversed ios client id, along the lines of the following: 
 `com.googleusercontent.apps.XXXXXXXXXXX-xxxxxxxxxxxxxxxxxxxxxxxxxxx`
 
 The `URL_NAME` should be your application identifier, eg: `com.distriqt.test`
 
 See the example application for our test application implementation.
+
+
+##### Optional: Configure backend authentication
+
+If you need to get users' ID tokens for backend authentication, also set the `GIDServerClientID` key in your app's Info.plist file.
+
+Note: This is the OAuth client ID for your backend project, not the ID for your iOS or macOS app. You need to get an OAuth server client ID and specify it here.
+
+```xml
+<key>GIDServerClientID</key>
+<string>SERVER_CLIENT_ID</string>
+```
