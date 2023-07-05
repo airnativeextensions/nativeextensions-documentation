@@ -27,7 +27,7 @@
 		 The unique match Id assigned to this match by the game service.</div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#participants" class="signatureLink">participants</a> : Array<div class="summaryTableDescription">[read-only] 
 		 
 		 An array of Participant's currently taking part in this match
-		  
+		 
 		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#status" class="signatureLink">status</a> : int<div class="summaryTableDescription">[read-only] 
 		 
 		 The current status of the match
@@ -35,33 +35,27 @@
 		 
 		 One of :
 		 
-		 TurnBasedMatchStatus.MATCH_STATUS_UNKNOWN, 
-		 TurnBasedMatchStatus.MATCH_STATUS_AUTO_MATCHING, 
-		 TurnBasedMatchStatus.MATCH_STATUS_ACTIVE, 
-		 TurnBasedMatchStatus.MATCH_STATUS_COMPLETE, 
+		 TurnBasedMatchStatus.MATCH_STATUS_UNKNOWN,
+		 TurnBasedMatchStatus.MATCH_STATUS_AUTO_MATCHING,
+		 TurnBasedMatchStatus.MATCH_STATUS_ACTIVE,
+		 TurnBasedMatchStatus.MATCH_STATUS_COMPLETE,
 		 TurnBasedMatchStatus.MATCH_STATUS_EXPIRED, or
 		 TurnBasedMatchStatus.MATCH_STATUS_CANCELED
 		 
 		 
-		 
-		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#turnStatus" class="signatureLink">turnStatus</a> : int<div class="summaryTableDescription">[read-only] 
+		 		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#turnStatus" class="signatureLink">turnStatus</a> : int<div class="summaryTableDescription">[read-only] 
 		 
 		 The turn status of the match for the current player.</div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#variant" class="signatureLink">variant</a> : int<div class="summaryTableDescription">[read-only] 
 		 
-		 An optional variant that you may have passed to the game 
+		 An optional variant that you may have passed to the game
 		 service when this match was created.</div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#cancelMatch()" class="signatureLink">cancelMatch</a>():void</div><div class="summaryTableDescription">
 		 Cancels an active match and quits the game.</div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dismissMatch()" class="signatureLink">dismissMatch</a>():void</div><div class="summaryTableDescription">
 		 Dismisses a match and removes it from the service.</div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#finishMatch()" class="signatureLink">finishMatch</a>(results:Array):void</div><div class="summaryTableDescription">
 		 
 		 Mark a match as finished.</div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#leaveMatch()" class="signatureLink">leaveMatch</a>():void</div><div class="summaryTableDescription">
-		 
-		 
-		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#leaveMatchDuringTurn()" class="signatureLink">leaveMatchDuringTurn</a>(nextParticipant:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a>):void</div><div class="summaryTableDescription">
-		 
-		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#rematch()" class="signatureLink">rematch</a>():void</div><div class="summaryTableDescription">
-		 
-		 
-		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#takeTurn()" class="signatureLink">takeTurn</a>(nextParticipant:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a>):void</div><div class="summaryTableDescription">
+		 		 		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#leaveMatchDuringTurn()" class="signatureLink">leaveMatchDuringTurn</a>(nextParticipant:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a>):void</div><div class="summaryTableDescription">
+		 		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#rematch()" class="signatureLink">rematch</a>():void</div><div class="summaryTableDescription">
+		 		 		 </div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#takeTurn()" class="signatureLink">takeTurn</a>(nextParticipant:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a>):void</div><div class="summaryTableDescription">
 		 
 		 Update a match with new turn data.</div></td><td class="summaryTableOwnerCol">TurnBasedMatch</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:turnbasedmultiplayer:match:cancelMatch:failed" class="signatureLink">turnbasedmultiplayer:match:cancelMatch:failed</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 
@@ -99,33 +93,33 @@
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="canRematch"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">canRematch</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>canRematch:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
-		 Boolean value indicating if this match can be "rematched". 
+		 Boolean value indicating if this match can be "rematched".
 		 That is a match with the same participants started.
-		 </p> 
+		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get canRematch():Boolean</code><br/></div><a name="propertyDetail"></a><a name="created"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">created</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>created:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
 		 The timestamp when this match was created.
-		 </p> 
+		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get created():int</code><br/></div><a name="propertyDetail"></a><a name="data"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">data</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>data:ByteArray</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
 		 The current play state data.
-		 </p> 
+		 </p>
 		 <p>
-		 You should check the <code>dataMaxSize</code> for the maximum byte size of this 
+		 You should check the <code>dataMaxSize</code> for the maximum byte size of this
 		 byte array.
 		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get data():ByteArray</code><br/></div><a name="propertyDetail"></a><a name="dataMaxSize"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dataMaxSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>dataMaxSize:uint</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
-		 Gets the maximum data size per match in bytes. 
+		 Gets the maximum data size per match in bytes.
 		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dataMaxSize():uint</code><br/></div><a name="propertyDetail"></a><a name="matchId"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">matchId</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>matchId:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
 		 The unique match Id assigned to this match by the game service.
-		 </p> 
+		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get matchId():String</code><br/></div><a name="propertyDetail"></a><a name="participants"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">participants</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>participants:Array</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
 		 An array of Participant's currently taking part in this match
-		 </p> 
+		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get participants():Array</code><br/></div><a name="propertyDetail"></a><a name="status"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">status</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>status:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
 		 The current status of the match
@@ -133,36 +127,33 @@
 		 <p>
 		 One of :
 		 <ul>
-		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_UNKNOWN</code>,</li> 
-		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_AUTO_MATCHING</code>,</li> 
-		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_ACTIVE</code>,</li> 
-		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_COMPLETE</code>,</li> 
+		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_UNKNOWN</code>,</li>
+		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_AUTO_MATCHING</code>,</li>
+		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_ACTIVE</code>,</li>
+		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_COMPLETE</code>,</li>
 		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_EXPIRED</code>, or</li>
 		 <li><code>TurnBasedMatchStatus.MATCH_STATUS_CANCELED</code></li>
 		 </ul>
 		 </p>
-		 
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get status():int</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TurnBasedMatchStatus.html" target="">com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMatchStatus</a></div></div><a name="propertyDetail"></a><a name="turnStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">turnStatus</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>turnStatus:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get status():int</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TurnBasedMatchStatus.html" target="">com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMatchStatus</a></div></div><a name="propertyDetail"></a><a name="turnStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">turnStatus</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>turnStatus:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
 		 The turn status of the match for the <b>current player</b>.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 One of :
 		 <ul>
-		 <li><code>TurnBasedMatchStatus.MATCH_TURN_STATUS_UNKNOWN</code>,</li> 
-		 <li><code>TurnBasedMatchStatus.MATCH_TURN_STATUS_INVITED</code>,</li> 
-		 <li><code>TurnBasedMatchStatus.MATCH_TURN_STATUS_MY_TURN</code>,</li> 
+		 <li><code>TurnBasedMatchStatus.MATCH_TURN_STATUS_UNKNOWN</code>,</li>
+		 <li><code>TurnBasedMatchStatus.MATCH_TURN_STATUS_INVITED</code>,</li>
+		 <li><code>TurnBasedMatchStatus.MATCH_TURN_STATUS_MY_TURN</code>,</li>
 		 <li><code>TurnBasedMatchStatus.MATCH_TURN_STATUS_THEIR_TURN</code>, or</li>
 		 <li><code>TurnBasedMatchStatus.MATCH_TURN_STATUS_COMPLETE</code></li>
 		 </ul>
 		 </p>
-		 
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get turnStatus():int</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TurnBasedMatchStatus.html" target="">com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMatchStatus</a></div></div><a name="propertyDetail"></a><a name="variant"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">variant</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>variant:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get turnStatus():int</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TurnBasedMatchStatus.html" target="">com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMatchStatus</a></div></div><a name="propertyDetail"></a><a name="variant"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">variant</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>variant:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
-		 An optional variant that you may have passed to the game 
+		 An optional variant that you may have passed to the game
 		 service when this match was created.
-		 </p> 
+		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get variant():int</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="cancelMatch()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">cancelMatch</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function cancelMatch():void</code><p></p><p></p><p>
 		 Cancels an active match and quits the game.
 		 The player should be the current player for this method to succeed.
@@ -179,66 +170,53 @@
 		 Then performs: <code>removeWithCompletionHandler</code> https://developer.apple.com/documentation/gamekit/gkturnbasedmatch/1520651-removewithcompletionhandler
 		 		 </p></div><a name="finishMatch()"></a><a name="finishMatch(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">finishMatch</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function finishMatch(results:Array):void</code><p></p><p></p><p>
 		 <p>
-		 Mark a match as finished. 
+		 Mark a match as finished.
 		 </p>
 		 <p>
-		 This should be called when the match is over and all participants 
-		 have results to be reported (if appropriate). 
+		 This should be called when the match is over and all participants
+		 have results to be reported (if appropriate).
 		 </p>
 		 <p>
-		 Note that the last client to update a match is responsible for 
+		 Note that the last client to update a match is responsible for
 		 calling finish on that match.
 		 </p>
 		 <p>
-		 On the last turn of the match, the client should call this method 
+		 On the last turn of the match, the client should call this method
 		 instead of <code>takeTurn</code>.
 		 </p>
-		 
-		 <p>
-		 In order to finish the match with results you should create an array 
+		 		 <p>
+		 In order to finish the match with results you should create an array
 		 of <code>ParticipantResult</code> objects for the participants in the
-		 match that require a result. You don't have to assign results to 
+		 match that require a result. You don't have to assign results to
 		 participants, however doing so will enable the service to display
-		 results to the player. Providing results for participants who are not 
+		 results to the player. Providing results for participants who are not
 		 in the match is an error.
 		 </p>
-		 
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">results</span>:Array</code></td></tr></table></p></div><a name="leaveMatch()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaveMatch</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function leaveMatch():void</code><p></p><p></p><p>
-		 
-		 
-		 </p></div><a name="leaveMatchDuringTurn()"></a><a name="leaveMatchDuringTurn(com.distriqt.extension.gameservices.multiplayer.Participant)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaveMatchDuringTurn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function leaveMatchDuringTurn(nextParticipant:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a>):void</code><p></p><p></p><p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">nextParticipant</span>:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a></code> &mdash; The next player/participant to have their turn
-		 
-		 </td></tr></table></p></div><a name="rematch()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">rematch</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function rematch():void</code><p></p><p></p><p>
-		 
-		 
-		 </p></div><a name="takeTurn()"></a><a name="takeTurn(com.distriqt.extension.gameservices.multiplayer.Participant)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">takeTurn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function takeTurn(nextParticipant:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a>):void</code><p></p><p></p><p>
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">results</span>:Array</code></td></tr></table></p></div><a name="leaveMatch()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaveMatch</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function leaveMatch():void</code><p></p><p></p><p>
+		 		 		 </p></div><a name="leaveMatchDuringTurn()"></a><a name="leaveMatchDuringTurn(com.distriqt.extension.gameservices.multiplayer.Participant)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">leaveMatchDuringTurn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function leaveMatchDuringTurn(nextParticipant:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a>):void</code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">nextParticipant</span>:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a></code> &mdash; The next player/participant to have their turn
+		 		 </td></tr></table></p></div><a name="rematch()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">rematch</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function rematch():void</code><p></p><p></p><p>
+		 		 		 </p></div><a name="takeTurn()"></a><a name="takeTurn(com.distriqt.extension.gameservices.multiplayer.Participant)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">takeTurn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function takeTurn(nextParticipant:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a>):void</code><p></p><p></p><p>
 		 <p>
-		 Update a match with new turn data. The participant that is passed in 
+		 Update a match with new turn data. The participant that is passed in
 		 as the pending participant will be notified that it is their turn to
-		 take action. If no pending participant is provided and the match has 
-		 available auto-match slots, the match will wait for additional 
+		 take action. If no pending participant is provided and the match has
+		 available auto-match slots, the match will wait for additional
 		 players to be found. If there are no auto-match slots available for
 		 this match, a pending participant ID is required.
 		 </p>
-		 
-		 <p>
-		 Note that players will not receive invitations for matches until this 
+		 		 <p>
+		 Note that players will not receive invitations for matches until this
 		 method is called. An invitation will be sent to a player the first
 		 time they are set as the pending participant of a match.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 This will dispatch a <code>TurnBasedMatchEvent</code> with the result,
-		 either <code>TAKETURN_SUCCESS</code> and this match will be updated 
+		 either <code>TAKETURN_SUCCESS</code> and this match will be updated
 		 or <code>TAKETURN_FAILED</code> on an error.
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">nextParticipant</span>:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a></code> &mdash; The next player/participant to have their turn
-		 
-		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html#TAKETURN_SUCCESS" target="">com.distriqt.extension.gameservices.events.TurnBasedMatchEvent.TAKETURN_SUCCESS</a><br/><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html#TAKETURN_FAILED" target="">com.distriqt.extension.gameservices.events.TurnBasedMatchEvent.TAKETURN_FAILED</a></div></div><div class="detailSectionHeader"> Event Detail </div><a name="event:turnbasedmultiplayer:match:cancelMatch:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">turnbasedmultiplayer:match:cancelMatch:failed</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html"><code>com.distriqt.extension.gameservices.events.TurnBasedMatchEvent</code></a><br/><span class="label">TurnBasedMatchEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html#CANCEL_FAILED"><code>com.distriqt.extension.gameservices.events.TurnBasedMatchEvent.CANCEL_FAILED</code></a><br/><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">nextParticipant</span>:<a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Participant.html">Participant</a></code> &mdash; The next player/participant to have their turn
+		 		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html#TAKETURN_SUCCESS" target="">com.distriqt.extension.gameservices.events.TurnBasedMatchEvent.TAKETURN_SUCCESS</a><br/><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html#TAKETURN_FAILED" target="">com.distriqt.extension.gameservices.events.TurnBasedMatchEvent.TAKETURN_FAILED</a></div></div><div class="detailSectionHeader"> Event Detail </div><a name="event:turnbasedmultiplayer:match:cancelMatch:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">turnbasedmultiplayer:match:cancelMatch:failed</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html"><code>com.distriqt.extension.gameservices.events.TurnBasedMatchEvent</code></a><br/><span class="label">TurnBasedMatchEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html#CANCEL_FAILED"><code>com.distriqt.extension.gameservices.events.TurnBasedMatchEvent.CANCEL_FAILED</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 </p>
@@ -276,13 +254,13 @@
 		 Dispatched when a match has been removed from the local device. For example, this might occur if the player leaves the match on another device.
 		 </p>
 		 <p>
-		 <code>data</code> will be null and <code>message</code> will contain the matchId of the 
+		 <code>data</code> will be null and <code>message</code> will contain the matchId of the
 		 match that was removed from the device.
 		 </p>
 		 		 </div><a name="event:turnbasedmultiplayer:match:taketurn:failed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">turnbasedmultiplayer:match:taketurn:failed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html"><code>com.distriqt.extension.gameservices.events.TurnBasedMatchEvent</code></a><br/><span class="label">TurnBasedMatchEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html#TAKETURN_FAILED"><code>com.distriqt.extension.gameservices.events.TurnBasedMatchEvent.TAKETURN_FAILED</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
-		 Dispatched when a call to <code>takeTurn</code> fails on a match. 
+		 Dispatched when a call to <code>takeTurn</code> fails on a match.
 		 The <code>message</code> will contain information about the error.
 		 </p>
 		 		 </div><a name="event:turnbasedmultiplayer:match:taketurn:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">turnbasedmultiplayer:match:taketurn:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html"><code>com.distriqt.extension.gameservices.events.TurnBasedMatchEvent</code></a><br/><span class="label">TurnBasedMatchEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/TurnBasedMatchEvent.html#TAKETURN_SUCCESS"><code>com.distriqt.extension.gameservices.events.TurnBasedMatchEvent.TAKETURN_SUCCESS</code></a><br/><p></p><p></p><p>
@@ -299,9 +277,8 @@
 		 <p>
 		 <code>data</code> will contain the updated match information.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 When this event occurs it is important that you assess the updated
 		 match status and update your game accordingly.
 		 </p>
-		 		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 27 2023, 03:50 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 27 2023, 03:50 PM +10:00  -->
+		 		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Jul 5 2023, 10:33 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Jul 5 2023, 10:33 AM +10:00  -->

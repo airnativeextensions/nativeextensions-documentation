@@ -10,10 +10,10 @@
 				
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("TurnBasedMatchEvent"); titleBar_setSubNav(true,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
 				-->
-			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.gameservices.events</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  TurnBasedMatchEvent</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">TurnBasedMatchEvent  <img src="../../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.Event</td></tr></table><p></p><p></p><p></p>	
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.gameservices.events</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  TurnBasedMatchEvent</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">TurnBasedMatchEvent  <img src="../../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.Event</td></tr></table><p></p><p></p><p></p>
 	              <p>
 	 Describes events associated with a particular match.
-	 Some of these are dispatched by the <code>TurnBasedMultiplayer</code> manager 
+	 Some of these are dispatched by the <code>TurnBasedMultiplayer</code> manager
 	 and others by an actual instance of a <code>TurnBasedMatch</code>.
 	 </p>
 	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#match" class="signatureLink">match</a> : <a href="../../../../../com/distriqt/extension/gameservices/turnbasedmultiplayer/TurnBasedMatch.html">TurnBasedMatch</a><div class="summaryTableDescription">
@@ -67,31 +67,29 @@
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="match"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">match</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public var match:<a href="../../../../../com/distriqt/extension/gameservices/turnbasedmultiplayer/TurnBasedMatch.html">TurnBasedMatch</a></code><p></p><p></p><p>
 		 <p>
 		 The match associated with this event.
-		 </p> 
+		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="message"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">message</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var message:String</code><p></p><p></p><p>
 		 <p>
 		 A message associated with this event.
 		 Generally associated with the FAILED events,
 		 this is a description of the error that occurred.
-		 </p> 
+		 </p>
 		 </p></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="TurnBasedMatchEvent()"></a><a name="TurnBasedMatchEvent(String,com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMatch,String,Boolean,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">TurnBasedMatchEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function TurnBasedMatchEvent(type:String, match:<a href="../../../../../com/distriqt/extension/gameservices/turnbasedmultiplayer/TurnBasedMatch.html">TurnBasedMatch</a>, message:String, bubbles:Boolean = false, cancelable:Boolean = false)</code><p></p><p>
 		  Constructor
 		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">match</span>:<a href="../../../../../com/distriqt/extension/gameservices/turnbasedmultiplayer/TurnBasedMatch.html">TurnBasedMatch</a></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">message</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bubbles</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">cancelable</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="clone()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code>override public function clone():Event</code><p></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Event</code></td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="ACCEPTINVITATION_FAILED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCEPTINVITATION_FAILED</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const ACCEPTINVITATION_FAILED:String = turnbasedmultiplayer:acceptinvitation:failed</code><p></p><p></p><p>
 		 <p>
 		 Dispatched if there was an error while accepting an invitation.
 		 </p>
-		 
-		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/turnbasedmultiplayer/TurnBasedMultiplayer.html#acceptInvitation()" target="">com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMultiplayer.acceptInvitation()</a></div></div><a name="constantDetail"></a><a name="ACCEPTINVITATION_SUCCESS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCEPTINVITATION_SUCCESS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCEPTINVITATION_SUCCESS:String = turnbasedmultiplayer:acceptinvitation:success</code><p></p><p></p><p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/turnbasedmultiplayer/TurnBasedMultiplayer.html#acceptInvitation()" target="">com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMultiplayer.acceptInvitation()</a></div></div><a name="constantDetail"></a><a name="ACCEPTINVITATION_SUCCESS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCEPTINVITATION_SUCCESS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCEPTINVITATION_SUCCESS:String = turnbasedmultiplayer:acceptinvitation:success</code><p></p><p></p><p>
 		 <p>
 		 Dispatched if a match invitation was successfully accepted.
 		 </p>
 		 <p>
-		 <code>data</code> will contain the match that was accepted and you 
+		 <code>data</code> will contain the match that was accepted and you
 		 should process the match for status information and display to
 		 your user.
 		 </p>
-		 
-		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/turnbasedmultiplayer/TurnBasedMultiplayer.html#acceptInvitation()" target="">com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMultiplayer.acceptInvitation()</a></div></div><a name="constantDetail"></a><a name="CANCEL_FAILED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">CANCEL_FAILED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CANCEL_FAILED:String = turnbasedmultiplayer:match:cancelMatch:failed</code><p></p><p></p><p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/turnbasedmultiplayer/TurnBasedMultiplayer.html#acceptInvitation()" target="">com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMultiplayer.acceptInvitation()</a></div></div><a name="constantDetail"></a><a name="CANCEL_FAILED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">CANCEL_FAILED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CANCEL_FAILED:String = turnbasedmultiplayer:match:cancelMatch:failed</code><p></p><p></p><p>
 		 <p>
 		 </p>
 		 		 </p></div><a name="constantDetail"></a><a name="CANCEL_SUCCESS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">CANCEL_SUCCESS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CANCEL_SUCCESS:String = turnbasedmultiplayer:match:cancelMatch:success</code><p></p><p></p><p>
@@ -118,7 +116,7 @@
 		 Dispatched when a match has been removed from the local device. For example, this might occur if the player leaves the match on another device.
 		 </p>
 		 <p>
-		 <code>data</code> will be null and <code>message</code> will contain the matchId of the 
+		 <code>data</code> will be null and <code>message</code> will contain the matchId of the
 		 match that was removed from the device.
 		 </p>
 		 		 </p></div><a name="constantDetail"></a><a name="MATCH_UPDATED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">MATCH_UPDATED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const MATCH_UPDATED:String = turnbasedmultiplayer:match:updated</code><p></p><p></p><p>
@@ -128,8 +126,7 @@
 		 <p>
 		 <code>data</code> will contain the updated match information.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 When this event occurs it is important that you assess the updated
 		 match status and update your game accordingly.
 		 </p>
@@ -141,7 +138,7 @@
 		 </p>
 		 		 </p></div><a name="constantDetail"></a><a name="TAKETURN_FAILED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">TAKETURN_FAILED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const TAKETURN_FAILED:String = turnbasedmultiplayer:match:taketurn:failed</code><p></p><p></p><p>
 		 <p>
-		 Dispatched when a call to <code>takeTurn</code> fails on a match. 
+		 Dispatched when a call to <code>takeTurn</code> fails on a match.
 		 The <code>message</code> will contain information about the error.
 		 </p>
 		 		 </p></div><a name="constantDetail"></a><a name="TAKETURN_SUCCESS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">TAKETURN_SUCCESS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const TAKETURN_SUCCESS:String = turnbasedmultiplayer:match:taketurn:success</code><p></p><p></p><p>
@@ -149,4 +146,4 @@
 		 Dispatched after a successful call to <code>takeTurn</code> on a match.
 		 The <code>match</code> will contain the match details.
 		 </p>
-		 		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 27 2023, 03:50 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 27 2023, 03:50 PM +10:00  -->
+		 		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Jul 5 2023, 10:33 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Jul 5 2023, 10:33 AM +10:00  -->

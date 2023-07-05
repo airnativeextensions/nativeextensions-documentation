@@ -10,7 +10,7 @@
 				
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AuthUtilEvent"); titleBar_setSubNav(true,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
 				-->
-			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.gameservices.events</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  AuthUtilEvent</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">AuthUtilEvent  <img src="../../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.Event</td></tr></table><p></p><p></p><p></p>	
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.gameservices.events</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  AuthUtilEvent</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">AuthUtilEvent  <img src="../../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.Event</td></tr></table><p></p><p></p><p></p>
 	 Events dispatched from the AuthUtil instance.
 	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#data" class="signatureLink">data</a> : Object<div class="summaryTableDescription">
 		 
@@ -20,21 +20,19 @@
 		 
 		 Dispatched when there was an error retrieving the auth token
 		 
+		 		 </div></td><td class="summaryTableOwnerCol">AuthUtilEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#AUTH_TOKEN_SUCCESS" class="signatureLink">AUTH_TOKEN_SUCCESS</a> : String = auth:token:success<div class="summaryTableDescription">[static] 
 		 
-		 </div></td><td class="summaryTableOwnerCol">AuthUtilEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#AUTH_TOKEN_SUCCESS" class="signatureLink">AUTH_TOKEN_SUCCESS</a> : String = auth:token:success<div class="summaryTableDescription">[static] 
-		 
-		 Dispatched when the auth token was successfully retrieved 
+		 Dispatched when the auth token was successfully retrieved
 		 after a call to GameServices.service.authUtil.getToken()
 		 
 		 
 		 data will contain the auth token string
 		 
-		 
-		 </div></td><td class="summaryTableOwnerCol">AuthUtilEvent</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+		 		 </div></td><td class="summaryTableOwnerCol">AuthUtilEvent</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="data"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">data</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public var data:Object</code><p></p><p></p><p>
 		 <p>
-		 Contains the authentication information. 
+		 Contains the authentication information.
 		 </p>
 		 <p>
 		 With Google Play Game Services this will be an object with the following properties:
@@ -58,14 +56,12 @@
 		 <p>
 		 Dispatched when there was an error retrieving the auth token
 		 </p>
-		 
-		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/auth/AuthUtil.html#getToken()" target="">com.distriqt.extension.gameservices.auth.AuthUtil.getToken()</a></div></div><a name="constantDetail"></a><a name="AUTH_TOKEN_SUCCESS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">AUTH_TOKEN_SUCCESS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const AUTH_TOKEN_SUCCESS:String = auth:token:success</code><p></p><p></p><p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/auth/AuthUtil.html#getToken()" target="">com.distriqt.extension.gameservices.auth.AuthUtil.getToken()</a></div></div><a name="constantDetail"></a><a name="AUTH_TOKEN_SUCCESS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">AUTH_TOKEN_SUCCESS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const AUTH_TOKEN_SUCCESS:String = auth:token:success</code><p></p><p></p><p>
 		 <p>
-		 Dispatched when the auth token was successfully retrieved 
+		 Dispatched when the auth token was successfully retrieved
 		 after a call to <code>GameServices.service.authUtil.getToken()</code>
 		 </p>
 		 <p>
 		 <code>data</code> will contain the auth token string
 		 </p>
-		 
-		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/auth/AuthUtil.html#getToken()" target="">com.distriqt.extension.gameservices.auth.AuthUtil.getToken()</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 27 2023, 03:50 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 27 2023, 03:50 PM +10:00  -->
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/auth/AuthUtil.html#getToken()" target="">com.distriqt.extension.gameservices.auth.AuthUtil.getToken()</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Jul 5 2023, 10:33 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Jul 5 2023, 10:33 AM +10:00  -->

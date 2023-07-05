@@ -34,17 +34,15 @@
 		 
 		 Dispatched when there was an error retrieving the auth token
 		 
+		 		 </td><td class="summaryTableOwnerCol">AuthUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:auth:token:success" class="signatureLink">auth:token:success</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 
-		 </td><td class="summaryTableOwnerCol">AuthUtil</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:auth:token:success" class="signatureLink">auth:token:success</a></div></td><td class="summaryTableDescription summaryTableCol">
-		 
-		 Dispatched when the auth token was successfully retrieved 
+		 Dispatched when the auth token was successfully retrieved
 		 after a call to GameServices.service.authUtil.getToken()
 		 
 		 
 		 data will contain the auth token string
 		 
-		 
-		 </td><td class="summaryTableOwnerCol">AuthUtil</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+		 		 </td><td class="summaryTableOwnerCol">AuthUtil</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isSupported</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
@@ -58,49 +56,39 @@
 		 <p>
 		 Clear the specified token in local cache.
 		 </p>
-		 		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">token</span>:String</code> &mdash; The token to clear
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the operation was started successfully and false if it's not supported
-		 
-		 </td></tr></table></div><a name="getToken()"></a><a name="getToken(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getToken(scope:String):Boolean</code><p></p><p></p><p>
+		 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">token</span>:String</code> &mdash; The token to clear
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the operation was started successfully and false if it's not supported
+		 		 </td></tr></table></div><a name="getToken()"></a><a name="getToken(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getToken(scope:String):Boolean</code><p></p><p></p><p>
 		 <p>
-		 Gets a token or authorisation to be consumed by some other services on behalf of a specified user account. 
+		 Gets a token or authorisation to be consumed by some other services on behalf of a specified user account.
 		 </p>
 		 <p>
-		 How the token can be consumed depends on the scope string provided. 
+		 How the token can be consumed depends on the scope string provided.
 		 </p>
 		 <p>
 		 Note that this method requires substantial network IO and is run asynchronously off the UI thread
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 For Google Play Services this will return the current players Google Authentication Token.
 		 </p>
-		 
-		 <p>
-		 For GameCenter this returns the Identity Verification Signature from the <code>generateIdentityVerificationSignatureWithCompletionHandler</code> function. 
+		 		 <p>
+		 For GameCenter this returns the Identity Verification Signature from the <code>generateIdentityVerificationSignatureWithCompletionHandler</code> function.
 		 <a href="http://developer.apple.com/reference/gamekit/gklocalplayer/1515407-generateidentityverificationsign" target="">more information</a>.
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">scope</span>:String</code> &mdash; (optional) A string representing the authentication scope. To specify multiple scopes, separate them with a space (for example, "oauth2:scope1 scope2 scope3").
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the operation was started successfully and false if it's not supported
-		 
-		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:auth:token:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">auth:token:error</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/AuthUtilEvent.html"><code>com.distriqt.extension.gameservices.events.AuthUtilEvent</code></a><br/><span class="label">AuthUtilEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/AuthUtilEvent.html#AUTH_TOKEN_ERROR"><code>com.distriqt.extension.gameservices.events.AuthUtilEvent.AUTH_TOKEN_ERROR</code></a><br/><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">scope</span>:String</code> &mdash; (optional) A string representing the authentication scope. To specify multiple scopes, separate them with a space (for example, "oauth2:scope1 scope2 scope3").
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the operation was started successfully and false if it's not supported
+		 		 </td></tr></table></div><div class="detailSectionHeader"> Event Detail </div><a name="event:auth:token:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">auth:token:error</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/AuthUtilEvent.html"><code>com.distriqt.extension.gameservices.events.AuthUtilEvent</code></a><br/><span class="label">AuthUtilEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/AuthUtilEvent.html#AUTH_TOKEN_ERROR"><code>com.distriqt.extension.gameservices.events.AuthUtilEvent.AUTH_TOKEN_ERROR</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when there was an error retrieving the auth token
 		 </p>
-		 
-		 </div><a name="event:auth:token:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">auth:token:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/AuthUtilEvent.html"><code>com.distriqt.extension.gameservices.events.AuthUtilEvent</code></a><br/><span class="label">AuthUtilEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/AuthUtilEvent.html#AUTH_TOKEN_SUCCESS"><code>com.distriqt.extension.gameservices.events.AuthUtilEvent.AUTH_TOKEN_SUCCESS</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:auth:token:success"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">auth:token:success</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/AuthUtilEvent.html"><code>com.distriqt.extension.gameservices.events.AuthUtilEvent</code></a><br/><span class="label">AuthUtilEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/AuthUtilEvent.html#AUTH_TOKEN_SUCCESS"><code>com.distriqt.extension.gameservices.events.AuthUtilEvent.AUTH_TOKEN_SUCCESS</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
-		 Dispatched when the auth token was successfully retrieved 
+		 Dispatched when the auth token was successfully retrieved
 		 after a call to <code>GameServices.service.authUtil.getToken()</code>
 		 </p>
 		 <p>
 		 <code>data</code> will contain the auth token string
 		 </p>
-		 
-		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 27 2023, 03:50 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 27 2023, 03:50 PM +10:00  -->
+		 		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Jul 5 2023, 10:33 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Jul 5 2023, 10:33 AM +10:00  -->
