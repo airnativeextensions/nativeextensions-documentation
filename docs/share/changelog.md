@@ -1,3 +1,10 @@
+### 2023.07.06 [v7.6.0]
+
+```
+feat(unity,android): new implementation of callbacks allowing share events on android
+feat(unity,android): update core lib to new common location
+```
+
 ### 2023.06.16 [v7.4.2]
 
 ```
