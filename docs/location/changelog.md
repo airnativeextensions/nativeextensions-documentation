@@ -1,3 +1,9 @@
+### 2023.07.05 [v5.0.0]
+
+```
+feat(android): update to android location services v21.0.1 including some changes to the location request
+```
+
 ### 2023.05.18 [v4.5.1]
 
 ```
