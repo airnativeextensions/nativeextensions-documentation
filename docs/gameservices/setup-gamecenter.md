@@ -47,6 +47,17 @@ To give your app access to configured components through Game Center, you also n
 
 
 
+## Enable the Capability
+
+- Sign in to the [Developer portal](https://developer.apple.com/account) using your Apple ID 
+- Go to your application [identifiers](https://developer.apple.com/account/resources/identifiers/list) and edit your application
+- Enable the "Game Center" capability and save 
+
+![](images/gamecenter-AppDetails-Capability.png)
+
+- Update any associated provisioning profiles and download them for use in your app
+
+
 
 ## Leaderboards, Achievements 
 

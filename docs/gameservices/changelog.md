@@ -1,3 +1,11 @@
+### 2023.07.05 [v8.2.0]
+
+```
+feat(android): update to google game services v23.1.0
+feat(android): air background thread handling
+feat(gamecenter, docs, airpackage): add game center capability setup process and addition to entitlements (resolves #233)
+```
+
 ### 2023.01.27 [v8.1.1]
 
 ```

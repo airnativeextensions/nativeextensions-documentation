@@ -26,6 +26,12 @@ if (GameServices.service.recording.isSupported)
 ```
 
 
+:::note Android 33
+With Android 33, Google has deprecated the screen recording functionality and it will not function on any device running an API version higher than 32. In these cases `isSupported` will return `false`.
+:::
+
+
+
 ## Checking for Availability
 
 Additionally you should check whether recording is currently available. There are many reasons that recording is not availble and 

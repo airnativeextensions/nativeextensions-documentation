@@ -12,22 +12,18 @@
 				-->
 			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.gameservices.achievements</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  Achievements extends  flash.events.IEventDispatcher</td></tr></table><p></p><p></p><p></p>
 	              <b>Achievements</b>
-	 
-	              <p>
-	 This interface defines the achievements functionality for the 
+	 	            <p>
+	 This interface defines the achievements functionality for the
 	 Game Services native extension.
 	 </p>
-	 
-	              <p>
-	 All the functionality here can be accessed through the main 
+	 	            <p>
+	 All the functionality here can be accessed through the main
 	 GameServices class as below:
 	 </p>
-	 
-	              <div class="listing"><pre>
+	 	            <div class="listing"><pre>
      GameServices.service.achievements.[FUNCTION]
-     </pre></div> 
-	 
-	           <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/GameServices.html#achievements" target="">com.distriqt.extension.gameservices.GameServices.achievements</a></div><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#canResetAchievements" class="signatureLink">canResetAchievements</a> : Boolean<div class="summaryTableDescription">[read-only] 
+     </pre></div>
+	 	         <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/GameServices.html#achievements" target="">com.distriqt.extension.gameservices.GameServices.achievements</a></div><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#canResetAchievements" class="signatureLink">canResetAchievements</a> : Boolean<div class="summaryTableDescription">[read-only] 
 		 
 		 Returns true if the current service provides the ability to reset achievement
 		 status.</div></td><td class="summaryTableOwnerCol">Achievements</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[read-only] 
@@ -44,7 +40,7 @@
 		 
 		 Displays a native UI showing the current user's achievements.</div></td><td class="summaryTableOwnerCol">Achievements</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadAchievements()" class="signatureLink">loadAchievements</a>(forceReload:Boolean = false):void</div><div class="summaryTableDescription">
 		 
-		 Loads all achievements available for this game and are returned in a 
+		 Loads all achievements available for this game and are returned in a
 		 AchievementEvent.ACHIEVEMENTS_LOADED.</div></td><td class="summaryTableOwnerCol">Achievements</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#resetAchievements()" class="signatureLink">resetAchievements</a>():void</div><div class="summaryTableDescription">
 		 
 		 Calling this class method deletes all progress towards achievements previously reported for the local player.</div></td><td class="summaryTableOwnerCol">Achievements</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:achievements:error" class="signatureLink">achievements:error</a></div></td><td class="summaryTableDescription summaryTableCol">
@@ -54,8 +50,7 @@
 		 Dispatched when the achievements have been loaded after a call
 		 to loadAchievements
 		 
-		 
-		 
+		 		 
 		 data will contain an array of the Achievement objects retrieved from the service.</td><td class="summaryTableOwnerCol">Achievements</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:achievements:reset:complete" class="signatureLink">achievements:reset:complete</a></div></td><td class="summaryTableDescription summaryTableCol">
 		 
 		 Dispatched if the user's achievements have been reset
@@ -81,68 +76,56 @@
 		 will now be shown to the player, once revealed an achievement cannot
 		 be hidden again.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 If the achievement has already been revealed, this will have no effect.
 		 </p>
-		  
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">achievementId</span>:String</code> &mdash; The ID of the achievement to reveal
-		 
-		 </td></tr></table></p></div><a name="achievementStepsIncrement()"></a><a name="achievementStepsIncrement(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievementStepsIncrement</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function achievementStepsIncrement(achievementId:String, numSteps:int):void</code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">achievementId</span>:String</code> &mdash; The ID of the achievement to reveal
+		 		 </td></tr></table></p></div><a name="achievementStepsIncrement()"></a><a name="achievementStepsIncrement(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievementStepsIncrement</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function achievementStepsIncrement(achievementId:String, numSteps:int):void</code><p></p><p></p><p>
 		 <p>
 		 Increments an achievement by the given number of steps.
-		 The achievement must be an incremental achievement. 
+		 The achievement must be an incremental achievement.
 		 Once an achievement reaches at least the maximum number of steps,
 		 it will be unlocked automatically. Any further increments will be ignored.
 		 </p>
 		 <p>
-		 This is only applicable to incremental achievements. 
-		 </p> 
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">achievementId</span>:String</code> &mdash; The ID of the incremental achievement
+		 This is only applicable to incremental achievements.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">achievementId</span>:String</code> &mdash; The ID of the incremental achievement
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">numSteps</span>:int</code> &mdash; 	The number of steps to increment by. Must be greater than 0.
-		 
-		 </td></tr></table></p></div><a name="achievementStepsSet()"></a><a name="achievementStepsSet(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievementStepsSet</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function achievementStepsSet(achievementId:String, numSteps:int):void</code><p></p><p></p><p>
+		 		 </td></tr></table></p></div><a name="achievementStepsSet()"></a><a name="achievementStepsSet(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievementStepsSet</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function achievementStepsSet(achievementId:String, numSteps:int):void</code><p></p><p></p><p>
 		 <p>
 		 Set an achievement to have at least the given number of steps completed.
 		 Calling this method while the achievement already has more steps than the
-		 provided value is a no-op. Once the achievement reaches the maximum 
+		 provided value is a no-op. Once the achievement reaches the maximum
 		 number of steps, the achievement will automatically be unlocked, and
 		 any further mutation operations will be ignored.
 		 </p>
 		 <p>
-		 This is only applicable to incremental achievements. 
-		 </p> 
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">achievementId</span>:String</code> &mdash; The ID of the incremental achievement
+		 This is only applicable to incremental achievements.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">achievementId</span>:String</code> &mdash; The ID of the incremental achievement
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">numSteps</span>:int</code> &mdash; 	The number of steps to set the achievement to. Must be greater than 0.
-		 
-		 </td></tr></table></p></div><a name="achievementUnlock()"></a><a name="achievementUnlock(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievementUnlock</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function achievementUnlock(achievementId:String):void</code><p></p><p></p><p>
+		 		 </td></tr></table></p></div><a name="achievementUnlock()"></a><a name="achievementUnlock(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievementUnlock</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function achievementUnlock(achievementId:String):void</code><p></p><p></p><p>
 		 <p>
 		 Unlock an achievement. Unlocking means that the player has satisfied the
 		 requirements for this achievement in the game. The player will be given
 		 any achievement points associated with this achievement.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 If the achievement is hidden this will reveal it to the player.
 		 </p>
-		  
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">achievementId</span>:String</code> &mdash; The ID of the achievement to unlock
-		 
-		 </td></tr></table></p></div><a name="displayAchievementsUI()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">displayAchievementsUI</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function displayAchievementsUI():void</code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">achievementId</span>:String</code> &mdash; The ID of the achievement to unlock
+		 		 </td></tr></table></p></div><a name="displayAchievementsUI()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">displayAchievementsUI</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function displayAchievementsUI():void</code><p></p><p></p><p>
 		 <p>
-		 Displays a native UI showing the current user's achievements. 
+		 Displays a native UI showing the current user's achievements.
 		 </p>
 		 </p></div><a name="loadAchievements()"></a><a name="loadAchievements(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadAchievements</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadAchievements(forceReload:Boolean = false):void</code><p></p><p></p><p>
 		 <p>
-		 Loads all achievements available for this game and are returned in a 
+		 Loads all achievements available for this game and are returned in a
 		 <code>AchievementEvent.ACHIEVEMENTS_LOADED</code>.
-		 </p> 
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">forceReload</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; If true the server is contacted for updated information otherwise the local cache is used.
-		 
-		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html#ACHIEVEMENTS_LOADED" target="">com.distriqt.extension.gameservices.events.AchievementEvent.ACHIEVEMENTS_LOADED</a><br/><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html#ACHIEVEMENTS_ERROR" target="">com.distriqt.extension.gameservices.events.AchievementEvent.ACHIEVEMENTS_ERROR</a></div></div><a name="resetAchievements()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">resetAchievements</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function resetAchievements():void</code><p></p><p></p><p>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">forceReload</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; If true the server is contacted for updated information otherwise the local cache is used.
+		 		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html#ACHIEVEMENTS_LOADED" target="">com.distriqt.extension.gameservices.events.AchievementEvent.ACHIEVEMENTS_LOADED</a><br/><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html#ACHIEVEMENTS_ERROR" target="">com.distriqt.extension.gameservices.events.AchievementEvent.ACHIEVEMENTS_ERROR</a></div></div><a name="resetAchievements()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">resetAchievements</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function resetAchievements():void</code><p></p><p></p><p>
 		 <p>
 		 Calling this class method deletes all progress towards achievements previously reported for the local player.
 		 Hidden achievements that were previously visible are now hidden again.
@@ -159,19 +142,16 @@
 		 <p>
 		 Dispatched when there was an error loading the achievements.
 		 </p>
-		 
-		 </div><a name="event:achievements:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievements:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html"><code>com.distriqt.extension.gameservices.events.AchievementEvent</code></a><br/><span class="label">AchievementEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html#ACHIEVEMENTS_LOADED"><code>com.distriqt.extension.gameservices.events.AchievementEvent.ACHIEVEMENTS_LOADED</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:achievements:loaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievements:loaded</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html"><code>com.distriqt.extension.gameservices.events.AchievementEvent</code></a><br/><span class="label">AchievementEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html#ACHIEVEMENTS_LOADED"><code>com.distriqt.extension.gameservices.events.AchievementEvent.ACHIEVEMENTS_LOADED</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched when the achievements have been loaded after a call
 		 to <code>loadAchievements</code>
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 <code>data</code> will contain an array of the Achievement objects retrieved from the service.
 		 </p>
-		 
-		 </div><a name="event:achievements:reset:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievements:reset:complete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html"><code>com.distriqt.extension.gameservices.events.AchievementEvent</code></a><br/><span class="label">AchievementEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html#ACHIEVEMENTS_RESET_COMPLETE"><code>com.distriqt.extension.gameservices.events.AchievementEvent.ACHIEVEMENTS_RESET_COMPLETE</code></a><br/><p></p><p></p><p>
+		 		 </div><a name="event:achievements:reset:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">achievements:reset:complete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html"><code>com.distriqt.extension.gameservices.events.AchievementEvent</code></a><br/><span class="label">AchievementEvent.type property = </span><a href="../../../../../com/distriqt/extension/gameservices/events/AchievementEvent.html#ACHIEVEMENTS_RESET_COMPLETE"><code>com.distriqt.extension.gameservices.events.AchievementEvent.ACHIEVEMENTS_RESET_COMPLETE</code></a><br/><p></p><p></p><p>
 	 </p>
 		 <p>
 		 Dispatched if the user's achievements have been reset
@@ -186,5 +166,4 @@
 		 <p>
 		 Dispatched when the player closes the achievements native UI.
 		 </p>
-		 
-		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 27 2023, 03:50 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 27 2023, 03:50 PM +10:00  -->
+		 		 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Jul 5 2023, 10:33 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Jul 5 2023, 10:33 AM +10:00  -->

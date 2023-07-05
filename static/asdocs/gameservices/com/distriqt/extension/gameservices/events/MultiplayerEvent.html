@@ -23,8 +23,7 @@
 		 
 		 Dispatched when an invitation is received
 		 
-		 
-		 
+		 		 
 		 data will be an instance of the Invitation class.</div></td><td class="summaryTableOwnerCol">MultiplayerEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INVITATION_REMOVED" class="signatureLink">INVITATION_REMOVED</a> : String = multiplayer:invitation:removed<div class="summaryTableDescription">[static] 
 		 
 		 data contains a String with the invitationId that was removed.</div></td><td class="summaryTableOwnerCol">MultiplayerEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LOADINVITES_FAILED" class="signatureLink">LOADINVITES_FAILED</a> : String = multiplayer:loadinvites:failed<div class="summaryTableDescription">[static] 
@@ -36,7 +35,7 @@
 		 This is dispatched when the current service doesn't support
 		 loading of invitations.</div></td><td class="summaryTableOwnerCol">MultiplayerEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LOADINVITES_SUCCESS" class="signatureLink">LOADINVITES_SUCCESS</a> : String = multiplayer:loadinvites:success<div class="summaryTableDescription">[static] 
 		 
-		 data contains an array of Invitation objects 
+		 data contains an array of Invitation objects
 		 each representing an current invite.</div></td><td class="summaryTableOwnerCol">MultiplayerEvent</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="data"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">data</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public var data:*</code><p></p><p></p><p>
@@ -47,37 +46,33 @@
 		 <p>
 		 A message associated with this event, generally this is a description of an error
 		 that occurred. See the individual events for usage.
-		 </p> 
+		 </p>
 		 </p></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="MultiplayerEvent()"></a><a name="MultiplayerEvent(String,any,String,Boolean,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">MultiplayerEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function MultiplayerEvent(type:String, data:*, message:String, bubbles:Boolean = false, cancelable:Boolean = false)</code><p></p><p>
 		  Constructor
 		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">data</span>:*</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">message</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bubbles</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">cancelable</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="clone()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code>override public function clone():Event</code><p></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Event</code></td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="INVITATION_RECEIVED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INVITATION_RECEIVED</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const INVITATION_RECEIVED:String = multiplayer:invitation:received</code><p></p><p></p><p>
 		 <p>
 		 Dispatched when an invitation is received
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 <code>data</code> will be an instance of the <code>Invitation</code> class.
 		 </p>
-		 
-		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Invitation.html" target="">com.distriqt.extension.gameservices.multiplayer.Invitation</a></div></div><a name="constantDetail"></a><a name="INVITATION_REMOVED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INVITATION_REMOVED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INVITATION_REMOVED:String = multiplayer:invitation:removed</code><p></p><p></p><p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Invitation.html" target="">com.distriqt.extension.gameservices.multiplayer.Invitation</a></div></div><a name="constantDetail"></a><a name="INVITATION_REMOVED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INVITATION_REMOVED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INVITATION_REMOVED:String = multiplayer:invitation:removed</code><p></p><p></p><p>
 		 <p>
 		 <code>data</code> contains a String with the invitationId that was removed.
 		 </p>
-		 
-		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Invitation.html#id" target="">com.distriqt.extension.gameservices.multiplayer.Invitation.id</a></div></div><a name="constantDetail"></a><a name="LOADINVITES_FAILED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LOADINVITES_FAILED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LOADINVITES_FAILED:String = multiplayer:loadinvites:failed</code><p></p><p></p><p>
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Invitation.html#id" target="">com.distriqt.extension.gameservices.multiplayer.Invitation.id</a></div></div><a name="constantDetail"></a><a name="LOADINVITES_FAILED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LOADINVITES_FAILED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LOADINVITES_FAILED:String = multiplayer:loadinvites:failed</code><p></p><p></p><p>
 		 <p>
 		 An error occurred, <code>message</code> will contain a description of the error
 		 </p>
 		 		 </p></div><a name="constantDetail"></a><a name="LOADINVITES_NOT_SUPPORTED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LOADINVITES_NOT_SUPPORTED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LOADINVITES_NOT_SUPPORTED:String = multiplayer:loadinvites:notsupported</code><p></p><p></p><p>
 		 <p>
 		 This is dispatched when the current service doesn't support
-		 loading of invitations. You should treat this as a success and 
-		 display an alternative interface to your user. 
+		 loading of invitations. You should treat this as a success and
+		 display an alternative interface to your user.
 		 </p>
 		 		 </p></div><a name="constantDetail"></a><a name="LOADINVITES_SUCCESS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">LOADINVITES_SUCCESS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LOADINVITES_SUCCESS:String = multiplayer:loadinvites:success</code><p></p><p></p><p>
 		 <p>
-		 <code>data</code> contains an array of <code>Invitation</code> objects 
+		 <code>data</code> contains an array of <code>Invitation</code> objects
 		 each representing an current invite.
 		 </p>
-		 
-		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Invitation.html" target="">com.distriqt.extension.gameservices.multiplayer.Invitation</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="http://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 27 2023, 03:50 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 27 2023, 03:50 PM +10:00  -->
+		 		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/gameservices/multiplayer/Invitation.html" target="">com.distriqt.extension.gameservices.multiplayer.Invitation</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Jul 5 2023, 10:33 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Jul 5 2023, 10:33 AM +10:00  -->
