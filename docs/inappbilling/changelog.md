@@ -1,3 +1,10 @@
+### 2023.07.05 [v15.0.1]
+
+```
+feat(android,googleplay): update google play billing client version to 6.0.0
+fix(android,googleplay): correct pending purchase list after purchase consumption (resolves #542)
+```
+
 ### 2023.02.13 [v14.4.1]
 
 ```

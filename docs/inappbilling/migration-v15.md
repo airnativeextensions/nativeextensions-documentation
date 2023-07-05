@@ -1,27 +1,37 @@
+---
+title: Migration v15
+sidebar_label: Migration v15
+---
 
-### Extension IDs
+## Version 15.0
 
-The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+Version 15 implemented Google Play Billing client library v6.0.0.
+
+:::note Android only
+These changes only apply to Android and Google Play
+:::
+
+:::note apm
+If you are using apm then all these changes will be handled for you. This only applies if you are manually updating your manifest additions.
+:::
+
+
+Firstly you will need to update the billing client version in your `manifest` additions:
 
 ```xml
-<extensions>
-    <extensionID>com.distriqt.InAppBilling</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
-</extensions>
+<meta-data android:name="com.google.android.play.billingclient.version" android:value="6.0.0" />
+```
+
+Secondly add the following to your `queries` section:
+
+```xml
+<intent>
+    <action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+</intent>
 ```
 
 
-
-### Android
-
-#### Manifest Additions
-
-
-The following additions must be added to your applications manifest additions in your 
-application descriptor.
-
-There are additions specific for Google Play Billing and Amazon In App Purchases. 
-If you aren't using either of those services you can remove those additions if you wish.
+You manifest should now contain all the following:
 
 
 ```xml
@@ -56,10 +66,3 @@ If you aren't using either of those services you can remove those additions if y
 
 </manifest>
 ```
-
-
-### iOS
-
-#### InfoAdditions
-
-There are no required iOS additions to the application descriptor.
