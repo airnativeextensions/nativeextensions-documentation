@@ -28,4 +28,9 @@ function dynamicLink_receivedHandler( event:DynamicLinkEvent ):void
 
 
 
+## Initialising Core callbacks
+
+In order to receive events from start up you will need to ensure you call `Core.init()` before initialising any of the Firebase functionality.   
+
+
 

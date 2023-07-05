@@ -1,3 +1,19 @@
+### 2023.07.05 [v8.0.0]
+
+```
+feat(auth): add language functionality (resolves #447)
+
+feat(auth): update auth sdk, android v22.0.0, ios v10.11.0
+feat(core): update analytics sdk, android v21.3.0, ios v10.11.0
+feat(crashlytics): update crashlytics sdk, android v18.3.7, ios v10.11.0
+feat(database): update database sdk, android v20.2.2, ios v10.11.0
+feat(dynamiclinks): update dynamiclinks sdk, android v21.1.0, ios v10.11.0
+feat(firestore): update firestore sdk, android v24.6.1, ios v10.11.0
+feat(performance): update performance sdk, android v20.3.3, ios v10.11.0
+feat(remoteconfig): update remoteconfig sdk, android v21.4.0, ios v10.11.0
+feat(storage): update storage sdk, android v20.2.1, ios v10.11.0
+```
+
 ### 2023.01.20 [v7.3.0]
 
 ```
