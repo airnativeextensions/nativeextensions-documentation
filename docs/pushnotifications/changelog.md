@@ -1,3 +1,12 @@
+### 2023.07.05 [v12.0.0]
+
+```
+Firebase BOM update to v32.1.1
+
+feat(fcm): update to latest Firebase version android v23.1.2, ios v10.11.0
+feat(firebase-iam): update to latest Firebase InApp Messaging, android v20.3.2, ios v10.11.0
+```
+
 ### 2023.02.10 [v11.3.1]
 
 ```

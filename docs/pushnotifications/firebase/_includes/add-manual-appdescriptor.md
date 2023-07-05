@@ -122,6 +122,7 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 		</service>
 		<service
 			android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:directBootAware="true"
 			android:exported="false" >
 			<intent-filter android:priority="-500" >
 				<action android:name="com.google.firebase.MESSAGING_EVENT" />
