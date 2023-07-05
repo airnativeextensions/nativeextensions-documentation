@@ -1,3 +1,11 @@
+### 2023.07.05 [v14.1.0]
+
+```
+feat(android): update google admob version to v22.1.0
+feat(ios): update google admob version to v10.6.0
+fix(docs): add kotlin missing dependency from manual integration docs
+```
+
 ### 2023.05.08 [v14.0.3]
 
 ```
