@@ -66,6 +66,72 @@ void Instance_OnNdefDiscovered(NFCEvent e)
 </Tabs>
 
 
+### `NdefRecord` Payload 
+
+The payload of the records contains data in a specific format. 
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+The payload in an `NdefRecord` is encoded as a `ByteArray`. 
+
+If you are expecting ascii string data you can just read the data using `toString()`, eg:
+
+```actionscript 
+var record:NdefRecord = ...;
+var payloadAsString:String = record.payload.toString();
+```
+
+
+  </TabItem>
+  <TabItem value="unity" >
+
+The payload in an `NdefRecord` is encoded as a hexidecimal `string`. 
+
+Records are actually byte data the payload which we read as hex string array to ensure it is passed from the native layer in the same format across platforms. 
+
+To convert it to a byte array:
+
+```csharp 
+public static byte[] StringToByteArray(string hexString)
+{​
+  byte[] bytes = new byte[​hexString.Length / 2];
+  for (int i = 0; i < ​hexString.Length; i += 2) 
+  {
+    bytes[i / 2] = System.Convert.ToByte(hexString.Substring(i, 2), 16);
+  }
+  return bytes;
+}
+```
+
+If you are expecting ascii string data you can take this further:
+
+```csharp
+public static string StringToASCII(string hexString)
+{
+    try
+    {
+        string ascii = string.Empty;
+        for (int i = 0; i < hexString.Length; i += 2)
+        {
+            byte val = System.Convert.ToByte(hexString.Substring(i, 2), 16);
+            char character = System.Convert.ToChar(​val);
+            ascii += character;
+        }
+        return ascii;
+    }
+    catch (Exception ex) { Console.WriteLine(ex.Message); }
+    return string.Empty;
+}
+```
+
+  </TabItem>
+</Tabs>
+
+
 
 
 

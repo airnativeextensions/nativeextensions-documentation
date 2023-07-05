@@ -1,3 +1,10 @@
+### 2023.07.06 [v5.3.0]
+
+```
+feat(unity,android): update core lib to new common location
+feat(docs): improve docs for ndef record payload
+```
+
 ### 2023.06.22 [v5.2.0]
 
 ```
