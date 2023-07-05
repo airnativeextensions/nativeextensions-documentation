@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="LocationRequest,com.distriqt.extension.location.LocationRequest,ACCURACY_BEST,ACCURACY_BEST_FOR_NAVIGATION,ACCURACY_HUNDRED_METERS,ACCURACY_KILOMETER,ACCURACY_NEAREST_TEN_METERS,ACCURACY_THREE_KILOMETERS,ALWAYS,DENIED,EXT_CONTEXT_ID,IN_USE,NOT_DETERMINED,PRIORITY_BALANCED_POWER_ACCURACY,PRIORITY_HIGH_ACCURACY,PRIORITY_LOW_POWER,PRIORITY_NO_POWER,RESTRICTED,SHOULD_EXPLAIN,UNKNOWN,VERSION,accuracy,addressLines,adminArea,altitude,countryCode,countryName,fastestInterval,featureName,geocoder,geofences,heading,horizontalAccuracy,implementation,interval,isMockLocation,isSupported,isSupported,latitude,latitude,locality,locationUtils,longitude,longitude,maxWaitTime,nativeVersion,persistInBackground,persistInBackgroundNotificationText,postCode,priority,service,speed,timestamp,updateData,updateMinimumInterval,updateUrl,version,verticalAccuracy,authorisationStatus,checkLocationSettings,displayLocationSettings,dispose,distanceBetween,fromObject,fromObject,getFromLocation,getFromLocationName,hasAuthorisation,init,isAvailable,requestAuthorisation,setAccuracy,setFastestInterval,setInterval,setMaxWaitTime,setPersistInBackground,setPriority,setServerUpdate,startLocationMonitoring,stopLocationMonitoring"><title>com.distriqt.extension.location.LocationRequest</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="LocationRequest,com.distriqt.extension.location.LocationRequest,ACCURACY_BEST,ACCURACY_BEST_FOR_NAVIGATION,ACCURACY_HUNDRED_METERS,ACCURACY_KILOMETER,ACCURACY_NEAREST_TEN_METERS,ACCURACY_THREE_KILOMETERS,ALWAYS,DENIED,EXT_CONTEXT_ID,IN_USE,NOT_DETERMINED,PRIORITY_BALANCED_POWER_ACCURACY,PRIORITY_HIGH_ACCURACY,PRIORITY_LOW_POWER,PRIORITY_NO_POWER,RESTRICTED,SHOULD_EXPLAIN,UNKNOWN,VERSION,accuracy,addressLines,adminArea,altitude,countryCode,countryName,duration,fastestInterval,featureName,geocoder,geofences,heading,horizontalAccuracy,implementation,interval,isMockLocation,isSupported,isSupported,latitude,latitude,locality,locationUtils,longitude,longitude,maxWaitTime,nativeVersion,persistInBackground,persistInBackgroundNotificationText,postCode,priority,service,speed,timestamp,updateData,updateMinimumInterval,updateUrl,version,verticalAccuracy,authorisationStatus,checkLocationSettings,displayLocationSettings,dispose,distanceBetween,fromObject,fromObject,getFromLocation,getFromLocationName,hasAuthorisation,init,isAvailable,requestAuthorisation,setAccuracy,setDuration,setFastestInterval,setInterval,setMaxWaitTime,setPersistInBackground,setPriority,setServerUpdate,startLocationMonitoring,stopLocationMonitoring"><title>com.distriqt.extension.location.LocationRequest</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
 				asdocTitle = 'LocationRequest - distriqt // Location';
 				var baseRef = '../../../../';
 				window.onload = configPage;
@@ -10,17 +10,20 @@
 				
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LocationRequest"); titleBar_setSubNav(true,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
 				-->
-			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.location</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  LocationRequest</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">LocationRequest  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>	
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.location</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  LocationRequest</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">LocationRequest  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>
 	              <p>
 	 Defines options for location monitoring requests for the different platforms, such as intervals, accuracy and priority.
 	 </p>
 	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#accuracy" class="signatureLink">accuracy</a> : String = nearestTenMeters<div class="summaryTableDescription">
 		 
-		 The desired accuracy level to use when monitoring the device location.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#fastestInterval" class="signatureLink">fastestInterval</a> : int = -1<div class="summaryTableDescription">
+		 The desired accuracy level to use when monitoring the device location.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#duration" class="signatureLink">duration</a> : int = -1<div class="summaryTableDescription">
+		 Sets the duration (in milliseconds) this request will continue before being automatically removed
+		 
+		 		 Defaults to -1, which represents an unlimited duration.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#fastestInterval" class="signatureLink">fastestInterval</a> : int = -1<div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>No longer supported</div>
 		 
 		 Explicitly set the fastest interval for location updates, in milliseconds.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#interval" class="signatureLink">interval</a> : int = 5000<div class="summaryTableDescription">
 		 
-		 Set the desired interval for active location updates, in milliseconds.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#maxWaitTime" class="signatureLink">maxWaitTime</a> : int = -1<div class="summaryTableDescription">
+		 Set the desired interval for active location updates, in milliseconds.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#maxWaitTime" class="signatureLink">maxWaitTime</a> : int = -1<div class="summaryTableDescription"><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>No longer supported</div>
 		 
 		 Sets the maximum wait time in milliseconds for location updates.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#persistInBackground" class="signatureLink">persistInBackground</a> : Boolean<div class="summaryTableDescription">[read-only] 
 		 
@@ -40,6 +43,7 @@
 		 to whenever a location update is received.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#LocationRequest()" class="signatureLink">LocationRequest</a>()</div><div class="summaryTableDescription">
 		  Constructor
 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setAccuracy()" class="signatureLink">setAccuracy</a>(accuracy:String):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></div><div class="summaryTableDescription">
+		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setDuration()" class="signatureLink">setDuration</a>(duration:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></div><div class="summaryTableDescription">
 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setFastestInterval()" class="signatureLink">setFastestInterval</a>(fastestInterval:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></div><div class="summaryTableDescription">
 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setInterval()" class="signatureLink">setInterval</a>(interval:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></div><div class="summaryTableDescription">
 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setMaxWaitTime()" class="signatureLink">setMaxWaitTime</a>(maxWaitTime:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></div><div class="summaryTableDescription">
@@ -50,18 +54,12 @@
 		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setPriority()" class="signatureLink">setPriority</a>(priority:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></div><div class="summaryTableDescription">
 		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setServerUpdate()" class="signatureLink">setServerUpdate</a>(url:String, data:String, minimumInterval:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></div><div class="summaryTableDescription">
 		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_BEST" class="signatureLink">ACCURACY_BEST</a> : String = best<div class="summaryTableDescription">[static] 
-		 
-		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_BEST_FOR_NAVIGATION" class="signatureLink">ACCURACY_BEST_FOR_NAVIGATION</a> : String = bestForNavigation<div class="summaryTableDescription">[static] 
-		 
-		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_HUNDRED_METERS" class="signatureLink">ACCURACY_HUNDRED_METERS</a> : String = hundredMeters<div class="summaryTableDescription">[static] 
-		 
-		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_KILOMETER" class="signatureLink">ACCURACY_KILOMETER</a> : String = kilometer<div class="summaryTableDescription">[static] 
-		 
-		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_NEAREST_TEN_METERS" class="signatureLink">ACCURACY_NEAREST_TEN_METERS</a> : String = nearestTenMeters<div class="summaryTableDescription">[static] 
-		 
-		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_THREE_KILOMETERS" class="signatureLink">ACCURACY_THREE_KILOMETERS</a> : String = threeKilometers<div class="summaryTableDescription">[static] 
-		 
-		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#PRIORITY_BALANCED_POWER_ACCURACY" class="signatureLink">PRIORITY_BALANCED_POWER_ACCURACY</a> : int = 1<div class="summaryTableDescription">[static] 
+		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_BEST_FOR_NAVIGATION" class="signatureLink">ACCURACY_BEST_FOR_NAVIGATION</a> : String = bestForNavigation<div class="summaryTableDescription">[static] 
+		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_HUNDRED_METERS" class="signatureLink">ACCURACY_HUNDRED_METERS</a> : String = hundredMeters<div class="summaryTableDescription">[static] 
+		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_KILOMETER" class="signatureLink">ACCURACY_KILOMETER</a> : String = kilometer<div class="summaryTableDescription">[static] 
+		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_NEAREST_TEN_METERS" class="signatureLink">ACCURACY_NEAREST_TEN_METERS</a> : String = nearestTenMeters<div class="summaryTableDescription">[static] 
+		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACCURACY_THREE_KILOMETERS" class="signatureLink">ACCURACY_THREE_KILOMETERS</a> : String = threeKilometers<div class="summaryTableDescription">[static] 
+		 		 </div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#PRIORITY_BALANCED_POWER_ACCURACY" class="signatureLink">PRIORITY_BALANCED_POWER_ACCURACY</a> : int = 1<div class="summaryTableDescription">[static] 
 		 
 		 To request "block" level accuracy.</div></td><td class="summaryTableOwnerCol">LocationRequest</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#PRIORITY_HIGH_ACCURACY" class="signatureLink">PRIORITY_HIGH_ACCURACY</a> : int = 0<div class="summaryTableDescription">[static] 
 		 
@@ -88,12 +86,19 @@
 		 <p>
 		 <b>Support</b>: iOS only
 		 </p>
-		 </p></div><a name="propertyDetail"></a><a name="fastestInterval"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">fastestInterval</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var fastestInterval:int = -1</code><p></p><p></p><p>
+		 </p></div><a name="propertyDetail"></a><a name="duration"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">duration</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var duration:int = -1</code><p></p><p></p><p>
+		 Sets the duration (in milliseconds) this request will continue before being automatically removed
+		 
+		 		 Defaults to <code>-1</code>, which represents an unlimited duration.
+		 
+		 		 <b>Support</b>: Android only
+		 
+		 </p></div><a name="propertyDetail"></a><a name="fastestInterval"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">fastestInterval</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var fastestInterval:int = -1</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>No longer supported</div><p></p><p></p><p>
 		 <p>
 		 Explicitly set the fastest interval for location updates, in milliseconds.
 		 </p>
 		 <p>
-		 This controls the fastest rate at which your application will 
+		 This controls the fastest rate at which your application will
 		 receive location updates, which might be faster than <code>interval</code>
 		 in some situations (for example, if other applications are triggering location updates).
 		 </p>
@@ -101,19 +106,18 @@
 		 This allows your application to passively acquire locations at a rate faster than it actively acquires locations, saving power.
 		 </p>
 		 <p>
-		 Unlike <code>interval</code>, this parameter is exact. 
+		 Unlike <code>interval</code>, this parameter is exact.
 		 Your application will never receive updates faster than this value.
 		 </p>
 		 <p>
-		 If you don't set this value, a fastest interval will be selected for you. 
+		 If you don't set this value, a fastest interval will be selected for you.
 		 It will be a value faster than your active interval.
 		 </p>
 		 <p>
-		 An interval of 0 is allowed, but not recommended, 
+		 An interval of 0 is allowed, but not recommended,
 		 since location updates may be extremely fast on future implementations.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 <b>Support</b>: Android only
 		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="interval"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">interval</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var interval:int = 5000</code><p></p><p></p><p>
@@ -121,49 +125,47 @@
 		 Set the desired interval for active location updates, in milliseconds.
 		 </p>
 		 <p>
-		 The location client will actively try to obtain location updates 
-		 for your application at this interval, so it has a direct 
-		 influence on the amount of power used by your application. 
+		 The location client will actively try to obtain location updates
+		 for your application at this interval, so it has a direct
+		 influence on the amount of power used by your application.
 		 Choose your interval wisely.
 		 </p>
 		 <p>
-		 This interval is inexact. 
-		 You may not receive updates at all (if no location sources are available), 
-		 or you may receive them slower than requested. 
-		 You may also receive them faster than requested 
-		 (if other applications are requesting location at a faster interval). 
-		 The fastest rate that that you will receive updates can be 
-		 controlled with <code>fastestInterval</code>. 
+		 This interval is inexact.
+		 You may not receive updates at all (if no location sources are available),
+		 or you may receive them slower than requested.
+		 You may also receive them faster than requested
+		 (if other applications are requesting location at a faster interval).
+		 The fastest rate that that you will receive updates can be
+		 controlled with <code>fastestInterval</code>.
 		 By default this fastest rate is 6x the interval frequency.
 		 </p>
 		 <p>
 		 Applications with only the coarse location permission may have their interval silently throttled.
 		 </p>
 		 <p>
-		 An interval of 0 is allowed, but not recommended, 
+		 An interval of 0 is allowed, but not recommended,
 		 since location updates may be extremely fast on future implementations.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 <b>Support</b>: Android only
 		 </p>
-		 </p></div><a name="propertyDetail"></a><a name="maxWaitTime"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">maxWaitTime</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var maxWaitTime:int = -1</code><p></p><p></p><p>
+		 </p></div><a name="propertyDetail"></a><a name="maxWaitTime"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">maxWaitTime</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var maxWaitTime:int = -1</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>No longer supported</div><p></p><p></p><p>
 		 <p>
 		 Sets the maximum wait time in milliseconds for location updates.
 		 </p>
 		 <p>
-		 If you pass a value at least 2x larger than the interval specified 
-		 with <code>interval</code>, then location delivery may be delayed and 
-		 multiple locations can be delivered at once. 
-		 Locations are determined at the <code>interval</code> rate, but can 
-		 be delivered in batch after the interval you set in this method. 
-		 This can consume less battery and give more accurate locations, 
-		 depending on the device's hardware capabilities. 
-		 You should set this value to be as large as possible for your 
+		 If you pass a value at least 2x larger than the interval specified
+		 with <code>interval</code>, then location delivery may be delayed and
+		 multiple locations can be delivered at once.
+		 Locations are determined at the <code>interval</code> rate, but can
+		 be delivered in batch after the interval you set in this method.
+		 This can consume less battery and give more accurate locations,
+		 depending on the device's hardware capabilities.
+		 You should set this value to be as large as possible for your
 		 needs if you don't need immediate location delivery.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 <b>Support</b>: Android only
 		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="persistInBackground"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">persistInBackground</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>persistInBackground:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
@@ -194,10 +196,10 @@
 		 Use with a priority constant such as <code>PRIORITY_HIGH_ACCURACY</code>. No other values are accepted.
 		 </p>
 		 <p>
-		 The priority of the request is a strong hint for which location sources to use. 
-		 For example, <code>PRIORITY_HIGH_ACCURACY</code> is more likely to use GPS, 
-		 and <code>PRIORITY_BALANCED_POWER_ACCURACY</code> is more likely to use WIFI and 
-		 Cell tower positioning, but it also depends on many other factors 
+		 The priority of the request is a strong hint for which location sources to use.
+		 For example, <code>PRIORITY_HIGH_ACCURACY</code> is more likely to use GPS,
+		 and <code>PRIORITY_BALANCED_POWER_ACCURACY</code> is more likely to use WIFI and
+		 Cell tower positioning, but it also depends on many other factors
 		 (such as which sources are available) and is implementation dependent.
 		 </p>
 		 <p>
@@ -274,7 +276,9 @@
 		  Constructor
 		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="setAccuracy()"></a><a name="setAccuracy(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setAccuracy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function setAccuracy(accuracy:String):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code><p></p><p></p><p>
 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">accuracy</span>:String</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code> &mdash; <code>LocationRequest</code> instance for chaining calls
-		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="LocationRequest.html#accuracy" target="">accuracy</a></div></div><a name="setFastestInterval()"></a><a name="setFastestInterval(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setFastestInterval</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setFastestInterval(fastestInterval:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code><p></p><p></p><p>
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="LocationRequest.html#accuracy" target="">accuracy</a></div></div><a name="setDuration()"></a><a name="setDuration(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setDuration</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setDuration(duration:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code><p></p><p></p><p>
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">duration</span>:int</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code> &mdash; <code>LocationRequest</code> instance for chaining calls
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="LocationRequest.html#duration" target="">duration</a></div></div><a name="setFastestInterval()"></a><a name="setFastestInterval(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setFastestInterval</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setFastestInterval(fastestInterval:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code><p></p><p></p><p>
 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">fastestInterval</span>:int</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code> &mdash; <code>LocationRequest</code> instance for chaining calls
 		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="LocationRequest.html#fastestInterval" target="">fastestInterval</a></div></div><a name="setInterval()"></a><a name="setInterval(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setInterval</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setInterval(interval:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code><p></p><p></p><p>
 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">interval</span>:int</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code> &mdash; <code>LocationRequest</code> instance for chaining calls
@@ -292,23 +296,17 @@
 		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="LocationRequest.html#priority" target="">priority</a></div></div><a name="setServerUpdate()"></a><a name="setServerUpdate(String,String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setServerUpdate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setServerUpdate(url:String, data:String, minimumInterval:int):<a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code><p></p><p></p><p>
 		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">url</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">data</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">minimumInterval</span>:int</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/location/LocationRequest.html">LocationRequest</a></code> &mdash; <code>LocationRequest</code> instance for chaining calls
 		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="LocationRequest.html#updateUrl" target="">updateUrl</a><br/><a href="LocationRequest.html#updateData" target="">updateData</a><br/><a href="LocationRequest.html#updateMinimumInterval" target="">updateMinimumInterval</a></div></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="ACCURACY_BEST"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_BEST</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const ACCURACY_BEST:String = best</code><p></p><p></p><p>
-		 
-		 </p></div><a name="constantDetail"></a><a name="ACCURACY_BEST_FOR_NAVIGATION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_BEST_FOR_NAVIGATION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_BEST_FOR_NAVIGATION:String = bestForNavigation</code><p></p><p></p><p>
-		 
-		 </p></div><a name="constantDetail"></a><a name="ACCURACY_HUNDRED_METERS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_HUNDRED_METERS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_HUNDRED_METERS:String = hundredMeters</code><p></p><p></p><p>
-		 
-		 </p></div><a name="constantDetail"></a><a name="ACCURACY_KILOMETER"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_KILOMETER</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_KILOMETER:String = kilometer</code><p></p><p></p><p>
-		 
-		 </p></div><a name="constantDetail"></a><a name="ACCURACY_NEAREST_TEN_METERS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_NEAREST_TEN_METERS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_NEAREST_TEN_METERS:String = nearestTenMeters</code><p></p><p></p><p>
-		 
-		 </p></div><a name="constantDetail"></a><a name="ACCURACY_THREE_KILOMETERS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_THREE_KILOMETERS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_THREE_KILOMETERS:String = threeKilometers</code><p></p><p></p><p>
-		 
-		 </p></div><a name="constantDetail"></a><a name="PRIORITY_BALANCED_POWER_ACCURACY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">PRIORITY_BALANCED_POWER_ACCURACY</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const PRIORITY_BALANCED_POWER_ACCURACY:int = 1</code><p></p><p></p><p>
+		 		 </p></div><a name="constantDetail"></a><a name="ACCURACY_BEST_FOR_NAVIGATION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_BEST_FOR_NAVIGATION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_BEST_FOR_NAVIGATION:String = bestForNavigation</code><p></p><p></p><p>
+		 		 </p></div><a name="constantDetail"></a><a name="ACCURACY_HUNDRED_METERS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_HUNDRED_METERS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_HUNDRED_METERS:String = hundredMeters</code><p></p><p></p><p>
+		 		 </p></div><a name="constantDetail"></a><a name="ACCURACY_KILOMETER"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_KILOMETER</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_KILOMETER:String = kilometer</code><p></p><p></p><p>
+		 		 </p></div><a name="constantDetail"></a><a name="ACCURACY_NEAREST_TEN_METERS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_NEAREST_TEN_METERS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_NEAREST_TEN_METERS:String = nearestTenMeters</code><p></p><p></p><p>
+		 		 </p></div><a name="constantDetail"></a><a name="ACCURACY_THREE_KILOMETERS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACCURACY_THREE_KILOMETERS</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ACCURACY_THREE_KILOMETERS:String = threeKilometers</code><p></p><p></p><p>
+		 		 </p></div><a name="constantDetail"></a><a name="PRIORITY_BALANCED_POWER_ACCURACY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">PRIORITY_BALANCED_POWER_ACCURACY</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const PRIORITY_BALANCED_POWER_ACCURACY:int = 1</code><p></p><p></p><p>
 		 <p>
 		 To request "block" level accuracy.
 		 </p>
 		 <p>
-		 Block level accuracy is considered to be about 100 meter accuracy. 
+		 Block level accuracy is considered to be about 100 meter accuracy.
 		 Using a coarse accuracy such as this often consumes less power.
 		 </p>
 		 		 <p>
@@ -333,7 +331,7 @@
 		 To request "city" level accuracy.
 		 </p>
 		 <p>
-		 City level accuracy is considered to be about 10km accuracy. 
+		 City level accuracy is considered to be about 10km accuracy.
 		 Using a coarse accuracy such as this often consumes less power.
 		 </p>
 		 		 <p>
@@ -345,12 +343,12 @@
 		 To request the best accuracy possible with zero additional power consumption.
 		 </p>
 		 <p>
-		 No locations will be returned unless a different client has 
-		 requested location updates in which case this request will 
+		 No locations will be returned unless a different client has
+		 requested location updates in which case this request will
 		 act as a passive listener to those locations.
 		 </p>
 		 		 <p>
 		 On iOS this will use the significant update mode only if you have the always permission
 		 otherwise it will use the standard updates.
 		 </p>
-		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Thu May 18 2023, 08:20 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Thu May 18 2023, 08:20 PM +10:00  -->
+		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Jul 5 2023, 10:25 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Jul 5 2023, 10:25 AM +10:00  -->
