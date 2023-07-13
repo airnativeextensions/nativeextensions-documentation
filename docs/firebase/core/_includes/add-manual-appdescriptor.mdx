@@ -5,14 +5,16 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-    <extensionID>com.distriqt.Firebase</extensionID>
-    
-	<extensionID>com.distriqt.Core</extensionID>
-    <extensionID>androidx.core</extensionID>
-    <extensionID>com.google.firebase.core</extensionID>
 
-    <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.Firebase</extensionID>
+	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.distriqt.playservices.CloudMessaging</extensionID>
+	<extensionID>com.google.android.datatransport</extensionID>
+	<extensionID>com.google.firebase.core</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 
 </extensions>
 ```
@@ -34,75 +36,45 @@ Ensure you:
 
 
 ```xml
-<manifest android:installLocation="auto">
-
-	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31" />
-
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-
-	<!-- Include required permissions for Advertising Id -->
-	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-
-	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
-
-		<provider
-			android:name="androidx.startup.InitializationProvider"
-			android:authorities="APPLICATION_PACKAGE.androidx-startup"
-			android:exported="false" >
-			<meta-data
-				android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-				android:value="androidx.startup" />
-		</provider>
-    
-		<meta-data
-			android:name="com.google.android.gms.version"
-			android:value="@integer/google_play_services_version" />
-
-		<meta-data
-			android:name="google_analytics_automatic_screen_reporting_enabled"
-			android:value="false" />
-
-
-		<!-- FIREBASE CORE -->
-		<receiver
-			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-			android:enabled="true"
-			android:exported="false" >
-		</receiver>
-
-		<service
-			android:name="com.google.android.gms.measurement.AppMeasurementService"
-			android:enabled="true"
-			android:exported="false" />
-		<service
-			android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-			android:enabled="true"
-			android:exported="false"
-			android:permission="android.permission.BIND_JOB_SERVICE" />
-		<service
-			android:name="com.google.firebase.components.ComponentDiscoveryService"
-			android:directBootAware="true"
-			android:exported="false" >
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-		</service>
-
-		<provider
-			android:name="com.google.firebase.provider.FirebaseInitProvider"
-			android:authorities="APPLICATION_PACKAGE.firebaseinitprovider"
-			android:directBootAware="true"
-			android:exported="false"
-			android:initOrder="100" />
-
-	</application>
-
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <!-- Required permission for App measurement to run. -->
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+  <!-- Required by older versions of Google Play services to create IID tokens -->
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+  <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+    <provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false">
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+    </provider>
+    <meta-data android:name="google_analytics_automatic_screen_reporting_enabled" android:value="false"/>
+    <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:directBootAware="true" android:exported="false">
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+    <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+      <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+    </service>
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:authorities="APPLICATION_PACKAGE.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100"/>
+  </application>
 </manifest>
 ```
 
@@ -126,8 +98,17 @@ Firebase depends on Analytics so you must at least include the following tags:
 <meta-data
 	android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
 	android:value="com.google.firebase.components.ComponentRegistrar" />
-```
+<meta-data 
+	android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" 
+	android:value="com.google.firebase.components.ComponentRegistrar"/>
+<meta-data 
+	android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" 
+	android:value="com.google.firebase.components.ComponentRegistrar"/>
+<meta-data 
+	android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" 
+	android:value="com.google.firebase.components.ComponentRegistrar"/>
 
+```
 
 Each of the component extensions will outline whether they have additional `meta-data` tags to add to the service.
 
@@ -163,6 +144,9 @@ Eg:
 		<false/>
 		<key>FirebaseAutomaticScreenReportingEnabled</key>
 		<false/>
+
+		<key>MinimumOSVersion</key>
+		<string>11.0</string>
 			
 	]]></InfoAdditions>
 	<requestedDisplayResolution>high</requestedDisplayResolution>

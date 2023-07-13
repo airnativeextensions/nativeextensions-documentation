@@ -11,9 +11,10 @@ All the debug information for your iOS application is contained in a `dSYM` file
 
 Firebase Crashlytics automatically processes your debug symbol (`.dSYM`) files to give you deobfuscated, human-readable crash reports. You can no longer manually upload dSYMs through the [console](https://console.firebase.google.com/) and instead have to upload them using a script.
 
->
-> If you don't upload a `dSYM` for each version of your application there will be a warning displayed about missing dSYMs in the console and detailed information for any crashes of that version will not be shown in the console.
->
+:::caution
+If you don't upload a `dSYM` for each version of your application there will be a warning displayed about missing dSYMs in the console and detailed information for any crashes of that version will not be shown in the console.
+:::
+
 
 
 ## Generating a dSYM for your AIR application
@@ -22,6 +23,11 @@ Firebase Crashlytics automatically processes your debug symbol (`.dSYM`) files t
 
 
 ![](images/crashlytics_dSYM_location.png)
+
+
+:::warning
+Currently the `dSYM` directory will only be produced by the AIR SDK on macOS build systems. We encourage you to use a macOS machine to build your iOS applications.
+:::
 
 
 ## Uploading 
@@ -35,7 +41,4 @@ Copy the `scripts/upload-symbols` utility from the repository to a location on y
 ```
 
 You will need to pass the `GoogleService-Info.plist` location to identify your application and the path to your `dSYM`. 
-
-
-
 

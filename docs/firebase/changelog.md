@@ -1,3 +1,9 @@
+### 2023.07.13 [v8.0.1]
+
+```
+fix(auth): correct package dependencies and update documentation (resolves #449)
+```
+
 ### 2023.07.05 [v8.0.0]
 
 ```
