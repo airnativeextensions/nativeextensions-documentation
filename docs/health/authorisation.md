@@ -6,8 +6,6 @@ sidebar_label: Authorisation
 
 
 
-
-
 ## Request Authorisation
 
 In order to access the user's health data you must first request authorisation.
@@ -60,3 +58,25 @@ Instead they suggest you request access whenever you require it and only attempt
 
 
 
+
+## Users
+
+If you are using the Google Fitness API you will need to authenticate your user using their Google account. This will give you access to the fit api and their data.
+
+Follow the [Google Identity extension](/docs/googleidentity/) integration guide, you will just need to ensure that you add the Fitness API scope to your sign-in options:
+
+```actionscript
+var options:GoogleIdentityOptions = new GoogleIdentityOptionsBuilder()
+        .addScope( "https://www.googleapis.com/auth/fitness.activity.read" )
+        .build();
+
+GoogleIdentity.service.setup( options );
+```
+
+More information on the scopes is available [here](https://developers.google.com/fit/datatypes/activity).
+
+:::note
+This is only required to access the Google Fitness API and isn't required for the other services
+:::
+
+If your user isn't signed in, all queries will fail.

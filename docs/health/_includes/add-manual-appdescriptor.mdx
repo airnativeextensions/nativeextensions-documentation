@@ -120,14 +120,19 @@ Ensure you replace:
 
 ### Permissions 
 
-In addition to the above you will need to add the permissions for the health data you require access to, for example, to read and write the step data you need the following permissions:
+In addition to the above you will need to add the permissions for the health data you require access to.
 
+
+With Health Connect, to read and write the step data you need the following permissions:
 
 ```xml
-	<uses-permission android:name="android.permission.health.READ_STEPS"/>
-	<uses-permission android:name="android.permission.health.WRITE_STEPS"/>
+<uses-permission android:name="android.permission.health.READ_STEPS"/>
+<uses-permission android:name="android.permission.health.WRITE_STEPS"/>
 ```
 
+With Google Fitness, you will need the following permission:
 
-
+```xml
+<uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+```
 

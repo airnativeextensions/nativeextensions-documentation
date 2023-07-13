@@ -19,11 +19,15 @@ for example, to read and write the step data you need the following permissions:
 
     <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="33" />
 
-
+    <!-- Health Connect Permissions -->
     <uses-permission android:name="android.permission.health.READ_STEPS"/>
     <uses-permission android:name="android.permission.health.WRITE_STEPS"/>
 
 
+    <!-- Google Fitness Permissions -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+
+    
 </manifest>
 ```
 

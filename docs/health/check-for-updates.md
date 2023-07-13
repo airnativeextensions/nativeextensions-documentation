@@ -4,7 +4,7 @@ sidebar_label: Availablility & Updates
 ---
 
 :::note iOS
-This is required on Android and can be skipped if you are developing for iOS only.
+This is required on Android Health Connect but can be skipped if you are developing for iOS only.
 :::
 
 On Android you will need to ensure the Health Connect application is installed and available for the user.
@@ -27,7 +27,6 @@ Health.instance.update();
 
 
 This will redirect the user to the appropriate location in the store or settings to install or update the health connect functionality.
-
 
 
 :::note

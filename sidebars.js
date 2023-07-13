@@ -1765,7 +1765,8 @@ module.exports = {
     { type: "doc", id: "health/index" },
     {
       "Get Started": [
-        "health/add-the-extension"
+        "health/add-the-extension",
+        "health/setup"
       ],
     },
     {
