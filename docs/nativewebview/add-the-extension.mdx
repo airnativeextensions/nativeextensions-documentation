@@ -168,24 +168,29 @@ To add these values manually, open up your application descriptor and insert the
 
 ### .Net Framework
 
-This extension requires v4.6 or higher of the .Net framework. This should come preinstalled on any Windows 10 or higher machine so if you are targetting those you should not have to do anything. If however you are targetting older versions of Windows you must ensure .Net v4.6 or higher is installed either manually or as part of an installer.
+This extension requires v4.8 or higher of the .Net framework. This should come preinstalled on any Windows 10 or higher machine so if you are targetting those you should not have to do anything. 
+If however you are targetting older versions of Windows you must ensure .Net v4.8 or higher is installed either manually or as part of an installer.
 
 
 ### C++ Redistributable
 
-The native code has a dependency on the Visual C++ 2017 Redistributable package. This package contains code that is required to run code developed using C++ in Visual Studio and is very common amongst Windows applications.
+The native code has a dependency on the Visual C++ Redistributable package. This package contains code that is required to run code developed using C++ in Visual Studio and is very common amongst Windows applications.
 
 There are two ways to ensure this is available to your application:
 
 - Create an installer that runs the redistributable installer;
+- Require users to download and install the redistributable package directly;
 - Package the required DLL files from the redistributable with your application;
 
 The first is the suggested method. Installing the redistributable via an installer allows it to be put into the windows update process, allowing bug fixes and security updates to be handled automatically.
 
-The second method is only advised if you need a complete standalone application, where you don't (or cannot) use an installation process. This requires you to package DLLs from the redistributable with your application. 
+The last method is only advised if you need a complete standalone application, where you don't (or cannot) use an installation process. This requires you to package DLLs from the redistributable with your application. 
+It is not advised as you will miss out on critical updates and security patches from Microsoft. 
+
+For development you can manually download and install the redistributable package from [here](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022).
 
 
-### Creating an Installer
+#### Creating an Installer
 
 There are many methods to create application installers and many tutorials available. We suggest you find a method suitable to your environment and application and utilise the tutorials online. 
 
@@ -201,28 +206,23 @@ Tutorials:
 - [Generating a Windows installer](http://www.adobe.com/devnet/air/articles/customize-setup-for-AIR-app-with-captive-runtime.html)
 
 
-You need to include the x86 c++ 2017 redistributable in the installer, there are many examples and documentation online to achieve this.
+You need to include the C++ Redistributable in the installer, there are many examples and documentation online to achieve this.
 
 >
 > **The advantage of this method is that the libraries will be updated along with any system updates and will not require manual updating of the libraries and releasing of your application.**
 >
 
 
-### Packaging DLLs
+#### Packaging DLLs
 
-Packaging the DLLs into your application involves copying the DLLs specified below into your application root and including in your application package.
+Packaging the DLLs into your application involves copying the required DLLs into your application root and including in your application package.
 
-The best option is to install Visual Studio 2017 and locate the `Program Files[ (x86)]\Microsoft Visual Studio\2017\edition\VC\Redist\MSVC\lib-version` folder, eg: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.16.27012\x86\Microsoft.VC141.CRT`
+Contact us for the latest information on packaging the dll's directly, however we do not advise using this technique.
 
-Alternatively, download and install the x86 redistributable from the [Microsoft website](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads). This should install the DLLs into `C:\Windows\System32` folder. 
+The following DLLs are the critical ones, (`XXX` will need to be replaced with the current required version):
 
-
-Open the folder and copy the following DLLs to your application:
-
-- `msvcp140.dll`
-- `vcruntime140.dll`
-
-If you are having issues locating these files, feel free to contact us for help.
+- `msvcpXXX.dll`
+- `vcruntimeXXX.dll`
 
 
 > 

@@ -1,3 +1,9 @@
+### 2023.07.23 [v7.0.0]
+
+```
+feat(windows): update cef (chrome) version to v114.2.12 - requires .net 4.8 (resolves #313)
+```
+
 ### 2023.05.26 [v6.0.0]
 
 ```
