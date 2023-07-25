@@ -8,7 +8,7 @@ tags: [gamecenter, game-services, ios, apple]
 
 If you are publishing games to the AppStore for iOS you may have recently received an notification along the following lines:
 
-:::note 
+:::note Upcoming Game Center entitlement requirement
 Starting August 16, 2023, new apps and app updates that offer Game Center features need to include the Game Center entitlement and have Game Center features configured in App Store Connect before you can submit them to the App Store. Existing apps on the App Store are not affected by this new requirement.
 
 We noticed that although the apps listed below have Game Center features configured in App Store Connect, their latest binary delivery doesn’t include the Game Center entitlement. In your next app update, please update your binary to include the entitlement.
