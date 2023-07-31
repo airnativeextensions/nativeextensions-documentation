@@ -1,3 +1,10 @@
+### 2023.07.31 [v7.0.2]
+
+```
+feat(ios): update device database for latest ipad and iphone device details (resolves #276)
+feat(ios): add retrieval of device name and model for ios simulators (resolves #259)
+```
+
 ### 2023.06.22 [v7.0.0]
 
 ```
