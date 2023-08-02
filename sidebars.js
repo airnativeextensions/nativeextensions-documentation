@@ -2599,8 +2599,8 @@ module.exports = {
           "One Signal": [
             "pushnotifications/onesignal/add-the-extension",
             "pushnotifications/onesignal/onesignal",
-            "pushnotifications/migrating-to-v10.2",
             "pushnotifications/migrating-to-v11.2",
+            "pushnotifications/migrating-to-v10.2",
           ],
         },
         {
@@ -2660,10 +2660,10 @@ module.exports = {
     },
     {
       Troubleshooting: [
+        "pushnotifications/migrating-to-v11.3",
+        "pushnotifications/migrating-to-v11.2",
         "pushnotifications/migrating-to-v10.2",
         "pushnotifications/migrating-to-v10.1",
-        "pushnotifications/migrating-to-v11.2",
-        "pushnotifications/migrating-to-v11.3",
         "pushnotifications/migrating-to-androidx",
       ],
     },
