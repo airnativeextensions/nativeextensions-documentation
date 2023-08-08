@@ -11,6 +11,7 @@ When you create a leaderboard, the games service will take care of managing most
 - The games service checks if this score is better than the player's current leaderboard entry for the daily, weekly, or all-time score. If it is, the games service updates the corresponding leaderboards with the new score.
 - To retrieve a player's results for a leaderboard, you can requests a time frame (daily, weekly, or all-time), and specify whether or not the user wants to see a social or public leaderboard. The Games service performs all the necessary filtering, and then sends the results back to the client.
 
+
 ## A Leaderboard
 
 A leaderboard is represented by the `Leaderboard` class and is made up of a series of pieces of information that describe and identify the leaderboard.
@@ -21,6 +22,7 @@ These basic elements are associated with every leaderboard:
 - `displayName`: A short display name of the leaderboard (for example, "High Scores" or "Level 3").
 - `scoreOrder`: The order in which the scores are ordered in the leaderboard
 
+
 ## Score Order
 
 The score order represents the order in which the scores are ordered in the leaderboard. Generally larger values are better however there are circumstances where smaller are better, such as lap times in a racing game.
@@ -30,10 +32,13 @@ These orders are defined in the Leaderboard class:
 - `Leaderboard.SCORE_ORDER_LARGEST_FIRST`: Larger is better leaderboards are the default. This is typically what you would see in most games where players earn points.
 - `Leaderboard.SCORE_ORDER_LARGEST_FIRST`: Smaller is better leaderboards are occasionally used in cases where a smaller score would be better. The most common examples of this type of leaderboard are in racing games, where the score represents the player's time to finish the race.
 
+
 ## Creating Leaderboards
 
 - Google Play: https://developers.google.com/games/services/common/concepts/leaderboards#creating_a_leaderboard
 - Apple Game Center: ...
+- Huawei Game Services: https://developer.huawei.com/consumer/en/doc/distribution/app/agc-help-leaderboard-0000001146734605#EN-US_TOPIC_0000001146734605__section1334719546171
+
 
 ## Usage
 

@@ -4,14 +4,10 @@ sidebar_label: Troubleshooting
 ---
 
 
-## Errors
+See the following service specific documentation for a list of common errors encountered in using Game Services and possible resolutions.
 
-This is a list of common errors encountered in using the Game Services and possible resolutions.
+- [Apple Game Center](./service/gamecenter/troubleshooting.md)
+- [Google Play Games](./service/playgames/troubleshooting.md)
+- [Huawei Game Services](./service/huawei/troubleshooting.md)
 
 
-### Google Play Games
-
-
-- `26502: CLIENT_RECONNECT_REQUIRED`: 
-
-    - Generally this is caused by some issue in the account setup. We suggest you go through your application setup in Google Play and confirm everything is correctly setup especially the SHA1 of your certificate associated with the api project.

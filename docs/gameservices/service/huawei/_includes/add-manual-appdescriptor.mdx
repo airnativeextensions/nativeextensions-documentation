@@ -1,0 +1,135 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.GameServices</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>androidx.appcompat</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
+    <extensionID>com.huawei.hms.base</extensionID>
+    <extensionID>com.huawei.hms.coreinstaller</extensionID>
+    <extensionID>com.huawei.hms.game</extensionID>
+</extensions>
+```
+
+
+
+
+### Android
+
+#### Manifest Additions
+
+The Huawei Game Services require a few additions to the manifest to be able to start certain activities and set certain information. 
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+:::
+
+
+```xml
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <queries>
+    <intent>
+      <action android:name="com.huawei.hms.core.aidlservice"/>
+    </intent>
+    <intent>
+      <action android:name="com.huawei.hms.core"/>
+    </intent>
+    <package android:name="com.huawei.works"/>
+    <intent>
+      <action android:name="com.apptouch.intent.action.update_hms"/>
+    </intent>
+    <intent>
+      <action android:name="com.huawei.appmarket.intent.action.AppDetail"/>
+    </intent>
+    <package android:name="com.hisilicon.android.hiRMService"/>
+    <intent>
+      <action android:name="com.huawei.appmarket.intent.action.ThirdUpdateAction"/>
+    </intent>
+  </queries>
+  <meta-data
+        android:name="com.huawei.hms.min_api_level:apptouch:apptouch"
+        android:value="1" />
+  <uses-permission android:name="com.huawei.hwid.permission.gameservice.archive.access.provider"/>
+  <!-- 用来获取第三方正在运行的应用进程 -->
+  <uses-permission android:name="android.permission.GET_TASKS"/>
+  <!-- Google 最新的安全红线会增加接口getRunningAppProcesses()的权限，需要APK申请如下权限才能使用 -->
+  <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+  <!-- 悬浮窗权限 -->
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  <!-- 查看网络连接权限 -->
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <!-- 完全的网络访问权限 -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <!-- 如果是安卓8.0，应用编译配置的targetSdkVersion>=26，请务必添加以下权限 -->
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+  <!-- 应用市场9.0版本必须使用该权限获取用户的服务地 -->
+  <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>
+  <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+
+    <meta-data android:name="com.huawei.hms.client.service.name:game" android:value="game:6.10.0.300"/>
+    <service android:name="com.huawei.hms.jos.games.service.GameService" android:exported="true">
+      <intent-filter>
+        <action android:name="com.huawei.hms.games.service"/>
+      </intent-filter>
+    </service>
+    <provider android:name="com.huawei.hms.jos.games.archive.ArchiveRemoteAccessProvider" android:authorities="APPLICATION_PACKAGE.hmssdk.jos.archive" android:exported="true"/>
+    <activity android:name="com.huawei.appmarket.component.buoycircle.impl.delegete.BuoyBridgeActivity" android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+    </activity>
+    <meta-data android:name="com.huawei.hms.jos.versioncode" android:value="61000300"/>
+    <provider android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" android:authorities="APPLICATION_PACKAGE.AGCInitializeProvider" android:exported="false"/>
+    <service android:name="com.huawei.agconnect.core.ServiceDiscovery" android:exported="false"/>
+    <!-- 用于判断是否集成了本lib -->
+    <meta-data android:name="availableLoaded" android:value="yes"/>
+    <!-- 为后续统计第三方app集成了哪些Kit，因此需要Kit在自己的AndroidManifest.xml文件中定义业务标签元数据 -->
+    <meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:6.11.0.301"/>
+    <!-- SDK依赖的HMSCore的最低api level元数据 -->
+    <meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1"/>
+    <activity android:name="com.huawei.hms.activity.BridgeActivity" android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:screenOrientation="behind" android:theme="@style/Base_Translucent">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+    </activity>
+    <activity android:name="com.huawei.hms.activity.EnableServiceActivity" android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout" android:exported="false"/>
+    <activity android:name="com.huawei.hms.hwid.internal.ui.activity.HwIdSignInHubActivity" android:configChanges="fontScale|uiMode" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.huawei.hms.account.internal.ui.activity.AccountSignInHubActivity" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <!-- 切记同步修改 HuaweiIdAuthInternalConstant.HMS_SDK_VERSION -->
+    <meta-data android:name="com.huawei.hms.client.service.name:hwid" android:value="hwid:6.11.0.300"/>
+    <meta-data android:name="com.huawei.hms.min_api_level:hwid:hwid" android:value="1"/>
+    <!-- 5.3.0 独立授权依赖的api_level为11 -->
+    <!-- 5.3.0 setCarrierId依赖的api_level为13 -->
+    <meta-data android:name="com.huawei.hms.min_api_level:hwid:account" android:value="13"/>
+    <!-- 用于判断是否集成了本lib -->
+    <meta-data android:name="availableHMSCoreInstaller" android:value="yes"/>
+    <provider android:name="com.huawei.hms.update.provider.UpdateProvider" android:authorities="APPLICATION_PACKAGE.hms.update.provider" android:exported="false" android:grantUriPermissions="true"/>
+    <activity android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:configChanges="orientation|screenSize" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar"/>
+      <meta-data android:name="hnc-theme" android:value="androidhnext:style/Theme.Magic.Translucent.NoTitleBar"/>
+    </activity>
+    <activity android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+      <meta-data android:name="hnc-theme" android:value="androidhnext:style/Theme.Magic.Translucent"/>
+    </activity>
+    <provider android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider" android:authorities="APPLICATION_PACKAGE.updateSdk.fileProvider" android:exported="false" android:grantUriPermissions="true"/>
+    <meta-data android:name="componentverify_ag_cbg_root" android:value="@string/ag_sdk_cbg_root"/>
+
+	<!-- DISTRIQT CORE -->
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+	<!-- ANDROIDX -->
+	<provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false">
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+    </provider>
+
+  </application>
+</manifest>
+```
+

@@ -49,7 +49,7 @@ Achievements have a point value associated with them. The player's score must be
 
 - Google Play : https://developers.google.com/games/services/common/concepts/achievements#creating_an_achievement
 - Apple Game Center: ...
-
+- Huawei Game Services: https://developer.huawei.com/consumer/en/doc/distribution/app/agc-help-achievement-0000001099854868
 
 
 ## Usage

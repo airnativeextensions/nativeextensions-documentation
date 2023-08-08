@@ -1,0 +1,56 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.GameServices</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+</extensions>
+```
+
+
+
+### iOS 
+
+If you are supporting saved games on Game Center then you must add the additional 
+iCloud configuration lines, replacing the `CONTAINER_IDENTIFIER` and `YOUR_APPLICATION_IDENTIFIER` 
+with your container identifier you created earlier.
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+		<key>UIDeviceFamily</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+		</array>
+		
+	]]></InfoAdditions>
+	<requestedDisplayResolution>high</requestedDisplayResolution>
+	<Entitlements><![CDATA[
+	
+		<!-- GAME CENTER SAVED GAMES ADDITIONS -->
+		<!-- You only need the following lines if you are going to support GameCenter Saves -->
+		<key>com.apple.developer.ubiquity-container-identifiers</key>
+		<array>
+			<string>CONTAINER_IDENTIFIER</string>
+		</array>
+		
+		<key>com.apple.developer.ubiquity-kvstore-identifier</key>
+		<string>YOUR_APPLICATION_IDENTIFIER</string>
+		<!-- END GAME CENTER SAVED GAMES ADDITIONS -->
+
+		<key>com.apple.developer.game-center</key>
+		<true/>
+		
+	]]></Entitlements>
+</iPhone>
+```
+
+:::caution tvOS
+Note: **Saved games are not supported on Apple tvOS.** If you are supporting this platform you should not add the container to your application descriptor. If you are supporting both platforms and utilising saved games on iOS you will need to create separate application descriptors for each and only add the above to the iOS application build.
+:::
+
+More information on creating your iCloud container can be found here: [Setup GameCenter](../setup.md#saved-games)

@@ -173,10 +173,7 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "appconfig/index" },
     {
-      "Get Started": [
-        "appconfig/add-the-extension",
-        "appconfig/setup",
-      ],
+      "Get Started": ["appconfig/add-the-extension", "appconfig/setup"],
     },
     {
       Usage: ["appconfig/usage"],
@@ -616,16 +613,10 @@ module.exports = {
       ],
     },
     {
-      Usage: [
-        "calendar/get-events", 
-        "calendar/add-events"
-      ],
+      Usage: ["calendar/get-events", "calendar/add-events"],
     },
     {
-      Help: [
-        "calendar/migrating-to-v5.1", 
-        "calendar/migrating-to-androidx"
-      ],
+      Help: ["calendar/migrating-to-v5.1", "calendar/migrating-to-androidx"],
     },
     {
       Other: [
@@ -667,9 +658,7 @@ module.exports = {
       ],
     },
     {
-      Help: [
-        "camera/migrating-to-v6.1", 
-        "camera/migrating-to-androidx"],
+      Help: ["camera/migrating-to-v6.1", "camera/migrating-to-androidx"],
     },
     {
       Other: [
@@ -708,7 +697,7 @@ module.exports = {
     {
       Help: [
         "camerarollextended/migrating-to-v6.4",
-        "camerarollextended/migrating-to-androidx"
+        "camerarollextended/migrating-to-androidx",
       ],
     },
     {
@@ -738,16 +727,10 @@ module.exports = {
       ],
     },
     {
-      Usage: [
-        "cameraui/capture-media", 
-        "cameraui/camera-ui-options"
-      ],
+      Usage: ["cameraui/capture-media", "cameraui/camera-ui-options"],
     },
     {
-      Help: [
-        "cameraui/migrating-to-v3.5",
-        "cameraui/migrating-to-androidx"
-      ],
+      Help: ["cameraui/migrating-to-v3.5", "cameraui/migrating-to-androidx"],
     },
     {
       Other: [
@@ -848,10 +831,7 @@ module.exports = {
       "Contact Selection": ["contacts/contact-picker-ui"],
     },
     {
-      Help: [
-        "contacts/migrating-to-v5.1",
-        "contacts/migrating-to-androidx"
-      ],
+      Help: ["contacts/migrating-to-v5.1", "contacts/migrating-to-androidx"],
     },
     {
       Other: [
@@ -875,7 +855,7 @@ module.exports = {
     { type: "doc", id: "debug/index" },
     {
       "Get Started": ["debug/add-the-extension"],
-      "Usage": ["debug/usage"],
+      Usage: ["debug/usage"],
     },
     {
       Other: [
@@ -971,9 +951,7 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "dynamicicon/index" },
     {
-      "Get Started": [
-        "dynamicicon/add-the-extension",
-      ],
+      "Get Started": ["dynamicicon/add-the-extension"],
     },
     {
       Usage: [
@@ -1049,7 +1027,7 @@ module.exports = {
     {
       Help: [
         "expansionfiles/migrating-to-v4.2",
-        "expansionfiles/migrating-to-androidx"
+        "expansionfiles/migrating-to-androidx",
       ],
     },
     {
@@ -1549,20 +1527,36 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "gameservices/index" },
     {
-      "Setup Services": [
-        "gameservices/setup-gamecenter",
-        "gameservices/setup-google-play-games",
-      ],
-    },
-    {
-      Integration: [
-        "gameservices/add-the-extension",
-        "gameservices/initialise-the-extension",
-        "gameservices/initialise-the-service",
+      type: "category",
+      label: "Services",
+      collapsed: false,
+      items: [
+        {
+          "Apple Game Center": [
+            "gameservices/service/gamecenter/setup",
+            "gameservices/service/gamecenter/add-the-extension",
+            "gameservices/service/gamecenter/troubleshooting",
+          ],
+        },
+        {
+          "Google Play Games": [
+            "gameservices/service/playgames/setup",
+            "gameservices/service/playgames/add-the-extension",
+            "gameservices/service/playgames/troubleshooting",
+          ],
+        },
+        {
+          "Huawei Game Services": [
+            "gameservices/service/huawei/setup",
+            "gameservices/service/huawei/add-the-extension",
+            "gameservices/service/huawei/troubleshooting",
+          ],
+        },
       ],
     },
     {
       Usage: [
+        "gameservices/initialise-the-service",
         "gameservices/sign-in",
         "gameservices/leaderboards",
         "gameservices/achievements",
@@ -1710,7 +1704,7 @@ module.exports = {
       "Get Started": [
         "googletagmanager/google-tag-manager-setup",
         "googletagmanager/add-the-extension",
-      ]
+      ],
     },
     {
       Usage: ["googletagmanager/log-events"],
@@ -1729,11 +1723,11 @@ module.exports = {
           href: "http://github.com/distriqt/ANE-GoogleTagManager/issues/new",
         },
         {
-          "Legacy": [
+          Legacy: [
             "googletagmanager/legacy/containers",
-            "googletagmanager/legacy/datalayer"
-          ]
-        }
+            "googletagmanager/legacy/datalayer",
+          ],
+        },
       ],
     },
   ],
@@ -1764,16 +1758,13 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "health/index" },
     {
-      "Get Started": [
-        "health/add-the-extension",
-        "health/setup"
-      ],
+      "Get Started": ["health/add-the-extension", "health/setup"],
     },
     {
       Usage: [
         "health/check-for-updates",
         "health/authorisation",
-        "health/queries"
+        "health/queries",
       ],
     },
     {
@@ -1836,14 +1827,11 @@ module.exports = {
         "image/decoding-bytearray-to-bitmapdata",
         "image/transformations",
         "image/capturing-a-screenshot",
-      ]
-    },
-    
-    {
-      Help: [
-        "image/migrating-to-v5.2",
-        "image/migrating-to-androidx"
       ],
+    },
+
+    {
+      Help: ["image/migrating-to-v5.2", "image/migrating-to-androidx"],
     },
     {
       Other: [
@@ -1887,7 +1875,7 @@ module.exports = {
         {
           "Google Play Billing": [
             "inappbilling/add-the-extension",
-            "inappbilling/google/google-play-inapp-billing"
+            "inappbilling/google/google-play-inapp-billing",
           ],
         },
         {
@@ -1900,8 +1888,8 @@ module.exports = {
         {
           "Huawei AppGallery": [
             "inappbilling/huawei/add-the-extension",
-            "inappbilling/huawei/huawei-appgallery", 
-            "inappbilling/huawei/testing"
+            "inappbilling/huawei/huawei-appgallery",
+            "inappbilling/huawei/testing",
           ],
         },
         {
@@ -1929,7 +1917,10 @@ module.exports = {
         "inappbilling/promotions",
         "inappbilling/application-receipt",
         {
-          "Subscription Offers": ["inappbilling/subscription-offers", "inappbilling/introductory-prices"],
+          "Subscription Offers": [
+            "inappbilling/subscription-offers",
+            "inappbilling/introductory-prices",
+          ],
         },
         "inappbilling/testing",
       ],
@@ -1938,10 +1929,7 @@ module.exports = {
       "In-App Updates": ["inappbilling/in-app-updates"],
     },
     {
-      Help: [
-        "inappbilling/migration-v14",
-        "inappbilling/migration"
-      ],
+      Help: ["inappbilling/migration-v14", "inappbilling/migration"],
     },
     {
       Advanced: ["inappbilling/user-data"],
@@ -1962,7 +1950,6 @@ module.exports = {
       ],
     },
   ],
-  
 
   ironsource: [
     { type: "ref", id: "index" },
@@ -2087,10 +2074,7 @@ module.exports = {
       Testing: ["location/ios-location-simulation"],
     },
     {
-      Help: [
-        "location/migrating-to-v4.5",
-        "location/migrating-to-androidx"
-      ],
+      Help: ["location/migrating-to-v4.5", "location/migrating-to-androidx"],
     },
     {
       Other: [
@@ -2246,7 +2230,7 @@ module.exports = {
     {
       Troubleshooting: [
         "nativemaps/migrating-to-v5.2",
-        "nativemaps/migrating-to-androidx"
+        "nativemaps/migrating-to-androidx",
       ],
     },
     {
@@ -2270,14 +2254,10 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "nativetext/index" },
     {
-      "Get Started": [
-        "nativetext/add-the-extension",
-      ],
+      "Get Started": ["nativetext/add-the-extension"],
     },
     {
-      Usage: [
-        "nativetext/keyboard-input",
-      ],
+      Usage: ["nativetext/keyboard-input"],
     },
     {
       Other: [
@@ -2549,14 +2529,14 @@ module.exports = {
       Usage: [
         "permissions/set-permissions",
         "permissions/requesting-access",
-        "permissions/file-folder-access", 
+        "permissions/file-folder-access",
         "permissions/system-settings",
       ],
     },
     {
       Troubleshooting: [
         "permissions/migrating-to-v3.4",
-        "permissions/migrating-to-androidx"
+        "permissions/migrating-to-androidx",
       ],
     },
     {
@@ -2843,16 +2823,10 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "singular/index" },
     {
-      "Get Started": [
-        "singular/add-the-extension",
-        "singular/initialise",
-      ],
+      "Get Started": ["singular/add-the-extension", "singular/initialise"],
     },
     {
-      Usage: [
-        "singular/tracking-events",
-        "singular/advanced-options",
-      ],
+      Usage: ["singular/tracking-events", "singular/advanced-options"],
     },
     {
       Other: [
@@ -2875,15 +2849,10 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "speech/index" },
     {
-      "Get Started": [
-        "speech/add-the-extension",
-        "speech/authorisation",
-      ],
+      "Get Started": ["speech/add-the-extension", "speech/authorisation"],
     },
     {
-      Usage: [
-        "speech/recognition",
-      ],
+      Usage: ["speech/recognition"],
     },
     {
       Other: [

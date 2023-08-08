@@ -1,6 +1,6 @@
 ---
-title: Setup GameCenter
-sidebar_label: Setup GameCenter
+title: GameCenter
+sidebar_label: Setup
 ---
 
 
