@@ -1,3 +1,9 @@
+### 2023.08.10 [v12.0.1]
+
+```
+feat(fcm): add retrieval of the installation id as the service token (#573)
+```
+
 ### 2023.07.05 [v12.0.0]
 
 ```
