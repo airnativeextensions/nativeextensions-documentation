@@ -1,0 +1,541 @@
+---
+title: Huawei SDK Setup
+sidebar_label: Huawei
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+If you wish to use Huawei Push services (via Huawei Mobile Services (HMS)) you will need to do some additional changes to your installation. 
+
+We will assume you have already setup your OneSignal account and have your App ID. If not see the [setup](onesignal.md) section.
+
+
+
+## Authorising OneSignal
+
+Follow the instructions [here](https://documentation.onesignal.com/docs/authorize-onesignal-to-send-huawei-push) to authorise OneSignal to connect to your Huawei application. 
+
+
+
+## Huawei Configuration File 
+
+Download the `agconnect-services.json` file:
+
+- From the AppGallery Connect Project List select your app.
+
+- Ensure you have added your certificate SHA fingerprint to your app configuration. 
+
+- Click on the "agconnect-services.json" button to download this file.
+
+![](images/onesignal_hms_agconnect-services.png)
+
+- Place this file at the root of your application and ensure it is packaged.
+
+
+
+## Dependencies
+
+There are two cases to consider here, 
+- using Huawei only with no Firebase dependencies
+- adding HMS alongside the Firebase implementation
+
+
+
+
+
+### Alongside Firebase
+
+This case is useful if you wish to deploy your application to both Huawei devices and devices that have access to Google Play Services. OneSignal will favour Firebase in any situations where both are available.
+
+To support this case, it is simply a matter of following the standard installation and adding the HMS dependencies.
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+Using `apm` this can be done via the following:
+
+```
+apm install com.huawei.hms.push
+```
+
+This extension will install some required asset files to `assets/android`. You must ensure all the files in that directory are packaged with your application at the root level.
+
+
+Next you will need to add the additional OneSignal HMS manifest additions manually here by creating a custom configuration:
+
+```
+apm generate config android
+```
+
+Edit the file created at `config/android/AndroidManifest.xml` and ensure it contains the following:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="33"/>
+
+    <application>
+       
+        <service
+            android:name="com.distriqt.extension.pushnotifications.onesignal.OneSignalHMSService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.onesignal.NotificationOpenedActivityHMS"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
+```
+
+Then regenerate your application descriptor.
+
+```
+apm generate app-descriptor
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+To manually do this you will need to firstly download the following extensions:
+
+- [`com.huawei.hms.base`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.base.ane)
+- [`com.huawei.hms.push`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.push.ane)
+
+Download the [`assets`](https://github.com/distriqt/ANE-HuaweiMobileServices/tree/master/lib/assets/android) folder from the repository as well and add all the files contained in their to the root of your application. 
+
+
+#### Manifest Additions 
+
+The Huawei extensions require a few additions to the manifest to be able to start certain activities and services. 
+You should add the listing below to your manifest, ensure you merge the `application` node with any existing node in your manifest.
+The following listing should be added along with the listing used when originally installing OneSignal as these are solely the additions for HMS. 
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+:::
+
+
+```xml
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <!-- 检测网络状态 -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <queries>
+    <intent>
+      <action android:name="com.huawei.hms.core.aidlservice"/>
+    </intent>
+    <intent>
+      <action android:name="com.huawei.hms.core"/>
+    </intent>
+    <package android:name="com.huawei.works"/>
+  </queries>
+  <!-- HMS-SDK引导升级HMS功能，访问OTA服务器需要网络权限 -->
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <permission android:name="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG" android:protectionLevel="signature"/>
+  <!-- PUSH_PROVIDER and PUSH_WRITE_PROVIDER are both provider registered permissions for the notification switch. -->
+  <!-- The SDK's notification bar switch, EMUI 9.x becomes write to the local sp, sharing the file through the provider to the push-rom, which reads the sp file to get the status of the notification bar switch. -->
+  <permission android:name="APPLICATION_PACKAGE.permission.PUSH_PROVIDER" android:protectionLevel="signature"/>
+  <permission android:name="APPLICATION_PACKAGE.permission.PUSH_WRITE_PROVIDER" android:protectionLevel="signature"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.permission.PUSH_PROVIDER"/>
+  <application>
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+    <provider android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" android:authorities="APPLICATION_PACKAGE.AGCInitializeProvider" android:exported="false"/>
+    <service android:name="com.huawei.agconnect.core.ServiceDiscovery" android:exported="false"/>
+    <!-- 用于判断是否集成了本lib -->
+    <meta-data android:name="availableLoaded" android:value="yes"/>
+    <!-- 为后续统计第三方app集成了哪些Kit，因此需要Kit在自己的AndroidManifest.xml文件中定义业务标签元数据 -->
+    <meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:6.11.0.301"/>
+    <!-- SDK依赖的HMSCore的最低api level元数据 -->
+    <meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1"/>
+    <activity android:name="com.huawei.hms.activity.BridgeActivity" android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:screenOrientation="behind" android:theme="@style/Base_Translucent">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+    </activity>
+    <activity android:name="com.huawei.hms.activity.EnableServiceActivity" android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout" android:exported="false"/>
+    <activity android:name="com.huawei.hms.hwid.internal.ui.activity.HwIdSignInHubActivity" android:configChanges="fontScale|uiMode" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.huawei.hms.account.internal.ui.activity.AccountSignInHubActivity" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <!-- 切记同步修改 HuaweiIdAuthInternalConstant.HMS_SDK_VERSION -->
+    <meta-data android:name="com.huawei.hms.client.service.name:hwid" android:value="hwid:6.11.0.300"/>
+    <meta-data android:name="com.huawei.hms.min_api_level:hwid:hwid" android:value="1"/>
+    <!-- 5.3.0 独立授权依赖的api_level为11 -->
+    <!-- 5.3.0 setCarrierId依赖的api_level为13 -->
+    <meta-data android:name="com.huawei.hms.min_api_level:hwid:account" android:value="13"/>
+    <provider android:name="com.huawei.hms.aaid.InitProvider" android:authorities="APPLICATION_PACKAGE.aaidinitprovider" android:exported="false" android:initOrder="500"/>
+    <meta-data android:name="com.huawei.hms.client.service.name:opendevice" android:value="opendevice:6.11.0.300"/>
+    <meta-data android:name="com.huawei.hms.min_api_level:opendevice:push" android:value="1"/>
+    <receiver android:name="com.huawei.hms.support.api.push.PushMsgReceiver" android:directBootAware="true" android:exported="true" android:permission="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG">
+      <intent-filter>
+        <!-- Mandatory, be used to receive notification bar message click event. -->
+        <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY"/>
+        <!-- Optional, compatible with old huawei phones. -->
+        <action android:name="com.huawei.intent.action.PUSH"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.huawei.hms.support.api.push.PushReceiver" android:directBootAware="true" android:exported="true" android:permission="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG">
+      <intent-filter>
+        <!-- Mandatory, be used to receive tokens. -->
+        <action android:name="com.huawei.android.push.intent.REGISTRATION"/>
+        <!-- Mandatory, be used to receive messages. -->
+        <action android:name="com.huawei.android.push.intent.RECEIVE"/>
+      </intent-filter>
+    </receiver>
+    <!-- Definition of receiving service for notification bar and pass-through message of non-huawei mobile phone. -->
+    <service android:name="com.huawei.hms.support.api.push.service.HmsMsgService" android:directBootAware="true" android:enabled="true" android:exported="true" android:process=":pushservice">
+      <intent-filter>
+        <action android:name="com.huawei.push.msg.NOTIFY_MSG"/>
+        <action android:name="com.huawei.push.msg.PASSBY_MSG"/>
+      </intent-filter>
+    </service>
+    <provider android:name="com.huawei.hms.support.api.push.PushProvider" android:authorities="APPLICATION_PACKAGE.huawei.push.provider" android:exported="true" android:readPermission="APPLICATION_PACKAGE.permission.PUSH_PROVIDER" android:writePermission="APPLICATION_PACKAGE.permission.PUSH_WRITE_PROVIDER"/>
+    <meta-data android:name="com.huawei.hms.client.service.name:push" android:value="push:6.11.0.300"/>
+    <meta-data android:name="com.huawei.hms.min_api_level:push:push" android:value="1"/>
+    <activity android:name="com.huawei.hms.support.api.push.TransActivity" android:exported="false"/>
+  </application>
+</manifest>
+```
+
+
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+
+
+
+### Huawei Only
+
+If you need to solely use HMS you will need to uninstall the Firebase and Google Play Services dependencies and swap to Huawei Mobile Services. 
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+The simplest way to do this is to remove the `com.distriqt.PushNotifications-OneSignal` package and install the `com.distriqt.PushNotifications-OneSignalHMS` package.
+
+```
+apm uninstall com.distriqt.PushNotifications-OneSignal
+apm install com.distriqt.PushNotifications-OneSignalHMS
+```
+
+Then regenerate your application descriptor.
+
+```
+apm generate app-descriptor
+```
+
+:::note
+Ensure that any of the `com.google.firebase.*` and `com.distriqt.playservices.*` extensions were removed from your `extension` list in your application descriptor. 
+
+If you have other services relying on playservices or firebase they may still remain and can cause issues with OneSignal.
+:::
+
+  </TabItem>
+  <TabItem value="manual" >
+
+Firstly remove any of the `com.google.firebase.*` and `com.distriqt.playservices.*` extensions from your application, both the ane files and references in the `extension` list in your application descriptor.
+
+Next, add the following HMS extensions:
+
+- [`com.huawei.hms.base`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.base.ane)
+- [`com.huawei.hms.push`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.push.ane)
+
+Download the [`assets`](https://github.com/distriqt/ANE-HuaweiMobileServices/tree/master/lib/assets/android) folder from the repository as well and add all the files contained in their to the root of your application. 
+
+
+
+#### Manifest Additions 
+
+The Huawei extensions require a few additions to the manifest to be able to start certain activities and services. 
+You should add the listing below to your manifest, ensure you merge the `application` node with any existing node in your manifest.
+The following listing should replace any additions you made if you originally installed the Firebase implementation of OneSignal. 
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+:::
+
+
+```xml
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <queries>
+    <intent>
+      <action android:name="com.huawei.hms.core.aidlservice"/>
+    </intent>
+    <intent>
+      <action android:name="com.huawei.hms.core"/>
+    </intent>
+    <package android:name="com.huawei.works"/>
+  </queries>
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+  <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+  <permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE"/>
+  <!-- BADGE -->
+  <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+  <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+  <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+  <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+  <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+  <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+  <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+  <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+  <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+  <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+  <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+  <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+  <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+  <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+  <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+  <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+  <!--
+ Required so the device vibrates on receiving a push notification.
+         Vibration settings of the device still apply.
+    -->
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <permission android:name="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG" android:protectionLevel="signature"/>
+  <!-- PUSH_PROVIDER and PUSH_WRITE_PROVIDER are both provider registered permissions for the notification switch. -->
+  <!-- The SDK's notification bar switch, EMUI 9.x becomes write to the local sp, sharing the file through the provider to the push-rom, which reads the sp file to get the status of the notification bar switch. -->
+  <permission android:name="APPLICATION_PACKAGE.permission.PUSH_PROVIDER" android:protectionLevel="signature"/>
+  <permission android:name="APPLICATION_PACKAGE.permission.PUSH_WRITE_PROVIDER" android:protectionLevel="signature"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.permission.PUSH_PROVIDER"/>
+  <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+    <service android:name="androidx.room.MultiInstanceInvalidationService" android:directBootAware="true" android:exported="false"/>
+    <provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false">
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+    </provider>
+    <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false"/>
+    <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false"/>
+    <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:directBootAware="false" android:enabled="true" android:exported="false"/>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BATTERY_OKAY"/>
+        <action android:name="android.intent.action.BATTERY_LOW"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+        <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.TIME_SET"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false">
+      <intent-filter>
+        <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:directBootAware="false" android:enabled="true" android:exported="true" android:permission="android.permission.DUMP">
+      <intent-filter>
+        <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+      </intent-filter>
+    </receiver>
+    <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+    <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+      <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+    </service>
+    <provider android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" android:authorities="APPLICATION_PACKAGE.AGCInitializeProvider" android:exported="false"/>
+    <service android:name="com.huawei.agconnect.core.ServiceDiscovery" android:exported="false"/>
+    <!-- 用于判断是否集成了本lib -->
+    <meta-data android:name="availableLoaded" android:value="yes"/>
+    <!-- 为后续统计第三方app集成了哪些Kit，因此需要Kit在自己的AndroidManifest.xml文件中定义业务标签元数据 -->
+    <meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:6.11.0.301"/>
+    <!-- SDK依赖的HMSCore的最低api level元数据 -->
+    <meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1"/>
+    <activity android:name="com.huawei.hms.activity.BridgeActivity" android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:screenOrientation="behind" android:theme="@style/Base_Translucent">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+    </activity>
+    <activity android:name="com.huawei.hms.activity.EnableServiceActivity" android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout" android:exported="false"/>
+    <activity android:name="com.huawei.hms.hwid.internal.ui.activity.HwIdSignInHubActivity" android:configChanges="fontScale|uiMode" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.huawei.hms.account.internal.ui.activity.AccountSignInHubActivity" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <!-- 切记同步修改 HuaweiIdAuthInternalConstant.HMS_SDK_VERSION -->
+    <meta-data android:name="com.huawei.hms.client.service.name:hwid" android:value="hwid:6.11.0.300"/>
+    <meta-data android:name="com.huawei.hms.min_api_level:hwid:hwid" android:value="1"/>
+    <!-- 5.3.0 独立授权依赖的api_level为11 -->
+    <!-- 5.3.0 setCarrierId依赖的api_level为13 -->
+    <meta-data android:name="com.huawei.hms.min_api_level:hwid:account" android:value="13"/>
+    <!-- NOTIFICATIONS -->
+    <receiver android:name="com.distriqt.extension.pushnotifications.notifications.receivers.NotificationReceiver" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELETED"/>
+        <action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION"/>
+        <data android:scheme="dtpn"/>
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.distriqt.extension.pushnotifications.notifications.NotificationActivity" android:exported="false">
+      <intent-filter>
+        <action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED"/>
+        <action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION"/>
+        <data android:scheme="dtpn"/>
+      </intent-filter>
+    </activity>
+    <provider android:name="com.distriqt.extension.pushnotifications.content.FileProvider" android:authorities="APPLICATION_PACKAGE.pushnotificationsfileprovider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/distriqt_pushnotifications_paths"/>
+    </provider>
+    <!-- ONE SIGNAL -->
+    <meta-data android:name="com.onesignal.NotificationServiceExtension" android:value="com.distriqt.extension.pushnotifications.onesignal.NotificationServiceExtension"/>
+    <service android:name="com.distriqt.extension.pushnotifications.onesignal.OneSignalHMSService" android:exported="false">
+      <intent-filter>
+        <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <receiver android:name="com.onesignal.FCMBroadcastReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
+      <!-- High priority so OneSignal payloads can be filtered from other FCM receivers -->
+      <intent-filter android:priority="999">
+        <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+        <category android:name="APPLICATION_PACKAGE"/>
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.onesignal.NotificationOpenedActivityHMS" android:exported="true" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+      </intent-filter>
+    </activity>
+    <service android:name="com.onesignal.FCMIntentService" android:exported="false"/>
+    <service android:name="com.onesignal.FCMIntentJobService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="com.onesignal.SyncService" android:exported="false" android:stopWithTask="true"/>
+    <service android:name="com.onesignal.SyncJobService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <activity android:name="com.onesignal.PermissionsActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <receiver android:name="com.onesignal.NotificationDismissReceiver" android:exported="true"/>
+    <receiver android:name="com.onesignal.BootUpReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.onesignal.UpgradeReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.onesignal.NotificationOpenedReceiver" android:excludeFromRecents="true" android:exported="true" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.onesignal.NotificationOpenedReceiverAndroid22AndOlder" android:excludeFromRecents="true" android:exported="true" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <provider android:name="com.huawei.hms.aaid.InitProvider" android:authorities="APPLICATION_PACKAGE.aaidinitprovider" android:exported="false" android:initOrder="500"/>
+    <meta-data android:name="com.huawei.hms.client.service.name:opendevice" android:value="opendevice:6.11.0.300"/>
+    <meta-data android:name="com.huawei.hms.min_api_level:opendevice:push" android:value="1"/>
+    <receiver android:name="com.huawei.hms.support.api.push.PushMsgReceiver" android:directBootAware="true" android:exported="true" android:permission="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG">
+      <intent-filter>
+        <!-- Mandatory, be used to receive notification bar message click event. -->
+        <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY"/>
+        <!-- Optional, compatible with old huawei phones. -->
+        <action android:name="com.huawei.intent.action.PUSH"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.huawei.hms.support.api.push.PushReceiver" android:directBootAware="true" android:exported="true" android:permission="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG">
+      <intent-filter>
+        <!-- Mandatory, be used to receive tokens. -->
+        <action android:name="com.huawei.android.push.intent.REGISTRATION"/>
+        <!-- Mandatory, be used to receive messages. -->
+        <action android:name="com.huawei.android.push.intent.RECEIVE"/>
+      </intent-filter>
+    </receiver>
+    <!-- Definition of receiving service for notification bar and pass-through message of non-huawei mobile phone. -->
+    <service android:name="com.huawei.hms.support.api.push.service.HmsMsgService" android:directBootAware="true" android:enabled="true" android:exported="true" android:process=":pushservice">
+      <intent-filter>
+        <action android:name="com.huawei.push.msg.NOTIFY_MSG"/>
+        <action android:name="com.huawei.push.msg.PASSBY_MSG"/>
+      </intent-filter>
+    </service>
+    <provider android:name="com.huawei.hms.support.api.push.PushProvider" android:authorities="APPLICATION_PACKAGE.huawei.push.provider" android:exported="true" android:readPermission="APPLICATION_PACKAGE.permission.PUSH_PROVIDER" android:writePermission="APPLICATION_PACKAGE.permission.PUSH_WRITE_PROVIDER"/>
+    <meta-data android:name="com.huawei.hms.client.service.name:push" android:value="push:6.11.0.300"/>
+    <meta-data android:name="com.huawei.hms.min_api_level:push:push" android:value="1"/>
+    <activity android:name="com.huawei.hms.support.api.push.TransActivity" android:exported="false"/>
+  </application>
+</manifest>
+```
+
+  </TabItem>
+  
+</Tabs>
+
+
+
+## Initialise HMS
+
+There is one small code addition required, which is simply to initialise HMS to ensure the configuration is read from your agconnect services json file. 
+We suggest doing this before initilaising the Push Notifications extension and setting up your service.
+
+Firstly add the import:
+
+```actionscript
+import com.distriqt.extension.hms.base.Base;
+```
+
+Then call `initialise()`:
+
+```actionscript
+var success:Boolean = Base.instance.initialise();
+```
+
+This will return `true` if the json file was found and loaded correctly.
+

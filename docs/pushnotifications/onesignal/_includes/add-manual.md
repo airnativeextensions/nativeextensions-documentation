@@ -105,9 +105,10 @@ You can access the Google Play Services client library extensions here: [https:/
 
 #### Firebase
 
-To use Firebase Cloud Messaging you must include the core Firebase libraries. The core libraries are available in the `com.google.firebase.core` extension alongside the Google Play Services:
+To use Firebase Cloud Messaging you must include the Firebase core and messaging libraries. The core libraries are available in the following extensions alongside the Google Play Services:
 
 - [`com.google.firebase.core`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane)
+- [`com.google.firebase.messaging`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.messaging.ane)
 
 You do not need to initialise or configure this.
 

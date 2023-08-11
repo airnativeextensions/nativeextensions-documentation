@@ -11,7 +11,8 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.CloudMessaging</extensionID>
 	<extensionID>com.google.firebase.core</extensionID>
-
+	<extensionID>com.google.firebase.messaging</extensionID>
+	
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.browser</extensionID>
 	<extensionID>androidx.cardview</extensionID>

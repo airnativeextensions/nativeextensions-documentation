@@ -62,10 +62,11 @@ You can access the Google Play Services client library extensions here: [https:/
 
 ### Firebase
 
-To use Firebase Cloud Messaging you must include the core Firebase libraries and configure 
-your Firebase application. The core libraries are available in the `com.google.firebase.core` extension alongside the Google Play Services:
+To use Firebase Cloud Messaging you must include the Firebase core and messaging libraries and configure your Firebase application. 
+The core libraries are available in the following extensions alongside the Google Play Services:
 
-- [com.google.firebase.core.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane)
+- [com.google.firebase.core](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane)
+- [com.google.firebase.messaging](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.messaging.ane)
 
 
 See the [Firebase configuration documentation](https://docs.airnativeextensions.com/docs/firebase/setup/configuration-files/) on how to configure your application.
@@ -85,6 +86,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.playservices.Base</extensionID>
     
 	<extensionID>com.google.firebase.core</extensionID>
+	<extensionID>com.google.firebase.messaging</extensionID>
 	<extensionID>com.google.android.datatransport</extensionID>
 	<extensionID>com.google.dagger</extensionID>
 	<extensionID>androidx.core</extensionID>
