@@ -4,6 +4,12 @@
 feat(onesignal): add huawei push services functionality to OneSignal which required separation of the firebase messaging dependency
 ```
 
+### 2023.08.11 [v13.0.0]
+
+```
+feat(onesignal): add huawei push services functionality to OneSignal which required separation of the firebase messaging dependency
+```
+
 ### 2023.08.10 [v12.0.1]
 
 ```
