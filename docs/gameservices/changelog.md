@@ -1,3 +1,11 @@
+### 2023.08.17 [v8.3.0]
+
+```
+feat(android): Huawei Game Service v6.10.0.300 integration (sign in, leaderboards, achievements) (resolves #225)
+fix(gamecenter): fix crash if called initialise multiple times 
+feat(docs): update docs to separate services and add documentation for huawei
+```
+
 ### 2023.07.05 [v8.2.0]
 
 ```
