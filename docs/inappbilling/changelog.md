@@ -1,3 +1,9 @@
+### 2023.08.17 [v15.1.0]
+
+```
+feat(huawei): update huawei appgallery sdk hms.iap v6.10.0.300
+```
+
 ### 2023.07.05 [v15.0.1]
 
 ```
