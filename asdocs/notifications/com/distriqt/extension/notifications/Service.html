@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Service,com.distriqt.extension.notifications.Service,AUTHORISED,DENIED,EXT_CONTEXT_ID,NOT_DETERMINED,PRIORITY_MAX,PRIORITY_MIN,REPEAT_DAY,REPEAT_FORTNIGHT,REPEAT_HOUR,REPEAT_MINUTE,REPEAT_MONTH,REPEAT_NONE,REPEAT_QUARTER,REPEAT_SECOND,REPEAT_WEEK,REPEAT_WEEKDAY,REPEAT_YEAR,TYPE_IMAGE,TYPE_INBOX,TYPE_NONE,TYPE_TEXT,UNKNOWN,VERSION,alert,alertAction,applicationId,backgroundImage,backgroundImageTextColour,body,canOpenDeviceSettings,categories,category,channelGroups,channelId,channels,colour,count,delay,enableNotificationsWhenActive,groupIcon,groupKey,groupSummary,groupTitle,icon,id,image,implementation,isSupported,largeIcon,lights,lines,nativeVersion,ongoing,payload,priority,repeatInterval,service,sound,style,text,title,type,version,vibrate"><title>com.distriqt.extension.notifications.Service</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Service,com.distriqt.extension.notifications.Service,AUTHORISED,DENIED,EXT_CONTEXT_ID,NOT_DETERMINED,PRIORITY_MAX,PRIORITY_MIN,REPEAT_DAY,REPEAT_FORTNIGHT,REPEAT_HOUR,REPEAT_MINUTE,REPEAT_MONTH,REPEAT_NONE,REPEAT_QUARTER,REPEAT_SECOND,REPEAT_WEEK,REPEAT_WEEKDAY,REPEAT_YEAR,SHOULD_EXPLAIN,TYPE_IMAGE,TYPE_INBOX,TYPE_NONE,TYPE_TEXT,UNKNOWN,VERSION,alert,alertAction,applicationId,backgroundImage,backgroundImageTextColour,body,canOpenDeviceSettings,categories,category,channelGroups,channelId,channels,colour,count,delay,enableNotificationsWhenActive,groupIcon,groupKey,groupSummary,groupTitle,icon,id,image,implementation,isSupported,largeIcon,lights,lines,nativeVersion,ongoing,payload,priority,repeatInterval,service,sound,style,text,title,type,version,vibrate,addCategory,addChannel,addChannelGroup,authorisationStatus,cancel,cancelAll,dispose,hasAuthorisation,init,notify,openDeviceSettings,register,requestAuthorisation,setBadgeNumber,setNotificationsWhenActive,setup,unregister"><title>com.distriqt.extension.notifications.Service</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
 				asdocTitle = 'Service - distriqt // Notifications';
 				var baseRef = '../../../../';
 				window.onload = configPage;
@@ -16,7 +16,7 @@
 	 </p>
 	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#applicationId" class="signatureLink">applicationId</a> : String = null<div class="summaryTableDescription"></div></td><td class="summaryTableOwnerCol">Service</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#categories" class="signatureLink">categories</a> : Vector.&lt;<a href="../../../../com/distriqt/extension/notifications/actions/Category.html">Category</a>&gt;<div class="summaryTableDescription">
 		 
-		 Sets the notification categories the define the actions 
+		 Sets the notification categories the define the actions
 		 available on notifications.</div></td><td class="summaryTableOwnerCol">Service</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#channelGroups" class="signatureLink">channelGroups</a> : Vector.&lt;<a href="../../../../com/distriqt/extension/notifications/channels/ChannelGroup.html">ChannelGroup</a>&gt;<div class="summaryTableDescription">
 		 
 		 The array of ChannelGroups available.</div></td><td class="summaryTableOwnerCol">Service</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#channels" class="signatureLink">channels</a> : Vector.&lt;<a href="../../../../com/distriqt/extension/notifications/channels/Channel.html">Channel</a>&gt;<div class="summaryTableDescription">
@@ -26,24 +26,32 @@
 		 
 		 A Vector array of Channel objects.</div></td><td class="summaryTableOwnerCol">Service</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#enableNotificationsWhenActive" class="signatureLink">enableNotificationsWhenActive</a> : Boolean = false<div class="summaryTableDescription">
 		 
-		 By default this is false and a notification delivered when the application is 
+		 By default this is false and a notification delivered when the application is
 		 open will not be shown to the user, and instead the notification event is fired.</div></td><td class="summaryTableOwnerCol">Service</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Service()" class="signatureLink">Service</a>()</div><div class="summaryTableDescription">
 		  Constructor
-		 </div></td><td class="summaryTableOwnerCol">Service</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+		 </div></td><td class="summaryTableOwnerCol">Service</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addCategory()" class="signatureLink">addCategory</a>(category:<a href="../../../../com/distriqt/extension/notifications/actions/Category.html">Category</a>):<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></div><div class="summaryTableDescription">
+		 Add a category
+		 		 </div></td><td class="summaryTableOwnerCol">Service</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addChannel()" class="signatureLink">addChannel</a>(channel:<a href="../../../../com/distriqt/extension/notifications/channels/Channel.html">Channel</a>):<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></div><div class="summaryTableDescription">
+		 Add a channel
+		 		 </div></td><td class="summaryTableOwnerCol">Service</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addChannelGroup()" class="signatureLink">addChannelGroup</a>(group:<a href="../../../../com/distriqt/extension/notifications/channels/ChannelGroup.html">ChannelGroup</a>):<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></div><div class="summaryTableDescription">
+		 Add a channel group
+		 		 </div></td><td class="summaryTableOwnerCol">Service</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setNotificationsWhenActive()" class="signatureLink">setNotificationsWhenActive</a>(enableNotificationsWhenActive:Boolean):<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></div><div class="summaryTableDescription">
+		 
+		 Sets the value of enableNotificationsWhenActive
+		 
+		 		 </div></td><td class="summaryTableOwnerCol">Service</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="applicationId"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">applicationId</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public var applicationId:String = null</code><p></p></div><a name="propertyDetail"></a><a name="categories"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">categories</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var categories:Vector.&lt;<a href="../../../../com/distriqt/extension/notifications/actions/Category.html">Category</a>&gt;</code><p></p><p></p><p>
 		 <p>
-		 Sets the notification categories the define the actions 
+		 Sets the notification categories the define the actions
 		 available on notifications.
 		 </p>
-		 
-		 <p>
-		 A Vector array of <code>Category</code> objects. 
-		 You should use the <code>CategoryBuilder</code> to create the 
+		 		 <p>
+		 A Vector array of <code>Category</code> objects.
+		 You should use the <code>CategoryBuilder</code> to create the
 		 <code>Category</code> objects.
 		 </p>
-		 
-		 </p></div><a name="propertyDetail"></a><a name="channelGroups"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">channelGroups</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var channelGroups:Vector.&lt;<a href="../../../../com/distriqt/extension/notifications/channels/ChannelGroup.html">ChannelGroup</a>&gt;</code><p></p><p></p><p>
+		 		 </p></div><a name="propertyDetail"></a><a name="channelGroups"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">channelGroups</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var channelGroups:Vector.&lt;<a href="../../../../com/distriqt/extension/notifications/channels/ChannelGroup.html">ChannelGroup</a>&gt;</code><p></p><p></p><p>
 		 <p>
 		 The array of <code>ChannelGroup</code>s available.
 		 </p>
@@ -58,14 +66,34 @@
 		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="enableNotificationsWhenActive"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">enableNotificationsWhenActive</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var enableNotificationsWhenActive:Boolean = false</code><p></p><p></p><p>
 		 <p>
-		 By default this is false and a notification delivered when the application is 
-		 open will not be shown to the user, and instead the notification event is fired. 
-		 If set to true notifications will be shown when the user is in your app.
+		 By default this is <code>false</code> and a notification delivered when the application is
+		 open will not be shown to the user, and instead the notification event is fired.
+		 If set to <code>true</code> notifications will be shown when the user is in your app.
 		 </p>
-		 
-		 <p>
-		 Android only
+		 		 <p>
+		 Supported on:
 		 </p>
+		 <ul>
+		  <li>Android</li>
+		  <li>iOS v10+</li>
+		 </ul>
 		 </p></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Service()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Service</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Service()</code><p></p><p>
 		  Constructor
-		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 27 2023, 02:19 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 27 2023, 02:19 PM +10:00  -->
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addCategory()"></a><a name="addCategory(com.distriqt.extension.notifications.actions.Category)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addCategory</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addCategory(category:<a href="../../../../com/distriqt/extension/notifications/actions/Category.html">Category</a>):<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code><p></p><p></p><p>
+		 Add a category
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">category</span>:<a href="../../../../com/distriqt/extension/notifications/actions/Category.html">Category</a></code> &mdash; Use <code>CategoryBuilder.build</code> to construct this object
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code> &mdash; The <code>Service</code> instance for chaining calls
+		 </td></tr></table></div><a name="addChannel()"></a><a name="addChannel(com.distriqt.extension.notifications.channels.Channel)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addChannel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addChannel(channel:<a href="../../../../com/distriqt/extension/notifications/channels/Channel.html">Channel</a>):<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code><p></p><p></p><p>
+		 Add a channel
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">channel</span>:<a href="../../../../com/distriqt/extension/notifications/channels/Channel.html">Channel</a></code> &mdash; Use <code>ChannelBuilder.build</code> to construct this object
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code> &mdash; The <code>Service</code> instance for chaining calls
+		 </td></tr></table></div><a name="addChannelGroup()"></a><a name="addChannelGroup(com.distriqt.extension.notifications.channels.ChannelGroup)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addChannelGroup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addChannelGroup(group:<a href="../../../../com/distriqt/extension/notifications/channels/ChannelGroup.html">ChannelGroup</a>):<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code><p></p><p></p><p>
+		 Add a channel group
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">group</span>:<a href="../../../../com/distriqt/extension/notifications/channels/ChannelGroup.html">ChannelGroup</a></code> &mdash; The <code>ChannelGroup</code> object to add
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code> &mdash; The <code>Service</code> instance for chaining calls
+		 </td></tr></table></div><a name="setNotificationsWhenActive()"></a><a name="setNotificationsWhenActive(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setNotificationsWhenActive</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setNotificationsWhenActive(enableNotificationsWhenActive:Boolean):<a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code><p></p><p></p><p>
+		 <p>
+		 Sets the value of <code>enableNotificationsWhenActive</code>
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">enableNotificationsWhenActive</span>:Boolean</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../../com/distriqt/extension/notifications/Service.html">Service</a></code> &mdash; The <code>Service</code> instance for chaining calls
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Service.html#enableNotificationsWhenActive" target="">enableNotificationsWhenActive</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Aug 18 2023, 03:54 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Aug 18 2023, 03:54 PM +10:00  -->

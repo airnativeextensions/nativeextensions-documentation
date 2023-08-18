@@ -10,17 +10,16 @@
 				
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Action"); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
 				-->
-			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.notifications.actions</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Action</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Action  <img src="../../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>	
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.notifications.actions</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Action</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Action  <img src="../../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>
 	              <p>
 	 Represents a possible quick action that a user can perform
 	 on a notification
 	 </p>
 	              <p>
-	 You should not construct this class directly but instead use the 
+	 You should not construct this class directly but instead use the
 	 <code>ActionBuilder</code>
 	              </p>
-	 
-	           <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/notifications/builders/ActionBuilder.html" target="">com.distriqt.extension.notifications.builders.ActionBuilder</a></div><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#destructive" class="signatureLink">destructive</a> : Boolean = false<div class="summaryTableDescription">
+	 	         <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="../../../../../com/distriqt/extension/notifications/builders/ActionBuilder.html" target="">com.distriqt.extension.notifications.builders.ActionBuilder</a></div><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#destructive" class="signatureLink">destructive</a> : Boolean = false<div class="summaryTableDescription">
 		 
 		 If true this action will indicate its destructive nature
 		 by making the action red.</div></td><td class="summaryTableOwnerCol">Action</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#icon" class="signatureLink">icon</a> : String<div class="summaryTableDescription">
@@ -35,7 +34,7 @@
 		 from the notification area.</div></td><td class="summaryTableOwnerCol">Action</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#title" class="signatureLink">title</a> : String<div class="summaryTableDescription">
 		 
 		 The visible label to display on this action
-		  
+		 
 		 </div></td><td class="summaryTableOwnerCol">Action</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#willLaunchApplication" class="signatureLink">willLaunchApplication</a> : Boolean = false<div class="summaryTableDescription">
 		 
 		 If true this action will launch your application.</div></td><td class="summaryTableOwnerCol">Action</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Action()" class="signatureLink">Action</a>()</div><div class="summaryTableDescription">
@@ -47,7 +46,7 @@
 		 If true this action will indicate its destructive nature
 		 by making the action red.
 		 </p>
-		 <b>iOS Only</b> 
+		 <b>iOS Only</b>
 		 </p></div><a name="propertyDetail"></a><a name="icon"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">icon</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var icon:String</code><p></p><p></p><p>
 		 <p>
 		 A custom icon resource name, eg: <code>ic_stat_distriqt_default</code>
@@ -58,22 +57,21 @@
 		 <p>
 		 This value is used to identify this action and is returned in events
 		 associated with actions on a notification. This value should be unique
-		 within a category, and you may wish to make them unique across your 
+		 within a category, and you may wish to make them unique across your
 		 application to make processing easier.
-		 </p> 
+		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="shouldCancelOnAction"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">shouldCancelOnAction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var shouldCancelOnAction:Boolean = false</code><p></p><p></p><p>
 		 <p>
 		 If true selection of this action will clear the notification
-		 from the notification area. 
+		 from the notification area.
 		 </p>
-		 
-		 <p>
+		 		 <p>
 		 Android Only
 		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="title"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">title</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var title:String</code><p></p><p></p><p>
 		 <p>
 		 The visible label to display on this action
-		 </p> 
+		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="willLaunchApplication"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">willLaunchApplication</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var willLaunchApplication:Boolean = false</code><p></p><p></p><p>
 		 <p>
 		 If true this action will launch your application.
@@ -86,8 +84,7 @@
 		 <p>
 		 The default is <code>false</code>
 		 </p>
-		 
-		 <p>Android Only</p>
+		 		 <p>Android Only</p>
 		 </p></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Action()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Action</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Action()</code><p></p><p>
 		  Constructor
-		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Jan 27 2023, 02:19 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Jan 27 2023, 02:19 PM +10:00  -->
+		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Fri Aug 18 2023, 03:54 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Fri Aug 18 2023, 03:54 PM +10:00  -->
