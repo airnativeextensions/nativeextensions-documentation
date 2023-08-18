@@ -1,3 +1,11 @@
+### 2023.08.18 [v14.3.0]
+
+```
+feat(huawei): update hms sdk v13.4.62.302
+feat(android,ump): update ump to v2.1.0 (resolves #509)
+feat(android,admob): update admob sdk to v22.2.0
+```
+
 ### 2023.07.05 [v14.1.0]
 
 ```
