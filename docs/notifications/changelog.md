@@ -1,3 +1,9 @@
+### 2023.08.18 [v6.6.0]
+
+```
+feat(api): update as3 api to include addChannel method similar to push notifications (resolves #202)
+```
+
 ### 2023.01.27 [v6.5.0]
 
 ```
