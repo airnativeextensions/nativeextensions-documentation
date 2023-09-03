@@ -39,6 +39,42 @@ function errorHandler( event:SpeechRecogniserEvent ):void
 On a `SpeechRecogniserEvent.RESULT` event there is a `result` property which is an instance of the `SpeechRecogniserResult` class. This class contains a `formattedString` representing all the detected speech in the audio. It also contains a `segments` array representing each of the individual detected words.
 
 
+On a `SpeechRecogniserEvent.ERROR` there will be an `errorCode` that can be identified from the definitions in the `SpeechRecogniserError` class. 
+
+
+
+## Options
+
+Speech recognition has a few options you can set via an instance of the `SpeechRecogniserOptions` class passed as the parameter to the `startListening()` method.
+
+```actionscript
+var options:SpeechRecogniserOptions = new SpeechRecogniserOptions();
+
+Speech.instance.recogniser.startListening( options );
+```
+
+Using the options you can control whether you prefer "on device" or "network" recognition:
+
+```actionscript
+var options:SpeechRecogniserOptions = new SpeechRecogniserOptions()
+    .setPreferOnDevice( false );
+```
+
+The default prefers on device, so if you want to use network enabled speech recognition (generally more accurate) you should disable this option as above. 
+
+
+
+## Listening
+
+You can check the `isListening` flag at any point to determine if the extension is currently actively listening for speech.
+
+```actionscript
+if (Speech.instance.recogniser.isListening)
+{
+    // extension is listening
+}
+```
+
 
 
 ## Stop listening
@@ -49,3 +85,6 @@ Once you have completed your recognition process you must call `stopListening()`
 ```actionscript
 Speech.instance.recogniser.stopListening();
 ```
+
+You can remove your event listeners at this point.
+
