@@ -9,6 +9,7 @@ speech: [
     },
     {
       Usage: [
+        "speech/texttospeech",
         "speech/recognition",
       ],
     },

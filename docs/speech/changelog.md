@@ -1,3 +1,9 @@
+### 2023.09.03 [v2.0.0]
+
+```
+feat: add text to speech functionality
+```
+
 ### 2023.09.03 [v1.3.0]
 
 ```

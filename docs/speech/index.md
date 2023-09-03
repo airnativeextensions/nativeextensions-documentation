@@ -8,15 +8,15 @@ slug: /speech/
 
 # Speech
 
-The [Speech](https://airnativeextensions.com/extension/com.distriqt.Speech) extension gives you access to speech recognition functionality.
+The [Speech](https://airnativeextensions.com/extension/com.distriqt.Speech) extension 
+gives access to Text-to-Speech and Speech-to-Text (speech recognition) functionality.
 
-We provide complete guides to get you up and running with sharing quickly and easily.
 
+### Features:
 
-### Features
-
-- Speech recognition converting microphone audio to text
-- Single API interface - your code works across iOS and Android with no modifications
+- Speech recognition - attempts to listen to the microphone and convert audio to text
+- Text to speech - converts text strings to spoken audio output
+- Single API interface - your code works across supported platforms with no modifications
 - Sample project code and ASDocs reference
 
 As with all our extensions you get access to a year of support and updates as we are 
@@ -30,7 +30,15 @@ The [documentation site](https://docs.airnativeextensions.com/docs/speech) forms
 Quick Example: 
 
 ```actionscript title="AIR"
-
+Speech.instance.tts.initialise(
+        function ( success:Boolean ):void
+        {
+            if (success)
+            {
+                Speech.instance.tts.speak( new Utterance( "Hello!" ) );
+            }
+        }
+);
 ```
 
 More information here: 

@@ -2854,6 +2854,7 @@ module.exports = {
       "Get Started": ["speech/add-the-extension", "speech/authorisation"],
     },
     {
+      Usage: ["speech/texttospeech"],
       Usage: ["speech/recognition"],
     },
     {
