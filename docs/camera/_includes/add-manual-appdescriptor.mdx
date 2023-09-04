@@ -20,13 +20,12 @@ The following additions must be added to your applications manifest additions.
 ```xml
 <manifestAdditions><![CDATA[
 	<manifest android:installLocation="auto">
-		<uses-sdk android:minSdkVersion="19" />
+		<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="33" />
 
 		<uses-permission android:name="android.permission.INTERNET"/>
 
-		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
 		<uses-permission android:name="android.permission.CAMERA"/>
-		<uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
 		<!-- Add this if your application requires a Camera -->
 		<uses-feature android:name="android.hardware.camera" />

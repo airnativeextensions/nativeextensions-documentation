@@ -56,8 +56,7 @@ as appropriate for your application:
 - `AuthorisationType.CAMERA`: Access to the camera device
 - `AuthorisationType.PHOTOS`: Access to the camera roll to save images (only required if you set `saveToCameraRoll` to `true` in a capture request)
 
-You will need to run through the above process for each of the permissions your application 
-requires!
+You will need to run through the above process for each of the permissions your application requires!
 
 
 

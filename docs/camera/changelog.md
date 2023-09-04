@@ -1,3 +1,9 @@
+### 2023.09.04 [v6.2.0]
+
+```
+feat(android): update permission process and image saving to support latest android api changes (resolves #159)
+```
+
 ### 2023.01.16 [v6.1.0]
 
 ```
