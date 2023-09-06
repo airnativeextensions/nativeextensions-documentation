@@ -1,3 +1,10 @@
+### 2023.09.06 [v15.2.0]
+
+```
+feat(actionscript): update api to return product instance on Purchase objects 
+feat(actionscript): add getProduct method to return Product instance for product id
+```
+
 ### 2023.08.17 [v15.1.0]
 
 ```
