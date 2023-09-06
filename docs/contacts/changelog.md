@@ -1,3 +1,9 @@
+### 2023.09.06 [v5.1.1]
+
+```
+fix(android): correct android auth usage of write external storage (#82)
+```
+
 ### 2023.01.17 [v5.1.0]
 
 ```

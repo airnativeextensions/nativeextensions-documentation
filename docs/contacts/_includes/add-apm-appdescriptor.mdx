@@ -17,3 +17,20 @@ You should backup your application descriptor before running this command to ens
 If you need to insert custom data into these sections see the guides for [Android](https://github.com/airsdk/apm/wiki/Usage-Generate#android) and [iOS](https://github.com/airsdk/apm/wiki/Usage-Generate#ios)
 :::
 
+
+:::note
+If you plan to save contact images you will need to add the following permission using `apm`. 
+
+Firstly, generate a custom config for your project:
+
+```
+apm generate config android
+```
+
+Then edit the `config/android/AndroidManifest.xml` file and add the following line:
+
+```xml
+<!-- Optional: Needed if you are planning to save contact images -->
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+```
+:::
