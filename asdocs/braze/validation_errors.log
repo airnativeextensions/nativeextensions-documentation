@@ -1,0 +1,9 @@
+Text for description in com.distriqt.extension.braze.models.cards:Card/expiresAt is not valid.
+org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 50; The content of elements must consist of well-formed character data or markup.
+
+Text for param in com.distriqt.extension.braze:Braze/logCustomEvent is not valid.
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 110; The content of elements must consist of well-formed character data or markup.
+
+Text for param in com.distriqt.extension.braze:Braze/logPurchase is not valid.
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 103; The content of elements must consist of well-formed character data or markup.
+
