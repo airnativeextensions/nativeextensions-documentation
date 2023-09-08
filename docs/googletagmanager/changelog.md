@@ -1,3 +1,12 @@
+### 2023.09.08 [v5.0.2]
+
+```
+Breaking changes: containers and data layers are now deprecated, you should use Firebase to log events
+
+feat(ios): update ios sdk v7.4.0
+feat(android): update android sdk v18.0.3
+```
+
 ### 2023.01.20 [v2.3.0]
 
 ```

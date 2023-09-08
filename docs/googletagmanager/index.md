@@ -20,10 +20,12 @@ and a complete example application.
 
 [![YOUTUBE](https://img.youtube.com/vi/7FXbsCWsEi8/0.jpg)](https://www.youtube.com/watch?v=7FXbsCWsEi8)
 
+>
+> Please note this extension requires Firebase.
+>
+
 ### Features
 
-- Container loading and refreshing
-- Pushing to the DataLayer
 - Single API interface - your code works across iOS and Android with no modifications
 - Sample project code and ASDocs reference
 
@@ -36,12 +38,14 @@ The [documentation site](https://docs.airnativeextensions.com/docs/googletagmana
 Simple example of pushing to the data layer:
 
 ```actionscript
-var data:Object = {
-	event:      "openScreen",
-	screenName: "Home Screen"
-};
-
-GoogleTagManager.service.dataLayer.push( data );
+Firebase.service.analytics.logEvent(
+        new EventObject()
+                .setName( "share_image" )
+                .setParams( {
+                                "image_name": "test.png",
+                                "full_text" : "test image share"
+                            } )
+);
 ```
 
 More information here:
