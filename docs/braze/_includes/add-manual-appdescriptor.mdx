@@ -1,0 +1,118 @@
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.braze</extensionID>
+
+    <extensionID>androidx.appcompat</extensionID>
+    <extensionID>androidx.cardview</extensionID>
+    <extensionID>androidx.constraintlayout</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>androidx.recyclerview</extensionID>
+    <extensionID>androidx.transition</extensionID>
+    <extensionID>androidx.vectordrawable</extensionID>
+    <extensionID>androidx.webkit</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>com.google.android.material</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+### iOS
+
+#### Dynamic Frameworks
+
+Braze is based on a dynamic framework so you must include the framework and dependent swift libs in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+It should contain any of the files and directories supplied in the `assets/ios/Frameworks` directory (including `dylib` and `framework` directories).
+
+If you fail to do this correctly you will likely get a crash either at launch or when calling the extensions functionality.
+
+
+This includes:
+
+```
+SDWebImage.framework 
+BrazeUICompat.framework 
+BrazeUI.framework 
+BrazePushStory.framework 
+BrazeNotificationService.framework 
+BrazeLocation.framework 
+BrazeKitCompat.framework 
+BrazeKit.framework
+```
+
+
+#### Info Additions
+
+The following additions are for the `InfoAdditions` node of the iPhone section in your application descriptor:
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+
+		HERE
+
+	]]></InfoAdditions>
+</iPhone>
+```
+
+### Android
+
+#### Assets 
+
+There are some files that need to be packaged with your application supplied in the `assets/android` folder. 
+Any of the files or directories located here must be added at the root level and packaged with your application.
+
+
+This includes:
+
+```
+braze-html-in-app-message-bridge.js
+fontawesome-webfont.ttf
+```
+
+
+#### Manifest Additions
+
+The Braze extension requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your manifest.
+
+:::caution
+Ensure you replace:
+- `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+:::
+
+```xml
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+  <permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+    <activity android:name="com.distriqt.extension.braze.contentcards.BrazeContentCardsActivity" android:exported="false" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+    <service android:name="com.braze.push.BrazeFirebaseMessagingService" android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <!-- com.braze.ui -->
+    <activity android:name="com.braze.ui.BrazeWebViewActivity" android:exported="false"/>
+    <activity android:name="com.braze.ui.activities.BrazeFeedActivity" android:exported="false"/>
+    <activity android:name="com.braze.ui.activities.ContentCardsActivity" android:exported="false"/>
+    <activity android:name="com.braze.push.NotificationTrampolineActivity" android:exported="false" android:launchMode="singleInstance" android:theme="@style/Braze.PushTrampoline.Transparent"/>
+    <receiver android:name="com.braze.push.BrazePushReceiver" android:exported="false"/>
+    <provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.distriqt.test.androidx-startup" android:exported="false">
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+    </provider>
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+  </application>
+</manifest>
+```
