@@ -2904,6 +2904,37 @@ module.exports = {
     },
   ],
 
+  unityads: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "unityads/index" },
+    {
+      "Get Started": [
+        "unityads/add-the-extension",
+        "unityads/initialise",
+      ],
+    },
+    {
+      Usage: [
+        "unityads/interstitials",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "unityads/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/unityads/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/distriqt/ANE-UnityAds/issues/new",
+        },
+      ],
+    },
+  ],
+
   vibration: [
     { type: "ref", id: "index" },
     { type: "doc", id: "vibration/index" },
