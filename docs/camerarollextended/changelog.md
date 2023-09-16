@@ -1,3 +1,9 @@
+### 2023.09.16 [v7.0.2]
+
+```
+fix(android): correct issue with load asset using best fit when image required rotation (resolves #146)
+```
+
 ### 2023.06.12 [v7.0.1]
 
 ```
