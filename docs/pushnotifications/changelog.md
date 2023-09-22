@@ -1,3 +1,10 @@
+### 2023.09.22 [v13.0.1]
+
+```
+feat(docs): update docs for using amazon with onesignal (resolves #340)
+fix(android): correct handling of authorisation denied state, incorrectly returned not_determined resulting in ANRs (#576) 
+```
+
 ### 2023.08.11 [v13.0.0]
 
 ```
