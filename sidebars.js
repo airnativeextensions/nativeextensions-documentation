@@ -80,6 +80,8 @@ module.exports = {
         { type: "ref", id: "share/index" },
         { type: "ref", id: "systemgestures/index" },
 
+        { type: "ref", id: "unityads/index" },
+
         { type: "ref", id: "vibration/index" },
         { type: "ref", id: "volume/index" },
 
