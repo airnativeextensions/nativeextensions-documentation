@@ -1,3 +1,9 @@
+### 2023.09.22 [v6.6.1]
+
+```
+fix(android): correct handling of authorisation denied state, incorrectly returned not_determined resulting in ANRs
+```
+
 ### 2023.08.18 [v6.6.0]
 
 ```
