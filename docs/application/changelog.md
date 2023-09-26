@@ -1,3 +1,9 @@
+### 2023.09.26 [v7.0.3]
+
+```
+fix(android): handle null activity case when updating visibility state (resolves #278)
+```
+
 ### 2023.07.31 [v7.0.2]
 
 ```
