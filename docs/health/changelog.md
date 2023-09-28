@@ -1,3 +1,10 @@
+### 2023.09.28 [v1.4.0]
+
+```
+feat: add interval to specify statistic bucket size
+feat: add filtering of user manual entries 
+```
+
 ### 2023.07.13 [v1.2.0]
 
 ```

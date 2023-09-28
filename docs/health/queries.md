@@ -52,3 +52,50 @@ Health.instance.execute(
 ```
 
 
+
+## Aggregating results
+
+You can get the results aggregated into time intervals by calling the `withInterval()` method on the `StatisticsQuery`.
+
+For example to group the results into daily totals:
+
+```actionscript
+var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
+        .withStartDate( startDate )
+        .withEndDate( now )
+        .withInterval( 1, TimeUnit.DAYS );
+```
+
+This can be useful when you are displaying results in a particular format to a user.
+
+
+
+
+## Manual User Entries
+
+Filtering out entries that have been manually entered by the user can be helpful in certain situations. To do this, call the `filterManualDataEntries()` method on the `StatisticsQuery`.
+
+For example:
+
+```actionscript
+var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
+        .withStartDate( startDate )
+        .withEndDate( now )
+        .filterManualDataEntries();
+```
+
+
+:::caution
+Filtering data entries will override aggregation requests on Android, resulting in a query that returns individual samples. Apple's HealthKit seems to have no issues with this. 
+
+**Fit** 
+
+With the Google FIT API service the data records are queried within the time frame and then any with a data source set to `user_input` are removed.
+This was impossible when aggregated as the sources were combined together.
+
+
+**HealthConnect**
+
+Currently Health Connect seems to be inconsistent with filtering results. Similar to Google Fit the samples must be queried without aggregation to get access to the data origins, however the fields don't seem to be correctly set by certain applications so the results may be inconsistent. 
+:::
+
