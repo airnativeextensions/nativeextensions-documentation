@@ -1,3 +1,9 @@
+### 2023.10.09 [v0.1.6]
+
+```
+fix(ios): correct crash on open from url via another app
+```
+
 ### 2023.09.08 [v0.1.4]
 
 ```

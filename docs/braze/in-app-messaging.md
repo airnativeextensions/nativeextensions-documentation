@@ -27,3 +27,39 @@ Braze.instance.inAppMessaging.unregister();
 
 Messages are created completely through the [dashboard](https://dashboard-01.braze.eu/engagement/campaigns/campaigns). Follow the guides and documentation in the Braze documentation.
 
+
+
+## Events
+
+There are several events dispatched when an in-app message is received by your application:
+
+- `BrazeInAppMessageEvent.BEFORE_DISPLAYED`: Dispatched when a message is received but before it is displayed
+- `BrazeInAppMessageEvent.OPENED`: Dispatched when a message is opened and displayed to the user
+- `BrazeInAppMessageEvent.BUTTON_CLICKED`: Dispatched when a button in the message is clicked
+- `BrazeInAppMessageEvent.DISMISSED`: Dispatched when a message is dismissed
+
+
+In your `BrazeInAppMessageEvent.BEFORE_DISPLAYED` event handler you must make a decision as to whether to display the message or not. You can also modify the content of the `InAppMessage` in this event handler as required.
+
+Note: 
+
+- if you don't add a `BrazeInAppMessageEvent.BEFORE_DISPLAYED` listener then the message will be displayed automatically;
+- if you add a listener you must call `displayInAppMessage()` to display the message. 
+
+For example:
+
+```actionscript
+function beforeDisplayedHandler( event:BrazeInAppMessageEvent ):void
+{
+    var iam:InAppMessage = event.message;
+
+    // Modify message as required
+    iam.message = iam.message
+                        .replace( "USERNAME", "John" );
+
+    // Display the message
+    Braze.instance.inAppMessaging.displayInAppMessage( iam );
+}
+```
+
+
