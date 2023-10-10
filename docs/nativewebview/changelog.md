@@ -1,3 +1,9 @@
+### 2023.10.10 [v7.1.0]
+
+```
+feat(debugging): add enableDebugging flag to enable debugging of webviews where explicit setting is required (resolves #316)
+```
+
 ### 2023.07.23 [v7.0.0]
 
 ```
