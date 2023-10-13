@@ -1,3 +1,9 @@
+### 2023.10.13 [v15.2.1]
+
+```
+fix(android): correct issue with not dispatching failed event after ui cancelled (resolves #552)
+```
+
 ### 2023.09.06 [v15.2.0]
 
 ```
