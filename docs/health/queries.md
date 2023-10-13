@@ -68,7 +68,12 @@ var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
 
 This can be useful when you are displaying results in a particular format to a user.
 
+The `withInterval()` method takes 2 parameters, the first being a `duration` and the second is a `unit` from the predefined values in the `TimeUnit` class. 
 
+This allows you to create various intervals:
+- daily results: `withInterval( 1, TimeUnit.DAYS )` 
+- 6 hour buckets: `withInterval( 6, TimeUnit.HOURS )` 
+- 30 minute buckets: `withInterval( 30, TimeUnit.MINUTES )` 
 
 
 ## Manual User Entries
@@ -83,6 +88,16 @@ var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
         .withEndDate( now )
         .filterManualDataEntries();
 ```
+
+Conversely, you can request only manual data entries by using `manualDataEntriesOnly()`:
+
+```
+var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
+        .withStartDate( startDate )
+        .withEndDate( now )
+        .manualDataEntriesOnly();
+```
+
 
 
 :::caution

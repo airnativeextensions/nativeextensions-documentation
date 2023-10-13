@@ -1,3 +1,9 @@
+### 2023.10.13 [v1.5.0]
+
+```
+feat: add ability to retrieve manual step entries only
+```
+
 ### 2023.09.28 [v1.4.0]
 
 ```
