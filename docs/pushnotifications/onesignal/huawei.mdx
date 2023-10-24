@@ -94,7 +94,7 @@ Edit the file created at `config/android/AndroidManifest.xml` and ensure it cont
         </service>
 
         <activity
-            android:name="com.onesignal.NotificationOpenedActivityHMS"
+            android:name="com.onesignal.notifications.activities.NotificationOpenedActivityHMS"
             android:exported="true"
             android:noHistory="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
@@ -213,6 +213,26 @@ Ensure you replace:
     <meta-data android:name="com.huawei.hms.client.service.name:push" android:value="push:6.11.0.300"/>
     <meta-data android:name="com.huawei.hms.min_api_level:push:push" android:value="1"/>
     <activity android:name="com.huawei.hms.support.api.push.TransActivity" android:exported="false"/>
+
+
+    <service
+        android:name="com.distriqt.extension.pushnotifications.onesignal.OneSignalHMSService"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+        </intent-filter>
+    </service>
+
+    <activity
+        android:name="com.onesignal.notifications.activities.NotificationOpenedActivityHMS"
+        android:exported="true"
+        android:noHistory="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+        </intent-filter>
+    </activity>
+
   </application>
 </manifest>
 ```
@@ -290,7 +310,7 @@ Ensure you replace:
 
 ```xml
 <manifest android:installLocation="auto" >
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="33"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   <permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
   <uses-permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
@@ -334,6 +354,11 @@ Ensure you replace:
          Vibration settings of the device still apply.
     -->
   <uses-permission android:name="android.permission.VIBRATE"/>
+  <!--
+         At a minimum the location module requires course permission, the app has the option
+         to also include ACCESS_FINE_LOCATION and/or ACCESS_BACKGROUND_LOCATION
+    -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
   <permission android:name="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG" android:protectionLevel="signature"/>
   <!-- PUSH_PROVIDER and PUSH_WRITE_PROVIDER are both provider registered permissions for the notification switch. -->
   <!-- The SDK's notification bar switch, EMUI 9.x becomes write to the local sp, sharing the file through the provider to the push-rom, which reads the sp file to get the status of the notification bar switch. -->
@@ -342,8 +367,6 @@ Ensure you replace:
   <uses-permission android:name="APPLICATION_PACKAGE.permission.PROCESS_PUSH_MSG"/>
   <uses-permission android:name="APPLICATION_PACKAGE.permission.PUSH_PROVIDER"/>
   <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
-    <meta-data android:name="android.max_aspect" android:value="2.5"/>
-    <meta-data android:name="android.notch_support" android:value="true"/>
     <service android:name="androidx.room.MultiInstanceInvalidationService" android:directBootAware="true" android:exported="false"/>
     <provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false">
       <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
@@ -448,37 +471,35 @@ Ensure you replace:
         <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
       </intent-filter>
     </service>
-    <receiver android:name="com.onesignal.FCMBroadcastReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
+    <receiver android:name="com.onesignal.notifications.receivers.FCMBroadcastReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
       <!-- High priority so OneSignal payloads can be filtered from other FCM receivers -->
       <intent-filter android:priority="999">
         <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
         <category android:name="APPLICATION_PACKAGE"/>
       </intent-filter>
     </receiver>
-    <activity android:name="com.onesignal.NotificationOpenedActivityHMS" android:exported="true" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+    <activity android:name="com.onesignal.notifications.activities.NotificationOpenedActivityHMS" android:exported="true" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar">
       <intent-filter>
         <action android:name="android.intent.action.VIEW"/>
       </intent-filter>
     </activity>
-    <service android:name="com.onesignal.FCMIntentService" android:exported="false"/>
-    <service android:name="com.onesignal.FCMIntentJobService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
-    <service android:name="com.onesignal.SyncService" android:exported="false" android:stopWithTask="true"/>
-    <service android:name="com.onesignal.SyncJobService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
-    <activity android:name="com.onesignal.PermissionsActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <receiver android:name="com.onesignal.NotificationDismissReceiver" android:exported="true"/>
-    <receiver android:name="com.onesignal.BootUpReceiver" android:exported="true">
+    <receiver android:name="com.onesignal.notifications.receivers.NotificationDismissReceiver" android:exported="true"/>
+    <receiver android:name="com.onesignal.notifications.receivers.BootUpReceiver" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.BOOT_COMPLETED"/>
         <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
       </intent-filter>
     </receiver>
-    <receiver android:name="com.onesignal.UpgradeReceiver" android:exported="true">
+    <receiver android:name="com.onesignal.notifications.receivers.UpgradeReceiver" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
       </intent-filter>
     </receiver>
-    <activity android:name="com.onesignal.NotificationOpenedReceiver" android:excludeFromRecents="true" android:exported="true" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <activity android:name="com.onesignal.NotificationOpenedReceiverAndroid22AndOlder" android:excludeFromRecents="true" android:exported="true" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.onesignal.notifications.activities.NotificationOpenedActivity" android:excludeFromRecents="true" android:exported="true" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.onesignal.notifications.activities.NotificationOpenedActivityAndroid22AndOlder" android:excludeFromRecents="true" android:exported="true" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <service android:name="com.onesignal.core.services.SyncService" android:exported="false" android:stopWithTask="true"/>
+    <service android:name="com.onesignal.core.services.SyncJobService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <activity android:name="com.onesignal.core.activities.PermissionsActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     <provider android:name="com.huawei.hms.aaid.InitProvider" android:authorities="APPLICATION_PACKAGE.aaidinitprovider" android:exported="false" android:initOrder="500"/>
     <meta-data android:name="com.huawei.hms.client.service.name:opendevice" android:value="opendevice:6.11.0.300"/>

@@ -1,3 +1,10 @@
+### 2023.10.24 [v14.0.0]
+
+```
+feat(onesignal): update onesignal sdk to android v5.0.3, ios v5.0.2
+fix(ios,fcm): correct inclusion of frameworks on iOS < 13 causing crash at launch (resolves #580)
+```
+
 ### 2023.09.22 [v13.0.1]
 
 ```
