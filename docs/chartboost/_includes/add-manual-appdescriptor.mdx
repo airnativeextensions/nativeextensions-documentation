@@ -1,0 +1,111 @@
+
+## Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+	<extensionID>com.distriqt.Chartboost</extensionID>
+
+	<extensionID>androidx.core</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+
+
+## iOS 
+
+
+### Info Additions 
+
+
+The following additions are for the `InfoAdditions` node of the iPhone section in your application descriptor:
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+
+		<key>MinimumOSVersion</key>
+		<string>11.0</string>
+
+		<key>SKAdNetworkItems</key>
+		<array>
+			<dict>
+				<key>SKAdNetworkIdentifier</key>
+				<string>f38h382jlk.skadnetwork</string>
+			</dict>
+		</array>
+
+	]]></InfoAdditions>
+</iPhone>
+```
+
+
+
+## Android 
+
+### Manifest Additions
+
+The Chartboost extension requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your manifest.
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `APPLICATION_PACKAGE`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+:::
+
+
+```xml
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <queries>
+    <intent>
+      <action android:name="android.intent.action.ACTION_VIEW"/>
+      <data android:scheme="https"/>
+    </intent>
+  </queries>
+  <permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+  <!-- Required by older versions of Google Play services to create IID tokens -->
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+  <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+    <activity android:name="com.chartboost.sdk.view.CBImpressionActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+    <activity android:name="com.chartboost.sdk.internal.clickthrough.EmbeddedBrowserActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+    <!-- ExoPlayer DownloadService -->
+    <service android:name="com.chartboost.sdk.internal.video.repository.exoplayer.VideoRepositoryDownloadService" android:exported="false">
+      <!-- This is needed for Scheduler -->
+      <intent-filter>
+        <action android:name="com.google.android.exoplayer.downloadService.action.RESTART"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </service>
+    <provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false">
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+    </provider>
+    <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+  </application>
+</manifest>
+```
+
+
+
+

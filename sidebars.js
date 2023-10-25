@@ -735,7 +735,10 @@ module.exports = {
       Help: ["cameraui/migrating-to-v3.5", "cameraui/migrating-to-androidx"],
     },
     {
-      Other: [
+      type: "category",
+      label: "Other",
+      collapsed: false,
+      items: [
         { type: "doc", id: "cameraui/changelog" },
         {
           type: "link",
@@ -746,6 +749,40 @@ module.exports = {
           type: "link",
           label: "Contact Support",
           href: "http://github.com/distriqt/ANE-CameraUI/issues/new",
+        },
+      ],
+    },
+  ],
+
+  chartboost: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "chartboost/index" },
+    {
+      "Get Started": [
+        "chartboost/setup",
+        "chartboost/add-the-extension"
+      ],
+    },
+    {
+      Usage: [
+        "chartboost/initialise"
+      ],
+    },
+    {
+      type: "category",
+      label: "Other",
+      collapsed: false,
+      items: [
+        { type: "doc", id: "chartboost/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/chartboost/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-Chartboost/issues/new",
         },
       ],
     },
