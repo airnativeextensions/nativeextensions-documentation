@@ -1,3 +1,10 @@
+### 2023.11.02 [v7.1.0]
+
+```
+feat(android): update activity lifecycle listener to new android implementation
+feat(ios): update database for new iphone 15 models (resolves #280)
+```
+
 ### 2023.09.26 [v7.0.3]
 
 ```
