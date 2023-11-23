@@ -1,3 +1,10 @@
+### 2023.11.23 [v6.0.1]
+
+```
+feat(ios): move to Apple's modern Contacts framework (resolves #81, resolves #71)
+feat(android,ios): add ability to save notes, social services and websites when adding a contact (resolves #23)
+```
+
 ### 2023.09.06 [v5.1.1]
 
 ```
