@@ -1,3 +1,10 @@
+### 2023.11.30 [v6.6.3]
+
+```
+feat(android): add ability to load large icon from any file by passing the nativePath (resolves #205)
+feat(ios,android): add ability to load image for image styled notification from any file by passing the nativePath (resolves #206)
+```
+
 ### 2023.09.22 [v6.6.1]
 
 ```

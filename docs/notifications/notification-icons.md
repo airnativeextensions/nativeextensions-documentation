@@ -41,11 +41,13 @@ To add your own icon you will need to create your custom resources and then pack
 *Custom resource icon in simple notification*
 
 
-To create your own custom resources ANE have a look at the opensource script we have created:
+To add your custom resources see the AIR SDK documentation on [packaging custom resources](https://airsdk.dev/docs/tutorials/platform/android/custom-resources). 
+
+Alternatively you can create your own custom resources ANE by using the opensource script we have created:
 
 - [Custom Resources](https://github.com/distriqt/ANE-CustomResources)
 
-If you have troubles running this script simply send us your resources and we will create the extension for you.
+If you have troubles running this script simply send us your resources and we will create the extension for you, although we do recommend using the more modern AIR SDK `resdir` approach.
 
 
 
@@ -77,11 +79,11 @@ For example, in the image below we have used a red cloud in a circle as the larg
 
 ![](images/notifications/android-largeicon.png)
 
-This icon is **not** a resource but an image either packaged with your application or downloaded from a url. We don't suggest using a url unless absolutely neccessary, as a user may not get notifications if the image fails to download correctly or the device is offline for any reason. 
+This icon is **not** a resource but an image either:
+- packaged with your application and referenced relative to the application root, eg `assets/icons/notification.png`;
+- a native path to a file `/path/to/file/notification.png`;
+- a url to a publicly accessible image (no authentication etc). 
 
-
-
-
-
+We don't suggest using a url unless absolutely neccessary, as a user may not get the correct notification if the image fails to download correctly or the device is offline for any reason. 
 
 
