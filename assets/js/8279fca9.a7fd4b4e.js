@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[80942],{45421:function(e){e.exports=JSON.parse('{"label":"adskit","permalink":"/news/tags/adskit","allTagsPath":"/news/tags","count":1}')}}]);

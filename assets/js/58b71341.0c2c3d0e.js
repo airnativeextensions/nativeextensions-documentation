@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[11367],{79568:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/apm","page":1,"postsPerPage":10,"totalPages":2,"totalCount":13,"nextPage":"/news/tags/apm/page/2","blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);

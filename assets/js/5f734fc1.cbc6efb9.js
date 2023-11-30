@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[52016],{37697:function(e){e.exports=JSON.parse('{"label":"application-rater","permalink":"/news/tags/application-rater","allTagsPath":"/news/tags","count":2}')}}]);

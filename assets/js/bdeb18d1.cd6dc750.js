@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[14493],{91140:e=>{e.exports=JSON.parse('{"label":"game-services","permalink":"/news/tags/game-services","allTagsPath":"/news/tags","count":1}')}}]);

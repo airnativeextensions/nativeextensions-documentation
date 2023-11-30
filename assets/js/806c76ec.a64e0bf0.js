@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[74375],{63013:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/gamecontroller","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);

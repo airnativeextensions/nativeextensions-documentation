@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[88107],{30303:function(e){e.exports=JSON.parse('{"label":"gamecontroller","permalink":"/news/tags/gamecontroller","allTagsPath":"/news/tags","count":1}')}}]);

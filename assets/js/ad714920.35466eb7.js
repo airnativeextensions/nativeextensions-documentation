@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[6645],{26825:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/air","page":1,"postsPerPage":10,"totalPages":2,"totalCount":16,"nextPage":"/news/tags/air/page/2","blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);
