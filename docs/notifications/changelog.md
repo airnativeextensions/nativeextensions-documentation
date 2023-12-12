@@ -1,3 +1,9 @@
+### 2023.12.12 [v6.6.4]
+
+```
+fix(android): correct group notification removal when notifications removed via action (resolves #208)
+```
+
 ### 2023.11.30 [v6.6.3]
 
 ```
