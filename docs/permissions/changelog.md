@@ -1,3 +1,13 @@
+### 2023.12.14 [v4.0.0]
+
+```
+feat(android): update permission process to provide correct denied state alongside should explain and not determined
+feat(actionscript): add callback functions for request authorisation processes
+feat(actionscript): new PERMISSION_CHANGED event detailing change of individual permissions
+feat(android): add ability to access the device settings
+feat(unity): initial unity plugin release
+```
+
 ### 2023.02.01 [v3.4.1]
 
 ```

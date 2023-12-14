@@ -26,6 +26,12 @@ particular you need to add the `activity` in the listing below.
 	<!-- You should add your permissions here normally eg: -->
 	<uses-permission android:name="android.permission.CAMERA" />
 
+	<queries>
+        <intent>
+            <action android:name="android.settings.APPLICATION_DETAILS_SETTINGS"/>
+        </intent>
+    </queries>
+
 	<application>
 
 		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />

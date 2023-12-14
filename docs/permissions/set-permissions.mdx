@@ -7,31 +7,19 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 
-You must inform the extension which permissions you wish to request.
-This is done by passing an array of `String`s each being the permission required.
-
-For example to set the camera permission:
-
-```actionscript
-Permissions.service.setPermissions( 
-    [ 
-        "android.permission.CAMERA" 
-    ] 
-);
-```
-
-A complete list of the possible permissions is found [here](https://developer.android.com/reference/android/Manifest.permission).
-
 
 ## Adding Permissions 
 
-In addition to informing the extension of the permissions you must add these permissions to your application's manifest.
+To request a permisison you must firstly have added these permissions you require to your application's manifest.
 
 Permissions are represented with a tag like the following:
 
 ```xml
 <uses-permission android:name="android.permission.CAMERA" />
 ```
+
+A complete list of the possible permissions is found [here](https://developer.android.com/reference/android/Manifest.permission).
+
 
 <Tabs
   groupId="packagemanager"
@@ -95,6 +83,8 @@ For example, to add the camera permission:
   </TabItem>
   
 </Tabs>
+
+
 
 
 

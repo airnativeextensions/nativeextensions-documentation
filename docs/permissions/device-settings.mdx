@@ -1,0 +1,23 @@
+---
+title: Device Settings
+sidebar_label: Device Settings
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+You can redirect the user to the settings for your application by using the `openDeviceSettings()` method. 
+
+Before calling this you should firstly check if your application can open these device settings by checking the `canOpenDeviceSettings` property.
+
+
+```actionscript
+if (Permissions.instance.canOpenDeviceSettings)
+{
+    Permissions.instance.openDeviceSettings();
+}
+```
+
+After calling this your application should open the device permission settings for your application.
+ 
