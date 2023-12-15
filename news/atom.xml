@@ -2,12 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2023-11-30T00:00:00.000Z</updated>
+    <updated>2023-12-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2023 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[Delay Loading Extensions]]></title>
+        <id>https://docs.airnativeextensions.com/news/2023/12/15/delay-load-extensions</id>
+        <link href="https://docs.airnativeextensions.com/news/2023/12/15/delay-load-extensions"/>
+        <updated>2023-12-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Improve application startup time using delay load]]></summary>
+        <content type="html"><![CDATA[<p><img loading="lazy" src="/assets/images/loading-5e0a6818e8ed9bd36e1436a04999e35f.png" width="800" height="400" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
+        <category label="delayload" term="delayload"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[November 2023]]></title>
         <id>https://docs.airnativeextensions.com/news/2023-11</id>
