@@ -95,3 +95,48 @@ function linkBlockedHandler( event:NativeWebViewEvent ):void
 }
 ```
 
+
+### Granting Media Permissions
+
+If you plan to support media access through the web page it is worth considering how the permission grant process will be handled. 
+
+When a page requests permission to use the microphone and/or camera there are generally 2 permission processes to go through. Firstly the normal application permission request of your user that your application would go through to normally access device hardware. Secondly when a web page makes this request there is a second process where you are given the opportunity to grant the web page permission to access the hardware.
+
+You control this through the `mediaCapturePermissionGrantType` option on your web view. 
+
+```actionscript
+options.mediaCapturePermissionGrantType = PermissionGrantType.GRANT;
+```
+
+The available options for this are:
+
+- `PermissionGrantType.GRANT`: Grants the permission;
+- `PermissionGrantType.DENY`: Denies the permission;
+- `PermissionGrantType.PROMPT`: Prompts the user for permission each time a view is created;
+- `PermissionGrantType.GRANT_IF_SAME_HOST_ELSE_PROMPT`: If the security origin's host of the permission request equals the host of the WebView's current URL, the permission is granted if it has been granted before. Otherwise, the user gets prompted;
+- `PermissionGrantType.GRANT_IF_SAME_HOST_ELSE_DENY`: If the security origin's host of the permission request equals the host of the WebView's current URL, the permission is granted if it has been granted before. Otherwise, the user gets denied;
+
+
+:::note iOS / macOS
+If you plan on supporting this you must ensure you have added the correct usage strings to your info additions:
+
+```xml
+<key>NSCameraUsageDescription</key>
+<string>Require camera usage description</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Require record audio description</string>
+```
+
+The operating system will automatically handle the display of the permission request as required.
+:::
+
+:::note Android
+The Android implementation of this extension will request the system permissions for you when a webpage requests them and then apply the policy you have set in the `mediaCapturePermissionGrantType` property.
+
+You need to ensure you have added the appropriate permissions to your manifest, ie.
+
+```xml
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+```
+:::

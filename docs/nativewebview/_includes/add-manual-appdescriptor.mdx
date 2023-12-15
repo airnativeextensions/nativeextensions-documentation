@@ -11,6 +11,7 @@ The following should be added to your `extensions` node in your application desc
     <!-- ANDROID -->
     <extensionID>androidx.browser</extensionID>
     <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 
 </extensions>
 ```
@@ -33,6 +34,7 @@ You should make sure your manifest contains the following:
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <queries>
+        <package android:name="com.google.android.webview" />
         <intent>
             <action android:name="android.intent.action.VIEW" />
             <data android:scheme="https" />
