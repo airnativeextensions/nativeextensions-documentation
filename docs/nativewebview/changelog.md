@@ -8,6 +8,16 @@ feat(ios): improved permission grant process implementing a grant/deny/prompt op
 feat(android): improved permission request process automatically handling camera / microphone request process and new grant/deny/prompt option
 ```
 
+### 2023.12.15 [v7.2.6]
+
+```
+feat(android, ios): add ability to clear cache (resolves #163)
+fix(ios): implement better data storage to cache files correctly
+feat(macos): add handling of copy/paste/cut/undo/select commands (resolves #319)
+feat(ios): improved permission grant process implementing a grant/deny/prompt option (resolves #321)
+feat(android): improved permission request process automatically handling camera / microphone request process and new grant/deny/prompt option
+```
+
 ### 2023.10.10 [v7.1.0]
 
 ```
