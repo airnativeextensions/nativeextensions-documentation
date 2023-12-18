@@ -1,3 +1,9 @@
+### 2023.12.18 [v7.2.7]
+
+```
+fix(android): correct link action system browser operation when called from a script (resolves #320) 
+```
+
 ### 2023.12.15 [v7.2.6]
 
 ```
