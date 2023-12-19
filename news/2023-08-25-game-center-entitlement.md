@@ -3,7 +3,7 @@ title: Game Center requirements
 description: Upcoming Game Center entitlement requirement
 image: images/gameservices-accesspoint.png
 authors: [ marchbold ]
-tags: [gamecenter, game-services, ios, apple]
+tags: [gamecenter, game-services, ios, apple, tips]
 ---
 
 If you are publishing games to the AppStore for iOS you may have recently received an notification along the following lines:

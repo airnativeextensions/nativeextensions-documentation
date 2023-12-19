@@ -3,7 +3,7 @@ title: Accessing GDPR Settings
 description: Accessing GDPR Transparency and Consent settings from the AIR SDK
 image: images/gdpr.png
 authors: [ marchbold ]
-tags: [ airsdk, gdpr, ane, advertising ]
+tags: [ airsdk, gdpr, ane, advertising, tips ]
 ---
 
 At some point in your application development when you start to store and share data you will need to handle user GDPR settings. 

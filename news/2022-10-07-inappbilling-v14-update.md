@@ -3,7 +3,7 @@ title: InAppBilling v14
 description: Update Play Billing SDK to v5.0.0
 image: images/playbilling.png
 authors: [ marchbold ]
-tags: [ airsdk, inappbilling, playbilling ]
+tags: [ airsdk, inappbilling, playbilling, updates ]
 ---
 
 ![](images/playbilling.png)
