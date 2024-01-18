@@ -137,6 +137,21 @@ function loadPlayer_errorHandler( event:PlayerEvent ):void
 
 
 
+### Identifiers 
+
+There are several identifiers that can be used to identify a player.
+
+The simplest is the `id` field on the `Player` object. This identifier will be unique for a player for your game and will likely not represent the same player in another game. If you only need to identify users within your application then this is the best identifier to use. 
+
+If you need to identify players across multiple games that you develop you will need to use the `teamPlayerId`. Services that support team identifiers will return an identifier that will be consistent across all games provided through your developer account (on iOS this mean using the same developer Team ID).
+
+
+:::note GameCenter
+Versions prior to 8.4 used a now deprecated "playerId" value for the `id` field. If you need to compare identifiers from the legacy implementation you can use the `playerId` field. This value will be equivalent to the `id` field in versions 8.3 and earlier.
+:::
+
+
+
 ### Images
 
 The `Player` also contains image and icon / avatar urls, however as they may be represented as content providers on Android we don't suggest you attempt to access them directly instead use the `loadPlayerIcon()` function: 

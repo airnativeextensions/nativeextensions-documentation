@@ -1,3 +1,14 @@
+### 2024.01.18 [v8.4.3]
+
+```
+feat(android,ios): implement new player identifiers and access to team id consistent across developer apps (resolves #241)
+feat(android, ios): add the playerId deprecated value on a player to access the deprecated identifier for migration to the newer identifiers
+feat(ios): update AuthUtil.getToken to use new game center fetchItemsForIdentityVerificationSignature (#241)
+feat(ios): update AuthUtil.getToken to allow usage of the legacy implementation (#241)
+
+Note: If you need access to the deprecated identifier on iOS to migrate players you can use `player.playerId`
+```
+
 ### 2023.08.17 [v8.3.0]
 
 ```
