@@ -25,30 +25,3 @@ If you need to insert custom data into these sections see the guides for [Androi
 ::: 
 
 
-### Queries
-
-Since Android API v30, Google has limited the ability to discover other applications via use of the `<queries>` tag in your manifest. You must specify the applications you wish to access in this area otherwise the application won't be able to discover other applications.
-
-Firstly, create a custom configuration by running:
-
-```
-apm generate config android
-```
-
-Then edit the manifest generated at `config/android/AndroidManifest.xml`, and add the following:
-
-```xml
-<queries>
-	<provider android:authorities="group.${applicationId}.provider" />
-</queries>
-```
-
-You should add a provider line for each application you are communicating with and replacing `${applicationId}` with the package name for each application.
-
-Alternatively you can add the `QUERY_ALL_PACKAGES` permission, however this is discouraged.
-
-```xml
-<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
-```
-
-

@@ -69,6 +69,12 @@ This is required so that the settings are secured between your applications.
 
 ```xml
 <!-- For the content provider and broadcast receiver method -->
+<queries>
+	<intent>
+		<action android:name="[APPGROUP]" />
+	</intent>
+</queries>
+
 <application>
 				
 	<meta-data android:name="app_group" android:value="[APPGROUP]" />
@@ -123,11 +129,11 @@ To do so you must add the following:
 
 ```xml
 <queries>
-	<provider android:authorities="app_authority" />
+	<intent>
+		<action android:name="[APPGROUP]" />
+	</intent>
 </queries>
 ```
-
-adding a provider line for each application you are communicating with and replacing `app_authority` with the `app_authority` value for that application.
 
 Alternatively you can add the `QUERY_ALL_PACKAGES` permission, however this is discouraged.
 

@@ -1,0 +1,53 @@
+---
+title: Migrating to v4.3
+sidebar_label: Migrating to v4.3
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+v4.3 brings a newer approach to communications between applications on Android and a simplified manifest.  
+
+Previously you had to add a `provider` line in your `queries` for each application you required to communicate to meaning you had to define all your applications before publishing. The new approach uses just the single application group, adding just one `intent` to the `queries` tag, this can be done automatically by `apm` or unity's build scripts for your application.
+
+To migrate you'll simply need to update your manifest to reflect this new approach. 
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you are using [`apm`](https://github.com/airsdk/apm) all you need to do is update to the latest build and regenerate your application descriptor. `apm` will handle the rest.
+
+```
+apm update 
+apm generate app-descriptor src/Main-app.xml
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+If you are manually managing your application descriptor (and manifest additions) then you will be required to download the latest extensions and add them to your application descriptor. 
+
+Then update your manifest as per the documentation in the getting started guide.
+
+  </TabItem>
+
+  <TabItem value="unity" >
+
+With Unity ensure you have set the configuration items in your `AppGroupDefaultsConfig.cs` file and then rebuild your application. 
+The manifest should automatically be updated with the newer `queries` tag.
+
+You can confirm by checking the AndroidManifest.xml generated in your build.
+
+  </TabItem>
+  
+</Tabs>
+
+

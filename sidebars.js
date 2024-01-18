@@ -213,7 +213,10 @@ module.exports = {
       ],
     },
     {
-      Usage: ["appgroupdefaults/usage"],
+      Usage: [
+        "appgroupdefaults/usage",
+        "appgroupdefaults/migrating-to-v4.3",
+      ],
     },
     {
       Other: [

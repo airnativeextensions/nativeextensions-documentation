@@ -127,11 +127,14 @@ Add the following to your manifest:
 
 ```xml
 <queries>
-	<provider android:authorities="app_authority" />
+	<intent>
+		<action android:name="[APPGROUP]" />
+	</intent>
 </queries>
 ```
 
-You should add a provider line for each application you are communicating with and replacing `app_authority` with the `app_authority` value for that application.
+You should replace `[APPGROUP]` with your application group.
+
 
 Alternatively you can add the `QUERY_ALL_PACKAGES` permission, however this is discouraged.
 

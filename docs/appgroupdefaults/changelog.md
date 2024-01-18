@@ -1,3 +1,9 @@
+### 2024.01.18 [v4.3.2]
+
+```
+fix(android): correct broadcast update to slave applications ensuring data in slave apps is updated
+```
+
 ### 2023.01.12 [v4.2.0]
 
 ```

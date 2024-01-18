@@ -126,6 +126,99 @@ Next you will need to add this group identifier to the plugin configuration for 
 
 
 
+### Android
+
+:::note Proguard
+If you are using a custom proguard configuration you may need to add the following line to ensure the interface class for the plugin is accessible to unity at runtime.
+
+```
+-keep class com.distriqt.extension.appgroupdefaults.AppGroupDefaultsUnityPlugin {*;}
+```
+:::
+
+
+#### Manifest Additions 
+
+:::note 
+For standard unity builds these additions will be automatically added to your build. 
+
+However if you manually control your manifest then you should follow the documentation below to place these additions in your custom application `AndroidManifest.xml` file. 
+::: 
+
+You should place the following in your manifests `application` tag:
+
+```xml
+<!-- For the content provider and broadcast receiver method -->
+<application>
+				
+	<meta-data android:name="app_group" android:value="[APPGROUP]" />
+	<meta-data android:name="app_authority" android:value="group.[APPID].provider" />
+	<meta-data android:name="app_authority_matcher" android:value="group\\.(?:[a-z,1-9]{1,}\\.)*provider" />
+
+	<provider
+		android:name="com.distriqt.extension.appgroupdefaults.provider.SharedProvider"
+		android:authorities="group.[APPID].provider"
+		android:exported="true" >
+	</provider>
+		
+	<receiver
+		android:name="com.distriqt.extension.appgroupdefaults.provider.SharedContentChangedReceiver"
+		android:enabled="true"
+		android:exported="true" >
+		<intent-filter>
+			<action android:name="[APPGROUP]"/>
+		</intent-filter>
+	</receiver>
+
+</application>
+```
+
+
+You should replace `[APPGROUP]` with your application group.
+This must be done in the meta-data tag and in the receiver. 
+For example: `group.com.distriqt.test`
+
+```xml
+	<meta-data android:name="app_group" android:value="group.com.distriqt.test" />
+```
+
+
+You also need to define an **application authority**, this must be different for
+each of your applications but must be matchable using the matcher. We suggest using 
+the example above replacing `[APPID]` with your application id, for example an app_authority 
+may be, `group.com.distriqt.test.app1.provider` as below:
+
+```xml
+	<meta-data android:name="app_authority" android:value="group.com.distriqt.test.app1.provider" />
+```
+
+You must place the application authority both in the meta-data tag and in the provider.
+
+
+##### Queries
+
+Since Android API v30, Google has limited the ability to discover other applications via use of the `<queries>` tag in your manifest. You must specify the applications you wish to access in this area otherwise the application won't be able to discover other applications.
+
+Add the following to your manifest:
+
+```xml
+<queries>
+	<intent>
+		<action android:name="[APPGROUP]" />
+	</intent>
+</queries>
+```
+
+You should replace `[APPGROUP]` with your application group.
+
+
+Alternatively you can add the `QUERY_ALL_PACKAGES` permission, however this is discouraged.
+
+```xml
+<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+```
+
+
 
 <!--newpage-->
 
