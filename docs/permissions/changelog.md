@@ -1,3 +1,9 @@
+### 2024.01.18 [v4.0.1]
+
+```
+feat(docs): update docs for unity support
+```
+
 ### 2023.12.14 [v4.0.0]
 
 ```

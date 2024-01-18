@@ -27,6 +27,7 @@ A complete list of the possible permissions is found [here](https://developer.an
   values={[
     {label: 'APM', value: 'apm'},
     {label: 'Manual', value: 'manual'},
+    {label: 'Unity', value: 'unity'},
   ]}>
 
   <TabItem value="apm" >
@@ -79,6 +80,38 @@ For example, to add the camera permission:
 </android>
 ```
 
+
+  </TabItem>
+
+  <TabItem value="unity" >
+
+There are several methods to add entries to the android manifest in Unity. 
+If you already have a preferred approach, you can simply add the permissions you require to your manifest, eg:
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+```
+
+The approach we prefer is to create a folder in your `Assets` folder something like `Project.androidlib`, (you can create this in a subfolder like `Plugins/Android` to keep things organised).
+
+Create a file in this directory called `project.properties` and add the following contents:
+
+```
+android.library=true
+```
+
+Then create an `AndroidManifests.xml` file and add the additions you need:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="project.packagename.resources">
+
+	<uses-permission android:name="android.permission.CAMERA" />
+
+</manifest>
+```
+
+Unity will merge the contents of this file into your applications manifest during a build.
 
   </TabItem>
   

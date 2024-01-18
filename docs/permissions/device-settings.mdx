@@ -12,12 +12,33 @@ You can redirect the user to the settings for your application by using the `ope
 Before calling this you should firstly check if your application can open these device settings by checking the `canOpenDeviceSettings` property.
 
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
 ```actionscript
 if (Permissions.instance.canOpenDeviceSettings)
 {
     Permissions.instance.openDeviceSettings();
 }
 ```
+
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp 
+if (Permissions.Instance.CanOpenDeviceSettings)
+{
+    Permissions.Instance.OpenDeviceSettings();
+}
+```
+
+  </TabItem>
+</Tabs>
+
+
 
 After calling this your application should open the device permission settings for your application.
  

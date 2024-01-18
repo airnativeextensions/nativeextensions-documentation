@@ -2565,7 +2565,10 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "permissions/index" },
     {
-      "Get Started": ["permissions/add-the-extension"],
+      "Get Started": [
+        "permissions/add-the-extension",
+        "permissions/add-the-plugin",
+      ],
     },
     {
       Usage: [

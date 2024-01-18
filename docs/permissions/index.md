@@ -16,7 +16,7 @@ The simple API allows you to quickly integrate permissions in your AIR applicati
 Identical code base can be used across all platforms allowing you to concentrate on
 your application and not device specifics.
 
-We provide complete guides to get you up and running with asset selection quickly and easily.
+We provide complete guides to get you up and running with runtime permissions quickly and easily.
 
 ### Features
 
