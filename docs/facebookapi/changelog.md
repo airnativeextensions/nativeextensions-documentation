@@ -1,3 +1,16 @@
+###### 2024.01.26 [v16.2.101]
+
+```
+feat(ios): update facebook sdk v16.2.1
+fix(ios,gamingservices): correct handling of recipients in GameRequestsEvent (resolves #378)
+```
+
+###### 2023.10.26 [v16.0.103]
+
+```
+fix(ios): resolve issue with duplicate symbols (resolves #377)
+```
+
 ###### 2023.04.04 [v16.0.101]
 
 ```
