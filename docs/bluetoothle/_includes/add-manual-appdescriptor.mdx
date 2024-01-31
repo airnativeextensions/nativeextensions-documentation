@@ -17,14 +17,18 @@ The following should be added to your `extensions` node in your application desc
 
 #### Manifest Additions
 
-There are several additions required for using Bluetooth LE on Android. You will need to add the permissions (you can selectively add them if you do not use all of the features of this extension) and if you wish to limit the devices your application can be installed on you can add the hardware requirement.
+There are several additions required for using Bluetooth LE on Android. 
+You will need to add the permissions (you can selectively add them if you do not use all of the features of this extension) 
+and if you wish to limit the devices your application can be installed on you can add the hardware requirement.
 
-Note: Since Android 23, you need to add `ACCESS_COARSE_LOCATION` to be able to scan for devices.
+
+
+
 
 ```xml
 <manifest android:installLocation="auto">
     
-    <uses-sdk android:minSdkVersion="18" />
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVerion="33" />
 
     <!-- Request legacy Bluetooth permissions on older devices. -->
     <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
@@ -43,11 +47,8 @@ Note: Since Android 23, you need to add `ACCESS_COARSE_LOCATION` to be able to s
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
     <!-- Needed only if your app uses Bluetooth scan results to derive physical location. -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!-- For Android 10 -->
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
 

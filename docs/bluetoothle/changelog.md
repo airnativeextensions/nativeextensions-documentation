@@ -1,3 +1,9 @@
+### 2024.01.31 [v4.3.0]
+
+```
+fix(android): correct permissions requested on android 31 + (resolves #66)
+```
+
 ### 2023.01.13 [v4.2.0]
 
 ```
