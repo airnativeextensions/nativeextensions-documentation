@@ -1,3 +1,17 @@
+### 2024.01.31 [v8.0.3]
+
+```
+fix(firestore): update dependencies for compatibility with guava update (resolves #455)
+feat(database): add ability to set database url for handling multiple databases (resolves #471)
+```
+
+### 2024.01.31 [v8.0.3]
+
+```
+fix(firestore): update dependencies for compatibility with guava update (resolves #455)
+feat(database): add ability to set database url for handling multiple databases (resolves #471)
+```
+
 ### 2023.07.13 [v8.0.1]
 
 ```
