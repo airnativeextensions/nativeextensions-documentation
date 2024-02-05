@@ -1,3 +1,9 @@
+### 2024.02.05 [v6.7.0]
+
+```
+feat(android): add event to inform of a notification dismissal (resolves #207)
+```
+
 ### 2023.12.12 [v6.6.4]
 
 ```

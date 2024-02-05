@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="NotificationEvent,com.distriqt.extension.notifications.events.NotificationEvent,ACTION,CHANGED,ERROR,GROUP_SELECTED,NOTIFICATION,NOTIFICATION_SELECTED,applicationState,applicationState,groupKey,id,identifier,payload,payloads,startup,startup,status,timestamp,clone,clone"><title>com.distriqt.extension.notifications.events.NotificationEvent</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../../override.css" type="text/css"><meta name="keywords" content="NotificationEvent,com.distriqt.extension.notifications.events.NotificationEvent,ACTION,CHANGED,ERROR,GROUP_DELETED,GROUP_SELECTED,NOTIFICATION,NOTIFICATION_DELETED,NOTIFICATION_SELECTED,applicationState,applicationState,groupKey,id,identifier,payload,payloads,startup,startup,status,timestamp,clone,clone"><title>com.distriqt.extension.notifications.events.NotificationEvent</title></head><body><script language="javascript" type="text/javascript" src="../../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
 				asdocTitle = 'NotificationEvent - distriqt // Notifications';
 				var baseRef = '../../../../../';
 				window.onload = configPage;
@@ -13,7 +13,6 @@
 			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.notifications.events</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  NotificationEvent</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">NotificationEvent  <img src="../../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.Event</td></tr></table><p></p><p></p><p></p>
 	 This is the Notifications Event that gets fired when something happens
 	 	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#applicationState" class="signatureLink">applicationState</a> : String<div class="summaryTableDescription">
-		 
 		 The state of the application when the notification was received.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#id" class="signatureLink">id</a> : int<div class="summaryTableDescription">
 		 		 The id of the notification that caused this event
 		 		 </div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#identifier" class="signatureLink">identifier</a> : String<div class="summaryTableDescription">
@@ -24,41 +23,33 @@
 		 May be null if there is no action associated with this event
 		 
 		 </div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#payload" class="signatureLink">payload</a> : String<div class="summaryTableDescription">
-		 
 		 The payload of the notification.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#startup" class="signatureLink">startup</a> : Boolean<div class="summaryTableDescription">
-		 
 		 If true this notification was clicked to start the application
-		 
 		 </div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#timestamp" class="signatureLink">timestamp</a> : Number = -1<div class="summaryTableDescription">
 		 
 		 The timestamp at which the event occurred.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#NotificationEvent()" class="signatureLink">NotificationEvent</a>(type:String, id:int, payload:String, applicationState:String, startup:Boolean, identifier:String = null, timestamp:Number = -1, bubbles:Boolean = false, cancelable:Boolean = false)</div><div class="summaryTableDescription">
 		  Constructor
 		 </div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clone()" class="signatureLink">clone</a>():Event</div><div class="summaryTableDescription">[override] </div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACTION" class="signatureLink">ACTION</a> : String = notification:action<div class="summaryTableDescription">[static] 
-		 
 		 Dispatched when a user selects an action on a notification.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ERROR" class="signatureLink">ERROR</a> : String = notification:error<div class="summaryTableDescription">[static] 
-		 
 		 Dispatched when an error occurred, either an invalid format notification payload
 		 or a connection issue.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#NOTIFICATION" class="signatureLink">NOTIFICATION</a> : String = notification:notification<div class="summaryTableDescription">[static] 
 		 A Notification was received
-		 		 
-		 The payload field will contain a json formatted string containing the
-		 payload sent with this notification.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#NOTIFICATION_SELECTED" class="signatureLink">NOTIFICATION_SELECTED</a> : String = notification:notification:selected<div class="summaryTableDescription">[static] 
 		 
+		 		 The payload field will contain a json formatted string containing the
+		 payload sent with this notification.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#NOTIFICATION_DELETED" class="signatureLink">NOTIFICATION_DELETED</a> : String = notification:notification:deleted<div class="summaryTableDescription">[static] 
+		 This event is dispatched when the user dismisses a notification.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#NOTIFICATION_SELECTED" class="signatureLink">NOTIFICATION_SELECTED</a> : String = notification:notification:selected<div class="summaryTableDescription">[static] 
 		 This event is dispatched when the user clicks on a notification
 		 in the notification manager.</div></td><td class="summaryTableOwnerCol">NotificationEvent</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="applicationState"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">applicationState</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public var applicationState:String</code><p></p><p></p><p>
-		 <p>
 		 The state of the application when the notification was received.
-		 </p>
-		 <p>
-		 Will be one of:
+		 
+		 		 Will be one of:
 		 <ul>
-		 <li>foreground</li>
-		 <li>background</li>
-		 <li>inactive</li>
+		   <li>foreground</li>
+		   <li>background</li>
+		   <li>inactive</li>
 		 </ul>
-		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="id"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">id</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var id:int</code><p></p><p></p><p>
 		 		 The id of the notification that caused this event
 		 		 </p></div><a name="propertyDetail"></a><a name="identifier"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">identifier</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var identifier:String</code><p></p><p></p><p>
@@ -69,14 +60,10 @@
 		 May be <code>null</code> if there is no action associated with this event
 		 </p>
 		 </p></div><a name="propertyDetail"></a><a name="payload"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">payload</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var payload:String</code><p></p><p></p><p>
-		 <p>
 		 The payload of the notification.
-		 This is the payload you attached to the notifcation.
-		 </p>
+		 This is the payload you attached to the notification.
 		 </p></div><a name="propertyDetail"></a><a name="startup"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">startup</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var startup:Boolean</code><p></p><p></p><p>
-		 <p>
-		 If true this notification was clicked to start the application
-		 </p>
+		 If <code>true</code> this notification was clicked to start the application
 		 </p></div><a name="propertyDetail"></a><a name="timestamp"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">timestamp</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var timestamp:Number = -1</code><p></p><p></p><p>
 		 <p>
 		 The timestamp at which the event occurred. This is only valid for Android
@@ -86,35 +73,28 @@
 		 </p></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="NotificationEvent()"></a><a name="NotificationEvent(String,int,String,String,Boolean,String,Number,Boolean,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">NotificationEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function NotificationEvent(type:String, id:int, payload:String, applicationState:String, startup:Boolean, identifier:String = null, timestamp:Number = -1, bubbles:Boolean = false, cancelable:Boolean = false)</code><p></p><p>
 		  Constructor
 		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">id</span>:int</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">payload</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">applicationState</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">startup</span>:Boolean</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">identifier</span>:String</code> (default = <code>null</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">timestamp</span>:Number</code> (default = <code>-1</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bubbles</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">cancelable</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="clone()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code>override public function clone():Event</code><p></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Event</code></td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="ACTION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ACTION</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const ACTION:String = notification:action</code><p></p><p></p><p>
-		 <p>
 		 Dispatched when a user selects an action on a notification.
-		 </p>
-		 		 <p>
-		 The <code>identifier</code> will contain the identifier of the action
+		 
+		 		 The <code>identifier</code> will contain the identifier of the action
 		 allowing you to determine what action to take.
-		 </p>
-		 		 </p></div><a name="constantDetail"></a><a name="ERROR"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ERROR</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ERROR:String = notification:error</code><p></p><p></p><p>
-		 <p>
-		 Dispatched when an error occurred, either an invalid format notification payload
-		 or a connection issue.
-		 </p>
-		 <p>
-		 The <code>payload</code> will contain the details of the error.
-		 </p>
-		 		 </p></div><a name="constantDetail"></a><a name="NOTIFICATION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">NOTIFICATION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const NOTIFICATION:String = notification:notification</code><p></p><p></p><p>
-		 <p>A Notification was received</p>
-		 		 <p>
-		 The payload field will contain a json formatted string containing the
+		 		 </p></div><a name="constantDetail"></a><a name="ERROR"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ERROR</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ERROR:String = notification:error</code><p></p><p></p></div><a name="constantDetail"></a><a name="NOTIFICATION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">NOTIFICATION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const NOTIFICATION:String = notification:notification</code><p></p><p></p><p>
+		 A Notification was received
+		 
+		 		 The payload field will contain a json formatted string containing the
 		 payload sent with this notification.
-		 </p>
+		 		 </p></div><a name="constantDetail"></a><a name="NOTIFICATION_DELETED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">NOTIFICATION_DELETED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const NOTIFICATION_DELETED:String = notification:notification:deleted</code><p></p><p></p><p>
+		 This event is dispatched when the user dismisses a notification.
+		 This may have been when the application was running in the background or wasn't running at all.
+		 
+		 		 If the application wasn't running this event will be dispatched straight
+		 after a call to register.
+		 
+		 		 Only available on Android
 		 		 </p></div><a name="constantDetail"></a><a name="NOTIFICATION_SELECTED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">NOTIFICATION_SELECTED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const NOTIFICATION_SELECTED:String = notification:notification:selected</code><p></p><p></p><p>
-		 <p>
 		 This event is dispatched when the user clicks on a notification
 		 in the notification manager. This may have been when the application
 		 was running in the background or wasn't running at all.
-		 </p>
-		 		 <p>
-		 If the application wasn't running this event will be dispatched straight
+		 
+		 		 If the application wasn't running this event will be dispatched straight
 		 after a call to register.
-		 </p>
-		 		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Tue Dec 12 2023, 11:28 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Tue Dec 12 2023, 11:28 AM +10:00  -->
+		 		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Mon Feb 5 2024, 11:46 AM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Mon Feb 5 2024, 11:46 AM +10:00  -->

@@ -1,0 +1,6 @@
+Text for description in com.distriqt.extension.notifications.events:NotificationEvent/ERROR is not valid.
+org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 8; Element type "br" must be followed by either attribute specifications, ">" or "/>".
+
+Text for description in com.distriqt.extension.notifications.events:NotificationGroupEvent/applicationState is not valid.
+No matching start tag.
+
