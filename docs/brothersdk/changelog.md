@@ -1,3 +1,9 @@
+### 2024.02.14 [v2.2.5]
+
+```
+feat(android): add model name to data retrieved from search
+```
+
 ### 2024.02.09 [v2.2.4]
 
 ```
