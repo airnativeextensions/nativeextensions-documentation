@@ -1,3 +1,15 @@
+### 2024.02.15 [v14.1.0]
+
+```
+feat(android): add ability to load large icon from any file by passing the nativePath
+feat(android): add ability to load image for image styled notification from any file by passing the nativePath 
+fix(android): correct group notification removal when notifications removed via action
+feat(onesignal): update onesignal sdk to android v5.1.4, ios v5.1.0
+fix(ios,onesignal): removed display of alert when not authorised during push registration (resolves #589)
+feat(onesignal): implement new getTags functionality (resolves #590)
+feat(android,onesignal): correct startup flag on launch notification (resolves #588)
+```
+
 ### 2023.10.24 [v14.0.0]
 
 ```
