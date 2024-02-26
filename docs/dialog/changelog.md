@@ -1,3 +1,10 @@
+### 2024.02.26 [v8.8.0]
+
+```
+feat(android): add support for runtimeInBackgroundThread (resolves #296)
+fix(ios): correct font size in text view on alert dialogs (resolves #295)
+```
+
 ### 2023.01.17 [v8.7.0]
 
 ```
