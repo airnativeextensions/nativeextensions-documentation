@@ -1,3 +1,9 @@
+### 2024.03.01 [v8.0.4]
+
+```
+fix(database,android): resolve issue with updateChildren null values not deleteing value (resolves #477) 
+```
+
 ### 2024.01.31 [v8.0.3]
 
 ```
