@@ -1,3 +1,10 @@
+### 2024.03.19 [v4.0.2]
+
+```
+feat(docs): remove android branding from docs
+fix(unity): correct android dependency version
+```
+
 ### 2024.01.18 [v4.0.1]
 
 ```
