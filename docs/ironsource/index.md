@@ -4,26 +4,21 @@ hide_title: true
 slug: /ironsource/
 ---
 
-![](images/hero.png)
-
 
 >
 > This extension is provided for **free**. If it helps you please consider sponsoring the developers to continue support and development of the extension:
 >
 > [:heart: Sponsor](https://github.com/sponsors/marchbold)
 >
+> This is not an official extension and is not endorsed or sponsored by ironSource.
+>
 
 
 # IronSource
 
-IronSource is an AIR Native Extension to access the [IronSource](https://www.ironsrc.com/) advertising SDK for in app monetisation.
+ironSource is an AIR Native Extension to access the [ironSource](https://www.is.com/) advertising SDK for in app monetisation.
 
->
-> The biggest game developers in the industry trust ironSource with their app businesses because we provide everything they need in one powerful platform.
->
-
-
-IronSource does provide an offical ANE. We developed this extension so we can update it to match the latest native versions without waiting for updates from IronSource directly, which seem to lag behind the native SDKs.
+We developed this extension so we can update it to match the latest native versions without waiting for updates from IronSource directly, which seem to be given a lower priority and lag behind the native SDKs.
 
 
 
@@ -58,10 +53,6 @@ if (IronSource.instance.isRewardedVideoAvailable())
     IronSource.instance.showRewardedVideo();
 }
 ```
-
-More information here: 
-
-[com.distriqt.IronSource](https://airnativeextensions.com/extension/com.distriqt.IronSource)
 
 
 
