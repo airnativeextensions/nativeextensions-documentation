@@ -4,6 +4,7 @@ hide_title: true
 slug: /ironsource/
 ---
 
+![](images/hero.png)
 
 >
 > This extension is provided for **free**. If it helps you please consider sponsoring the developers to continue support and development of the extension:
