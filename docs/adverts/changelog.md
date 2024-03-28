@@ -1,3 +1,21 @@
+### 2024.03.28 [v15.0.0]
+
+```
+feat(android,admob): update android admob sdk v23.0.0 (resolves #553)
+feat(ios): update admob ios sdk to v11.2.0
+ - add support for privacy manifest files 
+ - minimum deployment target to iOS 12
+ - minimum OS required to receive ads to iOS 13
+ - no longer automatically collects metrics - need to link Firebase analytics
+feat(ump): update UMP to support latest functionality include canRequestAds and privacy status
+feat(android,ump): changed isSupported tests for ump
+
+feat(ios): make error codes consistent with android implementation (resolves #545)
+feat(android): add some checks for reported crashes (resolves #541)
+fix(docs): correct admob app open test unit ad id
+fix(airpackage): add missing ios platform configs for variants
+```
+
 ### 2023.08.18 [v14.3.0]
 
 ```

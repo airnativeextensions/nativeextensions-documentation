@@ -25,7 +25,7 @@ The quickest way to enable testing is to use Google-provided test ad units. Thes
 | Rewarded Video | `ca-app-pub-3940256099942544/5224354917` |
 | Native Advanced | `ca-app-pub-3940256099942544/2247696110` |
 | Native Advanced Video | `ca-app-pub-3940256099942544/1044960115` |
-| App Open Ad | `ca-app-pub-3940256099942544/3419835294` |
+| App Open Ad | `ca-app-pub-3940256099942544/9257395921` |
 
 
 ### iOS
@@ -38,7 +38,7 @@ The quickest way to enable testing is to use Google-provided test ad units. Thes
 | Rewarded Video | `ca-app-pub-3940256099942544/1712485313` |
 | Native Advanced | `ca-app-pub-3940256099942544/3986624511` |
 | Native Advanced Video | `ca-app-pub-3940256099942544/2521693316` |
-| App Open Ad | `ca-app-pub-3940256099942544/5662855259` |
+| App Open Ad | `ca-app-pub-3940256099942544/5575463023` |
 
 
 

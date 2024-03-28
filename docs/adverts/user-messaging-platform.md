@@ -48,9 +48,10 @@ var consentInformation:ConsentInformation = Adverts.service.ump.getConsentInform
 
 This object has the consent information including:
 
+- `consentInformation.getPrivacyOptionsRequirementStatus()`: Gets the status indicating whether a privacy options button is required;
 - `consentInformation.getConsentStatus()`: The current user consent status (see `ConsentStatus` constants);
-- `consentInformation.getConsentType()`: The type of consent (see `ConsentType` constants); **Android only. This has been removed on iOS**
 - `consentInformation.isConsentFormAvailable()`: Whether a form is available to be loaded and displayed to the user;
+- `consentInformation.canRequestAds()`: Indicates whether the app has completed the necessary steps for gathering updated user consent;
 
 
 **It is recommended that you request an update of the consent information at every app launch. This will determine whether or not your user needs to provide consent.**
