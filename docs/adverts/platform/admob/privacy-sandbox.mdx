@@ -1,0 +1,129 @@
+---
+title: Privacy Sandbox
+sidebar_label: Privacy Sandbox
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+:::note
+Currently this is for Android only
+:::
+
+The Privacy Sandbox on Android introduces new technologies to improve user privacy and enable effective, personalized advertising experiences for mobile apps.
+
+To read more on the Privacy Sandbox see the [official documentation](https://developers.google.com/privacy-sandbox/).
+
+## Configure API-specific Ad Services
+
+This configuration gives you fine-grained control access to resources managed by the APIs in your app or embedded SDK. In your manifest, specify an `adservicesConfig` property as shown in the following example:
+
+```xml
+<application ...>
+      ...
+    <property android:name="android.adservices.AD_SERVICES_CONFIG"
+        android:resource="@xml/gma_ad_services_config" />
+
+      ...
+</application>
+```
+
+Specify the ad services XML resource referenced in the manifest, such as `res/xml/gma_ad_services_config.xml`. For each privacy-preserving API applicable to your app (or embedded SDK), set the allowAllToAccess attribute to true to grant access to any callers.
+
+Create a folder `res` in your application source and a sub-folder named `xml`. Ensure you package this folder as the custom resources for your AIR application by using the `resdir` option ([more information here](https://airsdk.dev/docs/tutorials/platform/android/custom-resources))
+
+Create the file `gma_ad_services_config.xml` and add specify the configuration you require. The following example shows how to specify broad access to allow any enrollment account ID access to all privacy-preserving APIs:
+
+```xml
+<ad-services-config>
+   <!-- Attribution API -->
+   <attribution allowAllToAccess="true" />
+
+   <!-- Topics API -->
+   <topics allowAllToAccess="true" />
+
+   <!-- Protected Audience on Android API -->
+   <custom-audiences allowAllToAccess="true" />
+</ad-services-config>
+```
+
+The following example shows how to specify fine-grained access to each privacy-preserving API for specific enrollment account IDs:
+
+```xml
+<ad-services-config>
+    <!-- Attribution API -->
+    <attribution allowAdPartnersToAccess="ENROLLMENT-ID" allowAllToAccess="false" />
+
+    <!-- Topics API -->
+    <includes-sdk-library name="ENROLLMENT-ID" />
+    <topics allowAdPartnersToAccess="ENROLLMENT-ID" allowAllToAccess="false" />
+
+    <!-- Protected Audience on Android API -->
+    <custom-audiences allowAdPartnersToAccess="ENROLLMENT-ID" allowAllToAccess="false" />
+</ad-services-config>
+```
+
+## Opting out 
+
+To opt out of the Admob implemented Topics API and Attribution Reporting API you can remove the additions to the manifest from your application descriptor.
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+Firstly create an Android config for specific manifest additions:
+
+```
+apm generate config android
+```
+
+Then edit the file created at `config/android/AndroidManifest.xml` and add the following content:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" tools:node="remove" />
+
+    <application>
+
+        <property tools:node="removeAll" />
+
+    </application>
+
+</manifest>
+```
+
+Now generate your application descriptor and the privacy sandbox APIs will be disabled.
+
+
+  </TabItem>
+  <TabItem value="manual" >
+  
+Remove the following lines from your manifest additions:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS"  />
+<uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+<uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"  />
+```
+
+Also from within the `application` node remove the line:
+
+```xml
+<property android:name="android.adservices.AD_SERVICES_CONFIG" android:resource="@xml/gma_ad_services_config"/>
+```
+
+  </TabItem>
+  
+</Tabs>

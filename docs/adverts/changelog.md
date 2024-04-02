@@ -1,3 +1,9 @@
+### 2024.04.02 [v15.0.0]
+
+```
+feat(docs): update docs to include information about new privacy sandbox (#554)
+```
+
 ### 2024.03.28 [v15.0.0]
 
 ```

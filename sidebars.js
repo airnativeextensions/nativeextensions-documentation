@@ -101,7 +101,14 @@ module.exports = {
         "adverts/add-the-extension",
         {
           Platforms: [
-            "adverts/platform/admob/index",
+            { 
+              type: 'category',
+              label: "Google Ad Mob",
+              link: { type: 'doc', id: 'adverts/platform/admob/index' },
+              items: [
+                "adverts/platform/admob/privacy-sandbox",  
+              ],
+            },
             "adverts/platform/huawei/index",
           ],
         },
@@ -129,6 +136,7 @@ module.exports = {
     {
       Troubleshooting: [
         "adverts/troubleshooting",
+        "adverts/migrating-to-version-15.0",
         "adverts/migrating-to-version-14.0",
         "adverts/migrating-to-version-13.6",
         "adverts/migrating-to-version-13",
