@@ -116,7 +116,7 @@ When you start a flexible update, a dialog first appears to the user to request 
 
 
 
-## Monitor the flexible update state
+### Monitor the flexible update state
 
 After starting an update, you will receive `StateUpdatedEvent` events indicating the status of the update:
 

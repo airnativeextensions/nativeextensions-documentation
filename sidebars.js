@@ -50,6 +50,7 @@ module.exports = {
         { type: "ref", id: "idfa/index" },
         { type: "ref", id: "image/index" },
         { type: "ref", id: "inappbilling/index" },
+        { type: "ref", id: "inappupdates/index" },
         { type: "ref", id: "ironsource/index" },
 
         { type: "ref", id: "jobscheduler/index" },
@@ -1996,6 +1997,29 @@ module.exports = {
           type: "link",
           label: "Contact Support",
           href: "http://github.com/distriqt/ANE-InAppBilling/issues/new",
+        },
+      ],
+    },
+  ],
+
+  inappupdates: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "inappupdates/index" },
+    "inappupdates/add-the-extension",
+    "inappupdates/usage",
+    "inappupdates/testing",
+    {
+      Other: [
+        { type: "doc", id: "inappupdates/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/inappupdates/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-InAppUpdates/issues/new",
         },
       ],
     },
