@@ -20,6 +20,7 @@ module.exports = {
         { type: "ref", id: "bluetooth/index" },
         { type: "ref", id: "bluetoothle/index" },
         { type: "ref", id: "branch/index" },
+        { type: "ref", id: "bugsnag/index" },
 
         { type: "ref", id: "calendar/index" },
         { type: "ref", id: "camera/index" },
@@ -611,7 +612,38 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-BranchIO/issues/new",
+          href: "https://github.com/distriqt/ANE-BranchIO/issues/new",
+        },
+      ],
+    },
+  ],
+
+
+  bugsnag: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "bugsnag/index" },
+    {
+      "Get Started": ["bugsnag/add-the-extension"],
+    },
+    {
+      Usage: [
+        "bugsnag/configuration",
+        "bugsnag/reporting-errors",
+        "bugsnag/sessions",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "bugsnag/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/bugsnag/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "https://github.com/airnativeextensions/ANE-BugSnag/issues/new",
         },
       ],
     },
