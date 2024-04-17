@@ -27,21 +27,53 @@ The following should be added to your `extensions` node in your application desc
 ##### Manifest Additions
 
 
-Add the following to your manifest additions inside the `application` tag. 
+Add the following to your manifest additions inside the `manifestAdditions` tag ensuring you only have one `application` tag. 
 
 ```xml
 <!-- CHARTBOOST -->
-<activity
-    android:name="com.chartboost.sdk.CBImpressionActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-    android:excludeFromRecents="true"
-    android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
-<activity
-    android:name="com.google.android.gms.common.api.GoogleApiActivity"
-    android:exported="false"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+<queries>
+    <intent>
+        <action android:name="android.intent.action.ACTION_VIEW" />
+
+        <data android:scheme="https" />
+    </intent>
+</queries>
+
+<application>
+    <activity
+        android:name="com.chartboost.sdk.view.CBImpressionActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:excludeFromRecents="true"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity
+        android:name="com.chartboost.sdk.internal.clickthrough.EmbeddedBrowserActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:excludeFromRecents="true"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+    <!-- ExoPlayer DownloadService -->
+    <service
+        android:name="com.chartboost.sdk.internal.video.repository.exoplayer.VideoRepositoryDownloadService"
+        android:exported="false" >
+
+        <!-- This is needed for Scheduler -->
+        <intent-filter>
+            <action android:name="com.google.android.exoplayer.downloadService.action.RESTART" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </service>
+
+    <activity
+        android:name="com.google.android.gms.common.api.GoogleApiActivity"
+        android:exported="false"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+</application>
 ```
 
 #### iOS 

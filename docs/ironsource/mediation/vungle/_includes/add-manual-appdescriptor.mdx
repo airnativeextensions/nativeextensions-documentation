@@ -11,11 +11,13 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.ironsource.Vungle</extensionID>
 
     <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.distriqt.playservices.Ads</extensionID>
-    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
     <extensionID>androidx.core</extensionID>
+    <extensionID>com.google.code.gson</extensionID>
+    <extensionID>com.google.protobuflite</extensionID>
+    <extensionID>com.distriqt.square.okhttp3</extensionID>
     <extensionID>com.jetbrains.kotlin</extensionID>
+    <extensionID>com.jetbrains.kotlinx</extensionID>
 </extensions>
 ```
 
@@ -35,24 +37,22 @@ Ensure you replace:
 ```xml
 <!-- VUNGLE -->
 <activity
-    android:name="com.vungle.warren.ui.VungleActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-    android:launchMode="singleTop"
-    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-<provider
-    android:name="com.vungle.warren.utility.VungleProvider"
-    android:authorities="APPLICATION_PACKAGE.vungle-provider"
-    android:exported="false" />
-<activity
-    android:name="com.vungle.warren.ui.VungleFlexViewActivity"
+    android:name="com.vungle.ads.internal.ui.VungleActivity"
     android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
     android:hardwareAccelerated="true"
-    android:launchMode="singleTop"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    android:launchMode="singleTop" />
+
+<provider
+    android:name="com.vungle.ads.internal.util.VungleProvider"
+    android:authorities="APPLICATION_PACKAGE.vungle-provider"
+    android:exported="false" />
 ```
 
 
 #### iOS 
+
+Add the `assets/ios/Frameworks` folder to your application package, ensuring the dynamic `VungleAdsSDK.framework` is included.
+
 
 ##### Info Additions
 

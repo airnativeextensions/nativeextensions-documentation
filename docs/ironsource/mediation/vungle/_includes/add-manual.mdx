@@ -12,3 +12,39 @@ To add the ANE download it from the repository and add it to your application:
 
 
 More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
+
+#### Android Support
+
+The Android Support libraries encompass the Android Support, Android X and common Google libraries.
+
+These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
+
+This extension requires the following extensions:
+
+- [`com.google.protobuflite`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.protobuflite.ane)
+- [`com.google.code.gson`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.code.gson.ane)
+- [`com.distriqt.square.okhttp3`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.distriqt.square.okhttp3.ane)
+- [`com.jetbrains.kotlinx`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlinx.ane)
+
+You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
+
+
+### Google Play Services
+
+This extension requires usage of certain aspects of the Google Play Services client library.
+The client library is available as a series of extensions that you add into your applications packaging options.
+Each separate extension provides a component(s) from the Play Services client library and are used by different extensions.
+These client libraries aren't packaged with this extension as they are used by multiple ANEs and separating them
+will avoid conflicts, allowing you to use multiple extensions in the one application.
+
+This extension requires the following Google Play Services:
+
+- [`com.distriqt.playservices.Base`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.distriqt.playservices.Cronet`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Cronet.ane)
+
+You must include the above native extensions in your application along with this extension,
+and you need to ensure they are packaged with your application.
+
+You can access the Google Play Services client library extensions here:
+[https://github.com/distriqt/ANE-GooglePlayServices](https://github.com/distriqt/ANE-GooglePlayServices).
+

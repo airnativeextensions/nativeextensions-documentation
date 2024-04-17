@@ -2075,15 +2075,19 @@ module.exports = {
     },
     {
       Mediation: [
-        "ironsource/mediation/adcolony/adcolony",
         "ironsource/mediation/admob/admob",
-        "ironsource/mediation/amazon/amazon",
         "ironsource/mediation/applovin/applovin",
         "ironsource/mediation/chartboost/chartboost",
         "ironsource/mediation/facebook-audience/facebook-audience",
-        "ironsource/mediation/tapjoy/tapjoy",
         "ironsource/mediation/unityads/unityads",
         "ironsource/mediation/vungle/vungle",
+        {
+          Dreprecated: [
+            "ironsource/mediation/adcolony/adcolony",
+            "ironsource/mediation/amazon/amazon",
+            "ironsource/mediation/tapjoy/tapjoy",
+          ]
+        }
       ],
     },
     {

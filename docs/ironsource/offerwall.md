@@ -3,6 +3,12 @@ title: Offerwall
 sidebar_label: Offerwall
 ---
 
+:::danger Deprecated
+ironSource no longer provide the offerwall functionality. Since they acquired Tapjoy they are now directing developers to use Tapjoy's offerwall.
+
+The following documentation is deprecated and will be removed in an upcoming release.
+:::
+
 The offerwall is an in-app advertising unit that app developers use to monetize their apps. It acts like a mini-store in an app, listing multiple “offers” that users can complete in exchange for receiving an in-app reward. For example, users can receive extra in-app coins if they choose to register a username, get to level 25 on a game, make an in-app purchase, and more on the offerwall.
 
 ![](images/offerwall.png)
@@ -23,7 +29,7 @@ You can also listen for the `OfferwallEvent.AVAILABLE` to respond to changes in 
 ```actionscript
 IronSource.instance.addEventListener( OfferwallEvent.AVAILABLE, offerwallAvailabilityHandler );
 
-function offerwallAvailabilityHandler( event:OfferwallEvent ):void 
+function offerwallAvailabilityHandler( event:OfferwallEvent ):void
 {
     // Offerwall availability has changed
 
@@ -34,13 +40,9 @@ function offerwallAvailabilityHandler( event:OfferwallEvent ):void
 }
 ```
 
-
-
-
 ## Present the Offerwall
 
 Once the Offerwall is available you can call `showOfferwall()` to present the offerwall to your user (typically done after a user clicks on some in-app button).
-
 
 ```actionscript
 IronSource.instance.showOfferwall();
@@ -53,7 +55,7 @@ if (IronSource.instance.isOfferwallAvailable())
 {
     IronSource.instance.showOfferwall();
 }
-else 
+else
 {
     // Inform user feature not available currently
 }
@@ -64,7 +66,6 @@ There are several events associated with the display of the offerwall:
 - `OfferwallEvent.OPENED`: Dispatched when the Offerwall is opened;
 - `OfferwallEvent.CLOSED`: Dispatched when the Offerwall is closed;
 - `OfferwallEvent.SHOW_FAILED`: Dispatched if the Offerwall failed to show;
-
 
 ```actionscript
 IronSource.instance.addEventListener( OfferwallEvent.OPENED, openedHandler );
@@ -77,17 +78,17 @@ if (IronSource.instance.isOfferwallAvailable())
 }
 
 
-function openedHandler( event:OfferwallEvent ):void 
+function openedHandler( event:OfferwallEvent ):void
 {
     // Offerwall opened
 }
 
-function closedHandler( event:OfferwallEvent ):void 
+function closedHandler( event:OfferwallEvent ):void
 {
     // Offerwall closed
 }
 
-function errorHandler( event:OfferwallEvent ):void 
+function errorHandler( event:OfferwallEvent ):void
 {
     // Check event details for error information
 }
@@ -100,10 +101,9 @@ There are 2 methods of rewarding your user, using:
 - Client side callbacks;
 - Server side callbacks;
 
-
 ### Client side
 
-#### Proactive polling 
+#### Proactive polling
 
 You can poll at any time to retrieve the user's total credits and any new credits.
 
@@ -111,7 +111,6 @@ To do this call the `getOfferwallCredits()` function and await the following eve
 
 - `OfferwallEvent.AD_CREDITED`: Dispatched when the call completes successfully, the event will contain the current user credits;
 - `OfferwallEvent.GETOFFERWALLCREDITS_FAILED`: Dispatched if there was an error retrieving the user's credits;
-
 
 ```actionscript
 IronSource.instance.addEventListener( OfferwallEvent.AD_CREDITED, adCreditedHandler );
@@ -137,9 +136,7 @@ The details retrieved in the event are:
 
 - `credits` : The number of credits the user has earned since the last `OfferwallEvent.AD_CREDITED` event. Note that the `credits` may represent multiple completions;
 - `totalCredits` : The total number of credits ever earned by the user;
-- `totalCreditsFlag` :  In some cases, we won’t be able to provide the exact amount of credits since the last event (specifically if the user clears the app’s data). In this case the `credits` will be equal to the `totalCredits`, and this flag will be `true`;
-
-
+- `totalCreditsFlag` : In some cases, we won’t be able to provide the exact amount of credits since the last event (specifically if the user clears the app’s data). In this case the `credits` will be equal to the `totalCredits`, and this flag will be `true`;
 
 #### Automatic Events
 
@@ -153,20 +150,15 @@ IronSource.instance.setIronSourceClientSideCallbacks(true);
 IronSource.instance.init( ... );
 ```
 
->
 > **Important! This code MUST be implemented before calling the init.**
->
 
 Using this method the `OfferwallEvent.AD_CREDITED` will be dispatched automatically as part of the offerwall lifecycle.
-
 
 ### Server side
 
 See the ironSource documentation for details on server side callbacks and rewarding users.
 
 If you turn on server-to-server callbacks in addition to the client-side callbacks, remember not to reward the user more than once for the same completion. ironSource will fire both the client-side callback and the server-to-server callback. You will get two notifications for each completion.
-
-
 
 ## Errors
 
