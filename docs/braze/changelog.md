@@ -1,3 +1,9 @@
+### 2024.04.18 [v0.1.8]
+
+```
+fix(ios): correct conversion of push token for push registration
+```
+
 ### 2023.10.09 [v0.1.6]
 
 ```
