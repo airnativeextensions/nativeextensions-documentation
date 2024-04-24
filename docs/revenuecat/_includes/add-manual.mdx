@@ -9,7 +9,7 @@ First step is always to add the extension to your development environment. Downl
 
 
 
-## Dependencies
+### Dependencies
 
 Many of our extensions use some common libraries, for example, the Android Support libraries.
 
@@ -18,7 +18,7 @@ We have to separate these libraries into separate extensions in order to avoid m
 You will add these extensions as you do with any other extension, and you need to ensure it is packaged with your application.
 
 
-### Core 
+#### Core 
 
 The Core extension is required by this extension. You must include this extension in your application.
 
@@ -29,7 +29,7 @@ You can access this extension here: [https://github.com/distriqt/ANE-Core](https
 
 
 
-### Android Support
+#### Android Support
 
 The Android Support libraries encompass the Android Support, Android X and common Google libraries.
 
@@ -37,14 +37,16 @@ These libraries are specific to Android. There are no issues including these on 
 
 This extension requires the following extensions:
 
-- [androidx.core](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [`androidx.core`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [`com.google.android.datatransport`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.android.datatransport.ane)
+- [`com.jetbrains.kotlin`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlin.ane)
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 
 
 
 
-### Google Play Services
+#### Google Play Services
 
 This extension requires usage of certain aspects of the Google Play Services client library.
 The client library is available as a series of extensions that you add into your applications packaging options.
@@ -55,7 +57,9 @@ will avoid conflicts, allowing you to use multiple extensions in the one applica
 
 This extension requires the following Google Play Services:
 
-- [com.distriqt.playservices.Base.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.distriqt.playservices.Base`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.distriqt.playservices.CloudMessaging`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.CloudMessaging.ane)
+- [`com.google.firebase.core`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane)
 
 You must include the above native extensions in your application along with this extension,
 and you need to ensure they are packaged with your application.
@@ -64,5 +68,3 @@ You can access the Google Play Services client library extensions here:
 [https://github.com/distriqt/ANE-GooglePlayServices](https://github.com/distriqt/ANE-GooglePlayServices).
 
 
-> **Note:** The Google Play Services and Android Support ANEs are only **required** on Android devices.
-> There are no issues packaging these extensions with all platforms as there are default implementations available which will allow your code to package without errors however if you are only building an iOS application feel free to remove the Google Play Services and Android Support ANEs from your application.

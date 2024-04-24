@@ -2802,6 +2802,39 @@ module.exports = {
     },
   ],
 
+  revenuecat: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "revenuecat/index" },
+    {
+      "Get Started": ["revenuecat/add-the-extension"],
+    },
+    {
+      Usage: [
+        "revenuecat/configuration",
+        "revenuecat/users",
+        "revenuecat/products",
+        "revenuecat/making-purchases",
+        "revenuecat/user-information",
+        "revenuecat/restoring-purchases",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "revenuecat/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/revenuecat/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-RevenueCat/issues/new",
+        },
+      ],
+    },
+  ],
+
   rootchecker: [
     { type: "ref", id: "index" },
     { type: "doc", id: "rootchecker/index" },
