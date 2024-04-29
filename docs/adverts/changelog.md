@@ -1,3 +1,9 @@
+### 2024.04.29 [v15.0.1]
+
+```
+fix(admob,android): add missing guava dependency to airpackage and docs (#557)
+```
+
 ### 2024.04.02 [v15.0.0]
 
 ```
