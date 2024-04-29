@@ -6,12 +6,6 @@ The following should be added to your `extensions` node in your application desc
 ```xml
 <extensions>
     <extensionID>com.distriqt.admob.UnityAds</extensionID>
-
-    <extensionID>com.distriqt.playservices.Cronet</extensionID>
-    <extensionID>com.distriqt.square.okhttp3</extensionID>
-    <extensionID>com.google.protobuflite</extensionID>
-    <extensionID>androidx.datastore</extensionID>
-    <extensionID>androidx.webkit</extensionID>
 	
 	<!-- ADVERTS EXTENSIONS -->
 	<extensionID>com.distriqt.Adverts</extensionID>
@@ -19,7 +13,7 @@ The following should be added to your `extensions` node in your application desc
 
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.Ads</extensionID>
-	<extensionID>com.distriqt.playservices.AppSet</extensionID>
+	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.browser</extensionID>
@@ -29,40 +23,37 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.room</extensionID>
 	<extensionID>androidx.work</extensionID>
 	<extensionID>com.google.code.gson</extensionID>
-	<extensionID>com.google.guava</extensionID>
-	<extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
 ### Android
 
-There is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
-You must add the files in the `assets/android` folder to the root of your Android application package. 
-
-
 #### Manifest Additions
 
 Add the following to your manifest additions inside the `application` tag. 
 
-:::caution
-Ensure you replace:
--  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-:::
-
 ```xml
 <!-- UNITY ADS -->
-<activity android:name="com.unity3d.services.ads.adunit.AdUnitActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:exported="false" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-<activity android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:exported="false" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
-<activity android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:exported="false" android:hardwareAccelerated="false" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
-<activity android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:exported="false" android:hardwareAccelerated="false" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-<activity android:name="com.unity3d.ads.adplayer.FullScreenWebViewDisplay" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:exported="false" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-
-<provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false">
-    <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
-    <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
-    <!-- ADD THE FOLLOWING IF YOU ALREADY HAVE AN InitializationProvider -->
-    <meta-data android:name="com.unity3d.services.core.configuration.AdsSdkInitializer" android:value="androidx.startup"/>
-</provider>
+<activity
+    android:name="com.unity3d.services.ads.adunit.AdUnitActivity"
+    android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+    android:hardwareAccelerated="true"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+<activity
+    android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity"
+    android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+    android:hardwareAccelerated="true"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+<activity
+    android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity"
+    android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+    android:hardwareAccelerated="false"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+<activity
+    android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"
+    android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+    android:hardwareAccelerated="false"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 ```
 
 
