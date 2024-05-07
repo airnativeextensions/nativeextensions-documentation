@@ -1,3 +1,9 @@
+### 2024.05.07 [v15.0.2]
+
+```
+fix(admob): add checks for null references (#554, resolves #562)
+```
+
 ### 2024.04.29 [v15.0.1]
 
 ```
