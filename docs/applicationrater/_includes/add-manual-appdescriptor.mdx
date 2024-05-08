@@ -7,7 +7,9 @@ The following should be added to your `extensions` node in your application desc
 <extensions>
 	<extensionID>com.distriqt.ApplicationRater</extensionID>
 	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.google.android.play</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
@@ -19,6 +21,9 @@ You should add the listing below to your application descriptor.
 ```xml
 <manifestAdditions><![CDATA[
 	<manifest android:installLocation="auto">
+		
+    	<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="33" />
+		
 		<uses-permission android:name="android.permission.INTERNET"/>
 		<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 

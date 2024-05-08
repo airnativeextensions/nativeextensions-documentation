@@ -1,3 +1,15 @@
+### 2024.05.08 [v6.4.0]
+
+```
+feat(android): update to support v2.0.1 of the Google Play Core review library (resolves #84)
+```
+
+### 2024.05.08 [v6.4.0]
+
+```
+feat(android): update to support v2.0.1 of the Google Play Core review library (resolves #84)
+```
+
 ### 2023.06.13 [v6.3.2]
 
 ```
