@@ -1,3 +1,12 @@
+### 2024.05.09 [v15.3.2]
+
+```
+feat(android): update to support v2.1.0 of the Google Play Core app-update library
+fix(android,amazon): correct checkAvailability implementation (resolves #572)
+fix(android,googleplay): add checks for null references in checkAvailability call (resolves #561)
+feat(actionscript): add null checks to Purchase toObject call
+```
+
 ### 2023.10.13 [v15.2.1]
 
 ```

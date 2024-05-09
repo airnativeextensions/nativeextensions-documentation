@@ -19,19 +19,45 @@ We have to separate these libraries into separate extensions in order to avoid m
 You will add these extensions as you do with any other extension, and you need to ensure it is packaged with your application.
 
 
-#### Core 
+#### Core ANE
 
-The Core extension is required by this extension. You must include this extension in your application.
+The Core ANE is required by this ANE. You must include and package this extension in your application.
 
-The Core extension doesn't provide any functionality in itself but provides support libraries and frameworks used by our extensions.
+The Core ANE doesn't provide any functionality in itself but provides support libraries and frameworks used by our extensions.
 It also includes some centralised code for some common actions that can cause issues if they are implemented in each individual extension.
-
-This extension requires you call the `init()` function at some point early in your application, generally at the same time as the initialisation of this extension. If you are using other extensions that also require the Core extension, you only need to initialise it once, before initialising the other extensions.
-
-```actionscript
-Core.init();
-```
 
 You can access this extension here: [https://github.com/distriqt/ANE-Core](https://github.com/distriqt/ANE-Core).
 
 
+
+### Android Support
+
+The Android Support libraries encompass the Android Support, Android X and common Google libraries.
+
+These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
+
+This extension requires the following extensions:
+
+- [com.jetbrains.kotlin](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlin.ane)
+
+You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
+
+
+
+#### Google Play Services
+
+This ANE requires usage of certain aspects of the Google Play Services client library.
+The client library is available as a series of ANEs that you add into your applications packaging options.
+Each separate ANE provides a component from the Play Services client library and are used by different ANEs.
+These client libraries aren't packaged with this ANE as they are used by multiple ANEs and separating them
+will avoid conflicts, allowing you to use multiple ANEs in the one application.
+
+This ANE requires the following Google Play Services:
+
+- [`com.distriqt.playservices.Base`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.google.android.play`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.android.play.ane)
+
+You must include the above native extensions in your application along with this extension,
+and you need to ensure they are packaged with your application.
+
+You can access the Google Play Services client library extensions here: [https://github.com/distriqt/ANE-GooglePlayServices](https://github.com/distriqt/ANE-GooglePlayServices).
