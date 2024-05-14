@@ -1,3 +1,9 @@
+### 2024.05.14 [v15.3.3]
+
+```
+fix(android): corrected missing library files in variants (#572)
+```
+
 ### 2024.05.09 [v15.3.2]
 
 ```
