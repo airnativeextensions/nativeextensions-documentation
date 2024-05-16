@@ -1,3 +1,10 @@
+### 2024.05.16 [v15.1.0]
+
+```
+feat(ios): update admob sdk v11.3.0
+feat(android): update admob sdk v23.1.0
+```
+
 ### 2024.05.07 [v15.0.2]
 
 ```
