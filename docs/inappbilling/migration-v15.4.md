@@ -1,34 +1,48 @@
+---
+title: Migration
+sidebar_label: Migration v15.4
+---
 
-### Extension IDs
+## Version 15.4
 
-The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+### Google Play Billing
+
+Version 15.4 implemented Google Play Billing client library v6.2.1.
+
+:::note Android only
+These changes only apply to Android and Google Play
+:::
+
+:::note apm
+If you are using apm then all these changes will be handled for you. This only applies if you are manually updating your manifest additions.
+:::
+
+
+Firstly you will need to update the billing client version in your `manifest` additions:
 
 ```xml
-<extensions>
-    <extensionID>com.distriqt.InAppBilling</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
-    <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.google.android.play</extensionID>
-    <extensionID>com.jetbrains.kotlin</extensionID>
-</extensions>
+<meta-data android:name="com.google.android.play.billingclient.version" android:value="6.2.1" />
 ```
 
+Next add a new activity:
 
+```xml
+<activity
+	android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+	android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+	android:exported="false"
+	android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+```
 
-### Android
+Also ensure you have set the minimum sdk version to 24 or higher.
 
-#### Manifest Additions
-
-
-The following additions must be added to your applications manifest additions in your 
-application descriptor.
-
-There are additions specific for Google Play Billing and Amazon In App Purchases. 
-If you aren't using either of those services you can remove those additions if you wish.
+Your manifest should now contain all the following:
 
 
 ```xml
 <manifest android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34"/>
+
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="com.android.vending.BILLING" />
 
@@ -64,10 +78,3 @@ If you aren't using either of those services you can remove those additions if y
 
 </manifest>
 ```
-
-
-### iOS
-
-#### InfoAdditions
-
-There are no required iOS additions to the application descriptor.

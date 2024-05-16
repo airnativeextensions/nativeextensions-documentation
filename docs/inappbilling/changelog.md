@@ -1,3 +1,9 @@
+### 2024.05.16 [v15.4.0]
+
+```
+feat(android,googleplay): update google play billing client version to v6.2.1 (resolves #574)
+```
+
 ### 2024.05.14 [v15.3.3]
 
 ```

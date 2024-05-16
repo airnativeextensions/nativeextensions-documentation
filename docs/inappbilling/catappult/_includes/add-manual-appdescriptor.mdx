@@ -59,8 +59,9 @@ Add the following to your manifest additions, these additions are used by the Ca
       </intent-filter>
     </activity>
     <activity android:name="com.distriqt.extension.inappbilling.activities.ProductViewActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <meta-data android:name="com.google.android.play.billingclient.version" android:value="6.0.0"/>
+    <meta-data android:name="com.google.android.play.billingclient.version" android:value="6.2.1"/>
     <activity android:name="com.android.billingclient.api.ProxyBillingActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     <!-- The activities will be merged into the manifest of the hosting app. -->
     <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
     <activity android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>

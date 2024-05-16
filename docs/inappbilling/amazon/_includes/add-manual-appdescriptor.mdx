@@ -49,12 +49,17 @@ If you aren't using either of those services you can remove those additions if y
 
 
 		<!-- GOOGLE PLAY BILLING -->
-		<meta-data android:name="com.google.android.play.billingclient.version" android:value="6.0.0" />
+		<meta-data android:name="com.google.android.play.billingclient.version" android:value="6.2.1" />
 		<activity
 			android:name="com.android.billingclient.api.ProxyBillingActivity"
 			android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
 			android:exported="false"
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<activity
+            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
 
 		<!-- AMAZON IN APP PURCHASING -->

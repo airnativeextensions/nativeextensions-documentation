@@ -1,5 +1,5 @@
 ---
-title: Migration (v12 and below)
+title: Migration
 sidebar_label: Migration (v12 and below)
 ---
 

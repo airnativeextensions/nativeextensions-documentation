@@ -1,5 +1,5 @@
 ---
-title: Migration v14
+title: Migration
 sidebar_label: Migration v14
 ---
 

@@ -1,9 +1,11 @@
 ---
-title: Migration v15
+title: Migration
 sidebar_label: Migration v15
 ---
 
 ## Version 15.0
+
+### Google Play Billing
 
 Version 15 implemented Google Play Billing client library v6.0.0.
 

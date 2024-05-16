@@ -2012,7 +2012,12 @@ module.exports = {
       "In-App Updates": ["inappbilling/in-app-updates"],
     },
     {
-      Help: ["inappbilling/migration-v14", "inappbilling/migration"],
+      Help: [
+        "inappbilling/migration-v15.4", 
+        "inappbilling/migration-v15", 
+        "inappbilling/migration-v14", 
+        "inappbilling/migration"
+      ],
     },
     {
       Advanced: ["inappbilling/user-data"],
