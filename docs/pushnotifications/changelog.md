@@ -1,3 +1,9 @@
+### 2024.05.16 [v15.0.0]
+
+```
+feat(fcm): update firebase sdk: android v24.0.0 ios v10.25.0
+```
+
 ### 2024.02.15 [v14.1.0]
 
 ```
