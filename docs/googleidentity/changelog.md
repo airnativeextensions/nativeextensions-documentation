@@ -1,3 +1,10 @@
+### 2024.05.16 [v6.0.0]
+
+```
+feat(android): update auth sdk to v21.1.1
+feat(ios): update sdk to v7.1.0 (compatible with Firebase v10.25.0)
+```
+
 ### 2023.07.05 [v5.5.0]
 
 ```
