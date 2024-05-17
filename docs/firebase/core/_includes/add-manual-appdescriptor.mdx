@@ -37,9 +37,9 @@ Ensure you:
 
 ```xml
 <manifest android:installLocation="auto" >
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
-  <permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
-  <uses-permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34"/>
+  <permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
   <!-- Required permission for App measurement to run. -->
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -62,10 +62,12 @@ Ensure you:
     <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:directBootAware="true" android:exported="false">
       <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
       <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-      <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
       <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
       <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
     </service>
     <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
     <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
@@ -92,22 +94,13 @@ Firebase depends on Analytics so you must at least include the following tags:
 - Analytics:
 
 ```xml
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-<meta-data 
-	android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" 
-	android:value="com.google.firebase.components.ComponentRegistrar"/>
-<meta-data 
-	android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" 
-	android:value="com.google.firebase.components.ComponentRegistrar"/>
-<meta-data 
-	android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" 
-	android:value="com.google.firebase.components.ComponentRegistrar"/>
-
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 ```
 
 Each of the component extensions will outline whether they have additional `meta-data` tags to add to the service.
@@ -146,7 +139,7 @@ Eg:
 		<false/>
 
 		<key>MinimumOSVersion</key>
-		<string>11.0</string>
+		<string>12.0</string>
 			
 	]]></InfoAdditions>
 	<requestedDisplayResolution>high</requestedDisplayResolution>

@@ -3,6 +3,27 @@ title: DynamicLinks - Introduction
 sidebar_label: Introduction
 ---
 
+:::warning Shutdown Notice
+Google is planning on shutting down the Firebase Dynamic Links service on August 25, 2025. 
+
+On August 25, 2025, all links served by Firebase Dynamic Links (both those hosted on custom domains or on page.link subdomains) will stop working. Your new and existing links will continue to work until the Firebase Dynamic Links service is shut down.
+
+Firebase projects that have already enabled Firebase Dynamic Links will be able to continue using existing links and creating new ones during the sunset window (between now and August 25, 2025). 
+
+#### What do you need to do?
+
+Take the following actions before August 25, 2025:
+
+- Review your use-cases to evaluate, decide and potentially adopt alternative solutions
+- Complete your migration from Firebase Dynamic Links
+- Delete your domain prefixes from Firebase Dynamic Links when you have successfully migrated your links and use-cases
+
+Please note that your domain prefixes and any created links will be automatically removed on August 25, 2025, and Firebase Dynamic Links will no longer be available for your project. 
+
+Further information can be found in the [Dynamic Links Deprecation FAQ](https://firebase.google.com/support/dynamic-links-faq).
+:::
+
+
 Dynamic Links are links that work the way you want, on multiple platforms, and whether or not your app is already installed.
 
 ## About 

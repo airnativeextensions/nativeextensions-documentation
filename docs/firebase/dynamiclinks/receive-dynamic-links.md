@@ -3,6 +3,10 @@ title: DynamicLinks - Receive Dynamic Links
 sidebar_label: Receive Dynamic Links
 ---
 
+:::warning Shutdown Notice
+Please note this service will shutdown on August 25, 2025 [More information](introduction)
+:::
+
 ## Receive Dynamic Links
 
 Receiving dynamic links is simply a matter of listening for the `DynamicLinkEvent.RECEIVED` event.

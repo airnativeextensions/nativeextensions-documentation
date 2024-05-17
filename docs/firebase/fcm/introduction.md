@@ -1,6 +1,6 @@
 ---
-title: FCM - Introduction
-sidebar_label: Introduction
+title: Cloud Messaging
+sidebar_label: Cloud Messaging
 ---
 
 Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably deliver messages at no cost.

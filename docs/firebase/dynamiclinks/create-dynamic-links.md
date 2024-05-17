@@ -3,6 +3,10 @@ title: DynamicLinks - Create Dynamic Links
 sidebar_label: Create Dynamic Links
 ---
 
+:::warning Shutdown Notice
+Please note this service will shutdown on August 25, 2025 [More information](introduction)
+:::
+
 ## Create Dynamic Links
 
 There are four ways you can create a Dynamic Link:

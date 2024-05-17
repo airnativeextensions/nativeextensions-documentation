@@ -3,6 +3,10 @@ title: DynamicLinks - Testing
 sidebar_label: Testing
 ---
 
+:::warning Shutdown Notice
+Please note this service will shutdown on August 25, 2025 [More information](introduction)
+:::
+
 # Test Your Links
 
 

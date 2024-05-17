@@ -1,3 +1,10 @@
+### 2024.05.17 [v9.0.0]
+
+```
+feat(android): update firebase sdk bom 33.0.0 (#476, #479)
+feat(ios): update firebase sdk v10.25.0 (resolves #484)
+```
+
 ### 2024.03.01 [v8.0.4]
 
 ```

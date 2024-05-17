@@ -9,6 +9,7 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>com.distriqt.firebase.RemoteConfig</extensionID>
 
 	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>androidx.datastore</extensionID>
 	<extensionID>androidx.vectordrawable</extensionID>
 	<extensionID>com.google.android.datatransport</extensionID>
 	<extensionID>com.google.dagger</extensionID>
@@ -45,28 +46,9 @@ Ensure you:
 :::
 
 ```xml
-<provider
-	android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
-	android:authorities="APPLICATION_PACKAGE.firebaseperfprovider"
-	android:exported="false"
-	android:initOrder="101" />
-
-<!-- data transport -->
 <service
-	android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-	android:exported="false" >
-	<meta-data
-		android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-		android:value="cct" />
-</service>
-<service
-	android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-	android:exported="false"
-	android:permission="android.permission.BIND_JOB_SERVICE" >
-</service>
-
-<receiver
-	android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+	android:name="com.google.firebase.sessions.SessionLifecycleService"
+	android:enabled="true"
 	android:exported="false" />
 ```
 
@@ -75,45 +57,38 @@ Ensure you:
 Then locate the `ComponentDiscoveryService` service you added as part of the core Firebase manifest additions and add the following meta data tag:
 
 ```xml
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
+<!-- REMOTE CONFIG -->
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
+<!-- PERFORMANCE -->
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
+<meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 ```
 
 It should now appear like the following at a minimum (it may have other meta-data tags from other components):
 
 ```xml
-<service android:name="com.google.firebase.components.ComponentDiscoveryService" 
-		android:directBootAware="true"
-		android:exported="false">
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
+<service android:name="com.google.firebase.components.ComponentDiscoveryService" android:directBootAware="true" android:exported="false" >
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 
-    <meta-data
-		android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
+	<!-- REMOTE CONFIG -->
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
+	<!-- PERFORMANCE -->
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 </service>
 ```
 

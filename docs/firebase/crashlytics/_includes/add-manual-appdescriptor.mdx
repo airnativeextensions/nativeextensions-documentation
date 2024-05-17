@@ -6,16 +6,15 @@ The following should be added to your `extensions` node in your application desc
 ```xml
 <extensions>
     <extensionID>com.distriqt.firebase.Crashlytics</extensionID>
-    <extensionID>com.google.android.datatransport</extensionID>
     <extensionID>com.google.dagger</extensionID>
-    
+    <extensionID>com.google.guava</extensionID>
+
 	<!-- Firebase Core -->
 	<extensionID>com.distriqt.Firebase</extensionID>
-    
 	<extensionID>com.distriqt.Core</extensionID>
     <extensionID>androidx.core</extensionID>
+    <extensionID>com.google.android.datatransport</extensionID>
     <extensionID>com.google.firebase.core</extensionID>
-
     <extensionID>com.distriqt.playservices.Base</extensionID>
     <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
@@ -40,22 +39,9 @@ Ensure you:
 <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false" />
 <activity android:name="com.distriqt.extension.firebase.crashlytics.activities.CrashActivity" android:exported="false" />
 
-<!-- data transport -->
 <service
-	android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-	android:exported="false" >
-	<meta-data
-		android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-		android:value="cct" />
-</service>
-<service
-	android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-	android:exported="false"
-	android:permission="android.permission.BIND_JOB_SERVICE" >
-</service>
-
-<receiver
-	android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+	android:name="com.google.firebase.sessions.SessionLifecycleService"
+	android:enabled="true"
 	android:exported="false" />
 ```
 
@@ -64,27 +50,30 @@ Ensure you:
 Then locate the `ComponentDiscoveryService` service you added as part of the core Firebase manifest additions and add the following meta data tag:
 
 ```xml
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
+<!-- CRASHLYTICS -->
+<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
+<meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 ```
 
 It should now appear like the following at a minimum (it may have other meta-data tags from other components):
 
 ```xml
-<service android:name="com.google.firebase.components.ComponentDiscoveryService" 
-		android:directBootAware="true"
-		android:exported="false">
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
+<service android:name="com.google.firebase.components.ComponentDiscoveryService" android:directBootAware="true" android:exported="false">
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 
-    <meta-data
-		android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
+	<!-- CRASHLYTICS -->
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 </service>
 ```
 

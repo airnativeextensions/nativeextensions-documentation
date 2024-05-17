@@ -39,46 +39,48 @@ The following should be added to your `extensions` node in your application desc
 
 #### Manifest Additions
 
-Add the following additions to the `application` node in the manifest additions:
+Add the following additions to the manifest additions.
 
-:::caution
-Ensure you:
-- you only have one `<application>` node in your manifest additions combining them if you have ones from other extensions;
-:::
 
-```xml
-<activity
-	android:name="com.google.android.gms.common.api.GoogleApiActivity"
-	android:exported="false"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-```
 
 ##### Component Discovery Service
 
 Then locate the `ComponentDiscoveryService` service you added as part of the core Firebase manifest additions and add the following meta data tag:
 
 ```xml
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
+<!-- DATABASE -->
+<meta-data android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
+<!-- FIRESTORE -->
+<meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+<meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 ```
 
 It should now appear like the following at a minimum (it may have other meta-data tags from other components):
 
 ```xml
-<service android:name="com.google.firebase.components.ComponentDiscoveryService" 
-		android:directBootAware="true"
-		android:exported="false">
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
+<service android:name="com.google.firebase.components.ComponentDiscoveryService" android:directBootAware="true" android:exported="false">
+	<!-- FIREBASE CORE -->
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
 
-    <meta-data
-		android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
-	<meta-data
-		android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-		android:value="com.google.firebase.components.ComponentRegistrar" />
+	<!-- AUTH -->
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+
+	<!-- DATABASE -->
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
+	<!-- FIRESTORE -->
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+	<meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+
 </service>
 ```
 
@@ -88,9 +90,3 @@ It should now appear like the following at a minimum (it may have other meta-dat
 
 #### Info Additions
 
-You must add the following flag to your info additions node. This will delay initialisation of crashlytics until you call `enableCollection` allowing us to setup Crashlytics correctly.
-
-```xml
-<key>FirebaseCrashlyticsCollectionEnabled</key>
-<false/>
-```
