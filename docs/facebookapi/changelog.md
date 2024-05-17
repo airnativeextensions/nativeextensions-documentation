@@ -1,3 +1,10 @@
+###### 2024.05.17 [v17.0.0]
+
+```
+feat(android): update facebook sdk v17.0.0 
+feat(ios): update facebook sdk v17.0.1 (resolves #379)
+```
+
 ###### 2024.01.26 [v16.2.101]
 
 ```
