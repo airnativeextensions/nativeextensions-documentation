@@ -1,3 +1,9 @@
+### 2024.05.20 [v15.0.1]
+
+```
+fix(package): correct required dependencies in air packages 
+```
+
 ### 2024.05.16 [v15.0.0]
 
 ```
