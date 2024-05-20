@@ -1,3 +1,9 @@
+### 2024.05.20 [v7.1.0]
+
+```
+feat(android): update dependencies to align with other extensions
+```
+
 ### 2023.09.16 [v7.0.2]
 
 ```
