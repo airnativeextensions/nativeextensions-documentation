@@ -1,3 +1,9 @@
+### 2024.05.21 [v6.4.1]
+
+```
+feat(android): remove min sdk 24 requirement in preparation of AIR update
+```
+
 ### 2024.05.08 [v6.4.0]
 
 ```
