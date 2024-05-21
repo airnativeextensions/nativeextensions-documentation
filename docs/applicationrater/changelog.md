@@ -1,3 +1,9 @@
+### 2024.05.21 [v6.4.2]
+
+```
+feat(airpackage): update airpackage dependencies
+```
+
 ### 2024.05.21 [v6.4.1]
 
 ```
