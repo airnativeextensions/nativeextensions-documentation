@@ -1,3 +1,9 @@
+### 2024.05.22 [v0.2.0]
+
+```
+feat: add syncPurchases functionality
+```
+
 ### 2024.04.24 [v0.1.2]
 
 ```
