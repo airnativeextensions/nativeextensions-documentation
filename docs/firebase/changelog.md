@@ -1,3 +1,9 @@
+### 2024.05.27 [v9.0.1]
+
+```
+fix(firestore): correct issue with removing snapshot listeners from a document (resolves #489)
+```
+
 ### 2024.05.17 [v9.0.0]
 
 ```
