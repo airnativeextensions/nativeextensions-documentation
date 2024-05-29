@@ -1,3 +1,9 @@
+### 2024.05.30 [v9.0.2]
+
+```
+fix(crashlytics): add missing androidx.datastore dependency to airpackage (resolves #490)
+```
+
 ### 2024.05.27 [v9.0.1]
 
 ```
