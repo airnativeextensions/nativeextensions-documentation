@@ -75,3 +75,55 @@ This error can also be caused by an incomplete [account setup](#account-setup).
 
 
 
+
+## Ad Inspector
+
+Ad inspector is an in-app overlay that enables authorized devices to perform real-time analysis of test ad requests directly within a mobile app. It is included with the Adverts extension version v13 and higher, and can be enabled with no coding required. 
+
+
+Using ad inspector you can:
+
+- Inspect your ad units
+- Inspect your third-party adapters
+- Check whether your ads are filling as expected
+- Identify errors and view details about how to resolve them
+- View the mediation details for each ad network per request
+- Test individual third-party mediation ad sources
+- Verify that you've correctly configured each ad unit for waterfall mediation
+- Test custom events integrations
+
+- View the bidding details for each ad network per request
+- View the bidding and waterfall mediation details together for each ad network per request
+- Test individual third-party bidding or waterfall mediation ad sources
+
+- Verify that you've correctly configured each ad unit for bidding and waterfall mediation
+
+:::warning
+In order to use ad inspector, you need to have added your device as a test device. Ad Inspector only launches on test devices
+:::
+
+
+For details on using the Ad Inspector to view and troubleshoot ad units see the [AdMob documentation](https://developers.google.com/admob/android/ad-inspector) 
+
+
+### Launch programmatically
+
+To launch the Ap inspector programmatically call the `openAdInspector()` method:
+
+```actionscript
+Adverts.service.openAdInspector();
+```
+
+This will dispatch an event when closed (or if the inspector failed to launch) indicating control has returned back to your application:
+
+```actionscript
+Adverts.service.addEventListener( AdInspectorEvent.CLOSED, adInspector_closedHandler );
+
+function adInspector_closedHandler( event:AdInspectorEvent ):void
+{
+    trace( event.errorCode + ", " + event.errorMessage );
+}
+```
+
+:::note
+You will need to have at least called `setup()` on the extension before using the Ad Inspector. Additionally Google recommend initialising the platform (i.e. calling `initialise()`) before using the Ad Inspector.

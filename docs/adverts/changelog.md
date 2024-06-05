@@ -1,3 +1,9 @@
+### 2024.06.05 [v15.1.1]
+
+```
+feat(admob): add ability to trigger the Ad Inspector programmatically 
+```
+
 ### 2024.05.16 [v15.1.0]
 
 ```
