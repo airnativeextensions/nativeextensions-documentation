@@ -2071,6 +2071,7 @@ module.exports = {
     {
       Usage: [
         "ironsource/initialisation",
+        "ironsource/integrate-ad-quality",
         "ironsource/interstitials",
         "ironsource/rewarded-video",
         "ironsource/banner-ads",

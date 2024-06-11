@@ -1,0 +1,71 @@
+---
+title: Integrate Ad Quality SDK
+sidebar_label: Ad Quality SDK
+---
+
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAdQualitySDKAPM from './_includes/add-adquality-apm.mdx'
+import InstallAdQualitySDKManual from './_includes/add-adquality-manual.mdx'
+
+import AppDescriptorAdQualitySDKAPM from './_includes/add-adquality-apm-appdescriptor.mdx'
+import AppDescriptorAdQualitySDKManual from './_includes/add-adquality-manual-appdescriptor.mdx'
+
+
+The Ad Quality SDK enables you to run Ad Quality in your app. It automatically collects all the ad events and attributes needed from the ad network SDKs you currently use. This makes the integration simple and requires minimal coding.
+
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+## Install
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAdQualitySDKAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallAdQualitySDKManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAdQualitySDKAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorAdQualitySDKManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+
+## Initialize the SDK
+
+Initialize the Ad Quality SDK using your ironSource app key:
+
+```actionscript
+AdQualitySDK.instance.initialise( IRONSRC_APP_KEY );
+```
