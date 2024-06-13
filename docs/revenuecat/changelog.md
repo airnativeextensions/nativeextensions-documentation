@@ -1,3 +1,9 @@
+### 2024.06.13 [v1.0.0]
+
+```
+feat: add setAttributes functionality
+```
+
 ### 2024.05.22 [v0.2.0]
 
 ```
