@@ -1,3 +1,9 @@
+### 2024.06.19 [v9.0.3]
+
+```
+fix(database): correct handling of '%' characters in updateChildren call (resolves https://github.com/distriqt/ANE-Firebase/issues/493)
+```
+
 ### 2024.05.30 [v9.0.2]
 
 ```
