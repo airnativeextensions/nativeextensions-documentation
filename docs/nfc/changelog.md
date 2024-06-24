@@ -1,3 +1,9 @@
+### 2024.06.24 [v5.3.1]
+
+```
+feat(unity): update unity ios post build scripts to support latest unity release
+```
+
 ### 2023.07.06 [v5.3.0]
 
 ```
