@@ -1,3 +1,9 @@
+### 2024.06.26 [v9.0.4]
+
+```
+fix(firestore): add checks on batch method parameters to avoid confusion (resolves https://github.com/distriqt/ANE-Firebase/issues/494)
+```
+
 ### 2024.06.19 [v9.0.3]
 
 ```
