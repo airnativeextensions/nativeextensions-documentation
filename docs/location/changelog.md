@@ -1,3 +1,13 @@
+### 2024.07.08 [v5.1.2]
+
+```
+feat(ios,altitude): add relative and absolute altitude functionality via the pressure sensor in the core motion framework
+feat(ios): update build to latest xcode version and increase minimum version to 12
+fix(android): correct geofence event dispatch on latest android versions (resolves https://github.com/distriqt/ANE-Location/issues/71)
+fix(android): update permission request process to better distinguish denied / not_determined states (resolves https://github.com/distriqt/ANE-Location/issues/72) 
+feat(docs): add documentation on android mock locations
+```
+
 ### 2023.07.05 [v5.0.0]
 
 ```
