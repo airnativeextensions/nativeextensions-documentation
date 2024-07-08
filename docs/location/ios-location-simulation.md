@@ -28,7 +28,7 @@ Here is some very basic code to request authorisation and to log the current loc
 This code is for the `ViewController` class that should have been automatically created 
 for you, just copy the following into the `ViewController.m` file. 
 
-This code is very rough and just thrown together for testing purposes.
+This code is very basic and just put together for testing purposes.
 
 ```objc
 #import "ViewController.h"

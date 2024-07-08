@@ -35,7 +35,7 @@ If the services aren't available you can ask your user to enable them and then u
 For example if the services aren't available:
 
 ```actionscript
-if (Location.service.isAvailable()) 
+if (!Location.service.isAvailable()) 
 {
     Location.service.displayLocationSettings(); 
 }

@@ -1,3 +1,10 @@
+### 2024.07.08 [v1.0.1]
+
+```
+feat(android): update billing lib dependency to v6.0.1
+feat: release build
+```
+
 ### 2024.06.13 [v1.0.0]
 
 ```

@@ -2187,7 +2187,10 @@ module.exports = {
       ],
     },
     {
-      Testing: ["location/ios-location-simulation"],
+      Testing: [
+        "location/android-location-simulation",
+        "location/ios-location-simulation",
+      ],
     },
     {
       Help: ["location/migrating-to-v4.5", "location/migrating-to-androidx"],
