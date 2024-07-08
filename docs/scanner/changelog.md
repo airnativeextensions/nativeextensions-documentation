@@ -1,3 +1,9 @@
+### 2024.07.08 [v5.2.0]
+
+```
+fix(android): update permission process and receiver requirements for android api 34 (resolves https://github.com/distriqt/ANE-Scanner/issues/76)
+```
+
 ### 2023.01.25 [v5.1.0]
 
 ```
