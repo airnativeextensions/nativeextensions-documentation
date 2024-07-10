@@ -1,3 +1,10 @@
+### 2024.07.10 [v6.0.0]
+
+```
+feat(android): update to use altbeacon library to v2.20.6 (resolves https://github.com/distriqt/ANE-Beacon/issues/61)
+feat(android): update to support latest android api v34 (resolves https://github.com/distriqt/ANE-Beacon/issues/62)
+```
+
 ### 2023.01.13 [v5.1.0]
 
 ```

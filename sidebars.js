@@ -494,7 +494,10 @@ module.exports = {
       ],
     },
     {
-      Help: ["beacon/migrating-to-v5.1"],
+      Help: [
+        "beacon/migrating-to-v6.0",
+        "beacon/migrating-to-v5.1"
+      ],
     },
     {
       Other: [
