@@ -1,3 +1,10 @@
+### 2024.07.11 [v8.5.0]
+
+```
+fix(android): add handling of Friends resolution required request when loading player friends (https://github.com/distriqt/ANE-GameServices/issues/246)
+feat(android): update auth sdk to v21.1.1 (resolves https://github.com/distriqt/ANE-GameServices/issues/247)
+```
+
 ### 2024.01.18 [v8.4.3]
 
 ```
