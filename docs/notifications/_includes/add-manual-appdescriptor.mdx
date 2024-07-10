@@ -91,6 +91,15 @@ The Notifications extension requires a few additions to the manifest to be able 
 					android:resource="@xml/distriqt_notifications_paths" />
 			</provider>
 
+			<provider
+				android:name="androidx.startup.InitializationProvider"
+				android:authorities="APPLICATION_PACKAGE.androidx-startup"
+				android:exported="false" >
+				<meta-data
+					android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+					android:value="androidx.startup" />
+			</provider>
+
 			
 			<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 					

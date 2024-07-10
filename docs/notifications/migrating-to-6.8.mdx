@@ -1,0 +1,56 @@
+---
+title: Migrating to v6.8
+sidebar_label: Migrating to v6.8
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+This version brings updates for Android 14 (API 34), particularly around repeating and delayed notifications.
+
+It also brings some better detection of the foreground / background state of the application when a notification is received or selected.
+
+**This update requires the latest version of the Core ANE (v7.5+).**
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you are using [`apm`](https://github.com/airsdk/apm) all you need to do is update to the latest build and regenerate your application descriptor. `apm` will handle the rest.
+
+```
+apm update 
+apm generate app-descriptor src/Main-app.xml
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+If you are manually managing your application descriptor (and manifest additions) then you will be required to make some changes to your manifest. Add the following to your manifest, making sure you replace the `APPLICATION_PACKAGE` with your application id, leaving the `air.` prefix (unless you are removing it from your builds).:
+
+```xml
+<provider
+  android:name="androidx.startup.InitializationProvider"
+  android:authorities="APPLICATION_PACKAGE.androidx-startup"
+  android:exported="false" >
+  <meta-data
+    android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+    android:value="androidx.startup" />
+</provider>
+```
+
+```note Core
+Make sure you download and update the Core ANE. You must be using version 7.5 or higher.
+```
+
+  </TabItem>
+  
+</Tabs>
+

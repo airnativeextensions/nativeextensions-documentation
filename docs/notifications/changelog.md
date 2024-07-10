@@ -1,3 +1,9 @@
+### 2024.07.10 [v6.8.0]
+
+```
+fix(android): correct repeat interval issue with latest android sdk (resolves https://github.com/distriqt/ANE-Notifications/issues/212)
+```
+
 ### 2024.02.05 [v6.7.0]
 
 ```

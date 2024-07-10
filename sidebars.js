@@ -2524,6 +2524,7 @@ module.exports = {
     },
     {
       Troubleshooting: [
+        "notifications/migrating-to-6.8",
         "notifications/migrating-to-6.5",
         "notifications/migrating-to-6.4",
         "notifications/migrating-to-6.3",
