@@ -300,6 +300,7 @@ module.exports = {
       "Display and Keyboard": [
         "application/display/display",
         "application/display/cutouts",
+        "application/display/status-bar",
         "application/display/dark-mode",
         "application/display/display-metrics",
         "application/display/soft-keyboard",
