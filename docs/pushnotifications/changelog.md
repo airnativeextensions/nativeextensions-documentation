@@ -1,3 +1,9 @@
+### 2024.07.25 [v15.0.2]
+
+```
+feat(docs): update docs on sending fcm notification using new http v1 api (resolves https://github.com/distriqt/ANE-PushNotifications/issues/601)
+```
+
 ### 2024.05.20 [v15.0.1]
 
 ```

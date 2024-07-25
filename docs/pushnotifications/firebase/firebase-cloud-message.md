@@ -4,6 +4,88 @@ sidebar_label: Firebase Cloud Message
 ---
 
 
+## HTTP v1 API 
+
+:::caution
+As with the legacy APIs, HTTP v1 messages must be sent through a trusted environment such as your app server or Cloud Functions for Firebase using the HTTP protocol or the Admin SDK to build message requests. Sending directly from client app logic carries extreme security risk and is not supported.
+:::
+
+Here we will create a simple Node.js app to send a message to a registration id. 
+
+Firstly you'll need to get your service account details to authorise requests to Firebase from your server. In the Firebase console under "Project settings" you will find the "Service accounts" section. Download the json file and place it in your project root (we have used the filename `service-account.json` in the following example).
+
+![](images/fcm-service-account.png)
+
+
+Next install the official node package for firebase:
+
+```
+npm install firebase-admin
+```
+
+Add the following code (`send.js`) to load your service account and send a push notification to the specified registration token:
+
+```js title="send.js"
+const admin = require("firebase-admin");
+const serviceAccount = require("./service-account.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
+
+
+const registrationToken = "YOUR_DEVICE_ID_TOKEN";
+
+const message = {
+  notification: {
+    body: "a default notification",
+    title: "default title",
+  },
+  token: registrationToken,
+};
+
+// Send a message to the device corresponding to the provided
+// registration token.
+admin.messaging()
+  .send(message)
+  .then((response) => {
+    // Response is a message ID string.
+    console.log("Successfully sent message:", response);
+  })
+  .catch((error) => {
+    console.log("Error sending message:", error);
+  });
+```
+
+Update the `registrationToken` from the application running on your test device and send the notification by calling:
+
+```
+node send.js
+```
+
+You should see a success message like:
+
+```
+Successfully sent message: projects/distriqt-test-ios/messages/0:1721878990106292%32d7332f32d7332f
+``` 
+
+and the notification should appear on your device.
+
+
+
+### Migrate from legacy API
+
+If you are looking to migrate from the legacy FCM APIs to HTTP v1, Google have created a guide here: https://firebase.google.com/docs/cloud-messaging/migrate-v1
+
+
+
+
+## FCM legacy APIs for HTTP
+
+:::note
+This is now deprecated. See the notes on [migrating the to HTTP v1 API](#migrate-from-legacy-api).
+::: 
+
 Sending a message with Firebase is very similar (if not exactly the same) as GCM apart from the endpoint. 
 
 
