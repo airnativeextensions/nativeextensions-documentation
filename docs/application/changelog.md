@@ -1,3 +1,11 @@
+### 2024.07.25 [v7.3.0]
+
+```
+feat(ios): add isiOSAppOnMac flag to check if ios app is running on macos (resolves https://github.com/distriqt/ANE-Application/issues/291)
+feat(unity): basic unity plugin only supporting the uniqueId method
+feat(ios): add PrivacyInfo.xcprivacy to specify API access privacy requirements
+```
+
 ### 2023.11.02 [v7.1.0]
 
 ```
