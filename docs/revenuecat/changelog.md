@@ -1,3 +1,9 @@
+### 2024.08.05 [v1.0.2]
+
+```
+fix(ios): correct product amountMicros value to match Android
+```
+
 ### 2024.07.08 [v1.0.1]
 
 ```
