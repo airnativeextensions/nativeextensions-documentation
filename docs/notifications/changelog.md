@@ -1,3 +1,15 @@
+### 2024.08.08 [v7.0.0]
+
+```
+feat(windows): new implementation allowing notifications from non-UWP applications
+```
+
+### 2024.08.08 [v7.0.0]
+
+```
+feat(windows): new implementation allowing notifications from non-UWP applications
+```
+
 ### 2024.07.10 [v6.8.0]
 
 ```
