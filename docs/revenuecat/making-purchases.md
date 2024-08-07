@@ -12,7 +12,7 @@ RevenueCat.instance.purchase(
         {
             // purchase:success
         },
-        function ( error:PurchasesError ):void
+        function ( error:PurchasesError, userCancelled:Boolean ):void
         {
             // purchase:failure
         } );
@@ -20,5 +20,5 @@ RevenueCat.instance.purchase(
 
 There are two callback methods one of which will be called after completion of the purchase. If successful the success callback will contain an updated `CustomerInfo` object, along with some details about the transaction.
 
-If an error occurs details of the error will be returned in the error callback in a `PurchaseError` object.
+If an error occurs details of the error will be returned in the error callback in a `PurchaseError` object and a `Boolean` value indicates if the purchase was cancelled by the user.
 

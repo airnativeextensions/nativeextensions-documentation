@@ -1,3 +1,9 @@
+### 2024.08.07 [v1.0.3]
+
+```
+fix(actionscript): add userCancelled boolean value to purchase error callback function
+```
+
 ### 2024.08.05 [v1.0.2]
 
 ```
