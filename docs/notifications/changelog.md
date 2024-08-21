@@ -1,3 +1,9 @@
+### 2024.08.21 [v7.0.1]
+
+```
+fix(windows): add check to prevent attempting to set badge on air debugger (resolves https://github.com/distriqt/ANE-Notifications/issues/213)
+```
+
 ### 2024.08.08 [v7.0.0]
 
 ```
