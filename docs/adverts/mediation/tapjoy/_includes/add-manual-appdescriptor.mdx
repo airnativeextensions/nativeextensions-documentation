@@ -13,7 +13,7 @@ The following should be added to your `extensions` node in your application desc
 
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.Ads</extensionID>
-	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.AppSet</extensionID>
 
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.browser</extensionID>
@@ -23,6 +23,8 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.room</extensionID>
 	<extensionID>androidx.work</extensionID>
 	<extensionID>com.google.code.gson</extensionID>
+	<extensionID>com.google.guava</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
@@ -38,18 +40,29 @@ Add the following to your manifest additions inside the `application` tag.
     android:name="com.tapjoy.TJAdUnitActivity"
     android:configChanges="orientation|keyboardHidden|screenSize"
     android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 <activity
     android:name="com.tapjoy.TJContentActivity"
     android:configChanges="orientation|keyboardHidden|screenSize"
     android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-<receiver android:name="com.tapjoy.TapjoyReceiver" />
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+<activity
+    android:name="com.tapjoy.TJWebViewActivity"
+    android:configChanges="orientation|keyboardHidden|screenSize"
+    android:hardwareAccelerated="true"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 ```
 
 
 ### iOS
+
+
+#### Dynamic Frameworks
+
+Add the `assets/ios/Frameworks` folder to your application package at the top / root level. 
+Ensure the dynamic `TapJoy.framework` is included.
+
+
 
 #### Info Additions
 
