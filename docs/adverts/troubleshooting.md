@@ -30,9 +30,26 @@ https://support.google.com/admob/answer/9905175
 
 
 
-### iOS Crash on Launch
+### iOS Crash
 
-If you encounter a crash on launch, ensure you have added the [info additions](add-the-extension#info-additions) correctly. The AdMob SDK will terminate your application if you haven't provided your application identifier in the info additions.
+#### Invalid GAD Identifier 
+
+If you encounter a crash on launch, ensure you have added the [info additions](add-the-extension#info-additions) correctly. The AdMob SDK will terminate your application if you haven't provided your Google AdMob application identifier in the info additions.
+
+
+
+#### iOS SDK issue
+
+If you are still having issues then ensure you are packaging against a recent version of the iOS SDK. We have found that some versions of AIR seem to fail if you don't supply a version of the iOS SDK. You can do this via the adt `platformsdk` command line option:
+
+`adt ... -platformsdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk`
+
+Or via the AIR SDK Manager, under *Configuration* / *iOS*:
+
+![](images/iossdk_airsdkmanager.png)
+
+> The default install location is `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOSXX.X.sdk`, you'll need to confirm the version `XX.X` available on your system. 
+
 
 
 ### Waiting

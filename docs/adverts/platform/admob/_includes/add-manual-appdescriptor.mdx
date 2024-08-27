@@ -209,7 +209,39 @@ We also suggest that you add the `containsVideo` tag to your `android` configura
 </android>
 ```
 
+#### MultiDex Applications 
+
+:::warning
+This is enabled by default with the latest AIR builds (33.1.1.x and higher). You should no longer add the `android.multidex` extension. 
+
+This information is for legacy developers only!
+:::
+
+If you have a large application and are supporting Android 4.x then you will need to ensure you enable your application to correctly support MultiDex to allow the application to be broken up into smaller dex packages.
+
+This is enabled by default with releases of AIR v25+, except in the Android 4.x case where you need to change the manifest additions for the application tag to match the following and use the `MultiDexApplication`.
+
+
+This will require the addition of the `androidx.multidex` extension which contains the `androidx.multidex.MultiDexApplication` implementation.
+
+```xml
+<manifest android:installLocation="auto">
+	<!-- PERMISSIONS -->
+
+	<application android:name="androidx.multidex.MultiDexApplication">
+
+		<!-- ACTIVITIES / RECEIVERS / SERVICES -->
+
+	</application>
+</manifest>
+```
+
+
+
+
+
 ## iOS
+
 
 ### Info Additions
 
@@ -313,34 +345,6 @@ Example:
 		]]>
 	</Entitlements>
 </iPhone>
-```
-
-
-#### MultiDex Applications 
-
-:::warning
-This is enabled by default with the latest AIR builds (33.1.1.x and higher). You should no longer add the `android.multidex` extension. 
-
-This information is for legacy developers only!
-:::
-
-If you have a large application and are supporting Android 4.x then you will need to ensure you enable your application to correctly support MultiDex to allow the application to be broken up into smaller dex packages.
-
-This is enabled by default with releases of AIR v25+, except in the Android 4.x case where you need to change the manifest additions for the application tag to match the following and use the `MultiDexApplication`.
-
-
-This will require the addition of the `androidx.multidex` extension which contains the `androidx.multidex.MultiDexApplication` implementation.
-
-```xml
-<manifest android:installLocation="auto">
-	<!-- PERMISSIONS -->
-
-	<application android:name="androidx.multidex.MultiDexApplication">
-
-		<!-- ACTIVITIES / RECEIVERS / SERVICES -->
-
-	</application>
-</manifest>
 ```
 
 

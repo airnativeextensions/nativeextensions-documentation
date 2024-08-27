@@ -1,3 +1,10 @@
+### 2024.08.27 [v15.2.0]
+
+```
+feat(android): update admob sdk to v23.3.0 and ump sdk to v3.0.0
+feat(ios): update admob sdk v11.8.0
+```
+
 ### 2024.06.05 [v15.1.1]
 
 ```
