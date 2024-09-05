@@ -1,3 +1,12 @@
+### 2024.09.05 [v9.0.0]
+
+```
+feat(android): update to play games v2 (20.1.2) 
+  - removes video recording functionality
+  - removes custom auth scopes
+  - support for Google Play Games on PC (beta) 
+```
+
 ### 2024.07.11 [v8.5.0]
 
 ```

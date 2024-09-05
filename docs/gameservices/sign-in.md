@@ -72,6 +72,10 @@ There are also UI driven methods provided for the user to sign out, for example,
 
 Once a user has signed out, `isSignedIn()` will return `false` and all user functionality will fail. 
 
+:::note
+Not all services support signing out programmatically. Google Play Games v2 doesn't support it and user's are suppose to manage this through the Games application.
+:::
+
 
 
 ## Disconnect 
@@ -89,7 +93,7 @@ if (GameServices.service.isSignedIn())
 
 This process will also trigger the `GameServicesEvent.SIGN_OUT_SUCCESS` event indicating that the current user was signed out. 
 
-Some services may not support this functionality and will return `false` (eg Game Center), you may wish to just sign out users on these platforms. For example:
+Some services may not support this functionality and will return `false` (eg Game Center, Google Play Games v2), you may wish to attempt to sign out users on these platforms instead. For example:
 
 ```actionscript
 if (GameServices.service.isSignedIn())
@@ -126,15 +130,15 @@ function loadPlayer_errorHandler( event:PlayerEvent ):void
 }
 ```	
 
+:::caution
+The `getPlayer()` function has been **deprecated** as the process to retrieve player information is now asynchronous. 
+Using `getPlayer()` will only return the previously retrieved information and may be out of date or `null`. 
+Calling it will trigger a load of the player information so it will become available shortly after.
 
-> Note: The `getPlayer()` function has been **deprecated** as the process to retrieve player information is now asynchronous. 
-> Using `getPlayer()` will only return the previously retrieved information and may be out of date or `null`. 
-> Calling it will trigger a load of the player information so it will become available shortly after.
->
-> ```actionscript
-> var player:Player = GameServices.service.getPlayer();
-> ```
-
+```actionscript
+var player:Player = GameServices.service.getPlayer();
+```
+:::
 
 
 ### Identifiers 
@@ -146,7 +150,7 @@ The simplest is the `id` field on the `Player` object. This identifier will be u
 If you need to identify players across multiple games that you develop you will need to use the `teamPlayerId`. Services that support team identifiers will return an identifier that will be consistent across all games provided through your developer account (on iOS this mean using the same developer Team ID).
 
 
-:::note GameCenter
+:::caution GameCenter
 Versions prior to 8.4 used a now deprecated "playerId" value for the `id` field. If you need to compare identifiers from the legacy implementation you can use the `playerId` field. This value will be equivalent to the `id` field in versions 8.3 and earlier.
 :::
 

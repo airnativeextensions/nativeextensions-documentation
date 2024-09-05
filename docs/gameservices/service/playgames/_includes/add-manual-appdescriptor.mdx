@@ -5,15 +5,15 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-    <extensionID>com.distriqt.GameServices</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
-    <extensionID>androidx.core</extensionID>
-    <extensionID>androidx.appcompat</extensionID>
-    <extensionID>com.jetbrains.kotlin</extensionID>
-    <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.distriqt.playservices.Drive</extensionID>
-    <extensionID>com.distriqt.playservices.Games</extensionID>
-    <extensionID>com.distriqt.playservices.Auth</extensionID>
+	<extensionID>com.distriqt.GameServices</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
+	<extensionID>com.distriqt.playservices.Drive</extensionID>
+	<extensionID>com.distriqt.playservices.Gamesv2</extensionID>
+	<extensionID>com.distriqt.playservices.Auth</extensionID>
 </extensions>
 ```
 
@@ -25,41 +25,68 @@ The following should be added to your `extensions` node in your application desc
 #### Manifest Additions
 
 The Google Play Game Services require a few additions to the manifest to be able to start certain 
-activities and set certain information. You should add the listing below to your manifest, replacing 
-the `XXXXXXXXXXXX` with your application ID that you took note of when enabling Game Services in the 
-console. (Note you must leave the `\u003` before your application id).
+activities and set certain information. You should make sure your manifest contains the entries in the listing below.
 
-You should make sure your manifest contains the following:
+:::caution
+Ensure you replace:
+- `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+- Make sure you add the `com.google.android.gms.games.APP_ID` `meta-data` tag replacing the `XXXXXXXXXXXX` with your application ID that you took note of when enabling Game Services in the console. (Note you must leave the `\u003` before your application id).
+:::
 
 ```xml
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<uses-sdk android:minSdkVersion="21" />
 	
 	<queries>
 		<package android:name="com.google.android.play.games" />
+		<package android:name="com.google.android.gms" />
+		<package android:name="com.android.vending" />
 	</queries>
 
-	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
-		
-		<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\u003XXXXXXXXXXXX" />
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	<application>
+
+		<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\u003XXXXXXXXXXXX"/>
+
+		<provider
+			android:name="com.google.android.gms.games.provider.PlayGamesInitProvider"
+			android:authorities="APPLICATION_PACKAGE.playgamesinitprovider"
+			android:exported="false"
+			android:initOrder="99" />
 
 		<activity
-			android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-			android:excludeFromRecents="true"
+			android:name="com.google.android.gms.games.internal.v2.resolution.GamesResolutionActivity"
 			android:exported="false"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-		<service
-			android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+			android:theme="@style/Theme.Games.Transparent" />
+		<activity
+			android:name="com.google.android.gms.games.internal.v2.appshortcuts.PlayGamesAppShortcutsActivity"
 			android:exported="true"
-			android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-			android:visibleToInstantApps="true" />
+			android:theme="@style/Theme.Games.Transparent" />
 
-		<activity
-			android:name="com.google.android.gms.common.api.GoogleApiActivity"
-			android:exported="false"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-		
+		<meta-data
+			android:name="com.google.android.gms.games.version"
+			android:value="@string/play_games_sdk_version" />
+
+
+		<!-- DISTRIQT CORE -->
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+		<!-- ANDROIDX -->
+		<provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.airnativeextensions.test.androidx-startup" android:exported="false">
+			<meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup" />
+		</provider>
+		<service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+		</service>
+		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+		<receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+		<service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+		<service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<activity android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+		<service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:exported="true" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+
 	</application>
 	
 </manifest>
