@@ -1,3 +1,9 @@
+### 2024.09.06 [v7.0.2]
+
+```
+fix(actionscript): add checks in builders for invalid values (resolves #215)
+```
+
 ### 2024.08.21 [v7.0.1]
 
 ```
