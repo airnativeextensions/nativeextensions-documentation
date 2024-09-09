@@ -1,3 +1,9 @@
+###### 2024.09.09 [v1.0.1]
+
+```
+fix(commons-validator): corrected dependencies
+```
+
 ###### 2024.09.09 [v1.0.0]
 
 ```
