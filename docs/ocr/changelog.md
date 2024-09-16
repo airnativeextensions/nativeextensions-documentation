@@ -1,3 +1,9 @@
+### 2024.09.17 [v4.1.1]
+
+```
+fix(ios): remove bitcode from dynamic frameworks (resolves https://github.com/distriqt/ANE-OCR/issues/7)
+```
+
 ### 2023.01.29 [v4.1.0]
 
 ```
