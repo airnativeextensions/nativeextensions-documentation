@@ -1,3 +1,11 @@
+###### 2024.09.20 [v5.0.0]
+
+```
+feat(okhttp3): update okhttp3 dependency to v4.10.0
+feat(okhttp3tls): add new okhttp3-tls dependency v4.10.0
+feat(retrofit2): add new okhttp3-tls dependency v2.9.0
+```
+
 ###### 2024.05.16 [v4.3.0]
 
 ```
