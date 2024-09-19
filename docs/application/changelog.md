@@ -1,3 +1,9 @@
+### 2024.09.19 [v7.3.1]
+
+```
+fix(android): fix ANR with a display information call
+```
+
 ### 2024.07.25 [v7.3.0]
 
 ```
