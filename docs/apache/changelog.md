@@ -1,3 +1,9 @@
+###### 2024.09.19 [v1.0.2]
+
+```
+fix(log4j,android): remove duplicate files in jar dependencies
+```
+
 ###### 2024.09.09 [v1.0.1]
 
 ```
