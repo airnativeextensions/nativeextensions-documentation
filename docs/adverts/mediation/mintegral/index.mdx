@@ -1,0 +1,126 @@
+---
+title: Digital Turbine
+sidebar_label: Digital Turbine
+slug: /adverts/mediation/digitalturbine
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.mdx'
+import InstallManual from './_includes/add-manual.mdx'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.mdx'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
+
+This guide is intended for publishers who want to use the Google Mobile Ads SDK to load and display ads from Mintegral via mediation. 
+ It covers how to add Mintegral to an ad unit's mediation configuration and how to integrate the Mintegral SDK and adapter into an AIR app.
+
+## Step 1: Set up configurations in Mintegral UI
+
+https://developers.google.com/admob/android/mediation/mintegral#step_1
+
+## Step 2: Set up Mintegral demand in AdMob UI
+
+https://developers.google.com/admob/android/mediation/mintegral#step-2
+
+## Step 3: Import the Mintegral mediation ANE
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). 
+We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+### Add the Extension
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+### Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Step 4: Implement privacy settings on Mintegral SDK
+
+
+### EU consent and GDPR
+
+Under the Google EU User Consent Policy, you must ensure that certain disclosures are given to, and consents obtained from, users in the European Economic Area (EEA) regarding the use of device identifiers and personal data. This policy reflects the requirements of the EU ePrivacy Directive and the General Data Protection Regulation (GDPR). When seeking consent, you must identify each ad network in your mediation chain that may collect, receive, or use personal data and provide information about each network's use. Google currently is unable to pass the user's consent choice to such networks automatically.
+
+The Mintegral SDK includes the setConsentStatus method to pass consent information to the Mintegral SDK.
+
+The following sample code shows how to pass consent information to the Mintegral SDK. These options must be set before you initialize the Google Mobile Ads SDK to ensure they get forwarded properly to the Mintegral SDK.
+
+```actionscript
+Mintegral.instance.setConsentStatus( true );
+```
+
+
+### US states privacy laws
+
+
+ U.S. states privacy laws require giving users the right to opt out of the "sale" of their "personal information" (as the law defines those terms), with the opt-out offered via a prominent "Do Not Sell My Personal Information" link on the "selling" party's homepage. The U.S. states privacy laws compliance guide offers the ability to enable restricted data processing for Google ad serving, but Google is unable to apply this setting to each ad network in your mediation chain. Therefore, you must identify each ad network in your mediation chain that may participate in the sale of personal information and follow guidance from each of those networks to ensure compliance.
+
+The Mintegral SDK includes setDoNotTrackStatus method to pass consent information to the Mintegral SDK.
+
+The following sample code shows how to pass consent information to the Mintegral SDK. If you need to call this method, call it after initializing the Google Mobile Ads SDK but before requesting ads through the Google Mobile Ads SDK. 
+
+```actionscript
+Mintegral.instance.setDoNotTrackStatus( false );
+```
+
+## Step 5: Add required code
+
+No additional code is required for Mintegral integration.
+
+
+## Step 6: Test your implementation
+
+### Enable test ads
+
+Make sure you register your test device for AdMob.
+
+To get Mintegral test ads for banners, interstitials, rewarded and native ad formats, Mintegral recommends using the App Keys, App IDs, Placement IDs and Ad Unit IDs provided in the [Mintegral Test ID page](https://dev.mintegral.com/doc/index.html?file=sdk-m_sdk-android&lang=en#testid).
+
+
+### Verify test ads
+
+To verify that you are receiving test ads from Mintegral, enable single ad source testing in ad inspector using the Mintegral (Bidding) and Mintegral (Waterfall) ad source(s).
+
+
+## Further information
+
+See the Google Mediation guide:
+
+https://developers.google.com/admob/android/mediation/mintegral

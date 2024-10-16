@@ -13,7 +13,7 @@ The following should be added to your `extensions` node in your application desc
 
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.Ads</extensionID>
-	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.AppSet</extensionID>
 
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.browser</extensionID>
@@ -23,12 +23,15 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.room</extensionID>
 	<extensionID>androidx.work</extensionID>
 	<extensionID>com.google.code.gson</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
 ### Android
 
-You will have an `assets` directory that contains required assets for the installed extensions. You must add the files in the `assets/android` folder to the root of your Android application package. (The `android` folder contains the a series of files that are required on Android for the Pangle related SDKs).
+There is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+(The `android` folder contains the a series of files that are required on Android for the Pangle related SDKs).
 
 
 #### Manifest Additions
@@ -36,12 +39,18 @@ You will have an `assets` directory that contains required assets for the instal
 Add the following to your manifest additions: 
 
 ```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
 <queries>
     <intent>
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="https" />
+    </intent>
+    <intent>
+        <action android:name="android.support.customtabs.action.CustomTabsService" />
     </intent>
 </queries>
 
@@ -59,15 +68,27 @@ Add the following to your manifest additions:
         android:launchMode="standard"
         android:theme="@style/tt_landing_page" />
     <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_landing_page" />
-    <activity
         android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageLink2Activity"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:launchMode="standard"
         android:theme="@style/tt_landing_page" />
+    <activity
+        android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity"
+        android:launchMode="standard"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity
+        android:name="com.bytedance.sdk.openadsdk.activity.TTWebsiteActivity"
+        android:launchMode="standard"
+        android:screenOrientation="portrait"
+        android:theme="@style/tt_privacy_landing_page" />
+
+    <service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService" />
+
+    <activity
+        android:name="com.bytedance.sdk.openadsdk.activity.TTAppOpenAdActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:launchMode="standard"
+        android:theme="@style/tt_app_open_ad_no_animation" />
     <activity
         android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity"
         android:configChanges="keyboardHidden|orientation|screenSize"
@@ -99,23 +120,11 @@ Add the following to your manifest additions:
         android:launchMode="standard"
         android:theme="@style/tt_full_screen_interaction" />
     <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity"
-        android:launchMode="standard"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTWebsiteActivity"
-        android:launchMode="standard"
-        android:screenOrientation="portrait"
-        android:theme="@style/tt_privacy_landing_page" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTAppOpenAdActivity"
+        android:name="com.bytedance.sdk.openadsdk.activity.TTAdActivity"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:launchMode="standard"
-        android:theme="@style/tt_app_open_ad_no_animation" />
+        android:theme="@style/tt_full_screen_new" />
 
-    <service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService" />
-
-    <activity android:name="com.bytedance.sdk.openadsdk.adapter.PangleAdInterstitialActivity" />
 </application>
 ```
 
@@ -132,11 +141,47 @@ Add the following to your info additions. If you already have an `SKAdNetworkIte
 <array>
     <dict>
         <key>SKAdNetworkIdentifier</key>
-        <string>238da6jt44.skadnetwork</string>
+        <string>22mmun2rn5.skadnetwork</string>
     </dict>
     <dict>
         <key>SKAdNetworkIdentifier</key>
-        <string>22mmun2rn5.skadnetwork</string>
+        <string>uw77j35x4d.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>7ug5zh24hu.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>9t245vhmpl.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>kbd757ywx3.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>a8cz6cu7e5.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>578prtvx9j.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>5tjdwbrq8w.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>hs6bdukanm.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>k674qkevps.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>dbu4b84rxf.skadnetwork</string>
     </dict>
 </array>
 ```
