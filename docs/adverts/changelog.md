@@ -1,3 +1,11 @@
+### 2024.10.16 [v15.3.0]
+
+```
+feat(android,admob): implement new background initialisation process for admob (resolves #589) 
+feat(android): update admob sdk to v23.4.0 and ump sdk to v3.0.0
+feat(ios): update admob sdk v11.10.0
+```
+
 ### 2024.08.27 [v15.2.0]
 
 ```

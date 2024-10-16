@@ -18,6 +18,7 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.constraintlayout</extensionID>
 	<extensionID>androidx.vectordrawable</extensionID>
 	<extensionID>androidx.room</extensionID>
+	<extensionID>androidx.webkit</extensionID>
 	<extensionID>androidx.work</extensionID>
 	<extensionID>com.google.code.gson</extensionID>
 	<extensionID>com.google.guava</extensionID>
@@ -81,6 +82,8 @@ Also we suggest you enable hardware acceleration so videos are displayed correct
 
         <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="APPLICATION_ID" />
+
+        <meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING" android:value="true" />
 
         <service android:name="androidx.room.MultiInstanceInvalidationService"
             android:directBootAware="true" android:exported="false" />
