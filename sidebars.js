@@ -152,10 +152,13 @@ module.exports = {
       Mediation: [
         "adverts/mediation/adcolony/index",
         "adverts/mediation/applovin/index",
+        "adverts/mediation/digitalturbine/index",
         "adverts/mediation/facebookaudience/index",
         "adverts/mediation/ironsource/index",
+        "adverts/mediation/mintegral/index",
         "adverts/mediation/pangle/index",
         "adverts/mediation/tapjoy/index",
+        "adverts/mediation/vungle/index",
         "adverts/mediation/unityads/index",
       ],
     },
