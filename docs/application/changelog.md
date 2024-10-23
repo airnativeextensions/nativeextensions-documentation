@@ -1,3 +1,10 @@
+### 2024.10.23 [v7.3.1]
+
+```
+feat(keyboard,android): update keyboard implementation to better support Android API 30+ (resolves https://github.com/distriqt/ANE-Application/issues/287)
+feat(ios): update device information for 2024 iOS devices (resolves https://github.com/distriqt/ANE-Application/issues/293)
+```
+
 ### 2024.09.19 [v7.3.1]
 
 ```
