@@ -1766,6 +1766,7 @@ module.exports = {
     {
       Help: [
         "googleidentity/troubleshooting",
+        "googleidentity/migrating-to-v7.0",
         "googleidentity/migrating-to-androidx",
         "googleidentity/migrating-from-version-1",
       ],

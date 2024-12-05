@@ -9,12 +9,13 @@ sidebar_label: Setup
 Next you need to setup the platform using your Google API client ID and specify any additional 
 options such as scopes you require:
 
-At a minimum you will need to specify the iOS client ID:
+At a minimum you will need to specify the iOS and Android client IDs:
 
 ```actionscript
 var options:GoogleIdentityOptions = new GoogleIdentityOptionsBuilder()
 	.requestEmail()
 	.setIOSClientID( IOS_CLIENT_ID )
+	.setAndroidServerClientID( WEB_CLIENT_ID )
 	.build();
 
 GoogleIdentity.service.setup( options );
@@ -29,6 +30,11 @@ After setup you may wish to attempt to [sign in silently](signing-in.md#sign-in-
 
 
 ## Games Signin
+
+:::danger 
+This process is no longer supported. Please reach out to us if you require this integration.
+:::
+
 
 If you are planning to use Google Play Games on Android in your application then you can use this ANE to handle the signin process for games rather than handling two authentication processes. Additionally this ANE gives you more control over the sign in options and adding extra scopes that you don't get with the Game Services ANE. 
 

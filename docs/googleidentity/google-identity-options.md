@@ -31,13 +31,16 @@ YOU DO NOT NEED TO USE THE *ANDROID CLIENT*. Android applications are identified
 
 The simplest method to correctly create your options for setup is to use the `GoogleIdentityOptionsBuilder`. This class contains helper functions to construct the options correctly for the `setup` of your application. The builder is setup in such a way that you can use a single code base and the builder will determine the correct values to use in the `GoogleIdentityOptions` instance based on the current platform of the device. This allows you to simplify your code having one code base for both Android and iOS. If you wish more control you can use the direct accessors, `setClientID` and `setServerClientID`, which will ignore the current platform.
 
-As a minimum you will need to set the iOS Client ID:
+At a minimum you will need to specify the iOS and Android client IDs:
 
 ```actionscript
 var options:GoogleIdentityOptions = new GoogleIdentityOptionsBuilder()
-    .requestEmail()
+	.requestEmail()
 	.setIOSClientID( IOS_CLIENT_ID )
+	.setAndroidServerClientID( WEB_CLIENT_ID )
 	.build();
+
+GoogleIdentity.service.setup( options );
 ```
 
 

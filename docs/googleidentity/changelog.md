@@ -1,3 +1,13 @@
+### 2024.12.05 [v7.0.0]
+
+```
+See the migration guide: https://docs.airnativeextensions.com/docs/googleidentity/migrating-to-v7.0
+
+feat(android): update from google sign in to new androidx credentials manager (resolves https://github.com/distriqt/ANE-GoogleIdentity/issues/75, resolves https://github.com/distriqt/ANE-GoogleIdentity/issues/76)
+feat(android): move to gradle dependencies
+feat(ios): update google sign in lib to v8.0.0
+```
+
 ### 2024.05.16 [v6.0.0]
 
 ```
