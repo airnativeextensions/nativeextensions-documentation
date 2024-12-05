@@ -1524,6 +1524,7 @@ module.exports = {
     },
     {
       "Migration Guides": [
+        "firebase/migrating-to-v10.0",
         "firebase/migrating-to-v6",
         "firebase/migrating-to-v4",
       ],

@@ -1,3 +1,31 @@
+### 2024.12.05 [v10.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+See the migration guide: https://docs.airnativeextensions.com/docs/firebase/migrating-to-v10.0
+
+
+feat(android): update to use new gradle dependencies
+feat(ios): update ios firebase sdk v11.5.0
+```
+
+### 2024.12.05 [v10.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+See the migration guide: https://docs.airnativeextensions.com/docs/firebase/migrating-to-v10.0
+
+
+feat(android): update to use new gradle dependencies
+feat(ios): update ios firebase sdk v11.5.0
+```
+
 ### 2024.06.26 [v9.0.4]
 
 ```
