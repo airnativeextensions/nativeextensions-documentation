@@ -1,3 +1,13 @@
+###### 2024.12.05 [v5.0.0]
+
+```
+Major update - move to new gradle build process
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+feat(android): move to gradle dependencies
+```
+
 ###### 2024.09.20 [v5.0.0]
 
 ```
