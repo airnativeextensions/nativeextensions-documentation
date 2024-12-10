@@ -13,7 +13,7 @@ The following should be added to your `extensions` node in your application desc
 
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.Ads</extensionID>
-	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.AppSet</extensionID>
 
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.browser</extensionID>
@@ -23,30 +23,25 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.room</extensionID>
 	<extensionID>androidx.work</extensionID>
 	<extensionID>com.google.code.gson</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
 ### Android
 
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+
+
 #### Manifest Additions
 
-Add the following to your manifest additions inside the `application` tag:
+No additions required
 
-```xml
-<!-- AD COLONY -->
-<activity
-    android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-	android:exported="false"
-    android:hardwareAccelerated="true" />
-<activity
-    android:name="com.adcolony.sdk.AdColonyAdViewActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize"
-	android:exported="false"
-    android:hardwareAccelerated="true" />
-```
 
 ### iOS
+
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/ios` folder to the root of your iOS application package. 
 
 #### Info Additions
 

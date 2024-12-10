@@ -14,7 +14,7 @@ The following should be added to your `extensions` node in your application desc
 
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.Ads</extensionID>
-	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.AppSet</extensionID>
 
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.browser</extensionID>
@@ -24,44 +24,19 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.room</extensionID>
 	<extensionID>androidx.work</extensionID>
 	<extensionID>com.google.code.gson</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
 ### Android
 
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+
+
 #### Manifest Additions
 
-Add the following to your manifest additions inside the `application` tag. 
-
-:::caution
-Ensure you replace:
--  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-:::
-
-```xml
-<!-- IRONSOURCE -->
-<activity
-    android:name="com.ironsource.sdk.controller.ControllerActivity"
-    android:configChanges="orientation|screenSize"
-    android:exported="false"
-    android:hardwareAccelerated="true" />
-<activity
-    android:name="com.ironsource.sdk.controller.InterstitialActivity"
-    android:configChanges="orientation|screenSize"
-    android:exported="false"
-    android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.Translucent" />
-<activity
-    android:name="com.ironsource.sdk.controller.OpenUrlActivity"
-    android:configChanges="orientation|screenSize"
-    android:exported="false"
-    android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.Translucent" />
-
-<provider
-    android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
-    android:authorities="APPLICATION_PACKAGE.IronsourceLifecycleProvider" />
-```
+No additions required
 
 
 
@@ -79,6 +54,12 @@ Add the following to your info additions. If you already have an `SKAdNetworkIte
         <string>su67r6k2v3.skadnetwork</string>
     </dict>
 </array>
+
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
 ```
 
 :::note SKAdNetworkItems
