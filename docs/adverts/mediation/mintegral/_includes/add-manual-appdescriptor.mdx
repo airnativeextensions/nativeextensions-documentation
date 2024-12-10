@@ -32,49 +32,13 @@ The following should be added to your `extensions` node in your application desc
 
 ### Android
 
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+
+
 #### Manifest Additions
 
-Add the following to your manifest additions, merging the `application` tag if you already have one. 
-
-
-:::caution
-Ensure you replace:
-- `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-:::
-
-
-```xml
- <queries>
-    <intent>
-      <action android:name="android.intent.action.MAIN"/>
-    </intent>
-    <intent>
-      <action android:name="android.intent.action.VIEW"/>
-    </intent>
-</queries>
-
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
-<application>
-
-    <!-- MINTEGRAL -->
-    <activity android:name="com.mbridge.msdk.reward.player.MBRewardVideoActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:excludeFromRecents="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <activity android:name="com.mbridge.msdk.newreward.player.MBRewardVideoActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:excludeFromRecents="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <!-- mbridge base activity -->
-    <activity android:name="com.mbridge.msdk.activity.MBCommonActivity" android:configChanges="keyboard|orientation" android:excludeFromRecents="true" android:exported="false" android:theme="@style/mbridge_transparent_common_activity_style"/>
-    <!-- integration rewardVideo if aggregation nativeX pls add start -->
-    <activity android:name="com.mbridge.msdk.out.LoadingActivity"/>
-    <!-- integration rewardVideo if aggregation nativeX pls add end -->
-    <receiver android:name="com.mbridge.msdk.foundation.same.broadcast.NetWorkChangeReceiver" android:exported="true">
-        <intent-filter>
-            <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-        </intent-filter>
-    </receiver>
-
-</application>
-```
+No additions required
 
 
 ### iOS

@@ -35,27 +35,8 @@ The following should be added to your `extensions` node in your application desc
 
 #### Manifest Additions
 
-Add the following to your manifest additions, merging the `application` tag if you already have one. 
+No additions required
 
-
-:::caution
-Ensure you replace:
-- `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-:::
-
-
-```xml
-<application>
-
-    <!-- VUNGLE -->
-    <activity
-        android:name="com.vungle.ads.internal.ui.VungleActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-        android:hardwareAccelerated="true"
-        android:launchMode="singleTop" />
-
-</application>
-```
 
 
 ### iOS

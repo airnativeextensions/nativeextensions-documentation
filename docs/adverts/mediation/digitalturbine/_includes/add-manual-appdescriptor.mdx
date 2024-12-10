@@ -30,59 +30,15 @@ The following should be added to your `extensions` node in your application desc
 
 ### Android
 
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+
+
 #### Manifest Additions
 
-Add the following to your manifest additions, merging the `application` tag if you already have one. 
+No additions required
 
 
-:::caution
-Ensure you replace:
-- `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-:::
-
-
-```xml
- <queries>
-    <intent>
-        <action android:name="com.digitalturbine.ignite.cl.IgniteRemoteService" />
-    </intent>
-</queries>
-
-<uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
-<uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
-<uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS"/>
-
-<application>
-    <!-- DIGITAL TURBINE -->
-    <activity
-        android:name="com.fyber.inneractive.sdk.activities.InneractiveInternalBrowserActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
-        android:hardwareAccelerated="true"
-        android:screenOrientation="fullUser" />
-    <activity
-        android:name="com.fyber.inneractive.sdk.activities.InneractiveFullscreenAdActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
-        android:hardwareAccelerated="true"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-    <activity
-        android:name="com.fyber.inneractive.sdk.activities.InneractiveRichMediaVideoPlayerActivityCore"
-        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
-        android:hardwareAccelerated="true"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-    <activity
-        android:name="com.fyber.inneractive.sdk.activities.InternalStoreWebpageActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
-        android:excludeFromRecents="true"
-        android:screenOrientation="sensor"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-    <activity
-        android:name="com.fyber.inneractive.sdk.activities.FyberReportAdActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
-        android:hardwareAccelerated="true"
-        android:screenOrientation="fullUser" />
-
-</application>
-```
 
 
 ### iOS

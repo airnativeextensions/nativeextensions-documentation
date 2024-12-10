@@ -12,10 +12,10 @@ import SetupAPM from '../../../../_includes/apm/setup-apm.mdx'
 
 ### Install the extension 
 
-Install the extension by running: 
+Install the Huawei variant of the extension by running: 
 
 ```
-apm install com.distriqt.Adverts
+apm install com.distriqt.Adverts-huawei
 ```
 
 This will download and install the extension, required assets, and all dependencies.
@@ -24,6 +24,7 @@ Once complete `apm` will have created something like the following file structur
 
 ```
 .
+|____ assets
 |____ ane
 | |____ com.distriqt.Adverts.ane	# Adverts extension
 | |____ [dependencies]
@@ -33,11 +34,7 @@ Once complete `apm` will have created something like the following file structur
 
 - Add the `ane` directory to your IDE. *See the tutorials located [here](/docs/tutorials/getting-started) on adding an extension to your IDE.*
 
-- You must set the android and iOS Admob application identifiers you setup in the Admob console. This will allow `apm` to automatically insert them into the correct position in your application descriptor. Call the following to step through the configuration values for this extension:
-
-```
-apm project config set com.distriqt.Adverts
-```
+- You may have an `assets` directory that contains required assets for the installed extensions. You must add the files in the `assets/android` folder to the root of your Android application package and similarly any in the `assets/ios` folder to the root of your iOS application package. If these folders don't exist then there are no required assets to be added.
 
 
 :::info

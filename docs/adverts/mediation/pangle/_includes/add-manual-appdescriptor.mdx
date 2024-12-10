@@ -29,104 +29,14 @@ The following should be added to your `extensions` node in your application desc
 
 ### Android
 
-There is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
 You must add the files in the `assets/android` folder to the root of your Android application package. 
-(The `android` folder contains the a series of files that are required on Android for the Pangle related SDKs).
 
 
 #### Manifest Additions
 
-Add the following to your manifest additions: 
+No additions required
 
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-
-<queries>
-    <intent>
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="https" />
-    </intent>
-    <intent>
-        <action android:name="android.support.customtabs.action.CustomTabsService" />
-    </intent>
-</queries>
-
-<application>
-
-    <!-- 下面的activity和service必须注册 -->
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_landing_page" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_landing_page" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageLink2Activity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_landing_page" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity"
-        android:launchMode="standard"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTWebsiteActivity"
-        android:launchMode="standard"
-        android:screenOrientation="portrait"
-        android:theme="@style/tt_privacy_landing_page" />
-
-    <service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService" />
-
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTAppOpenAdActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_app_open_ad_no_animation" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_full_screen_new" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_full_screen_new" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_full_screen_new" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_full_screen_new" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_full_screen_interaction" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialExpressActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_full_screen_interaction" />
-    <activity
-        android:name="com.bytedance.sdk.openadsdk.activity.TTAdActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="standard"
-        android:theme="@style/tt_full_screen_new" />
-
-</application>
-```
 
 
 ### iOS

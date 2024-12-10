@@ -29,142 +29,15 @@ The following should be added to your `extensions` node in your application desc
 
 ### Android
 
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+
+
 #### Manifest Additions
 
-Add the following to your manifest additions, merging the `application` tag if you already have one. 
-
-:::caution
-You no longer need to add the `applovin.sdk.key` here as it is retrieved from the account settings now. 
-If you previously added it you should remove it from the manifest additions. 
-:::
+No additions required
 
 
-:::caution
-Ensure you replace:
-- `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-:::
-
-
-```xml
- <queries>
-    <intent>
-        <action android:name="com.applovin.am.intent.action.APPHUB_SERVICE" />
-    </intent>
-    <intent>
-        <action android:name="android.support.customtabs.action.CustomTabsService" />
-    </intent>
-</queries>
-
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-<uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" />
-
-<application>
-    <!-- APPLOVIN MEDIATION -->
-
-    <provider
-        android:name="com.applovin.sdk.AppLovinInitProvider"
-        android:authorities="APPLICATION_PACKAGE.applovininitprovider"
-        android:exported="false"
-        android:initOrder="101" /> <!-- Init order is 101 so we're before Firebase/Google which uses 100 -->
-
-    <activity
-        android:name="com.applovin.adview.AppLovinFullscreenActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:exported="false"
-        android:hardwareAccelerated="true"
-        android:launchMode="singleTop"
-        android:screenOrientation="behind"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-    <activity
-        android:name="com.applovin.sdk.AppLovinWebViewActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
-
-    <!-- Hybrid Ad Activities -->
-    <activity
-        android:name="com.applovin.mediation.hybridAds.MaxHybridMRecAdActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-    <activity
-        android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
-    <!-- Mediation Debugger Activities -->
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerAdUnitWaterfallsListActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerCmpNetworksListActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerTcfConsentStatusesListActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerTcfInfoListActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerTcfStringActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerTestModeNetworkActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerUnifiedFlowActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.mediation.MaxDebuggerWaterfallKeywordsActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.creative.MaxCreativeDebuggerActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" />
-    <activity
-        android:name="com.applovin.creative.MaxCreativeDebuggerDisplayedAdActivity"
-        android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" />
-
-    <!-- Services -->
-    <service
-        android:name="com.applovin.impl.adview.activity.FullscreenAdService"
-        android:exported="false"
-        android:stopWithTask="false" />
-
-</application>
-```
 
 
 ### iOS

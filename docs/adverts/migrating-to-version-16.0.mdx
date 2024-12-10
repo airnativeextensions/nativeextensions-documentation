@@ -1,0 +1,82 @@
+---
+title: Migrating to version 16.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This latest release brings a number of updates to the extension particularly around the Android integration. 
+
+The iOS implementation has been updated to v11.11.0 which should bring a range of bug fixes and improvements however the implementation remains largely unchanged. 
+
+
+
+## Android Integration 
+
+### Gradle Dependencies
+
+We have moved to using gradle dependencies within our extensions which will improve dependency resolution, reduce update times and improve compatibility with other extensions.
+
+This also reduces the amount of work required to manually integrate the extensions, reducing the additions to the manifest in your application descriptor.
+
+We highly recommend using the [apm](https://airnativeextensions.com/docs/using-apm) tool to manage the integration of the extensions in your application and to generate your application descriptor:
+
+```bash
+apm update
+apm generate app-descriptor
+```
+
+However, you can still integrate the manifest additions manually if you prefer. With this update we recommend starting fresh as there have been a lot of entries to be removed.
+
+
+
+### Updating code 
+
+There should be no changes to your code required for this update.
+
+
+### Updating the manifest 
+
+You can simplify the manifest now as well as the gradle implementation will add a significant amount of the required manifest entries for you. 
+If you use the `apm` tool to generate your application descriptor you will see the manifest entries are significantly reduced and simply running the commands above will update the manifest for you.
+
+If you manually update the manifest then, as mentioned above, we recommend starting fresh as there have been a lot of entries to be removed.
+The minimum manifest additions now looks like the following:
+
+```xml
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <application>
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+
+    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY"/>
+    <meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING" android:value="true"/>
+
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+  </application>
+</manifest>
+```
+
+Or for Huawei:
+
+```xml
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <application >
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+  </application>
+</manifest>
+```
+
+
+You no longer have to manually add all of the Admob, androidx, play services related manifest entries as these are now added automatically by the gradle implementation.
+
+There are still some meta-data entries that you may need to add for specific features, but these are minimal.
