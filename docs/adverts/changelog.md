@@ -1,3 +1,18 @@
+### 2024.12.10 [v16.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+See the migration guide: https://docs.airnativeextensions.com/docs/adverts/migrating-to-version-16.0
+
+
+feat(android): update to use new gradle dependencies
+fix(android): correct missing dependency (resolves https://github.com/distriqt/ANE-Adverts/issues/597)
+feat(ios): update admob sdk v11.11.0
+```
+
 ### 2024.10.16 [v15.3.0]
 
 ```
