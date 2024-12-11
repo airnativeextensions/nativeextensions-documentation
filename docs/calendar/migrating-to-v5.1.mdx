@@ -6,7 +6,7 @@ sidebar_label: Migrating to v5.1
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-v5.1 brings an updated process for requesting permissions on Android. 
+This version brings an updated process for requesting permissions on Android. 
 AIR has introduced a new process for us to better handle permission requests so we have updated the extension to support this.
 
 The authorisation process remains the same however there is a small change to the manifest.
@@ -46,9 +46,9 @@ And replace it with:
 <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 ```
 
-```note Core
+:::note Core
 Make sure you download and update the Core ANE. You must be using version 7 or higher.
-```
+:::
 
   </TabItem>
   

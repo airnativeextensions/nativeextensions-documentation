@@ -34,5 +34,3 @@ We have included all these extensions in the existing Android Support repository
 
 **When migrating we also suggest you check the manifest additions and "Add the Extension" documentation. Some of the extensions will require changes to the manifest, where references to the Android Support libraries were being used. And there may be additional extensions required.**
 
-
-

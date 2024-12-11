@@ -1,3 +1,15 @@
+### 2024.12.12 [v6.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+### Updates
+
+feat(android): move to gradle dependencies
+```
+
 ### 2023.01.16 [v5.1.0]
 
 ```
