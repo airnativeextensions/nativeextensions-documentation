@@ -1,3 +1,14 @@
+### 2024.12.11 [v7.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+feat(android): move to gradle dependencies
+feat(android): add broadcasting functionality
+```
+
 ### 2024.07.10 [v6.0.0]
 
 ```

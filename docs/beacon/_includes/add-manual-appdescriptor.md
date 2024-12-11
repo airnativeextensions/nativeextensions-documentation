@@ -8,6 +8,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.Beacon</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
@@ -39,7 +40,8 @@ You will need to add the following to your application descriptor.
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
 
 	<application>
 
