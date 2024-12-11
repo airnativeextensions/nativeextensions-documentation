@@ -1,3 +1,15 @@
+### 2024.12.11 [v8.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+https://docs.airnativeextensions.com/docs/application/migrating-to-v8.0
+
+feat(android): move to gradle dependencies
+```
+
 ### 2024.10.23 [v7.3.1]
 
 ```

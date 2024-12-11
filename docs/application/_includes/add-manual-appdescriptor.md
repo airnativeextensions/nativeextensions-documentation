@@ -33,15 +33,12 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 ```xml
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
+	
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
 	<application>
 		
-		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-
-
 		<!-- AUTO START and ALARM MANAGER -->
 		<receiver android:enabled="true"
 			android:name="com.distriqt.extension.application.receivers.ApplicationStartupReceiver"
@@ -53,25 +50,12 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 			</intent-filter>
 		</receiver>
 
-		<!-- AUTHORISATION -->
-		<activity android:name="com.distriqt.extension.application.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
-
 		<!-- ALARM MANAGER -->
 		<receiver android:name="com.distriqt.extension.application.alarms.AlarmReceiver" android:enabled="true" android:exported="false" />
 		<activity android:name="com.distriqt.extension.application.alarms.AlarmActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
 		<!-- SETTINGS -->
 		<activity android:name="com.distriqt.extension.application.settings.SettingsActivity" android:label="Settings" android:exported="false" />
-
-		<!-- APPLICATION STATE EVENTS -->
-		<provider
-			android:name="androidx.startup.InitializationProvider"
-			android:authorities="APPLICATION_PACKAGE.androidx-startup"
-			android:exported="false" >
-			<meta-data
-				android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-				android:value="androidx.startup" />
-		</provider>
 
 
 	</application>

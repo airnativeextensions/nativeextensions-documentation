@@ -26,29 +26,6 @@ There are also ACTIVATE and DEACTIVATE events here to be able to monitor the com
 
 
 
-## Android 
-
-On Android there are a few manifest additions to add to be able to correctly monitor your entire application state.
-
-The following will need to be added into the `<application>` node of your manifest additions.
-You will need to replace `APPLICATION_PACKAGE` with your AIR applications Java package name. Generally this is your application id prefixed with `air.`.
-
-
-```xml
-<!-- APPLICATION STATE EVENTS -->
-<provider
-	android:name="androidx.startup.InitializationProvider"
-	android:authorities="APPLICATION_PACKAGE.androidx-startup"
-	android:exported="false" >
-	<meta-data
-		android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-		android:value="androidx.startup" />
-</provider>
-```
-
-
-
-
 ## Usage
 
 Listening for the events is a very simple process, simply add the event listener to the Application singleton.

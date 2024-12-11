@@ -15,8 +15,6 @@ Add the `android.permission.READ_PHONE_STATE` permission to your manifest additi
 ```xml
 <manifest android:installLocation="auto">
 
-    <uses-sdk android:targetSdkVersion="29" />
-
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 

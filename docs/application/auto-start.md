@@ -49,7 +49,7 @@ if (Application.service.wasAutoStarted())
 You must make sure you have added the following receiver and permission to your application descriptors
 manifest additions.
 
-```actionscript
+```xml
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 <!-- Required for Android 30 -->
 <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>

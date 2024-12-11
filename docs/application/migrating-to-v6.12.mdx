@@ -37,18 +37,24 @@ apm generate app-descriptor src/Main-app.xml
 If you are manually managing your application descriptor (and manifest additions) then you will be required to make some changes to your manifest. Find the activity:
 
 ```xml
-<activity android:name="com.distriqt.extension.application.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+<activity 
+  android:name="com.distriqt.extension.application.permissions.AuthorisationActivity" 
+  android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+  android:exported="false" />
 ```
 
 And replace it with:
 
 ```xml
-<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+<activity 
+  android:name="com.distriqt.core.auth.AuthorisationActivity" 
+  android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+  android:exported="false" />
 ```
 
-```note Core
+:::warning Core Extension
 Make sure you download and update the Core ANE. You must be using version 7 or higher.
-```
+:::
 
   </TabItem>
   

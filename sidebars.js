@@ -329,7 +329,11 @@ module.exports = {
       Helpers: ["application/general-helpers"],
     },
     {
-      Troubleshooting: ["application/migrating-to-androidx"],
+      Troubleshooting: [
+        "application/migrating-to-v8.0",
+        "application/migrating-to-v6.12",
+        "application/migrating-to-androidx"
+      ],
     },
     {
       Other: [
