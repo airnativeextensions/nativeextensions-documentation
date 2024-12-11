@@ -1,3 +1,17 @@
+### 2024.12.11 [v8.0.0]
+
+```
+## Major Update
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. We also have added a new "permissionless" version of the extension which requires greatly reduced permissions but can only perform simple selection and load operations. 
+
+https://docs.airnativeextensions.com/docs/camerarollextended/migrating-to-v8.0
+
+feat(android): move to gradle dependencies
+feat(android): add permissionless picker to allow picking images without read authorisation (resolves https://github.com/distriqt/ANE-CameraRollExtended/issues/154)
+feat(android): add ability to use `addBitmapData` without any read permissions added to the app (resolves https://github.com/distriqt/ANE-CameraRollExtended/issues/152)
+```
+
 ### 2024.05.20 [v7.1.0]
 
 ```

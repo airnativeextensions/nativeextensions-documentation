@@ -760,6 +760,8 @@ module.exports = {
     },
     {
       Help: [
+        "camerarollextended/migrating-to-v8.0",
+        "camerarollextended/migrating-to-v7.0",
         "camerarollextended/migrating-to-v6.4",
         "camerarollextended/migrating-to-androidx",
       ],

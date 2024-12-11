@@ -105,3 +105,30 @@ CameraRollExtended.service.browseForAsset( options );
 ```
 
 We highly recommend using the native picker however feel free to try the custom implementation and see if it suits your needs.
+
+
+
+
+## Permissionless Picker
+
+The permissionless picker allows you a way to limit the permissions your application requires when the only operation it needs is to select and load images. This picker has slightly different call process but still results in the same events being dispatched as the normal `browseForAsset()` operation above.
+
+```actionscript
+var options:PermissionlessPickerOptions = new PermissionlessPickerOptions()
+		.setMaximumCount( 2 )
+		.setType( Asset.IMAGE );
+
+CameraRollExtended.service.permissionlessPicker.browse( options );
+```
+
+Once the user selects the image you will be able to load it using the `assets` functionality for a period of time after the selection. I.e. don't hold onto a reference to the selected items and expect to be able to load them at a subsequent launch of your application. The browse operation in this process will give you the ability to access it for a reasonable amount of time after the selection. 
+
+
+:::note Variant
+If the permissionless picker or adding images are the only actions you need from this extension we suggest you use the `permissionless` variant of the extension. This variant removes the additional permissions from the manifest and allows you less scrutiny when going through the app review process.
+
+```
+apm install com.distriqt.CameraRollExtended-permissionless
+```
+
+:::

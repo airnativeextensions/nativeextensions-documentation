@@ -1,0 +1,79 @@
+---
+title: Migrating to v8.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This release brings a number of updates to the extension particularly around android integration. 
+
+We have moved to using gradle dependencies within our extensions which will improve dependency resolution, reduce update times and improve compatibility with other extensions.
+This also reduces the amount of work required to manually integrate the extensions, reducing the additions to the manifest (though we still highly recommend using apm for this purpose).
+
+There should be no changes required to your code for this update.
+
+However we do suggest checking out the manifest additions for the latest version of the extension as you should be able to greatly simplify your application descriptor now.
+
+
+## Android Integration 
+
+### Gradle Dependencies
+
+We have moved to using gradle dependencies within our extensions which will improve dependency resolution, reduce update times and improve compatibility with other extensions.
+
+This also reduces the amount of work required to manually integrate the extensions, reducing the additions to the manifest in your application descriptor.
+
+
+### Updating code 
+
+There should be no changes required to your code for this update.
+
+
+### Updating the manifest 
+
+You can simplify the manifest now as well as the gradle implementation will add a significant amount of the required manifest entries for you. 
+If you use the `apm` tool to generate your application descriptor 
+
+We highly recommend using the [apm](https://airnativeextensions.com/docs/using-apm) tool to manage the integration of the extensions in your application and to generate your application descriptor:
+
+```bash
+apm generate app-descriptor
+```
+
+You will see the manifest entries are significantly reduced and simply running the commands above will update the manifest for you.
+
+However, you can still integrate the manifest additions manually if you prefer. With this update we recommend starting fresh as there have been a lot of entries to be removed.
+
+If you manually update the manifest then, we recommend starting fresh as there have been a lot of entries to be removed.
+The minimum manifest additions now looks like the following:
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="19" />
+	
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+	<uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+	<uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS"/>
+
+	<application>
+		
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+		
+		<activity android:name="com.distriqt.extension.camerarollextended.activities.MultiImagePickerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|screenSize" android:exported="false" />
+		<activity android:name="com.distriqt.extension.camerarollextended.activities.SelectorActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|screenSize" android:exported="false" />
+		
+		<service android:name="com.google.android.gms.metadata.ModuleDependencies"
+				android:enabled="false"
+				android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+			</intent-filter>
+			<meta-data android:name="photopicker_activity:0:required" android:value="" />
+		</service>
+
+	</application>
+</manifest>
+```

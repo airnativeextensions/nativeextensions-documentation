@@ -5,14 +5,15 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-    <extensionID>com.distriqt.CameraRollExtended</extensionID>
-    <extensionID>com.distriqt.Core</extensionID>
-    <extensionID>androidx.core</extensionID>
-    <extensionID>androidx.appcompat</extensionID>
-    <extensionID>androidx.exifinterface</extensionID>
+	<extensionID>com.distriqt.CameraRollExtended</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>androidx.exifinterface</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
+	<extensionID>com.bumptech.glide</extensionID>
 	<extensionID>com.distriqt.square.okhttp3</extensionID>
-    <extensionID>com.distriqt.square.picasso</extensionID>
-    <extensionID>com.jetbrains.kotlin</extensionID>
+	<extensionID>com.distriqt.square.picasso</extensionID>
 </extensions>
 ```
 
@@ -21,7 +22,7 @@ The following should be added to your `extensions` node in your application desc
 
 ### Manifest Additions
 
-The Camera Roll Extended ANE requires a few additions to the manifest to be able to start certain activities 
+The Camera Roll Extended extension requires a few additions to the manifest to be able to start certain activities 
 and get access to the users media. You should add the listing below to your manifest.
 
 
@@ -42,9 +43,47 @@ and get access to the users media. You should add the listing below to your mani
 		<activity android:name="com.distriqt.extension.camerarollextended.activities.MultiImagePickerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|screenSize" android:exported="false" />
 		<activity android:name="com.distriqt.extension.camerarollextended.activities.SelectorActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|screenSize" android:exported="false" />
 		
+		<service android:name="com.google.android.gms.metadata.ModuleDependencies"
+				android:enabled="false"
+				android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+			</intent-filter>
+			<meta-data android:name="photopicker_activity:0:required" android:value="" />
+		</service>
+
 	</application>
 </manifest>
 ```
+
+
+### Permissionless Picker
+
+If you are using the permissionless picker you will only need to add the following to your manifest:
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="19" />
+	
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<application>
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+	
+
+		<service android:name="com.google.android.gms.metadata.ModuleDependencies"
+				android:enabled="false"
+				android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+			</intent-filter>
+			<meta-data android:name="photopicker_activity:0:required" android:value="" />
+		</service>
+
+	</application>
+</manifest>
+```
+
 
 
 ### Writing to the Camera Roll
@@ -52,7 +91,7 @@ and get access to the users media. You should add the listing below to your mani
 If you need to write to the camera roll on Android versions < 29 then you will also need to add the `WRITE_EXTERNAL_STORAGE` permission to your manifest:
 
 ```xml
-<!-- OPTIONAL: Only add this one if you want to add to the camera roll -->
+<!-- OPTIONAL: Only add this one if you want to ADD files to the camera roll -->
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
 ```
 
