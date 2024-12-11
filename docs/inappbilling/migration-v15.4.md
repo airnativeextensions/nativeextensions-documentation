@@ -41,7 +41,7 @@ Your manifest should now contain all the following:
 
 ```xml
 <manifest android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34"/>
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
 
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="com.android.vending.BILLING" />

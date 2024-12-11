@@ -8,7 +8,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.InAppBilling</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.google.android.play</extensionID>
+    <extensionID>com.google.android.play.appupdate</extensionID>
     <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
@@ -23,44 +23,20 @@ The following should be added to your `extensions` node in your application desc
 The following additions must be added to your applications manifest additions in your 
 application descriptor.
 
-There are additions specific for Google Play Billing and Amazon In App Purchases. 
-If you aren't using either of those services you can remove those additions if you wish.
-
 
 ```xml
-<manifest android:installLocation="auto">
-	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="com.android.vending.BILLING" />
+<manifest android:installLocation="auto" >
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34" />
 
-	<queries>
-		<intent>
-			<action android:name="com.android.vending.billing.InAppBillingService.BIND" />
-		</intent>
-	</queries>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
-	<application>
+    <application>
 
-		<activity 
-			android:name="com.distriqt.extension.inappbilling.activities.ProductViewActivity" 
-			android:exported="false"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.distriqt.extension.inappbilling.activities.ProductViewActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
+        <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 
-		<!-- GOOGLE PLAY BILLING -->
-		<meta-data android:name="com.google.android.play.billingclient.version" android:value="6.2.1" />
-		<activity
-			android:name="com.android.billingclient.api.ProxyBillingActivity"
-			android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-			android:exported="false"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-		<activity
-            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
-            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-
-	</application>
+    </application>
 
 </manifest>
 ```

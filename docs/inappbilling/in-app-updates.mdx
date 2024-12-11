@@ -35,84 +35,13 @@ Nothing additional required if using apm.
 
 ### Google Play
 
-You will need to add the common Play Core extension ([`com.google.android.play`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.android.play.ane)).
+You will need to add the AppUpdate Play Core extension ([`com.google.android.play.appupdate`](https://github.com/airnativeextensions/ANE-GooglePlay/raw/main/lib/com.google.android.play.appupdate.ane)) if you haven't already added it as part of the integration.
 
-Add the following permission:
-
-```xml
-<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-```
-
-And add the following to the manifest additions inside the `application` node:
-
-```xml
-<!-- com.google.android.play -->
-<activity
-    android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
-    android:enabled="false"
-    android:exported="false"
-    android:launchMode="singleInstance"
-    android:process=":playcore_missing_splits_activity"
-    android:stateNotNeeded="true" />
-<activity
-    android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-    android:exported="false"
-    android:stateNotNeeded="true"
-    android:theme="@style/Theme.PlayCore.Transparent" />
-<service
-    android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
-    android:enabled="false"
-    android:exported="true" >
-    <meta-data
-        android:name="com.google.android.play.core.assetpacks.versionCode"
-        android:value="11001" />
-</service>
-<service
-    android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
-    android:enabled="false"
-    android:exported="false" />
-```
 
 
 ### Huawei App-Gallery
 
-For Huawei you will need to add the [`com.huawei.hms.game`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.game.ane) Huawei Mobile Services extension and add the following to your manifest additions:
-
-```xml
-<!-- HUAWEI GAME -->
-<meta-data
-    android:name="com.huawei.hms.client.service.name:game"
-    android:value="game:4.0.3.301" />
-<meta-data
-    android:name="com.huawei.hms.jos.versioncode"
-    android:value="40003301" />
-
-<service
-    android:name="com.huawei.hms.jos.games.service.GameService"
-    android:exported="true" >
-    <intent-filter>
-        <action android:name="com.huawei.hms.games.service" />
-    </intent-filter>
-</service>
-
-<provider
-    android:name="com.huawei.hms.jos.games.archive.ArchiveRemoteAccessProvider"
-    android:authorities="com.distriqt.extension.hms.game.test.hmssdk.jos.archive"
-    android:exported="true" >
-</provider>
-
-<activity
-    android:name="com.huawei.appmarket.component.buoycircle.impl.delegete.BuoyBridgeActivity"
-    android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
-    android:excludeFromRecents="true"
-    android:exported="false"
-    android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.Translucent" >
-    <meta-data
-        android:name="hwc-theme"
-        android:value="androidhwext:style/Theme.Emui.Translucent" />
-```
-
+For Huawei you will need to add the [`com.huawei.hms.game`](https://github.com/distriqt/ANE-HuaweiMobileServices/raw/master/lib/com.huawei.hms.game.ane) Huawei Mobile Services extension.
 
   </TabItem>
   

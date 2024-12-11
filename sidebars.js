@@ -2036,6 +2036,7 @@ module.exports = {
     },
     {
       Help: [
+        "inappbilling/migration-v16.0", 
         "inappbilling/migration-v15.4", 
         "inappbilling/migration-v15", 
         "inappbilling/migration-v14", 
