@@ -374,6 +374,11 @@ module.exports = {
       "Review Controller": ["applicationrater/review-controller"],
     },
     {
+      Troubleshooting: [
+        "applicationrater/migrating",
+      ],
+    },
+    {
       Other: [
         { type: "doc", id: "applicationrater/changelog" },
         {
