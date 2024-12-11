@@ -1888,7 +1888,10 @@ module.exports = {
       Usage: ["idfa/get-advertising-identifier"],
     },
     {
-      Help: ["idfa/migrating", "idfa/migrating-to-androidx"],
+      Help: [
+        "idfa/migrating", 
+        "idfa/migrating-to-androidx"
+      ],
     },
     {
       Other: [

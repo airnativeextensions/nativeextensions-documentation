@@ -21,28 +21,16 @@ The following should be added to your `extensions` node in your application desc
 
 #### Manifest Additions 
 
-You need to make sure you add the `android.permission.INTERNET` permission and the 
-`com.google.android.gms.version` tags to your manifest additions as below:
-
+You need to make sure you add the `android.permission.INTERNET` permission to your manifest additions as below:
 
 ```xml
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
 	
-	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-
 	<application>
-
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-
-		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity"
-				android:theme="@android:style/Theme.Translucent.NoTitleBar"
-				android:exported="false" />
-
 	</application>
 </manifest>
 ```
-
 
 
 ### iOS 
