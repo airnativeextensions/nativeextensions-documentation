@@ -1,3 +1,9 @@
+### 2024.12.16 [v3.3.0]
+
+```
+feat: update to latest build method and dependencies
+```
+
 ### 2023.01.18 [v3.2.0]
 
 ```
