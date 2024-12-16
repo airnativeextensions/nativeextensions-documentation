@@ -7,7 +7,9 @@ The following should be added to your `extensions` node in your application desc
 <extensions>
     <extensionID>com.distriqt.GameInput</extensionID>
 	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>androidx.core</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
