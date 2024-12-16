@@ -1,3 +1,16 @@
+### 2024.12.16 [v4.3.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+### Updates 
+
+feat(android): move to gradle dependencies
+feat(ios): build with latest build tools, update minimum version requirement to 12
+```
+
 ### 2023.01.17 [v4.2.0]
 
 ```
