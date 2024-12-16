@@ -23,50 +23,20 @@ The following should be added to your `extensions` node in your application desc
 
 #### Manifest Additions
 
-The Google Tag Manager SDK requires a few additions to the manifest. You should add the listing below to your manifest.
-
-:::caution
-Ensure you replace:
--  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-:::
-
+There are no manifest additions required for this extension, just make sure you have the `android.permission.INTERNET` permission and we recommend disabling automatic screen reporting:
 
 ```xml
-<manifest android:installLocation="auto">
-	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
 
-	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+  <application>
 
-	<application>
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <meta-data android:name="google_analytics_automatic_screen_reporting_enabled" android:value="false"/>
 
-		<service
-			android:name="com.google.android.gms.tagmanager.TagManagerService"
-			android:enabled="true"
-			android:exported="false" />
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
-		<activity
-			android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity"
-			android:exported="true"
-			android:noHistory="true" > <!-- optional, removes the previewActivity from the activity stack. -->
-			<intent-filter>
-				<data android:scheme="tagmanager.c.APPLICATION_PACKAGE" />
-
-				<action android:name="android.intent.action.VIEW" />
-
-				<category android:name="android.intent.category.DEFAULT" />
-				<category android:name="android.intent.category.BROWSABLE" />
-			</intent-filter>
-		</activity>
-
-
-
-		<!-- Include all the Firebase additions here as well -->
-
-
-	</application>
-
+  </application>
 </manifest>
 ```
 
@@ -82,7 +52,7 @@ Ensure you replace:
 
 ```xml
 <key>MinimumOSVersion</key>
-<string>11.0</string>
+<string>12.0</string>
 
 <key>CFBundleURLTypes</key>
 <array>

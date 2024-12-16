@@ -1,3 +1,16 @@
+### 2024.12.16 [v6.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+### Updates 
+
+feat(android): move to gradle dependencies
+feat(ios): update ios sdk v7.4.5
+```
+
 ### 2023.09.08 [v5.0.2]
 
 ```
