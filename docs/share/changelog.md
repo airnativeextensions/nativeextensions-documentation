@@ -1,3 +1,18 @@
+### 2024.12.16 [v8.0.0]
+
+```
+## Major Update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+### Updates 
+
+feat(android): move to gradle dependencies
+feat: add shareMultiple to allow sharing of multiple images (resolves https://github.com/distriqt/ANE-Share/issues/211)
+fix(android): correct sms delivered and sent events from sms sending progress (resolves https://github.com/distriqt/ANE-Share/issues/208)
+fix(android): add exported flags for registerReceiver calls to support latest android version (resolves https://github.com/distriqt/ANE-Share/issues/214)
+```
+
 ### 2023.07.06 [v7.6.0]
 
 ```

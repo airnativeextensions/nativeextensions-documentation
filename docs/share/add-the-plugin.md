@@ -37,24 +37,24 @@ The plugin will be added to your project and you can now use the plugins functio
 
 ## Resolve Android Dependencies
 
-This plugin depends on some common Android libraries, particularly the Google Play Core Library, which enables in-app reviews.
+This plugin depends on some common Android libraries, particularly the AndroidX support libraries and the Google Play Services.
 
 You can get these dependencies using one of the following methods.
 
 
-### Unity Jar Resolver
+### External Dependency Manager
 
 This is the suggested method.
 
-Use the *Unity Jar Resolver* plugin to download and manage the Android dependencies. 
+Use the *External Dependency Manager* plugin to download and manage the Android dependencies. 
 
 
 
 #### Importing
 
-> If you already use the *Unity Jar Resolver* in your project you can skip this step.
+> If you already use the *External Dependency Manager* in your project you can skip this step.
 
-- Download the latest version of the [*Unity Jar Resolver*](https://github.com/googlesamples/unity-jar-resolver/releases)
+- Download the latest version of the [*External Dependency Manager*](https://github.com/googlesamples/unity-jar-resolver/raw/master/external-dependency-manager-latest.unitypackage) from the [github repository](https://github.com/googlesamples/unity-jar-resolver)
 - Import the plugin by selecting `Assets / Import Package / Custom Package ...` and locate the plugin you downloaded. The plugin will be in the zip named: `external-dependency-manager-latest.unitypackage` 
 - In the *Import Unity Package* window, click Import
 
@@ -69,11 +69,15 @@ If you have need to resolve the dependencies manually then you will need to:
 - Select `Resolve` or `Force Resolve`
 
 
-More information on the *Unity Jar Resolver* can be found [here](https://github.com/googlesamples/unity-jar-resolver)
+More information on the *External Dependency Manager* can be found [here](https://github.com/googlesamples/unity-jar-resolver)
 
 
 
 ### Custom Gradle Template
+
+:::note
+This applies only if you are using a custom gradle template. If you haven't enabled this then the dependency manager will automatically update this for you.
+:::
 
 Unity's in-built gradle build support and exporting to android studio does not support per plugin gradle script. Therefore, this plugin cannot add the dependencies by itself.
 
@@ -85,20 +89,22 @@ Update the `dependencies` section in your `mainTemplate.gradle` or `build.gradle
 
 ```
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     
-	implementation 'com.google.android.play:core:1.9.1'
+	implementation 'androidx.annotation:annotation:1.2.0' 
+    implementation 'androidx.core:core:1.9.1' 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
 ```
 
 
-:::note Proguard
-If you are using a custom proguard configuration you may need to add the following line to ensure the interface class for the plugin is accessible to unity at runtime.
+### Proguard 
+
+If you are using a custom proguard configuration you will need to add the following line to ensure the interface class for the plugin is accessible to unity at runtime.
 
 ```
 -keep class com.distriqt.extension.share.ShareUnityPlugin {*;}
 ```
-:::
 
 
 ## Checking for Support

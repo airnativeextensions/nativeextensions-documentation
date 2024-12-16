@@ -70,3 +70,77 @@ Share.Instance.share(
 </Tabs>
 
 
+
+## Sharing Multiple Images
+
+You can share multiple images simulataneously by passing an array of images to the `shareMutliple()` method.
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+```actionscript
+[Embed("assets/image1.png")]
+public var TestImage1:Class;
+[Embed("assets/image2.png")]
+public var TestImage2:Class;
+
+Core.init();
+if (Share.isSupported)
+{
+	Share.service.addEventListener( ShareEvent.COMPLETE,	share_shareHandler );
+	Share.service.addEventListener( ShareEvent.CANCELLED,	share_shareHandler );
+	Share.service.addEventListener( ShareEvent.FAILED,  	share_shareHandler );
+	Share.service.addEventListener( ShareEvent.CLOSED,  	share_shareHandler );
+	
+	// Here we have embedded an image "assets/image.png" in our application (above)
+	var image1:Bitmap = new TestImage1() as Bitmap;
+	var image2:Bitmap = new TestImage2() as Bitmap;
+
+  var images:Vector.<BitmapData> = new <BitmapData>[
+				image1.bitmapData,
+				image2.bitmapData
+			];
+	
+	Share.service.share( "Multiple Images", images );
+}
+ 
+function share_shareHandler( event:ShareEvent ):void
+{
+	trace( event.type + "::" + event.activityType + "::" + event.error );
+}
+```
+
+  </TabItem>
+  <TabItem value="unity" >
+
+To share a URL:
+
+```csharp 
+if (Share.isSupported)
+{
+    Share.Instance.share("Check out this site", null, "https://distriqt.com");
+}
+```
+
+
+To share an image (`Texture2D`):
+
+```csharp
+Texture2D image1 = ...; // Some image texture (eg ScreenCapture.CaptureScreenshotAsTexture())
+Texture2D image2 = ...; // Second image
+
+Share.Instance.shareMutliple(
+    "Look at these screenshots",
+    [ image1, image2 ]
+);
+```
+
+  </TabItem>
+</Tabs>
+
+
+
