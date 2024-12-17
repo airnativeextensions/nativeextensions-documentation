@@ -1,3 +1,16 @@
+### 2024.12.17 [v7.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+### Updates 
+
+feat(android): move to gradle dependencies
+feat: marking camera roll functionality as deprecated (resolves #51)
+```
+
 ### 2023.01.18 [v5.2.0]
 
 ```

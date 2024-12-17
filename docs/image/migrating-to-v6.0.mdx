@@ -1,0 +1,17 @@
+---
+title: Migrating to v6.0
+sidebar_label: Migrating to v6.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+This version deprecates the "add to camera roll" functionality. 
+
+This functionality is better covered in the CameraRollExtended extension and we believe the duplication here is unneccessary.
+Particularly due to all the file system changes in Android that require additional handling of the files to share them with the camera roll.
+
+Migration should be relatively straight forward, just replace the `Image.service.saveToCameraRoll()` with `CameraRollExtended.service.addBitmapData()`.
+
+For more information see the documentation on the [CameraRollExtended](/docs/camerarollextended/adding-files).
+
