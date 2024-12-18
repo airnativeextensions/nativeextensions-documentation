@@ -22,10 +22,11 @@ The following should be added to your `extensions` node in your application desc
 The Location extension requires a few additions to the manifest. These additions are to request permissions for the location information and to list receivers for the location updates. You should add the listing below to your manifest, you only need one of the permission 
 strings (coarse/fine) however both are listed below.
 
-> 
-> Make sure you replace `APPLICATION_PACKAGE` with your applications package eg. `air.com.distriqt.test`.
-> This is generally your AIR application id prefixed with `air.`
->
+:::caution
+Make sure you replace `APPLICATION_PACKAGE` with your applications package eg. `air.com.distriqt.test`.
+This is generally your AIR application id prefixed with `air.`
+:::
+
 
 ```xml
 <manifest android:installLocation="auto">
@@ -72,13 +73,6 @@ strings (coarse/fine) however both are listed below.
 	</application>
 	
 </manifest>
-```
-
-If you require access to the location data in the background or if you are using geofences then you must also add the background permission:
-
-```xml
-<!-- NEEDED FOR BACKGROUND LOCATION AND GEOFENCES -->
-<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 ```
 
 
