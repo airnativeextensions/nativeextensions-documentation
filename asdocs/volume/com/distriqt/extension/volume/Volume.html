@@ -10,70 +10,54 @@
 				
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Volume"); titleBar_setSubNav(true,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
 				-->
-			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.volume</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  Volume</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Volume  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>	
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.volume</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  Volume</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Volume  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>
 	              <p>
 	 This class represents the Volume extension.
 	 </p>
-	 
-	 
-	              <b>Stream</b>
-	 
-	              <p>
+	 	 	          <b>Stream</b>
+	 	            <p>
 	 Streams represent the different types of sound that can be generated from
-	 a device, inlcuding ring volumes, notifications, alarms and music. Most 
+	 a device, inlcuding ring volumes, notifications, alarms and music. Most
 	 of the time you'll only be interested in the default music stream.
 	 </p>
-	 
-	              <p>
+	 	            <p>
 	 On iOS there is only the music stream available to developers.
 	 </p>
 	              <p>
 	 Android gives access to all the streams in the <code>VolumeStream</code> class.
 	 </p>
-	 
-	 
-	              <b>Volume Level</b>
-	 
-	              <p>
+	 	 	          <b>Volume Level</b>
+	 	            <p>
 	 You can retrieve and set the volume level using the <code>getVolume</code> and <code>setVolume</code>
 	 functions.
 	 </p>
-	 
-	              <div class="listing"><pre>
+	 	            <div class="listing"><pre>
      var volume:Number = Volume.service.getVolume();
      </pre></div>
-	 
-	              <div class="listing"><pre>
+	 	            <div class="listing"><pre>
      Volume.service.setVolume( 0.75 );
      </pre></div>
-	 
-	              <b>Change events</b>
-	 
-	              <p>
-	 Listening to volume change events is achieved by calling <code>register</code> specifying 
+	 	            <b>Change events</b>
+	 	            <p>
+	 Listening to volume change events is achieved by calling <code>register</code> specifying
 	 the stream of interest. Volume events are dispatched when either the user changes the
 	 volume using the native controls, or by pressing the volume buttons, or when you change
 	 the volume using the <code>setVolume</code> function.
 	 </p>
-	 
-	              <div class="listing"><pre>
+	 	            <div class="listing"><pre>
      Volume.service.addEventListener( VolumeEvent.CHANGED, volumeChangedHandler );
      Volume.service.register();
-     
-     ...
-     
-     private function volumeChangedHandler( event:VolumeEvent ):void
+          ...
+          private function volumeChangedHandler( event:VolumeEvent ):void
      {
-         trace( event.type + "::" +event.volume + " [" + event.stream + "]" );    
+         trace( event.type + "::" +event.volume + " [" + event.stream + "]" );
      }
      </pre></div>
-	 
-	              <p>
-	 You should make sure you call <code>unregister</code> when you are done listening 
+	 	            <p>
+	 You should make sure you call <code>unregister</code> when you are done listening
 	 to cleanup and remove any volume listening functions.
 	 </p>
-	 
-	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+	 	         <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
 		 
 		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isOtherAudioPlaying" class="signatureLink">isOtherAudioPlaying</a> : Boolean<div class="summaryTableDescription">[read-only] 
 		 A Boolean value that indicates whether another app is playing audio.</div></td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
@@ -85,8 +69,7 @@
 		 
 		 The version of this extension.</div></td><td class="summaryTableOwnerCol">Volume</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Volume()" class="signatureLink">Volume</a>()</div><div class="summaryTableDescription">
 		 Constructor
-		 
-		 You should not call this directly, but instead use the singleton access
+		 		 You should not call this directly, but instead use the singleton access
 		 </div></td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
 		 
 		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getVolume()" class="signatureLink">getVolume</a>(stream:String):Number</div><div class="summaryTableDescription">
@@ -102,16 +85,15 @@
 		 
 		 Sets the volume level for the specified stream.</div></td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setVolumeControlStream()" class="signatureLink">setVolumeControlStream</a>(stream:String):void</div><div class="summaryTableDescription">
 		 
-		 On Android this sets the default stream that will get controlled by 
+		 On Android this sets the default stream that will get controlled by
 		 the volume keys.</div></td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unregister()" class="signatureLink">unregister</a>():void</div><div class="summaryTableDescription">
 		 
 		 Unregisters all stream volume listeners.</div></td><td class="summaryTableOwnerCol">Volume</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:error" class="signatureLink">error</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when an error occurs in the native code</td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:volume:changed" class="signatureLink">volume:changed</a></div></td><td class="summaryTableDescription summaryTableCol">
-		 
-		 Dispatched when the volume on the device has been changed.</td><td class="summaryTableOwnerCol">Volume</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.Volume<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 3.2.0<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Volume</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+		 Dispatched when the volume on the device has been changed.</td><td class="summaryTableOwnerCol">Volume</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXT_CONTEXT_ID" class="signatureLink">EXT_CONTEXT_ID</a> : String = com.distriqt.Volume<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Volume</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#VERSION" class="signatureLink">VERSION</a> : String = 3.3.0<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">Volume</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 <p>
-		 The implementation currently in use. 
+		 The implementation currently in use.
 		 This should be one of the following depending on the platform in use and the
 		 functionality supported by this extension:
 		 <ul>
@@ -143,95 +125,75 @@
 		 </p>
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Volume()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Volume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Volume()</code><p></p><p>
 		 Constructor
-		 
-		 You should not call this directly, but instead use the singleton access
+		 		 You should not call this directly, but instead use the singleton access
 		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
 		 <p>
-		 Disposes the extension and releases any allocated resources. Once this function 
-		 has been called, a call to <code>init</code> is neccesary again before any of the 
+		 Disposes the extension and releases any allocated resources. Once this function
+		 has been called, a call to <code>init</code> is neccesary again before any of the
 		 extensions functionality will work.
 		 </p>
 		 </p></div><a name="getVolume()"></a><a name="getVolume(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getVolume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getVolume(stream:String):Number</code><p></p><p></p><p>
 		 <p>
 		 Retrieves the current volume level for the specified stream.
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stream</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; 	The stream of interest. The stream represents the 
-		 					particular type of volume, eg, the ring volume or 
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stream</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; 	The stream of interest. The stream represents the
+		 					particular type of volume, eg, the ring volume or
 		 					the media playback volume.
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; The volume level from 0 to 1. 
-		 
-		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="VolumeStream.html" target="">com.distriqt.extension.volume.VolumeStream</a></div></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; The volume level from 0 to 1.
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="VolumeStream.html" target="">com.distriqt.extension.volume.VolumeStream</a></div></div><a name="init()"></a><a name="init(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function init(key:String):void</code><div xmlns:fn="http://www.w3.org/2005/xpath-functions" style="white-space:nowrap" valign="top"><b>Deprecated: </b>You no longer need to use an application key</div><p></p><p></p><p>
 		 Initialises the extension class for use with the provided key.
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the key is invalid
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:String</code></td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If there was a problem creating or accessing the extension, or if the key is invalid
 		 </td></tr></table></div><a name="isMuted()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isMuted</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function isMuted():Boolean</code><p></p><p></p><p>
 		 <p>
-		 Returns true if the device has been 'muted'. 
+		 Returns true if the device has been 'muted'.
 		 </p>
 		 <p>
 		 On Android this means that the device has been put into one of the vibrate or silent modes.
 		 </p>
 		 <p>
-		 On iOS devices this can be unpredictable mean that the silent switch is on. 
+		 On iOS devices this can be unpredictable mean that the silent switch is on.
 		 </p>
-		 
-		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the device is muted
-		 
-		 </td></tr></table></div><a name="monitorMuteState()"></a><a name="monitorMuteState(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">monitorMuteState</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function monitorMuteState(enabled:Boolean = true):Boolean</code><p></p><p></p><p>
+		 		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if the device is muted
+		 		 </td></tr></table></div><a name="monitorMuteState()"></a><a name="monitorMuteState(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">monitorMuteState</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function monitorMuteState(enabled:Boolean = true):Boolean</code><p></p><p></p><p>
 		 <p>
 		 This starts and stops monitoring of the silent switch.
 		 You will be required to call this before the <code>isMuted</code>
 		 flag will return correctly.
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">enabled</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; true to enable montioring and false to disable
-		 
-		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if successful
-		 
-		 </td></tr></table></div><a name="register()"></a><a name="register(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">register</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function register(stream:String):void</code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">enabled</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; true to enable montioring and false to disable
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; true if successful
+		 		 </td></tr></table></div><a name="register()"></a><a name="register(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">register</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function register(stream:String):void</code><p></p><p></p><p>
 		 <p>
 		 Register for volume updates. This starts the extension listening for changes
 		 to the specified stream volume level.
 		 </p>
 		 <p>
-		 You'll need to call this function for all streams you wish to register listeners 
-		 for. 
+		 You'll need to call this function for all streams you wish to register listeners
+		 for.
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stream</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The stream of interest.
-		 
-		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VolumeStream.html" target="">com.distriqt.extension.volume.VolumeStream</a></div></div><a name="setVolume()"></a><a name="setVolume(Number,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setVolume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setVolume(volume:Number, stream:String):void</code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stream</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The stream of interest.
+		 		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VolumeStream.html" target="">com.distriqt.extension.volume.VolumeStream</a></div></div><a name="setVolume()"></a><a name="setVolume(Number,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setVolume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setVolume(volume:Number, stream:String):void</code><p></p><p></p><p>
 		 <p>
 		 Sets the volume level for the specified stream.
 		 </p>
-		  
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">volume</span>:Number</code> &mdash; The volume level to set (0 -> 1)
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">volume</span>:Number</code> &mdash; The volume level to set (0 -> 1)
 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stream</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The volume stream of interest
-		 
-		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VolumeStream.html" target="">com.distriqt.extension.volume.VolumeStream</a></div></div><a name="setVolumeControlStream()"></a><a name="setVolumeControlStream(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setVolumeControlStream</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setVolumeControlStream(stream:String):void</code><p></p><p></p><p>
+		 		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VolumeStream.html" target="">com.distriqt.extension.volume.VolumeStream</a></div></div><a name="setVolumeControlStream()"></a><a name="setVolumeControlStream(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setVolumeControlStream</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setVolumeControlStream(stream:String):void</code><p></p><p></p><p>
 		 <p>
-		 On Android this sets the default stream that will get controlled by 
-		 the volume keys. The default is generally the ring volume so you 
+		 On Android this sets the default stream that will get controlled by
+		 the volume keys. The default is generally the ring volume so you
 		 can call this function to change the default to be one of the other
 		 supported streams.
 		 </p>
-		 
-		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stream</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The stream of interest
-		 
-		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VolumeStream.html" target="">com.distriqt.extension.volume.VolumeStream</a></div></div><a name="unregister()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unregister</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function unregister():void</code><p></p><p></p><p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stream</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The stream of interest
+		 		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="VolumeStream.html" target="">com.distriqt.extension.volume.VolumeStream</a></div></div><a name="unregister()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unregister</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function unregister():void</code><p></p><p></p><p>
 		 <p>
 		 Unregisters all stream volume listeners. This will stop all volume change events
 		 being broadcast.
 		 </p>
 		 </p></div><div class="detailSectionHeader"> Event Detail </div><a name="event:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">error</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><code>flash.events.ErrorEvent</code><br/><span class="label">ErrorEvent.type property = </span><code>flash.events.ErrorEvent.ERROR</code><br/><p></p><p></p><p>
 	 Dispatched when an error occurs in the native code
-	 
-	 </p></div><a name="event:volume:changed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">volume:changed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/volume/events/VolumeEvent.html"><code>com.distriqt.extension.volume.events.VolumeEvent</code></a><br/><span class="label">VolumeEvent.type property = </span><a href="../../../../com/distriqt/extension/volume/events/VolumeEvent.html#CHANGED"><code>com.distriqt.extension.volume.events.VolumeEvent.CHANGED</code></a><br/><p></p><p></p><p>
+	 	 </p></div><a name="event:volume:changed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">volume:changed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../../../../com/distriqt/extension/volume/events/VolumeEvent.html"><code>com.distriqt.extension.volume.events.VolumeEvent</code></a><br/><span class="label">VolumeEvent.type property = </span><a href="../../../../com/distriqt/extension/volume/events/VolumeEvent.html#CHANGED"><code>com.distriqt.extension.volume.events.VolumeEvent.CHANGED</code></a><br/><p></p><p></p><p>
 	 </p>
-		 <p>
 		 Dispatched when the volume on the device has been changed.
-		 </p> 
-		 
-		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.Volume</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 3.2.0</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Wed Jan 25 2023, 07:36 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Wed Jan 25 2023, 07:36 PM +10:00  -->
+		 		 </div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="EXT_CONTEXT_ID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EXT_CONTEXT_ID</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const EXT_CONTEXT_ID:String = com.distriqt.Volume</code><p></p></div><a name="constantDetail"></a><a name="VERSION"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">VERSION</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const VERSION:String = 3.3.0</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://distriqt.com" target="_top">distriqt</a> 2016</footer><br/>Thu Dec 19 2024, 05:32 PM +10:00  </center></div></body></html><!--Copyright distriqt 2016<br/>Thu Dec 19 2024, 05:32 PM +10:00  -->
