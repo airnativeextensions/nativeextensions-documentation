@@ -1,3 +1,19 @@
+### 2024.12.19 [v8.0.0]
+
+```
+## Major update 
+
+In this update we have moved the extension to use the newer gradle dependencies process.
+
+### Updates 
+
+feat(android): move to gradle dependencies
+feat(android): add additional checks into the isAvailable call to better support more configurations (https://github.com/distriqt/ANE-NativeWebView/issues/330)
+feat(ios,macos,android): add display of target blank actions in a popup dialog 
+fix(windows): remove invalid cache flag settings (resolves https://github.com/distriqt/ANE-NativeWebView/issues/331)
+fix(windows): correct handling of utf16 characters in paths and inputs (resolves https://github.com/distriqt/ANE-NativeWebView/issues/338)
+```
+
 ### 2024.02.01 [v7.2.8]
 
 ```

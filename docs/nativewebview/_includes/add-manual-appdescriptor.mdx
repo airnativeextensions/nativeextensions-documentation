@@ -32,7 +32,8 @@ You should make sure your manifest contains the following:
 ```xml
 <manifest android:installLocation="auto">
     <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-feature android:name="android.software.webview" />
+    
     <queries>
         <package android:name="com.google.android.webview" />
         <intent>
