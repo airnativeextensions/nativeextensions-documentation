@@ -1,3 +1,17 @@
+### 2024.12.19 [v5.5.0]
+
+```
+## Major update 
+
+In this update we have moved the extension to use the newer gradle dependencies process.
+
+### Updates 
+
+feat(android): move to gradle dependencies
+feat(ios): move to tag session reader to better handle different tech and retrieve tag identifier
+feat(android): add reader mode options to disable detection sound
+```
+
 ### 2024.06.24 [v5.3.1]
 
 ```
