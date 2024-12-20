@@ -1,3 +1,9 @@
+### 2024.12.20 [v16.0.1]
+
+```
+fix(airpackage): correct airpackage dependencies
+```
+
 ### 2024.12.20 [v16.0.0]
 
 ```
