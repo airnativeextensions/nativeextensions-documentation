@@ -2603,6 +2603,32 @@ module.exports = {
     },
   ],
 
+  odeeosdk: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "odeeosdk/index" },
+    {
+      "Get Started": ["odeeosdk/add-the-extension"],
+    },
+    {
+      Usage: ["odeeosdk/initialisation", "odeeosdk/adunits"],
+    },
+    {
+      Other: [
+        { type: "doc", id: "odeeosdk/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/odeeosdk/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-OdeeoSDK/issues/new",
+        },
+      ],
+    },
+  ],
+
   packagemanager: [
     { type: "ref", id: "index" },
     { type: "doc", id: "packagemanager/index" },

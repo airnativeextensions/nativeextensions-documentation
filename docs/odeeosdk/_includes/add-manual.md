@@ -37,7 +37,11 @@ These libraries are specific to Android. There are no issues including these on 
 
 This extension requires the following extensions:
 
-- [androidx.core](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [`androidx.core`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane)
+- [`androidx.concurrent`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.concurrent.ane)
+- [`com.google.code.gson`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.code.gson.ane)
+- [`com.google.guava`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.guava.ane)
+- [`com.jetbrains.kotlin`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.jetbrains.kotlin.ane)
 
 You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
 
@@ -55,7 +59,7 @@ will avoid conflicts, allowing you to use multiple extensions in the one applica
 
 This extension requires the following Google Play Services:
 
-- [com.distriqt.playservices.Base.ane](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane)
+- [`com.distriqt.playservices.AdsIdentifier`](https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AdsIdentifier.ane)
 
 You must include the above native extensions in your application along with this extension,
 and you need to ensure they are packaged with your application.
@@ -66,3 +70,19 @@ You can access the Google Play Services client library extensions here:
 
 > **Note:** The Google Play Services and Android Support ANEs are only **required** on Android devices.
 > There are no issues packaging these extensions with all platforms as there are default implementations available which will allow your code to package without errors however if you are only building an iOS application feel free to remove the Google Play Services and Android Support ANEs from your application.
+
+
+
+#### Square ANEs
+
+Due to several of our extensions using the [Square open source libraries](http://square.github.io) the libraries have been separated into separate extensions allowing you to avoid conflicts and duplicate definitions. This means that you need to include the some of the square native extensions in your application along with this extension. 
+
+You will add these extensions as you do with any other extension, and you need to ensure it is packaged with your application. 
+
+This extension requires the following Square extensions:
+
+- [`com.distriqt.square.retrofit2`](https://github.com/distriqt/ANE-SquareLibs/raw/master/lib/com.distriqt.square.retrofit2.ane)
+
+You can access these extensions here: [https://github.com/distriqt/ANE-SquareLibs](https://github.com/distriqt/ANE-SquareLibs).
+
+

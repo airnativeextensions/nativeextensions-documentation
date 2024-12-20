@@ -15,7 +15,7 @@ import SetupAPM from '../../_includes/apm/setup-apm.mdx'
 Install the extension by running: 
 
 ```
-apm install com.distriqt.AppleSignIn
+apm install io.odeeo.OdeeoSDK
 ```
 
 This will download and install the extension, required assets, and all dependencies.
@@ -25,13 +25,17 @@ Once complete `apm` will have created something like the following file structur
 ```
 .
 |____ ane
-| |____ com.distriqt.OdeeoSDK.ane	# OdeeoSDK extension
+| |____ io.odeeo.OdeeoSDK.ane	# OdeeoSDK extension
 | |____ [dependencies]
 |____ apm_packages					# cache directory - ignore
 |____ project.apm					# apm project file
 ```
 
 - Add the `ane` directory to your IDE. *See the tutorials located [here](/docs/tutorials/getting-started) on adding an extension to your IDE.*
+
+- You may have an `assets` directory that contains required assets for the installed extensions. 
+You must add the files in the `assets/android` folder to the root of your Android application package and the `assets/ios` folder to the root of your iOS application package 
+(contains the `Frameworks` folder with required dynamic frameworks). **If these folders don't exist there are no required assets for that platform.**
 
 
 :::info
@@ -42,6 +46,6 @@ We suggest you use the locations directly in your builds rather than copying the
 - You will need to set the configuration values for usage in the extension. Call the following to step through the configuration values for this extension:
 
 ```
-apm project config set com.distriqt.OdeeoSDK
+apm project config set io.odeeo.OdeeoSDK
 ```
 

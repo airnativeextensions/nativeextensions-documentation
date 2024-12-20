@@ -8,17 +8,14 @@ slug: /odeeosdk/
 
 # OdeeoSDK
 
-The [OdeeoSDK](https://airnativeextensions.com/extension/com.distriqt.OdeeoSDK) extension gives you access to ...
-
-TODO
-
+The [OdeeoSDK](https://airnativeextensions.com/extension/io.odeeo.OdeeoSDK) extension gives you access to Odeeo audio ads in your AIR application.
 
 We provide complete guides to get you up and running with sharing quickly and easily.
 
 
 ### Features
 
-- ...
+- Odeeo audio icon and banner adverts
 - Single API interface - your code works across iOS and Android with no modifications
 - Sample project code and ASDocs reference
 
@@ -34,21 +31,26 @@ The [documentation site](https://docs.airnativeextensions.com/docs/odeeosdk) for
 Quick Example: 
 
 ```actionscript title="AIR"
+OdeeoSDK.instance.addEventListener( OdeeoSDKEvent.INIT_SUCCESS, initSuccessHandler );
+
+OdeeoSDK.instance.initialise( API_KEY );
+
+function initSuccessHandler( event:OdeeoSDKEvent ):void
+{
+    // sdk is initialised
+    var adUnit:AdUnit = OdeeoSDK.instance.createAdUnit( AdUnitType.ICON, "PLACEMENT_ID" );
+    adUnit.addEventListener( AdUnitEvent.AVAILABILITY_CHANGED, adUnitAvailabilityChangedHandler );
+}
+
+function adUnitAvailabilityChangedHandler( event:AdUnitEvent ):void
+{
+    var adUnit:AdUnit = AdUnit(event.currentTarget);
+    if (adUnit.isAdAvailable())
+    {
+        adUnit.showAd();
+    }
+}
 ```
-
-More information here: 
-
-[com.distriqt.OdeeoSDK](https://airnativeextensions.com/extension/com.distriqt.OdeeoSDK)
-
-
-## License
-
-You can purchase a license for using this extension:
-
-- [airnativeextensions.com](https://airnativeextensions.com/)
-
-
-distriqt retains all copyright.
 
 
 ![](images/promo.png)
