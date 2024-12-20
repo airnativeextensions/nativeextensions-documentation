@@ -1,3 +1,21 @@
+### 2024.12.20 [v16.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+https://docs.airnativeextensions.com/docs/pushnotifications/migrating-to-v16.0
+
+### Updates
+
+feat(android): move to gradle dependencies (resolves https://github.com/distriqt/ANE-PushNotifications/issues/621, resolves https://github.com/distriqt/ANE-PushNotifications/issues/623)
+feat(ios,fcm): update firebase messaging sdk to v11.5.0  (resolves https://github.com/distriqt/ANE-PushNotifications/issues/614, https://github.com/distriqt/ANE-PushNotifications/issues/620)
+feat(android,fcm): add additional processing on notification data to better handle fcm properties
+fix(ios,fcm): correct packaging of bundle required for certain in-app messages (resolves https://github.com/distriqt/ANE-PushNotifications/issues/618) 
+feat(onesignal): update sdk: android v5.1.26 iOS v5.2.9 (resolves https://github.com/distriqt/ANE-PushNotifications/issues/609)
+```
+
 ### 2024.07.25 [v15.0.2]
 
 ```

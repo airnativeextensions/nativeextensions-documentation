@@ -1,0 +1,131 @@
+---
+title: Migrating to v16.0
+sidebar_label: Migrating to v16.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This latest release brings a number of updates to the extension particularly around android integration. 
+
+We have moved to using gradle dependencies within our extensions which will improve dependency resolution, reduce update times and improve compatibility with other extensions.
+This also reduces the amount of work required to manually integrate the extensions, reducing the additions to the manifest (though we still highly recommend using apm for this purpose).
+
+There should be no changes required to your code for this update.
+
+However we do suggest checking out the manifest additions for the latest version of the extension as you should be able to greatly simplify your application descriptor now.
+
+
+The iOS FCM implementation has been updated to v11.5.0 however the implementation remains largely unchanged. There are some bug fixes and improvements in the iOS implementation.
+
+
+
+
+## Android Integration 
+
+### Gradle Dependencies
+
+We have moved to using gradle dependencies within our extensions which will improve dependency resolution, reduce update times and improve compatibility with other extensions.
+
+This also reduces the amount of work required to manually integrate the extensions, reducing the additions to the manifest in your application descriptor.
+
+We highly recommend using the [apm](https://airnativeextensions.com/docs/using-apm) tool to manage the integration of the extensions in your application and to generate your application descriptor:
+
+```bash
+apm update
+apm generate app-descriptor
+```
+
+However, you can still integrate the manifest additions manually if you prefer. With this update we recommend starting fresh as there have been a lot of entries to be removed.
+
+
+
+### Updating code 
+
+There should be no changes to your code required for this update.
+
+
+### Updating the manifest 
+
+You can simplify the manifest now as well as the gradle implementation will add a significant amount of the required manifest entries for you. 
+If you use the `apm` tool to generate your application descriptor you will see the manifest entries are significantly reduced and simply running the commands above will update the manifest for you.
+
+If you manually update the manifest then, as mentioned above, we recommend starting fresh as there have been a lot of entries to be removed.
+The minimum manifest additions for FCM now looks like the following:
+
+```xml
+<manifest android:installLocation="auto">
+
+	<uses-sdk android:minSdkVersion="21" />
+
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	
+	<!-- BADGE -->
+	<uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+	<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+	<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+	<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+	<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+	<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+	<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_APP_BADGE" />
+	<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+	
+	<application>
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
+		<!-- NOTIFICATIONS -->
+		<receiver android:name="com.distriqt.extension.pushnotifications.notifications.receivers.NotificationReceiver" android:exported="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="${applicationId}.NOTIFICATION_DELETED" />
+				<action android:name="${applicationId}.NOTIFICATION_ACTION" />
+				<data android:scheme="dtpn" />
+			</intent-filter>
+		</receiver>
+		<activity android:name="com.distriqt.extension.pushnotifications.notifications.NotificationActivity" android:exported="false">
+			<intent-filter>
+				<action android:name="${applicationId}.NOTIFICATION_SELECTED" />
+				<action android:name="${applicationId}.NOTIFICATION_ACTION" />
+				<data android:scheme="dtpn" />
+			</intent-filter>
+		</activity>
+		<provider
+			android:name="com.distriqt.extension.pushnotifications.content.FileProvider"
+			android:authorities="${applicationId}.pushnotificationsfileprovider"
+			android:grantUriPermissions="true"
+			android:exported="false">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/distriqt_pushnotifications_paths" />
+		</provider>
+
+		<!-- FIREBASE CLOUD MESSAGING -->
+		<!-- <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_stat_distriqt" /> -->
+		<!-- <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/blue" /> -->
+		<!-- <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="test_sound_res_channel"/> -->
+
+		<service android:name="com.distriqt.extension.pushnotifications.fcm.FcmMessagingService" android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
+		
+
+	</application>
+
+</manifest>
+```
+

@@ -3,8 +3,6 @@
 
 The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
 
-The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
-
 ```xml
 <extensions>
 	<extensionID>com.distriqt.PushNotifications</extensionID>
@@ -53,32 +51,31 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 ```xml
 <manifest android:installLocation="auto">
 
-	<uses-sdk android:minSdkVersion="19" />
-	
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+	<uses-sdk android:minSdkVersion="21" />
 
-	<!-- OPTIONAL -->
-	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 	
-	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> 
-	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-	<permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-	<uses-permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" />
+	<!-- BADGE -->
+	<uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+	<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+	<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+	<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+	<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+	<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+	<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_APP_BADGE" />
+	<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
 	
-	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
-	
+	<application>
 		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
-
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-
-		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity" 
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" 
-			android:exported="false"/>
-
 
 		<!-- NOTIFICATIONS -->
 		<receiver android:name="com.distriqt.extension.pushnotifications.notifications.receivers.NotificationReceiver" android:exported="false">
@@ -87,187 +84,44 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
 			</intent-filter>
 			<intent-filter>
-				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELETED" />
-				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
+				<action android:name="${applicationId}.NOTIFICATION_DELETED" />
+				<action android:name="${applicationId}.NOTIFICATION_ACTION" />
 				<data android:scheme="dtpn" />
 			</intent-filter>
 		</receiver>
 		<activity android:name="com.distriqt.extension.pushnotifications.notifications.NotificationActivity" android:exported="false">
 			<intent-filter>
-				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED" />
-				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
+				<action android:name="${applicationId}.NOTIFICATION_SELECTED" />
+				<action android:name="${applicationId}.NOTIFICATION_ACTION" />
 				<data android:scheme="dtpn" />
 			</intent-filter>
 		</activity>
 		<provider
 			android:name="com.distriqt.extension.pushnotifications.content.FileProvider"
-			android:authorities="APPLICATION_PACKAGE.pushnotificationsfileprovider"
+			android:authorities="${applicationId}.pushnotificationsfileprovider"
 			android:grantUriPermissions="true"
 			android:exported="false">
 			<meta-data
 				android:name="android.support.FILE_PROVIDER_PATHS"
 				android:resource="@xml/distriqt_pushnotifications_paths" />
 		</provider>
-		
-
 
 		<!-- FIREBASE CLOUD MESSAGING -->
-		<!--
-				FirebaseMessagingService performs security checks at runtime,
-				but set to not exported to explicitly avoid allowing another app to call it.
-		-->
+		<!-- <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_stat_distriqt" /> -->
+		<!-- <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/blue" /> -->
+		<!-- <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="test_sound_res_channel"/> -->
+
 		<service android:name="com.distriqt.extension.pushnotifications.fcm.FcmMessagingService" android:exported="false">
 			<intent-filter>
 				<action android:name="com.google.firebase.MESSAGING_EVENT"/>
 			</intent-filter>
 		</service>
-		<service
-			android:name="com.google.firebase.messaging.FirebaseMessagingService"
-            android:directBootAware="true"
-			android:exported="false" >
-			<intent-filter android:priority="-500" >
-				<action android:name="com.google.firebase.MESSAGING_EVENT" />
-			</intent-filter>
-		</service>
-		<service
-			android:name="com.google.firebase.components.ComponentDiscoveryService"
-			android:directBootAware="true"
-			android:exported="false" >
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-		</service>
-
-		<receiver
-			android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-			android:exported="true"
-			android:permission="com.google.android.c2dm.permission.SEND" >
-			<intent-filter>
-				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
-			</intent-filter>
-		</receiver>
-
-		<activity
-			android:name="com.google.android.gms.common.api.GoogleApiActivity"
-			android:exported="false"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-		<provider
-			android:name="com.google.firebase.provider.FirebaseInitProvider"
-			android:authorities="APPLICATION_PACKAGE.firebaseinitprovider"
-			android:exported="false"
-			android:initOrder="100" />
-
-		<receiver
-			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-			android:enabled="true"
-			android:exported="false" >
-		</receiver>
-		<receiver
-			android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
-			android:enabled="true"
-			android:exported="true"
-			android:permission="android.permission.INSTALL_PACKAGES" >
-			<intent-filter>
-				<action android:name="com.android.vending.INSTALL_REFERRER" />
-			</intent-filter>
-		</receiver>
-
-		<service
-			android:name="com.google.android.gms.measurement.AppMeasurementService"
-			android:enabled="true"
-			android:exported="false" />
-		<service
-			android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-			android:enabled="true"
-			android:exported="false"
-			android:permission="android.permission.BIND_JOB_SERVICE" />
-
-
-		<!-- datatransport -->
-		<service
-			android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-			android:exported="false" >
-			<meta-data
-				android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-				android:value="cct" />
-		</service>
-		<service
-			android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-			android:exported="false"
-			android:permission="android.permission.BIND_JOB_SERVICE" >
-		</service>
-
-		<receiver
-			android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-			android:exported="false" />
 		
-		
-		
+
 	</application>
-	
+
 </manifest>
 ```
-
-
-#### Component Discovery Service
-
-The `com.google.firebase.components.ComponentDiscoveryService` is particularly important for Firebase configuration.
-
-The meta-data tags that are added to this service specify the components that should be initialised by Firebase and you must ensure that you have added the appropriate tags for the services you are using.
-
-Firebase Messaging depends on Analytics so you must at least include the following tags:
-
-
-- Analytics:
-
-```xml
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-```
-
-- Messaging (FCM):
-
-```xml
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-```
-
-- In-App Messaging: 
-
-```xml
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-<meta-data
-	android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar"
-	android:value="com.google.firebase.components.ComponentRegistrar" />
-```
-
 
 
 

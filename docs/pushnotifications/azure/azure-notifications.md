@@ -96,7 +96,7 @@ The following should be added to your `extensions` node in your application desc
 
 
 
-# Android 
+## Android 
 
 
 Azure uses FCM on Android (not on iOS), so you will need to go through the setup of Firebase for Android
@@ -139,17 +139,28 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 	<permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 	<uses-permission android:name="APPLICATION_PACKAGE.permission.C2D_MESSAGE" />
 	<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+	<!-- BADGE -->
+	<uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+	<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+	<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+	<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+	<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+	<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+	<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_APP_BADGE" />
+	<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
 	
 	<application>
 		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
 		
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-
-		<activity android:name="com.google.android.gms.common.api.GoogleApiActivity" 
-			android:theme="@android:style/Theme.Translucent.NoTitleBar" 
-			android:exported="false"/>
-
-        
         <!-- AZURE CLOUD MESSAGING -->
         <service android:name="com.distriqt.extension.pushnotifications.azure.AzureInstanceIDService">
             <intent-filter>
@@ -188,84 +199,14 @@ Generally this is your AIR application id prefixed by `air.` unless you have spe
 		</provider>
 
 			
-
-		<!-- FIREBASE CORE -->
-		<!-- analytics -->
-		<receiver
-			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-			android:enabled="true">
-			<intent-filter>
-				<action android:name="com.google.android.gms.measurement.UPLOAD"/>
-			</intent-filter>
-		</receiver>
-		<service
-			android:name="com.google.android.gms.measurement.AppMeasurementService"
-			android:enabled="true"
-			android:exported="false"/>
-			
-		<!-- common -->
-		<provider
-			android:authorities="APPLICATION_PACKAGE.firebaseinitprovider"
-			android:name="com.google.firebase.provider.FirebaseInitProvider"
-			android:exported="false"
-			android:initOrder="100" />
-		
-		<!-- iid -->
-		<receiver
-			android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-			android:exported="true"
-			android:permission="com.google.android.c2dm.permission.SEND" >
-			<intent-filter>
-				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
-				<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-				<category android:name="APPLICATION_PACKAGE" />
-			</intent-filter>
-		</receiver>
-		<receiver
-			android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
-			android:exported="false" />
-		<service
-			android:name="com.google.firebase.iid.FirebaseInstanceIdService"
-			android:exported="true">
-			<intent-filter android:priority="-500">
-				<action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-			</intent-filter>
-		</service>
-		
-		
-		
 	</application>
 	
 </manifest>
 ```
 
-### MultiDex Applications 
-
-If you have a large application and are supporting Android 4.x then you will need to ensure you enable your application to correctly support MultiDex to allow the application to be broken up into smaller dex packages.
-
-This is enabled by default with releases of AIR v25+, except in the Android 4.x case where you need to change the manifest additions for the application tag to match the following and use the `MultiDexApplication`.
 
 
-#### Using AndroidX
-
-This will require the addition of the `androidx.multidex` extension which contains the `androidx.multidex.MultiDexApplication` implementation.
-
-```xml
-<manifest android:installLocation="auto">
-	<!-- PERMISSIONS -->
-
-	<application android:name="androidx.multidex.MultiDexApplication">
-
-		<!-- ACTIVITIES / RECEIVERS / SERVICES -->
-
-	</application>
-</manifest>
-```
-
-
-
-
-# iOS 
+## iOS 
 
 Azure uses APNS on iOS so you will have to go through the [setup process of APNS](../apple/apple-push-notification-service)
 before using Azure.

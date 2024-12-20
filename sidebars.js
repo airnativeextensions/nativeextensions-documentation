@@ -2602,7 +2602,7 @@ module.exports = {
       ],
     },
   ],
-
+  
   packagemanager: [
     { type: "ref", id: "index" },
     { type: "doc", id: "packagemanager/index" },
