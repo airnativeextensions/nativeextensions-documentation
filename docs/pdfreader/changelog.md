@@ -1,3 +1,9 @@
+### 2024.12.20 [v6.0.1]
+
+```
+fix(android): add missing gradle repositories
+```
+
 ### 2024.12.20 [v6.0.0]
 
 ```
