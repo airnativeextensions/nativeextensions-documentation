@@ -7,6 +7,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.OCR</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 
@@ -28,3 +29,14 @@ Your `Frameworks` directory should at least contain:
 TesseractOCR.framework
 ```
 
+
+### Android
+
+#### Manifest Additions 
+
+
+```xml
+<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+</manifest>
+```
