@@ -2602,7 +2602,7 @@ module.exports = {
       ],
     },
   ],
-  
+
   packagemanager: [
     { type: "ref", id: "index" },
     { type: "doc", id: "packagemanager/index" },
@@ -2791,6 +2791,7 @@ module.exports = {
     },
     {
       Troubleshooting: [
+        "pushnotifications/migrating-to-v16.0",
         "pushnotifications/migrating-to-v13.0",
         "pushnotifications/migrating-to-v11.3",
         "pushnotifications/migrating-to-v11.2",
