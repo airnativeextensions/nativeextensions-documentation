@@ -1,3 +1,10 @@
+### 2025.01.14 [v1.0.4]
+
+```
+feat(ios): update lib to v5.14.5 
+fix(airpackage): correctly specify ios minimum version as 13
+```
+
 ### 2024.08.07 [v1.0.3]
 
 ```
