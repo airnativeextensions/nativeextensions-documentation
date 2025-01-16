@@ -1,6 +1,5 @@
 ---
-title: Migrating to Version 10
-sidebar_label: Migrating to Version 10
+title: Migrating to v10
 ---
 
 Version 10 of the FacebookAPI brings a major update to version 13 of the Facebook SDK.

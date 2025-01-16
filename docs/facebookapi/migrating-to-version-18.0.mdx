@@ -1,0 +1,114 @@
+---
+title: Migrating to v18.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This latest release brings a number of updates to the extension particularly around the Android integration. 
+
+The Android implementation has been updated to v17.0.1 and the iOS implementation has been updated to v18.0.0. 
+This should bring a range of bug fixes and improvements however the implementation remains largely unchanged. 
+The main change is around the integration of the extension into your application as we have moved to using gradle dependencies within our extensions.
+
+
+## Android Integration 
+
+### Gradle Dependencies
+
+We have moved to using gradle dependencies within our extensions which will improve dependency resolution, reduce update times and improve compatibility with other extensions.
+
+This also reduces the amount of work required to manually integrate the extensions, reducing the additions to the manifest in your application descriptor.
+
+We highly recommend using the [apm](https://airnativeextensions.com/docs/using-apm) tool to manage the integration of the extensions in your application and to generate your application descriptor:
+
+```bash
+apm update
+apm generate app-descriptor
+```
+
+However, you can still integrate the manifest additions manually if you prefer. With this update we recommend starting fresh as there have been a lot of entries to be removed.
+
+
+
+### Updating code 
+
+There should be no changes to your code required for this update.
+
+
+### Updating the manifest 
+
+You can simplify the manifest now as well as the gradle implementation will add a significant amount of the required manifest entries for you. 
+If you use the `apm` tool to generate your application descriptor you will see the manifest entries are significantly reduced and simply running the commands above will update the manifest for you.
+
+If you manually update the manifest then, as mentioned above, we recommend starting fresh as there have been a lot of entries to be removed.  You no longer have to manually add all of the Facebook related manifest entries as these are now added automatically by the gradle implementation.
+
+There are still some meta-data entries that you may need to add for specific features, but these are minimal.
+
+Below are the minimum manifest additions required for each of the extensions.
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+- You will need to replace the instances of `FACEBOOK_APP_ID`, `FACEBOOK_APP_NAME` and `FACEBOOK_CLIENT_TOKEN` with the relevant settings from your Facebook app. See [Get Started](../../get-started.md) for details. 
+- Ensure the `\u003` remains in front of the app id and client token (this ensures the value is treated as a string correctly).
+:::
+
+
+#### Core and Login
+
+```xml
+<manifest android:installLocation="auto">
+
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	
+	<application>
+
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\u003FACEBOOK_APP_ID"/>
+		<meta-data android:name="com.facebook.sdk.ClientToken" android:value="\u003FACEBOOK_CLIENT_TOKEN"/>
+
+		<!-- Optional meta-data configuration -->
+		<!-- <meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="false"/> -->
+		<!-- <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/> -->
+		<!-- <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="false"/> -->
+
+</manifest>
+```
+
+#### Share and Gaming
+
+```xml
+<manifest android:installLocation="auto">
+
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<queries>
+		<provider android:authorities="com.facebook.katana.provider.PlatformProvider" /> <!-- allows app to access Facebook app features -->
+		<provider android:authorities="com.facebook.orca.provider.PlatformProvider" /> <!-- allows sharing to Messenger app -->
+	</queries>
+	
+	<application>
+
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\u003FACEBOOK_APP_ID"/>
+		<meta-data android:name="com.facebook.sdk.ClientToken" android:value="\u003FACEBOOK_CLIENT_TOKEN"/>
+
+		<!-- Optional meta-data configuration -->
+		<!-- <meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="false"/> -->
+		<!-- <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/> -->
+		<!-- <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="false"/> -->
+
+		<!-- Share -->
+		<provider android:authorities="com.facebook.app.FacebookContentProviderFACEBOOK_APP_ID"
+			android:name="com.facebook.FacebookContentProvider"
+			android:exported="true"/>
+
+</manifest>
+```
+
+
+

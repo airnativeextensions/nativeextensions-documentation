@@ -1210,6 +1210,7 @@ module.exports = {
     },
     {
       Help: [
+        "facebookapi/migrating-to-version-18.0",
         "facebookapi/signing",
         "facebookapi/migrating-to-version-10",
         "facebookapi/migrating-to-version-9",

@@ -1,6 +1,5 @@
 ---
-title: Migrating to Version 8
-sidebar_label: Migrating to Version 8
+title: Migrating to v8
 ---
 
 Version 8 of the FacebookAPI brings a complete rewrite and restructure of the API to bring it inline with the latest Facebook SDK and to remove a series of API elements that Facebook have deprecated and removed over time.

@@ -1,6 +1,5 @@
 ---
-title: Migrating to Version 9
-sidebar_label: Migrating to Version 9
+title: Migrating to v9
 ---
 
 Version 9 of the FacebookAPI brings a major internal update to the iOS SDK.

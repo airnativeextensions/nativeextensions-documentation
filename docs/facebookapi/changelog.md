@@ -1,3 +1,18 @@
+###### 2025.01.16 [v18.0.0]
+
+```
+## Major update 
+
+In this update we have moved all the extensions to use the newer gradle dependencies process. 
+
+See the migration guide: https://docs.airnativeextensions.com/docs/facebookapi/migrating-to-18.0
+
+
+feat(android): update to use new gradle dependencies (resolves https://github.com/distriqt/ANE-FacebookAPI/issues/386, resolves https://github.com/airsdk/apm/issues/214, https://github.com/airsdk/apm/issues/213)
+feat(android): update facebook sdk v17.0.1
+feat(ios): update facebook sdk v18.0.0
+```
+
 ###### 2024.05.17 [v17.0.0]
 
 ```
