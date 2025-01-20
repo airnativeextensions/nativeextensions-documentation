@@ -1,3 +1,10 @@
+### 2025.01.20 [v10.0.2]
+
+```
+feat(core): add ios on-device conversion measurement api (resolves https://github.com/distriqt/ANE-Firebase/issues/505) 
+fix(auth,database,firestore,remoteconfig,performance): move ios frameworks to common core extension that were causing conflicts from multiple extensions (https://github.com/airsdk/Adobe-Runtime-Support/issues/3644)
+```
+
 ### 2024.12.05 [v10.0.0]
 
 ```
