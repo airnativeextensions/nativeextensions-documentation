@@ -1,3 +1,9 @@
+### 2025.01.20 [v7.0.1]
+
+```
+fix(ios): move ios frameworks to common core extension that were causing conflicts from multiple extensions (https://github.com/airsdk/Adobe-Runtime-Support/issues/3644)
+```
+
 ### 2024.12.05 [v7.0.0]
 
 ```
