@@ -8,8 +8,15 @@ slug: /flurry
 ![](images/hero.png)
 
 
-
 # Flurry
+
+:::caution Deprecated
+The Flurry SDK has been deprecated.
+
+While this extension will still be available please be aware that the services will eventually stop working, and we will wind down support and development on the ANE to coincide. 
+
+If you have any questions or concerns you can contact us at airnativeextensions@distriqt.com.
+:::
 
 This extension gives you the ability to access the Access to the Flurry Analytics service from Yahoo (https://developer.yahoo.com/analytics/).
 
