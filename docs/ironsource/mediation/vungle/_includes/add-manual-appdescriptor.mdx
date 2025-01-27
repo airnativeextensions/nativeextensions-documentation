@@ -22,35 +22,44 @@ The following should be added to your `extensions` node in your application desc
 ```
 
 
-
 #### Android
+
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+
 
 ##### Manifest Additions
 
-Add the following to your manifest additions inside the `application` tag. 
-
-:::caution
-Ensure you replace:
--  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
-:::
+You will need to ensure you have set `android:hardwareAccelerated="true"` in your application descriptor to enable video playback and avoid conflict with the Vungle SDK.
 
 ```xml
-<!-- VUNGLE -->
-<activity
-    android:name="com.vungle.ads.internal.ui.VungleActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-    android:hardwareAccelerated="true"
-    android:launchMode="singleTop" />
+<manifest android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <application android:hardwareAccelerated="true">
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+  </application>
+</manifest>
 ```
 
 
-#### iOS 
+#### iOS
+
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/ios` folder to the root of your iOS application package. 
+
+
+##### Dynamic Frameworks
 
 Add the `assets/ios/Frameworks` folder to your application package, ensuring the dynamic `VungleAdsSDK.framework` is included.
 
 
 ##### Info Additions
-
 
 Add the following to your `InfoAdditions` node updating the usage description strings as required for your application:
 

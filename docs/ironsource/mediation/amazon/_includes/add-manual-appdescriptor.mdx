@@ -11,7 +11,7 @@ The following should be added to your `extensions` node in your application desc
     <extensionID>com.distriqt.ironsource.Amazon</extensionID>
 
     <extensionID>com.distriqt.playservices.Base</extensionID>
-	<extensionID>com.distriqt.playservices.Ads</extensionID>
+	<extensionID>com.distriqt.playservices.AppSet</extensionID>
 
     <extensionID>androidx.core</extensionID>
     <extensionID>com.jetbrains.kotlin</extensionID>
@@ -22,14 +22,11 @@ The following should be added to your `extensions` node in your application desc
 
 #### Android
 
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+
+
 ##### Manifest Additions
 
-Add the following to your manifest additions inside the `application` tag. 
+No additions required
 
-
-```xml
-<!-- AMAZON -->
-<activity
-    android:name="com.amazon.device.ads.AdActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize" />
-```

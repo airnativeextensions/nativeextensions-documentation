@@ -2124,7 +2124,10 @@ module.exports = {
       ],
     },
     {
-      Help: ["ironsource/migrating-to-androidx"],
+      Help: [
+        "ironsource/migrating-to-version-5.0",
+        "ironsource/migrating-to-androidx"
+      ],
     },
     {
       Other: [

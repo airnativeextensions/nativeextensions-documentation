@@ -20,33 +20,22 @@ The following should be added to your `extensions` node in your application desc
 ```
 
 
-
 #### Android
+
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/android` folder to the root of your Android application package. 
+
 
 ##### Manifest Additions
 
-Add the following to your manifest additions inside the `application` tag. 
+No additions required
 
-```xml
-<!-- TAPJOY -->
-<activity
-    android:name="com.tapjoy.TJAdUnitActivity"
-    android:configChanges="orientation|keyboardHidden|screenSize"
-    android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-<activity
-    android:name="com.tapjoy.TJContentActivity"
-    android:configChanges="orientation|keyboardHidden|screenSize"
-    android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-<activity
-    android:name="com.tapjoy.TJWebViewActivity"
-    android:configChanges="orientation|keyboardHidden|screenSize"
-    android:hardwareAccelerated="true"
-    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-```
 
-#### iOS 
+#### iOS
+
+If there is an `assets` directory alongside the extension in the repository that contains required assets for the installed extensions.
+You must add the files in the `assets/ios` folder to the root of your iOS application package. 
+
 
 ##### Info Additions
 
