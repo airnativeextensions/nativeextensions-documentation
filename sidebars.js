@@ -1692,6 +1692,7 @@ module.exports = {
     {
       Help: [
         "gameservices/troubleshooting",
+        "gameservices/migrating-to-v10.0",
         "gameservices/migrating-to-androidx",
       ],
     },
