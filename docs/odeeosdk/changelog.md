@@ -1,3 +1,9 @@
+### 2025.01.30 [v0.0.4]
+
+```
+feat(ios,android): add placementId accessor on ad units
+```
+
 ### 2024.12.20 [v0.0.3]
 
 ```
