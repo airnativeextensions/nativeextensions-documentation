@@ -39,10 +39,7 @@ db.collection("cities")
 
 ## Paginate a query
 
-> **NOT YET AVAILABLE** Coming soon
-
 Paginate queries by combining query cursors with the `limit()` method. For example, use the last document in a batch as the start of a cursor for the next batch.
-
 
 ```actionscript
 var first:Query = FirebaseFirestore.service.collection("users")

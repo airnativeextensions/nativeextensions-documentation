@@ -64,14 +64,56 @@ citiesRef.whereGreaterThanOrEqualTo("state", "CA").whereGreaterThan("population"
 ```
 
 
+## OR queries
+
+You can combine constraints with a logical OR. For example:
+
+```actionscript
+var query:Query = collection.where(
+        Filter.or(
+                Filter.equalTo( "capital", true),
+                Filter.greaterThanOrEqualTo("population", 1000000)
+));
+```
+  
+Firestore uses your composite indexes to serve OR queries. If your indexes do not support the query, Firestore suggests additional indexes for your database.
+
+You can combine OR queries with compound queries to filter on combinations of OR and AND operations. For example:
+
+```actionscript
+var query:Query = collection.where(
+        Filter.and(
+                Filter.equalTo("state", "CA"),
+                Filter.or(
+                        Filter.equalTo("capital", true),
+                        Filter.greaterThanOrEqualTo("population", 1000000)
+                )
+        )
+);
+```
+
+
+### Limitations
+
+Note the following limitations for OR queries:
+
+- Firestore limits a query to a maximum of 30 disjunctions based on the query's disjunctive normal form. You are more likely to reach this limit when performing an AND of multiple OR groups.
+- You can't combine not-in with in, array-contains-any, or or in the same query.
+
+
+
 ## Query limitations
 
-Cloud Firestore does not support the following types of queries:
+The following list summarizes Firestore query limitations:
 
-- Queries with range filters on different fields, as described in the previous section.
-- Single queries across multiple collections or subcollections. Each query runs against a single collection of documents. For more information about how your data structure affects your queries, see Choose a Data Structure.
-- Logical OR queries. In this case, you should create a separate query for each OR condition and merge the query results in your app.
-- Queries with a != clause. In this case, you should split the query into a greater-than query and a less-than query. For example, although the query clause where("age", "!=", "30") is not supported, you can get the same result set by combining two queries, one with the clause where("age", "<", "30") and one with the clause where("age", ">", 30).
+- Firestore provides support for logical OR queries through the or, in, and array-contains-any operators. These queries are limited to 30 disjunctions based on the query's disjunctive normal form.
+- You can use at most one `array-contains` clause per disjunction (`or` group). You can't combine `array-contains` with `array-contains-any` in the same disjunction.
+- You can't combine `not-in` with `in`, `array-contains-any`, or `or` in the same query.
+- Only a single `not-in` or `!=` is allowed per query.
+- `not-in` supports up to 10 comparison values.
+- The sum of filters, sort orders, and parent document path (1 for a subcollection, 0 for a root collection) in a query cannot exceed 100. This is calculated based on the disjunctive normal form of the query.
+A query with an inequality filter on a field implies ordering by that field and filters for existence of that field.
 
 
+- For a full description of limitations, see [Query limitations](https://cloud.google.com/firestore/docs/query-data/queries#query_limitations).
 
