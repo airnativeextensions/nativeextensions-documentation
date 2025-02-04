@@ -20,20 +20,36 @@ The following should be added to your `extensions` node in your application desc
 #### Manifest Additions
 
 
-Add the following permissions to your manifest additions, these permissions are used by the Huawei SDK to access certain configuration data and request installation of packages if found missing from the device:
+Add the following to your manifest additions (ensure you only have one `<application>` node in your manifest):
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
+
+<application>
+
+    <meta-data 
+        android:name="com.huawei.hms.client.appid" 
+        android:value="appid=HUAWEI_APP_ID" />
+    <meta-data 
+        android:name="com.huawei.hms.client.cpid" 
+        android:value="cpid=HUAWEI_CP_ID" />
+
+    <activity android:name="com.distriqt.extension.inappbilling.activities.ProductViewActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+    
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+</application>
 ```
 
+:::info
+- Replace `HUAWEI_APP_ID` with the app ID generated when creating the app on the HUAWEI Developers console. 
+- Replace `HUAWEI_CP_ID` with the cp ID.
 
+You can find these values as `app_id` and `cp_id` in the `agconnect-services.json` file that you downloaded from the HUAWEI Developer Console.
+:::
 
-These should be added to the `application` node in your manifest additions. Replace any occurances of `APPLICATION_PACKAGE` with the Android java package name of your application.
+Make sure that the `HUAWEI_APP_ID` value is set to the app ID that has been generated when [registering a HUAWEI ID and applying for the HUAWEI ID service](https://developer.huawei.com/consumer/en/doc/connectivity-Guides/registering-applying-account-0000001050818011).
 
-
-```xml
-<activity android:name="com.distriqt.extension.inappbilling.activities.ProductViewActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
-```
 
 
 #### Manifest Example 
@@ -47,18 +63,21 @@ These should be added to the `application` node in your manifest additions. Repl
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application>
+        <meta-data android:name="android.max_aspect" android:value="2.5" />
+
+        <meta-data 
+            android:name="com.huawei.hms.client.appid" 
+            android:value="appid=1234567890" />
+        <meta-data 
+            android:name="com.huawei.hms.client.cpid" 
+            android:value="cpid=000000111112222" />
 
         <activity android:name="com.distriqt.extension.inappbilling.activities.ProductViewActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
-
-        <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+        
+        <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
     </application>
 
 </manifest>
 ```
 
-### iOS
-
-#### InfoAdditions
-
-There are no required iOS additions to the application descriptor.

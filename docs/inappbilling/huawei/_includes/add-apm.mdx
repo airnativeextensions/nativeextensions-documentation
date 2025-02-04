@@ -52,6 +52,14 @@ We suggest you use the locations directly in your builds rather than copying the
 :::
 
 
+- You must set a few pieces of configuration information for Huawei. This will allow `apm` to automatically insert them into the correct position in your application descriptor. 
+
+You can call the following to step through the all the configuration values for this extension:
+
+```
+apm project config set com.distriqt.InAppBilling
+```
+
 :::caution
 Only install one variant of an package. The base variant is installed when no variant is specified and cannot be included alongside another variant. You will likely get an error if you attempt to install multiple variants with `apm`
 :::

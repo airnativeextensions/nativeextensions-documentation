@@ -7,32 +7,6 @@ The following guide is used to manually install the extension, download dependen
 To add the extension to your development environment. Download the `com.distriqt.InAppBilling.AppGallery.ane` extension from the repository and then follow the tutorial located [here](/docs/tutorials/getting-started) to add the extension to your development environment.
 
 
-
-### Assets
-
-Along with the `agconnect-services.json` there are a series of assets that need to be packaged with your application. 
-These assets are required by the Huawei SDK and if not included an error will be dispatched when calling `setup()`. 
-
-Copy all the files in the `assets` folder (alongside the extensions):
-
-- `com.huawei.hms.base`: 
-    - `grs_sdk_global_route_config_apptouchupdatesdk.json`
-    - `grs_sdk_global_route_config_hmscoreInstallerSDK.json`
-    - `grs_sdk_global_route_config_updatesdk.json`
-
-- `com.huawei.hms.coreinstaller`: 
-    - `grs_sdk_global_route_config_opensdkService.json`
-    - `grs_sdk_server_config.json`
-    - `grs_sp.bks`
-    - `hmsincas.bks`
-    - `hmsrootcas.bks`
-
-
-
-These need to be added at the root level of your application and packaged with your application. You will find these assets in the [HMS repository](https://github.com/distriqt/ANE-HuaweiMobileServices) under `lib/assets/android` alongside the HMS extensions. 
-
-
-
 ### Dependencies
 
 Many of our extensions use some common libraries, for example, the Android Support libraries.
