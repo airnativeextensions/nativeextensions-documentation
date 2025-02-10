@@ -15,7 +15,7 @@ What this means for you:
 
 - Smaller extension file sizes – Free up space & streamline your builds
 - Faster compilation times – Get things done in record time
-- No more manual manifest additions – Spend less time on setup
+- Much simpler manual manifest additions – Spend less time on setup
 - Better dependency resolution – Seamless updates and fewer conflicts
 - Improved compatibility – Extensions work together more smoothly
 
