@@ -1,3 +1,10 @@
+### 2025.02.14 [v0.1.0]
+
+```
+feat(android): update sdk v3.4.4
+feat(ios): improved callback handling
+```
+
 ### 2025.01.30 [v0.0.4]
 
 ```
