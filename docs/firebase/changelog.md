@@ -1,3 +1,12 @@
+### 2025.02.13 [v10.1.0]
+
+```
+feat(firestore): add snapshot pagination (resolves https://github.com/distriqt/ANE-Firebase/issues/249)
+feat(firestore): add filter queries (resolves https://github.com/distriqt/ANE-Firebase/issues/497)
+feat(firestore): add new cache settings (remove deprecated usage and mark docs appropriately)
+fix(airpackage): increase minimum ios version to 13 (resolves https://github.com/airsdk/Adobe-Runtime-Support/issues/3663)
+```
+
 ### 2025.01.20 [v10.0.2]
 
 ```
