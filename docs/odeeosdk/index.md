@@ -22,6 +22,7 @@ We provide complete guides to get you up and running with sharing quickly and ea
 As with all our extensions you get access to a year of support and updates as we are 
 continually improving and updating the extensions for OS updates and feature requests.
 
+https://portal.odeeo.io/apps
 
 
 ## Documentation
