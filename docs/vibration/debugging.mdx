@@ -1,0 +1,41 @@
+---
+title: Debugging
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+## Log Level
+
+If you need to troubleshoot the functionality it can be useful to enable debug logging. This will enable logging to the native debug log and allow you or our developers to investigate any issues you may be having with the extension.
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+
+
+To control the logging outputs use the `setLogLevel()` method passing one of the `LogLevel` constants, for example:
+
+```csharp
+Vibration.service.setLogLevel( LogLevel.DEBUG );
+```
+
+  </TabItem>
+  <TabItem value="unity" >
+
+To control the logging outputs use the `SetLogLevel()` method passing one of the `LogLevel` constants, for example:
+
+```csharp
+Vibration.Instance.SetLogLevel( LogLevel.DEBUG );
+```
+
+  </TabItem>
+</Tabs>
+
+
+Once you have changed the log level you can use the native logging outputs (eg Console on macOS for iOS applications, or `adb logcat` for Android applications) to investigate the operation of the extension.
+

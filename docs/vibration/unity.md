@@ -387,6 +387,19 @@ Not available yet
 <!--newpage-->
 
 
+## Troubleshooting
+
+If you need to troubleshoot the functionality it can be useful to enable debug logging. This will enable logging to the native debug log and allow you or our developers to investigate any issues you may be having with the plugin.
+
+To control the logging outputs use the `SetLogLevel()` method passing one of the `LogLevel` constants, for example:
+
+```csharp
+Vibration.Instance.SetLogLevel( LogLevel.DEBUG );
+```
+
+Once you have changed the log level you can use the native logging outputs (eg Console on macOS for iOS applications, or `adb logcat` for Android applications) to investigate the operation of the plugin.
+
+
 
 ## Support
 

@@ -1,3 +1,9 @@
+### 2025.03.12 [v5.4.1]
+
+```
+feat(docs): update docs to include logging information
+```
+
 ### 2025.03.12 [v5.4.0]
 
 ```

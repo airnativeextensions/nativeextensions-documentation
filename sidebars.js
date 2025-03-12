@@ -3167,6 +3167,9 @@ module.exports = {
         "vibration/feedback-generators",
         "vibration/haptic-engine",
       ],
+      Troubleshooting: [
+        "vibration/debugging",
+      ]
     },
     {
       Other: [
