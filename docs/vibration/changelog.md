@@ -1,3 +1,9 @@
+### 2025.03.12 [v5.4.0]
+
+```
+feat: add ability to limit logging outputs using setLogLevel
+```
+
 ### 2024.12.19 [v5.3.0]
 
 ```
