@@ -39,8 +39,11 @@ You must add the files in the `assets/ios` folder to the root of your iOS applic
 
 ##### Dynamic Frameworks
 
-Add the `assets/ios/Frameworks` folder to your application package, ensuring the dynamic `FBAudienceNetwork.framework` is included along with any swift libraries (`dylib` files).
+:::danger
+We have been able to switch to the static version of the Facebook Audience framework. 
 
+This means you must remove the `FBAudienceNetwork.framework` from your `Frameworks` directory.
+:::
 
 ##### Info Additions
 
