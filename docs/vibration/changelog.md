@@ -1,3 +1,9 @@
+### 2025.03.25 [v5.4.2]
+
+```
+fix(unity): add namespace to editor post build scripts
+```
+
 ### 2025.03.12 [v5.4.1]
 
 ```
