@@ -22,14 +22,14 @@ You will need the **"SHA-256"** fingerprint for Huawei services.
 macOS: 
 
 ```
-keytool -exportcert -keystore PATH_TO_CERTIFICATE.p12 -storepass PASSWORD -list -v -storetype PKCS12
+keytool -keystore PATH_TO_CERTIFICATE.p12 -storepass PASSWORD -list -v -storetype PKCS12
 ```
 
 
 windows:
 
 ```
-keytool.exe -exportcert -keystore PATH_TO_CERTIFICATE.p12 -storepass PASSWORD -list -v -storetype PKCS12
+keytool.exe -keystore PATH_TO_CERTIFICATE.p12 -storepass PASSWORD -list -v -storetype PKCS12
 ```
 
 >

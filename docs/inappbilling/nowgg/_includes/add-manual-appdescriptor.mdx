@@ -1,0 +1,81 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.InAppBilling</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.google.android.play</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+
+
+### Android
+
+#### Manifest Additions
+
+now.gg requires a minimum sdk version of 24 so you should ensure your manifest is specifying at least this version.
+
+```xml
+<uses-sdk android:minSdkVersion="24" />
+```
+
+We also recommend adding the following queries to allow the extension to check for the availability of the service:
+
+```xml
+<queries>
+	<intent>
+		<action android:name="gg.now.vending.billing.InAppBillingService.BIND"/>
+	</intent>
+	<package android:name="gg.now.billing.service2"/>
+</queries>
+```
+
+Add the following inside the `application` node in your manifest additions:
+
+```xml
+<!-- NOW GG -->
+<activity
+	android:name="gg.now.billingclient.api.ProxyBillingActivity"
+	android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation|locale"
+	android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+```
+
+
+##### Manifest Example 
+
+
+```xml
+<android>
+	<manifestAdditions><![CDATA[
+		<manifest android:installLocation="auto">
+
+			<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34" />
+
+			<uses-permission android:name="android.permission.INTERNET"/>
+
+			<application>
+
+				<!-- NOW GG -->
+				<activity
+					android:name="gg.now.billingclient.api.ProxyBillingActivity"
+					android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation|locale"
+					android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+			</application>
+
+		</manifest>
+	]]></manifestAdditions>
+</android>
+```
+
+
+### iOS
+
+now.gg does not support iOS, look to the standard Apple In-App Purchase server for iOS support.
+

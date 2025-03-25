@@ -1,3 +1,12 @@
+### 2025.03.25 [v16.1.1]
+
+```
+fix(android,playbilling): change subscription offer to correctly return id and token separately (resolves https://github.com/distriqt/ANE-InAppBilling/issues/625)
+fix(android): fix finish purchase null object handling (resolves https://github.com/distriqt/ANE-InAppBilling/issues/621)
+fix(docs,airpackage): correct missing documentation on Huawei configuration values
+feat(android,nowgg): release of nowgg integration
+```
+
 ### 2024.12.11 [v16.0.0]
 
 ```
