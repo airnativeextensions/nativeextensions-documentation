@@ -1,3 +1,9 @@
+### 2025.03.26 [v3.0.1]
+
+```
+fix(docs): update manual integration docs to reflect new gradle dependency requirements (resolves https://github.com/airnativeextensions/ANE-InAppUpdates/issues/1)
+```
+
 ### 2024.12.19 [v3.0.0]
 
 ```
