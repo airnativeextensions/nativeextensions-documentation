@@ -1,3 +1,9 @@
+### 2025.03.27 [v5.5.2]
+
+```
+fix(unity): correct undefined symbol due to build error
+```
+
 ### 2025.03.26 [v5.5.1]
 
 ```
