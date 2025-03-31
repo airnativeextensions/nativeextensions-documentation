@@ -1,3 +1,9 @@
+### 2025.03.31 [v16.1.2]
+
+```
+fix(default): correct missing method defintions from fallback default lib (resolves https://github.com/distriqt/ANE-InAppBilling/issues/634)
+```
+
 ### 2025.03.25 [v16.1.1]
 
 ```
