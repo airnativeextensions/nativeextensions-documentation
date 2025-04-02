@@ -1,3 +1,9 @@
+### 2025.04.02 [v7.0.1]
+
+```
+fix(ios): correct the opening of the review page when calling the rate method (resolves https://github.com/distriqt/ANE-ApplicationRater/issues/93)
+```
+
 ### 2024.12.11 [v7.0.0]
 
 ```
