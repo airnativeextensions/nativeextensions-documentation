@@ -65,7 +65,7 @@ As you investigate offers you may wish to expand this, but this is a simple way 
 
 If in the past you have used discounts and the `ProductDiscount` class then you will need to completely migrate to the new `SubscriptionOffer` approach.
 
-Check the documentation on [Subscription Offers](subscription-offers.md) for more information.
+Check the documentation on [Subscription Offers](subscription-offers) for more information.
 
 
 

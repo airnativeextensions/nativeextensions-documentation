@@ -1,0 +1,685 @@
+---
+title: Make a Purchase
+sidebar_label: Make a Purchase
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+Finally we reach the most important process in this extension, making a purchase. 
+
+Making a purchase requires making a request to initiate the purchase and then "finishing the purchase" to 
+finalise the purchase and remove it from any internal queues.
+
+Firstly create a `PurchaseRequest` object and set the `productId` and `quantity` you wish to purchase. 
+Then pass this object to the **make purchase** function. 
+This will initiate the purchase flow, most likely leaving your application and taking the user to the store interface.
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+As the state of the purchase transaction changes you will be notified through the `PurchaseEvent.PURCHASES_UPDATED` event.
+You should also listen for the `PurchaseEvent.PURCHASE_FAILED` event to handle any errors that may occur.
+
+```actionscript
+InAppBilling.service.addEventListener( PurchaseEvent.PURCHASES_UPDATED, purchases_updatedHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.PURCHASE_FAILED, purchase_failedHandler );
+
+var request:PurchaseRequest = new PurchaseRequest();
+request.productId = productId;
+request.quantity = 1;
+
+var success:Boolean = InAppBilling.service.makePurchase( request );
+```
+
+</TabItem>
+<TabItem value="unity">
+
+As the state of the purchase transaction changes you will be notified through the `InAppBilling.Instance.Events.OnPurchasesUpdated` event.
+You should also listen for the `InAppBilling.Instance.Events.OnPurchaseFailed` event to handle any errors that may occur.
+
+```csharp
+InAppBilling.Instance.Events.OnPurchasesUpdated += OnPurchasesUpdated;
+InAppBilling.Instance.Events.OnPurchaseFailed += OnPurchaseFailed;
+
+PurchaseRequest request = new PurchaseRequest();
+request.productId = productId;
+request.quantity = 1;
+
+bool success = InAppBilling.Instance.MakePurchase( request );
+```
+</TabItem>
+</Tabs>
+
+
+:::note Subscriptions
+If you are purchasing a subscription you must provide an offer as part of the `PurchaseRequest`. 
+See [Subscription Offers](subscription-offers) for more information.
+
+Failure to supply an offer will result in an error being thrown.
+:::
+
+
+## Purchase Request Validity
+
+The success value returned here indicates whether the purchase was initiated successfully.
+If the purchase was not initiated successfully then potentially there was an error in the 
+request or potentially there is a pending purchase for the product.
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+```actionscript
+var request:PurchaseRequest = new PurchaseRequest();
+request.productId = productId;
+request.quantity = 1;
+
+if (InAppBilling.service.CheckPurchaseRequestValid(request))
+{
+	var success:Boolean = InAppBilling.service.makePurchase( request );
+}
+else
+{
+	trace("Invalid purchase request");
+}
+```
+
+</TabItem>
+<TabItem value="unity">
+
+You can use the `CheckPurchaseRequestValid` method to check if the request is valid before calling `makePurchase()`.
+
+```csharp
+PurchaseRequest request = new PurchaseRequest();
+request.productId = productId;
+request.quantity = 1;
+
+if (InAppBilling.Instance.CheckPurchaseRequestValid(request))
+{
+	bool success = InAppBilling.Instance.MakePurchase( request );
+}
+else
+{
+	Debug.Log("Invalid purchase request");
+}
+```
+</TabItem>
+</Tabs>
+
+:::note Events
+The process of checking a purchase request may dispatch purchases updated event if there are pending purchases
+matching the request. Make sure you are listening for this event before checking the purchase request.
+:::
+
+
+
+## Purchase Failure
+
+It is important that you listen for the **purchase failed** event. This will be dispatched 
+in situations where the purchase could not be attempted due to various reasons. You should
+refer to the error code and message in the event to determine if it can be resolved.
+
+One of the most common situations that this will occur on is when the product is already owned
+by the user on Android. This case you should check for the `ErrorCodes.ITEM_ALREADY_OWNED` error code and 
+then load the purchases to retrieve the purchase.
+
+See the section on [Get Purchases](get-purchases) for more information on this process of retrieving purchases.
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+```actionscript
+private function purchase_failedHandler( event:PurchaseEvent ):void
+{
+	switch (event.errorCode)
+	{
+		case ErrorCodes.ITEM_ALREADY_OWNED:
+			// The user already owns this item, this will only occur on Android
+
+			// You should use getPurchases() to retrieve the users purchases
+			// and then add them as missing from their current inventory
+			getPurchases();
+			break;
+
+		case ErrorCodes.RESPONSE_CANCELLED:
+		case ErrorCodes.USER_CANCELLED:
+			// User cancelled the transaction before it was initiated
+			break;
+
+		default:
+			// Generic failure
+			// This transaction failed so you should notify your user and finish the purchase
+			if (event.data && event.data.length > 0)
+			{
+				InAppBilling.service.finishPurchase( event.data[0] );
+			}
+
+	}
+}
+```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+private void OnPurchaseFailed(PurchaseEvent e)
+{
+	switch (e.errorCode)
+	{
+		case ErrorCodes.ITEM_ALREADY_OWNED:
+			// The user already owns this item, this will only occur on Android
+
+			// You should use getPurchases() to retrieve the users purchases
+			// and then add them as missing from their current inventory
+			GetPurchases();
+			break;
+
+		case ErrorCodes.RESPONSE_CANCELLED:
+		case ErrorCodes.USER_CANCELLED:
+			// User cancelled the transaction before it was initiated
+			break;
+
+		default:
+			// Generic failure
+			Debug.Log("Purchase failed: " + e.errorCode + " " + e.message);
+			break;
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Finishing Purchases 
+
+It is important that you **finish a purchase** when you have completed the purchase 
+and either handled the error or deployed the product to the user's inventory.
+
+If you don't finish a purchase then the purchase will remain in a pending state and 
+you will get notified again of the purchase when calling setup or making other purchases. 
+**In some circumstances, failing to finish a purchase may result in the purchase being cancelled and the user refunded.**
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+To finish a purchase you need to call the `finishPurchase()` method and pass the `Purchase` object that you received in the `PurchaseEvent`.
+
+```actionscript
+InAppBilling.service.finishPurchase( purchase );
+```
+
+Once complete the `FINISH_SUCCESS` event will be dispatched or if an error occurred then the `FINISH_FAILED` event will be dispatched:
+
+```actionscript
+InAppBilling.service.addEventListener( InAppBillingEvent.FINISH_SUCCESS, successHandler );
+InAppBilling.service.addEventListener( InAppBillingEvent.FINISH_FAILED, failedHandler );
+
+
+function successHandler( event:InAppBillingEvent ):void
+{
+	trace( "finish purchase complete" );
+}
+
+function failedHandler( event:InAppBillingEvent ):void
+{
+	trace( "finish failed: ["+event.errorCode+"]" + event.message );
+}
+```
+
+</TabItem>
+<TabItem value="unity">
+
+To finish a purchase you need to call the `FinishPurchase()` method and pass the `Purchase` object that you received in the `OnPurchasesUpdated` or `OnPurchaseFailed` event.
+
+```csharp
+InAppBilling.Instance.FinishPurchase( purchase );
+```
+
+Once complete the `OnFinishPurchaseSuccess` event will be dispatched or if an error occurred then the `OnFinishPurchaseFailed` event will be dispatched:
+
+```csharp
+InAppBilling.Instance.Events.OnFinishPurchaseSuccess += OnFinishPurchaseSuccess;
+InAppBilling.Instance.Events.OnFinishPurchaseFailed += OnFinishPurchaseFailed;
+
+private void OnFinishPurchaseSuccess(PurchaseEvent e)
+{
+	Debug.Log("Finish purchase complete");
+}
+
+private void OnFinishPurchaseFailed(PurchaseEvent e)
+{
+	Debug.Log("Finish failed: " + e.errorCode + " " + e.message);
+}
+```
+
+</TabItem>
+</Tabs>
+
+:::note Important
+You must call finish a purchase and confirm by receiving the success event 
+before attempting any other operation such as consuming the purchase. 
+
+The purchase is still in a pending state and not considered delivered to the user until you do. 
+:::
+
+
+
+### Apple In-App Purchases
+
+With Apple's In-App Purchases finishing a purchase will remove the purchase from the transaction queue, 
+and inform Apple that you have delivered (and potentially verified) the purchase.
+
+Purchases are not finished automatically as you may wish to verify the purchase with your server or other service before delivering the product to the user.
+You should perform any verification of the purchase before finishing the purchase.
+
+
+### Google Play Billing
+
+With Google Play Billing finishing a purchase performs the *acknowledgement of the purchase*.
+Purchases that aren't acknowledged will be returned in the pending purchases list and **may be refunded if you do not acknowledge them**.
+
+:::note 
+Google Play supports purchasing products from inside of your app (in-app) or outside of your app (out-of-app). 
+In order for Google Play to ensure a consistent purchase experience regardless of where the user purchases your product, 
+you must acknowledge all purchases received through the Google Play Billing Library as soon as possible after 
+granting entitlement to the user. If you do not acknowledge a purchase within three days, the user automatically 
+receives a refund, and Google Play revokes the purchase. 
+:::
+
+
+Note: *Previously you may have attached a developer payload at this point. This is no longer supported and has 
+been removed by Google in the Play Billing library v3.0.* Instead consider using an obfuscated `applicationUsername` 
+on your purchase request which will now get returned with a `Purchase` through Google Play Billing.
+
+
+
+
+
+### Example
+
+The simplest way to finish purchases is to simply call this in the purchases updated event handler, 
+however you may wish to do this at a later time, for example, if you wish to validate the purchase 
+using the transaction receipt with your application server. 
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+```actionscript
+// The service must be setup and a list of products retrieved.
+
+InAppBilling.service.addEventListener( PurchaseEvent.PURCHASES_UPDATED, purchases_updatedHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.PURCHASE_FAILED, purchase_failedHandler );
+InAppBilling.service.addEventListener( InAppBillingEvent.FINISH_SUCCESS, finishPurchase_successHandler );
+InAppBilling.service.addEventListener( InAppBillingEvent.FINISH_FAILED, finishPurchase_failedHandler );
+
+
+var request:PurchaseRequest = new PurchaseRequest();
+request.productId = productId;
+request.quantity = 1;
+
+var success:Boolean = InAppBilling.service.makePurchase( request );
+
+trace( "makePurchase( "+productId+" ) = " + success );
+
+
+//
+//	PURCHASE HANDLER
+//
+
+function purchases_updatedHandler( event:PurchaseEvent ):void
+{
+	for each (var purchase:Purchase in event.data)
+	{
+		switch (purchase.transactionState)
+		{
+			// These transactions are in progress, so don't finish them unless you don't want them to complete
+			case Purchase.STATE_PURCHASING:
+			case Purchase.STATE_DEFERRED:
+				break;
+			
+			// The purchased state should finished after you have delivered the product if applicable
+			case Purchase.STATE_PURCHASED:
+            {
+				trace( "purchase success" );
+				
+				//
+				// If you wish you can add the purchase to your inventory
+				// and finish the purchase here
+				addPurchaseToInventory( purchase );
+				InAppBilling.service.finishPurchase( purchase );
+				
+				//
+				// Alternatively hold onto this purchase so we can call
+				// finish when you've delivered the product
+				//
+				// You would do this if you are validating the purchase on a server or
+				// other operation that is required to complete before the product is delivered
+				//_purchases.push( purchase );
+				break;
+			}
+			
+			
+			// For all other states you should handle appropriately and call finish purchase 
+			case Purchase.STATE_FAILED:
+			case Purchase.STATE_REFUNDED:
+			case Purchase.STATE_RESTORED:
+			case Purchase.STATE_REMOVED:
+			case Purchase.STATE_CANCELLED:
+			case Purchase.STATE_NOTALLOWED:
+				InAppBilling.service.finishPurchase( purchase );
+				break;
+		}
+	}
+}
+
+function purchase_failedHandler( event:PurchaseEvent ):void
+{
+	trace( "purchase failed ["+event.errorCode+"]" + event.message );
+}
+
+function finishPurchase_successHandler( event:InAppBillingEvent ):void
+{
+	trace( "finish purchase complete" );
+}
+
+function finishPurchase_failedHandler( event:InAppBillingEvent ):void
+{
+	trace( "finish failed: ["+event.errorCode+"]" + event.message );
+}
+
+```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+// The service must be setup and a list of products retrieved.
+
+InAppBilling.Instance.Events.OnPurchasesUpdated += OnPurchasesUpdated;
+InAppBilling.Instance.Events.OnPurchaseFailed += OnPurchaseFailed;
+InAppBilling.Instance.Events.OnFinishPurchaseSuccess += OnFinishPurchaseSuccess;
+InAppBilling.Instance.Events.OnFinishPurchaseFailed += OnFinishPurchaseFailed;
+
+PurchaseRequest request = new PurchaseRequest();
+request.productId = productId;
+request.quantity = 1;
+
+bool success = InAppBilling.Instance.MakePurchase( request );
+
+Debug.Log("makePurchase( " + productId + " ) = " + success );
+
+private void OnPurchasesUpdated(PurchaseEvent e)
+{
+	foreach (Purchase purchase in e.purchases)
+	{
+		switch (purchase.transactionState)
+		{
+			case Purchase.STATE_PURCHASING:
+			case Purchase.STATE_DEFERRED:
+				break;
+
+			case Purchase.STATE_PURCHASED:
+				Debug.Log("Purchase completed: " + purchase.transactionState);
+				//
+                // If you wish you can add the purchase to your inventory
+                // and finish the purchase here
+                AddPurchaseToInventory( purchase );
+                InAppBilling.Instance.FinishPurchase(purchase);
+                
+                //
+                // Alternatively hold onto this purchase so we can call
+                // finish when you've delivered the product
+                //
+                // You would do this if you are validating the purchase on a server or
+                // other operation that is required to complete before the product is delivered
+                //_purchases.push( purchase );
+				break;
+
+			// User cancelled the transaction
+			case Purchase.STATE_CANCELLED:
+				InAppBilling.Instance.FinishPurchase(purchase);
+				break;
+
+			case Purchase.STATE_FAILED:
+			case Purchase.STATE_REFUNDED:
+			case Purchase.STATE_RESTORED:
+			case Purchase.STATE_REMOVED:
+			case Purchase.STATE_NOTALLOWED:
+				InAppBilling.Instance.FinishPurchase(purchase);
+				break;
+
+		}
+	}
+}
+
+
+private void OnPurchaseFailed(PurchaseEvent e)
+{
+	Debug.Log("Purchase failed: " + e.errorCode + " " + e.message);
+}
+
+
+private void OnFinishPurchaseSuccess(PurchaseEvent e)
+{
+	Debug.Log("Finish purchase complete");
+}
+
+
+private void OnFinishPurchaseFailed(PurchaseEvent e)
+{
+	Debug.Log("Finish failed: " + e.errorCode + " " + e.message);
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+
+## Handling User Cancellations
+
+When a user cancels a purchase there are two avenues that you'll need to handle, 
+due to the different ways that Android and iOS handle these cases.
+
+On iOS there will be a `Purchase` initiated immediately so when the user cancels 
+the purchase you will receive a `PurchaseEvent.PURCHASES_UPDATED` and the purchases 
+transaction state will be set to `Purchase.STATE_CANCELLED`.
+
+You will need to handle this case in your purchases updated handler and finish the 
+purchase to remove it from the pending purchases queue.
+
+For example:
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+```actionscript
+function purchases_updatedHandler( event:PurchaseEvent ):void
+{
+	for each (var purchase:Purchase in event.data)
+	{
+		switch (purchase.transactionState)
+		{
+			// Other states ... 
+
+			case Purchase.STATE_CANCELLED:
+				// User Cancelled
+				InAppBilling.service.finishPurchase( purchase );
+				break;
+		}
+	}
+} 
+```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+private void OnPurchasesUpdated(PurchaseEvent e)
+{
+	foreach (Purchase purchase in e.purchases)
+	{
+		switch (purchase.transactionState)
+		{
+			// Other states ... 
+
+			case Purchase.STATE_CANCELLED:
+				// User Cancelled
+				InAppBilling.Instance.FinishPurchase(purchase);
+				break;
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+On Android the purchase is not initiated so there is no `Purchase` to return, 
+hence you will not receive a purchases updated event but instead a `PurchaseEvent.PURCHASE_FAILED` 
+event will be dispatched. The error code on the failed event will be set to `ErrorCodes.USER_CANCELLED` 
+or `ErrorCodes.RESPONSE_CANCELLED` so you can use this code to process the user cancellation. 
+As this purchase was not initiated it does not need to be finished and will not appear in the 
+pending purchases queue.
+
+For example:
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+```actionscript
+function purchase_failedHandler( event:PurchaseEvent ):void
+{
+	switch (event.errorCode)
+	{
+		// Other error codes...
+
+		case ErrorCodes.RESPONSE_CANCELLED:
+		case ErrorCodes.USER_CANCELLED:
+			// User cancelled
+			break;
+	}
+}
+```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+private void OnPurchaseFailed(PurchaseEvent e)
+{
+	switch (e.errorCode)
+	{
+		// Other error codes...
+
+		case ErrorCodes.RESPONSE_CANCELLED:
+		case ErrorCodes.USER_CANCELLED:
+			// User cancelled
+			break;
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+You should ensure you handle both these cases in your application if you wish to handle user cancellations. 
+
+
+
+## Deferred Purchases
+
+Of special note are deferred purchases. Deferred purchases are purchases that are in progress and require further user action external to your application, such as a parental approval or payment in cash at a physical store.
+
+With Apple's In-App Purhcases:
+
+>
+> The transaction is in the queue, but its final status is pending external action such as Ask to Buy. Update your UI to show the deferred state, and wait for another callback that indicates the final status.
+>
+
+With Google Play Billing the deferred state is equivalent to the "PENDING" purchase state referenced in the Google documentation, where additional action is required before granting entitlement.
+
+>
+> For example, a user might choose to purchase your in-app product at a physical store using cash. This means that the transaction is completed outside of your app. In this scenario, you should grant entitlement only after the user has completed the transaction.
+>
+
+
+
+In order to correctly handle deferred purchases you should **not finish the purchase**, but leave it in the queue until the user completes the external action.
+
+Once the user completes the action you will receive a purchases updated event and should process the purchase at that point.
+It is important however if you display some "purchase in progress" UI during the making a purchase process that you close that once you receive this event. You may wish to display a message appropriate to your application indicating that they need to take action outside the app.
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+```actionscript
+function purchases_updatedHandler( event:PurchaseEvent ):void
+{
+	for each (var purchase:Purchase in event.data)
+	{
+		switch (purchase.transactionState)
+		{
+			// Do nothing with the deferred purchase. 
+			// Ensure you close any "purchase in progress" UI 
+			case Purchase.STATE_DEFERRED:
+				break;
+
+			// Other states ...
+		}
+	}
+}
+```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+private void OnPurchasesUpdated(PurchaseEvent e)
+{
+	foreach (Purchase purchase in e.purchases)
+	{
+		switch (purchase.transactionState)
+		{
+			// Do nothing with the deferred purchase. 
+			// Ensure you close any "purchase in progress" UI 
+			case Purchase.STATE_DEFERRED:
+				break;
+
+			// Other states ...
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+

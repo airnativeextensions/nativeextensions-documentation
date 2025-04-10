@@ -24,7 +24,7 @@ It is up to you to decide if this is required for your situation.
 
 
 :::info
-The "Application Receipt" variant performs local validation of the application receipt to retrieve purchase information and makes this information available through the [Get Purchases](get-purchases.md) API.
+The "Application Receipt" variant performs local validation of the application receipt to retrieve purchase information and makes this information available through the [Get Purchases](get-purchases) API.
 :::
 
 

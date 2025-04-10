@@ -1,0 +1,95 @@
+---
+title: Migration v17.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This latest release brings a refactoring of the extension around products and purchases events.
+
+The purpose here is to reduce the ambiguity of the InAppBillingEvent that was previously used to handle all events and to provide a more consistent API for handling purchases and products.
+
+The existing events will continue to work but we recommend you update your code to use the new events as they are more consistent and easier to use.
+
+
+## Product Events 
+
+The `ProductEvent` class has been introduced to handle product events. This means the following events:
+
+- `InAppBillingEvent.PRODUCTS_LOADED`
+- `InAppBillingEvent.PRODUCTS_FAILED`
+- `InAppBillingEvent.INVALID_PRODUCT`
+
+Are now handled by the `ProductEvent` class with similarly named events. 
+
+- `ProductEvent.PRODUCTS_LOADED`
+- `ProductEvent.PRODUCTS_FAILED`
+- `ProductEvent.INVALID_PRODUCT`
+
+This means you should update your code to use the new event class and the new event types.
+
+```actionscript
+InAppBilling.service.addEventListener( ProductEvent.PRODUCTS_LOADED, products_loadedHandler );
+InAppBilling.service.addEventListener( ProductEvent.PRODUCTS_FAILED, products_failedHandler );
+InAppBilling.service.addEventListener( ProductEvent.INVALID_PRODUCT, invalid_productHandler );
+```
+
+The parameters for the events are slightly different as well. The `ProductEvent` class now has a `products` property that contains the list of products that were loaded or failed to load. This replaces the `data` property that was previously used on the `InAppBillingEvent` class.
+
+
+So the `products_loadedHandler` function should be updated to use the new event class and the new event properties.
+
+Previously:
+
+```actionscript
+private function products_loadedHandler( event:InAppBillingEvent ):void
+{
+    trace( "products loaded: " + event.data );
+}
+```
+
+Now:
+
+```actionscript
+private function products_loadedHandler( event:ProductEvent ):void
+{
+    trace( "products loaded: " + event.products );
+}
+```
+
+
+## Purchase Events
+
+The existing `PurchaseEvent` class has been updated to handle all purchase related events. This means the following events:
+
+- `InAppBillingEvent.RESTORE_PURCHASES_SUCCESS`
+- `InAppBillingEvent.RESTORE_PURCHASES_FAILED`
+- `InAppBillingEvent.CONSUME_SUCCESS`
+- `InAppBillingEvent.CONSUME_FAILED`
+- `InAppBillingEvent.FINISH_SUCCESS`
+- `InAppBillingEvent.FINISH_FAILED`
+
+Have all been moved to the `PurchaseEvent` class with similarly named events.
+
+- `PurchaseEvent.RESTORE_PURCHASES_SUCCESS`
+- `PurchaseEvent.RESTORE_PURCHASES_FAILED`
+- `PurchaseEvent.CONSUME_SUCCESS`
+- `PurchaseEvent.CONSUME_FAILED`
+- `PurchaseEvent.FINISH_SUCCESS`
+- `PurchaseEvent.FINISH_FAILED`
+
+This means you should update your code to use the new event class and the new event types.
+
+```actionscript
+InAppBilling.service.addEventListener( PurchaseEvent.RESTORE_PURCHASES_SUCCESS, restore_purchases_successHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.RESTORE_PURCHASES_FAILED, restore_purchases_failedHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.CONSUME_SUCCESS, consume_successHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.CONSUME_FAILED, consume_failedHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.FINISH_SUCCESS, finish_successHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.FINISH_FAILED, finish_failedHandler );
+```
+
+The parameters for the events are slightly different as well. The `PurchaseEvent` class has a `data` property that is strongly typed to be a `Vector.<Purchase>` that contains the purchases related to the event. This replaces the untyped `data` property that is used on the `InAppBillingEvent` class.
+
+

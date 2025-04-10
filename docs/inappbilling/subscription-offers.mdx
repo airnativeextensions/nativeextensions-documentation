@@ -3,6 +3,9 @@ title: Subscription Offers
 sidebar_label: Subscription Offers
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 A subscription represents a set of benefits users can access during a specified time period. For example, a subscription might entitle a user to access a music streaming service.
 
 You can have multiple subscriptions within the same app, either to represent different sets of benefits, or different tiers of a single set of benefits ("Silver" and "Gold" tiers, for example).
@@ -12,10 +15,16 @@ Through base plans and offers, you can create multiple configurations for the sa
 
 ## Retrieving Subscription Offers
 
-Information on the offers for a subscription are retrieved as part of the `getProducts()` call.
+Information on the offers for a subscription are retrieved when you get your products.
 
 Every subscription will have at least one available `SubscriptionOffer`. These are retrieved for each `Product` in the `subscriptionOffers` property which is an array of `SubscriptionOffer` objects.
 
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 ```actionscript  
 InAppBilling.service.addEventListener( 
@@ -45,6 +54,38 @@ function products_loadedHandler( event:InAppBillingEvent ):void
     }
 }
 ```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+InAppBilling.Instance.Events.OnGetProductsSuccess += ProductsLoadedHandler;
+
+InAppBilling.Instance.GetProducts( new List<string> { productId } );
+
+
+private void ProductsLoadedHandler(ProductsEvent e)
+{
+    foreach (var product in e.products)
+    {
+        if (product.subscriptionOffers != null)
+        {
+            foreach (var offer in product.subscriptionOffers)
+            {
+                Debug.Log( "OFFER: " + offer.id + "[" + string.Join( ",", offer.tags ) + "]" );
+                foreach (var phase in offer.pricingPhases)
+                {
+                    Debug.Log( "\t PHASE: " + phase.priceString + " - " + phase.numberOfPeriods + "/" + phase.recurrenceMode
+                                    + " @ [" + phase.subscriptionPeriod.numberOfUnits + " " + phase.subscriptionPeriod.unit + "]" );
+                }
+            }
+        }
+    }
+}
+```
+
+</TabItem>
+</Tabs>
 
 ### Phases
 
@@ -96,7 +137,7 @@ Based on the receipt, you will find that new and returning customers are eligibl
 
 #### Promotional Offers 
 
-There are two aspects to determining a user’s eligibility for an Apple promotional subscription offer:
+There are two aspects to determining a user's eligibility for an Apple promotional subscription offer:
 
 - The App Store deems all customers with an existing or expired subscription in the app eligible to redeem a subscription offer. You can check whether the receipt contains any existing or expired subscription purchases to identify these current or lapsed subscribers.
 
@@ -132,6 +173,12 @@ There may be more than one offer, so ensure that you display information on all 
 
 To make a purchase of a subscription product you must provide details on the `SubscriptionOffer` to purchase by adding a `SubscriptionOfferRequest` to your `PurchaseRequest`: 
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
 ```actionscript
 var product:Product = ...;
 var offer:SubscriptionOffer = ...;
@@ -149,6 +196,27 @@ if (InAppBilling.service.checkPurchaseRequestValid( request ))
     InAppBilling.service.makePurchase( request );
 }
 ```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+Product product = ...;
+SubscriptionOffer offer = ...;
+
+PurchaseRequest request = new PurchaseRequest()
+        .SetProductId( product.id )
+        .SetApplicationUsername( applicationUsername )
+        .SetSubscriptionOfferRequest(
+            new SubscriptionOfferRequest()
+                    .SetSubscriptionOffer( offer )
+        );
+
+InAppBilling.Instance.MakePurchase( request );
+```
+
+</TabItem>
+</Tabs>
 
 The flow of the purchase will then proceed as a normal purchase.
 
@@ -177,6 +245,13 @@ The signature information required includes:
 
 This information is then passed when purchasing the subscription by using the `setSignature()` method on the `SubscriptionOfferRequest`:
 
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
 ```actionscript
 var request:PurchaseRequest = new PurchaseRequest()
         .setProductId( product.id )
@@ -187,6 +262,23 @@ var request:PurchaseRequest = new PurchaseRequest()
                     .setSignature( key, nonce, signature, timestamp )
         );
 ```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+PurchaseRequest request = new PurchaseRequest()
+        .SetProductId( product.id )
+        .SetApplicationUsername( applicationUsername )
+        .SetSubscriptionOfferRequest(
+            new SubscriptionOfferRequest()
+                    .SetSubscriptionOffer( offer )
+                    .SetSignature( key, nonce, signature, timestamp )
+        );
+```
+
+</TabItem>
+</Tabs>
 
 The subscription key is generated through Apple's [AppStoreConnect](https://appstoreconnect.apple.com/), in the "Users and Access" section.
 
@@ -286,6 +378,11 @@ app.listen( port, () => console.log(`Listening on port ${port}!`) );
 
 ```
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 This could be used in your AIR application as below, (however you will most likely need to implement a more robust solution for a production application):
 
@@ -323,13 +420,13 @@ function generateSignature(
 {
     var vars:URLVariables    = new URLVariables();
     vars.appBundleID         = "com.distriqt.test";
-    vars.keyIdentifier       = Config.APPLE_KEY_IDENTIFIER;
+    vars.keyIdentifier       = APPLE_KEY_IDENTIFIER;
     vars.productIdentifier   = product.id;
     vars.offerIdentifier     = offer.id;
     vars.applicationUsername = applicationUsername;
 
     var request:URLRequest = new URLRequest();
-    request.url            = Config.APPLE_DISCOUNT_SIGNATURE_SERVER;
+    request.url            = APPLE_DISCOUNT_SIGNATURE_SERVER;
     request.method         = URLRequestMethod.GET;
     request.data           = vars;
 
@@ -351,7 +448,101 @@ function generateSignature(
 }
 ```
 
+</TabItem>
+<TabItem value="unity">
 
+This could be used in your Unity application as below, (however you will most likely need to implement a more robust solution for a production application):
+
+```csharp
+Product sub = ...;
+SubscriptionOffer offer = ...;
+
+StartCoroutine(
+    GenerateSignature(
+        sub,
+        offer,
+        "applicationUsername",
+        (keyIdentifier, nonce, signature, timestamp) =>
+        {
+            Log("Signature: " + keyIdentifier + " " + nonce + " " + signature + " " + timestamp);
+            PurchaseRequest request = new PurchaseRequest()
+                .SetProductId("com.distriqt.test.subscription1")
+                .SetSubscriptionOfferRequest(
+                    new SubscriptionOfferRequest()
+                        .SetSubscriptionOffer(offer)
+                        .SetSignature(keyIdentifier, nonce, signature, timestamp)
+                );
+
+            bool success = InAppBilling.Instance.MakePurchase(
+                request
+            );
+            Log("MakePurchase() = " + success);
+        }
+    )
+);
+
+[Serializable]
+public class Signature
+{
+    public string keyIdentifier;
+    public string nonce;
+    public string signature;
+    public double timestamp;
+}
+
+private IEnumerator GenerateSignature(Product product, SubscriptionOffer offer, string applicationUsername, Action<string, string, string, double> onComplete)
+{
+    Dictionary<string, string> parameters = new Dictionary<string, string>
+    {
+        { "appBundleID", "com.distriqt.test" },
+        { "keyIdentifier", APPLE_KEY_IDENTIFIER },
+        { "productIdentifier", product.id },
+        { "offerIdentifier", offer.id },
+        { "applicationUsername", applicationUsername }
+    };
+
+    string queryString = "?";
+    foreach (KeyValuePair<string, string> param in parameters)
+    {
+        queryString += $"{UnityWebRequest.EscapeURL(param.Key)}={UnityWebRequest.EscapeURL(param.Value)}&";
+    }
+    queryString = queryString.TrimEnd('&');
+
+    string url = APPLE_DISCOUNT_SIGNATURE_SERVER + queryString;
+    using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
+    {
+        webRequest.SetRequestHeader("Content-Type", "application/json");
+        webRequest.SetRequestHeader("Authorization", "Bearer your_token_here");
+
+        yield return webRequest.SendWebRequest();
+
+        if (webRequest.result == UnityWebRequest.Result.ConnectionError ||
+            webRequest.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.LogError($"Error: {webRequest.error}");
+            yield break;
+        }
+        string jsonResponse = webRequest.downloadHandler.text;
+        try
+        {
+            Signature response = JsonUtility.FromJson<Signature>(jsonResponse);
+            onComplete?.Invoke(
+                            response.keyIdentifier,
+                            response.nonce,
+                            response.signature,
+                            response.timestamp
+                        );
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error parsing JSON: {e.Message}");
+        }
+    }
+}
+```
+
+</TabItem>
+</Tabs>
 
 
 ## Policy Guidelines
@@ -367,6 +558,12 @@ https://play.google.com/about/monetization-ads/subscriptions/#!?zippy_activeEl=m
 
 ## Imports
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
 ```actionscript
 import com.distriqt.extension.inappbilling.Product;
 import com.distriqt.extension.inappbilling.PurchaseRequest;
@@ -377,5 +574,13 @@ import com.distriqt.extension.inappbilling.SubscriptionPhase;
 import com.distriqt.extension.inappbilling.event.InAppBillingEvent;
 ```
 
+</TabItem>
+<TabItem value="unity">
 
+```csharp
+using distriqt.plugins.inappbilling;
+using distriqt.plugins.inappbilling.events;
+```
 
+</TabItem>
+</Tabs>

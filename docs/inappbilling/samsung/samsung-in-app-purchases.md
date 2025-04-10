@@ -76,7 +76,7 @@ d. Verify the item is listed
 
 ## Setting up a Billing Service
 
-> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service.md).
+> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service).
 
 When setting up your service you will need to specify the `InAppBillingServiceTypes.SAMSUNG_INAPP_PURCHASE` service type. You will also want to set the "operation mode". This is a setting that allows testing of samsung In-App Purchases and should be disabled in production builds (or set to `BillingService.OPERATION_MODE_PRODUCTION`).
 

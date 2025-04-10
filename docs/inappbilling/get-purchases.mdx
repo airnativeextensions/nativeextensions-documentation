@@ -3,14 +3,23 @@ title: Get Purchases
 sidebar_label: Get Purchases
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 On services where you can directly query the service for user purchases you can call the `getPurchases()` function to retrieve them directly from the service.
 
 :::info
-This is not supported on services like Apple's InAppPurchases where the only method of retrieving purchases is through a user initiated restore purchases process or via a server. See [Restore Purchases](restore-purchases.md) for more on user initiated purchases restoring.
+This is not supported on services like Apple's InAppPurchases where the only method of retrieving purchases is through a user initiated restore purchases process or via a server. See [Restore Purchases](restore-purchases) for more on user initiated purchases restoring.
 
 There is an exception to this, in the situation where you are using the application receipt variant of the extension. In that variant this functionality will extract all the purchase information from the "application receipt" by decoding the receipt locally on the device. 
 :::
 
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 To query the purchases, simply call `getPurchases` and wait for one of the following events:
 
@@ -35,7 +44,7 @@ if (InAppBilling.service.isGetPurchasesSupported)
 }
 else 
 {
-	// Not supported - you should use restore purchases and track purchases in your app
+	// Not supported 
 }
 
 function getPurchasesCompleteHandler( event:PurchaseEvent ):void
@@ -53,10 +62,62 @@ function getPurchasesFailedHandler( event:PurchaseEvent ):void
 
 ```
 
+</TabItem>
+<TabItem value="unity">
+
+To query the purchases, simply call `GetPurchases()` and wait for one of the following events:
+
+- `InAppBilling.Instance.Events.OnGetPurchasesComplete`: Dispatched when the purchases have been retrieved successfully
+- `InAppBilling.Instance.Events.OnGetPurchasesFailed`: Dispatched when there was an error
+
+If the call is not supported it will return `false`.
+
+You can also check the `isGetPurchasesSupported` flag to determine if the functionality is supported
+on the current service.
+
+For example:
+
+```csharp
+if (InAppBilling.Instance.isGetPurchasesSupported)
+{
+	InAppBilling.Instance.Events.OnGetPurchasesComplete += OnGetPurchasesComplete;
+	InAppBilling.Instance.Events.OnGetPurchasesFailed += OnGetPurchasesFailed;
+	InAppBilling.Instance.GetPurchases();
+}
+else 
+{
+	// Not supported 
+}
+
+private void OnGetPurchasesComplete( PurchaseEvent e )
+{
+	foreach (Purchase purchase in e.purchases)
+	{
+		ProcessPurchase( purchase );
+	}
+} 
+
+private void OnGetPurchasesFailed( PurchaseEvent e ) 
+{
+	// GetPurchases failed
+	Debug.Log("GetPurchases failed: " + e.errorCode + " " + e.message);
+}
+
+```
+
+
+</TabItem>
+</Tabs>
 
 > 
-> During your `processPurchase` implementation you should be sure to check the `purchase.transactionState`. Only purchases in the state `Purchase.STATE_PURCHASED` should be delivered to your user. You may find there are deferred states on some platforms.
+> During your `processPurchase()` implementation you should be sure to check the `purchase.transactionState`. Only purchases in the state `Purchase.STATE_PURCHASED` should be delivered to your user. You may find there are deferred states on some platforms.
 >
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 ```actionscript
 // Check the purchase state
@@ -65,7 +126,19 @@ if (purchase.transactionState == Purchase.STATE_PURCHASED)
 	//  Deliver product to user
 }
 ```
+</TabItem>
+<TabItem value="unity">
 
+```csharp
+// Check the purchase state
+if (purchase.transactionState == Purchase.STATE_PURCHASED)
+{
+	//  Deliver product to user
+}
+```
+
+</TabItem>
+</Tabs>
 
 
 ### Application Receipt Variant

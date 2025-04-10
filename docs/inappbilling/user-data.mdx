@@ -3,6 +3,9 @@ title: User Data
 sidebar_label: User Data
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Some services attach some information to the user that can be retrieved and may be necessary to validate receipts.
 
 Currently this is supported on the following services:
@@ -13,6 +16,11 @@ You retrieve this data by using the `getUserData()` function and listening for t
 
 This function will return `false` if user data is not supported with the current service.
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 ```actionscript
 var success:Boolean = InAppBilling.service.getUserData();
@@ -47,3 +55,39 @@ function getUserData_failedHandler( event:UserDataEvent ):void
 }
 ```
 
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+bool success = InAppBillingService.Instance.GetUserData();
+if (!success)
+{
+    // User data not supported
+}
+```
+
+If it returns `true`, then one of two events will be dispatched:
+- `InAppBilling.Instance.Events.OnGetUserDataSuccess`: Indicates the user data was successfully retrieved;
+- `InAppBilling.Instance.Events.OnGetUserDataFailed`: Indicates there was a failure when retrieving the data;
+
+```csharp
+InAppBilling.Instance.Events.OnGetUserDataSuccess += OnGetUserDataSuccess;
+InAppBilling.Instance.Events.OnGetUserDataFailed += OnGetUserDataFailed;
+
+InAppBilling.Instance.GetUserData();
+
+private void OnGetUserDataSuccess(UserDataEvent e)
+{
+    // Success
+    Debug.Log("USER ID: " + e.userData.userId);
+}
+
+private void OnGetUserDataFailed(UserDataEvent e)
+{
+    // Failure handler - retry after a delay or inform user of the issue
+}
+```
+
+</TabItem>
+</Tabs>

@@ -82,7 +82,7 @@ You must make sure the `agconnect-services.json` is packaged at the root of your
 
 ## Setting up a Billing Service
 
-> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service.md).
+> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service).
 
 When setting up your service you will need to specify the `InAppBillingServiceTypes.HUAWEI_APP_GALLERY` service type and provide your Huawei AppGallery Public key. The public key is used to verify purchases to provide a level of fraud protection:
 

@@ -1,3 +1,9 @@
+### 2025.04.10 [v5.6.0]
+
+```
+feat(unity,air,ios,android): add isWritable flag to a Tag to determine if a tag can be written
+```
+
 ### 2025.03.27 [v5.5.2]
 
 ```

@@ -66,9 +66,6 @@ You can purchase a license for using this extension:
 - [Unity Asset Store](https://assetstore.unity.com/publishers/46451)
 
 
-distriqt retains all copyright.
-
-
 ![](images/promo.png)
 
 

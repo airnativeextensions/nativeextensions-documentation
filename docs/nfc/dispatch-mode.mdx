@@ -36,7 +36,7 @@ In order to get your application to automatically launch and handle NFC tags wit
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 You should construct your intent filters in your manifest additions in order to correctly start this activity and launch your application when a tag of interest is detected by Android. 
 
@@ -48,7 +48,7 @@ You should construct your intent filters in your manifest additions in order to 
     {label: 'Manual', value: 'manual'},
   ]}>
 
-  <TabItem value="apm" >
+<TabItem value="apm" >
 
 To add these additions you need to add some additional configuration. Firstly add a custom Android configuration file by running:
 
@@ -75,18 +75,18 @@ Edit the `config/android/AndroidManifest.xml` file that was generated to resembl
 Once you have added this configuration run the steps above to update / generate your [application descriptor](add-the-extension.mdx#application-descriptor).
 
 
-  </TabItem>
-  <TabItem value="manual" >
+</TabItem>
+<TabItem value="manual" >
 
 
 Remove the `NFCActionActivity` line referenced in the "Add the extension" manifest additions and replace it with your version with intent filters. 
 
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 Adding these additions to your manifest can be achieved in several ways.
 
@@ -94,7 +94,7 @@ You can use the `NFCManifest.androidlib` directory in our example to simply merg
 
 Alternatively, if you are using a custom android manifest file then simply add the activity to that file.
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
@@ -147,7 +147,7 @@ Similar to the intent filters above, you need to specify the urls or mimetypes t
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 ```actionscript 
 var options:ScanOptions = new ScanOptions();
@@ -156,8 +156,8 @@ options.urls.push( "https://airnativeextensions.com" );
 NFC.service.registerForegroundDispatch( options );
 ```
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 ```csharp 
 ScanOptions options = new ScanOptions();
@@ -166,7 +166,7 @@ options.urls = new string[] { "https://airnativeextensions.com" };
 NFC.Instance.RegisterForegroundDispatch(options);
 ```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
@@ -216,12 +216,12 @@ In order for this to work you must setup a universal link for your application a
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 With AIR this is simply a matter of adding the fields to the entitlements section in your application descriptor, (see [Add the Extension](add-the-extension.mdx#universal-links) for more details).
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 With Unity you will need to add your domain to the `NFCConfig.cs` class in the `Assets/distriqt/NFCUnity/NFC/Editor` folder. Set your domains into the `associatedAppDomains` array, for example:
 
@@ -235,7 +235,7 @@ public static string[] associatedAppDomains = new string[]
 
 These domains will be applied to the entitlements for your application by our post build scripts.
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
@@ -249,20 +249,20 @@ To initiate reading tags on iOS you call the `registerForegroundDispatch()` meth
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 ```actionscript 
 NFC.service.registerForegroundDispatch();
 ```
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 ```csharp 
 NFC.Instance.RegisterForegroundDispatch();
 ```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 

@@ -23,7 +23,7 @@ This extension implements Catappult's Native Android Billing and not the One-Ste
 
 ## Setting up a Billing Service
 
-> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service.md).
+> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service).
 
 When setting up your service you will need to specify the `InAppBillingServiceTypes.CATAPPULT_NATIVE_BILLING` service type and provide your Catappult Public key. The public key is used to verify purchases to provide a level of fraud protection:
 

@@ -35,7 +35,7 @@ Follow the documentation to add your products into the "Payments" section of you
 
 ## Setting up a Billing Service
 
-> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service.md).
+> The following is in addition to the documentation in [Setting up a Billing Service](../billing-service).
 
 When setting up your service you will need to specify the `InAppBillingServiceTypes.NOW_GG_BILLING` service type. 
 You will also need to specify your application id, in-game id and public key. 

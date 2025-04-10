@@ -25,7 +25,7 @@ The `NFCEvent` will contain a `Tag` object in the `tag` variable. This contains 
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 ```actionscript 
 NFC.service.addEventListener( NFCEvent.ACTION_NDEF_DISCOVERED, discoveredHandler );
@@ -43,8 +43,8 @@ function discoveredHandler( event:NFCEvent ):void
 }
 ```
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 ```csharp 
 NFC.Instance.OnNdefDiscovered += Instance_OnNdefDiscovered;
@@ -62,7 +62,7 @@ void Instance_OnNdefDiscovered(NFCEvent e)
 }
 ```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
@@ -74,7 +74,7 @@ The payload of the records contains data in a specific format.
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 The payload in an `NdefRecord` is encoded as a `ByteArray`. 
 
@@ -86,8 +86,8 @@ var payloadAsString:String = record.payload.toString();
 ```
 
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 The payload in an `NdefRecord` is encoded as a hexidecimal `string`. 
 
@@ -128,7 +128,7 @@ public static string StringToASCII(string hexString)
 }
 ```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 

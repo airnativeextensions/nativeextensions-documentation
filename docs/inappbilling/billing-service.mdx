@@ -3,6 +3,9 @@ title: Setup Billing Service
 sidebar_label: Setup Billing Service
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 ## Billing Service
 
 Before starting here you should make sure you have already setup the service for your application 
@@ -43,17 +46,21 @@ sure that you handle the event appropriately.
 
 ## Events
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
+  
 We suggest you listen to the following four events before calling setup:
 
 - `InAppBillingEvent.SETUP_SUCCESS`: Dispatched when setup is successfully completed;
 - `InAppBillingEvent.SETUP_FAILURE`: Dispatched when there was an error during setup;
 - `PurchaseEvent.PURCHASES_UPDATED`: Dispatched if there are pending purchases needing to be processed;
-- `PurchaseRequestEvent.SHOULD_ADD_PURCHASE`: Dispatched if the app was launched from an AppStore promotional purchase (see [Promotions](promotions.md)).
+- `PurchaseRequestEvent.SHOULD_ADD_PURCHASE`: Dispatched if the app was launched from an AppStore promotional purchase (see [Promotions](promotions)).
 
 
 ```actionscript
-InAppBilling.service.addEventListener( InAppBillingEvent.SETUP_SUCCESS, setup_successHandler );
-InAppBilling.service.addEventListener( InAppBillingEvent.SETUP_FAILURE, setup_failureHandler );
 InAppBilling.service.addEventListener( PurchaseEvent.PURCHASES_UPDATED, purchases_updatedHandler );
 InAppBilling.service.addEventListener( PurchaseRequestEvent.SHOULD_ADD_PURCHASE, purchaseRequest_shouldAddPurchaseHandler );
 						
@@ -63,11 +70,37 @@ InAppBilling.service.setup(
 );
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
+
+We suggest you listen to the following four events before calling setup:
+
+- `InAppBilling.Instance.Events.OnPurchasesUpdated`: Dispatched if there are pending purchases needing to be processed;
+- `InAppBilling.Instance.Events.OnShouldAddPurchase`: Dispatched if the app was launched from an AppStore promotional purchase (see [Promotions](promotions));
+
+```csharp
+InAppBilling.Instance.Events.OnPurchasesUpdated += OnPurchasesUpdated;
+InAppBilling.Instance.Events.OnShouldAddPurchase += OnShouldAddPurchase;
+
+InAppBilling.Instance.Setup(
+        new BillingService()
+            .SetGooglePlayPublicKey( GOOGLE_PLAY_INAPP_BILLING_KEY )
+);                
+```
+
+  </TabItem>
+</Tabs>
 
 
 ## Service Type
 
 The billing service type will be automatically selected based on the default of the current device platform. However we suggest you specify the service type in your `BillingService` using `setServiceType()` to specify a particular service:
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+  <TabItem value="air" >
 
 ```actionscript
 var service:BillingService = new BillingService(  )
@@ -77,8 +110,22 @@ var service:BillingService = new BillingService(  )
 var success:Boolean = InAppBilling.service.setup( service );
 ```
 
+  </TabItem>
+  <TabItem value="unity" >
+
+```csharp
+var service = new BillingService()
+    .SetServiceType( InAppBillingServiceTypes.GOOGLE_PLAY_INAPP_BILLING )
+    .SetGooglePlayPublicKey( GOOGLE_PLAY_INAPP_BILLING_KEY );
+InAppBilling.Instance.Setup( service );
+```
+
+  </TabItem>
+</Tabs>
+
+
 :::note 
-You do not need to call `setServiceType`. 
+You do not need to call `setServiceType()`. 
 If you do not call it then the default for the current platform will be used, 
 i.e. Apple InApp Purchases on iOS and Google's Play InApp Billing on Android.
 
@@ -92,6 +139,13 @@ This is so that you ensure you are utilising the correct store for your applicat
 Once you have completed setup it is important to check whether the user on the current device can make payments. There are certain factors that can limit the functionality which can have consequences for all product and purchasing functionality.
 
 For example, the latest version of Play Billing is only supported with an updated version of the Play Store app. If an older version is on the user's device the billing api will not be available.
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 To check the status call the `checkAvailability()` function and await the result. This function will dispatch an `AvailabilityEvent.COMPLETE` event or call a callback function passed as the parameter to the function.
 
@@ -108,7 +162,6 @@ InAppBilling.service.checkAvailability(
 
 Event:
 
-
 ```actionscript
 InAppBilling.service.addEventListener( AvailabilityEvent.COMPLETE, function( event:AvailabilityEvent ):void
 {
@@ -118,12 +171,37 @@ InAppBilling.service.checkAvailability();
 ```
 
 
+
 The `availability` value will be one of the values defined in the `InAppBillingAvailability` class:
+
+- `InAppBillingAvailability.AVAILABLE`: Service is available for products and purchases;
+- `InAppBillingAvailability.NOT_AVAILABLE`: Service is unavailable on the device;
+- `InAppBillingAvailability.STORE_UPGRADE_REQUIRED`: An update is required to the store application for this service
+
+
+
+</TabItem>
+<TabItem value="unity" >
+
+
+To check the status call the `CheckAvailability()` function and await the result. 
+
+```csharp
+InAppBilling.Instance.CheckAvailability(
+        (e) =>
+        {
+            Debug.Log( "availability = " + e.availability );
+        }
+);
+```
+The `e.availability` value will be one of the values defined in the `InAppBillingAvailability` class:
 
 - `InAppBillingAvailability.AVAILABLE`: Service is available for products and purchases;
 - `InAppBillingAvailability.NOT_AVAILABLE`: Service is unavailable on the device;
 - `InAppBillingAvailability.STORE_UPGRADE_REQUIRED`: An update is required to the store application for this service;
 
+</TabItem>
+</Tabs>
 
 You should handle the response as required and inform your users if purchasing isn't available or steps to upgrade the store application.
 
@@ -138,10 +216,24 @@ It is equally appropriate to handle those error events however we suggest an upf
 
 ## Pending Purchases
 
-Note that the pending purchases may not be available to you at the  `InAppBillingEvent.SETUP_SUCCESS` event, as they may be updated after setup has completed. This is particularly true on iOS/tvOS where the payment queue update (which populates the pending purchases) will occur a short time after setup succeeds.
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+Note that the pending purchases may not be available to you at the  `InAppBillingEvent.SETUP_SUCCESS` event, as they may be updated after setup has completed. 
+This is particularly true on iOS/tvOS where the payment queue update (which populates the pending purchases) will occur a short time after setup succeeds.
 
 This update will be indicated by a `PurchaseEvent.PURCHASES_UPDATED`, indicating there are purchases to process.
 
+</TabItem>
+<TabItem value="unity" >
 
+Note that the pending purchases may not be available to you after setup is complete, as they may be updated after this point. 
+This is particularly true on iOS/tvOS where the payment queue update (which populates the pending purchases) will occur a short time after setup succeeds.
 
+This update will be indicated by an `OnPurchasesUpdated` event, indicating there are purchases to process.
 
+</TabItem>
+</Tabs>

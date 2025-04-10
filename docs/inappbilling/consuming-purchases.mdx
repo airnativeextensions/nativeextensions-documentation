@@ -1,0 +1,90 @@
+---
+title: Consuming Purchases
+sidebar_label: Consuming Purchases
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+Once an item is purchased, it is considered to be "owned". 
+
+Some application stores require you to "consume" a purchase before you can purchase the item again.
+This is useful when you are providing items that may be purchased multiple times within your application, 
+for example, health points or coins in a game.
+
+Consuming an item involves calling the `consumePurchase()` function with a product request 
+containing the product id to consume.
+
+If you consider a product to be a consumable you should implement this process either when your 
+user uses the product or you can call it as soon as you complete the finish purchase process and 
+deliver the product to the user.
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+```actionscript
+// The service must be setup and a list of products retrieved.
+
+// Make sure you have the following listeners
+InAppBilling.service.addEventListener( PurchaseEvent.CONSUME_SUCCESS, consumePurchase_successHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.CONSUME_FAILED, consumePurchase_failedHandler );
+
+// Consume the purchase
+InAppBilling.service.consumePurchase( new Purchase( productId ) );
+
+
+function consumePurchase_successHandler( event:PurchaseEvent ):void
+{
+	trace( "consume success" );
+}
+
+function consumePurchase_failedHandler( event:PurchaseEvent ):void
+{
+	trace( "consume failed" );
+}
+```
+
+:::info Note
+You must have completed the purchase by calling `finishPurchase()` and receiving the `PurchaseEvent.FINISH_SUCCESS` event before attempting to consume a purchase.
+:::
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+// The service must be setup and a list of products retrieved.
+
+// Add the following listeners
+InAppBilling.Instance.Events.OnConsumePurchaseSuccess += OnConsumePurchaseSuccess;
+InAppBilling.Instance.Events.OnConsumePurchaseFailed += OnConsumePurchaseFailed;
+
+// Consume the purchase
+InAppBilling.Instance.ConsumePurchase( new Purchase( productId ) );
+
+
+private void OnConsumePurchaseSuccess(PurchaseEvent e)
+{
+	Debug.Log("Consume purchase success: " + e.type);
+	foreach (Purchase purchase in e.purchases)
+	{
+		Debug.Log("Consume purchase: " + purchase);
+	}
+}
+
+private void OnConsumePurchaseFailed(PurchaseEvent e)
+{
+	Debug.Log("Consume purchase failed: " + e.errorCode + " " + e.message);
+}
+```
+
+:::info Note
+You must have completed the purchase by calling `FinishPurchase()` and receiving the `OnFinishPurchaseSuccess` event before attempting to consume a purchase.
+:::
+
+</TabItem>
+</Tabs>
+

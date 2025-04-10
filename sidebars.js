@@ -1970,7 +1970,12 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "inappbilling/index" },
     "inappbilling/overview",
-    "inappbilling/add-the-extension",
+    {
+      "Get Started": [
+        "inappbilling/add-the-extension",
+        "inappbilling/add-the-plugin",
+      ]
+    },
     {
       "Billing Services": [
         {

@@ -41,7 +41,7 @@ Before you can display introductory offers and free trials in your app, you must
 Introductory Prices and Free trials are implemented as a Subscription Offer on a subscription product. You will follow the same approach as a normal offer to purchase and display these.
 
 
-See [Subscription Offers](subscription-offers.md) for more information.
+See [Subscription Offers](subscription-offers) for more information.
 
 
 

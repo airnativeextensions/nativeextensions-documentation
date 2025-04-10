@@ -23,20 +23,20 @@ To initiate reader mode call `enableReaderMode()`:
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 ```actionscript 
 NFC.service.enableReaderMode();
 ```
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 ```csharp 
 NFC.Instance.EnableReaderMode();
 ```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
@@ -51,7 +51,7 @@ While active any detected tags will dispatch a `NFCEvent.ACTION_NDEF_DISCOVERED`
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 ```actionscript 
 NFC.service.addEventListener( NFCEvent.ACTION_NDEF_DISCOVERED, discoveredHandler );
@@ -62,8 +62,8 @@ function discoveredHandler( event:NFCEvent ):void
 }
 ```
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 ```csharp 
 NFC.Instance.OnNdefDiscovered += Instance_OnNdefDiscovered;
@@ -74,7 +74,7 @@ void Instance_OnNdefDiscovered(NFCEvent e)
 }
 ```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
@@ -90,20 +90,20 @@ You should make sure to disable reader mode once you have completed scanning by 
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 ```actionscript 
 NFC.service.disableReaderMode();
 ```
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 ```csharp 
 NFC.Instance.DisableReaderMode();
 ```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
@@ -119,20 +119,20 @@ If you have scanned a tag and wish to re-read it, you will need to call `restart
     {label: 'AIR', value: 'air'},
     {label: 'Unity', value: 'unity'},
   ]}>
-  <TabItem value="air" >
+<TabItem value="air" >
 
 ```actionscript
 NFC.service.restart();
 ```
 
-  </TabItem>
-  <TabItem value="unity" >
+</TabItem>
+<TabItem value="unity" >
 
 ```csharp 
 NFC.Instance.Restart();
 ```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
