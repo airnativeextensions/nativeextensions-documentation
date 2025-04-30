@@ -19,6 +19,38 @@ If you need to insert custom data into these sections see the guides for [Androi
 :::
 
 
+### Android Gradle Version 
+
+We have updated the required gradle version used to build your application to be higher than the default AIR currently uses (April 2025). 
+
+To specify a higher version add the following to your android node in your application descriptor:
+
+```xml
+<android>
+    <gradleVersion>8.9</gradleVersion>
+    <androidGradlePluginVersion>8.7.3</androidGradlePluginVersion>
+
+  ...
+</android>
+```
+
+If you don't do this you will see the following error when building your application:
+
+```
+Unexpected failure: Unable to run java: com.adobe.air.ADTException: gradle tool failed: 
+FAILURE: Build failed with an exception.
+
+...
+
+   > BUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 65
+```
+
+:::note
+April 2025: This is not currently automatically handled by `apm` so you will need to add this manually to your application descriptor.
+
+We are working on an update to handle this.
+:::
+
 
 ### Writing to the Camera Roll
 

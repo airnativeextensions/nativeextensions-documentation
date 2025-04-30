@@ -1,3 +1,9 @@
+### 2025.04.30 [v8.0.1]
+
+```
+fix(android): correctly release loaded image data (resolves https://github.com/distriqt/ANE-CameraRollExtended/issues/156)
+```
+
 ### 2024.12.11 [v8.0.0]
 
 ```
