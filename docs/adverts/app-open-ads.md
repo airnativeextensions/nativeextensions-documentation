@@ -146,7 +146,9 @@ There are several presentation events dispatched by the app open ad as the user 
 
 - `FullScreenContentEvent.SHOW`: dispatched when an ad opens an overlay that covers the screen;
 - `FullScreenContentEvent.DISMISSED`: dispatched when a user returns to the app, having closed the app open ad;
-- `FullScreenContentEvent.FAILED_TO_SHOW`: dispatched if there was an error presenting the ad
+- `FullScreenContentEvent.FAILED_TO_SHOW`: dispatched if there was an error presenting the ad;
+- `FullScreenContentEvent.CLICKED`: dispatched when a user clicks the ad;
+- `FullScreenContentEvent.IMPRESSION`: dispatched when a an ad impression occurs;
 
 
 ```actionscript

@@ -141,7 +141,9 @@ There are several events dispatched by the rewarded video ad as the user interac
 
 - `FullScreenContentEvent.SHOW`: dispatched when an ad shows an overlay that covers the screen;
 - `FullScreenContentEvent.DISMISSED`: dispatched when a user returns to the app, having closed the rewarded video ad;
-- `FullScreenContentEvent.FAILED_TO_SHOW`: dispatched if there was an error presenting the ad
+- `FullScreenContentEvent.FAILED_TO_SHOW`: dispatched if there was an error presenting the ad;
+- `FullScreenContentEvent.CLICKED`: dispatched when a user clicks the ad;
+- `FullScreenContentEvent.IMPRESSION`: dispatched when a an ad impression occurs;
 - `RewardedVideoAdEvent.REWARD`: See the [reward section](rewarded-video-ads#rewards)
 
 ```actionscript

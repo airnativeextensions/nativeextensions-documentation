@@ -211,6 +211,8 @@ There are several events dispatched by the advert as the user interacts with it:
 
 - `AdViewEvent.OPENED`: dispatched when an ad opens an overlay that covers the screen;
 - `AdViewEvent.CLOSED`: dispatched when a user returns to the app, having closed the interstitial;
+- `AdViewEvent.CLICKED`: dispatched when a user clicks the ad;
+- `AdViewEvent.IMPRESSION`: dispatched when a an ad impression occurs;
 
 At the very least we suggest you should listen for the closed event to know when control returns to your application.
 
@@ -253,7 +255,5 @@ adView.destroy();
 ```
 
 No other methods should be called on the ad view after `destroy()` is called as they will have undefinted results.
-
-
 
 

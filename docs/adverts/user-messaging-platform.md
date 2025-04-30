@@ -190,6 +190,32 @@ function formDismissedHandler( event:UserMessagingPlatformEvent ):void
 ```
 
 
+## Privacy options
+
+Some privacy message forms are presented from a publisher-rendered privacy options entry point, letting users manage their privacy options at any time. To learn more about which message your users see at the privacy options entry point, see [Available user message types](https://support.google.com/admob/answer/10114020).
+
+
+### Check if a privacy options entry point is required
+
+After you have called `requestConsentInfoUpdate()`, check `getConsentInformation().getPrivacyOptionsRequirementStatus()` to determine if a privacy options entry point is required for your app. If an entry point is required, add a visible and interactable UI element to your app that presents the privacy options form. If a privacy entry point is not required, configure your UI element to be not visible and interactable.
+
+```actionscript
+var privacyStatus:String = Adverts.service.ump.getConsentInformation().getPrivacyOptionsRequirementStatus();
+if (PrivacyOptionsRequirementStatus.REQUIRED == privacyStatus)
+{
+    // present UI
+}
+```
+
+### Present the privacy options form
+
+When the user interacts with your element, present the privacy options form:
+
+```actionscript
+Adverts.service.ump.addEventListener( UserMessagingPlatformEvent.PRIVACY_OPTIONS_FORM_DISMISSED, ump_showFormDismissedHandler );
+Adverts.service.ump.showPrivacyOptionsForm();
+```
+
 
 
 ## Testing

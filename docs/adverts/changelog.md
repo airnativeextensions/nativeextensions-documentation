@@ -1,3 +1,12 @@
+### 2025.04.30 [v16.1.0]
+
+```
+feat(android): update AdMob SDK v24.2.0, UMP SDK v3.2.0
+feat(ios): update AdMob SDK v12.12.0, UMP SDK v3.0.0 (resolves https://github.com/distriqt/ANE-Adverts/issues/607)
+feat(ios,android): add ump showPrivacyOptionsForm functionality
+feat(ios,android): add clicked and impression events on AdViewEvent and FullScreenContentEvent (resolves https://github.com/distriqt/ANE-Adverts/issues/603)
+```
+
 ### 2024.12.10 [v16.0.0]
 
 ```

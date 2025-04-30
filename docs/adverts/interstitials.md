@@ -151,6 +151,8 @@ There are several events dispatched by the advert as the user interacts with it:
 - `FullScreenContentEvent.SHOW`: dispatched when an ad opens an overlay that covers the screen;
 - `FullScreenContentEvent.FAILED_TO_SHOW`: dispatched when an ad fails to be shown;
 - `FullScreenContentEvent.DISMISSED`: dispatched when a user returns to the app, having dismissed the interstitial;
+- `FullScreenContentEvent.CLICKED`: dispatched when a user clicks the ad;
+- `FullScreenContentEvent.IMPRESSION`: dispatched when a an ad impression occurs;
 
 At the very least we suggest you should listen for the closed event to know when control returns to your application.
 
