@@ -1,3 +1,9 @@
+### 2025.05.06 [v8.0.2]
+
+```
+fix(android): correct auth status using permissionless picker and excluding READ_EXTERNAL_STORAGE (resolves https://github.com/distriqt/ANE-CameraRollExtended/issues/157)
+```
+
 ### 2025.04.30 [v8.0.1]
 
 ```
