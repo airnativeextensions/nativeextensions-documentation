@@ -978,6 +978,35 @@ module.exports = {
     },
   ],
 
+  detectscreenshot: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "detectscreenshot/index" },
+    {
+      "Get Started": ["detectscreenshot/add-the-extension"],
+    },
+    {
+      Usage: [
+        "detectscreenshot/authorisation",
+        "detectscreenshot/usage"
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "detectscreenshot/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/detectscreenshot/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "https://github.com/airnativeextensions/ANE-DetectScreenshot/issues/new/choose",
+        },
+      ],
+    },
+  ],
+
   devicemotion: [
     { type: "ref", id: "index" },
     { type: "doc", id: "devicemotion/index" },
