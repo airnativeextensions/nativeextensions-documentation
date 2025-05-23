@@ -1,3 +1,9 @@
+### 2025.05.23 [v5.6.1]
+
+```
+fix(ios): correct tag id values on events
+```
+
 ### 2025.04.10 [v5.6.0]
 
 ```
