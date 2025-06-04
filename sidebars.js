@@ -638,6 +638,45 @@ module.exports = {
   ],
 
 
+  braze: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "braze/index" },
+    {
+      "Get Started": ["braze/add-the-extension"],
+    },
+    {
+      Usage: [
+        "braze/integration",
+        "braze/analytics",
+        "braze/content-cards",
+        "braze/deep-linking",
+        "braze/in-app-messaging",
+        "braze/push-notifications",
+      ],
+    },
+    {
+      Troubleshooting: [
+        "braze/migrating-to-v1.0",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "braze/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/braze/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "https://github.com/airnativeextensions/ANE-Braze/issues/new",
+        },
+      ],
+    },
+  ],
+
+
   bugsnag: [
     { type: "ref", id: "index" },
     { type: "doc", id: "bugsnag/index" },

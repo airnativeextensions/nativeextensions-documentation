@@ -52,7 +52,7 @@ This would open a url link of the form `CUSTOM_URL_SCHEME://CUSTOM_URL_PATH`, eg
 
 When a deep link is received and determined to be from Braze the extension will dispatch a `BrazeDeeplinkEvent.RECEIVED` event:
 
-```
+```actionscript
 Braze.instance.addEventListener( BrazeDeeplinkEvent.RECEIVED, deeplink_receivedHandler );
 
 function deeplink_receivedHandler( event:BrazeDeeplinkEvent ):void
