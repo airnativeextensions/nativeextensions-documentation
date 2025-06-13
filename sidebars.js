@@ -3088,6 +3088,8 @@ module.exports = {
     },
     {
       Troubleshooting: [
+        "share/migrating-to-v8.1",
+        "share/migrating-to-v8.0",
         "share/migrating-to-v7.4",
         "share/migrating-from-message",
         "share/migrating-to-androidx",

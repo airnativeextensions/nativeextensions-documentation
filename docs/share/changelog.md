@@ -1,3 +1,9 @@
+### 2025.06.13 [v8.1.0]
+
+```
+feat(sms,android): add the ability to read sms from the device
+```
+
 ### 2024.12.16 [v8.0.0]
 
 ```
