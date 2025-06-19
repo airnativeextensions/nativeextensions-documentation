@@ -1,3 +1,30 @@
+### 2025.06.19 [v6.0.5]
+
+```
+## Major Update 
+
+This latest release represents a major update to the extension. The scanning algorithm has been completely rewritten to improve performance and accuracy. 
+The aging ZBar SDK has been removed in favour of **MLKit** on Android and the **Vision framework** on iOS. 
+
+As part of the update we have improved the permission process and broadcast receiver usage to meet the updated android API 34 requirements.
+
+Additionally we have implemented an asynchronous bitmap data scanning process which allows you to scan large images without blocking the main thread.
+
+Overall this update should provide a much better experience for your users and improve the reliability of scanning barcodes in your applications.
+
+See the migration guide: https://docs.airnativeextensions.com/docs/scanner/migrating-to-v6.0
+
+
+### Updates
+
+feat(ios): integration of new Vision framework based algorithm (resolves https://github.com/distriqt/ANE-Scanner/issues/71)
+feat(ios): add better focus implementation for new vision algorithm (resolves https://github.com/distriqt/ANE-Scanner/issues/74)
+feat(android): update implementation to use MLKit scanning algorithm (resolves https://github.com/distriqt/ANE-Scanner/issues/49)
+fix(android): update permission process and receiver requirements for android api 34
+feat: implement async bitmap scanning
+feat(airpackage): update dependencies to latest (resolves https://github.com/distriqt/ANE-Scanner/issues/77)
+```
+
 ### 2024.07.08 [v5.2.0]
 
 ```

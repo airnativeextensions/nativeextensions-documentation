@@ -1,0 +1,135 @@
+---
+title: Migrating to v6.0
+sidebar_label: Migrating to v6.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This latest release represents a major update to the extension. The scanning algorithm has been completely rewritten to improve performance and accuracy. 
+The aging ZBar SDK has been removed in favour of **MLKit** on Android and the **Vision framework** on iOS. 
+
+As part of the update we have improved the permission process and broadcast receiver usage to meet the updated android API 34 requirements.
+
+Additionally we have implemented an asynchronous bitmap data scanning process which allows you to scan large images without blocking the main thread.
+
+Overall this update should provide a much better experience for your users and improve the reliability of scanning barcodes in your applications.
+
+
+## Migration
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you are using [`apm`](https://github.com/airsdk/apm) all you need to do is update to the latest build and regenerate your application descriptor. `apm` will handle the rest.
+
+```
+apm update 
+apm generate app-descriptor
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+If you are manually managing your application descriptor (and manifest additions) then you will be required to make some changes to your manifest. Find the activity:
+
+```xml
+<activity 
+    android:name="com.distriqt.extension.scanner.zbar.ZBarScannerActivity" 
+    android:exported="false"/>
+```
+
+And replace it with:
+
+```xml
+<activity 
+    android:name="com.distriqt.extension.scanner.mlkit.ScannerActivity" 
+    android:exported="false" 
+    android:theme="@style/ScannerActivityTheme" 
+    android:configChanges="orientation|screenSize|screenLayout" />
+```
+
+
+Increase the minimum SDK version to 21:
+
+```xml
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+```
+
+
+  </TabItem>
+  
+</Tabs>
+
+
+:::note New Algorithms
+The new scanning algorithms are significantly different from the previous ZBar implementation. 
+You may need to adjust your code to accommodate the new API and behavior.
+In particular the orientation of the scanned results is no longer available and will always be 'unknown'.
+:::
+
+
+
+## Android Gradle Version 
+
+We have updated the required gradle version used to build your application to be higher than the default AIR currently uses. 
+
+To specify a higher version add the following to your android node in your application descriptor:
+
+```xml
+<android>
+    <gradleVersion>8.9</gradleVersion>
+    <androidGradlePluginVersion>8.7.3</androidGradlePluginVersion>
+
+  ...
+</android>
+```
+
+If you don't do this you will see the following error when building your application:
+
+```
+Unexpected failure: Unable to run java: com.adobe.air.ADTException: gradle tool failed: 
+FAILURE: Build failed with an exception.
+
+...
+
+   > BUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 65
+```
+
+:::note
+June 2025: This is not currently automatically handled by `apm` so you will need to add this manually to your application descriptor.
+
+We are working on an update to handle this.
+:::
+
+
+
+## Asynchronous Scanning
+
+The new scanning process allows you to scan large images without blocking the main thread. This is particularly useful for applications that need to scan high-resolution images or perform other tasks while scanning.
+
+```actionscript 
+Scanner.service.scanBitmapAsync(
+    image.bitmapData,
+    function ( scanResults:Vector.<ScanResult> ):void
+    {
+        // Handle the scan results
+        for each ( var result:ScanResult in scanResults )
+        {
+            trace( "Code found: " + result.data );
+        },
+    function ( error:Error ):void
+    {
+        // process the error
+    }
+);
+```
+
