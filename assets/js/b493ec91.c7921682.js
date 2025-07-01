@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[87009],{66796:e=>{e.exports=JSON.parse('{"label":"camerarollextended","permalink":"/news/tags/camerarollextended","allTagsPath":"/news/tags","count":1}')}}]);

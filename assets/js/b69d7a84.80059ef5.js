@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[52397],{19493:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/detectscreenshot","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);

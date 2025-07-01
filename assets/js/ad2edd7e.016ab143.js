@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[27723],{45841:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/scanner","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);
