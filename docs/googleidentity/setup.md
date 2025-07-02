@@ -6,7 +6,7 @@ sidebar_label: Setup
 
 ## Setup the extension
 
-Next you need to setup the platform using your Google API client ID and specify any additional 
+You need to setup the platform using your Google API client ID and specify any additional 
 options such as scopes you require:
 
 At a minimum you will need to specify the iOS and Android client IDs:
@@ -25,7 +25,50 @@ The options here specify the permissions and scopes that you require from your u
 
 For more information on these options see the [Google Identity Options](google-identity-options.md) section.
 
-After setup you may wish to attempt to [sign in silently](signing-in.md#sign-in-silently).
+
+This call will be asynchronous, certain situations require checks that perform asynchronous operations. 
+You should await the `GoogleIdentityEvent.SETUP_COMPLETE` event before continuing with any other functionality of the extension:
+
+```actionscript
+GoogleIdentity.service.addEventListener( GoogleIdentityEvent.SETUP_COMPLETE, setupCompleteHandler );
+
+function setupCompleteHandler( event:GoogleIdentityEvent ):void 
+{
+	// Setup has completed
+}
+```
+
+
+### Automatic silent sign in
+
+The setup process will perform an automatic silent sign in if the user has previously signed in successfully. 
+This process is needed to ensure the `isSignedIn` flag is correct after setup. 
+
+The means your user may be presented a view showing something like "signing you in" as part of the `setup()` call. 
+
+![](images/silent-sign-in-ui.png)
+
+
+:::note 
+You can disable this functionality by changing the `attemptSilentSignIn` value in the options:
+
+```actionscript
+var options:GoogleIdentityOptions = new GoogleIdentityOptionsBuilder()
+	
+	...
+
+	.setAttemptSilentSignIn( false )
+	.build();
+```
+
+This will mean you can manage this process yourself, storing a flag for when users have successfully signed in and then performing a silent sign in when it suits your application.
+
+**If you disable this process the `isSignedIn` flag may be incorrect after `setup()`**
+
+More information on how to [sign in silently](signing-in.md#sign-in-silently).
+:::
+
+
 
 
 

@@ -1,3 +1,25 @@
+### 2025.07.02 [v7.1.1]
+
+```
+## Setup Change
+
+There has been a slight change to the setup call, it will now perform a check if the user has previously 
+signed in successfully and start a silent sign in process. This ensures the `isSignedIn` flag is correct
+after setup. 
+
+Notes:
+- this makes the setup process asynchronous if you want to ensure the `isSignedIn` flag is correct
+- may present a UI ("signing you in") on Android if the user has signed in previously
+- can disable this new functionality by setting `options.attemptSilentSignIn = false;`
+
+### Updates
+
+feat(android): add ability to automatically perform silent sign in at setup if previously signed in
+feat(ios): clean up sign in process at setup
+feat: add attemptSilentSignIn parameter to options to control auto sign in attempt at setup
+feat(android): update androidx credentials sdk to v1.5.0 
+```
+
 ### 2025.01.20 [v7.0.1]
 
 ```
