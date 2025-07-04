@@ -3407,6 +3407,7 @@ module.exports = {
     { type: "doc", id: "tutorials/index" },
     {
       "Getting Started": [
+        "tutorials/build-environment",
         "tutorials/getting-started",
         {
           IDE: [
