@@ -3395,6 +3395,7 @@ module.exports = {
   faqs: [
     { type: "ref", id: "index" },
     { type: "doc", id: "faqs/index" },
+    "faqs/updates",
     "faqs/ld-unknown-option",
     "faqs/ld-warning",
     "faqs/ld-framework-not-found",
