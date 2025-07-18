@@ -1,3 +1,10 @@
+### 2025.07.18 [v16.2.0]
+
+```
+feat(ios): update admob sdk v12.6.0 - audio issue fix (resolves https://github.com/distriqt/ANE-Adverts/issues/615)
+feat(airpackage): add android gradle settings and platforms configuration
+```
+
 ### 2025.04.30 [v16.1.0]
 
 ```
