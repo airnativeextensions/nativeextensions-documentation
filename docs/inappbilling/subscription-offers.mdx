@@ -28,15 +28,15 @@ Every subscription will have at least one available `SubscriptionOffer`. These a
 
 ```actionscript  
 InAppBilling.service.addEventListener( 
-    InAppBillingEvent.PRODUCTS_LOADED, 
+    ProductEvent.PRODUCTS_LOADED, 
     products_loadedHandler );
                 
 InAppBilling.service.getProducts( [ productId ] );
 
 
-function products_loadedHandler( event:InAppBillingEvent ):void 
+function products_loadedHandler( event:ProductEvent ):void 
 {
-    for each (var product:Product in event.data)
+    for each (var product:Product in event.products)
     {
         if (product.subscriptionOffers != null)
         {
@@ -96,6 +96,36 @@ For example, you may have a free trial phase followed by the normal subscription
 - phase 2 : price $X, period 1 month;
 
 Each offer will contain at least 1 phase. 
+
+
+### Installment plans
+
+An installment subscription is a type of subscription where users pay for the subscription in multiple installments over a period of time, rather than paying the entire subscription fee upfront.
+
+If the subscription offer has installment plans available, then the `SubscriptionOffer` will contain a `SubscriptionInstallmentPlan` object which describes the installment plan available for that offer.
+You can use this information to display the installment plan details to the user.
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+```actionscript
+if (offer.installmentPlan != null)
+{
+    trace( "Installment Plan: commitmentPaymentsCount:" + offer.installmentPlan.commitmentPaymentsCount 
+        + "  subsequentCommitmentPaymentsCount:" + offer.installmentPlan.subsequentCommitmentPaymentsCount 
+    );
+}
+```
+
+</TabItem>
+<TabItem value="unity">
+
+</TabItem>
+</Tabs>
+
 
 
 
@@ -571,7 +601,7 @@ import com.distriqt.extension.inappbilling.SubscriptionOffer;
 import com.distriqt.extension.inappbilling.SubscriptionOfferRequest;
 import com.distriqt.extension.inappbilling.SubscriptionPhase;
 
-import com.distriqt.extension.inappbilling.event.InAppBillingEvent;
+import com.distriqt.extension.inappbilling.event.ProductEvent;
 ```
 
 </TabItem>
@@ -584,3 +614,7 @@ using distriqt.plugins.inappbilling.events;
 
 </TabItem>
 </Tabs>
+
+
+
+

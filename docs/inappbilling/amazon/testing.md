@@ -15,13 +15,16 @@ Instead you will need to install and configure the **App Tester** application an
 
 App Tester allows you to unit test the In-App Purchasing (IAP) functionality of your app in sandbox mode before you submit the app for publication. You download App Tester from the Amazon Appstore onto the same Android device as your app. The App Tester simulates the production environment. You run IAP-related test cases on your app, and App Tester generates API responses (that you configure using a JSON file).
 
-
-The easiest way is to install the app from the Amazon Appstore
+The easiest way is to install the app from the Amazon Appstore: 
 
 - On your Android mobile device, start the Amazon Appstore app.
 - Search for "Amazon App Tester".
 - Select the "Amazon App Tester" app. (Do not select the Web App Tester, which is a different app.)
 - Tap through the prompts to download and install the app.
+
+You can also find the application at the following link: 
+
+http://www.amazon.com/Amazon-App-Tester/dp/B00BN3YZM2/
 
 
 ### Create a JSON Data File
@@ -79,8 +82,15 @@ D/Kiwi    (11971): AppstoreSDK: Production Mode: Release build or debug.amazon.s
 ```
 
 
-:::note
-You must be using a recent release of AIR, version 33.1.1.889 or higher. APK's produced in older versions of AIR are incorrectly packaged as production builds. You can work around this by using the AndroidStudioProject output if required.
+
+:::caution Packaging Target
+It is important the you use a debug build target when testing Amazon applications, ie. you must use `-target apk-debug`. This ensures AIR produces a debug build of your application that allows the Amazon AppstoreSDK to enter debug mode.
+
+If you use a release target eg `apk-captive-runtime` then you will always see the "Production mode" warning and won't be able to test.
+:::
+
+:::note AIR Version
+You must be using a recent release of AIR, version 33.1.1.889 or higher. APK's produced in older versions of AIR are always packaged as release builds. You can work around this by using the AndroidStudioProject output if required however we recommend updating the AIR SDK and using the debug target.
 :::
 
 
@@ -134,15 +144,15 @@ Listener callbacks are mapped to extension events depending on the triggered cal
 
 | Amazon Listener Callback | | Extension Event(s) |
 | --- | --- | --- |
-| `onProductDataResponse` | success | `InAppBillingEvent.PRODUCTS_LOADED` |
-| `onProductDataResponse` | invalid SKU | `InAppBillingEvent.PRODUCT_INVALID` |
-| `onProductDataResponse` | failed | `InAppBillingEvent.PRODUCTS_FAILED` |
+| `onProductDataResponse` | success | `ProductEvent.PRODUCTS_LOADED` |
+| `onProductDataResponse` | invalid SKU | `ProductEvent.PRODUCT_INVALID` |
+| `onProductDataResponse` | failed | `ProductEvent.PRODUCTS_FAILED` |
 | `onPurchaseResponse` | success | `PurchaseEvent.PURCHASES_UPDATED` |
 | `onPurchaseResponse` | failed | `PurchaseEvent.PURCHASE_FAILED` |
 | `onPurchaseUpdatesResponse` | `getPurchases` > success | `PurchaseEvent.GET_PURCHASES_COMPLETE` |
 | `onPurchaseUpdatesResponse` | `getPurchases` > failed | `PurchaseEvent.GET_PURCHASES_FAILED` |
-| `onPurchaseUpdatesResponse` | `restorePurchases` > success | `InAppBillingEvent.RESTORE_PURCHASES_SUCCESS` |
-| `onPurchaseUpdatesResponse` | `restorePurchases` > failed | `InAppBillingEvent.RESTORE_PURCHASES_FAILED` |
+| `onPurchaseUpdatesResponse` | `restorePurchases` > success | `PurchaseEvent.RESTORE_PURCHASES_SUCCESS` |
+| `onPurchaseUpdatesResponse` | `restorePurchases` > failed | `PurchaseEvent.RESTORE_PURCHASES_FAILED` |
 
 
 This is provided only as a guide of the implementation to better utilise the Amazon documentation. The exact implementation is more complex.

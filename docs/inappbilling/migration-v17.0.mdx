@@ -6,14 +6,67 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 
+This latest update integrates **Google Play Billing v7** bringing support for **Android API v35**. (This is a required update before the end of August 2025.) 
+
+**This release brings a refactoring of the extension around [products and purchases events](#product-and-purchase-event-refactor).** The purpose here is to reduce the ambiguity of the `InAppBillingEvent` that was previously used to handle all events and to provide a more consistent API for handling purchases and products.
+
+This update also includes a major update to the **Samsung IAP** integration. 
+
+
+## Google Play Billing
+
+This release updates the Google Play Billing client library to v7.1.1 which includes a number of improvements and bug fixes.
+
+- Added APIs to support installment subscriptions
+- Added ability to set new EU requirements on purchase requests (`isOfferPersonalised`)
+- Added `SubscriptionInstallmentPlan` on a `SubscriptionOffer` for subscription installment payment options
+- Added `PendingUpdate` details on a purchase when purchase is changing
+- Updated minSdkVersion to 21
+- Series of internal refactors to improve performance and maintainability
+- Internal updates and bug fixes
+
+You will likely want to update your application to use target sdk version 35 to ensure compatibility with the latest Google Play requirements.
+
+```xml
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35" />
+```
+
+
+## Samsung IAP
+
+This release includes a major update to the **Samsung IAP** integration. The SDK has been updated to v6.4.0 which includes a range of internal changes. Purchases now need to be acknowledged which is completed through the normal process of calling `finishPurchase()`. 
+There have been some internal changes to offers with usage of the "promotion eligibility" checks that are performed when retrieving the product list.
+
+- Added support for Samsung IAP v6.4.0
+- Updated to use new Samsung IAP APIs for purchase acknowledgment
+- Updated to use new Samsung IAP APIs for promotion eligibility checks
+- Updated minSdkVersion to 23
+
+
+## Subscription Management UI
+
+This release adds a subscription management UI and fallback URL redirect for both Android and iOS platforms. 
+This allows users to manage their subscriptions directly from the app, providing a better user experience.
+
+```actionscript
+if (InAppBilling.service.isShowManageSubscriptionsSupported) 
+{
+    InAppBilling.service.showManageSubscriptions();
+} 
+```
+
+More information: [Subscription Management UI](dialogs#subscription-management)
+
+
+## Product and Purchase Event Refactor
+
 This latest release brings a refactoring of the extension around products and purchases events.
 
 The purpose here is to reduce the ambiguity of the InAppBillingEvent that was previously used to handle all events and to provide a more consistent API for handling purchases and products.
 
 The existing events will continue to work but we recommend you update your code to use the new events as they are more consistent and easier to use.
 
-
-## Product Events 
+### Product Events 
 
 The `ProductEvent` class has been introduced to handle product events. This means the following events:
 
@@ -59,7 +112,7 @@ private function products_loadedHandler( event:ProductEvent ):void
 ```
 
 
-## Purchase Events
+### Purchase Events
 
 The existing `PurchaseEvent` class has been updated to handle all purchase related events. This means the following events:
 

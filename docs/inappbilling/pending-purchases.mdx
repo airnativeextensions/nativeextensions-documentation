@@ -182,11 +182,11 @@ This event may not be dispatched if there aren't any pending purchases, or if th
 </Tabs>
 
 
-## Google Play Billing Acknowledgement 
+## Acknowledgement 
 
-With Google Play Billing finishing a purchase performs the acknowledgement of the purchase.
+With some services, including Google Play Billing and Samsung IAP finishing a purchase performs the acknowledgement of the purchase.
 
-It is very important to note that if you don't acknowledge a purchase (i.e. call finish purchase) it will be refunded.
+It is very important to note that if you don't acknowledge a purchase (i.e. call `finishPurchase()` or `consumePurchase()`) it may be refunded after a few days.
 
 >
 > Google Play supports purchasing products from inside of your app (in-app) or outside of your app (out-of-app). In order for Google Play to ensure a consistent purchase experience regardless of where the user purchases your product, you must acknowledge all purchases received through the Google Play Billing Library as soon as possible after granting entitlement to the user. If you do not acknowledge a purchase within three days, the user automatically receives a refund, and Google Play revokes the purchase. 

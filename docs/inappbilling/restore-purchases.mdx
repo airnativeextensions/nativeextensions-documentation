@@ -27,7 +27,7 @@ For retrieving purchases without user interaction see the [Get Purchases](get-pu
   ]}>
   <TabItem value="air" >
 
-The restoring purchases process starts by calling the `restorePurchases()` function and concludes with either a success (`InAppBillingEvent.RESTORE_PURCHASES_SUCCESS`) or failure (`InAppBillingEvent.RESTORE_PURCHASES_FAILED`) event. 
+The restoring purchases process starts by calling the `restorePurchases()` function and concludes with either a success (`PurchaseEvent.RESTORE_PURCHASES_SUCCESS`) or failure (`PurchaseEvent.RESTORE_PURCHASES_FAILED`) event. 
 
 After calling `restorePurchase()` you will a receive `PurchaseEvent.PURCHASES_UPDATED` dispatched 
 which will contain `Purchase` objects in the restored state having the original purchase variable 
@@ -39,8 +39,8 @@ representing the original purchase transaction.
 // Make sure you have added your purchases handler
 InAppBilling.service.addEventListener( PurchaseEvent.PURCHASES_UPDATED,	purchases_updatedHandler );
 
-InAppBilling.service.addEventListener( InAppBillingEvent.RESTORE_PURCHASES_SUCCESS, restorePurchases_successHandler );
-InAppBilling.service.addEventListener( InAppBillingEvent.RESTORE_PURCHASES_FAILED, restorePurchases_failedHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.RESTORE_PURCHASES_SUCCESS, restorePurchases_successHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.RESTORE_PURCHASES_FAILED, restorePurchases_failedHandler );
 
 // Start the restore process
 InAppBilling.service.restorePurchases();
@@ -82,13 +82,13 @@ function purchases_updatedHandler( event:PurchaseEvent ):void
 //	RESTORE PURCHASE EVENTS
 //
 
-function restorePurchases_successHandler( event:InAppBillingEvent ):void
+function restorePurchases_successHandler( event:PurchaseEvent ):void
 {
 	// Called when all purchases have been restored
 	// This event contains no data
 }
 
-function restorePurchases_failedHandler( event:InAppBillingEvent ):void
+function restorePurchases_failedHandler( event:PurchaseEvent ):void
 {
 	// Called if there was an error restoring purchases
 }

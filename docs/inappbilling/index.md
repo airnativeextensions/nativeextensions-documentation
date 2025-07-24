@@ -8,8 +8,7 @@ slug: /inappbilling/
 
 # InAppBilling
 
-The [In-App Billing](https://airnativeextensions.com/extension/com.distriqt.InAppBilling) 
-provides functionality to purchase items from stores through your application.
+The [In-App Billing](https://airnativeextensions.com/extension/com.distriqt.InAppBilling) provides functionality to purchase items from stores through your application.
 
 Identical code base can be used across all supported platforms allowing you to 
 concentrate on your application and not device specifics.
@@ -48,7 +47,8 @@ More information here:
 
 You can purchase a license for using this extension:
 
-[airnativeextensions.com](https://airnativeextensions.com/)
+- [airnativeextensions.com](https://airnativeextensions.com/)
+- [Unity Asset Store](https://assetstore.unity.com/publishers/46451)
 
 
 ![](images/promo.png)

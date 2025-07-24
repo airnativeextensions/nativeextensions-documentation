@@ -135,6 +135,20 @@ This class contains two properties:
 For example, if the `numberOfUnits` was `2` and the `unit` was  `SubscriptionPeriod.UNIT_WEEK` then the subscription payment recurs every 2 weeks (fortnightly). Or if the `numberOfUnits` was `3` and the `unit` was  `SubscriptionPeriod.UNIT_MONTH`, then the payment recurs every 3 months (or quarterly).
 
 
+### Subscription Group 
+
+Some stores allow you to group subscriptions together allowing different subscription products to provide the same subscription benefits. 
+
+If the service returns this information the `product.subscriptionGroupId` will be a valid string containing the subscription group ID. If it is not available the `subscriptionGroupId` will be an empty string.
+
+
+:::::note Supported Platforms
+The subscription group ID is supported on the following services:
+- iOS StoreKit
+
+Even though subscription groups are supported on Google Play Billing, the subscription group ID is not returned by the service.
+:::
+
 
 ## Subscription Offers
 
@@ -159,12 +173,12 @@ var products : Array;
 var productIds : Array = [ "com.distriqt.testProduct1", "com.distriqt.testProduct2" ];
 var subscriptionIds : Array = [ "com.distriqt.testSubscription1", "com.distriqt.testSubscription2" ];
 
-InAppBilling.service.addEventListener( InAppBillingEvent.SETUP_SUCCESS,   		setup_successHandler );
-InAppBilling.service.addEventListener( InAppBillingEvent.SETUP_FAILURE,   		setup_failureHandler );
+InAppBilling.service.addEventListener( InAppBillingEvent.SETUP_SUCCESS, setup_successHandler );
+InAppBilling.service.addEventListener( InAppBillingEvent.SETUP_FAILURE, setup_failureHandler );
 
-InAppBilling.service.addEventListener( ProductEvent.PRODUCTS_LOADED, 		products_loadedHandler );
-InAppBilling.service.addEventListener( ProductEvent.PRODUCTS_FAILED, 		products_failedHandler );
-InAppBilling.service.addEventListener( ProductEvent.INVALID_PRODUCT,		product_invalidHandler );
+InAppBilling.service.addEventListener( ProductEvent.PRODUCTS_LOADED, products_loadedHandler );
+InAppBilling.service.addEventListener( ProductEvent.PRODUCTS_FAILED, products_failedHandler );
+InAppBilling.service.addEventListener( ProductEvent.INVALID_PRODUCT, product_invalidHandler );
 
 InAppBilling.service.setup(
         new BillingService()

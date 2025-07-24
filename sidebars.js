@@ -2106,6 +2106,7 @@ module.exports = {
             "inappbilling/introductory-prices",
           ],
         },
+        "inappbilling/dialogs",
         "inappbilling/testing",
       ],
     },

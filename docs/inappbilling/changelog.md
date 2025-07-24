@@ -1,3 +1,31 @@
+### 2025.07.25 [v17.1.0]
+
+```
+## Major Update
+
+This latest update integrates **Google Play Billing v7** bringing support for **Android API v35**. (This is a required update before the end of August 2025.) 
+
+**This release brings a refactoring of the extension around products and purchases events.** The purpose here is to reduce the ambiguity of the `InAppBillingEvent` that was previously used to handle all events and to provide a more consistent API for handling purchases and products.
+
+This update also includes a major update to the **Samsung IAP** integration. The SDK has been updated to v6.4.0 which includes a range of internal changes. Purchases now need to be acknowledged which is completed when through the normal process of calling `finishPurchase()`. There have been some internal changes to offers with usage of the "promotion eligibility" checks that are performed when retrieving the product list.
+
+Migration guide: https://docs.airnativeextensions.com/docs/inappbilling/migration-v17.0
+
+
+### Updates 
+
+feat(playbilling): update play billing sdk v7.1.1 (resolves https://github.com/distriqt/ANE-InAppBilling/issues/649, resolves https://github.com/distriqt/ANE-InAppBilling/issues/647)
+feat(samsung): update samsung iap sdk v6.4.0
+feat: refactor introducing separate product and purchase events to provide clearer usage
+feat(package): update package files to include supported platforms
+feat(android): update `nativeVersion` function to return version of billing service (after setup call)
+feat(playbilling): add ability to set new EU requirements on purchase requests (`isOfferPersonalised`)
+feat(playbilling): add `PendingUpdate` details on a purchase when purchase is changing
+feat(playbilling): add `SubscriptionInstallmentPlan` on a `SubscriptionOffer` for subscription installment payment options (resolves https://github.com/distriqt/ANE-InAppBilling/issues/606)
+feat(playbilling,ios): add subscription management UI and fallback url redirect (resolves https://github.com/distriqt/ANE-InAppBilling/issues/651)
+feat(unity): add new features to unity build, including PendingUpdate, SubscriptionInstallment
+```
+
 ### 2025.03.31 [v16.1.2]
 
 ```

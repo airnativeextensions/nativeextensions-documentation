@@ -64,6 +64,45 @@ Failure to supply an offer will result in an error being thrown.
 :::
 
 
+## Indicate a personalised price
+
+If your app can be distributed to users in the European Union, use the `setIsOfferPersonalised()` method on the `PurchaseRequest` to disclose to users that an item's price was personalized using automated decision-making.
+
+<Tabs groupId="framework" defaultValue="air" values={[
+	{label: 'AIR', value: 'air'},
+	{label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air">
+
+```actionscript
+var request:PurchaseRequest = new PurchaseRequest()
+		.setProductId( productId )
+		.setIsOfferPersonalised( true );
+```
+
+</TabItem>
+<TabItem value="unity">
+
+```csharp
+PurchaseRequest request = new PurchaseRequest()
+		.SetProductId( productId )
+		.SetIsOfferPersonalised( true );
+```
+
+</TabItem>
+</Tabs>
+
+
+You must consult Art. 6 (1) (ea) CRD of the Consumer Rights Directive [2011/83/EU](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02011L0083-20220528) to determine if the price you are offering to users is personalized.
+
+`setIsOfferPersonalized()` takes a boolean input. When true, the UI includes the disclosure. When false, the UI omits the disclosure. The default value is false.
+
+:::note
+This is currently only supported on Google Play Billing v7.1.1 and later.
+:::
+
+
+
 ## Purchase Request Validity
 
 The success value returned here indicates whether the purchase was initiated successfully.
@@ -224,16 +263,16 @@ InAppBilling.service.finishPurchase( purchase );
 Once complete the `FINISH_SUCCESS` event will be dispatched or if an error occurred then the `FINISH_FAILED` event will be dispatched:
 
 ```actionscript
-InAppBilling.service.addEventListener( InAppBillingEvent.FINISH_SUCCESS, successHandler );
-InAppBilling.service.addEventListener( InAppBillingEvent.FINISH_FAILED, failedHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.FINISH_SUCCESS, successHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.FINISH_FAILED, failedHandler );
 
 
-function successHandler( event:InAppBillingEvent ):void
+function successHandler( event:PurchaseEvent ):void
 {
 	trace( "finish purchase complete" );
 }
 
-function failedHandler( event:InAppBillingEvent ):void
+function failedHandler( event:PurchaseEvent ):void
 {
 	trace( "finish failed: ["+event.errorCode+"]" + event.message );
 }
@@ -326,8 +365,8 @@ using the transaction receipt with your application server.
 
 InAppBilling.service.addEventListener( PurchaseEvent.PURCHASES_UPDATED, purchases_updatedHandler );
 InAppBilling.service.addEventListener( PurchaseEvent.PURCHASE_FAILED, purchase_failedHandler );
-InAppBilling.service.addEventListener( InAppBillingEvent.FINISH_SUCCESS, finishPurchase_successHandler );
-InAppBilling.service.addEventListener( InAppBillingEvent.FINISH_FAILED, finishPurchase_failedHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.FINISH_SUCCESS, finishPurchase_successHandler );
+InAppBilling.service.addEventListener( PurchaseEvent.FINISH_FAILED, finishPurchase_failedHandler );
 
 
 var request:PurchaseRequest = new PurchaseRequest();
@@ -394,12 +433,12 @@ function purchase_failedHandler( event:PurchaseEvent ):void
 	trace( "purchase failed ["+event.errorCode+"]" + event.message );
 }
 
-function finishPurchase_successHandler( event:InAppBillingEvent ):void
+function finishPurchase_successHandler( event:PurchaseEvent ):void
 {
 	trace( "finish purchase complete" );
 }
 
-function finishPurchase_failedHandler( event:InAppBillingEvent ):void
+function finishPurchase_failedHandler( event:PurchaseEvent ):void
 {
 	trace( "finish failed: ["+event.errorCode+"]" + event.message );
 }
