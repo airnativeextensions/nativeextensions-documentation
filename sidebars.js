@@ -2963,6 +2963,11 @@ module.exports = {
       ],
     },
     {
+      Troubleshooting: [
+        "revenuecat/migrating-to-v2.0",
+      ]
+    },
+    {
       Other: [
         { type: "doc", id: "revenuecat/changelog" },
         {

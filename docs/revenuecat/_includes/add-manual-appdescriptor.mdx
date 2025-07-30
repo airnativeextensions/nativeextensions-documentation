@@ -43,7 +43,7 @@ The following additions are for the `InfoAdditions` node of the iPhone section i
 	<InfoAdditions><![CDATA[
 
 		<key>MinimumOSVersion</key>
-		<string>12.0</string>
+		<string>13.0</string>
 
 	]]></InfoAdditions>
 </iPhone>
@@ -55,7 +55,7 @@ The following additions are for the `InfoAdditions` node of the iPhone section i
 
 #### Manifest Additions
 
-The RevenueCat extension requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your manifest.
+The RevenueCat extension requires a few additions to the manifest to be able to start certain activities. You should add the listing below to your application descriptor.
 
 :::caution
 Ensure you replace:
@@ -64,56 +64,22 @@ Ensure you replace:
 
 
 ```xml
-<manifest android:installLocation="auto" >
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+<android>
+    <gradleVersion>8.9</gradleVersion>
+    <androidGradlePluginVersion>8.7.3</androidGradlePluginVersion>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="com.android.vending.BILLING"/>
-  <queries>
-    <intent>
-      <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
-    </intent>
-  </queries>
-  <permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
-  <uses-permission android:name="APPLICATION_PACKAGE.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-  <uses-permission android:name="android.permission.WAKE_LOCK"/>
-  <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
-  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
-  <!-- Required by older versions of Google Play services to create IID tokens -->
-  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
-  <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+
+  <application>
     <meta-data android:name="android.max_aspect" android:value="2.5"/>
     <meta-data android:name="android.notch_support" android:value="true"/>
-    
-	<!-- GOOGLE PLAY BILLING -->
-    <meta-data android:name="com.google.android.play.billingclient.version" android:value="6.0.0"/>
-    <activity android:name="com.android.billingclient.api.ProxyBillingActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <!-- REVENUE CAT -->
-    <activity android:name="com.revenuecat.purchases.amazon.purchasing.ProxyAmazonBillingActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    
-	<provider android:name="androidx.startup.InitializationProvider" android:authorities="APPLICATION_PACKAGE.androidx-startup" android:exported="false">
-      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
-    </provider>
-    <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
-    <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
-    <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
-    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:directBootAware="true" android:exported="false">
-      <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-      <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-    </service>
-    <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
-    <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
-    <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
-      <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
-    </service>
+
     <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:authorities="APPLICATION_PACKAGE.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100"/>
   </application>
 </manifest>
+]]></manifestAdditions>
+</android>
 ```
-
-
-
 

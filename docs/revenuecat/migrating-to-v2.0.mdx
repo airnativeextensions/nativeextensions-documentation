@@ -1,0 +1,91 @@
+---
+title: Migrating to v2.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This latest release brings a number of updates to the extension particularly around the Android integration. 
+
+The Android implementation has been updated to v8.22.0 and we have moved to using Android gradle dependencies within our extensions, which will improve dependency resolution, reduce update times and improve compatibility with other extensions. (This update also addresses the Android 35 requirement for Play Billing v7).
+
+The iOS implementation has been updated to v5.33.1 which should bring a range of bug fixes and improvements.
+
+
+
+## Android Integration 
+
+We have moved to using gradle dependencies within our extensions which will improve dependency resolution, reduce update times and improve compatibility with other extensions.
+This also reduces the amount of work required to manually integrate the extensions, reducing the additions to the manifest in your application descriptor.
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+We highly recommend using the [apm](https://airnativeextensions.com/docs/using-apm) tool to manage the integration of the extensions in your application and to generate your application descriptor:
+
+```bash
+apm update
+apm generate app-descriptor
+```
+
+This will automatically update your application descriptor with the required manifest entries and gradle dependencies.
+
+  </TabItem>
+  <TabItem value="manual" >
+  
+You can still integrate the manifest additions manually if you prefer. With this update we recommend starting fresh as there have been a lot of entries to be removed.
+
+Firstly make sure you have the latest versions of all the dependencies extensions. 
+
+Then you can simplify the manifest now as well as the gradle implementation will add a significant amount of the required manifest entries for you.  
+The minimum android section now looks like the following:
+
+```xml
+<android>
+    <gradleVersion>8.9</gradleVersion>
+    <androidGradlePluginVersion>8.7.3</androidGradlePluginVersion>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="com.android.vending.BILLING"/>
+
+  <application>
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+  </application>
+</manifest>
+]]></manifestAdditions>
+</android>
+```
+
+
+  </TabItem>
+  
+</Tabs>
+
+
+### Updating code 
+
+There should be no changes to your code required for this update.
+
+
+
+
+## iOS Integration
+
+Make sure you have set the minimum iOS version to `13.0` in your application descriptor `InfoAdditions` section:
+
+```xml
+<key>MinimumOSVersion</key>
+<string>13.0</string>
+```

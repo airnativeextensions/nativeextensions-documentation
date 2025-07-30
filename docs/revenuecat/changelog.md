@@ -1,3 +1,24 @@
+### 2025.07.30 [v2.0.0]
+
+```
+## Major Update 
+
+This latest release brings a number of updates to the extension particularly around the Android integration. 
+
+The Android implementation has been updated to v8.22.0 and we have moved to using Android gradle dependencies within our extensions, which will improve dependency resolution, reduce update times and improve compatibility with other extensions. (This update also addresses the Android 35 requirement for Play Billing v7).
+
+The iOS implementation has been updated to v5.33.1 which should bring a range of bug fixes and improvements.
+
+Migration guide: https://docs.airnativeextensions.com/docs/revenuecat/migrating-to-v2.0
+
+
+### Updates
+
+feat(android): new gradle dependencies approach
+feat(android): update sdk v8.22.0
+feat(ios): update sdk v5.33.1
+```
+
 ### 2025.01.14 [v1.0.4]
 
 ```
