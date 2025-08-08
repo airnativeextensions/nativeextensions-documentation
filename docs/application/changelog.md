@@ -1,3 +1,9 @@
+### 2025.08.08 [v8.1.0]
+
+```
+fix(ios): resolve issue with scale not correctly reflecting state (resolves https://github.com/distriqt/ANE-Application/issues/300)
+```
+
 ### 2024.12.11 [v8.0.0]
 
 ```

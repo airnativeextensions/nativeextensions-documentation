@@ -20,6 +20,7 @@ trace( "screenHeight: " + Application.service.display.displayMetrics.screenHeigh
 trace( "screenWidth:  " + Application.service.display.displayMetrics.screenWidth );
 trace( "xdpi:         " + Application.service.display.displayMetrics.xdpi );
 trace( "ydpi:         " + Application.service.display.displayMetrics.ydpi );
+trace( "scale:        " + Application.service.display.displayMetrics.scale );
 trace( "nativeScale:  " + Application.service.display.displayMetrics.nativeScale );
 ```
 
@@ -33,9 +34,24 @@ The iOS screen density is determined from a lookup and is not provided by the AP
 
 ### Native Scale
 
-The `nativeScale` property is only valid on iOS. 
+The `scale` & `nativeScale` property are only valid on iOS. 
 
-This value reflects the scale factor needed to convert from the default logical coordinate space into the device coordinate space of this screen. The default logical coordinate space is measured using points. For Retina displays, the scale factor may be 3.0 or 2.0 and one point can represented by nine or four pixels, respectively. For standard-resolution displays, the scale factor is 1.0 and one point equals one pixel.
+These value reflects the scale factor needed to convert from the default logical coordinate space into the device coordinate space of this screen. The default logical coordinate space is measured using points. For Retina displays, the scale factor may be 3.0 or 2.0 and one point can represented by nine or four pixels, respectively. For standard-resolution displays, the scale factor is 1.0 and one point equals one pixel.
 
 This native scale property will change on an iOS device if the screen is put into it's "zoomed" display state and knowing this value can allow you to react accordingly.
+
+The following logic is useful when checking for the zoomed state of a device:
+
+```as3
+function isZoomed( displayMetrics:DisplayMetrics ):Boolean
+{
+    return displayMetrics.scale < displayMetrics.nativeScale;
+}
+
+if (isZoomed( Application.service.device.displayMetrics ))
+{
+    // zoomed state
+}
+```
+
 

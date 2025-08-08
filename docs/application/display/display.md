@@ -55,12 +55,18 @@ Application.service.display.setDisplayMode( DisplayMode.FULLSCREEN );
 
 ### Layout Modes
 
+:::caution Android 15 (API v35)
+With Android 15 apps are edge-to-edge by default on devices running Android 15 if the app is targeting Android 15 (API level 35). This means that layout modes are ignored and SHORT_EDGES, NEVER, and DEFAULT are interpreted as ALWAYS so that users don't see a black bar caused by the display cutout and appear edge-to-edge.
+:::
+
+
 Modern devices are moving towards smaller bezels and larger aspect ratios. On these devices, *display cutouts* or *"notches"* are a popular way to achieve an edge-to-edge experience while providing space for important sensors on the front of the device.
 
 We have two main options when displaying our content around cutouts, and how it will appear will depend on the display mode you are using. 
 
 - `LayoutMode.CUTOUT_SHORT_EDGES`: The window is allowed to extend into the cutout areas;
 - `LayoutMode.CUTOUT_NEVER`: The window is never allowed to overlap with the cutout area;
+- `LayoutMode.CUTOUT_ALWAYS`: Content is always allowed to extend into the cutout areas. **If your app targets SDK 35 and is running on an Android 15 device, this is the only allowed mode** ;
 
 To set the layout mode, pass the required mode as the second parameter to the `setDisplayMode()` function:
 
@@ -176,6 +182,7 @@ Ensure you place this within the `application` tag eg:
             <uses-permission android:name="android.permission.WAKE_LOCK" />
 
             <application>
+                <meta-data android:name="android.max_aspect" android:value="2.5" />
             </application>
         
         </manifest>
