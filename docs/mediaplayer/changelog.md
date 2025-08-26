@@ -1,3 +1,13 @@
+### 2025.08.26 [v6.0.0]
+
+```
+feat(android): migrate from exoplayer to androidx.media3 v1.8.0 (resolves https://github.com/distriqt/ANE-MediaPlayer/issues/242)
+feat(ios,android): add video scale modes - fit, fill, zoom (resolves https://github.com/distriqt/ANE-MediaPlayer/issues/231)
+fix(android): resolve issues with background audio and remote command center (resolves https://github.com/distriqt/ANE-MediaPlayer/issues/247)
+feat(android,ios): player view will dispatch mouse up and down with local x,y coords (resolves https://github.com/distriqt/ANE-MediaPlayer/issues/186) 
+feat(android): support runtimeInBackgroundThread operation (resolves https://github.com/distriqt/ANE-MediaPlayer/issues/240)
+```
+
 ### 2024.12.19 [v5.0.0]
 
 ```
