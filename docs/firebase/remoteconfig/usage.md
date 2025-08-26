@@ -83,6 +83,27 @@ private function fetch_completeHandler( event:FirebaseRemoteConfigEvent ):void
 ```
 
 
+## Activate 
+
+To activate a cached configuration from the Remote Config service, call the `activate()` method. Any cached values are activated and made available via the get calls.
+
+```actionscript
+FirebaseRemoteConfig.service.activate();
+```
+
+
+```actionscript
+FirebaseRemoteConfig.service.addEventListener( FirebaseRemoteConfigEvent.ACTIVATE_COMPLETE, activate_completeHandler );
+```
+
+```actionscript
+private function activate_completeHandler( event:FirebaseRemoteConfigEvent ):void
+{
+	// New values available here
+}
+```
+
+
 ## Throttling
 
 If an app fetches too many times in a short time period, fetch calls are throttled.
@@ -105,6 +126,34 @@ FirebaseRemoteConfig.service.setConfigSettings( settings );
 :::caution
 Keep in mind that this setting should be used for development only, not for an app running in production. If you're just testing your app with a small 10-person development team, you are unlikely to hit the hourly service-side quota limits. But if you pushed your app out to thousands of test users with a very low minimum fetch interval, your app would probably hit this quota.
 :::
+
+
+## Listen for updates
+
+Real-time updates complement Remote Config fetch calls. We recommend calling fetch when your app starts (or sometime during your app’s lifecycle) and listening for real-time Remote Config updates during the user session to ensure that you have the latest values as soon as they’re published on the server.
+
+To listen for updates add a listener for the `FirebaseRemoteConfigEvent.CONFIG_UPDATE` event:
+
+```actionscript
+FirebaseRemoteConfig.service.addEventListener( FirebaseRemoteConfigEvent.CONFIG_UPDATE, remoteConfigUpdateHandler );
+```
+
+In your handler:
+
+```actionscript
+function remoteConfigUpdateHandler( event:FirebaseRemoteConfigEvent ):void 
+{
+	if (event.updatedKeys && event.updatedKeys.length > 0)
+	{
+		trace( "Updated keys: " + event.updatedKeys.join( ", " ) );
+	}
+}
+```
+
+:::note Activation
+After receiving this event you will need to call `activate()` to make the new configuration available to your application. This separation has been done to ensure the values are only activated at a time in your app where you are updating the UI. 
+:::
+
 
 
 ## Next Steps

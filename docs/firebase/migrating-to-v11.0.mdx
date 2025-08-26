@@ -1,0 +1,33 @@
+---
+title: Migrating to v11.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+## Changes
+
+With the deprecation of Firebase Dynamic Links you will need to change the way you handle email link authentication as you will no longer receive the `DynamicLinkEvent.RECEIVED` event. 
+
+You should remove the Firebase Dynamic Links extension from your application as it is no longer required for email link authentication.
+
+See the auth [migration guide](auth/migrating-to-v11.mdx) for more information on migrating to the new email link authentication method. 
+
+
+
+## New Features 
+
+Support has been added to the remote config extension for update events which will be dispatched when the server notifies the application of an update to the configuration settings. 
+Additionally we have added the `activate` and `fetch` methods, allowing you to fetch and activate remote config parameters in a single call.
+
+- [Update events](remoteconfig/usage.md#listen-for-updates)
+
+Added attributes to traces for the Performance extension. This allows you to add custom attributes to traces.
+
+- [Attributes](performance/traces.md#attributes)
+
+We have added the ability to change the default sort order for queries in the Firestore extension.
+
+- [Change default sort order](firestore/order-and-limit-data.md#default-order)
+

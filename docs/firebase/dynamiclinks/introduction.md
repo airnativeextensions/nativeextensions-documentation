@@ -26,6 +26,7 @@ Further information can be found in the [Dynamic Links Deprecation FAQ](https://
 
 Dynamic Links are links that work the way you want, on multiple platforms, and whether or not your app is already installed.
 
+
 ## About 
 
 Firebase Dynamic Links are links that work the way you want, on multiple platforms, and whether or not your app is already installed.

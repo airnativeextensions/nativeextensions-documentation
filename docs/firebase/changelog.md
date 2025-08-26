@@ -1,3 +1,37 @@
+### 2025.08.26 [v11.0.0]
+
+```
+## Major update 
+
+This release implements the latest versions the Firebase SDK:
+- Android BOM v34.1.0
+- iOS v12.1.0 
+
+The major change is the deprecation and removal of the Dynamic Links extension. This has an impact if you are using the email link authentication method and the Auth extension has been updated to use the latest method.
+This affects anyone using the email link authentication method, as the new method does not require Dynamic Links and uses a different approach to handle the email link.
+
+> Deprecated: Firebase Dynamic Links is deprecated and should not be adopted in projects that don't already use it. The service will shut down on August 25, 2025. See the [Dynamic Links Deprecation FAQ](https://firebase.google.com/support/dynamic-links-faq) for more information.
+
+See the migration guide: https://docs.airnativeextensions.com/docs/firebase/migrating-to-v11.0
+
+### Updates
+
+feat(core): update sdk - android v23.0.0, ios v12.1.0
+feat(auth): update sdk - android v24.0.1, ios v12.1.0 
+feat(auth): new email link integration without dynamic links
+feat(crashlytics): update sdk - android v20.0.0, ios v12.1.0
+feat(database): update sdk - android v22.0.0, ios v12.1.0
+feat(dynamiclinks): remove deprecated dynamic links extension
+feat(firestore): update sdk - android v26.0.0, ios v12.1.0
+feat(firestore): add ability to change default query order (resolves https://github.com/distriqt/ANE-Firebase/issues/512)
+feat(performance): update sdk - android v22.0.0, ios v12.1.0
+feat(performance): add custom attributes to Trace
+feat(remoteconfig): update sdk - android v23.0.0, ios v12.1.0
+feat(remoteconfig): add support for config update event
+feat(remoteconfig): add activate and fetch methods
+feat(storage): update sdk - android v22.0.0, ios v12.1.0
+```
+
 ### 2025.02.13 [v10.1.0]
 
 ```

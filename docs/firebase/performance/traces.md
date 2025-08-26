@@ -54,6 +54,38 @@ testTrace.stop();
 ```
 
 
+### Attributes
+
+To use custom attributes, add code to your app that defines the attribute and associates it with a specific custom code trace. You can set the custom attribute anytime between when the trace starts and when the trace stops.
+
+Note the following:
+
+- Names for custom attributes must meet the following requirements:
+  - No leading or trailing whitespace, no leading underscore (_) character
+  - No spaces
+  - Max length is 32 characters
+  - Allowed characters for the name are A-Z, a-z, and _.
+- Each custom code trace can record up to 5 custom attributes.
+- Please ensure that custom attributes do not contain any information that personally identifies an individual to Google.
+
+To set an attribute:
+
+```actionscript
+testTrace.setAttribute( "experiment", "A" );
+```
+
+To read an attribute:
+
+```actionscript
+var experimentValue:String = testTrace.getAttribue( "experiment" );
+```
+
+To delete an attribute:
+
+```actionscript
+testTrace.removeAttribute( "experiment" );
+```
+
 
 ## Check the Firebase console for Performance Monitoring results
 

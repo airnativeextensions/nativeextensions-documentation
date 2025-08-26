@@ -5,22 +5,19 @@ The following should be added to your `extensions` node in your application desc
 
 ```xml
 <extensions>
-	<extensionID>com.distriqt.firebase.Auth</extensionID>
-	<extensionID>androidx.browser</extensionID>
-	<extensionID>com.distriqt.playservices.Auth</extensionID>
-	<extensionID>com.google.android.recaptcha</extensionID>
-
-	<!-- Firebase Core -->
 	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.browser</extensionID>
 	<extensionID>com.distriqt.Core</extensionID>
 	<extensionID>com.distriqt.Firebase</extensionID>
+	<extensionID>com.distriqt.firebase.Auth</extensionID>
 	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.Auth</extensionID>
 	<extensionID>com.distriqt.playservices.Base</extensionID>
 	<extensionID>com.distriqt.playservices.CloudMessaging</extensionID>
 	<extensionID>com.google.android.datatransport</extensionID>
+	<extensionID>com.google.android.recaptcha</extensionID>
 	<extensionID>com.google.firebase.core</extensionID>
 	<extensionID>com.jetbrains.kotlin</extensionID>
-
 </extensions>
 ```
 
@@ -41,7 +38,7 @@ Ensure you:
 
 ```xml
 <manifest android:installLocation="auto" >
-  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="34"/>
+  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35"/>
   <uses-permission android:name="android.permission.INTERNET"/>
   <application>
     <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
