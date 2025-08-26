@@ -1,3 +1,12 @@
+### 2025.08.26 [v8.0.0]
+
+```
+feat(ios): update sdk v9.0.0 (compatible with Firebase v12.1.0)
+feat(android): update playservices auth to v21.4.0 
+feat(android): implement new disconnect functionality using revokeAccess
+feat(docs): correct manual docs to correctly list firebase core as a dependency (resolves https://github.com/distriqt/ANE-GoogleIdentity/issues/80)
+```
+
 ### 2025.07.02 [v7.1.1]
 
 ```
