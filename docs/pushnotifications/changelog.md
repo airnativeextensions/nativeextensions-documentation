@@ -1,3 +1,10 @@
+### 2025.08.26 [v17.0.0]
+
+```
+feat(fcm): update firebase messaging sdk: android v25.0.0, ios v12.1.0
+feat(airpackage): add platform configurations
+```
+
 ### 2025.01.20 [v16.0.2]
 
 ```
