@@ -5,6 +5,13 @@ feat(android): update admob sdk v24.5.0, ump sdk v3.2.0 (resolves https://github
 feat(ios): update admob sdk v12.9.0
 ```
 
+### 2025.08.26 [v16.3.0]
+
+```
+feat(android): update admob sdk v24.5.0, ump sdk v3.2.0 (resolves https://github.com/distriqt/ANE-Adverts/issues/619)
+feat(ios): update admob sdk v12.9.0
+```
+
 ### 2025.07.18 [v16.2.0]
 
 ```
