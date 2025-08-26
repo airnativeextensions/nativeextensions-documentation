@@ -1608,7 +1608,7 @@ module.exports = {
     },
     {
       "Migration Guides": [
-        "firebase/migrating-to-v11.1",
+        "firebase/migrating-to-v11.0",
         "firebase/migrating-to-v10.0",
         "firebase/migrating-to-v6",
         "firebase/migrating-to-v4",
@@ -1763,6 +1763,7 @@ module.exports = {
     {
       Help: [
         "gameservices/troubleshooting",
+        "gameservices/migrating-to-v11.0",
         "gameservices/migrating-to-v10.0",
         "gameservices/migrating-to-androidx",
       ],

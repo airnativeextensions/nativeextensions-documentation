@@ -1,0 +1,23 @@
+---
+title: Migrating to v11.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This latest release brings an update to the Google Play Games v2 SDK to the latest version (v21.0.0).
+
+
+## Android Integration 
+
+The update is fairly simple however you will have to remove to the `com.distriqt.playservices.Drive` dependency as it has been included in the `com.distriqt.playservices.Gamesv2` dependency now.
+
+If you are using `apm` or manually managing your application you will have to manually remove the extension entry from your application descriptor. 
+
+i.e. remove the following entry from your application descriptor:
+
+```xml
+<extensionID>com.distriqt.playservices.Drive</extensionID>
+```	
+
