@@ -1,3 +1,10 @@
+### 2025.08.26 [v7.0.0]
+
+```
+feat(android): update play maps sdk v19.2.0
+fix(android): resolve hide map issue with recent android armv8 (resolves https://github.com/distriqt/ANE-NativeMaps/issues/234) 
+```
+
 ### 2024.12.19 [v6.0.0]
 
 ```
