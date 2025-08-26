@@ -1,0 +1,33 @@
+
+:::info
+The following guide is used to manually install the extension, download dependencies and update the application descriptor. We highly recommend installing extensions using `apm`. Using `apm` will automate the installation and automatically handle updates and dependencies along with greatly simplifying the application descriptor generation.
+:::
+
+
+
+The `com.distriqt.admob.FacebookAudience` ANE includes the Facebook Audience SDK and the AdMob Facebook mediation adapter. This is everything you need to get Facebook mediation working in your application.
+
+To add the ANE download it from the repository and add it to your application:
+
+- [`com.distriqt.admob.FacebookAudience`](https://github.com/distriqt/ANE-Adverts-Mediation/raw/master/lib/facebookaudience/com.distriqt.admob.FacebookAudience.ane)
+
+
+More information on adding ANEs in this [tutorial](/docs/tutorials/getting-started)
+
+
+### Dependencies
+
+#### Android Support
+
+The Android Support libraries encompass the Android Support, Android X and common Google libraries.
+
+These libraries are specific to Android. There are no issues including these on all platforms, they are just **required** for Android.
+
+This extension requires the following extensions:
+
+- [`org.jacoco`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/org.jacoco.ane)
+- [`org.ow2.asm`](https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/org.ow2.asm.ane)
+
+You can access these extensions here: [https://github.com/distriqt/ANE-AndroidSupport](https://github.com/distriqt/ANE-AndroidSupport).
+
+
