@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[43305],{4345:e=>{e.exports=JSON.parse('{"label":"googleidentity","permalink":"/news/tags/googleidentity","allTagsPath":"/news/tags","count":1}')}}]);
