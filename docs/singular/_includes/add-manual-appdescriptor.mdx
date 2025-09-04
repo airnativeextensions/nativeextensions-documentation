@@ -24,17 +24,10 @@ The following should be added to your `extensions` node in your application desc
 
 ### Dynamic Frameworks
 
-Singular is based on a dynamic framework so you must include the framework and dependent swift libs in your application for signing by AIR.
+:::note 
+Singular is now based on a static framework so you no longer need to include the `Frameworks` directory in your application and you should remove any legacy versions of the `Singular.framework` from that folder.
+:::
 
-To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
-
-If should contain any of the files in the supplied `assets/ios/Frameworks` directory (including `dylib` and `framework` directories).
-
-Your `Frameworks` directory should contain:
-
-```
-Singular.framework
-```
 
 
 ### Info Additions 
@@ -46,7 +39,7 @@ The following additions are for the `InfoAdditions` node of the iPhone section i
 	<InfoAdditions><![CDATA[
 
         <key>MinimumOSVersion</key>
-        <string>12.0</string>
+        <string>13.0</string>
 
 	]]></InfoAdditions>
 </iPhone>
@@ -68,14 +61,27 @@ Ensure you replace:
 
 ```xml
 <manifest android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="25" android:targetSdkVersion="34" />
+	<uses-sdk android:minSdkVersion="25" android:targetSdkVersion="35" />
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
     <uses-permission android:name="BIND_GET_INSTALL_REFERRER_SERVICE" />
 
-    <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+	<queries>
+		<intent>
+			<action android:name="com.singular.preinstall.READ_PERMISSION_SINGULAR" />
+		</intent>
+	</queries>
+	<queries>
+		<package android:name="com.facebook.katana" />
+		<package android:name="com.instagram.android" />
+	</queries>
+    <queries>
+        <package android:name="com.digitalturbine.igniteui.provider.SingularContentProvider" />
+    </queries>
+
+    <application>
 
         <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     
@@ -85,6 +91,33 @@ Ensure you replace:
 </manifest>
 ```
 
+
+
+### Android Gradle Version 
+
+We have updated the required gradle version used to build your application to be higher than the default AIR currently uses (April 2025). 
+
+To specify a higher version add the following to your android node in your application descriptor:
+
+```xml
+<android>
+    <gradleVersion>8.9</gradleVersion>
+    <androidGradlePluginVersion>8.7.3</androidGradlePluginVersion>
+
+  ...
+</android>
+```
+
+If you don't do this you will see the following error when building your application:
+
+```
+Unexpected failure: Unable to run java: com.adobe.air.ADTException: gradle tool failed: 
+FAILURE: Build failed with an exception.
+
+...
+
+   > BUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 65
+```
 
 
 

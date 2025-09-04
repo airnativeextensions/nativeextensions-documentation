@@ -1,3 +1,10 @@
+### 2025.09.04 [v13.1.0]
+
+```
+feat(android): update sdk to v12.10.0
+feat(ios): update sdk to v12.8.1
+```
+
 ### 2024.12.19 [v13.0.0]
 
 ```
