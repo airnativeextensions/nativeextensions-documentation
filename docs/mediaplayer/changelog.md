@@ -1,3 +1,9 @@
+### 2025.09.06 [v6.0.2]
+
+```
+feat(ios): improved background audio player have less impact on AIR sounds (resolves https://github.com/distriqt/ANE-MediaPlayer/issues/248)
+```
+
 ### 2025.08.26 [v6.0.0]
 
 ```
