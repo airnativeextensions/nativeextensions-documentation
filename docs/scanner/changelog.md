@@ -1,3 +1,9 @@
+### 2025.09.15 [v6.0.6]
+
+```
+feat(airpackage): update airpackage to specify platforms and gradle details
+```
+
 ### 2025.09.15 [v6.0.5]
 
 ```
