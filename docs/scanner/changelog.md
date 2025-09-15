@@ -1,3 +1,10 @@
+### 2025.09.15 [v6.0.5]
+
+```
+feat(android): update for android 35 - ensure scanner activity correctly respects safe area (system bars and cutouts)
+feat(android): remove legacy native libs causing page sizing issues (https://github.com/airsdk/Adobe-Runtime-Support/discussions/3980)
+```
+
 ### 2025.06.19 [v6.0.5]
 
 ```
