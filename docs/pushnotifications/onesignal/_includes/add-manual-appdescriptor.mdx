@@ -223,17 +223,18 @@ In the `application` tag, add the following:
 
 ```xml
 <amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false"/>
-<service android:name="com.onesignal.ADMMessageHandler" android:exported="false" />
-<service android:name="com.onesignal.ADMMessageHandlerJob"
-         android:permission="android.permission.BIND_JOB_SERVICE"
-         android:exported="false" />
-<receiver android:name="com.onesignal.ADMMessageHandler$Receiver"
-          android:permission="com.amazon.device.messaging.permission.SEND" >
-    <intent-filter>
-        <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
-        <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
-        <category android:name="APPLICATION_PACKAGE" />
-    </intent-filter>
+<service android:name="com.onesignal.notifications.services.ADMMessageHandler" android:exported="false" />
+<service android:name="com.onesignal.notifications.services.ADMMessageHandlerJob"
+          android:permission="android.permission.BIND_JOB_SERVICE"
+          android:exported="false" />
+<receiver android:name="com.onesignal.notifications.receivers.ADMMessageReceiver"
+          android:permission="com.amazon.device.messaging.permission.SEND"
+          android:exported="true" >
+  <intent-filter>
+    <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+    <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+    <category android:name="APPLICATION_PACKAGE" />
+  </intent-filter>
 </receiver>
 ```
 

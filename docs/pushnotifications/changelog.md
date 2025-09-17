@@ -1,3 +1,10 @@
+### 2025.09.17 [v17.0.1]
+
+```
+feat(docs): update onesignal amazon manual integration docs (resolves https://github.com/distriqt/ANE-PushNotifications/issues/629) 
+feat(onesignal): update sdk: android v5.1.37 iOS v5.2.14 (resolves https://github.com/distriqt/ANE-PushNotifications/issues/631)
+```
+
 ### 2025.08.26 [v17.0.0]
 
 ```
