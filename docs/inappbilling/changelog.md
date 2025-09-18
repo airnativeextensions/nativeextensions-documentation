@@ -1,3 +1,24 @@
+### 2025.09.18 [v18.0.0]
+
+```
+## Major Update
+
+This update to Play Billing v8 changes the purchases returned via getPurchases / restorePurchases. 
+This used to return all historical purchases. Now it will only return active purchases and you are 
+expected to track historical purchases yourself or use the server API.
+
+[Recommendations](https://developer.android.com/google/play/billing/query-purchase-history):
+ - Handle Voided Purchases: To fetch voided or cancelled purchases, use the [voided purchases](https://developers.google.com/android-publisher/voided-purchases) server developer API.
+ - Track Historical Purchases: If your app would like to track a user's purchase history your app should keep track of the history on your apps backend.
+
+This update also includes an update to the Amazon Appstore integration, bringing the latest SDK and bug fixes.
+
+### Updates
+
+feat(playbilling): update playbilling sdk v8.0.0 (resolves https://github.com/distriqt/ANE-InAppBilling/issues/654)
+feat(amazon): update amazon appstore sdk v3.0.8 (https://github.com/distriqt/ANE-InAppBilling/issues/658)
+```
+
 ### 2025.07.25 [v17.1.0]
 
 ```
