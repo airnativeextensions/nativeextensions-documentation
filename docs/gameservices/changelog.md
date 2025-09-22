@@ -1,3 +1,9 @@
+### 2025.09.22 [v11.0.1]
+
+```
+fix(macos): fix issue with playerid from game center resulting in potential crash
+```
+
 ### 2025.08.26 [v11.0.0]
 
 ```
