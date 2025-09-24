@@ -21,6 +21,12 @@ options.audioEncoding = AudioEncoder.AAC;
 AudioRecorder.service.start( options );
 ```
 
+:::note
+The file extension of the recorded file is important. It should be an extension type that matches the output audio format. Some platforms may fail starting recording if the extension doesn't match.
+:::
+
+
+
 ## Stop
 
 Once you have finished recording you call the `stop` function to complete the recording.
@@ -51,12 +57,11 @@ AudioRecorder.service.addEventListener( AudioRecorderEvent.PROGRESS, audioRecord
 Example event handler:
 
 ```actionscript
-private function audioRecorderEventHandler( event:AudioRecorderEvent ):void
+function audioRecorderEventHandler( event:AudioRecorderEvent ):void
 {
 	trace( event.type );
 }
 ```
-
 
 
 

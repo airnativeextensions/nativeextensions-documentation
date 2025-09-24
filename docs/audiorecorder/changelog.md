@@ -1,3 +1,12 @@
+### 2025.09.24 [v4.0.0]
+
+```
+feat(airpackage): update dependencies (resolves https://github.com/airnativeextensions/ANE-AudioRecorder/issues/13)
+feat(android): correct required permissions on recent android api versions
+feat(ios): update for latest xcode
+feat(docs): update playback + installation docs
+```
+
 ### 2023.01.13 [v3.1.0]
 
 ```

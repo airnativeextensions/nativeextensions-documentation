@@ -51,7 +51,4 @@ You can purchase a license for using this extension:
 
 [airnativeextensions.com](https://airnativeextensions.com/)
 
-distriqt retains all copyright.
-
-
 ![](images/promo.png)
