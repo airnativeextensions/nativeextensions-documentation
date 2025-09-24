@@ -1,0 +1,93 @@
+---
+title: Migrating to v6.1
+sidebar_label: Migrating to v6.1
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+This version brings a rebuild of the android implementation to use the latest Google Play Services libraries and support the latest Android OS versions.
+
+We have tweaked the location update and geofence implementations so you should get a more reliable and consistent experience with location updates and geofences on Android. 
+
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+If you are using [`apm`](https://github.com/airsdk/apm) all you need to do is update to the latest build and regenerate your application descriptor. `apm` will handle the rest.
+
+```
+apm update 
+apm generate app-descriptor 
+```
+
+There is one note to this however, if you are attempting to receive background updates you will need to make sure you add the `POST_NOTIFICATIONS` permission to your application descriptor. This is required for recent Android versions, where a notification is required to be displayed for your foreground service which receives the location while your application is in the background.
+
+This will mean your `config/android/AndroidManifest.xml` file will need to look like the following:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+</manifest>
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+If you are manually managing your application descriptor (and manifest additions) then you will need to update your manifest additions to include the following. 
+We suggest you clear all previous manifest additions and replace them with the following:
+
+```xml
+<manifest android:installLocation="auto">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+
+    <application>
+
+        <service android:name="com.distriqt.extension.location.services.LocationUpdateService" android:foregroundServiceType="location" android:exported="true" android:enabled="true" />
+
+        <receiver android:name="com.distriqt.extension.location.receivers.GeofenceTransitionReceiver" android:exported="true" android:enabled="true" />
+        <service android:name="com.distriqt.extension.location.services.GeofenceRestartService" android:exported="true" android:enabled="true" />
+
+        <receiver android:name="com.distriqt.extension.location.receivers.BootReceiver" android:exported="true" android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>
+```
+
+If you are using background location updates you will also need to add the `ACCESS_BACKGROUND_LOCATION` and `POST_NOTIFICATIONS` permission:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+```
+
+  </TabItem>
+  
+</Tabs>
+

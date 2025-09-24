@@ -1,3 +1,20 @@
+### 2025.09.24 [v6.1.0]
+
+```
+## Major Update 
+
+This version brings a rebuild of the android implementation to use the latest Google Play Services libraries and support the latest Android OS versions.
+
+Migration guide: https://docs.airnativeextensions.com/docs/location/migrating-to-v6.1
+
+
+### Updates 
+
+feat(android): rewrite of the geofences implementation (resolves https://github.com/distriqt/ANE-Location/issues/79, resolves https://github.com/distriqt/ANE-Location/issues/77)
+feat(android): update location update service for background / persistent updates
+feat(android): correct foreground service permission and notification 
+```
+
 ### 2024.12.19 [v6.0.0]
 
 ```
