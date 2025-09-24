@@ -1,3 +1,33 @@
+### 2025.09.24 [v16.4.0]
+
+```
+
+This release is expected to resolve the Android 15 (API 35) issues with edge to edge displays resulting in the close button being obscured. 
+The iOS update includes support for iOS 26 and we have made some changes around sound handling which should resolve some issues there. 
+
+### Updates
+
+feat(android): update admob sdk v24.6.0 (resolves https://github.com/distriqt/ANE-Adverts/issues/618, resolves https://github.com/distriqt/ANE-Adverts/issues/616)
+feat(android): additional positioning checks after ad load (resolves https://github.com/distriqt/ANE-Adverts/issues/590)
+feat(ios): update admob sdk v12.11.0 (iOS 26 support)
+feat(ios): add additional audio handling (https://github.com/distriqt/ANE-Adverts/issues/631, https://github.com/distriqt/ANE-Adverts/issues/626)
+```
+
+### 2025.09.24 [v16.4.0]
+
+```
+
+This release is expected to resolve the Android 15 (API 35) issues with edge to edge displays resulting in the close button being obscured. 
+The iOS update includes support for iOS 26 and we have made some changes around sound handling which should resolve some issues there. 
+
+### Updates
+
+feat(android): update admob sdk v24.6.0 (resolves https://github.com/distriqt/ANE-Adverts/issues/618, resolves https://github.com/distriqt/ANE-Adverts/issues/616)
+feat(android): additional positioning checks after ad load (resolves https://github.com/distriqt/ANE-Adverts/issues/590)
+feat(ios): update admob sdk v12.11.0 (iOS 26 support)
+feat(ios): add additional audio handling (https://github.com/distriqt/ANE-Adverts/issues/631, https://github.com/distriqt/ANE-Adverts/issues/626)
+```
+
 ### 2025.08.26 [v16.3.0]
 
 ```
