@@ -1,3 +1,9 @@
+### 2025.09.25 [v18.0.2]
+
+```
+feat(macos): correct minimum macos version to 10.13
+```
+
 ### 2025.09.18 [v18.0.0]
 
 ```
