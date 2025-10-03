@@ -1,3 +1,9 @@
+### 2025.10.03 [v1.0.1]
+
+```
+feat(airpackage): update airpackage dependencies
+```
+
 ### 2025.06.04 [v1.0.0]
 
 ```
