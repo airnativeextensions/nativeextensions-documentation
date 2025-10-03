@@ -1,3 +1,9 @@
+### 2025.10.03 [v18.0.3]
+
+```
+feat(macos): correct macos build settings (resolves https://github.com/distriqt/ANE-InAppBilling/issues/660)
+```
+
 ### 2025.09.25 [v18.0.2]
 
 ```
