@@ -10,7 +10,8 @@ Getting access to the device logs often yields additional information when attem
 
 On Android it is relatively simple to get the device logs. The debugger command line utility (`adb`/`adb.exe`) can be used to output the logs along with installing your application and is packaged as part of AIR at `AIRSDK/lib/android/bin`. If you have installed the Android SDK you can also use the version from there.
 
-> Note: It is important you have set your device into debug mode.
+> Note: It is important you have set your device into debug mode. See [Android Device Debugging](android-device-debugging.md).
+
 
 ### macOS (OSX)
 
@@ -19,11 +20,17 @@ To access the logs:
 - open a Terminal
 - run `adb logcat`
 
-You can get more relevant information by using grep to filter the logs. For example, we often use the following:
+
+#### Filtering
+
+You can control the output by using `grep` to filter the logs. For example, we often use the following:
 
 ```
 adb logcat | grep -E --color=always 'distriqt|AndroidRuntime|System.err'
 ```
+
+> Note: If we ask you to supply logs for debugging please provide an unfiltered log. Filtering can accidentally remove entries of interest.
+
 
 
 ### Windows

@@ -20,20 +20,23 @@ Contents:
 - [Adding to AIR](#adding-to-air)
 
 
-# Method 1
+## Method 1
 
-This simple method uses a prebuilt storyboard which pulls an image from your `Assets.car` and fill the screen keeping the aspect ratio (your image may be cropped on some devices depending on the resolution). 
+:::tip Recommended Approach
+:::
 
-We have included these instructions as part of the [Icons, Launch Storyboards and the Assets Catalog](ios-icons-assets-car.md#method-1-command-line) guide.
+This simple method uses a script we have written that builds upon a prebuilt storyboard to show an image from your `Assets.car` and fill the screen keeping the aspect ratio (your image may be cropped on some devices depending on the resolution and the image). 
+
+We have included these instructions as part of the [Icons, Launch Storyboards and the Assets Catalog](ios-icons-assets-car.md#method-1-air-imagescripts) guide.
 
 
-# Method 2 
+## Method 2 
 
-Using Xcode
+This method uses Xcode directly.
 
->
-> Note: You will need a macOS machine with Xcode 9+ for this method to generate the `Assets.car` file
->
+:::note
+You will need a macOS machine with Xcode for this method to generate the `Assets.car` file
+:::
 
 As this process is tightly integrated with generating the `Assets.car` (asset catalog) containing your application icons, we will go through adding the icons first.
 
@@ -70,7 +73,7 @@ Now you have added the application icons we move onto adding the launch storyboa
 
 
 
-## Centered Icon 
+### Centered Icon 
 
 Firstly we need to add the image resource to your asset catalog. 
 
@@ -116,7 +119,7 @@ Firstly we need to add the image resource to your asset catalog.
 
 
 
-## Full Screen Image
+### Full Screen Image
 
 Reference:
 
@@ -127,7 +130,7 @@ https://medium.com/flawless-app-stories/change-splash-screen-in-ios-app-for-dumm
 
 
 
-## Build
+### Build
 
 - Build the project ( Product -> Build).
 - Right-click on your ‘.app’ -> Show in finder.
@@ -141,7 +144,8 @@ https://medium.com/flawless-app-stories/change-splash-screen-in-ios-app-for-dumm
 >
 
 
-# Adding to AIR
+
+## Adding to AIR
 
 Once you have completed your storyboard and added the application icons you can add these to your AIR applicaiton.
 

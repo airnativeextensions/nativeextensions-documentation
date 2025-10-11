@@ -24,30 +24,46 @@ Contents:
 - [Supporting previous versions of iOS](#supporting-previous-versions-of-ios)
 
 
+## Creating the Asset Catalogue
 
-## Method 1 Command Line
 
-:::note
-You will need a macOS machine with Xcode 9+ for this method to generate the `Assets.car` file
+### Method 1: AIR-ImageScripts
+
+:::tip Recommended Approach
+You will need a macOS machine with Xcode and imagemagik for this method, however the files can be transferred afterwards. 
 :::
 
-This is the method we prefer as it is simpler to update and create than having to drag files into Xcode. We have a  script that downloads the required assets, resizes an icon and launch screen image appropriately and calls the xcode utilities to generate the Assets.car (and launch screen).
+This is the method we prefer as it is simpler to update and create than having to drag files into Xcode. We have a script that downloads the required assets, resizes an icon and launch screen image appropriately and calls the xcode utilities to generate the Assets.car (and launch screen).
 
 The script is available in the [AIR-ImageScripts repository](https://github.com/distriqt/AIR-ImageScripts) 
 
 You will need to have installed `imagemagick` and the **xcode command line utilities** (see details in the repository if you need help installing them).
 
-To use it, create an `icon.png` file that is a high resolution icon file (we suggest 1024x1024) and a `launch.png` launch screen image (we suggest a large 2732x2732 pixel image). Place them in a directory and open a terminal at this location. You can either clone the repository and use the `generate.sh` script directly or call it as below:
+To use it you will need to create 4 files for your icon. We require a foreground and background for your main icon so we can correctly create the adaptive icons for various situations. Then also a monochrome version of your foreground icon for themed environments and then a complete alternative icon to be used in dark situations on iOS. 
+
+These four base images are used to construct the icons for each of the platforms:
+
+- `icon-foreground.png`: should be a transparent icon with no background which will be layered over the background and centered on the launch image
+- `icon-background.png`: should be a filled image which constitutes the background of adaptive icons and the launch image (generally a solid colour)
+- `icon-monochrome.png`: similar to the foreground icon except this should be monochrome and will be tinted by the OS to colour match the user's theme
+- `icon-dark.png`: a specific dark image to be used as the dark icon on iOS
+
+All of these files should be high resolution (we suggest 1024x1024) 
+
+Next create a `launch.png` launch screen image (we suggest a large 2732x2732 pixel image). 
+
+Place all these files in a directory and open a terminal at this location. You can either clone the repository and use the `generateIcons` script directly or call it as below:
 
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/distriqt/AIR-ImageScripts/master/generate.sh)"
+/bin/bash -c "$(curl -fsSL https://github.com/distriqt/AIR-ImageScripts/releases/download/v2.0/generateIcons)"
 ```
 
 Once complete this will have generated an `out` directory that contains 
 
 - `Assets.car` your asset catalogue 
 - `LaunchScreen.storyboardc` directory is your custom launch screen storyboard
-- `icons` directory containing icon images sized for AIR.
+- `icons` directory containing icon images sized for AIR
+- `res` folder containing adaptive icons for Android
 
 Copy these into your application as you require.
 
@@ -80,11 +96,11 @@ You can use the `icons` directory in your application descriptor by adding the f
 </icon>
 ```
 
-## Method 2 Using Xcode
+### Method 2: Using Xcode
 
->
-> Note: You will need a macOS machine with Xcode 9+ for this method to generate the `Assets.car` file
->
+:::note
+You will need a macOS machine with Xcode for this method to generate the `Assets.car` file
+:::
 
 Firstly you will need to open Xcode and create a new application
 
@@ -124,7 +140,11 @@ Firstly you will need to open Xcode and create a new application
 
 
 
-## Method 3 Online tool
+### Method 3: Online tool
+
+:::caution
+We do not recommend this approach as it can cause issues depending on your AIR developer license. This approach can miss resources required by the AIR SDK and cause your application to crash. 
+:::
 
 This is the simplest way if you are a Windows developer. 
 
@@ -147,16 +167,18 @@ You do this by ensuring that it is in the root of your applications source and s
 
 ## Simple Launch Screen
 
-To simplify migration to launch storyboards we have created a simple storyboard that pulls an image from your `Assets.car` and aspect fills it to the screen. You will add a single image to your `Assets.car` alongside your application icons. (If you followed the instructions above this will be the `LaunchImage.png` you added.)
+To simplify migration to launch storyboards we have created a simple storyboard that pulls an image from your `Assets.car` and aspect fills it to the screen. You will add a single image to your `Assets.car` alongside your application icons. 
+
+The AIR Image Scripts process above should have generated this launch screen for you.
+
 
 Download this zip file and extract the `LaunchScreen.storyboardc`. Add it to your application and ensure it is packaged at the root level of your application alongside your `Assets.car`. 
 
 - [LaunchScreen.storyboardc.zip](resources/ios/LaunchScreen.storyboardc.zip)
 
->
-> `LaunchScreen.storyboardc` is a directory but will appear as a "file" (package) on macOS
->
-
+:::note
+`LaunchScreen.storyboardc` is a directory but will appear as a "file" (package) on macOS
+:::
 
 Add the following to the `InfoAdditions` node in your application descriptor:
 
@@ -170,17 +192,22 @@ That is all, you have now implemented a launch storyboard.
 
 
 
-## Supporting previous versions of iOS
-
-You must also make sure that you include the icons in your application using the icon tags in the application descriptor xml. 
-This ensures that older versions of iOS still have the correct icons packaged and that other platforms still have the appropriate app icons.
-
-
-
 ## Launch images
+
+:::note
+This is no longer relevant as the minimum iOS version supported by new apps should support the launch screen approach and the default images are no longer required.
+:::
 
 Recently Apple changed the supported names of the files for the default / launch images. Make sure you have correctly added the default images according to the Adobe docs:
 
 [http://blogs.adobe.com/airodynamics/2015/03/09/launch-images-on-ios-with-adobe-air/](http://blogs.adobe.com/airodynamics/2015/03/09/launch-images-on-ios-with-adobe-air/)
+
+
+### Supporting previous versions of iOS
+
+
+You must also make sure that you include the icons in your application using the icon tags in the application descriptor xml. 
+This ensures that older versions of iOS still have the correct icons packaged and that other platforms still have the appropriate app icons.
+
 
 

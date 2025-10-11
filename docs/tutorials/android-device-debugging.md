@@ -15,6 +15,11 @@ To enable "Developer mode":
 - Tap **Build number** several times and you should see a dialog that says "you're X taps away from being a developer".
 - Continue tapping the build number until the developer mode is enabled. 
 
+:::note
+The specific loction of the **Build number** can vary based on the manufacturer and android version. You may have to explore your settings a bit to find it.
+:::
+
+
 To enable USB debuging:
 
 - Go to the settings menu
@@ -24,8 +29,9 @@ To enable USB debuging:
 
 You will now be able to connect a usb cable to your device and use the `adb` tool to install applications (APKs) and access the device logs. 
 
-
-
+:::note
+When you first connect a new computer using USB, depending on the Android version you may have an authorisation dialog appear to authorise the connection to the computer. 
+:::
 
 
 

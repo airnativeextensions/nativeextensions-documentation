@@ -1,5 +1,5 @@
 ---
-title: Getting Started - Flash Develop
+title: Flash Develop
 sidebar_label: Flash Develop
 ---
 

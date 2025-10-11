@@ -1,5 +1,5 @@
 ---
-title: Getting Started - IntelliJ
+title: IntelliJ
 sidebar_label: IntelliJ
 ---
 

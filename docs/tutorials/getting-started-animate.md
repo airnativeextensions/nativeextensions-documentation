@@ -1,5 +1,5 @@
 ---
-title: Getting Started - Animate
+title: Animate
 sidebar_label: Animate
 ---
 

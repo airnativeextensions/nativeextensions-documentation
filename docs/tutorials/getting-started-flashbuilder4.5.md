@@ -1,7 +1,20 @@
 ---
-title: Getting Started - Flash Builder 4.5
+title: Flash Builder 4.5
 sidebar_label: Flash Builder 4.5
 ---
+
+:::warning
+Flash Builder is no longer supported by our extensions. Flash Builder links directly into the legacy build methods of the AIR SDK and as such cannot support the latest Android features and won't work with our extensions any longer. 
+
+You may be able to use it as an editor but the packaging process won't work. You'll need to use the AIR SDK directly to package your application. We encourage you to move to a more modern development environment.
+:::
+
+:::caution
+Last release: Adobe Flash Builder 4.5, released in May, 2011.
+
+Adobe Flash Builder reached end of core support in 2017 and end of extended support in 2019.
+:::
+
 
 An AIR Native Extension (ANE) is a single file with the extension `ane`. This file contains all of the native and actionscript libraries that are implemented by this extension. You don’t need access to a separate SWC file or to the source code to be able to use the ANE.
 
