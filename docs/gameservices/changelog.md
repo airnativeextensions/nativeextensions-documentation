@@ -1,3 +1,9 @@
+### 2025.10.03 [v11.0.2]
+
+```
+feat(macos): resolve issue with macos compatibility (resolves https://github.com/distriqt/ANE-GameServices/issues/252)
+```
+
 ### 2025.09.22 [v11.0.1]
 
 ```
