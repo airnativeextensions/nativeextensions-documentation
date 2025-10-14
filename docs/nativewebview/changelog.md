@@ -1,3 +1,9 @@
+### 2025.10.14 [v8.0.1]
+
+```
+fix(android): handle null exception when webview destroyed while load in progress (resolves https://github.com/distriqt/ANE-NativeWebView/issues/351)
+```
+
 ### 2024.12.19 [v8.0.0]
 
 ```
