@@ -1,0 +1,82 @@
+---
+title: Availablility & Updates
+sidebar_label: Availablility & Updates
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+:::note iOS
+This is required on Android Health Connect but can be skipped if you are developing for iOS only.
+:::
+
+
+## Check for Updates
+
+On Android you will need to ensure the Health Connect application is installed and available for the user.
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+You can do this by checking the `isUpdateRequired()` function:
+
+
+```actionscript
+var updateRequired:Boolean = Health.instance.isUpdateRequired();
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+You can do this by checking the `IsUpdateRequired()` function:
+
+```csharp
+bool updateRequired = Health.Instance.IsUpdateRequired();
+```
+
+</TabItem>
+</Tabs>
+
+If this returns `true` then you must redirect the user to update (or install) the health connect functionality on their device.
+
+
+## Updating Health Connect
+
+In order to update (or install) Health Connect you can call the use the update method of the extension. 
+This will redirect the user to the appropriate location in the store or settings to install or update 
+the health connect functionality.
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+You can do this by calling `update()` 
+
+```actionscript
+Health.instance.update();
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+You can do this by calling `StartUpdate()` 
+
+```csharp
+Health.Instance.StartUpdate();
+```
+
+</TabItem>
+</Tabs>
+
+
+:::note
+You must do this before any other functionality in the extension will operate correctly.
+:::
+

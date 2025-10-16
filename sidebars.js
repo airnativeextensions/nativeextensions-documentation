@@ -1937,10 +1937,11 @@ module.exports = {
     { type: "ref", id: "index" },
     { type: "doc", id: "health/index" },
     {
-      "Get Started": ["health/add-the-extension", "health/setup"],
+      "Get Started": ["health/add-the-extension", "health/add-the-plugin"],
     },
     {
       Usage: [
+        "health/setup",
         "health/check-for-updates",
         "health/authorisation",
         "health/queries",

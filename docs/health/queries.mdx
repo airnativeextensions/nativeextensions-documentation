@@ -3,7 +3,18 @@ title: Querying Data
 sidebar_label: Querying Data
 ---
 
-To query data you will create a `StatisticsQuery` and then pass it to the `execute()` method. This will query the data specified and when complete call a callback function with the result.
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+To query data you will create a `StatisticsQuery` and then pass it to the execute method. This will query the data specified and when complete call a callback function with the result.
+
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 ```actionscript
 var query:StatisticQuery = ...;
@@ -20,10 +31,38 @@ function( result:HealthQueryResult, error:Error ):void
 }
 ```
 
-The `HealthQueryResult` contains the result of the query including an array of `Statistic` objects in the `result.statistics` parameter. If an error occurred then the `error` parameter will be non-null and contain the details of the error.
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+StatisticsQuery query = ...;
+Health.Instance.Execute( 
+    query, 
+    (result, error) =>
+    {
+        // Process query result
+    }
+);
+```
+
+The callback function takes 2 parameters, a `HealthQueryResult` and an `HealthError` object. 
+
+</TabItem>
+</Tabs>
+
+
+The `HealthQueryResult` contains the result of the query including an array of `Statistic` objects in the `statistics` parameter. 
+If an error occurred then the `error` parameter will be non-null and contain the details of the error.
 
 
 For example:
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 ```actionscript
 var now:Date = new Date();
@@ -51,6 +90,46 @@ Health.instance.execute(
 );
 ```
 
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+System.DateTime start = new System.DateTime(2025, 10, 1);
+System.DateTime end = start.AddDays(7);
+
+StatisticsQuery query = new StatisticsQuery(HealthType.STEP_COUNT)
+    .withStartDate(start)
+    .withEndDate(end);
+
+Health.Instance.Execute(
+    query,
+    (result, error) =>
+    {
+        if (error != null)
+        {
+            Debug.Log("QuerySteps: error: " + error.description);
+            return;
+        }
+        if (result == null)
+        {
+            Debug.Log("QuerySteps: no result");
+            return;
+        }
+
+        for (int i = 0; i < result.statistics.Count; i++)
+        {
+            Statistic statistic = result.statistics[i];
+            Debug.Log(i + ": " +
+                "\n startDate: " + statistic.startDate +
+                "\n sum: " + statistic.sum
+            );
+        }
+    }
+);
+```
+
+</TabItem>
+</Tabs>
 
 
 ## Aggregating results
@@ -59,12 +138,31 @@ You can get the results aggregated into time intervals by calling the `withInter
 
 For example to group the results into daily totals:
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
 ```actionscript
 var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
         .withStartDate( startDate )
         .withEndDate( now )
         .withInterval( 1, TimeUnit.DAYS );
 ```
+
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+StatisticsQuery query = new StatisticsQuery(HealthType.STEP_COUNT)
+    .withStartDate(start)
+    .withEndDate(end)
+    .withInterval(1, TimeUnit.DAYS);
+```
+
+</TabItem>
+</Tabs>
 
 This can be useful when you are displaying results in a particular format to a user.
 
@@ -82,6 +180,12 @@ Filtering out entries that have been manually entered by the user can be helpful
 
 For example:
 
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
 ```actionscript
 var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
         .withStartDate( startDate )
@@ -89,7 +193,26 @@ var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
         .filterManualDataEntries();
 ```
 
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+StatisticsQuery query = new StatisticsQuery(HealthType.STEP_COUNT)
+    .withStartDate(start)
+    .withEndDate(end)
+    .filterManualDataEntries();
+```
+
+</TabItem>
+</Tabs>
+
 Conversely, you can request only manual data entries by using `manualDataEntriesOnly()`:
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 ```
 var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
@@ -98,7 +221,18 @@ var stepQuery:StatisticsQuery = new StatisticsQuery( HealthType.STEP_COUNT )
         .manualDataEntriesOnly();
 ```
 
+</TabItem>
+<TabItem value="unity" >
 
+```csharp
+StatisticsQuery query = new StatisticsQuery(HealthType.STEP_COUNT)
+    .withStartDate(start)
+    .withEndDate(end)   
+    .manualDataEntriesOnly();
+```
+
+</TabItem>
+</Tabs>
 
 :::caution
 Filtering data entries will override aggregation requests on Android, resulting in a query that returns individual samples. Apple's HealthKit seems to have no issues with this. 

@@ -5,17 +5,21 @@ sidebar_label: Unity
 
 First step is always to add the plugin to your development environment. 
 
+## Add the Plugin
 
-## Asset Store
+### Asset Store
 
 Open the Asset Store in your browser and add the plugin to your assets.
 
-Open the Package Manager (Window > Package Manager) in the Unity Editor and select the "My Assets" section. Select the plugin, and click Import in the bottom right.
+Open the Package Manager (`Window / Package Manager`) in the Unity Editor and select the *"My Assets"* section. 
+
+Select the plugin, and click *Import* in the bottom right.
 
 
-## Manual Installation
+### Manual Installation
 
-In unity you import the package by selecting `Assets / Import Package / Custom Package ...` and then browsing to the unity plugin package file: `com.distriqt.Health.unitypackage`.
+In unity you import a custom package by selecting `Assets / Import Package / Custom Package...` 
+and then browsing to the unity plugin package file: `com.distriqt.Health.unitypackage`.
 
 ![](images/unity-import-package.png)
 
@@ -27,19 +31,22 @@ You can manually download the extension from our repository:
 
 ## Import the Plugin
 
-
-This will present the import dialog and display all the files for the plugin, make sure all the files are selected.
+This will present the import dialog and display all the files for the plugin, 
+make sure all the files are selected and  click **Import**.
 
 The plugin will be added to your project and you can now use the plugins functionality in your application.
 
 
 
+## Android Dependencies
 
-## Resolve Android Dependencies
-
-This plugin depends on some common Android libraries, particularly the Google Play Core Library, which enables in-app reviews.
+This plugin depends on some common Android libraries, which are defined within the plugin.
 
 You can get these dependencies using one of the following methods.
+
+:::note 
+Make sure you select the Android platform in the build profiles / settings before you do this. 
+:::
 
 
 ### Unity Jar Resolver
@@ -49,14 +56,13 @@ This is the suggested method.
 Use the *Unity Jar Resolver* plugin to download and manage the Android dependencies. 
 
 
-
 #### Importing
 
 > If you already use the *Unity Jar Resolver* in your project you can skip this step.
 
 - Download the latest version of the [*Unity Jar Resolver*](https://github.com/googlesamples/unity-jar-resolver/releases)
 - Import the plugin by selecting `Assets / Import Package / Custom Package ...` and locate the plugin you downloaded. The plugin will be in the zip named: `external-dependency-manager-latest.unitypackage` 
-- In the *Import Unity Package* window, click Import
+- In the *Import Unity Package* window, click **Import**
 
 
 #### Resolving
@@ -73,21 +79,29 @@ More information on the *Unity Jar Resolver* can be found [here](https://github.
 
 
 
-### Custom Gradle Health
+### Custom Gradle Template
 
 Unity's in-built gradle build support and exporting to android studio does not support per plugin gradle script. Therefore, this plugin cannot add the dependencies by itself.
 
-The `mainHealth.gradle` is generated when you enable the **Custom Gradle Health** property on the Player window.
+The `mainTemplate.gradle` is generated when you enable the **Custom Gradle Template** property on the Player window.
 
 The `build.gradle` exists in generated Gradle project when you enable the **Export Project** property on the Player window and Build the project.
 
-Update the `dependencies` section in your `mainHealth.gradle` or `build.gradle` as below:
+Update the `dependencies` section in your `mainTemplate.gradle` or `build.gradle` as below:
 
 ```
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     
-	implementation 'com.google.android.play:core:1.9.1'
+	implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.activity:activity:1.7.2'
+    implementation 'com.google.guava:guava:31.0.1-android'
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.6.4"
+
+    implementation 'androidx.health.connect:connect-client:1.1.0-alpha11'
 }
 ```
 

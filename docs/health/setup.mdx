@@ -3,12 +3,29 @@ title: Setup
 sidebar_label: Setup
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 
 ## Initialise
 
 In order to use the rest of this extensions functionality you must first initialise the extension, specifying the service type you wish to use in your application.
 
 This allows us to provide the same API to various different services.
+
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
+
+To use the default service just call `initialise()` with no parameters:
+
+```actionscript
+// Initialise the default service
+Health.instance.initialise();
+```
 
 To specify the service type, construct a `HealthService` instance and pass it to the `initialise()` method, eg to use the `HealthService.HEALTH_CONNECT` service:
 
@@ -19,7 +36,36 @@ Health.instance.initialise(
 );
 ```
 
-You can check whether a service is supported via the `isServiceSupported()` method:
+</TabItem>
+<TabItem value="unity" >
+
+To use the default service just call `Initialise()` with no parameters:
+
+```csharp
+// Initialise the default service
+Health.Instance.Initialise();
+```
+
+To specify the service type, construct a `HealthService` instance and pass it to the `Initialise()` method, eg to use the `HealthService.HEALTH_CONNECT` service:
+
+```csharp
+Health.Instance.Initialise(
+        new HealthService()
+                .SetServiceTypw( HealthService.HEALTH_CONNECT )
+);
+```
+
+</TabItem>
+</Tabs>
+
+
+You can check whether a service is supported via the following:
+
+<Tabs groupId="framework" defaultValue="air" values={[
+    {label: 'AIR', value: 'air'},
+    {label: 'Unity', value: 'unity'},
+  ]}>
+<TabItem value="air" >
 
 ```actionscript
 if (Health.instance.isServiceSupported( HealthService.HEALTH_CONNECT ))
@@ -28,21 +74,26 @@ if (Health.instance.isServiceSupported( HealthService.HEALTH_CONNECT ))
 }
 ```
 
-You can just use the default service by calling `initialise()` with no parameters:
+</TabItem>
+<TabItem value="unity" >
 
+```csharp
+if (Health.Instance.IsServiceSupported( HealthService.HEALTH_CONNECT ))
+{
+    // Health Connect is supported
+}
+``` 
 
-```actionscript
-// Initialise the default service
-Health.instance.initialise();
-```
-
-On iOS this will use HealthKit, and on Android this will use Health Connect. 
+</TabItem>
+</Tabs>
 
 
 Services include: 
 - `HealthService.APPLE`: Apple's HealthKit;
 - `HealthService.HEALTH_CONNECT`: Android Health Connect;
 - `HealthService.FIT`: Google Fitness API;
+
+The default service on iOS is HealthKit, and on Android is Health Connect. 
 
 
 
@@ -54,16 +105,19 @@ There is no setup required outside your application to use Health Connect.
 
 ## Google Fitness API
 
+:::warning 
+Please note that the Fitness API has been deprecated in favour of Health Connect. You should use Health Connect where possible.
+:::
+
 Follow Google's Guide to create an OAuth client ID for your application and add the Fitness API to your Google app console project.
 
 - [Guide](https://developers.google.com/fit/android/get-started)
 
 :::note 
-You may need to submit your application for verification from Google 
+You may need to submit your application for verification from Google. 
 :::
 
 You will need to setup and sign-in your users using the [Google Identity extension](authorisation.md#users).
-
 
 
 

@@ -47,3 +47,17 @@ We suggest you use the locations directly in your builds rather than copying the
 apm project config set com.distriqt.Health
 ```
 
+
+#### Google Fitness
+
+If you are using Google Fitness, you will need to install the `com.distriqt.Health-Fitness` variant of the extension. This will ensure that the required dependencies for Google Fitness are installed.
+
+The default `com.distriqt.Health` variant does not include the Google Fitness dependencies.
+
+```
+apm install com.distriqt.Health-Fitness
+```
+
+:::caution
+You must only install one of the variants, either `com.distriqt.Health` or `com.distriqt.Health-Fitness`, not both.
+:::

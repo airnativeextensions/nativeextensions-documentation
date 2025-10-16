@@ -10,10 +10,15 @@ The following should be added to your `extensions` node in your application desc
 	<extensionID>androidx.appcompat</extensionID>
 	<extensionID>androidx.core</extensionID>
 	<extensionID>androidx.emoji2</extensionID>
-	<extensionID>androidx.healthconnect</extensionID>
 	<extensionID>androidx.vectordrawable</extensionID>
 	<extensionID>com.google.guava</extensionID>
 	<extensionID>com.jetbrains.kotlin</extensionID>
+
+	<!-- If you are using Health Connect, you will need this extension -->
+	<extensionID>androidx.healthconnect</extensionID>
+
+	<!-- If you are using Google Fitness, you will need this extension -->
+	<extensionID>com.distriqt.playservices.Fitness</extensionID>
 </extensions>
 ```
 
@@ -31,7 +36,7 @@ The following additions are for the `InfoAdditions` node of the iPhone section i
 <InfoAdditions><![CDATA[
 
 	<key>MinimumOSVersion</key>
-	<string>11.0</string>
+	<string>12.0</string>
 
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
@@ -83,39 +88,73 @@ Ensure you replace:
 <manifest android:installLocation="auto">
 	<uses-permission android:name="android.permission.INTERNET"/>
 	
-	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="33"/>
+	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="34"/>
 	
 	<queries>
+		<package android:name="com.google.android.apps.fitness"/>
 		<package android:name="com.google.android.apps.healthdata"/>
 	</queries>
 	
-	<permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
-	<uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
-	
-	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+	<application>
 
+        <activity
+            android:name="com.distriqt.extension.health.PermissionsRationaleActivity"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>
+        </activity>
 
-		<service android:name="androidx.health.platform.client.impl.sdkservice.HealthDataSdkService" android:enabled="true" android:exported="true">
-			<intent-filter>
-				<action android:name="androidx.health.platform.client.ACTION_BIND_SDK_SERVICE"/>
-			</intent-filter>
-		</service>
-		<activity android:name="com.distriqt.extension.health.AuthorisationActivity" android:enabled="true" android:exported="true" android:theme="@style/Theme.AppCompat.Light"/>
-		<activity android:name="com.distriqt.extension.health.PermissionsRationaleActivity" android:enabled="true" android:exported="true" android:theme="@style/Theme.AppCompat.Light">
-			<intent-filter>
-				<action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE"/>
-			</intent-filter>
-		</activity>
+        <activity-alias
+            android:name="ViewPermissionUsageActivity"
+            android:exported="true"
+            android:targetActivity="com.distriqt.extension.health.PermissionsRationaleActivity"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS" />
+            </intent-filter>
+        </activity-alias>
 
-
-		<provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.distriqt.test.androidx-startup" android:exported="false">
-			<meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
-			<meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
-		</provider>
 		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 	</application>
 </manifest>
 ```
+
+
+### Android Gradle Version 
+
+We have updated the required gradle version used to build your application to be higher than the default AIR currently uses (April 2025). 
+
+To specify a higher version add the following to your android node in your application descriptor:
+
+```xml
+<android>
+    <gradleVersion>8.9</gradleVersion>
+    <androidGradlePluginVersion>8.7.3</androidGradlePluginVersion>
+
+  ...
+</android>
+```
+
+If you don't do this you will see the following error when building your application:
+
+```
+Unexpected failure: Unable to run java: com.adobe.air.ADTException: gradle tool failed: 
+FAILURE: Build failed with an exception.
+
+...
+
+   > BUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 65
+```
+
+:::note
+June 2025: This is not currently automatically handled by `apm` so you will need to add this manually to your application descriptor.
+
+We are working on an update to handle this.
+:::
+
 
 
 ### Permissions 

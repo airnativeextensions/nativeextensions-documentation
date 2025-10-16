@@ -1,4 +1,37 @@
 
+### Android Gradle Version 
+
+We have updated the required gradle version used to build your application to be higher than the default AIR currently uses (April 2025). 
+
+To specify a higher version add the following to your android node in your application descriptor:
+
+```xml
+<android>
+    <gradleVersion>8.9</gradleVersion>
+    <androidGradlePluginVersion>8.7.3</androidGradlePluginVersion>
+
+  ...
+</android>
+```
+
+If you don't do this you will see the following error when building your application:
+
+```
+Unexpected failure: Unable to run java: com.adobe.air.ADTException: gradle tool failed: 
+FAILURE: Build failed with an exception.
+
+...
+
+   > BUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 65
+```
+
+:::note
+June 2025: This is not currently automatically handled by `apm` so you will need to add this manually to your application descriptor.
+
+We are working on an update to handle this.
+:::
+
+
 ### Add Android Permissions 
 
 You will need to add the Android permissions to your android manifest for the health data you require access to. 
@@ -17,7 +50,7 @@ for example, to read and write the step data you need the following permissions:
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="33" />
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="34" />
 
     <!-- Health Connect Permissions -->
     <uses-permission android:name="android.permission.health.READ_STEPS"/>
