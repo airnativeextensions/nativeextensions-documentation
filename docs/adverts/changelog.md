@@ -1,3 +1,19 @@
+### 2025.10.17 [v16.5.0]
+
+```
+
+This release is resolves some issues around detection of the immersive mode that was causing additional issues with the Android 15 (API 35) edge to edge displays update.
+
+Note: There are some changes required around usage of the Application ANE to change the display mode here. Reach out to support if you are using the Application ANE to manage your display mode. 
+
+
+### Updates
+
+feat(android): update admob sdk v24.7.0
+fix(android): resolve issue that incorrectly detected immersive mode (resolves https://github.com/distriqt/ANE-Adverts/issues/635, resolves https://github.com/distriqt/ANE-Adverts/issues/636, resolves https://github.com/distriqt/ANE-Adverts/issues/639)
+feat(ios): update admob sdk v12.12.0 
+```
+
 ### 2025.09.24 [v16.4.0]
 
 ```
