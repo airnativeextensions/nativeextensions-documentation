@@ -13,6 +13,9 @@ This month we’ve released a range of updates focusing on macOS compatibility, 
 
 These updates continue our commitment to keeping all ANEs stable, modern, and aligned with the latest platform changes from Google and Apple.
 
+
+
+
 <!-- truncate -->
 
 Here's a quick overview of our latest extension updates:
@@ -26,9 +29,20 @@ Here's a quick overview of our latest extension updates:
 :::
 
 
-
-
 Got questions? We're here to help! 
+
+
+--- 
+
+### New Tutorial: iOS Packaging on Windows
+
+If you’re developing AIR apps on Windows and need to build for iOS, check out our new [guide](https://airsdk.dev/docs/tutorials/platform/ios/windows-packaging) on how to package iOS applications using Windows.
+
+Packaging iOS applications on Windows is not supported by Apple, however, the AIR SDK has been able to get around this for a long time by creating stubs of the iOS SDK and using a specially packaged version of the open source Apple linker.
+
+This tutorial goes through some additional configuration that you may need to do in order to get extensions packaging and linking correctly on Windows. 
+
+Read the tutorial here: https://airsdk.dev/docs/tutorials/platform/ios/windows-packaging
 
 
 --- 
