@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[68395],{24816:n=>{n.exports=JSON.parse('{"label":"inappbilling","permalink":"/news/tags/inappbilling","allTagsPath":"/news/tags","count":11}')}}]);

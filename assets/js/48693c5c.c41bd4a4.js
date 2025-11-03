@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[80986],{65558:e=>{e.exports=JSON.parse('{"label":"mediaplayer","permalink":"/news/tags/mediaplayer","allTagsPath":"/news/tags","count":2}')}}]);
