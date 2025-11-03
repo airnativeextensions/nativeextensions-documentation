@@ -51,7 +51,7 @@ Read the tutorial here: https://airsdk.dev/docs/tutorials/platform/ios/windows-p
 
 The Display extension is a new extension I'm working on to address the aging display modes and keyboard integration in the [Application extension](https://github.com/airsdk/Adobe-Runtime-Support/discussions/3947). 
 
-This new extension aims to use the more modern approach around managing display modes and monitoriing the keyboard. Currently I have it working on the majority of cases but as with anything associated with Android there are a lot of edge cases that need to be addressed and handled in the code. I'm currently working through as many of these as I find.
+This new extension aims to use the more modern approach around managing display modes and monitoring the keyboard. Currently I have it working on the majority of cases but as with anything associated with Android there are a lot of edge cases that need to be addressed and handled in the code. I'm currently working through as many of these as I find.
 
 :::info
 If you are interested in helping me test this new extension, please reach out! I'd appreciate your involvement and help in identifying edge cases. 
