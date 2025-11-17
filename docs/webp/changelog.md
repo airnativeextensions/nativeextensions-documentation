@@ -1,3 +1,12 @@
+### 2025.11.17 [v4.2.1]
+
+```
+feat(android): update webp jni lib to v1.6.0 and jni alignment support for 16kb (resolves https://github.com/distriqt/ANE-WebP/issues/7)
+feat(ios): update ios webp lib to v1.6.0
+feat(macos): add support for macos (https://github.com/distriqt/ANE-WebP/issues/3)
+feat(windows): add support for windows (resolves https://github.com/distriqt/ANE-WebP/issues/3)
+```
+
 ### 2023.02.01 [v4.1.0]
 
 ```

@@ -26,9 +26,9 @@ For more on information on the format see the following page on Google Developer
 
 - Load a WebP file using the `WebPLoader`;
 - Parse WebP Data;
-- Single API interface - your code works across iOS and Android with no modifications;
+- Single API interface - your code works across supported platforms with no modifications;
 - Sample project code and ASDocs reference
-
+- Supports: iOS, macOS, Android, Windows
 
 As with all our extensions you get access to a year of support and updates as we are 
 continually improving and updating the extensions for OS updates and feature requests.
@@ -59,9 +59,6 @@ More information here:
 You can purchase a license for using this extension:
 
 [airnativeextensions.com](https://airnativeextensions.com/)
-
-distriqt retains all copyright.
-
 
 
 ![](images/promo.png)
