@@ -1,3 +1,9 @@
+### 2025.11.17 [v4.2.2]
+
+```
+feat(airpackage): update supported platforms
+```
+
 ### 2025.11.17 [v4.2.1]
 
 ```
