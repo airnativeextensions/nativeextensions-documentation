@@ -1,0 +1,132 @@
+---
+title: Usage
+---
+
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+## Requesting an Age Range
+
+
+To request an Age Range firstly construct an `AgeRangeRequest` object.
+
+This object specifies the details of the request and presents options that vary across the platforms. 
+
+For Android there are no options currently however Apple allows you to specify "age gates" or the defined ranges of the request.
+
+As a minimum you should specify the minimum age a user should be to use your application, however you can add two additional levels creating "ranges" for your application.
+
+<Tabs
+  Id="platform"
+  defaultValue="air"
+  values={[
+    {label: 'AIR', value: 'air'},
+  ]}>
+
+<TabItem value="air" >
+
+```actionscript
+var minimumAgeForYourApp:int = 18;
+
+var request:AgeRangeRequest = new AgeRangeRequest()
+    .setAgeGates( minimumAgeForYourApp );
+```
+
+Once you have your request, pass it to the `requestAgeRange()` method:
+
+```actionscript
+AgeRange.instance.requestAgeRange( request );
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+int minimumAgeForYourApp = 18;
+AgeRangeRequest request = new AgeRangeRequest()
+    .SetAgeGates( minimumAgeForYourApp );
+```
+
+Once you have your request, pass it to the `RequestAgeRange()` method:
+
+```csharp
+AgeRange.Instance.RequestAgeRange( request );
+```
+
+</TabItem>
+
+
+</Tabs>
+
+
+This will trigger the age request UI and dispatch the result after the user has responded.
+
+
+
+## Handling the Response
+
+
+<Tabs
+  Id="platform"
+  defaultValue="air"
+  values={[
+    {label: 'AIR', value: 'air'},
+  ]}>
+
+<TabItem value="air" >
+
+To handle the response you can provide success and failure callbacks to the `requestAgeRange()` method:
+
+```actionscript
+AgeRange.instance.requestAgeRange(
+    request,
+    function ( result:AgeRangeResult )
+    {
+        trace( "success" );
+    },
+    function ( error:Error )
+    {
+        trace( "ageRequest ERROR: " + error.message );
+    }
+);
+```
+
+Or alternatively listen for the events dispatched by the `AgeRange` instance:
+
+```actionscript
+AgeRange.instance.addEventListener( AgeRangeEvent.REQUESTAGERANGE_SUCCESS, ageRangeResultHandler );
+AgeRange.instance.addEventListener( AgeRangeEvent.REQUESTAGERANGE_ERROR, ageRangeErrorHandler );
+
+function ageRangeResultHandler( event:AgeRangeEvent ):void
+{
+    var result:AgeRangeResult = event.result;
+    trace( "age request success" );
+}
+
+function ageRangeErrorHandler( event:AgeRangeEvent ):void
+{
+    var error:Error = event.error;
+    trace( "age request ERROR: " + error.message );
+}
+```
+
+
+</TabItem>
+<TabItem value="unity" >
+
+</TabItem>
+
+
+</Tabs>
+
+
+The `AgeRangeResult` object returned on success contains information about the user's age range and whether they met the requested age gates.
+
+You can use this information to adapt your application experience accordingly.
+
+
+
+
+

@@ -1,0 +1,59 @@
+
+## Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.AgeRange</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>com.jetbrains.kotlin</extensionID>
+</extensions>
+```
+
+
+
+## iOS 
+
+
+
+### Entitlements 
+
+The following additions are for the `Entitlements` node of the iPhone section in your application descriptor:
+
+```xml
+<iPhone>
+	<Entitlements><![CDATA[
+
+		HERE
+
+	]]></Entitlements>
+</iPhone>
+```
+
+You need to add the correct entitlement for the **Declared Age Range** capability:
+
+```xml
+<key>com.apple.developer.declared-age-range</key>
+<true/>
+```
+
+
+## Android 
+
+### Manifest Additions
+
+The AgeRange extension only supports API version 23 and higher so you need to specify this in your manifest. You should add the listing below to your manifest.
+
+```xml
+<manifest android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
+	
+	<application>
+	</application>
+</manifest>
+```
+
+
+
+

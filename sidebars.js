@@ -9,6 +9,7 @@ module.exports = {
       collapsed: false,
       items: [
         { type: "ref", id: "adverts/index" },
+        { type: "ref", id: "agerange/index" },
         { type: "ref", id: "appgroupdefaults/index" },
         { type: "ref", id: "applesignin/index" },
         { type: "ref", id: "application/index" },
@@ -182,6 +183,30 @@ module.exports = {
           type: "link",
           label: "Contact Support",
           href: "http://github.com/distriqt/ANE-Adverts/issues/new",
+        },
+      ],
+    },
+  ],
+
+  agerange: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "agerange/index" },
+    {
+      "Get Started": ["agerange/add-the-extension", "agerange/setup"],
+    },
+    "agerange/usage",
+    {
+      Other: [
+        { type: "doc", id: "agerange/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/agerange/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/distriqt/ANE-AgeRange/issues/new",
         },
       ],
     },
