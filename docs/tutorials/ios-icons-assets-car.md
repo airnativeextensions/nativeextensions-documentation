@@ -16,7 +16,7 @@ Additionallyu from iOS 13 Apple now requires a new process of adding launch / sp
 
 
 Contents:
-- [Method 1: Command Line](#method-1-command-line)
+- [Method 1: Command Line](#method-1-air-imagescripts)
 - [Method 2: Using Xcode](#method-2-using-xcode)
 - [Method 3: Online Tool](#method-3-online-tool)
 - [Packaging Asset Catalog](#packaging-asset-catalog)

@@ -16,6 +16,8 @@ We noticed that although the apps listed below have Game Center features configu
 
 There are two important things you need to do to your application in order to meet this new requirement.
 
+<!-- truncate -->
+
 Firstly, make sure the capability is enabled in "Certificates, Identifiers & Profiles" for your application in the developer portal. Then update and download your provisioning profiles to ensure they are updated with the new capability.
 
 Then in your application descriptor you will need to add the entitlement. If you are using `apm` just ensure you are using the latest version and then generate your app descriiptor, `apm` will ensure the entitlement is correctly added.

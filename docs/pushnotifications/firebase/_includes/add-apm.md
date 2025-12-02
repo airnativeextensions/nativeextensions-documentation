@@ -7,7 +7,8 @@ Note: All of the commands below should be run in a terminal / command prompt in 
 
 **If you don't have an APM project setup, expand the guide below to setup an APM project before installing the extension.**
 
-<details><summary>Setup APM</summary>
+<details>
+<summary>Setup APM</summary>
 <p>
 
 ### Install APM

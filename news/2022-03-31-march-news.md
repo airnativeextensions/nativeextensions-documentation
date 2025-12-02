@@ -3,10 +3,7 @@ slug: 2022-03
 title: March 2022
 description: Android 12 (API 31)
 image: images/flood.png
-author: Michael
-author_title: Lead Developer
-author_url: https://github.com/marchbold
-author_image_url: https://avatars3.githubusercontent.com/u/442356?s=460&v=4
+authors: [ marchbold ]
 tags: [newsletter, air, apm, airsdk.dev]
 ---
 

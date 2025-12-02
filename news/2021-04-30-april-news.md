@@ -3,9 +3,7 @@ slug: 2021-04
 title: April 2021
 description: General Updates, APM, Game Controller, and Unity NFC 
 image: images/game-controller.png
-author: distriqt
-author_url: https://github.com/distriqt
-author_image_url: https://avatars3.githubusercontent.com/u/532565?s=460&v=4
+authors: [distriqt]
 tags: [ newsletter, air, gamecontroller, apm, nfc, unity ]
 ---
 

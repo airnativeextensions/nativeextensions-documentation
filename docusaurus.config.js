@@ -28,8 +28,8 @@ module.exports = {
     },
 
     prism: {
-      theme: require("prism-react-renderer/themes/github"),
-      darkTheme: require("prism-react-renderer/themes/vsDark"),
+      // theme: require("prism-react-renderer/themes/github"),
+      // darkTheme: require("prism-react-renderer/themes/vsDark"),
       additionalLanguages: ["actionscript", "csharp"],
       // defaultLanguage: 'actionscript'
     },

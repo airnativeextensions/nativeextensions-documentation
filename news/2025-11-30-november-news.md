@@ -25,6 +25,8 @@ If you have any questions or want to get involved in testing, we’re here to he
 
 --- 
 
+![](images/webp.png)
+
 ### [WebP](https://airnativeextensions.com/extension/com.distriqt.WebP)
 
 This update introduces full WebP image support on both macOS and Windows, bringing these platforms in line with our existing capabilities. We’ve also integrated the latest Android and iOS SDKs, delivering improved stability and addressing several long-standing issues. Together, these enhancements ensure a more reliable, modern, and consistent experience across all platforms. 
@@ -39,6 +41,8 @@ This update introduces full WebP image support on both macOS and Windows, bringi
 
 
 ---
+
+![](images/agerange.png)
 
 ### [AgeRange](https://docs.airnativeextensions.com/docs/agerange/)
 

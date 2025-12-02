@@ -3,9 +3,7 @@ slug: 2021-03
 title: March 2021
 description: Game Services, Vibration (Haptics), Scanning and more Unity
 image: images/gameservices-accesspoint.png
-author: distriqt
-author_url: https://github.com/distriqt
-author_image_url: https://avatars3.githubusercontent.com/u/532565?s=460&v=4
+authors: [distriqt]
 tags: [ newsletter, air, gameservices, scanner ]
 ---
 

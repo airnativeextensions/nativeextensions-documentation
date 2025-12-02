@@ -3,10 +3,7 @@ slug: 2022-01
 title: January 2022
 description: Android 31, Google Play Services, AndroidX, APM Documentation
 image: images/android.png
-author: Michael
-author_title: Lead Developer
-author_url: https://github.com/marchbold
-author_image_url: https://avatars3.githubusercontent.com/u/442356?s=460&v=4
+authors: [ marchbold ]
 tags: [newsletter, air, apm, airsdk.dev]
 ---
 

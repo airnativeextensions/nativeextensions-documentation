@@ -45,7 +45,7 @@ citiesRef
     .limit( 2 );
 ```
 
-However, if you have a filter with a range comparison (<, <=, >, >=), your first ordering must be on the same field:
+However, if you have a filter with a range comparison (`<`, `<=`, `>`, `>=`), your first ordering must be on the same field:
 
 **Valid**: Range filter and orderBy on the same field
 

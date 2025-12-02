@@ -34,7 +34,7 @@ https://support.google.com/admob/answer/9905175
 
 #### Invalid GAD Identifier 
 
-If you encounter a crash on launch, ensure you have added the [info additions](add-the-extension#info-additions) correctly. The AdMob SDK will terminate your application if you haven't provided your Google AdMob application identifier in the info additions.
+If you encounter a crash on launch, ensure you have added the [InfoAdditions](add-the-extension) correctly. The AdMob SDK will terminate your application if you haven't provided your Google AdMob application identifier in the info additions.
 
 
 
