@@ -3,10 +3,7 @@ slug: 2021-10
 title: October 2021
 description: AIR Packages, APM v1.0.0
 image: images/airnativeextension-packages.png
-author: Michael
-author_title: Lead Developer
-author_url: https://github.com/marchbold
-author_image_url: https://avatars3.githubusercontent.com/u/442356?s=460&v=4
+authors: [ marchbold ]
 tags: [newsletter, air, apm]
 ---
 

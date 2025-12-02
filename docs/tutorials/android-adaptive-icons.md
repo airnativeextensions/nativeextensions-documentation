@@ -136,8 +136,8 @@ Summary:
 - Package your application as normal.
 
 
-<details><summary>Legacy approaches</summary>
-<p>
+<details>
+<summary>Legacy approaches</summary>
 
 ### Legacy approaches 
 
@@ -167,5 +167,4 @@ To get started open up the AIR SDK Android resources directory located at `AIRSD
 
 Copy all the resources you generated earlier in the `mipmap` folders into the AIR SDK directory, being careful to merge any existing folders. Now repackage your application with the modified SDK and you should now see the adaptive icon.
 
-</p>
 </details>

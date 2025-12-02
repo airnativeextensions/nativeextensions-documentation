@@ -12,6 +12,8 @@ Android 15 (API v35) includes some changes that are intended to create a more co
 You can read the official release of this information here: https://developer.android.com/about/versions/15/behavior-changes-15
 :::
 
+<!-- truncate -->
+
 ## Window inset changes
 
 There are two changes related to window insets in Android 15: edge-to-edge is enforced by default, and there are also configuration changes, such as the default configuration of system bars.

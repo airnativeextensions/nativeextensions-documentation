@@ -38,7 +38,7 @@ To retrieve and update the consent status call the `getConsentStatus` function:
 Adverts.service.consent.getConsentStatus( "publisher_id" );
 ```
 
-The publisher id is taken from your AdMob account as shown in the [AdMob Settings](consent#admob-settings) section.
+The publisher id is taken from your AdMob account as shown in the AdMob Settings section.
 
 This is an asynchronous process and will dispatch one of two possible events:
 

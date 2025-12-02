@@ -10,10 +10,10 @@ To ensure an engaging user experience, you should process the incoming link when
 
 ## Receiving App Links
 
-Your app will receive a link where {url} is the incoming URL based on a custom scheme that you have defined for your app. You'll also receive an al_applink_data query parameter with JSON encoded content.
+Your app will receive a link where `url` is the incoming URL based on a custom scheme that you have defined for your app. You'll also receive an al_applink_data query parameter with JSON encoded content.
 
 ```json
-{url}?al_applink_data=
+url?al_applink_data=
   {
     "target_url": "{the-target-url}",
     "extras": {

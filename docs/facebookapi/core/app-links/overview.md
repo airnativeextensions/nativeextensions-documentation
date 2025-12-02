@@ -10,7 +10,7 @@ App Links is an open omni-channel solution for deep linking to content in your m
 
 Your app can post stories to news feed. When people click on those stories, Facebook can send people to either your app or your app's App Store page. This drives traffic and app installs. You can implement this behavior using App Links.
 
-When someone taps on one of the links shared through your app or on the story attribution (name of your app) in one of the Open Graph stories shared through your app, the link content appears in a webview with a menu item Open in {app name}. Clicking on that menu item will either open your app or, if the your app is not installed on the device, open your app's App Store page. If your app is mobile-only and has no web content, when someone clicks the shared link they either open your app, if it's installed, or go to your app's App Store page (if your app isn't installed). The image below shows this flow:
+When someone taps on one of the links shared through your app or on the story attribution (name of your app) in one of the Open Graph stories shared through your app, the link content appears in a webview with a menu item Open in "app name". Clicking on that menu item will either open your app or, if the your app is not installed on the device, open your app's App Store page. If your app is mobile-only and has no web content, when someone clicks the shared link they either open your app, if it's installed, or go to your app's App Store page (if your app isn't installed). The image below shows this flow:
 
 
 | iOS | ![](images/app_links_ios.png) |

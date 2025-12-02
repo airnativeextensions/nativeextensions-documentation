@@ -38,7 +38,7 @@ citiesRef.whereGreaterThanOrEqualTo("name", "San Francisco");
 
 ## Compound queries
 
-You can also chain multiple `where...` methods to create more specific queries (logical AND). However, to combine the equality operator (==) with a range or array-contains clause (<, <=, >, >=, or array_contains), make sure to create a [composite index](https://firebase.google.com/docs/firestore/query-data/indexing).
+You can also chain multiple `where...` methods to create more specific queries (logical AND). However, to combine the equality operator (`==`) with a range or array-contains clause ( `<`, `<=`, `>`, `>=`, or `array_contains`), make sure to create a [composite index](https://firebase.google.com/docs/firestore/query-data/indexing).
 
 
 ```actionscript
@@ -46,7 +46,7 @@ citiesRef.whereEqualTo("state", "CO").whereEqualTo("name", "Denver");
 citiesRef.whereEqualTo("state", "CA").whereLessThan("population", 1000000);
 ```
 
-You can only perform range comparisons (<, <=, >, >=) on a single field.
+You can only perform range comparisons (`<`, `<=`, `>`, `>=`) on a single field.
 
 **Valid**: Range filters on only one field
 

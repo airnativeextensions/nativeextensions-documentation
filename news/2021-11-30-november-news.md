@@ -3,10 +3,7 @@ slug: 2021-11
 title: November 2021
 description: Camera Roll Extended, and APM
 image: images/camerarollextended.png
-author: Michael
-author_title: Lead Developer
-author_url: https://github.com/marchbold
-author_image_url: https://avatars3.githubusercontent.com/u/442356?s=460&v=4
+authors: [ marchbold ]
 tags: [newsletter, air, apm, airsdk.dev]
 ---
 

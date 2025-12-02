@@ -31,7 +31,8 @@ You can use the keytool utility to get the details of your `p12` certificate dir
 keytool -list -v -keystore /path/to/your/certificate.p12 
 ```
 
-<details><summary><code>keytool</code> location</summary>
+<details>
+<summary><code>keytool</code> location</summary>
 <p>
 
 `keytool` is a key and certificate management utility. 
@@ -42,7 +43,8 @@ You will find it in `$JAVA_HOME/bin/keytool`.
 </details>
 
 
-<details><summary>Flash Builder Debug Certificate</summary>
+<details>
+<summary>Flash Builder Debug Certificate</summary>
 <p>
 
 > Note: We advise against using Flash Builder currently. It is unmaintained and there are much better IDEs available for AIR now. 

@@ -1,10 +1,7 @@
 ---
 slug: 2020-11
 title: November 2020
-author: Michael
-author_title: Lead Developer
-author_url: https://github.com/marchbold
-author_image_url: https://avatars3.githubusercontent.com/u/442356?s=460&v=4
+authors: [ marchbold ]
 tags: [ newsletter, facebook, nativewebview, flash-eol, adverts ]
 ---
 

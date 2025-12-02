@@ -23,7 +23,8 @@ You can use the keytool utility to get the details of your `p12` certificate dir
 keytool -list -v -keystore /path/to/your/certificate.p12 
 ```
 
-<details><summary><code>keytool</code> location</summary>
+<details>
+<summary><code>keytool</code> location</summary>
 <p>
 
 `keytool` is a key and certificate management utility. 
