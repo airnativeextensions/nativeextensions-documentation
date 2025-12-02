@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[79933],{1495:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/ironsource","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);

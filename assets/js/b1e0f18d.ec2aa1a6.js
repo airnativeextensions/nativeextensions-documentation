@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[84159],{44757:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/vibration","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);

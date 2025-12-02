@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[9139],{95922:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/ios","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);

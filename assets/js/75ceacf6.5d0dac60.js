@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[1510],{2117:e=>{e.exports=JSON.parse('{"label":"detectscreenshot","permalink":"/news/tags/detectscreenshot","allTagsPath":"/news/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[10480],{1680:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/dynamicicon","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"distriqt // Native Extension News","blogTitle":"Blog"}')}}]);

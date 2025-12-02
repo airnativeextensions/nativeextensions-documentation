@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[98521],{70159:e=>{e.exports=JSON.parse('{"label":"bugsnag","permalink":"/news/tags/bugsnag","allTagsPath":"/news/tags","count":1}')}}]);

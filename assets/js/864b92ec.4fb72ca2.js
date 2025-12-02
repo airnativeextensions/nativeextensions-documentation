@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[15810],{24499:e=>{e.exports=JSON.parse('{"label":"vibration","permalink":"/news/tags/vibration","allTagsPath":"/news/tags","count":1}')}}]);

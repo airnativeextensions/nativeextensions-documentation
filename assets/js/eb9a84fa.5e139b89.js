@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[22771],{26660:e=>{e.exports=JSON.parse('{"label":"google-play-billing","permalink":"/news/tags/google-play-billing","allTagsPath":"/news/tags","count":7}')}}]);

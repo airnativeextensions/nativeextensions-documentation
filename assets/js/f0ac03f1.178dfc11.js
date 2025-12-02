@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[92095],{35644:e=>{e.exports=JSON.parse('{"label":"paymentprovider","permalink":"/news/tags/paymentprovider","allTagsPath":"/news/tags","count":1}')}}]);

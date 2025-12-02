@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknativeextensions_documentation=self.webpackChunknativeextensions_documentation||[]).push([[71483],{91512:e=>{e.exports=JSON.parse('{"label":"gamecenter","permalink":"/news/tags/gamecenter","allTagsPath":"/news/tags","count":1}')}}]);
