@@ -129,4 +129,44 @@ You can use this information to adapt your application experience accordingly.
 
 
 
+## Testing 
+
+You can force the extension to return a specific result by using the `setFakeAgeRangeResult()` method. 
+
+<Tabs
+  Id="platform"
+  defaultValue="air"
+  values={[
+    {label: 'AIR', value: 'air'},
+  ]}>
+
+<TabItem value="air" >
+
+```actionscript
+var fakeResult:AgeRangeResult = new AgeRangeResult()
+							.setAgeLower( 13 )
+							.setAgeUpper( 15 )
+							.setUserStatus( AgeRangeUserStatus.SUPERVISED )
+							.setInstallId( "FAKE_INSTALL_ID_12345" );
+
+AgeRange.instance.setFakeAgeRangeResult( fakeResult );
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+</TabItem>
+</Tabs>
+
+Then when you make an age range request the details in this fake result will be returned.
+
+:::note Android
+On Android we construct a `FakeAgeSignalsManager` and pass in the parameters from your specified `AgeRangeResult` (as described in the [testing documentation](https://developer.android.com/google/play/age-signals/test-age-signals-api))
+:::
+
+:::note iOS
+On iOS, there is no method in the Declared Age Range framework to set a test result. 
+
+Instead the specified `AgeRangeResult` will simply be returned in the success callback or event, which means you will not see any UI that would be presented during a normal operation.
+:::
 
