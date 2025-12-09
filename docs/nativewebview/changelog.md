@@ -1,3 +1,9 @@
+### 2025.12.09 [v8.0.2]
+
+```
+feat(ios): add ability to disable input accessory view (resolves https://github.com/distriqt/ANE-NativeWebView/issues/353)
+```
+
 ### 2025.10.14 [v8.0.1]
 
 ```
