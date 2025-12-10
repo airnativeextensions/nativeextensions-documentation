@@ -144,10 +144,10 @@ You can force the extension to return a specific result by using the `setFakeAge
 
 ```actionscript
 var fakeResult:AgeRangeResult = new AgeRangeResult()
-							.setAgeLower( 13 )
-							.setAgeUpper( 15 )
-							.setUserStatus( AgeRangeUserStatus.SUPERVISED )
-							.setInstallId( "FAKE_INSTALL_ID_12345" );
+              .setAgeLower( 13 )
+              .setAgeUpper( 15 )
+              .setUserStatus( AgeRangeUserStatus.SUPERVISED )
+              .setInstallId( "FAKE_INSTALL_ID_12345" );
 
 AgeRange.instance.setFakeAgeRangeResult( fakeResult );
 ```

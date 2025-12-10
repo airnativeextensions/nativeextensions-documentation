@@ -1,3 +1,9 @@
+### 2025.12.11 [v0.0.3]
+
+```
+feat(android): update play signals api to v0.0.2
+```
+
 ### 2025.12.05 [v0.0.2]
 
 ```
