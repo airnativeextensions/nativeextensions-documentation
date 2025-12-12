@@ -459,6 +459,30 @@ module.exports = {
     },
   ],
 
+  audiomob: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "audiomob/index" },
+    {
+      "Get Started": ["audiomob/add-the-extension"],
+      Usage: ["audiomob/initialisation", "audiomob/request-ad"],
+    },
+    {
+      Other: [
+        { type: "doc", id: "audiomob/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/audiomob/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-Audiomob/issues/new",
+        },
+      ],
+    },
+  ],
+
   audiorecorder: [
     { type: "ref", id: "index" },
     { type: "doc", id: "audiorecorder/index" },
