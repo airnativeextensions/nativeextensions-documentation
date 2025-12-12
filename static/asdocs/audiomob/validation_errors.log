@@ -1,0 +1,15 @@
+Text for return in com.audiomob:AudiomobConfig/doNotSendAnyDeviceIdsForNonConsentedUsers is not valid.
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 22; Element type "AudiomobConfig" must be followed by either attribute specifications, ">" or "/>".
+
+Text for return in com.audiomob:AudiomobConfig/onlySendContextualSignals is not valid.
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 22; Element type "AudiomobConfig" must be followed by either attribute specifications, ">" or "/>".
+
+Text for return in com.audiomob:AudiomobConfig/sendAdvertisingId is not valid.
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 22; Element type "AudiomobConfig" must be followed by either attribute specifications, ">" or "/>".
+
+Text for return in com.audiomob:AudiomobConfig/sendAndroidIdAsAFallback is not valid.
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 22; Element type "AudiomobConfig" must be followed by either attribute specifications, ">" or "/>".
+
+Text for return in com.audiomob:AudiomobConfig/sendConsentStrings is not valid.
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 22; Element type "AudiomobConfig" must be followed by either attribute specifications, ">" or "/>".
+

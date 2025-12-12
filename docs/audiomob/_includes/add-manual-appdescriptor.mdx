@@ -1,0 +1,73 @@
+
+## Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+	<extensionID>com.audiomob</extensionID>
+
+	<extensionID>com.distriqt.Core</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.media3</extensionID>
+	<extensionID>com.bumptech.glide</extensionID>
+	<extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+	<extensionID>com.distriqt.playservices.Auth</extensionID>
+	<extensionID>com.distriqt.playservices.Location</extensionID>
+	<extensionID>com.distriqt.square.okhttp3</extensionID>
+	<extensionID>com.distriqt.square.retrofit2</extensionID>
+	<extensionID>com.google.android.material</extensionID>
+</extensions>
+```
+
+
+
+## iOS 
+
+
+### Info Additions 
+
+
+The following additions are for the `InfoAdditions` node of the iPhone section in your application descriptor:
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+
+		HERE
+
+	]]></InfoAdditions>
+</iPhone>
+```
+
+
+
+## Android 
+
+### Manifest Additions
+
+The Audiomob extension requires a few additions to the manifest to be able to start certain activities. 
+You should add the listing below to your manifest.
+
+```xml
+<manifest android:installLocation="auto">
+	
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	
+	<application android:hardwareAccelerated="true">
+	</application>
+
+</manifest>
+```
+
+
+
+
