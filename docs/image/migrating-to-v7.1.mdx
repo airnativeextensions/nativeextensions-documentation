@@ -1,0 +1,43 @@
+---
+title: Migrating to v7.1
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+This version makes some changes to the Android implementation to support capturing screenshots.
+
+We have changed the default operation to use a new method that doesn't require user interaction for permissions but only captures the application window (similar to iOS). 
+The previous method that captures the full screen including other applications is still available and has been improved to support the new requirements of using a foreground service but continues to require user permission via a system dialog.
+
+This update requires some changes to the manifest additions, so you will need to update your application descriptor accordingly. 
+
+If you are using [`apm`](https://github.com/airsdk/apm) to manage your extensions you can update your application descriptor automatically by following the instructions below.
+
+```
+apm update 
+apm generate app-descriptor 
+```
+
+If you are managing your application descriptor manually you will need to ensure your manifest additions contains the following:
+
+```xml
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+
+<application>
+    <service android:name="com.distriqt.extension.image.services.ScreenshotService"
+        android:foregroundServiceType="mediaProjection"
+        android:exported="false" />
+
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+</application>
+```
+
+
+As the default operation has changed to the new method that doesn't require user interaction, if you wish to continue to capture the full screen including other applications you will need to pass `false` to the second parameter of the `captureScreenshot()` method.
+
+```actionscript
+Image.service.captureScreenshot( callback, false );
+``` 
+

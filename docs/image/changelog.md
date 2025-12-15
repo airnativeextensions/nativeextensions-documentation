@@ -1,3 +1,10 @@
+### 2025.12.15 [v7.1.0]
+
+```
+feat(android): add new capture screenshot functionality to capture application view without user interaction 
+fix(android): correct issue with crash on newer android versions while using media projection to capture full screen (resolves https://github.com/distriqt/ANE-Image/issues/57, resolves https://github.com/distriqt/ANE-Image/issues/56)
+```
+
 ### 2024.12.17 [v7.0.0]
 
 ```

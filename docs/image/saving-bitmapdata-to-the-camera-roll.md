@@ -7,7 +7,7 @@ sidebar_label: Saving BitmapData to the Camera Roll
 :::warning
 This functionality has been deprecated and will be removed in an upcoming release. 
 
-You should move to the [CameraRollExtended](/docs/camerarollextended/adding-files.mdx) extension for adding images to the Camera Roll.
+You should move to the [CameraRollExtended](/docs/camerarollextended/adding-files) extension for adding images to the Camera Roll.
 
 Migration should be relatively straight forward, just replace the `Image.service.saveToCameraRoll()` with `CameraRollExtended.service.addBitmapData()`.
 :::
