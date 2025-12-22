@@ -1,3 +1,9 @@
+### 2025.12.22 [v0.0.4]
+
+```
+feat(ios): add isEligibleForAgeRange call to check if the user's region is affected by age range controls
+```
+
 ### 2025.12.11 [v0.0.3]
 
 ```
