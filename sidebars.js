@@ -1168,6 +1168,41 @@ module.exports = {
     },
   ],
 
+  display: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "display/index" },
+    {
+      "Get Started": [
+        "display/add-the-extension",
+      ],
+    },
+    {
+      Usage: [
+        "display/display-metrics",
+        "display/display-modes",
+        "display/status-bar",
+        "display/window-insets",
+        "display/user-interface-style",
+        "display/soft-keyboard",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "display/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/display/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-Display/issues/new",
+        },
+      ],
+    },
+  ],
+
   dynamicicon: [
     { type: "ref", id: "index" },
     { type: "doc", id: "dynamicicon/index" },
