@@ -24,11 +24,34 @@ The following should be added to your `extensions` node in your application desc
 
 ## iOS 
 
+#### Dynamic Frameworks
+
+Audiomob is based on a dynamic framework so you must include the framework and dependent swift libs in your application for signing by AIR.
+
+To do this create a `Frameworks` directory at the top / root level of your application and ensure it is packaged with your AIR application.
+
+It should contain any of the files in the supplied `Frameworks` directory (including `dylib` and `framework` directories).
+
+For Audiomob you will need to include:
+
+```
+AudiomobSDK.framework
+```
+
 
 ### Info Additions 
 
 
 The following additions are for the `InfoAdditions` node of the iPhone section in your application descriptor:
+
+```xml
+<key>MinimumOSVersion</key>
+<string>13.0</string>
+```
+
+
+
+These should be added within the `InfoAdditions` CDATA section as shown below:
 
 ```xml
 <iPhone>
