@@ -7,6 +7,110 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 
+## Selecting the Service
+
+As there are multiple services available on Android you will need to specify the service you wish to use by calling `initialise()` and passing a value defined in the `AgeRangeService`.
+
+For example to specify the Amazon User Age Verification service:
+
+<Tabs
+  Id="platform"
+  defaultValue="air"
+  values={[
+    {label: 'AIR', value: 'air'},
+  ]}>
+
+<TabItem value="air" >
+
+```actionscript
+AgeRange.instance.initialise( AgeRangeService.AMAZON_USER_AGE_VERIFICATION );
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+AgeRange.Instance.Initialise( AgeRangeService.AMAZON_USER_AGE_VERIFICATION );
+```
+
+</TabItem>
+
+You should check if the service is supported on the current device first by calling the `isServiceSupported` method:
+
+<Tabs
+  Id="platform"
+  defaultValue="air"
+  values={[
+    {label: 'AIR', value: 'air'},
+  ]}>
+
+<TabItem value="air" >
+
+```actionscript
+if (AgeRange.instance.isServiceSupported( AgeRangeService.AMAZON_USER_AGE_VERIFICATION ))
+{
+  AgeRange.instance.initialise( AgeRangeService.AMAZON_USER_AGE_VERIFICATION );
+}
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+if (AgeRange.Instance.IsServiceSupported( AgeRangeService.AMAZON_USER_AGE_VERIFICATION ))
+{
+  AgeRange.Instance.Initialise( AgeRangeService.AMAZON_USER_AGE_VERIFICATION );
+}
+```
+
+</TabItem>
+
+In this way you can use a service appropriate for the device. 
+
+Alternatively you can let the extension select the first available service by using `AgeRangeService.DEFAULT`:
+
+<Tabs
+  Id="platform"
+  defaultValue="air"
+  values={[
+    {label: 'AIR', value: 'air'},
+  ]}>
+
+<TabItem value="air" >
+
+```actionscript
+AgeRange.instance.initialise( AgeRangeService.DEFAULT );
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+AgeRange.Instance.Initialise( AgeRangeService.DEFAULT );
+```
+
+</TabItem>
+
+
+</Tabs>
+
+This will select the first available service in the following order on Android:
+
+- Amazon User Age Verification
+- Google Age Signals
+
+Or for iOS: 
+- Apple Declared Age Range 
+
+
+:::info 
+This is unused on iOS as there is only one available service there (i.e. Apple's Declared Age Range framework)
+
+If you are solely developing for iOS you can skip the initialise call or you can include it for consistency.
+:::
+
+
+
 ## Requesting an Age Range
 
 
@@ -118,7 +222,6 @@ function ageRangeErrorHandler( event:AgeRangeEvent ):void
 
 </TabItem>
 
-
 </Tabs>
 
 
@@ -160,12 +263,12 @@ AgeRange.instance.setFakeAgeRangeResult( fakeResult );
 
 Then when you make an age range request the details in this fake result will be returned.
 
-:::note Android
+:::note Google Age Signals
 On Android we construct a `FakeAgeSignalsManager` and pass in the parameters from your specified `AgeRangeResult` (as described in the [testing documentation](https://developer.android.com/google/play/age-signals/test-age-signals-api))
 :::
 
-:::note iOS
-On iOS, there is no method in the Declared Age Range framework to set a test result. 
+:::note Apple and Amazon
+With Apple's Declared Age Range and Amazon's User Age Verification services, there is no method in the service to set a test result. 
 
 Instead the specified `AgeRangeResult` will simply be returned in the success callback or event, which means you will not see any UI that would be presented during a normal operation.
 :::

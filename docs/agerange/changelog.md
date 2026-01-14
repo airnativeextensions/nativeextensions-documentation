@@ -1,3 +1,17 @@
+### 2026.01.14 [v0.1.0]
+
+```
+feat(amazon): implementation for the amazon app store user age verification sdk
+feat: add initialise / isServiceSupported functionality to specify service for use 
+```
+
+### 2026.01.14 [v0.1.0]
+
+```
+feat(amazon): implementation for the amazon app store user age verification sdk
+feat: add initialise / isServiceSupported functionality to specify service for use 
+```
+
 ### 2025.12.22 [v0.0.4]
 
 ```
