@@ -1,3 +1,9 @@
+### 2026.01.27 [v8.0.4]
+
+```
+feat(android): add ability to enable webview debug mode (resolves https://github.com/distriqt/ANE-NativeWebView/issues/355)
+```
+
 ### 2025.12.09 [v8.0.2]
 
 ```
