@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="ISystemInfo,com.distriqt.extension.systeminfo.ISystemInfo,DEFAULT,EXT_CONTEXT_ID,ROTATED_LEFT,ROTATED_RIGHT,SERVICE,UNKNOWN,UPSIDE_DOWN,VENDOR,VERSION,deviceOrientation,deviceState,deviceState,hardware,hardware,implementation,implementation,instance,isAutoTimeEnabled,isAutoTimeZoneEnabled,isDeviceIdleMode,isPowerSaveMode,isSupported,isiOSAppOnMac,isiOSAppOnMac,localTimeZone,localTimeZone,locale,locale,nativeVersion,nativeVersion,os,os,service,version,version,dispose,dispose,generateUUID,startGeneratingDeviceOrientationEvents,stopGeneratingDeviceOrientationEvents,uniqueId,uniqueId"><title>com.distriqt.extension.systeminfo.ISystemInfo</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'ISystemInfo - SystemInfo';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">SystemInfo Native Extension Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/distriqt/extension/systeminfo/ISystemInfo.html&amp;com/distriqt/extension/systeminfo/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">ISystemInfo</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ISystemInfo"); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.distriqt.extension.systeminfo</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  ISystemInfo extends  flash.events.IEventDispatcher</td></tr><tr><td class="classHeaderTableLabel">Implementors</td><td> <a href="../../../../com/distriqt/extension/systeminfo/SystemInfo.html">SystemInfo</a></td></tr></table><p></p><p></p><p></p>
+	              <p>
+	 SystemInfo functionality allows you to retrieve information about the device.
+	 </p>
+	              <p>
+	 There are many pieces of information available through the SystemInfo interface that allow
+	 you to determine what device you are currently running on, including things like the operating system version and the device model.
+	 </p>
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#deviceState" class="signatureLink">deviceState</a> : <a href="../../../../com/distriqt/extension/systeminfo/DeviceState.html">DeviceState</a><div class="summaryTableDescription">[read-only] 
+		 Access to the current state of the device (e.g.</div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#hardware" class="signatureLink">hardware</a> : <a href="../../../../com/distriqt/extension/systeminfo/hardware/Hardware.html">Hardware</a><div class="summaryTableDescription">[read-only] 
+		 Details about the hardware of the device.</div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#implementation" class="signatureLink">implementation</a> : String<div class="summaryTableDescription">[read-only] 
+		 The implementation currently in use.</div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isiOSAppOnMac" class="signatureLink">isiOSAppOnMac</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 Whether this application is an iOS app running on a Mac
+		 </div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#locale" class="signatureLink">locale</a> : <a href="../../../../com/distriqt/extension/systeminfo/time/Locale.html">Locale</a><div class="summaryTableDescription">[read-only] 
+		 Access to the current locale settings on the device
+		 </div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#localTimeZone" class="signatureLink">localTimeZone</a> : <a href="../../../../com/distriqt/extension/systeminfo/time/TimeZone.html">TimeZone</a><div class="summaryTableDescription">[read-only] 
+		 Access to the current system time zone on the device
+		 </div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeVersion" class="signatureLink">nativeVersion</a> : String<div class="summaryTableDescription">[read-only] 
+		 The native version string of the native extension.</div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#os" class="signatureLink">os</a> : <a href="../../../../com/distriqt/extension/systeminfo/software/OperatingSystem.html">OperatingSystem</a><div class="summaryTableDescription">[read-only] 
+		 Details about the operating system of the device.</div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#version" class="signatureLink">version</a> : String<div class="summaryTableDescription">[read-only] 
+		 The version of this extension.</div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+		 Disposes the extension and releases any allocated resources.</div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#uniqueId()" class="signatureLink">uniqueId</a>(type:String, persistent:Boolean = false, callback:Function = null):String</div><div class="summaryTableDescription">
+		 
+		 Retrieves a unique device ID from the underlying platform.</div></td><td class="summaryTableOwnerCol">ISystemInfo</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="deviceState"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">deviceState</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>deviceState:<a href="../../../../com/distriqt/extension/systeminfo/DeviceState.html">DeviceState</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Access to the current state of the device (e.g. orientation, settings etc)
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get deviceState():<a href="../../../../com/distriqt/extension/systeminfo/DeviceState.html">DeviceState</a></code><br/></div><a name="propertyDetail"></a><a name="hardware"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hardware</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>hardware:<a href="../../../../com/distriqt/extension/systeminfo/hardware/Hardware.html">Hardware</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Details about the hardware of the device.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get hardware():<a href="../../../../com/distriqt/extension/systeminfo/hardware/Hardware.html">Hardware</a></code><br/></div><a name="propertyDetail"></a><a name="implementation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implementation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>implementation:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The implementation currently in use.
+		 This should be one of the following depending on the platform in use and the
+		 functionality supported by this extension:
+		 <ul>
+		 <li><code>Android</code></li>
+		 <li><code>iOS</code></li>
+		 <li><code>tvOS</code></li>
+		 <li><code>macOS</code></li>
+		 <li><code>Windows</code></li>
+		 <li><code>Linux</code></li>
+		 <li><code>default</code></li>
+		 <li><code>unknown</code></li>
+		 </ul>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get implementation():String</code><br/></div><a name="propertyDetail"></a><a name="isiOSAppOnMac"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isiOSAppOnMac</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isiOSAppOnMac:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Whether this application is an iOS app running on a Mac
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isiOSAppOnMac():Boolean</code><br/></div><a name="propertyDetail"></a><a name="locale"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">locale</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>locale:<a href="../../../../com/distriqt/extension/systeminfo/time/Locale.html">Locale</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Access to the current locale settings on the device
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get locale():<a href="../../../../com/distriqt/extension/systeminfo/time/Locale.html">Locale</a></code><br/></div><a name="propertyDetail"></a><a name="localTimeZone"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">localTimeZone</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>localTimeZone:<a href="../../../../com/distriqt/extension/systeminfo/time/TimeZone.html">TimeZone</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Access to the current system time zone on the device
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get localTimeZone():<a href="../../../../com/distriqt/extension/systeminfo/time/TimeZone.html">TimeZone</a></code><br/></div><a name="propertyDetail"></a><a name="nativeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">nativeVersion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The native version string of the native extension.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativeVersion():String</code><br/></div><a name="propertyDetail"></a><a name="os"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">os</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>os:<a href="../../../../com/distriqt/extension/systeminfo/software/OperatingSystem.html">OperatingSystem</a></code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 Details about the operating system of the device.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get os():<a href="../../../../com/distriqt/extension/systeminfo/software/OperatingSystem.html">OperatingSystem</a></code><br/></div><a name="propertyDetail"></a><a name="version"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>version:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The version of this extension.
+		 
+		 This should be of the format, MAJOR.MINOR.BUILD
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get version():String</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+		 Disposes the extension and releases any allocated resources. Once this function
+		 has been called, a call to <code>init</code> is necessary again before any of the
+		 extensions functionality will work.
+		 </p></div><a name="uniqueId()"></a><a name="uniqueId(String,Boolean,Function)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">uniqueId</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function uniqueId(type:String, persistent:Boolean = false, callback:Function = null):String</code><p></p><p></p><p>
+		 <p>
+		 Retrieves a unique device ID from the underlying platform.
+		 Generally this is a sanctioned ID however you should consult the
+		 particular platform documentation regarding the usage of the ID.
+		 </p>
+		 		 <p>
+		 The default operation of this function is to retrieve an ID that
+		 you can use in your application to identify a user's device.
+		 </p>
+		 		 <b>Android</b>
+		 		 On Android the function returns the Settings.Secure.ANDROID_ID.
+		 A 64-bit number (as a hex string) that is randomly generated on the
+		 device's first boot and should remain constant for the lifetime of
+		 the device.
+		 
+		 The value may change if a factory reset is performed on the device.
+		 
+		 We suggest using the service identifier on Android which retrieves the "App set ID"
+		 asynchronously (https://developer.android.com/training/articles/app-set-id).
+		 
+		 		 <b>iOS</b>
+		 		 <p>
+		 On iOS there are several ID's currently available. See the types
+		 for more information of them. Generally the default "vendor" ID
+		 should be sufficient for most developer needs.
+		 </p>
+		 		 <p>
+		 If you wish the ID to be more persistent than Apple currently supplies
+		 you can use this function to automatically store and retrieve the first
+		 ID you generate in the device Keychain. Subsequent calls to this function
+		 will retrieve the value from the Keychain as opposed to requesting the
+		 native supplied ID. This is controlled by the <code>persistent</code>
+		 parameter. If true the value is retrieved / saved to the Keychain, or,
+		 if false, the normal native supplied ID is returned.
+		 </p>
+		 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; 	The type of id to retrieve. See the available types
+		 						below. [default: VENDOR]
+		 						(iOS only, Android always returns the ANDROID_ID)
+		 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">persistent</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; (iOS only) If true, the first generated id is saved into the device keychain which will persist between application installations, this value is then returned on subsequent calls to this function.
+		 						If false, the value of the requested id type is always returned.
+		 		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">callback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; 	On Android if using UniqueIDType.SERVICE the retrieval of the ID is asynchronous, so this callback function
+		 						will be called with the uniqueId when the retrieval is complete. This will be triggered in all cases.
+		 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A string with the requested unique device id, callback will be called with the latest identifier and should be used over the return value.
+		 		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="UniqueIDType.html#ADVERTISING" target="">UniqueIDType.ADVERTISING</a><br/><a href="UniqueIDType.html#VENDOR" target="">UniqueIDType.VENDOR</a><br/><a href="UniqueIDType.html#MAC_ADDRESS" target="">UniqueIDType.MAC_ADDRESS</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright <a href="https://michaelarchbold.com" target="_top">Michael Archbold</a> 2025</footer><br/>Wed Jan 14 2026, 02:08 PM +10:00  </center></div></body></html><!--Copyright Michael Archbold 2025<br/>Wed Jan 14 2026, 02:08 PM +10:00  -->
