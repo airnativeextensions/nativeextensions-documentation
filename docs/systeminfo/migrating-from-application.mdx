@@ -1,0 +1,87 @@
+---
+title: Migrating from the Application Extension
+sidebar_label: Migrating from Application
+---
+
+Transitioning your project from the Application ANE to the new SystemInfo ANE is straightforward, but it does require a few specific steps to ensure your cross-platform logic remains intact. 
+
+This guide assumes you are only using the system-related features of the Application extension. If you are using other features (like application lifecycle management), you may need to keep both extensions in your project.
+
+If you are using the Application extension for display related features, consider migrating to the [Display](/docs/display) extension as well. 
+
+
+### Step 1: Update Extension Dependencies
+
+First, remove the Application extension from your project dependencies and add the SystemInfo extension instead. Make sure to include the latest version of SystemInfo that supports all your target platforms (Android, iOS, macOS, Windows).
+
+Don't forget to update your -app.xml. You'll need to add the new extension ID:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.SystemInfo</extensionID>
+    <extensionID>com.distriqt.Application</extensionID> 
+</extensions>
+```
+
+### Step 2: Update Import Statements
+
+Update your ActionScript import statements to reference the SystemInfo classes instead of those from the Application extension. For example:
+
+```actionscript
+// Old import from Application extension
+import com.distriqt.extension.application.Application;
+import com.distriqt.extension.application.IDType
+```
+
+```actionscript
+// New import from SystemInfo extension
+import com.distriqt.extension.systeminfo.SystemInfo;
+import com.distriqt.extension.systeminfo.UniqueIDType;
+```
+
+
+### Step 3: Replace Application Calls with SystemInfo Calls
+
+
+Next, replace any calls to the Application extension's system-related methods with their SystemInfo counterparts. Below are some common replacements:
+
+```actionscript
+var deviceId:String = Application.service.device.uniqueId( 
+    IDType.SERVICE,
+    true,
+    function ( identifier:String ):void
+    {
+        message( "ID (VENDOR): " + identifier );
+    }
+ );
+
+var os:String = Application.service.device.os.name;
+``` 
+
+should be replaced with:
+
+```actionscript
+var deviceId:String = SystemInfo.instance.uniqueId( 
+    UniqueIDType.VENDOR, 
+    true,
+    function ( identifier:String ):void
+    {
+        trace( "ID (VENDOR): " + identifier );
+    }
+ );
+
+var os:String = SystemInfo.instance.os.name;
+```
+
+
+### Step 4: Desktop Integration (macOS & Windows)
+
+One of the primary reasons for this migration is expanded support. If you are moving a mobile project to Desktop:
+
+- Ensure you package the native extensions for Windows and macOS.
+- Note that `uniqueId` on desktop may behave differently than mobile (relying on hardware UUIDs rather than vendor IDs), so test your licensing or analytics logic accordingly.
+
+
+### Step 5: Testing
+
+Finally, thoroughly test your application on all target platforms to ensure that the migration has not introduced any issues. Pay special attention to any platform-specific functionality that may have been affected by the change.

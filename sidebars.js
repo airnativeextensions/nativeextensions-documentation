@@ -3298,6 +3298,43 @@ module.exports = {
     },
   ],
 
+  systeminfo: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "systeminfo/index" },
+    {
+      "Get Started": ["systeminfo/add-the-extension"],
+    },
+    {
+      Usage: [
+        "systeminfo/unique-id",
+        "systeminfo/operating-system",
+        "systeminfo/hardware",
+        "systeminfo/device-state",
+        "systeminfo/device-orientation-events",
+      ],
+    },
+    {
+      Troubleshooting: [
+        "systeminfo/migrating-from-application",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "systeminfo/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/systeminfo/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "http://github.com/airnativeextensions/ANE-SystemInfo/issues/new",
+        },
+      ],
+    },
+  ],
+
   unityads: [
     { type: "ref", id: "index" },
     { type: "doc", id: "unityads/index" },
