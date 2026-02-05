@@ -1,3 +1,9 @@
+### 2026.02.05 [v9.1.0]
+
+```
+feat(ios,android): add colour picker dialog for user colour selection (resolves https://github.com/distriqt/ANE-Dialog/issues/297)
+```
+
 ### 2024.12.16 [v9.0.0]
 
 ```

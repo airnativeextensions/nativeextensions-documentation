@@ -1143,6 +1143,7 @@ module.exports = {
         "dialog/activity-dialog",
         "dialog/custom-picker",
         "dialog/date-time-dialog",
+        "dialog/colour-picker",
       ],
     },
     {
