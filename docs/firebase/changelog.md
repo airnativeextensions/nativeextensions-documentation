@@ -1,3 +1,15 @@
+### 2026.02.17 [v12.0.0]
+
+```
+Update Firebase SDK to the latest version including iOS v12.9.0 and Android BOM v34.9.0
+
+### Updates
+
+feat(auth): add verifyBeforeUpdateEmail and deprecated updateEmail
+feat(android): update android sdk bom v34.9.0 (resolves https://github.com/distriqt/ANE-Firebase/issues/516)
+feat(ios): update ios sdk v12.9.0 (https://github.com/distriqt/ANE-Firebase/issues/518)
+```
+
 ### 2025.08.26 [v11.0.0]
 
 ```
