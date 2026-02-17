@@ -1,3 +1,14 @@
+### 2026.02.17 [v8.1.0]
+
+```
+Update to support the latest Google Identity SDK 
+
+### Updates
+
+feat(android): update google identity sdk v1.2.0
+feat(ios): update google sign in sdk v9.1.0
+```
+
 ### 2025.08.26 [v8.0.0]
 
 ```
