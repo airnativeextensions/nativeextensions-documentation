@@ -1,3 +1,15 @@
+###### 2026.02.17 [v5.1.0]
+
+```
+Update to the latest versions
+
+### Updates
+
+feat(android): update okio dependency to v3.6.0
+feat(okhttp3): update okhttp3 dependency to v4.12.0
+feat(android): update gradle version and build configurations
+```
+
 ###### 2024.12.05 [v5.0.0]
 
 ```
