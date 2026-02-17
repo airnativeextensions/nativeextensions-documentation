@@ -1,3 +1,17 @@
+### 2026.02.17 [v17.0.0]
+
+```
+This update brings the Adverts extension up to date with the latest versions of the AdMob SDK and UMP, 
+as well as adding a new consent sync ID feature and response info details to the PaidEvent.
+
+### Updates
+
+feat(android): update admob sdk v24.9.0 ump v4.0.0
+feat(ios): update admob sdk v13.0.0 ump v3.1.0
+feat(ump): add consent sync id to sync user consent settings between apps from same developer
+feat(android,ios): add response info details to the PaidEvent (resolves https://github.com/distriqt/ANE-Adverts/issues/651)
+```
+
 ### 2025.10.17 [v16.5.0]
 
 ```
