@@ -2,12 +2,129 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2026-02-02T00:00:00.000Z</updated>
+    <updated>2026-03-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2026 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[March 2026]]></title>
+        <id>https://docs.airnativeextensions.com/news/2026-03</id>
+        <link href="https://docs.airnativeextensions.com/news/2026-03"/>
+        <updated>2026-03-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Extension Updates]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>February Release Update</p>
+</blockquote>
+<p>It has been a busy month for the AIR development ecosystem! The February releases focus heavily on modernizing core SDKs—specifically Firebase v12.9.0 and AdMob v24.9.0 - while introducing some highly requested UI features and critical stability fixes.</p>
+<p>Key focus:</p>
+<ul>
+<li class="">Keeping all Firebase and Google SDKs fully up to date</li>
+<li class="">Aligning AdMob and mediation networks with the latest versions</li>
+<li class="">Improving consent management and monetisation reporting</li>
+<li class="">Fixing packaging and manifest generation issues</li>
+<li class="">Introducing new UI capabilities like the colour picker dialog</li>
+</ul>
+<p>As always, we recommend updating to the latest versions to ensure compliance, stability, and access to new features.</p>
+<p>Here's a quick overview of the latest extension updates:</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Extension Updates</div><div class="admonitionContent_BuS1"><ul>
+<li class=""><a href="https://github.com/distriqt/ANE-Dialog/releases/tag/v9.1.0" target="_blank" rel="noopener noreferrer" class="">Dialog v9.1.0</a> - Added native Colour Picker</li>
+<li class=""><a href="https://github.com/distriqt/ANE-Adverts/releases/tag/v17.0.0" target="_blank" rel="noopener noreferrer" class="">Adverts v17.0.0</a> - AdMob v24.9.0 + Consent Sync</li>
+<li class=""><a href="https://github.com/distriqt/ANE-Firebase/releases/tag/v12.0.0" target="_blank" rel="noopener noreferrer" class="">Firebase v12.0.0</a> - SDK v12.9.0 (iOS) / BOM v34.9.0 (Android).</li>
+<li class=""><a href="https://github.com/distriqt/ANE-GoogleIdentity/releases/tag/v8.1.0" target="_blank" rel="noopener noreferrer" class="">GoogleIdentity v8.1.0</a> - Latest Google Sign-In SDK support</li>
+<li class=""><a href="https://github.com/distriqt/ANE-GooglePlayServices/releases/tag/v32.1.4" target="_blank" rel="noopener noreferrer" class="">GooglePlayServices v32.1.4</a> - Fixes for apm manifest generation</li>
+</ul></div></div>
+<p>If you have any questions, we're here to help!</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/dialog-colour-picker-0723ad38cd7829de343a12a06c8f8ab8.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dialog"><a href="https://airnativeextensions.com/extension/com.distriqt.Dialog" target="_blank" rel="noopener noreferrer" class="">Dialog</a><a href="https://docs.airnativeextensions.com/news/2026-03#dialog" class="hash-link" aria-label="Direct link to dialog" title="Direct link to dialog" translate="no">​</a></h3>
+<p><a href="https://github.com/distriqt/ANE-Dialog/releases/tag/v9.1.0" target="_blank" rel="noopener noreferrer" class="">v9.1.0</a></p>
+<p>One of the most exciting additions this month is the new Colour Picker dialog in the Dialog extension (v9.1.0). You can now provide a native interface for users to select colors on both iOS and Android, streamlining the UI for creative or customization-focused apps.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-features">Key Features<a href="https://docs.airnativeextensions.com/news/2026-03#key-features" class="hash-link" aria-label="Direct link to Key Features" title="Direct link to Key Features" translate="no">​</a></h4>
+<ul>
+<li class="">The colour picker dialog presents a UI that allows the user to select a colour on a spectrum.</li>
+<li class="">Allows control of the initial colour</li>
+<li class="">Supports alpha channel input</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/admob-4be0695a9eb26890b7f5fe015f1ab7d2.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="adverts"><a href="https://airnativeextensions.com/extension/com.distriqt.Adverts" target="_blank" rel="noopener noreferrer" class="">Adverts</a><a href="https://docs.airnativeextensions.com/news/2026-03#adverts" class="hash-link" aria-label="Direct link to adverts" title="Direct link to adverts" translate="no">​</a></h3>
+<p><a href="https://github.com/distriqt/ANE-Adverts/releases/tag/v17.0.0" target="_blank" rel="noopener noreferrer" class="">v17.0.0</a></p>
+<p>A major update for Adverts brings it fully up to date with the latest advertising SDKs:</p>
+<ul>
+<li class="">Android: v24.9.0</li>
+<li class="">iOS: v13.0.0</li>
+</ul>
+<p>This release ensures compliance, improved monetisation insights, and compatibility with the latest ad platform requirements.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://docs.airnativeextensions.com/news/2026-03#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Updated to latest AdMob SDK</li>
+<li class="">Updated UMP (User Messaging Platform)</li>
+<li class="">New Consent Sync ID – Sync consent settings across apps from the same developer</li>
+<li class="">Enhanced PaidEvent – Now includes detailed response info for improved revenue tracking and diagnostics</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="mediation-networks">Mediation Networks<a href="https://docs.airnativeextensions.com/news/2026-03#mediation-networks" class="hash-link" aria-label="Direct link to Mediation Networks" title="Direct link to Mediation Networks" translate="no">​</a></h4>
+<p>All major mediation networks have been upgraded to their latest compatible SDKs, including:</p>
+<ul>
+<li class="">AppLovin</li>
+<li class="">Digital Turbine</li>
+<li class="">Facebook Audience Network</li>
+<li class="">ironSource</li>
+<li class="">Mintegral</li>
+<li class="">Pangle</li>
+<li class="">Unity Ads</li>
+<li class="">Vungle</li>
+</ul>
+<p>This ensures optimal fill rates, stability, and compliance across mediation partners.</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/firebase-b328933f96c7ed72f04af8a4cfe84e56.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="firebase"><a href="https://airnativeextensions.com/extension/com.distriqt.Firebase" target="_blank" rel="noopener noreferrer" class="">Firebase</a><a href="https://docs.airnativeextensions.com/news/2026-03#firebase" class="hash-link" aria-label="Direct link to firebase" title="Direct link to firebase" translate="no">​</a></h3>
+<p><a href="https://github.com/distriqt/ANE-Firebase/releases/tag/v12.0.0" target="_blank" rel="noopener noreferrer" class="">v12.0.0</a></p>
+<p>The Firebase extensions have been updated to the latest Firebase SDKs:</p>
+<ul>
+<li class="">iOS SDK v12.9.0</li>
+<li class="">Android BOM v34.9.0</li>
+</ul>
+<p>This release keeps your apps aligned with current Firebase platform changes while adding important authentication improvements.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-1">Updates<a href="https://docs.airnativeextensions.com/news/2026-03#updates-1" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Added <code>verifyBeforeUpdateEmail</code></li>
+<li class="">Deprecated <code>updateEmail</code></li>
+<li class="">Updates across Auth, Crashlytics, Firestore, Database, Performance, RemoteConfig, and Storage</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/google-2139fb34bc6120d0d9f76ae563b1fd35.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="googleidentity"><a href="https://airnativeextensions.com/extension/com.distriqt.GoogleIdentity" target="_blank" rel="noopener noreferrer" class="">GoogleIdentity</a><a href="https://docs.airnativeextensions.com/news/2026-03#googleidentity" class="hash-link" aria-label="Direct link to googleidentity" title="Direct link to googleidentity" translate="no">​</a></h3>
+<p><a href="https://github.com/distriqt/ANE-GoogleIdentity/releases/tag/v8.1.0" target="_blank" rel="noopener noreferrer" class="">v8.1.0</a></p>
+<p>The GoogleIdentity extension now supports the latest Google Identity SDKs:</p>
+<ul>
+<li class="">Android Google Identity SDK v1.2.0</li>
+<li class="">iOS Google Sign-In SDK v9.1.0</li>
+</ul>
+<p>Ensuring continued compatibility with modern Google authentication flows.</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/adobeair-75ec23410377afde7761a5bb875e30e4.png" width="800" height="381" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-information">Further Information<a href="https://docs.airnativeextensions.com/news/2026-03#further-information" class="hash-link" aria-label="Direct link to Further Information" title="Direct link to Further Information" translate="no">​</a></h2>
+<p>As always, thank you for your continued support of distriqt and the AIR developer community.
+Your feedback and contributions help us keep these extensions up to date and running smoothly across platforms.</p>
+<ul>
+<li class="">For full documentation and setup guides, visit <a href="https://docs.airnativeextensions.com/" target="_blank" rel="noopener noreferrer" class="">docs.airnativeextensions.com</a></li>
+<li class="">Join the AIR community discussions and get support at <a href="https://github.com/airsdk/Adobe-Runtime-Support/" target="_blank" rel="noopener noreferrer" class="">github</a></li>
+<li class="">Publicly available extensions at <a href="https://github.com/airnativeextensions" target="_blank" rel="noopener noreferrer" class="">airnativeextensions</a></li>
+<li class=""><a href="https://github.com/sponsors/marchbold" target="_blank" rel="noopener noreferrer" class="">Support</a> my ongoing involvement in the community</li>
+</ul>
+<p>Stay tuned for more updates next month!</p>]]></content>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
+        <category label="newsletter" term="newsletter"/>
+        <category label="image" term="image"/>
+        <category label="nativewebview" term="nativewebview"/>
+        <category label="agerange" term="agerange"/>
+        <category label="display" term="display"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[February 2026]]></title>
         <id>https://docs.airnativeextensions.com/news/2026-02</id>
@@ -1633,52 +1750,6 @@ You can do this via the adt <code>platformsdk</code> command line option:</p><di
         <category label="airsdk" term="airsdk"/>
         <category label="application-rater" term="application-rater"/>
         <category label="adverts" term="adverts"/>
-        <category label="google-play-billing" term="google-play-billing"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[October 2022]]></title>
-        <id>https://docs.airnativeextensions.com/news/2022-10</id>
-        <link href="https://docs.airnativeextensions.com/news/2022-10"/>
-        <updated>2022-10-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Extension Updates]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>Play Billing v5 release, IronSource updates</p>
-</blockquote>
-<p>This last month has seen the release of the major update for our InAppBilling extension to support the latest version of the play billing library from Google for the Play Store. This update brings a major change to the way subscriptions are handled and is critical for any updates or new applications released to the Play Store.</p>
-<p>Additionally we have released several updates and new mediation networks for the ironSource extension.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/playbilling-5e33a8c57cec02953c7c66fe705b5e5d.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappbilling"><a href="https://airnativeextensions.com/extension/com.distriqt.InAppBilling" target="_blank" rel="noopener noreferrer" class="">InAppBilling</a><a href="https://docs.airnativeextensions.com/news/2022-10#inappbilling" class="hash-link" aria-label="Direct link to inappbilling" title="Direct link to inappbilling" translate="no">​</a></h3>
-<p>Many of you will have received the following notice from Google over the previous months:</p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Reminder</div><div class="admonitionContent_BuS1"><p>Starting on August 2, 2022, all new apps must use Billing Library version 4 or newer. By November 1, 2022, all updates to existing apps must use Billing Library version 4 or newer.</p></div></div>
-<p>We are excited to announce that version 14 of the InAppBilling extension brings v5.0.0 of the Billing library so you will be able to update your applications to satisfy the latest Play Store requirements.</p>
-<p>Version 5.0.0 brings some major changes to subscriptions and some breaking API changes that you will need to update your application to manage. These changes are mainly focused around subscriptions and generally developers who only use consumable / non-consumable products shouldn't see any change in functionality.</p>
-<p>For more information on migrating, follow the <a class="" href="https://docs.airnativeextensions.com/docs/inappbilling/migration-v14">migration guide</a>.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/ironsource-d7a62f75ff8789ae2870c70c1e4524c1.png" width="800" height="451" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ironsource"><a href="https://airnativeextensions.com/extension/com.distriqt.IronSource" target="_blank" rel="noopener noreferrer" class="">IronSource</a><a href="https://docs.airnativeextensions.com/news/2022-10#ironsource" class="hash-link" aria-label="Direct link to ironsource" title="Direct link to ironsource" translate="no">​</a></h3>
-<p>Last month we released updates to the mediation adapters for several of the networks, including:</p>
-<ul>
-<li class="">AdColony</li>
-<li class="">AppLovin</li>
-<li class="">AdMob</li>
-<li class="">UnityAds</li>
-</ul>
-<p>We have also added several new mediation adapters for the following networks:</p>
-<ul>
-<li class="">Vungle</li>
-<li class="">Digital Turbine (Fyber)</li>
-</ul>
-<p>Additionally some minor functionality updates to the IronSource extension included the addition of the <code>setMetaData</code> function to help set meta data for mediation networks and other non-specific configuration values.</p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Please note this extension is provided for free, so if you do find it useful, please consider <a href="https://github.com/sponsors/marchbold" target="_blank" rel="noopener noreferrer" class="">sponsoring</a> the developers involved.</p></div></div>
-<hr>
-<p>As always, if you have any native development needs for AIR, Unity, Flutter or Haxe, please feel free to contact us at <a href="mailto:airnativeextensions@distriqt.com" target="_blank" rel="noopener noreferrer" class="">airnativeextensions@distriqt.com</a>.</p>]]></content>
-        <author>
-            <name>Michael</name>
-            <uri>https://github.com/marchbold</uri>
-        </author>
-        <category label="newsletter" term="newsletter"/>
-        <category label="inappbilling" term="inappbilling"/>
         <category label="google-play-billing" term="google-play-billing"/>
     </entry>
 </feed>
