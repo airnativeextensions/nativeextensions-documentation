@@ -1,3 +1,9 @@
+### 2026.03.06 [v8.0.5]
+
+```
+fix(macos): resolve crash when webview loses focus in particular situations (resolves https://github.com/distriqt/ANE-NativeWebView/issues/356)
+```
+
 ### 2026.01.27 [v8.0.4]
 
 ```
