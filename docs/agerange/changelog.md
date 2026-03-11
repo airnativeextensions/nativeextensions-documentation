@@ -1,3 +1,19 @@
+### 2026.03.12 [v0.2.0]
+
+```
+This update implements v0.0.3 of the Play Age Signals API, which implements the `SELF_DECLARED` status and introduces a new error code `SDK_VERSION_OUTDATED`. 
+
+The `SELF_DECLARED` status allows the API to distinguish between a user who has manually declared their age versus one who is VERIFIED (via official ID/Credit Card) or SUPERVISED (via Family Link). 
+
+The new error code `SDK_VERSION_OUTDATED`, will require particular attention. When this error occurs, the API will not return any age signals. Your app should have a "graceful degradation" plan. 
+
+For example, you could use this error code to trigger a fallback to an alternative method of age verification, such as asking the user to input their age or using a third-party age verification service. You could also use this error code to log the issue and monitor how often it occurs, which could help you identify if there are a significant number of users who are affected by this issue and prioritize updating the SDK in your app.
+
+### Updates
+
+feat(android): update play signals api to v0.0.3 (resolves https://github.com/airnativeextensions/ANE-AgeRange/issues/3) 
+```
+
 ### 2026.01.14 [v0.1.0]
 
 ```
