@@ -1,3 +1,9 @@
+###### 2026.03.16 [v18.1.1]
+
+```
+feat(ios): update ios sdk v18.0.3 (resolves https://github.com/distriqt/ANE-FacebookAPI/issues/391)
+```
+
 ###### 2025.10.21 [v18.1.0]
 
 ```
