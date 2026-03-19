@@ -1,3 +1,12 @@
+### 2026.03.20 [v0.3.0]
+
+```
+feat(android): handle null values for user status both from return values and fake result (resolves https://github.com/airnativeextensions/ANE-AgeRange/issues/4)
+feat(android): add ability to set fake error for testing errors (resolves https://github.com/airnativeextensions/ANE-AgeRange/issues/5)
+feat(ios): add ability to set fake error for testing errors
+feat(airpackage): setup correct dependencies and info for airpackage
+```
+
 ### 2026.03.12 [v0.2.0]
 
 ```
