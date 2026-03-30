@@ -1,3 +1,16 @@
+### 2026.03.30 [v18.1.0]
+
+```
+feat(playbilling): update play billing sdk to v8.3.0 
+feat(playbilling,ios): add countryCode to getUserData functionality (resolves https://github.com/distriqt/ANE-InAppBilling/issues/674)
+```
+
+### 2025.10.03 [v18.0.3]
+
+```
+feat(macos): correct macos build settings (resolves https://github.com/distriqt/ANE-InAppBilling/issues/660)
+```
+
 ### 2025.09.25 [v18.0.2]
 
 ```
