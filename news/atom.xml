@@ -2,12 +2,117 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2026-03-12T00:00:00.000Z</updated>
+    <updated>2026-04-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2026 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[April 2026]]></title>
+        <id>https://docs.airnativeextensions.com/news/2026-04</id>
+        <link href="https://docs.airnativeextensions.com/news/2026-04"/>
+        <updated>2026-04-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Extension Updates]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>March Release Update</p>
+</blockquote>
+<p>March brought a focused set of extension updates with important SDK upgrades, stability fixes, and testing improvements across billing, social login, web views, and age signal support.</p>
+<p>Key focus:</p>
+<ul>
+<li class="">Updating Google Play Billing to the latest supported version</li>
+<li class="">Keeping Facebook iOS SDK integrations current</li>
+<li class="">Resolving a macOS NativeWebView crash scenario</li>
+<li class="">Expanding AgeRange testing and handling paths for edge cases</li>
+<li class="">Migrating extension repositories from <code>distriqt</code> to <code>airnativeextensions</code></li>
+</ul>
+<p>As always, we recommend updating to the latest versions to ensure compatibility, stability, and access to the newest platform features.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Repository Migration Notice</div><div class="admonitionContent_BuS1"><p>We are migrating our GitHub repositories for native extensions from the <a href="https://github.com/distriqt" target="_blank" rel="noopener noreferrer" class=""><strong>distriqt</strong></a> organisation to <a href="https://github.com/airnativeextensions" target="_blank" rel="noopener noreferrer" class=""><strong>airnativeextensions</strong></a>.</p><p>During this migration, existing users may receive invitations to the new repositories.</p><p>You will need to <strong>accept these GitHub invitations</strong> to continue having access to extension repositories and future updates.</p><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-to-expect">What to expect<a href="https://docs.airnativeextensions.com/news/2026-04#what-to-expect" class="hash-link" aria-label="Direct link to What to expect" title="Direct link to What to expect" translate="no">​</a></h3><ol>
+<li class="">We will progressively move extension repositories to the <strong>airnativeextensions</strong> organisation.</li>
+<li class="">If you currently have access, GitHub will send an invitation for the equivalent repository under the new organisation.</li>
+<li class="">Invitations are sent by GitHub and may appear as an email and/or a notification in GitHub.</li>
+</ol><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-you-need-to-do">What you need to do<a href="https://docs.airnativeextensions.com/news/2026-04#what-you-need-to-do" class="hash-link" aria-label="Direct link to What you need to do" title="Direct link to What you need to do" translate="no">​</a></h3><ol>
+<li class="">Open the invitation from GitHub.</li>
+<li class="">Accept the invitation to the repository under <strong>airnativeextensions</strong>.</li>
+<li class="">Confirm you can access the new repository and release tags.</li>
+<li class="">Update any existing bookmarks, remotes, or automation to point to the new repository URL.</li>
+</ol><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="timing-and-continuity">Timing and continuity<a href="https://docs.airnativeextensions.com/news/2026-04#timing-and-continuity" class="hash-link" aria-label="Direct link to Timing and continuity" title="Direct link to Timing and continuity" translate="no">​</a></h3><ul>
+<li class="">Access to migrated repositories depends on accepting the invitation.</li>
+<li class="">We will aim to keep migration disruption to a minimum and communicate important changes as they happen.</li>
+</ul><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="questions">Questions<a href="https://docs.airnativeextensions.com/news/2026-04#questions" class="hash-link" aria-label="Direct link to Questions" title="Direct link to Questions" translate="no">​</a></h3><p>If you believe you should have access but do not receive an invite or if the invitation expires, please contact us so we can verify your account access and resend the invitation where required.</p><p>Please feel free to reach out if you have any questions or concerns about this migration.</p></div></div>
+<p>Here's a quick overview of the latest extension updates:</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Extension Updates</div><div class="admonitionContent_BuS1"><ul>
+<li class=""><a href="https://github.com/distriqt/ANE-InAppBilling/releases/tag/v18.1.0" target="_blank" rel="noopener noreferrer" class="">InAppBilling v18.1.0</a> - Play Billing SDK v8.3.0 and <code>countryCode</code> support in <code>getUserData</code></li>
+<li class=""><a href="https://github.com/distriqt/ANE-FacebookAPI/releases/tag/v18.1.1" target="_blank" rel="noopener noreferrer" class="">FacebookAPI v18.1.1</a> - iOS SDK update to v18.0.3</li>
+<li class=""><a href="https://github.com/distriqt/ANE-NativeWebView/releases/tag/v8.0.5" target="_blank" rel="noopener noreferrer" class="">NativeWebView v8.0.5</a> - macOS focus-loss crash fix</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-AgeRange/releases/tag/v0.3.0" target="_blank" rel="noopener noreferrer" class="">AgeRange v0.3.0</a> - Null handling, fake error testing, and packaging fixes. Play Age Signals API v0.0.3 updates</li>
+</ul></div></div>
+<p>If you have any questions, we're here to help!</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/inappbilling-711a8c968ade9dc1d0241b4443f8289f.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappbilling"><a href="https://airnativeextensions.com/extension/com.distriqt.InAppBilling" target="_blank" rel="noopener noreferrer" class="">InAppBilling</a><a href="https://docs.airnativeextensions.com/news/2026-04#inappbilling" class="hash-link" aria-label="Direct link to inappbilling" title="Direct link to inappbilling" translate="no">​</a></h3>
+<p><a href="https://github.com/distriqt/ANE-InAppBilling/releases/tag/v18.1.0" target="_blank" rel="noopener noreferrer" class="">v18.1.0</a></p>
+<p>This release updates Google Play Billing and improves user data support across platforms.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://docs.airnativeextensions.com/news/2026-04#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Android: Updated Play Billing SDK to v8.3.0</li>
+<li class="">Android and iOS: Added <code>countryCode</code> to <code>getUserData</code> functionality</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/facebook-861699c90179cebd7703129f3271aa0f.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="facebookapi"><a href="https://airnativeextensions.com/extension/com.distriqt.FacebookAPI" target="_blank" rel="noopener noreferrer" class="">FacebookAPI</a><a href="https://docs.airnativeextensions.com/news/2026-04#facebookapi" class="hash-link" aria-label="Direct link to facebookapi" title="Direct link to facebookapi" translate="no">​</a></h3>
+<p><a href="https://github.com/distriqt/ANE-FacebookAPI/releases/tag/v18.1.1" target="_blank" rel="noopener noreferrer" class="">v18.1.1</a></p>
+<p>This update keeps the iOS Facebook integration current and aligned with the latest SDK release.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-1">Updates<a href="https://docs.airnativeextensions.com/news/2026-04#updates-1" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">iOS SDK updated to v18.0.3</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/nativewebview-8c049cf5f87cfceb4d84befb9bf708db.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nativewebview"><a href="https://airnativeextensions.com/extension/com.distriqt.NativeWebView" target="_blank" rel="noopener noreferrer" class="">NativeWebView</a><a href="https://docs.airnativeextensions.com/news/2026-04#nativewebview" class="hash-link" aria-label="Direct link to nativewebview" title="Direct link to nativewebview" translate="no">​</a></h3>
+<p><a href="https://github.com/distriqt/ANE-NativeWebView/releases/tag/v8.0.5" target="_blank" rel="noopener noreferrer" class="">v8.0.5</a></p>
+<p>This release addresses a macOS stability issue seen in specific focus-change situations.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-2">Updates<a href="https://docs.airnativeextensions.com/news/2026-04#updates-2" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">macOS: Fixed a crash when WebView loses focus in particular situations</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/agerange-3ee08983702bf4288008e0461325f080.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="agerange"><a href="https://docs.airnativeextensions.com/docs/agerange/" target="_blank" rel="noopener noreferrer" class="">AgeRange</a><a href="https://docs.airnativeextensions.com/news/2026-04#agerange" class="hash-link" aria-label="Direct link to agerange" title="Direct link to agerange" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-AgeRange/releases/tag/v0.3.0" target="_blank" rel="noopener noreferrer" class="">v0.3.0</a></p>
+<p>AgeRange v0.3.0 improves reliability and testing support around user status and error simulation.
+The previous release (v0.2.0) updated the Play Age Signals API integration and introduced support for the new <code>SELF_DECLARED</code> status and <code>SDK_VERSION_OUTDATED</code> error handling path.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-3">Updates<a href="https://docs.airnativeextensions.com/news/2026-04#updates-3" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Android: Handle <code>null</code> values for user status in both normal and fake result paths</li>
+<li class="">Android: Added ability to set fake error values for testing</li>
+<li class="">iOS: Added ability to set fake error values for testing</li>
+<li class="">AirPackage: Corrected dependencies and package metadata</li>
+<li class="">Android: Updated Play Age Signals API to v0.0.3</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/adobeair-75ec23410377afde7761a5bb875e30e4.png" width="800" height="381" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-information">Further Information<a href="https://docs.airnativeextensions.com/news/2026-04#further-information" class="hash-link" aria-label="Direct link to Further Information" title="Direct link to Further Information" translate="no">​</a></h2>
+<p>As always, thank you for your continued support of distriqt and the AIR developer community.
+Your feedback and contributions help us keep these extensions up to date and running smoothly across platforms.</p>
+<ul>
+<li class="">For full documentation and setup guides, visit <a href="https://docs.airnativeextensions.com/" target="_blank" rel="noopener noreferrer" class="">docs.airnativeextensions.com</a></li>
+<li class="">Join the AIR community discussions and get support at <a href="https://github.com/airsdk/Adobe-Runtime-Support/" target="_blank" rel="noopener noreferrer" class="">github</a></li>
+<li class="">Publicly available extensions at <a href="https://github.com/airnativeextensions" target="_blank" rel="noopener noreferrer" class="">airnativeextensions</a></li>
+<li class=""><a href="https://github.com/sponsors/marchbold" target="_blank" rel="noopener noreferrer" class="">Support</a> my ongoing involvement in the community</li>
+</ul>
+<p>Stay tuned for more updates next month!</p>]]></content>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
+        <category label="newsletter" term="newsletter"/>
+        <category label="inappbilling" term="inappbilling"/>
+        <category label="facebookapi" term="facebookapi"/>
+        <category label="nativewebview" term="nativewebview"/>
+        <category label="agerange" term="agerange"/>
+        <category label="playbilling" term="playbilling"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Brazil Digital ECA Support]]></title>
         <id>https://docs.airnativeextensions.com/news/2026/03/12/brazil-digital-eca-support</id>
@@ -1695,64 +1800,5 @@ You can do this via the adt <code>platformsdk</code> command line option:</p><di
         <category label="ios" term="ios"/>
         <category label="apple" term="apple"/>
         <category label="tips" term="tips"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[January 2023]]></title>
-        <id>https://docs.airnativeextensions.com/news/2023-01</id>
-        <link href="https://docs.airnativeextensions.com/news/2023-01"/>
-        <updated>2023-01-31T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Extension Updates]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>AIR SDK Manager, Adverts, Application Rater</p>
-</blockquote>
-<p>As the end of the year approaches we have been cleaning up a lot of the work we have done this year and starting to set out development goals for the first half of next year. As we enter into the final weeks of the year if there is anything in our extensions that you believe should have priority please let us know and we will be sure to schedule it for the beginning of the year.</p>
-<p>Importantly this month Harman have released a beta of the new <strong>AIR SDK Manager</strong>.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/adobeair-75ec23410377afde7761a5bb875e30e4.png" width="800" height="381" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="air-sdk-manager"><a href="https://github.com/airsdk/Adobe-Runtime-Support/discussions/2291" target="_blank" rel="noopener noreferrer" class="">AIR SDK Manager</a><a href="https://docs.airnativeextensions.com/news/2023-01#air-sdk-manager" class="hash-link" aria-label="Direct link to air-sdk-manager" title="Direct link to air-sdk-manager" translate="no">​</a></h3>
-<p>This is an application you can use to manage your AIR SDK installations and update them as new releases are available. Additionally you can configure your SDKs without having to manually edit the <code>adt.cfg</code> file and import a license file. This looks to be a great tool and we are excited to see how you find it.</p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>From Andrew at Harman</div><div class="admonitionContent_BuS1"><p>We would value any feedback/comments/ideas of how to improve this. The idea is that you can update SDK versions where there are bug fixes but then each feature-based update can be managed separately. It also allows you to sort out the configuration settings, hopefully meaning you no longer need to bother with adt.cfg files.</p></div></div>
-<p>We'd be particularly interested in hearing how you would integrate tools like this into your development process and how tools like <code>apm</code> could work alongside the AIR SDK Manager and your IDEs.</p>
-<p>For more information and giving feedback, see the  <a href="https://github.com/airsdk/Adobe-Runtime-Support/discussions/2291" target="_blank" rel="noopener noreferrer" class="">github discussion</a>.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/admob-4be0695a9eb26890b7f5fe015f1ab7d2.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="adverts"><a href="https://airnativeextensions.com/extension/com.distriqt.Adverts" target="_blank" rel="noopener noreferrer" class="">Adverts</a><a href="https://docs.airnativeextensions.com/news/2023-01#adverts" class="hash-link" aria-label="Direct link to adverts" title="Direct link to adverts" translate="no">​</a></h3>
-<p>We have released a few small fixes for the Adverts extension. Firstly resolving a long standing issue with server side verification options on rewarded video ads. Secondly some documentation updates reflecting Google's change from "funding choices" to "privacy and messaging" for the UMP consent dialog setup. And lastly an update to support the new App Set library, removing the usage of  the advertising identifier which can cause privacy concerns particularly in family and children targetted applications.</p>
-<p>If you wish to continue using UMP and the advertising identifiers we suggest you also install the IDFA extension. This will give you access to the tools to request access to the advertising identifier and install the required dependencies for it's usage.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/application-rater-ea1b7753aa3d7ba12132f451973d8e0c.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="application-rater"><a href="https://airnativeextensions.com/extension/com.distriqt.ApplicationRater" target="_blank" rel="noopener noreferrer" class="">Application Rater</a><a href="https://docs.airnativeextensions.com/news/2023-01#application-rater" class="hash-link" aria-label="Direct link to application-rater" title="Direct link to application-rater" translate="no">​</a></h3>
-<p>The Application Rater extension has been updated to support the Samsung Galaxy store.</p>
-<p>This means that it will now detect if your application was installed through the Galaxy store and correctly redirect to the rating page in the Galaxy store from the rating dialog.</p>
-<p>You can find more information about handling ratings from the different stores in the documentation on <a class="" href="https://docs.airnativeextensions.com/docs/applicationrater/handling-stores">Handling Stores</a></p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/playbilling-5e33a8c57cec02953c7c66fe705b5e5d.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappbilling"><a href="https://airnativeextensions.com/extension/com.distriqt.InAppBilling" target="_blank" rel="noopener noreferrer" class="">InAppBilling</a><a href="https://docs.airnativeextensions.com/news/2023-01#inappbilling" class="hash-link" aria-label="Direct link to inappbilling" title="Direct link to inappbilling" translate="no">​</a></h3>
-<p>With the latest update to v5 of the play billing library, several developers have noted that certain devices don't return a product list from the <code>getProducts()</code> call and instead get an error dispatched.</p>
-<p>The latest Play Billing library requires an updated version of the Play Store application to be installed on the device so you may want to check for the availability of this before attempting to retrieve the product list.</p>
-<p>We have added some helpers to check for the availability of the billing service on the current device and included a response that indicates if the store application needs updating:</p>
-<div class="language-actionscript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-actionscript codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token maybe-class-name">InAppBilling</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">service</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token method function property-access" style="color:rgb(130, 170, 255)">checkAvailability</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">        </span><span class="token keyword" style="font-style:italic">function</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"> availability</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token known-class-name class-name" style="color:rgb(255, 203, 107)">String</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token keyword" style="font-style:italic">void</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">            </span><span class="token keyword" style="font-style:italic">if</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">availability </span><span class="token operator" style="color:rgb(137, 221, 255)">==</span><span class="token plain"> </span><span class="token maybe-class-name">InAppBillingAvailability</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token constant" style="color:rgb(130, 170, 255)">STORE_UPGRADE_REQUIRED</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">            </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// An update for the play store application is required</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">            </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><br></span></code></pre></div></div>
-<p>For more information on the availabilty see the <a class="" href="https://docs.airnativeextensions.com/docs/inappbilling/billing-service#availability">documentation</a>.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/permissions-3665f49142185927c5372bb3f11b5589.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="permissions"><a href="https://airnativeextensions.com/extension/com.distriqt.Permissions" target="_blank" rel="noopener noreferrer" class="">Permissions</a><a href="https://docs.airnativeextensions.com/news/2023-01#permissions" class="hash-link" aria-label="Direct link to permissions" title="Direct link to permissions" translate="no">​</a></h3>
-<p>The permissions extension has had some updates to improve the <code>openDirectory()</code> functionality including returning an event on result (<code>PermissionsEvent.OPEN_DOCUMENT</code>) which contains the path the user selected.</p>
-<p>You can read more about this change <a class="" href="https://docs.airnativeextensions.com/docs/permissions/file-folder-access">here</a>.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/nativewebview-8c049cf5f87cfceb4d84befb9bf708db.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nativewebview"><a href="https://airnativeextensions.com/extension/com.distriqt.NativeWebView" target="_blank" rel="noopener noreferrer" class="">NativeWebView</a><a href="https://docs.airnativeextensions.com/news/2023-01#nativewebview" class="hash-link" aria-label="Direct link to nativewebview" title="Direct link to nativewebview" translate="no">​</a></h3>
-<p>Lastly this month we released a small update for the Native WebView extension to fix some focus issues on Android with the web view and the latest AIR SDK releases.</p>
-<p>If you are using this extension it is worth updating just to ensure the focus works correctly particularly if you are managing key inputs and overriding the back key operation on Android.</p>
-<hr>
-<p>As always, if you have any native development needs for AIR, Unity, Flutter or Haxe, please feel free to contact us at <a href="mailto:airnativeextensions@distriqt.com" target="_blank" rel="noopener noreferrer" class="">airnativeextensions@distriqt.com</a>.</p>]]></content>
-        <author>
-            <name>Michael</name>
-            <uri>https://github.com/marchbold</uri>
-        </author>
-        <category label="newsletter" term="newsletter"/>
-        <category label="airsdk" term="airsdk"/>
-        <category label="application-rater" term="application-rater"/>
-        <category label="adverts" term="adverts"/>
-        <category label="google-play-billing" term="google-play-billing"/>
     </entry>
 </feed>
