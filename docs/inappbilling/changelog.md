@@ -1,3 +1,9 @@
+### 2026.04.17 [v18.1.1]
+
+```
+fix(android,amazon): correct issue with restore purchases not triggering PURCHASES_UPDATED event (resolves https://github.com/airnativeextensions/ANE-InAppBilling/issues/676)
+```
+
 ### 2026.03.30 [v18.1.0]
 
 ```
