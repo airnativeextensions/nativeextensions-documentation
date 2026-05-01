@@ -2,12 +2,97 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2026-04-01T00:00:00.000Z</updated>
+    <updated>2026-05-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2026 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[May 2026]]></title>
+        <id>https://docs.airnativeextensions.com/news/2026-05</id>
+        <link href="https://docs.airnativeextensions.com/news/2026-05"/>
+        <updated>2026-05-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Extension Updates]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>April Release Update</p>
+</blockquote>
+<p>April included targeted fixes for billing flows and the release of a new Google Play extension focused on Play Integrity.</p>
+<p>Key focus:</p>
+<ul>
+<li class="">Fixing a restore purchases event issue affecting Android Amazon billing flows</li>
+<li class="">Launching the new GooglePlay extension with support for the Google Play Integrity API</li>
+<li class="">Preparing a major InAppBilling v19 beta with a StoreKit 2 migration path on Apple platforms</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Important Notice: InAppBilling StoreKit 2</div><div class="admonitionContent_BuS1"><p>A beta release of <strong>InAppBilling v19</strong> is now being prepared to migrate the existing Apple StoreKit integration to the latest <strong>StoreKit 2</strong> SDK.</p><p>This migration is a major platform update and has involved a <strong>complete rewrite</strong> of the existing Apple implementation.</p><p>StoreKit 2 will provide access to the latest functionality, including:</p><ul>
+<li class="">Ability to get purchases without using the app receipt directly</li>
+<li class="">Access to win-back offers</li>
+</ul><p>If you are willing to help test this beta release and provide feedback, please join the beta feedback channel:</p><ul>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-InAppBilling/issues/677" target="_blank" rel="noopener noreferrer" class="">InAppBilling v19 beta feedback</a></li>
+</ul></div></div>
+<p>Here's a quick overview of the latest extension updates:</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Extension Updates</div><div class="admonitionContent_BuS1"><ul>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-InAppBilling/releases/tag/v18.1.1" target="_blank" rel="noopener noreferrer" class="">InAppBilling v18.1.1</a> - Fix for Android Amazon restore purchases flow not triggering <code>PURCHASES_UPDATED</code></li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-GooglePlay/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer" class="">GooglePlay v1.2.0</a> - New extension exposing the Google Play Integrity API</li>
+</ul></div></div>
+<p>If you have any questions, we're here to help!</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/inappbilling-711a8c968ade9dc1d0241b4443f8289f.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappbilling"><a href="https://airnativeextensions.com/extension/com.distriqt.InAppBilling" target="_blank" rel="noopener noreferrer" class="">InAppBilling</a><a href="https://docs.airnativeextensions.com/news/2026-05#inappbilling" class="hash-link" aria-label="Direct link to inappbilling" title="Direct link to inappbilling" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-InAppBilling/releases/tag/v18.1.1" target="_blank" rel="noopener noreferrer" class="">v18.1.1</a></p>
+<p>This release corrects a restore purchases flow issue on Android Amazon.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://docs.airnativeextensions.com/news/2026-05#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Android Amazon: Fixed an issue where restore purchases did not trigger the <code>PURCHASES_UPDATED</code> event</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/google-2139fb34bc6120d0d9f76ae563b1fd35.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="googleplay"><a href="https://github.com/airnativeextensions/ANE-GooglePlay" target="_blank" rel="noopener noreferrer" class="">GooglePlay</a><a href="https://docs.airnativeextensions.com/news/2026-05#googleplay" class="hash-link" aria-label="Direct link to googleplay" title="Direct link to googleplay" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-GooglePlay/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer" class="">v1.2.0</a></p>
+<p>This release introduces a powerful new extension for the Google Play Integrity API, making it easier to protect high-value actions such as purchases, rewards, and account operations.</p>
+<p>This extension is free to use, so you can start integrating Integrity checks immediately.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="google-play-integrity-api">Google Play Integrity API<a href="https://docs.airnativeextensions.com/news/2026-05#google-play-integrity-api" class="hash-link" aria-label="Direct link to Google Play Integrity API" title="Direct link to Google Play Integrity API" translate="no">​</a></h4>
+<p>The Google Play Integrity API helps you verify that requests are coming from a genuine app install and trusted environment before you process sensitive actions. The recommended flow is to prepare the API once with your Google Cloud project number, request a standard token using a per-request hash, then send that token to your backend for validation. Standard requests are preferred for new integrations, with classic token requests still available for compatibility scenarios.</p>
+<p>Short example:</p>
+<div class="language-actionscript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-actionscript codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token keyword" style="font-style:italic">import</span><span class="token plain"> com</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">distriqt</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">extension</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">googleplay</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">integrity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access maybe-class-name">Integrity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token maybe-class-name">Integrity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">service</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token method function property-access" style="color:rgb(130, 170, 255)">prepareIntegrityToken</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token constant" style="color:rgb(130, 170, 255)">PROJECT_NUMBER</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">function</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token keyword" style="font-style:italic">void</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token maybe-class-name">Integrity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">service</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token method function property-access" style="color:rgb(130, 170, 255)">requestIntegrityToken</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">requestHash</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">function</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">token</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token known-class-name class-name" style="color:rgb(255, 203, 107)">String</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token keyword" style="font-style:italic">void</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// Send token to backend for verification</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><br></span></code></pre></div></div>
+<p>More information here: <a href="https://github.com/airnativeextensions/ANE-GooglePlay/wiki/Integrity" target="_blank" rel="noopener noreferrer" class="">https://github.com/airnativeextensions/ANE-GooglePlay/wiki/Integrity</a></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-1">Updates<a href="https://docs.airnativeextensions.com/news/2026-05#updates-1" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Android: Added support for Google Play Integrity API integration</li>
+<li class="">Android Library Versions:<!-- -->
+<ul>
+<li class=""><code>com.google.android.play.appupdate</code> v2.1.0</li>
+<li class=""><code>com.google.android.play.assetdelivery</code> v2.3.0</li>
+<li class=""><code>com.google.android.play.core</code> v2.0.4</li>
+<li class=""><code>com.google.android.play.featuredelivery</code> v2.1.0</li>
+<li class=""><code>com.google.android.play.integrity</code> v1.6.0</li>
+<li class=""><code>com.google.android.play.review</code> v2.0.2</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/adobeair-75ec23410377afde7761a5bb875e30e4.png" width="800" height="381" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-information">Further Information<a href="https://docs.airnativeextensions.com/news/2026-05#further-information" class="hash-link" aria-label="Direct link to Further Information" title="Direct link to Further Information" translate="no">​</a></h2>
+<p>As always, thank you for your continued support of distriqt and the AIR developer community.
+Your feedback and contributions help us keep these extensions up to date and running smoothly across platforms.</p>
+<ul>
+<li class="">For full documentation and setup guides, visit <a href="https://docs.airnativeextensions.com/" target="_blank" rel="noopener noreferrer" class="">docs.airnativeextensions.com</a></li>
+<li class="">Join the AIR community discussions and get support at <a href="https://github.com/airsdk/Adobe-Runtime-Support/" target="_blank" rel="noopener noreferrer" class="">github</a></li>
+<li class="">Publicly available extensions at <a href="https://github.com/airnativeextensions" target="_blank" rel="noopener noreferrer" class="">airnativeextensions</a></li>
+<li class=""><a href="https://github.com/sponsors/marchbold" target="_blank" rel="noopener noreferrer" class="">Support</a> my ongoing involvement in the community</li>
+</ul>
+<p>Stay tuned for more updates next month!</p>]]></content>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
+        <category label="newsletter" term="newsletter"/>
+        <category label="inappbilling" term="inappbilling"/>
+        <category label="googleplay" term="googleplay"/>
+        <category label="integrity" term="integrity"/>
+        <category label="storekit2" term="storekit2"/>
+        <category label="beta" term="beta"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[April 2026]]></title>
         <id>https://docs.airnativeextensions.com/news/2026-04</id>
@@ -1776,29 +1861,5 @@ You can do this via the adt <code>platformsdk</code> command line option:</p><di
         <category label="application-rater" term="application-rater"/>
         <category label="adverts" term="adverts"/>
         <category label="google-play-billing" term="google-play-billing"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Game Center requirements]]></title>
-        <id>https://docs.airnativeextensions.com/news/2023/08/25/game-center-entitlement</id>
-        <link href="https://docs.airnativeextensions.com/news/2023/08/25/game-center-entitlement"/>
-        <updated>2023-08-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Upcoming Game Center entitlement requirement]]></summary>
-        <content type="html"><![CDATA[<p>If you are publishing games to the AppStore for iOS you may have recently received an notification along the following lines:</p>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Upcoming Game Center entitlement requirement</div><div class="admonitionContent_BuS1"><p>Starting August 16, 2023, new apps and app updates that offer Game Center features need to include the Game Center entitlement and have Game Center features configured in App Store Connect before you can submit them to the App Store. Existing apps on the App Store are not affected by this new requirement.</p><p>We noticed that although the apps listed below have Game Center features configured in App Store Connect, their latest binary delivery doesn’t include the Game Center entitlement. In your next app update, please update your binary to include the entitlement.</p></div></div>
-<p>There are two important things you need to do to your application in order to meet this new requirement.</p>
-<p>Firstly, make sure the capability is enabled in "Certificates, Identifiers &amp; Profiles" for your application in the developer portal. Then update and download your provisioning profiles to ensure they are updated with the new capability.</p>
-<p>Then in your application descriptor you will need to add the entitlement. If you are using <code>apm</code> just ensure you are using the latest version and then generate your app descriiptor, <code>apm</code> will ensure the entitlement is correctly added.</p>
-<p>If you are manually managing your app descriptor additions then you will need to add the following to the <code>Entitlements</code> node under <code>iPhone</code>:</p>
-<div class="language-xml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-xml codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;</span><span class="token tag" style="color:rgb(255, 85, 114)">iPhone</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">	</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;</span><span class="token tag" style="color:rgb(255, 85, 114)">Entitlements</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&gt;</span><span class="token cdata">&lt;![CDATA[</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token cdata">	</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token cdata">		&lt;key&gt;com.apple.developer.game-center&lt;/key&gt;</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token cdata">		&lt;true/&gt;</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token cdata">		</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token cdata">	]]&gt;</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;/</span><span class="token tag" style="color:rgb(255, 85, 114)">Entitlements</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;/</span><span class="token tag" style="color:rgb(255, 85, 114)">iPhone</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&gt;</span><br></span></code></pre></div></div>
-<p>Once you have followed these steps your application will support this new requirement and you will be able to submit your application to the AppStore.</p>]]></content>
-        <author>
-            <name>Michael</name>
-            <uri>https://github.com/marchbold</uri>
-        </author>
-        <category label="gamecenter" term="gamecenter"/>
-        <category label="game-services" term="game-services"/>
-        <category label="ios" term="ios"/>
-        <category label="apple" term="apple"/>
-        <category label="tips" term="tips"/>
     </entry>
 </feed>
