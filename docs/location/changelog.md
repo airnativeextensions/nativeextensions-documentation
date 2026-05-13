@@ -1,3 +1,19 @@
+### 2026.05.13 [v7.0.0]
+
+```
+## Major Update 
+
+This version adds the Windows implementation for location updates, geocoding utils, and distance utils. Geofences are not supported in this release.
+
+Note: Geocoding requires an Azure Maps token. See the Geocoder.setServiceToken() method documentation for details.
+
+### Updates 
+
+feat(windows): add location updates support (resolves https://github.com/airnativeextensions/ANE-Location/issues/75)
+feat(windows): add geocoding utils support
+feat(windows): add distance utils support
+```
+
 ### 2025.09.24 [v6.1.0]
 
 ```

@@ -27,6 +27,34 @@ if (Location.service.geocoder.isSupported)
 If geocoding returns false you should not expect any of the other functionality of the Geocoder implementation to function.
 
 
+### Windows 
+
+Windows geocoding uses the Azure Maps service and requires you to set the service authentication token before making requests.
+
+Set the Azure Maps subscription key before using geocoding:
+
+```actionscript
+// Set Azure Maps subscription key before using geocoding
+Location.service.geocoder.setServiceToken("YOUR_AZURE_MAPS_SUBSCRIPTION_KEY");
+```
+
+For Windows (Azure Maps):
+
+- Sign in to the Azure Portal: https://portal.azure.com/
+- Click "Create a resource" and search for "Azure Maps"
+- Create an Azure Maps account and choose either Gen2 or Gen1 S0 for the free tier
+- Once deployed, go to the resource
+- In the left menu, click "Authentication" under Settings
+- Copy the Primary Key. This is your subscription key
+
+:::info Pricing
+At the time of publishing:
+- Free tier (Gen1 S0) includes 250,000 transactions/month. 
+- Gen2 pay-as-you-go includes 1,000 free transactions/month, then around $0.50 per 1,000 transactions.
+
+Please confirm the details when enabling maps to make sure it suits your requirements.
+:::
+
 
 ## Reverse Geocoding
 
@@ -112,3 +140,5 @@ function completeHandler( event:GeocoderEvent ):void
     }
 }
 ```
+
+
