@@ -43,6 +43,7 @@ module.exports = {
         { type: "ref", id: "flurry/index" },
         { type: "ref", id: "forcetouch/index" },
 
+        { type: "ref", id: "gameanalytics/index" },
         { type: "ref", id: "gameservices/index" },
         { type: "ref", id: "googleanalytics/index" },
         { type: "ref", id: "googleidentity/index" },
@@ -182,7 +183,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Adverts/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Adverts/issues/new",
         },
       ],
     },
@@ -206,7 +207,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-AgeRange/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-AgeRange/issues/new",
         },
       ],
     },
@@ -232,7 +233,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-AppConfig/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-AppConfig/issues/new",
         },
       ],
     },
@@ -270,7 +271,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-AppGroupDefaults/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-AppGroupDefaults/issues/new",
         },
       ],
     },
@@ -303,7 +304,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-AppleSignIn/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-AppleSignIn/issues/new",
         },
       ],
     },
@@ -372,7 +373,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Application/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Application/issues/new",
         },
       ],
     },
@@ -415,7 +416,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-ApplicationRater/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-ApplicationRater/issues/new",
         },
       ],
     },
@@ -453,7 +454,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-AppLovinSDK/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-AppLovinSDK/issues/new",
         },
       ],
     },
@@ -477,7 +478,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-Audiomob/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Audiomob/issues/new",
         },
       ],
     },
@@ -509,7 +510,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-AudioRecorder/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-AudioRecorder/issues/new",
         },
       ],
     },
@@ -535,7 +536,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Battery/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Battery/issues/new",
         },
       ],
     },
@@ -575,7 +576,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Beacon/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Beacon/issues/new",
         },
       ],
     },
@@ -604,7 +605,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Bluetooth/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Bluetooth/issues/new",
         },
       ],
     },
@@ -644,7 +645,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-BluetoothLE/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-BluetoothLE/issues/new",
         },
       ],
     },
@@ -680,7 +681,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "https://github.com/distriqt/ANE-BranchIO/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-BranchIO/issues/new",
         },
       ],
     },
@@ -782,7 +783,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Calendar/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Calendar/issues/new",
         },
       ],
     },
@@ -824,7 +825,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Camera/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Camera/issues/new",
         },
       ],
     },
@@ -866,7 +867,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-CameraRollExtended/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-CameraRollExtended/issues/new",
         },
       ],
     },
@@ -901,7 +902,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-CameraUI/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-CameraUI/issues/new",
         },
       ],
     },
@@ -935,7 +936,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-Chartboost/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Chartboost/issues/new",
         },
       ],
     },
@@ -968,7 +969,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-CloudStorage/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-CloudStorage/issues/new",
         },
       ],
     },
@@ -998,7 +999,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Compass/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Compass/issues/new",
         },
       ],
     },
@@ -1036,7 +1037,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Contacts/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Contacts/issues/new",
         },
       ],
     },
@@ -1060,7 +1061,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Debug/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Debug/issues/new",
         },
       ],
     },
@@ -1118,7 +1119,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-DeviceMotion/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-DeviceMotion/issues/new",
         },
       ],
     },
@@ -1163,7 +1164,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Dialog/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Dialog/issues/new",
         },
       ],
     },
@@ -1198,7 +1199,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-Display/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Display/issues/new",
         },
       ],
     },
@@ -1228,7 +1229,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-DyanmicIcon/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-DyanmicIcon/issues/new",
         },
       ],
     },
@@ -1250,7 +1251,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Exceptions/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Exceptions/issues/new",
         },
       ],
     },
@@ -1298,7 +1299,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-ExpansionFiles/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-ExpansionFiles/issues/new",
         },
       ],
     },
@@ -1383,7 +1384,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-FacebookAPI/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-FacebookAPI/issues/new",
         },
       ],
     },
@@ -1469,7 +1470,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-FacebookAPI/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-FacebookAPI/issues/new",
         },
       ],
     },
@@ -1715,7 +1716,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Firebase/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Firebase/issues/new",
         },
       ],
     },
@@ -1752,7 +1753,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Flurry/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Flurry/issues/new",
         },
       ],
     },
@@ -1778,7 +1779,36 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-ForceTouch/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-ForceTouch/issues/new",
+        },
+      ],
+    },
+  ],
+
+
+  gameanalytics: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "gameanalytics/index" },
+    {
+      Usage: [
+        "gameanalytics/add-the-extension",
+        "gameanalytics/setup",
+        "gameanalytics/event-tracking",
+        "gameanalytics/game-ops",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "gameanalytics/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/gameanalytics/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "https://github.com/airnativeextensions/ANE-GameAnalytics/issues/new",
         },
       ],
     },
@@ -1864,7 +1894,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-GameServices/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-GameServices/issues/new",
         },
       ],
     },
@@ -1903,7 +1933,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-GoogleAnalytics/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-GoogleAnalytics/issues/new",
         },
       ],
     },
@@ -1955,7 +1985,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-GoogleIdentity/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-GoogleIdentity/issues/new",
         },
       ],
     },
@@ -1984,7 +2014,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-GoogleTagManager/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-GoogleTagManager/issues/new",
         },
         {
           Legacy: [
@@ -2012,7 +2042,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Gyroscope/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Gyroscope/issues/new",
         },
       ],
     },
@@ -2043,7 +2073,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Health/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Health/issues/new",
         },
       ],
     },
@@ -2075,7 +2105,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-IDFA/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-IDFA/issues/new",
         },
       ],
     },
@@ -2117,7 +2147,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Image/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Image/issues/new",
         },
       ],
     },
@@ -2231,7 +2261,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-InAppBilling/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-InAppBilling/issues/new",
         },
       ],
     },
@@ -2254,7 +2284,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-InAppUpdates/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-InAppUpdates/issues/new",
         },
       ],
     },
@@ -2311,7 +2341,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-IronSource/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-IronSource/issues/new",
         },
       ],
     },
@@ -2333,7 +2363,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-JobScheduler/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-JobScheduler/issues/new",
         },
       ],
     },
@@ -2362,7 +2392,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-LocalAuth/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-LocalAuth/issues/new",
         },
       ],
     },
@@ -2407,7 +2437,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Location/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Location/issues/new",
         },
       ],
     },
@@ -2459,7 +2489,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-MediaPlayer/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-MediaPlayer/issues/new",
         },
       ],
     },
@@ -2481,7 +2511,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Memory/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Memory/issues/new",
         },
       ],
     },
@@ -2510,7 +2540,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Message/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Message/issues/new",
         },
       ],
     },
@@ -2564,7 +2594,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-NativeMaps/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-NativeMaps/issues/new",
         },
       ],
     },
@@ -2590,7 +2620,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-NativeText/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-NativeText/issues/new",
         },
       ],
     },
@@ -2638,7 +2668,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-NativeWebView/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-NativeWebView/issues/new",
         },
       ],
     },
@@ -2664,7 +2694,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-NetworkInfo/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-NetworkInfo/issues/new",
         },
       ],
     },
@@ -2690,7 +2720,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-NFC/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-NFC/issues/new",
         },
       ],
     },
@@ -2743,7 +2773,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Notifications/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Notifications/issues/new",
         },
       ],
     },
@@ -2772,7 +2802,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-OCR/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-OCR/issues/new",
         },
       ],
     },
@@ -2798,7 +2828,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-OdeeoSDK/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-OdeeoSDK/issues/new",
         },
       ],
     },
@@ -2831,7 +2861,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-PackageManager/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-PackageManager/issues/new",
         },
       ],
     },
@@ -2860,7 +2890,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-PDFReader/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-PDFReader/issues/new",
         },
       ],
     },
@@ -2901,7 +2931,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Permissions/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Permissions/issues/new",
         },
       ],
     },
@@ -3012,7 +3042,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-PushNotifications/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-PushNotifications/issues/new",
         },
       ],
     },
@@ -3034,7 +3064,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-RestartApp/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-RestartApp/issues/new",
         },
       ],
     },
@@ -3072,7 +3102,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-RevenueCat/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-RevenueCat/issues/new",
         },
       ],
     },
@@ -3094,7 +3124,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-RootChecker/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-RootChecker/issues/new",
         },
       ],
     },
@@ -3132,7 +3162,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Scanner/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Scanner/issues/new",
         },
       ],
     },
@@ -3158,7 +3188,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-SensorManager/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-SensorManager/issues/new",
         },
       ],
     },
@@ -3208,7 +3238,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Share/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Share/issues/new",
         },
       ],
     },
@@ -3234,7 +3264,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-Singular/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Singular/issues/new",
         },
       ],
     },
@@ -3263,7 +3293,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-Speech/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Speech/issues/new",
         },
       ],
     },
@@ -3293,7 +3323,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-SystemGestures/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-SystemGestures/issues/new",
         },
       ],
     },
@@ -3330,7 +3360,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/airnativeextensions/ANE-SystemInfo/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-SystemInfo/issues/new",
         },
       ],
     },
@@ -3361,7 +3391,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-UnityAds/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-UnityAds/issues/new",
         },
       ],
     },
@@ -3397,7 +3427,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Vibration/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Vibration/issues/new",
         },
       ],
     },
@@ -3427,7 +3457,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-Volume/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-Volume/issues/new",
         },
       ],
     },
@@ -3457,7 +3487,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-WebP/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-WebP/issues/new",
         },
       ],
     },
@@ -3498,7 +3528,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-WindowsStore/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-WindowsStore/issues/new",
         },
       ],
     },
@@ -3524,7 +3554,7 @@ module.exports = {
         {
           type: "link",
           label: "Contact Support",
-          href: "http://github.com/distriqt/ANE-ZipUtils/issues/new",
+          href: "https://github.com/airnativeextensions/ANE-ZipUtils/issues/new",
         },
       ],
     },
