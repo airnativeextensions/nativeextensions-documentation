@@ -1,3 +1,13 @@
+### 2026.05.20 [v7.1.0]
+
+```
+This update improves the extension implementation on android adding compatibility with the `runtimeInBackgroundThread` allowing the AIR runtime to run in a background thread which can improve performance of an AIR Android application.
+
+### Updates
+
+feat(android): handle map implementation when air runtime in a background thread (resolves https://github.com/airnativeextensions/ANE-NativeMaps/issues/236)
+```
+
 ### 2025.08.26 [v7.0.0]
 
 ```
