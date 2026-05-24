@@ -1,3 +1,39 @@
+### 2026.05.25 [v7.1.0]
+
+```
+This update adds two major features to document storage:
+- document metadata (including download and upload status)
+- storage full events 
+
+
+Document metadata (`Document.metadata`) includes a range of status information for the file, for example:
+
+```json
+{ 
+    "downloadStatus": "current",
+    "isDownloaded": true,
+    "isStorageFull": true 
+}
+```
+
+Storage full notifications can be handled through the `DocumentStoreEvent.ERROR` event:
+
+```actionscript
+CloudStorage.service.documentStore.addEventListener( DocumentStoreEvent.ERROR, ds_errorHandler );
+
+function ds_errorHandler( event:DocumentStoreEvent ):void
+{
+	trace( "ds_errorHandler: " + event.error + " [" + event.errorCode + "]" + (event.errorDomain != null && event.errorDomain.length > 0 ? " {" + event.errorDomain + "}" : "") );
+}
+```
+
+### Updates
+
+feat(ios): add processing of document metadata and return with document events
+feat(ios): add storage full handling when local saving succeeds but save to cloud fails (resolves https://github.com/airnativeextensions/ANE-CloudStorage/issues/16)
+feat(ios): add general error event when cloud storage is full (resolves https://github.com/airnativeextensions/ANE-CloudStorage/issues/15)
+```
+
 ### 2024.12.12 [v7.0.0]
 
 ```

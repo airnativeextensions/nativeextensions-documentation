@@ -116,6 +116,19 @@ if (CloudStorage.service.documentStore.isAvailable)
 ```
 
 
+## Metadata
+
+Each document will have a set of metadata attached which will include status information about the document, for example:
+
+```json
+{ 
+    "downloadStatus": "current",
+    "isDownloaded": true,
+    "isStorageFull": true 
+}
+```
+
+You can use this information as you require. 
 
 
 
@@ -297,3 +310,23 @@ private function ds_conflictHandler( event:DocumentStoreEvent ):void
 ```
 
 > **You should not use this in production! We just are using this to demonstrate the function calls.**
+
+
+
+## Storage Full
+
+A document may successfully save to the local storage but fail to be uploaded. In these cases you will likely receive an error event separate of the save success. 
+
+Storage full notifications can be handled through the `DocumentStoreEvent.ERROR` event:
+
+```actionscript
+CloudStorage.service.documentStore.addEventListener( DocumentStoreEvent.ERROR, ds_errorHandler );
+
+function ds_errorHandler( event:DocumentStoreEvent ):void
+{
+	trace( "ds_errorHandler: " + event.error + " [" + event.errorCode + "]" + (event.errorDomain != null && event.errorDomain.length > 0 ? " {" + event.errorDomain + "}" : "") );
+}
+```
+
+When you receive this event you should inform your user of the failure (though there likely will be a system notification as well so just in app information is generally enough).
+
