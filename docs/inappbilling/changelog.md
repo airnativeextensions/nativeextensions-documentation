@@ -1,3 +1,15 @@
+### 2026.05.28 [v18.1.2]
+
+```
+fix(docs): correct minimum android sdk version (resolves https://github.com/airnativeextensions/ANE-InAppBilling/issues/678)
+```
+
+### 2026.05.28 [v18.1.2]
+
+```
+fix(docs): correct minimum android sdk version (resolves https://github.com/airnativeextensions/ANE-InAppBilling/issues/678)
+```
+
 ### 2026.04.17 [v18.1.1]
 
 ```
