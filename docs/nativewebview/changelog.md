@@ -1,3 +1,29 @@
+### 2026.06.01 [v9.0.1]
+
+```
+This release brings some updates to the windows implementation including an update to the chromium version and resolving some missing features with cache and cookie clearing. 
+
+
+### Updates 
+
+feat(windows): update remove all cookies functionality to better handle each webview request context (resolves https://github.com/airnativeextensions/ANE-NativeWebView/issues/358)
+feat(windows): implement clear cache functionality (resolves https://github.com/airnativeextensions/ANE-NativeWebView/issues/357)
+feat(windows): update chromium version to 147.0.10
+```
+
+### 2026.06.01 [v9.0.1]
+
+```
+This release brings some updates to the windows implementation including an update to the chromium version and resolving some missing features with cache and cookie clearing. 
+
+
+### Updates 
+
+feat(windows): update remove all cookies functionality to better handle each webview request context (resolves https://github.com/airnativeextensions/ANE-NativeWebView/issues/358)
+feat(windows): implement clear cache functionality (resolves https://github.com/airnativeextensions/ANE-NativeWebView/issues/357)
+feat(windows): update chromium version to 147.0.10
+```
+
 ### 2026.03.06 [v8.0.5]
 
 ```
