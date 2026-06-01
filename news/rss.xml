@@ -4,11 +4,118 @@
         <title>air native extensions Blog</title>
         <link>https://docs.airnativeextensions.com/news</link>
         <description>air native extensions Blog</description>
-        <lastBuildDate>Fri, 01 May 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Jun 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2026 distriqt Pty Ltd</copyright>
+        <item>
+            <title><![CDATA[June 2026]]></title>
+            <link>https://docs.airnativeextensions.com/news/2026-06</link>
+            <guid>https://docs.airnativeextensions.com/news/2026-06</guid>
+            <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Extension Updates]]></description>
+            <content:encoded><![CDATA[<blockquote>
+<p>May brought platform expansion and new feature releases</p>
+</blockquote>
+<p>May includes major platform updates, performance improvements, and the launch of a new analytics extension.</p>
+<p>Key focus:</p>
+<ul>
+<li class="">Windows platform support added to Location extension with geocoding and distance utilities</li>
+<li class="">Performance improvements for Android with background thread compatibility in NativeMaps</li>
+<li class="">New storage features in CloudStorage with document metadata and error handling</li>
+<li class="">Launch of GameAnalytics extension for in-game analytics</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Important Notice: Location v7.0.0 Windows Geocoding</div><div class="admonitionContent_BuS1"><p>The new Windows implementation for Location v7.0.0 includes geocoding support, which requires an Azure Maps token.</p><p>To use geocoding features on Windows, you'll need to set your Azure Maps service token:</p><ul>
+<li class="">See the <a href="https://docs.airnativeextensions.com/docs/location/geocoding" target="_blank" rel="noopener noreferrer" class="">Geocoder.setServiceToken()</a> method documentation for setup details</li>
+<li class="">Visit <a href="https://docs.microsoft.com/en-us/azure/azure-maps/" target="_blank" rel="noopener noreferrer" class="">Azure Maps documentation</a> for token generation</li>
+</ul></div></div>
+<p>Here's a quick overview of the latest extension updates:</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Extension Updates</div><div class="admonitionContent_BuS1"><ul>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-Location/releases/tag/v7.0.0" target="_blank" rel="noopener noreferrer" class="">Location v7.0.0</a> - Major update adding Windows implementation with location updates, geocoding, and distance utilities</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-CloudStorage/releases/tag/v7.1.0" target="_blank" rel="noopener noreferrer" class="">CloudStorage v7.1.0</a> - Document metadata and storage full event handling</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-NativeMaps/releases/tag/v7.1.0" target="_blank" rel="noopener noreferrer" class="">NativeMaps v7.1.0</a> - Background thread compatibility for improved Android performance</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-GameAnalytics/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer" class="">GameAnalytics v1.0.0</a> - Initial release of game analytics extension</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-InAppBilling/releases/tag/v18.1.2" target="_blank" rel="noopener noreferrer" class="">InAppBilling v18.1.2</a> - Documentation and stability updates</li>
+</ul></div></div>
+<p>If you have any questions, we're here to help!</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/location-867b2e60353457c485778e2780f503dc.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="location"><a href="https://airnativeextensions.com/extension/com.distriqt.Location" target="_blank" rel="noopener noreferrer" class="">Location</a><a href="https://docs.airnativeextensions.com/news/2026-06#location" class="hash-link" aria-label="Direct link to location" title="Direct link to location" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-Location/releases/tag/v7.0.0" target="_blank" rel="noopener noreferrer" class="">v7.0.0</a></p>
+<p>Major update adding full Windows platform support with location updates, geocoding utilities, and distance calculations. Geofences are not supported in this release.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://docs.airnativeextensions.com/news/2026-06#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Windows: Added location updates support</li>
+<li class="">Windows: Added geocoding utilities support (requires Azure Maps token)</li>
+<li class="">Windows: Added distance utilities support</li>
+<li class="">Android Library: Updated to v21.3.0</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/cloudstorage-e9b406676e0dba81fad960d75ea8555e.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cloudstorage"><a href="https://airnativeextensions.com/extension/com.distriqt.CloudStorage" target="_blank" rel="noopener noreferrer" class="">CloudStorage</a><a href="https://docs.airnativeextensions.com/news/2026-06#cloudstorage" class="hash-link" aria-label="Direct link to cloudstorage" title="Direct link to cloudstorage" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-CloudStorage/releases/tag/v7.1.0" target="_blank" rel="noopener noreferrer" class="">v7.1.0</a></p>
+<p>Enhanced document storage with metadata tracking and improved error handling for storage full conditions.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-1">Updates<a href="https://docs.airnativeextensions.com/news/2026-06#updates-1" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">iOS: Added document metadata processing (download status, storage status)</li>
+<li class="">iOS: Added storage full event handling</li>
+<li class="">Improved error reporting when cloud storage is full</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="code-example">Code Example<a href="https://docs.airnativeextensions.com/news/2026-06#code-example" class="hash-link" aria-label="Direct link to Code Example" title="Direct link to Code Example" translate="no">​</a></h4>
+<p>Handle storage-full errors from the document store:</p>
+<div class="language-actionscript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-actionscript codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token keyword" style="font-style:italic">import</span><span class="token plain"> com</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">distriqt</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">extension</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">cloudstorage</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access maybe-class-name">CloudStorage</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">import</span><span class="token plain"> com</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">distriqt</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">extension</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">cloudstorage</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">events</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access maybe-class-name">DocumentStoreEvent</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token maybe-class-name">CloudStorage</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">service</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">documentStore</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token method function property-access" style="color:rgb(130, 170, 255)">addEventListener</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"> </span><span class="token maybe-class-name">DocumentStoreEvent</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token constant" style="color:rgb(130, 170, 255)">ERROR</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> onStoreError </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">function</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">onStoreError</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"> event</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token maybe-class-name">DocumentStoreEvent</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token keyword" style="font-style:italic">void</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token keyword" style="font-style:italic">if</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">event</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">errorCode</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">==</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">"STORAGE_FULL"</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">        </span><span class="token function" style="color:rgb(130, 170, 255)">trace</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">"Cloud storage is full"</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><br></span></code></pre></div></div>
+<p>More information: <a href="https://docs.airnativeextensions.com/docs/cloudstorage/" target="_blank" rel="noopener noreferrer" class="">CloudStorage Documentation</a></p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/nativemaps-61049ac640ffac2cb0720d69ccd14141.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nativemaps"><a href="https://airnativeextensions.com/extension/com.distriqt.NativeMaps" target="_blank" rel="noopener noreferrer" class="">NativeMaps</a><a href="https://docs.airnativeextensions.com/news/2026-06#nativemaps" class="hash-link" aria-label="Direct link to nativemaps" title="Direct link to nativemaps" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-NativeMaps/releases/tag/v7.1.0" target="_blank" rel="noopener noreferrer" class="">v7.1.0</a></p>
+<p>Performance improvements for Android applications, with full compatibility for the AIR runtime background thread execution mode.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-2">Updates<a href="https://docs.airnativeextensions.com/news/2026-06#updates-2" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Android: Added support for <code>runtimeInBackgroundThread</code> compatibility</li>
+<li class="">Improved map implementation for better performance in background thread scenarios</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/gameanalytics-0d49e40df723a483e1f134e1b7b197d2.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gameanalytics"><a href="https://github.com/airnativeextensions/ANE-GameAnalytics" target="_blank" rel="noopener noreferrer" class="">GameAnalytics</a><a href="https://docs.airnativeextensions.com/news/2026-06#gameanalytics" class="hash-link" aria-label="Direct link to gameanalytics" title="Direct link to gameanalytics" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-GameAnalytics/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer" class="">v1.0.0</a></p>
+<p>Initial release of the GameAnalytics extension, enabling in-game analytics and player insights for your AIR games.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-3">Updates<a href="https://docs.airnativeextensions.com/news/2026-06#updates-3" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Android: GameAnalytics SDK v7.0.0</li>
+<li class="">iOS: GameAnalytics SDK v5.0.1</li>
+<li class="">Full event tracking and analytics support</li>
+</ul>
+<p>More information: <a href="https://github.com/airnativeextensions/ANE-GameAnalytics/wiki" target="_blank" rel="noopener noreferrer" class="">GameAnalytics Documentation</a></p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/inappbilling-711a8c968ade9dc1d0241b4443f8289f.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappbilling"><a href="https://airnativeextensions.com/extension/com.distriqt.InAppBilling" target="_blank" rel="noopener noreferrer" class="">InAppBilling</a><a href="https://docs.airnativeextensions.com/news/2026-06#inappbilling" class="hash-link" aria-label="Direct link to inappbilling" title="Direct link to inappbilling" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-InAppBilling/releases/tag/v18.1.2" target="_blank" rel="noopener noreferrer" class="">v18.1.2</a></p>
+<p>Documentation and stability update correcting minimum Android SDK version specifications.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-4">Updates<a href="https://docs.airnativeextensions.com/news/2026-06#updates-4" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Corrected minimum Android SDK version documentation</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/adobeair-75ec23410377afde7761a5bb875e30e4.png" width="800" height="381" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-information">Further Information<a href="https://docs.airnativeextensions.com/news/2026-06#further-information" class="hash-link" aria-label="Direct link to Further Information" title="Direct link to Further Information" translate="no">​</a></h2>
+<p>As always, thank you for your continued support of distriqt and the AIR developer community.
+Your feedback and contributions help us keep these extensions up to date and running smoothly across platforms.</p>
+<ul>
+<li class="">For full documentation and setup guides, visit <a href="https://docs.airnativeextensions.com/" target="_blank" rel="noopener noreferrer" class="">docs.airnativeextensions.com</a></li>
+<li class="">Join the AIR community discussions and get support at <a href="https://github.com/airsdk/Adobe-Runtime-Support/" target="_blank" rel="noopener noreferrer" class="">github</a></li>
+<li class="">Publicly available extensions at <a href="https://github.com/airnativeextensions" target="_blank" rel="noopener noreferrer" class="">airnativeextensions</a></li>
+<li class=""><a href="https://github.com/sponsors/marchbold" target="_blank" rel="noopener noreferrer" class="">Support</a> my ongoing involvement in the community</li>
+</ul>
+<p>Stay tuned for more updates next month!</p>]]></content:encoded>
+            <category>newsletter</category>
+            <category>inappbilling</category>
+            <category>nativemaps</category>
+            <category>location</category>
+            <category>cloudstorage</category>
+            <category>gameanalytics</category>
+        </item>
         <item>
             <title><![CDATA[May 2026]]></title>
             <link>https://docs.airnativeextensions.com/news/2026-05</link>
@@ -1701,87 +1808,6 @@ You can do this via the adt <code>platformsdk</code> command line option:</p><di
             <category>delayload</category>
             <category>airsdk</category>
             <category>tips</category>
-        </item>
-        <item>
-            <title><![CDATA[November 2023]]></title>
-            <link>https://docs.airnativeextensions.com/news/2023-11</link>
-            <guid>https://docs.airnativeextensions.com/news/2023-11</guid>
-            <pubDate>Thu, 30 Nov 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[Extension Updates]]></description>
-            <content:encoded><![CDATA[<blockquote>
-<p>ANE updates, AIR SDK Manager</p>
-</blockquote>
-<p>This year has been remarkably busy and unfortunately news updates were pushed down the list, but as the year comes to a close I'd like to update on what we see as the major native extension news over the past months.</p>
-<p>Major changes across all our extensions include:</p>
-<ul>
-<li class="">iOS/macOS Xcode 14 update that required removal of bitcode support and increasing the minimum sdk to 12;</li>
-<li class="">Android permissions overhaul for new Android 33+ requirements;</li>
-<li class="">Android compatibility when running AIR in a background thread;</li>
-<li class="">Apple Silicon support for our macOS extensions;</li>
-</ul>
-<p>We have several major projects in the works including:</p>
-<ul>
-<li class="">Scanner rewrite away from the deprecated library currently in use;</li>
-<li class="">Migration to gradle dependencies in all our dependency extensions;</li>
-<li class="">apm integration with IDEs;</li>
-</ul>
-<p>Some of the key recent changes are listed below.</p>
-<p>Looking forward to another year of amazing AIR development!</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/contacts-9cc4554d4eade10e27472eaa7e11401c.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="contacts"><a href="https://airnativeextensions.com/extension/com.distriqt.Contacts" target="_blank" rel="noopener noreferrer" class="">Contacts</a><a href="https://docs.airnativeextensions.com/news/2023-11#contacts" class="hash-link" aria-label="Direct link to contacts" title="Direct link to contacts" translate="no">​</a></h3>
-<p>A complete rewrite of the iOS implementation of the Contacts extension brings the latest functionality from iOS using the newer Contacts framework.</p>
-<p>This update should vastly improve performance of contact retrieval and ensures support on the latest versions of iOS.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/gameservices-af405259246ac56d9517eecf9e667054.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="game-services"><a href="https://airnativeextensions.com/extension/com.distriqt.GameServices" target="_blank" rel="noopener noreferrer" class="">Game Services</a><a href="https://docs.airnativeextensions.com/news/2023-11#game-services" class="hash-link" aria-label="Direct link to game-services" title="Direct link to game-services" translate="no">​</a></h3>
-<p>We added support to the Game Services extension for Huawei Game Service v6.10. This extension now gives you access to the major mobile game services:</p>
-<ul>
-<li class="">Apple Game Center (iOS/macOS)</li>
-<li class="">Play Games (Android)</li>
-<li class="">Huawei Game Services (Android)</li>
-</ul>
-<p>Additionally we have a major project underway with this extension to update the Play Games implementation to use the newer "Play Games v2" library.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/playbilling-5e33a8c57cec02953c7c66fe705b5e5d.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappbilling"><a href="https://airnativeextensions.com/extension/com.distriqt.InAppBilling" target="_blank" rel="noopener noreferrer" class="">InAppBilling</a><a href="https://docs.airnativeextensions.com/news/2023-11#inappbilling" class="hash-link" aria-label="Direct link to inappbilling" title="Direct link to inappbilling" translate="no">​</a></h3>
-<p>All the SDKs have been updated to the latest releases including:</p>
-<ul>
-<li class="">Google Play billing library to version 6;</li>
-<li class="">Amazon to version 3 (including addition of promotions, offers and free trials);</li>
-<li class="">Huawei v6.10</li>
-</ul>
-<p>The latest Play Billing library requires an updated version of the Play Store application to be installed on the device so you may want to check for the availability of this before attempting to retrieve the product list. As part of the updates this year we also added an automatic fallback to the older implementation of products / purchases for Google Play Billing in order to keep supporting devices that haven't updated the Play Store application.</p>
-<p>A range of bug fixes including:</p>
-<ul>
-<li class="">correct issue with no event after ui cancelled by user;</li>
-<li class="">correct pending purchase list after purchase consumption;</li>
-<li class="">correctly supply subscription offer for new purchase;</li>
-</ul>
-<p>We also have a major project underway with this extension to provide a simplified "inventory" management wrapper which should handle a lot of the complexities of making purchases. This will be an open source project utilising the extension. We hope to release more on this in the new year.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/permissions-3665f49142185927c5372bb3f11b5589.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="permissions"><a href="https://airnativeextensions.com/extension/com.distriqt.Permissions" target="_blank" rel="noopener noreferrer" class="">Permissions</a><a href="https://docs.airnativeextensions.com/news/2023-11#permissions" class="hash-link" aria-label="Direct link to permissions" title="Direct link to permissions" translate="no">​</a></h3>
-<p>The permissions extension has had some major updates. We found the latest updates to Android had broken the usage of this extension so we completely rewrote the authorisation process to better handle the transition through "not determined", "should explain" and then "denied". We have also added callbacks on several of the permission request processes to make handling permissions in your application much simpler.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/nativewebview-8c049cf5f87cfceb4d84befb9bf708db.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nativewebview"><a href="https://airnativeextensions.com/extension/com.distriqt.NativeWebView" target="_blank" rel="noopener noreferrer" class="">NativeWebView</a><a href="https://docs.airnativeextensions.com/news/2023-11#nativewebview" class="hash-link" aria-label="Direct link to nativewebview" title="Direct link to nativewebview" translate="no">​</a></h3>
-<p>The windows implementation was updated to use the latest chromium release.</p>
-<p>The macOS implementation added support for Apple silicon ensuring support on the latest macOS machines.</p>
-<p>Android support for communicating with a WebView when AIR is running on a background thread.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/adobeair-75ec23410377afde7761a5bb875e30e4.png" width="800" height="381" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="air-sdk-manager"><a href="https://airsdk.dev/docs/basics/getting-started" target="_blank" rel="noopener noreferrer" class="">AIR SDK Manager</a><a href="https://docs.airnativeextensions.com/news/2023-11#air-sdk-manager" class="hash-link" aria-label="Direct link to air-sdk-manager" title="Direct link to air-sdk-manager" translate="no">​</a></h3>
-<p>This is an application you can use to manage your AIR SDK installations and update them as new releases are available. Additionally you can configure your SDKs without having to manually edit the <code>adt.cfg</code> file and import a license file. This has become a great tool to install and manage your AIR SDKs and we use it to manage all our developer SDKs now.</p>
-<p>The tool has had troubleshooting section added which directly connects to adt to get debugging information when packaging your AIR applications.</p>
-<p>We have added this tool as the suggested installation process through the <a href="https://airsdk.dev/docs/basics/getting-started" target="_blank" rel="noopener noreferrer" class="">airsdk.dev getting started guide</a>.</p>
-<hr>
-<p>As always, if you have any native development needs for AIR, Unity, Flutter or Haxe, please feel free to contact us at <a href="mailto:airnativeextensions@distriqt.com" target="_blank" rel="noopener noreferrer" class="">airnativeextensions@distriqt.com</a>.</p>]]></content:encoded>
-            <category>newsletter</category>
-            <category>airsdk</category>
-            <category>application-rater</category>
-            <category>adverts</category>
-            <category>google-play-billing</category>
         </item>
     </channel>
 </rss>
