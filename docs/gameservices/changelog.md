@@ -1,3 +1,10 @@
+### 2026.06.04 [v11.0.3]
+
+```
+feat(norecording): update the norecording implementation that removes ReplayKit inclusion and release airpackage
+fix(docs): remove references to old depencendy com.distriqt.playservices.Drive (resolves https://github.com/distriqt/ANE-GameServices/issues/253)
+```
+
 ### 2025.10.03 [v11.0.2]
 
 ```
