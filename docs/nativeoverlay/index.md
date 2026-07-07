@@ -4,27 +4,23 @@ hide_title: true
 slug: /nativeoverlay/
 ---
 
-![](images/hero.png)
+![](images/header.png)
 
 # NativeOverlay
 
-The [NativeOverlay](https://airnativeextensions.com/extension/com.distriqt.NativeOverlay) extension gives you access to ...
-
-TODO
-
+The [NativeOverlay](https://airnativeextensions.com/extension/com.distriqt.NativeOverlay) extension gives you the ability to create an overlay view that renders content above the AIR view in the native application space. 
 
 We provide complete guides to get you up and running with sharing quickly and easily.
 
 
 ### Features
 
-- ...
+- Render bitmap content into a native view
 - Single API interface - your code works across iOS and Android with no modifications
 - Sample project code and ASDocs reference
 
 As with all our extensions you get access to a year of support and updates as we are 
 continually improving and updating the extensions for OS updates and feature requests.
-
 
 
 ## Documentation
@@ -34,6 +30,10 @@ The [documentation site](https://docs.airnativeextensions.com/docs/nativeoverlay
 Quick Example: 
 
 ```actionscript title="AIR"
+var data:BitmapData = ...;
+
+var overlay:OverlayView = NativeOverlay.service.createOverlay();
+overlay.draw( data );
 ```
 
 More information here: 
@@ -49,6 +49,4 @@ You can purchase a license for using this extension:
 
 
 ![](images/promo.png)
-
-
 

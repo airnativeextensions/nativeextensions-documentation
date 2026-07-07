@@ -7,7 +7,6 @@ The following should be added to your `extensions` node in your application desc
 <extensions>
     <extensionID>com.distriqt.NativeOverlay</extensionID>
 	<extensionID>com.distriqt.Core</extensionID>
-	<extensionID>androidx.core</extensionID>
 </extensions>
 ```
 
@@ -47,6 +46,8 @@ Ensure you replace:
 
 ```xml
 <manifest android:installLocation="auto">
+
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="36" />
 	<uses-permission android:name="android.permission.INTERNET"/>
 	
 	<application android:hardwareAccelerated="true">

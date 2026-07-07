@@ -2600,6 +2600,32 @@ module.exports = {
     },
   ],
 
+  nativeoverlay: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "nativeoverlay/index" },
+    {
+      "Get Started": ["nativeoverlay/add-the-extension"],
+    },
+    {
+      Usage: ["nativeoverlay/usage"],
+    },
+    {
+      Other: [
+        { type: "doc", id: "nativeoverlay/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/nativeoverlay/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "https://github.com/airnativeextensions/ANE-NativeOverlay/issues/new",
+        },
+      ],
+    },
+  ],
+
   nativetext: [
     { type: "ref", id: "index" },
     { type: "doc", id: "nativetext/index" },
