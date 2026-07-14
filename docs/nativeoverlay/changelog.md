@@ -1,3 +1,9 @@
+### 2026.07.14 [v0.0.4]
+
+```
+fix(actionscript,ios): correct position and size value handling and option access methods
+```
+
 ### 2026.07.07 [v0.0.2]
 
 ```
