@@ -1,3 +1,9 @@
+### 2026.07.16 [v0.0.5]
+
+```
+fix(actionscript): correct setting initial y position in options
+```
+
 ### 2026.07.14 [v0.0.4]
 
 ```
