@@ -1,3 +1,9 @@
+### 2026.07.17 [v12.0.2]
+
+```
+fix(core, ios): correct callback operation and missing function calls on ios implementation (resolves https://github.com/airnativeextensions/ANE-Firebase/issues/525)
+```
+
 ### 2026.02.17 [v12.0.0]
 
 ```
