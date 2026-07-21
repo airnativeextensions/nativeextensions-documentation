@@ -1,3 +1,11 @@
+### 2026.07.21 [v6.0.3]
+
+```
+feat(android): support runtimeInBackgroundThread operation for audio players (resolves https://github.com/distriqt/ANE-MediaPlayer/issues/249)
+feat(ios): implement new logging methods for recent ios changes
+fix(ios): correct bad param crash on ios 26 (resolves https://github.com/airnativeextensions/ANE-MediaPlayer/issues/251)
+```
+
 ### 2025.09.06 [v6.0.2]
 
 ```
