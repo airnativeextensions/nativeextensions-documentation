@@ -1,3 +1,9 @@
+### 2026.07.23 [v12.0.3]
+
+```
+fix(core, ios): correct missing function call (setDefaultEventParameters) on ios implementation
+```
+
 ### 2026.07.17 [v12.0.2]
 
 ```
