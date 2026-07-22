@@ -65,6 +65,14 @@ They will align if you are using standard stage alignment and scale modes:
 stage.align     = StageAlign.TOP_LEFT;
 stage.scaleMode = StageScaleMode.NO_SCALE;
 ```
+
+On iOS, ensure you have set the requested display resolution to "high" in your application descriptor. 
+
+```xml
+<iPhone>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+</iPhone>
+```
 :::
 
 ## Events

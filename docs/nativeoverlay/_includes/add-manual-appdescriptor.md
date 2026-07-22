@@ -27,9 +27,11 @@ The following additions are for the `InfoAdditions` node of the iPhone section i
 		HERE
 
 	]]></InfoAdditions>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
 </iPhone>
 ```
 
+Make sure you set the `requestedDisplayResolution` to `high` to ensure the coordinate systems match correctly. 
 
 
 ## Android 

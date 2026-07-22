@@ -18,3 +18,12 @@ You should backup your application descriptor before running this command to ens
 If you need to insert custom data into these sections see the guides for [Android](https://github.com/airsdk/apm/wiki/Usage-Generate#android) and [iOS](https://github.com/airsdk/apm/wiki/Usage-Generate#ios)
 :::
 
+
+In your application descriptor you may have to ensure the `requestedDisplayResolution` is set to `high` to ensure the coordinate systems match correctly 
+
+```xml
+<iPhone>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+</iPhone>
+```
+
