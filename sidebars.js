@@ -33,6 +33,7 @@ module.exports = {
 
         { type: "ref", id: "devicemotion/index" },
         { type: "ref", id: "dialog/index" },
+        { type: "ref", id: "display/index" },
         { type: "ref", id: "dynamicicon/index" },
 
         { type: "ref", id: "exceptions/index" },
@@ -83,6 +84,7 @@ module.exports = {
         { type: "ref", id: "scanner/index" },
         { type: "ref", id: "share/index" },
         { type: "ref", id: "systemgestures/index" },
+        { type: "ref", id: "systeminfo/index" },
 
         { type: "ref", id: "unityads/index" },
 
