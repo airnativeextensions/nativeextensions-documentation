@@ -16,7 +16,7 @@
   --ifm-color-primary-lightest: #0fdfff;
   --ifm-code-font-size: 85%;
 
-  --ifm-button-border-radius: 0;
+  --ifm-button-border-radius: 8px;
 
   --image-alignment-padding: 40px;
   
