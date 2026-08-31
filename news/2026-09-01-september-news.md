@@ -11,11 +11,14 @@ tags: [newsletter, googleplayservices, admob, pricing]
 
 > Making AIR development more accessible than ever with a massive price reduction across our packages, alongside key updates to the Google Play Services ecosystem.
 
-## Key Focus
+### Key Focus
 
 - **Major Price Reduction:** Significant price cuts across our subscription packages, making the entire suite of distriqt extensions highly affordable.
 - **Google Play Services Update:** Essential SDK updates, including AdMob v25.4.0 integration.
 - **SwiftUI Integration Fixes:** Resolved underlying linkage conflicts for iOS targets utilising Firebase Core.
+
+<!-- truncate -->
+
 
 ## News & Announcements
 
