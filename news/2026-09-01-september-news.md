@@ -7,11 +7,11 @@ authors: [ marchbold ]
 tags: [newsletter, googleplayservices, admob, pricing]
 ---
 
-# September 2026
+> August Release Update
 
-> Making AIR development more accessible than ever with a massive price reduction across our packages, alongside key updates to the Google Play Services ecosystem.
+August focused on making AIR development more accessible than ever with a massive price reduction across our packages, alongside key updates to the Google Play Services ecosystem.
 
-### Key Focus
+Key focus:
 
 - **Major Price Reduction:** Significant price cuts across our subscription packages, making the entire suite of distriqt extensions highly affordable.
 - **Google Play Services Update:** Essential SDK updates, including AdMob v25.4.0 integration.
