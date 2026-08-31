@@ -4,21 +4,23 @@ title: September 2026
 description: September 2026 Extension Updates
 image: images/price-reduction.png
 authors: [ marchbold ]
-tags: [newsletter, googleplayservices, admob, pricing]
+tags: [newsletter, googleplayservices, firebase, admob, pricing]
 ---
 
-> August Release Update
+> Major price reductions across all subscription packages make premium AIR tools more accessible, alongside critical compatibility updates for AdMob and iOS SwiftUI linking.
 
-August focused on making AIR development more accessible than ever with a massive price reduction across our packages, alongside key updates to the Google Play Services ecosystem.
+This month brings incredibly exciting news for the AIR developer ecosystem with a massive restructuring of our subscription pricing. Alongside these accessibility improvements, we have rolled out updates to Google Play Services to keep your advertising and Firebase integrations running smoothly.
 
 Key focus:
+- **Major Price Reductions**: Slashing package prices by up to 50% to support community growth and sustainability.
+- **AdMob SDK Upgrade**: Updating Google Play Services to target AdMob SDK v25.4.0 on Android.
+- **iOS Linkage Fixes**: Resolving SwiftUI linkage conflicts within the Firebase Core dependency.
 
-- **Major Price Reduction:** Significant price cuts across our subscription packages, making the entire suite of distriqt extensions highly affordable.
-- **Google Play Services Update:** Essential SDK updates, including AdMob v25.4.0 integration.
-- **SwiftUI Integration Fixes:** Resolved underlying linkage conflicts for iOS targets utilising Firebase Core.
+:::note Extension Updates
+- [GooglePlayServices v32.2.0](https://github.com/airnativeextensions/ANE-GooglePlayServices/releases/tag/v32.2.0) - Updated Android AdMob SDK to v25.4.0 and resolved SwiftUI linking conflicts on iOS.
+:::
 
 <!-- truncate -->
-
 
 ## News & Announcements
 
@@ -26,39 +28,34 @@ Key focus:
 
 ![](images/price-reduction.png)
 
-We are incredibly excited to announce a major pricing restructuring designed to make our tools more accessible and support the ongoing growth of the AIR developer community. We have lowered package rates across the board: the all-inclusive Master Collection is now available for just USD $200 (a reduction of USD $200), and both the Game Development Tools and Monetisation packages have been reduced to USD $150. This update represents our investment in the long-term health, vitality, and innovation of the ecosystem.
+We are thrilled to announce a significant price reduction across our subscription packages to make high-quality native extensions accessible to more developers. Our all-inclusive **Master Collection** package—giving you access to every single extension we offer, now and in the future—has been reduced from USD $400 to just **USD $200**! Additionally, the **Game Development Tools** and **Monetisation** packages have both been reduced to **USD $150**. 
 
-**Actionable steps:**
-- **Existing Subscribers:** If you are already subscribed via our new payment provider, the reduced price will apply automatically at your next renewal. Individual extension subscribers can upgrade to a package at any time and receive a prorated credit.
-- **Migrate Payment Providers:** If you have not yet moved to our new payment provider, please follow the migration steps on your subscription management page to ensure you receive these discounted rates.
+These changes represent a direct investment in the long-term health and growth of the AIR runtime and its developer community. Lowering these barriers allows teams to maintain existing projects more affordably and encourages new creators to experiment and build with AIR.
 
-[Read more...](https://docs.airnativeextensions.com/news/2026/08/25/price-reduction)
+If you are currently subscribed:
+* **Active Subscribers**: If you already subscribe via our new payment provider, the reduced pricing will automatically apply to your next scheduled renewal.
+* **Upgrading & Migrating**: If you still have individual extension licenses or use our older payment provider, you can easily upgrade to a unified package on your subscription page, applying any remaining balance as credit.
 
-## Important Notices
+[Read the full announcement here.](https://docs.airnativeextensions.com/news/2026/08/25/price-reduction)
 
-:::info
-The new discounted pricing is only applicable to subscriptions managed through our new payment provider. If you are still on our legacy system, please migrate as soon as possible via your account dashboard.
-:::
 
 ## Extension Updates
 
-:::note
-During August, our primary technical focus was upgrading key Google Play Services dependencies and ensuring consistent linkage across iOS framework targets.
-:::
-
-### Google Play Services `v32.2.0`
+---
 
 ![](images/googleplayservices.png)
 
-Updates to Google Play Services to keep your Android and iOS applications aligned with the latest SDK requirements, including crucial updates to mobile ads.
+### GooglePlayServices
 
-- **Releases:** [v32.2.0](https://github.com/airnativeextensions/ANE-GooglePlayServices/releases/tag/v32.2.0) | [v32.1.5](https://github.com/airnativeextensions/ANE-GooglePlayServices/releases/tag/v32.1.5)
-- **Documentation:** [Google Play Services ANE](https://docs.airnativeextensions.com)
+The Google Play Services ANE has received updates to improve native dependency management across both Android and iOS platforms.
 
-#### Key Changes:
-- Updated AdMob SDK to `v25.4.0` in the Android Ads extension (`com.distriqt.playservices.Ads`).
-- Fixed a linkage issue in Firebase Core (`fir-core`) to make SwiftUI compilation behaviour consistent with other native extensions on iOS.
-- Synchronised transitive dependencies across Firebase and Play Services libraries.
+* [Release v32.2.0](https://github.com/airnativeextensions/ANE-GooglePlayServices/releases/tag/v32.2.0)
+* [Release v32.1.5](https://github.com/airnativeextensions/ANE-GooglePlayServices/releases/tag/v32.1.5)
+
+#### Updates
+
+- **AdMob SDK v25.4.0**: Upgraded the underlying Android Ads library dependency to the latest robust release.
+- **SwiftUI Linkage Fix**: Resolved SwiftUI linking issues within the Firebase Core (`fir-core`) component on iOS to align consistently with other modern Swift-based extensions.
 
 ---
 
