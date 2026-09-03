@@ -2761,6 +2761,7 @@ module.exports = {
       "Get Started": [
         "notifications/add-the-extension",
         "notifications/add-the-extension---windows",
+        "notifications/add-the-extension---macos",
         "notifications/request-authorisation",
         "notifications/setup-your-service",
       ],

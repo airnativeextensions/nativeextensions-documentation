@@ -1,3 +1,22 @@
+### 2026.09.04 [v9.0.1]
+
+```
+## Major update 
+
+This update expands the functionality of this extension to cover macOS and linux (x86 + arm). 
+
+macOS notifications bring similar functionality as the iOS implementation allowing deep integration with macOS to inform your users of updates and engage them with rich notifications.
+
+Linux provides a relatively basic implementation but one that still allows engagement with libnotify notifications including actions, text content and simple scheduling. 
+
+
+### Updates 
+
+- feat(macos): macos implementation
+- feat(linux): linux implementation (x86_64 and arm64)
+- feat(android): ability to schedule exact alarms (resolves https://github.com/airnativeextensions/ANE-Notifications/issues/214)
+```
+
 ### 2024.12.19 [v8.0.0]
 
 ```

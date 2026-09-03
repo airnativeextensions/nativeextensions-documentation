@@ -58,11 +58,11 @@ If you wish to launch your application when an action is clicked you can use
 
 ```actionscript
 ...
-			new ActionBuilder()
-				.setTitle( "Accept" )
-				.setIdentifier( "ACCEPT_IDENTIFIER" )
-				.setWillLaunchApplication( true )
-				.build()
+	new ActionBuilder()
+		.setTitle( "Accept" )
+		.setIdentifier( "ACCEPT_IDENTIFIER" )
+		.setWillLaunchApplication( true )
+		.build()
 ...
 ```
 
@@ -75,11 +75,11 @@ you can use `setShouldCancelOnAction` and pass `true`.
 
 ```actionscript
 ...
-			new ActionBuilder()
-				.setTitle( "Accept" )
-				.setIdentifier( "ACCEPT_IDENTIFIER" )
-				.setShouldCancelOnAction( true )
-				.build()
+	new ActionBuilder()
+		.setTitle( "Accept" )
+		.setIdentifier( "ACCEPT_IDENTIFIER" )
+		.setShouldCancelOnAction( true )
+		.build()
 ...
 ```
 

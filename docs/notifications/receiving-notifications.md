@@ -8,6 +8,10 @@ There are several events that can be dispatched by a notification.
 The most important is the `NotificationEvent.NOTIFICATION` event. This event is dispatched as soon as possible after a notification is received. 
 The exact timing of this event depends on the platform, the application settings (such as background modes) and the application state. 
 
+:::note macOS
+The  `NotificationEvent.NOTIFICATION` will only be dispatched when the application is in the foreground. 
+:::
+
 Next is the `NotificationEvent.NOTIFICATION_SELECTED` event. This event is dispatched when a user clicks a displayed notification. 
 It will not be dispatched if the user dismisses or otherwise removes the notification without directly clicking on the notification.
 
@@ -17,9 +21,10 @@ however as this notification was a group of notifications it is dispatched as a 
 each of the individual events contained in the group.
 
 The `NotificationEvent.ACTION` is dispatched when a user clicks an action on a notification. 
-This event currently is missed on iOS when the application is not running (background, suspended and foreground states operate correctly). 
-This is due to an issue with AIR not allowing AIR application to launch into the background.
 
+:::note iOS
+The `NotificationEvent.ACTION` currently is missed on iOS when the application is not running (background, suspended and foreground states operate correctly). This is due to an issue with AIR not allowing AIR application to launch into the background.
+:::
 
 ```actionscript
 // Previously called init, setup and checked authorisation

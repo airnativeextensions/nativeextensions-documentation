@@ -3,6 +3,9 @@ title: Delay and Repeat Interval
 sidebar_label: Delay and Repeat Interval
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 It is possible to schedule a notification to be delivered at a later date and also to apply 
 a repeat interval to have the notification delivered repeatedly.
 
@@ -17,12 +20,13 @@ For example, the following creates an notification that will be displayed 5 seco
 
 ```actionscript
 Notifications.service.notify(
-	new NotificationBuilder()
-		.setDelay( 5 ) // Show the notification 5 seconds in the future
-		.setAlert( "Delayed Notification" )
-		.setTitle( "Delayed Notification" )
-		.setBody( "The body of the notification" )
-		.build()
+  new NotificationBuilder()
+
+    .setDelay( 5 ) // Show the notification 5 seconds in the future
+
+    .setTitle( "Delayed Notification" )
+    .setBody( "The body of the notification" )
+    .build()
 );
 ```
 
@@ -34,13 +38,15 @@ var fireDate:Date = new Date( now.year, now.month, now.date, 7, 0, 0 );
 fireDate.date += 1; // tomorrow
 
 Notifications.service.notify(
-	new NotificationBuilder()
-		.setFireDate( fireDate ) 
-		.setAlert( "Delayed Notification" )
-		.setTitle( "Delayed Notification" )
-		.setBody( "The body of the notification" )
-		.build()
-);
+  new NotificationBuilder()
+
+    .setFireDate( fireDate ) 
+
+    .setAlert( "Delayed Notification" )
+    .setTitle( "Delayed Notification" )
+    .setBody( "The body of the notification" )
+    .build()
+  );
 ```
 
 
@@ -70,12 +76,12 @@ Check the individual intervals for their availability on each of the platforms.
 
 ```actionscript
 Notifications.service.notify(
-	new NotificationBuilder()
-		.setRepeatInterval( NotificationRepeatInterval.REPEAT_HOUR ) // Repeat the notification every hour 
-		.setAlert( "Repeat Notification" )
-		.setTitle( "Repeat Notification" )
-		.setBody( "The body of the notification" )
-		.build()
+  new NotificationBuilder()
+    .setRepeatInterval( NotificationRepeatInterval.REPEAT_HOUR ) // Repeat the notification every hour 
+    .setAlert( "Repeat Notification" )
+    .setTitle( "Repeat Notification" )
+    .setBody( "The body of the notification" )
+    .build()
 );
 ```
 
@@ -97,13 +103,13 @@ var fireDate:Date = new Date( now.year, now.month, now.date, 7, 0, 0 );
 fireDate.date += 1; // tomorrow
 
 Notifications.service.notify(
-	new NotificationBuilder()
-		.setFireDate( fireDate ) 
-		.setRepeatInterval( NotificationRepeatInterval.REPEAT_DAY ) 
-		.setAlert( "Repeat Notification" )
-		.setTitle( "Repeat Notification" )
-		.setBody( "The body of the notification" )
-		.build()
+  new NotificationBuilder()
+    .setFireDate( fireDate ) 
+    .setRepeatInterval( NotificationRepeatInterval.REPEAT_DAY ) 
+    .setAlert( "Repeat Notification" )
+    .setTitle( "Repeat Notification" )
+    .setBody( "The body of the notification" )
+    .build()
 );
 ``` 
 
@@ -125,13 +131,13 @@ var fireDate:Date = new Date( now.year, now.month, now.date, 7, 0, 0 );
 fireDate.date += 1; // tomorrow
 
 Notifications.service.notify(
-	new NotificationBuilder()
-		.setFireDate( fireDate ) 
-		.setRepeatInterval( NotificationRepeatInterval.REPEAT_MINUTE ) 
-		.setAlert( "Repeat Notification" )
-		.setTitle( "Repeat Notification" )
-		.setBody( "The body of the notification" )
-		.build()
+  new NotificationBuilder()
+    .setFireDate( fireDate ) 
+    .setRepeatInterval( NotificationRepeatInterval.REPEAT_MINUTE ) 
+    .setAlert( "Repeat Notification" )
+    .setTitle( "Repeat Notification" )
+    .setBody( "The body of the notification" )
+    .build()
 );
 ``` 
 
@@ -150,3 +156,93 @@ For example, create:
 
 If you have any concerns or need some help on creating a specific repeating notification feel free to ask our support team.
 
+
+## Notification Timing
+
+Scheduled notification delivery is controlled by the operating system. 
+
+The requested delay, fire date, and repeat interval specify when the notification should be eligible for delivery, 
+rather than guaranteeing that it will be displayed at that precise time. System power-saving modes, background 
+execution restrictions, and device state can defer delivery.
+
+In some cases, you may want to schedule a notification to be delivered at a specific time, 
+and you may want to ensure that it is delivered at that time.
+
+To this end, the Notifications extension provides a "Scheduled Mode" for notifications.
+When a notification is scheduled in the `ScheduledMode.EXACT` mode, the operating system will 
+attempt to deliver it at the specified time, even if the device is in a low-power state or the app is not running.
+
+
+```actionscript
+Notifications.service.notify(
+  new NotificationBuilder()
+    .setTitle( "Scheduled Notification" )
+    .setBody( "The body of the notification" )
+
+    .setFireDate( fireDate, ScheduledMode.EXACT ) 
+
+    .build()
+);
+```
+
+:::info Availability
+Currently the `ScheduledMode.EXACT` mode is only supported on Android.
+:::
+
+:::caution Repeating notifications
+Repeating notifications **always** use inexact alarms, so the system may vary their delivery time to optimise battery use. 
+:::
+
+
+### Permissions
+
+On Android 12 (API 31) and later, the `SCHEDULE_EXACT_ALARM` permission is required to schedule one-off delayed notifications with exact timing. 
+This permission allows your app to use exact alarms, which are necessary for precise scheduling of notifications.
+
+- `SCHEDULE_EXACT_ALARM`: allows Android to schedule one-off delayed notifications with exact timing on Android 12 (API 31) and later. This is a special app access that the user may disable.
+
+Add the exact-alarm permission to your manifest:
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+```
+apm generate config android
+```
+
+Edit the generated `config/android/AndroidManifest.xml` file and add the following permission:
+
+```xml
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+```
+
+Regenerate the application descriptor with the following command:
+
+```
+apm generate app-descriptor
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+Manually add the following permission to your Android manifest additions in your application descriptor:
+
+```xml
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+```
+
+  </TabItem>
+  
+</Tabs>
+
+:::note
+On Android 12 (API 31) and later, users can disable the exact-alarm special app access; 
+when exact alarms are unavailable, one-off delayed notifications fall back to inexact scheduling.
+:::
