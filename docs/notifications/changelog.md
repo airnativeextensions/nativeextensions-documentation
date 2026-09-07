@@ -1,3 +1,9 @@
+### 2026.09.07 [v9.0.2]
+
+```
+feat(linux): add support for large icons
+```
+
 ### 2026.09.04 [v9.0.1]
 
 ```
