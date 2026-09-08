@@ -1,3 +1,9 @@
+### 2026.09.08 [v9.0.3]
+
+```
+fix(windows): correct handling of utf8 characters
+```
+
 ### 2026.09.07 [v9.0.2]
 
 ```
