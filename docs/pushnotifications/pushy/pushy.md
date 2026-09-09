@@ -156,7 +156,7 @@ below with the production version commented out. More on this below.
 		</array>
         
         <key>MinimumOSVersion</key>
-        <string>9.0</string>
+        <string>13.0</string>
 
 	]]></InfoAdditions>
 	<requestedDisplayResolution>high</requestedDisplayResolution>

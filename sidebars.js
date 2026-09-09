@@ -3002,6 +3002,13 @@ module.exports = {
         },
         "pushnotifications/azure/azure-notifications",
         "pushnotifications/pushy/pushy",
+        {
+          "Amazon Device Messaging": [
+            "pushnotifications/amazon/add-the-extension",
+            "pushnotifications/amazon/amazon-device-messaging",
+            "pushnotifications/amazon/amazon-message"
+          ],
+        }
       ],
     },
     {

@@ -1,0 +1,249 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+	<extensionID>com.distriqt.PushNotifications</extensionID>
+	<extensionID>com.distriqt.Core</extensionID>
+
+	<extensionID>androidx.browser</extensionID>
+	<extensionID>androidx.appcompat</extensionID>
+	<extensionID>androidx.cardview</extensionID>
+	<extensionID>androidx.constraintlayout</extensionID>
+	<extensionID>androidx.core</extensionID>
+	<extensionID>androidx.exifinterface</extensionID>
+	<extensionID>androidx.vectordrawable</extensionID>
+
+	<extensionID>com.google.android.datatransport</extensionID>
+	<extensionID>com.google.dagger</extensionID>
+	<extensionID>com.google.protobuflite</extensionID>
+	<extensionID>com.google.code.gson</extensionID>
+	<extensionID>com.google.guava</extensionID>
+	<extensionID>com.bumptech.glide</extensionID>
+	<extensionID>io.reactivex</extensionID>
+	<extensionID>io.grpc</extensionID>
+
+    <extensionID>com.distriqt.square.okhttp</extensionID>
+    <extensionID>com.distriqt.square.okhttp3</extensionID>
+</extensions>
+```
+
+
+### Android 
+
+#### Manifest Additions
+
+You must add all the Amazon related manifest additions. 
+
+The following shows the complete manifest additions node. You must replace `APPLICATION_PACKAGE` with your 
+AIR application's Java package name, something like `air.com.distriqt.test`.
+Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+
+:::note
+You need to add the `amazon` namespace to your manifest. You do this by adding the following attribute to the `manifest` tag:
+
+```
+xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+```
+
+The example below shows this.
+:::
+
+```xml
+<manifest android:installLocation="auto"
+
+	xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+
+>
+
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="36"/>
+  	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	
+	<!-- BADGE -->
+	<uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+	<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+	<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+	<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+	<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+	<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+	<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_APP_BADGE" />
+	<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+
+	<!-- AMAZON -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
+	<uses-permission android:name="air.com.distriqt.test.permission.RECEIVE_ADM_MESSAGE" />
+	<permission android:name="air.com.distriqt.test.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature" />
+
+	
+	<application>
+		<activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+
+		<!-- NOTIFICATIONS -->
+		<receiver android:name="com.distriqt.extension.pushnotifications.notifications.receivers.NotificationReceiver" android:exported="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_DELETED" />
+				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
+				<data android:scheme="dtpn" />
+			</intent-filter>
+		</receiver>
+		<activity android:name="com.distriqt.extension.pushnotifications.notifications.NotificationActivity" android:exported="false">
+			<intent-filter>
+				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_SELECTED" />
+				<action android:name="APPLICATION_PACKAGE.NOTIFICATION_ACTION" />
+				<data android:scheme="dtpn" />
+			</intent-filter>
+		</activity>
+		<provider
+			android:name="com.distriqt.extension.pushnotifications.content.FileProvider"
+			android:authorities="APPLICATION_PACKAGE.pushnotificationsfileprovider"
+			android:grantUriPermissions="true"
+			android:exported="false">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/distriqt_pushnotifications_paths" />
+		</provider>
+
+		<!-- AMAZON DEVICE MESSAGING -->
+		<uses-library android:name="com.amazon.device.messaging" android:required="false" />
+		<amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false" />
+		<receiver
+			android:name="com.distriqt.extension.pushnotifications.amazon.AmazonBroadcastReceiver"
+			android:exported="true"
+			android:permission="com.amazon.device.messaging.permission.SEND">
+			<intent-filter>
+				<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+				<action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+				<category android:name="APPLICATION_PACKAGE" />
+			</intent-filter>
+		</receiver>
+		<service android:name="com.distriqt.extension.pushnotifications.amazon.AmazonMessagingHandler" android:exported="false" />
+		<service android:name="com.distriqt.extension.pushnotifications.amazon.AmazonMessagingJobHandler" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE" />
+		
+	</application>
+
+</manifest>
+```
+
+
+#### Android Gradle Version 
+
+We have updated the required gradle version used to build your application to be higher than the default AIR currently uses (April 2025). 
+
+To specify a higher version add the following to your android node in your application descriptor:
+
+```xml
+<android>
+    <gradleVersion>8.9</gradleVersion>
+    <androidGradlePluginVersion>8.7.3</androidGradlePluginVersion>
+
+  ...
+</android>
+```
+
+If you don't do this you will see the following error when building your application:
+
+```
+Unexpected failure: Unable to run java: com.adobe.air.ADTException: gradle tool failed: 
+FAILURE: Build failed with an exception.
+
+...
+
+   > BUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 65
+```
+
+
+
+
+### iOS
+
+#### Info Additions and Entitlements
+
+Push notifications require a few additions to the Info plist and Entitlements section 
+of your application to correctly configure your application for push notifications. 
+
+You should add the listing below to application descriptor iPhone node.
+
+You must replace the `BUNDLE_SEED_ID` and `BUNDLE_IDENTIFIER` with the information you
+gathered when setting up your application. Also make sure you set the environment 
+correctly either using production or development, both are shown in the example 
+below with the production version commented out. More on this below.
+
+In order for the Firebase system to work well with AIR and other extensions we need
+to disable the automatic delegate proxy that Firebase implements on iOS. To do so 
+you must set the `FirebaseAppDelegateProxyEnabled` option to `false` in your InfoAdditions.
+
+
+```xml
+<iPhone>
+	<InfoAdditions><![CDATA[
+		
+		<key>FirebaseAppDelegateProxyEnabled</key>
+		<false/>
+
+	]]></InfoAdditions>
+	<requestedDisplayResolution>high</requestedDisplayResolution>
+	<Entitlements><![CDATA[
+		
+		<!-- DEVELOPMENT -->
+		<key>get-task-allow</key>
+		<true/>
+		<key>aps-environment</key>
+		<string>development</string>
+		
+		<!-- PRODUCTION -->
+		<!--
+		<key>get-task-allow</key>
+		<false/>
+		<key>aps-environment</key>
+		<string>production</string>
+		-->
+		
+		<key>application-identifier</key>
+		<string>BUNDLE_SEED_ID.BUNDLE_IDENTIFIER</string>
+		<key>keychain-access-groups</key>
+		<array>
+			<string>BUNDLE_SEED_ID.*</string>
+		</array>
+		
+	]]></Entitlements>
+</iPhone>
+```
+
+
+The first entitlement field is the `aps-environment`. This field indicates whether 
+we are using the development or the production environment. It must be either 
+`development` or `production` and depends on which configuration you are using. 
+If you are running a debug build you should use development. If you are looking 
+to publish the application to the AppStore, you should use production.
+
+You should have noted the `BUNDLE_SEED_ID` (or App ID Prefix) and `BUNDLE_IDENTIFIER` 
+when you were setting up your application in the iOS developer center. 
+The seed id should be a unique ten character string and the identifier should be 
+similar to your AIR application id.
+
+
+:::note 
+Note the difference between a development and production / adhoc entitlements. The `get-task-allow` and `aps-environment` must be set correctly for your build.
+
+These values **must** match the values in your provisioning profile, ie you must have setup push notifications for the matching environment.
+:::
+
+

@@ -1,0 +1,81 @@
+---
+title: Amazon Device Messaging
+sidebar_label: Add the extension
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+import InstallAPM from './_includes/add-apm.md'
+import InstallManual from './_includes/add-manual.md'
+
+import AppDescriptorAPM from './_includes/add-apm-appdescriptor.md'
+import AppDescriptorManual from './_includes/add-manual-appdescriptor.md'
+
+:::info About
+Amazon Device Messaging (ADM) is a push notification service for Amazon devices that lets you reliably send messages at no cost. 
+
+It is the default push notification platform for Amazon devices.
+
+Amazon Device Messaging (ADM) lets you send messages to Amazon devices that run your app, so you can keep users up to date and involved. Whether you're giving a user a game update or letting them know that a message from their buddy has arrived, ADM helps you stay in touch.
+:::
+
+:::note 
+Note that ADM is not supported on Kindle Fire (1st Generation) devices.
+:::
+
+This section describes how to setup your AIR application to use Amazon Device Messaging with this extension.
+
+This service is supported by the following variants of this extension:
+
+- Amazon (i.e. the Amazon variant of the extension)
+
+
+## Setup
+
+You should firstly setup an Amazon Developer account and create an Amazon Device Messaging project for your application. See the [setup](amazon-device-messaging.md) documentation to guide you through this process.
+
+- [Overview](https://developer.amazon.com/docs/adm/overview.html)
+
+## Install
+
+The simplest way to install and manage your AIR native extensions and libraries is to use the AIR Package Manager (`apm`). We highly recommend using `apm`, as it will handle downloading all required dependencies and manage your application descriptor (Android manifest additions, iOS info additions etc).
+
+However you can choose to install it manually, as you would have done in the past. 
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<InstallAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<InstallManual/>
+  </TabItem>
+  
+</Tabs>
+
+
+## Application Descriptor
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+	<AppDescriptorAPM/>
+  </TabItem>
+  <TabItem value="manual" >
+	<AppDescriptorManual/>
+  </TabItem>
+  
+</Tabs>

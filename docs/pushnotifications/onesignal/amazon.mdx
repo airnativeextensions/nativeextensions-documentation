@@ -10,23 +10,20 @@ If you wish to use Amazon device messaging in OneSignal you will need to do some
 
 We will assume you have already setup your OneSignal account and have your App ID. If not see the [setup](onesignal.md) section.
 
-## Amazon API Key File
+## Amazon API Key
 
-Download the `agconnect-services.json` file:
+See the [Amazon Device Messaging](../amazon/amazon-device-messaging.md) section for details on how to obtain your API key and place it in your application.
 
-- From the AppGallery Connect Project List select your app.
+- Place the `api_key.txt` file at the root of your application and ensure it is packaged.
 
-- Ensure you have added your certificate SHA fingerprint to your app configuration.
 
-- Click on the "agconnect-services.json" button to download this file.
-
-![](images/onesignal_hms_agconnect-services.png)
-
-- Place this file at the root of your application and ensure it is packaged.
-
-## Update Manifest
+## Installation
 
 In order to support Amazon we need to add a few things to the manifest additions in your app descriptor.
+
+### Amazon Only
+
+If you plan to only support Amazon device messaging you can follow the instructions below.
 
 <Tabs
   groupId="packagemanager"
@@ -37,6 +34,123 @@ In order to support Amazon we need to add a few things to the manifest additions
   ]}>
 
   <TabItem value="apm" >
+
+Install the OneSignal Amazon package by running: 
+
+```
+apm install com.distriqt.PushNotifications-OneSignalAmazon
+```
+
+This will download and install the extension, required assets, and all dependencies. 
+This installs the OneSignal variant of the extension but also includes some different manifest additions so Amazon device messaging can be used in conjunction with OneSignal.
+
+:::note
+If you have already installed a OneSignal variant of the extension you will need to uninstall it first before installing this variant. You can do this by running:
+
+```
+apm uninstall com.distriqt.PushNotifications-OneSignal
+```
+:::
+
+Once complete `apm` will have created something like the following file structure: 
+
+```
+.
+|____ ane
+| |____ com.distriqt.PushNotifications.OneSignal.ane	# PushNotifications extension
+| |____ [dependencies]
+|____ apm_packages									# cache directory - ignore
+|____ project.apm									# apm project file
+```
+
+- Add the `ane` directory to your IDE. *See the tutorials located [here](/docs/tutorials/getting-started) on adding an extension to your IDE.*
+
+:::info
+We suggest you use the locations directly in your builds (rather than copying the files elsewhere) so that updates with `apm` will be pulled automatically into your build.
+:::
+
+
+Then regenerate your application descriptor.
+
+```
+apm generate app-descriptor
+```
+
+  </TabItem>
+  <TabItem value="manual" >
+
+To manually do this you will need to manually add the following to your manifest additions in your application descriptor.
+
+Firstly add the amazon namespace at the top of the file:
+
+```xml
+<manifestAdditions><![CDATA[
+			<manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android">
+
+      ...
+
+      ]]>
+</manifestAdditions>
+```
+
+You should add the listing below to your manifest, ensure you merge the `application` node with any existing node in your manifest.
+The following listing should be added along with the listing used when originally installing OneSignal.
+
+:::caution
+Ensure you replace:
+-  `APPLICATION_PACKAGE` with your AIR application's Java package name, something like `air.com.distriqt.test`. Generally this is your AIR application id prefixed by `air.` unless you have specified no air flair in your build options.
+:::
+
+
+```xml
+<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
+<permission android:name="APPLICATION_PACKAGE.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature" />
+<uses-permission android:name="APPLICATION_PACKAGE.permission.RECEIVE_ADM_MESSAGE" />
+
+<application>
+  <amazon:enable-feature android:name="com.amazon.device.messaging"
+                         android:required="false"/>
+  <service android:name="com.onesignal.ADMMessageHandler"
+           android:exported="false" />
+  <service android:name="com.onesignal.ADMMessageHandlerJob"
+           android:permission="android.permission.BIND_JOB_SERVICE"
+           android:exported="false" />
+  <receiver android:name="com.onesignal.ADMMessageHandler$Receiver"
+            android:permission="com.amazon.device.messaging.permission.SEND" >
+    <intent-filter>
+      <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+      <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+      <category android:name="APPLICATION_PACKAGE" />
+    </intent-filter>
+  </receiver>
+</application>
+```
+
+
+  </TabItem>
+  
+</Tabs>
+
+
+### Alongside Firebase
+
+<Tabs
+  groupId="packagemanager"
+  defaultValue="apm"
+  values={[
+    {label: 'APM', value: 'apm'},
+    {label: 'Manual', value: 'manual'},
+  ]}>
+
+  <TabItem value="apm" >
+
+To use the OneSignal with Amazon Device Messaging alongside the standard FCM integration you will need to install the OneSignal package.
+
+```
+apm install com.distriqt.PushNotifications-OneSignal
+```
+
+You then will need to manually add the Amazon manifest additions to your application. 
 
 Using `apm` you can generate a custom configuration which can be merged into your app descriptor by `apm`. Firstly create a configuration for android:
 
@@ -155,4 +269,3 @@ Ensure you replace:
   </TabItem>
   
 </Tabs>
-

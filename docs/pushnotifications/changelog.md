@@ -1,3 +1,17 @@
+### 2026.09.09 [v17.1.0]
+
+```
+This update brings support for Amazon Device Messaging and a dedicated package for OneSignal's Amazon integration simplifying the process of integrating Amazon notifications in your app.
+We have also optimised image loading for notifications to ensure better memory usage and to satisfy new review requirements.
+
+## Updates 
+
+feat(airpackage): add an airpackage (OneSignalAmazon) to simplify the usage of OneSignal through Amazon (https://github.com/airnativeextensions/ANE-PushNotifications/issues/340)
+feat(amazon): add a new service implementation to directly use Amazon Device Messaging on supported devices
+feat(amazon): add an airpackage (Amazon) for integration of Amazon Device Messaging through apm
+feat(android): implement optimised loading of notification images to reduce memory usage (resolves https://github.com/airnativeextensions/ANE-PushNotifications/issues/637)
+```
+
 ### 2025.09.17 [v17.0.1]
 
 ```

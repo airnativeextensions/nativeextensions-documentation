@@ -15,22 +15,20 @@ import SetupAPM from '../../../_includes/apm/setup-apm.mdx'
 Install the extension by running: 
 
 ```
-apm install com.distriqt.PushNotifications-FCM
+apm install com.distriqt.PushNotifications-Amazon
 ```
 
 This will download and install the extension, required assets, and all dependencies.
-
-> If you are using the base variant install `com.distriqt.PushNotifications` instead.
 
 Once complete `apm` will have created something like the following file structure: 
 
 ```
 .
 |____ ane
-| |____ com.distriqt.PushNotifications.FCM.ane	# PushNotifications extension
+| |____ com.distriqt.PushNotifications.Amazon.ane	# PushNotifications extension
 | |____ [dependencies]
-|____ apm_packages								# cache directory - ignore
-|____ project.apm								# apm project file
+|____ apm_packages									# cache directory - ignore
+|____ project.apm									# apm project file
 ```
 
 - Add the `ane` directory to your IDE. *See the tutorials located [here](/docs/tutorials/getting-started) on adding an extension to your IDE.*
