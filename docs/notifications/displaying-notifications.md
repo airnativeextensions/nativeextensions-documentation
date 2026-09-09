@@ -130,3 +130,41 @@ The payload is return in the notification events, more on this in the [Receiving
 
 
 
+## Visibility 
+
+**Android Only**
+
+By default all notifications are "public", this means the content will be displayed to the user even if the device is locked. 
+
+You can set a notification to be "private" or "secret". A secret notification is only displayed when the device is unlocked. A private notification is displayed to the user on the lock screen but with filtered content. 
+
+You set the visibility using the `setVisibility()` method:
+
+
+```actionscript
+new NotificationBuilder()
+
+	.setVisibility( NotificationVisibility.SECRET )
+
+	...
+```
+
+For private notifications you can also supply a public title and body to limit the display of sensitive information on the notification:
+
+
+```actionscript
+new NotificationBuilder()
+
+	.setTitle( "A private title" )
+	.setBody( "The private content" )
+
+	.setVisibility( NotificationVisibility.PRIVATE )
+	.setPublicVersion( "A public title", "The public content" )
+
+	...
+```
+
+In this way you can help conceal user information as appropriate for your needs.
+
+
+

@@ -1,3 +1,11 @@
+### 2026.09.09 [v9.0.4]
+
+```
+feat(android): remove deprecated asynctask usages
+feat(android): implement optimised loading of notification images to reduce memory usage
+feat(android): add ability to set visibility (private/public) for notifications on lock screen
+```
+
 ### 2026.09.08 [v9.0.3]
 
 ```
