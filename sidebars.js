@@ -14,6 +14,7 @@ module.exports = {
         { type: "ref", id: "applesignin/index" },
         { type: "ref", id: "application/index" },
         { type: "ref", id: "applicationrater/index" },
+        { type: "ref", id: "applifecycle/index" },
         { type: "ref", id: "audiorecorder/index" },
 
         { type: "ref", id: "battery/index" },
@@ -419,6 +420,34 @@ module.exports = {
           type: "link",
           label: "Contact Support",
           href: "https://github.com/airnativeextensions/ANE-ApplicationRater/issues/new",
+        },
+      ],
+    },
+  ],
+
+  applifecycle: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "applifecycle/index" },
+    {
+      "Get Started": ["applifecycle/add-the-extension"],
+    },
+   {
+      Usage: [
+        "applifecycle/app-lifecycle-events",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "applifecycle/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/applifecycle/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "https://github.com/airnativeextensions/ANE-AppLifecycle/issues/new",
         },
       ],
     },
