@@ -53,8 +53,8 @@ npm run send
 
 The script:
 
-- Requests an OAuth access token from api.amazon.com/auth/O2/token
-- Sends the ADM message to api.amazon.com/messaging/registrations/{registrationId}/messages
+- Requests an OAuth access token from `api.amazon.com/auth/O2/token`
+- Sends the ADM message to `api.amazon.com/messaging/registrations/[registrationId]/messages`
 - Prints the JSON response
 
 ### Payload format used by the example
