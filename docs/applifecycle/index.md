@@ -8,8 +8,9 @@ slug: /applifecycle/
 
 # AppLifecycle
 
-The [AppLifecycle](https://airnativeextensions.com/extension/com.distriqt.AppLifecycle) extension gives you the ability 
-to monitor the lifecycle of your application and determine when the application has been removed from the foreground.
+The [AppLifecycle](https://airnativeextensions.com/extension/com.distriqt.AppLifecycle) extension 
+gives you the ability to monitor the lifecycle of your application and determine when the application 
+has been moved from the foreground to the background and vice versa.
 
 We provide complete guides to get you up and running with sharing quickly and easily.
 
