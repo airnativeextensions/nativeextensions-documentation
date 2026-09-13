@@ -1,3 +1,9 @@
+### 2026.09.14 [v18.1.3]
+
+```
+feat(docs): remove target sdk definitions to avoid confusion (resolves https://github.com/airnativeextensions/ANE-InAppBilling/issues/689)
+```
+
 ### 2026.05.28 [v18.1.2]
 
 ```
