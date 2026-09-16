@@ -5,9 +5,12 @@ sidebar_label: Migrating from Application
 
 Transitioning your project from the Application ANE to the new SystemInfo ANE is straightforward, but it does require a few specific steps to ensure your cross-platform logic remains intact. 
 
-This guide assumes you are only using the system-related features of the Application extension. If you are using other features (like application lifecycle management), you may need to keep both extensions in your project.
+This guide assumes you are only using the system-related features of the Application extension. 
 
-If you are using the Application extension for display related features, consider migrating to the [Display](/docs/display) extension as well. 
+If you are using the Application extension for display related features, consider implementing the [Display](/docs/display) extension. 
+
+If you are using the Application extension for storing user data, consider implementing the [AppGroupDefaults](/docs/appgroupdefaults) extension.
+
 
 
 ### Step 1: Update Extension Dependencies
@@ -19,7 +22,11 @@ Don't forget to update your -app.xml. You'll need to add the new extension ID:
 ```xml
 <extensions>
     <extensionID>com.distriqt.SystemInfo</extensionID>
-    <extensionID>com.distriqt.Application</extensionID> 
+    
+    <!-- Dependencies for SystemInfo -->
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
 </extensions>
 ```
 

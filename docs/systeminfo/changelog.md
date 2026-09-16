@@ -1,3 +1,14 @@
+### 2026.09.03 [v0.1.1]
+
+```
+Small update to correct some minor issues
+
+## Updates
+
+- feat(docs): update docs for migration
+- feat(airpackage): correct air package dependencies
+```
+
 ### 2026.01.14 [v0.1.0]
 
 ```

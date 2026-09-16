@@ -29,7 +29,17 @@ On Android there are two identifiers available.
 
 - `VENDOR`: the value of the `ANDROID_ID`
 
-The `ANDROID_ID` is randomly generated when the user first sets up the device and should remain constant for the lifetime of the user's device,  The value may change if a factory reset is performed on the device. It will be the same for all application independent of the developer.
+On Android 8.0 (API level 26) and higher versions of the platform, a 64-bit number (expressed as a hexadecimal string), unique to each combination of app-signing key, user, and device. Values of `ANDROID_ID` are scoped by signing key and user. The value may change if a factory reset is performed on the device or if an APK signing key changes.
+
+:::info 
+Note: For apps that were installed prior to updating the device to a version of Android 8.0 (API level 26) or higher, the value of ANDROID_ID changes if the app is uninstalled and then reinstalled after the OTA. To preserve values across uninstalls after an OTA to Android 8.0 or higher, developers can use Key/Value Backup.
+:::
+
+In versions of the platform lower than Android 8.0 (API level 26), a 64-bit number (expressed as a hexadecimal string) that is randomly generated when the user first sets up the device and should remain constant for the lifetime of the user's device. On devices that have multiple users, each user appears as a completely separate device, so the `ANDROID_ID` value is unique to each user. It will be the same for all application independent of the developer.
+
+The value may change if a factory reset is performed on the device. 
+
+
 
 
 - `SERVICE`: uses the Google Play Services AppSet library
