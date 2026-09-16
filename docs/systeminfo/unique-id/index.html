@@ -14,7 +14,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="air native extensions" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.2a178d61.css">
-<script src="/assets/js/runtime~main.63934825.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.56e87495.js" defer="defer"></script>
 <script src="/assets/js/main.17a42c4b.js" defer="defer"></script>
 </head>
 <body>
@@ -30,7 +30,10 @@
 <ul>
 <li class=""><code>VENDOR</code>: the value of the <code>ANDROID_ID</code></li>
 </ul>
-<p>The <code>ANDROID_ID</code> is randomly generated when the user first sets up the device and should remain constant for the lifetime of the user&#x27;s device,  The value may change if a factory reset is performed on the device. It will be the same for all application independent of the developer.</p>
+<p>On Android 8.0 (API level 26) and higher versions of the platform, a 64-bit number (expressed as a hexadecimal string), unique to each combination of app-signing key, user, and device. Values of <code>ANDROID_ID</code> are scoped by signing key and user. The value may change if a factory reset is performed on the device or if an APK signing key changes.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Note: For apps that were installed prior to updating the device to a version of Android 8.0 (API level 26) or higher, the value of ANDROID_ID changes if the app is uninstalled and then reinstalled after the OTA. To preserve values across uninstalls after an OTA to Android 8.0 or higher, developers can use Key/Value Backup.</p></div></div>
+<p>In versions of the platform lower than Android 8.0 (API level 26), a 64-bit number (expressed as a hexadecimal string) that is randomly generated when the user first sets up the device and should remain constant for the lifetime of the user&#x27;s device. On devices that have multiple users, each user appears as a completely separate device, so the <code>ANDROID_ID</code> value is unique to each user. It will be the same for all application independent of the developer.</p>
+<p>The value may change if a factory reset is performed on the device.</p>
 <ul>
 <li class=""><code>SERVICE</code>: uses the Google Play Services AppSet library</li>
 </ul>
