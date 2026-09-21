@@ -1,3 +1,10 @@
+### 2026.09.21 [v17.2.0]
+
+```
+feat(android,fcm): update firebase android sdk to bom v34.19.0 (messaging v25.1.3, in-app messaging v22.0.3)
+feat(ios,fcm): update firebase ios sdk to v12.19.1
+```
+
 ### 2026.09.09 [v17.1.0]
 
 ```
