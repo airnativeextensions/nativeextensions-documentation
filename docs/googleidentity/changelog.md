@@ -1,3 +1,10 @@
+### 2026.09.21 [v8.2.0]
+
+```
+feat(android): update android googleid sdk to v1.2.1 (auth v22.0.0, credentials v1.6.0)
+feat(ios): update ios sign in sdk v9.2.0
+```
+
 ### 2026.02.17 [v8.1.0]
 
 ```
