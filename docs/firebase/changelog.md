@@ -1,3 +1,12 @@
+### 2026.09.21 [v12.1.0]
+
+```
+feat(android): update firebase android sdk to bom v34.19.0
+feat(ios): update firebase ios sdk to v12.19.1
+feat(ios): support for ios simulator swift compat library (https://github.com/airsdk/Adobe-Runtime-Support/issues/4255)
+feat(remoteconfig): add custom signals implementation (resolves https://github.com/airnativeextensions/ANE-Firebase/issues/526)
+```
+
 ### 2026.07.23 [v12.0.3]
 
 ```
