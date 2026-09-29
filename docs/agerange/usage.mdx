@@ -112,6 +112,113 @@ If you are solely developing for iOS you can skip the initialise call or you can
 :::
 
 
+## Checking Access Status
+
+Before requesting an age range, you can ask the extension for the current access status for the signed-in user. This is the preferred API for checking whether the user has shared age data or whether additional verification is required.
+
+The `requestAccessStatus()` method returns a string from `AgeRangeStatus`, including:
+
+- `AgeRangeStatus.SHARED`
+- `AgeRangeStatus.NOT_SHARED`
+- `AgeRangeStatus.VERIFICATION_REQUIRED`
+- `AgeRangeStatus.UNKNOWN`
+
+<Tabs
+  Id="platform"
+  defaultValue="air"
+  values={[
+    {label: 'AIR', value: 'air'},
+  ]}>
+
+<TabItem value="air" >
+
+```actionscript
+AgeRange.instance.requestAccessStatus(
+    function ( status:String ):void
+    {
+        switch ( status )
+        {
+            case AgeRangeStatus.SHARED:
+                trace( "User shared age signals" );
+                break;
+
+            case AgeRangeStatus.NOT_SHARED:
+                trace( "User did not share age signals" );
+                break;
+
+            case AgeRangeStatus.VERIFICATION_REQUIRED:
+                trace( "User verification required" );
+                break;
+
+            default:
+                trace( "Access status unknown: " + status );
+                break;
+        }
+    },
+    function ( error:Error ):void
+    {
+        trace( "requestAccessStatus ERROR: " + error.message );
+    }
+);
+```
+
+Alternatively, listen for the access-status events dispatched by the `AgeRange` instance:
+
+```actionscript
+AgeRange.instance.addEventListener( AgeRangeAccessEvent.REQUEST_ACCESS_COMPLETE, accessStatusHandler );
+AgeRange.instance.addEventListener( AgeRangeAccessEvent.REQUEST_ACCESS_ERROR, accessStatusErrorHandler );
+
+function accessStatusHandler( event:AgeRangeAccessEvent ):void
+{
+    trace( "access status: " + event.status );
+}
+
+function accessStatusErrorHandler( event:AgeRangeAccessEvent ):void
+{
+    var error:Error = event.error;
+    trace( "requestAccessStatus ERROR: " + error.message );
+}
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+AgeRange.Instance.RequestAccessStatus(
+    status =>
+    {
+        switch ( status )
+        {
+            case AgeRangeStatus.SHARED:
+                Debug.Log( "User shared age signals" );
+                break;
+
+            case AgeRangeStatus.NOT_SHARED:
+                Debug.Log( "User did not share age signals" );
+                break;
+
+            case AgeRangeStatus.VERIFICATION_REQUIRED:
+                Debug.Log( "User verification required" );
+                break;
+
+            default:
+                Debug.Log( "Access status unknown: " + status );
+                break;
+        }
+    },
+    error =>
+    {
+        Debug.LogError( "requestAccessStatus ERROR: " + error.Message );
+    }
+);
+```
+
+</TabItem>
+</Tabs>
+
+:::note
+The older `isEligibleForAgeRange()` helper has been deprecated in favour of `requestAccessStatus()`, which provides the richer status values defined in `AgeRangeStatus`.
+:::
 
 ## Requesting an Age Range
 
@@ -170,8 +277,7 @@ AgeRange.Instance.RequestAgeRange( request );
 This will trigger the age request UI and dispatch the result after the user has responded.
 
 
-
-## Handling the Response
+### Handling the Response
 
 
 <Tabs
@@ -232,11 +338,70 @@ The `AgeRangeResult` object returned on success contains information about the u
 You can use this information to adapt your application experience accordingly.
 
 
-
-
 ## Testing 
 
-You can force the extension to return a specific result by using the `setFakeAgeRangeResult()` method. 
+You can force the extension to return a specific access status by using the `setFakeAccessStatus()` method.
+
+<Tabs
+  Id="platform"
+  defaultValue="air"
+  values={[
+    {label: 'AIR', value: 'air'},
+  ]}>
+
+<TabItem value="air" >
+
+```actionscript
+AgeRange.instance.setFakeAccessStatus( AgeRangeStatus.VERIFICATION_REQUIRED );
+
+AgeRange.instance.requestAccessStatus(
+    function ( status:String ):void
+    {
+        trace( "status: " + status );
+    },
+    function ( error:Error ):void
+    {
+        trace( "requestAccessStatus ERROR: " + error.message );
+    }
+);
+```
+
+To clear the fake status and return to the normal runtime behaviour, call:
+
+```actionscript
+AgeRange.instance.setFakeAccessStatus( null );
+```
+
+</TabItem>
+<TabItem value="unity" >
+
+```csharp
+AgeRange.Instance.SetFakeAccessStatus( AgeRangeStatus.VERIFICATION_REQUIRED );
+
+AgeRange.Instance.RequestAccessStatus(
+    status =>
+    {
+        Debug.Log( "status: " + status );
+    },
+    error =>
+    {
+        Debug.LogError( "requestAccessStatus ERROR: " + error.Message );
+    }
+);
+```
+
+To clear the fake status and return to the normal runtime behaviour, call:
+
+```csharp
+AgeRange.Instance.SetFakeAccessStatus( null );
+```
+
+</TabItem>
+</Tabs>
+
+This is useful when testing how your application responds to different user states such as `SHARED`, `NOT_SHARED`, or `VERIFICATION_REQUIRED` without needing to interact with the real platform flow.
+
+You can also force the extension to return a specific age range result by using the `setFakeAgeRangeResult()` method.
 
 <Tabs
   Id="platform"

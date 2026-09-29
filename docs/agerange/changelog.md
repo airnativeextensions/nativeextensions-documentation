@@ -1,3 +1,11 @@
+### 2026.09.29 [v0.4.1]
+
+```
+feat(android,ios,actionscript): update to google age signals v0.0.4 and made api changes to suit new flow (https://github.com/airnativeextensions/ANE-AgeRange/issues/7)
+feat(android): add proguard rules for obfuscation
+feat(ios): add support for the ios simulator using swift compat
+```
+
 ### 2026.03.20 [v0.3.0]
 
 ```
@@ -21,13 +29,6 @@ For example, you could use this error code to trigger a fallback to an alternati
 ### Updates
 
 feat(android): update play signals api to v0.0.3 (resolves https://github.com/airnativeextensions/ANE-AgeRange/issues/3) 
-```
-
-### 2026.01.14 [v0.1.0]
-
-```
-feat(amazon): implementation for the amazon app store user age verification sdk
-feat: add initialise / isServiceSupported functionality to specify service for use 
 ```
 
 ### 2026.01.14 [v0.1.0]
