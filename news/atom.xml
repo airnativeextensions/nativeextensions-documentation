@@ -2,12 +2,144 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2026-09-01T00:00:00.000Z</updated>
+    <updated>2026-10-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2026 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[October 2026]]></title>
+        <id>https://docs.airnativeextensions.com/news/2026-10</id>
+        <link href="https://docs.airnativeextensions.com/news/2026-10"/>
+        <updated>2026-10-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[October 2026 Extension Updates]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>Expanding local notifications to macOS and Linux, optimizing push notifications, and updating core Firebase and Google Play Services integrations.</p>
+</blockquote>
+<p>September 2026 brought major updates across our notifications suite, highlighted by desktop support for local notifications on macOS and Linux. Alongside this expansion, we have deployed critical SDK updates to Firebase and Google Play Services, ensuring compliance and robust platform compatibility. This round of updates also optimises background image loading mechanisms to decrease runtime memory footprints on mobile platforms.</p>
+<p>Key focus:</p>
+<ul>
+<li class=""><strong>Desktop Notifications</strong>: Local notifications are now fully supported on macOS and Linux.</li>
+<li class=""><strong>Amazon Device Messaging</strong>: Added native Amazon ADM integration for Push Notifications.</li>
+<li class=""><strong>SDK Maintenance</strong>: Aligned Firebase (BOM v34.19.0) and iOS Firebase (v12.19.1) across the suite.</li>
+<li class=""><strong>Memory Optimisations</strong>: Enhanced memory usage on Android when loading rich notification images.</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Extension Updates</div><div class="admonitionContent_BuS1"><ul>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-Notifications/releases/tag/v9.0.4" target="_blank" rel="noopener noreferrer" class="">Notifications v9.0.4</a> - Added macOS and Linux support, optimised Android image loading, and lock screen visibility settings.</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-PushNotifications/releases/tag/v17.2.0" target="_blank" rel="noopener noreferrer" class="">PushNotifications v17.2.0</a> - Introduced Amazon Device Messaging support and aligned Firebase SDK to Android BOM v34.19.0 / iOS v12.19.1.</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-InAppBilling/releases/tag/v18.1.3" target="_blank" rel="noopener noreferrer" class="">InAppBilling v18.1.3</a> - Clarified Target SDK documentation to prevent development ambiguities.</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-GooglePlayServices/releases/tag/v32.3.0" target="_blank" rel="noopener noreferrer" class="">GooglePlayServices v32.3.0</a> - Updated Firebase/Play Services dependencies and added iOS Simulator Swift compatibility.</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-GoogleIdentity/releases/tag/v8.2.0" target="_blank" rel="noopener noreferrer" class="">GoogleIdentity v8.2.0</a> - Updated Android GoogleID and iOS Sign-In SDKs.</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-Firebase/releases/tag/v12.1.0" target="_blank" rel="noopener noreferrer" class="">Firebase v12.1.0</a> - Synchronised Android BOM and iOS dependencies, adding Remote Config custom signals support.</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="extension-updates">Extension Updates<a href="https://docs.airnativeextensions.com/news/2026-10#extension-updates" class="hash-link" aria-label="Direct link to Extension Updates" title="Direct link to Extension Updates" translate="no">​</a></h2>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/notifications-17ea144bf8003535bf2402064e2e1de0.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="notifications">Notifications<a href="https://docs.airnativeextensions.com/news/2026-10#notifications" class="hash-link" aria-label="Direct link to Notifications" title="Direct link to Notifications" translate="no">​</a></h3>
+<ul>
+<li class="">GitHub Releases: <a href="https://github.com/airnativeextensions/ANE-Notifications/releases/tag/v9.0.1" target="_blank" rel="noopener noreferrer" class="">v9.0.1</a>, <a href="https://github.com/airnativeextensions/ANE-Notifications/releases/tag/v9.0.2" target="_blank" rel="noopener noreferrer" class="">v9.0.2</a>, <a href="https://github.com/airnativeextensions/ANE-Notifications/releases/tag/v9.0.3" target="_blank" rel="noopener noreferrer" class="">v9.0.3</a>, <a href="https://github.com/airnativeextensions/ANE-Notifications/releases/tag/v9.0.4" target="_blank" rel="noopener noreferrer" class="">v9.0.4</a></li>
+<li class=""><a href="https://docs.airnativeextensions.com/docs/notifications/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></li>
+</ul>
+<p>This major version expansion brings local notifications to macOS and Linux (x86_64 &amp; arm64) while significantly refining Android's runtime memory usage and adding scheduling options.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://docs.airnativeextensions.com/news/2026-10#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>macOS &amp; Linux Support:</strong> Added full macOS native notification center support and a streamlined <code>libnotify</code> implementation for Linux environments.</li>
+<li class=""><strong>Android Memory Optimisation:</strong> Removed legacy <code>AsyncTask</code> usage and optimised image downloading to resolve background memory issues.</li>
+<li class=""><strong>Lock Screen Visibility:</strong> Added the capability to toggle visibility (private/public) on the Android lock screen.</li>
+<li class=""><strong>Exact Alarms:</strong> Introduced reliable Android exact alarm scheduling to address issues on newer Target SDKs.</li>
+<li class=""><strong>Bug Fixes:</strong> Resolved UTF-8 character handling on Windows and added large icon support for Linux.</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/firebase-messaging-7bb25a25ce65d5b7f013f39c75ad4ccf.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pushnotifications">PushNotifications<a href="https://docs.airnativeextensions.com/news/2026-10#pushnotifications" class="hash-link" aria-label="Direct link to PushNotifications" title="Direct link to PushNotifications" translate="no">​</a></h3>
+<ul>
+<li class="">GitHub Releases: <a href="https://github.com/airnativeextensions/ANE-PushNotifications/releases/tag/v17.1.0" target="_blank" rel="noopener noreferrer" class="">v17.1.0</a>, <a href="https://github.com/airnativeextensions/ANE-PushNotifications/releases/tag/v17.2.0" target="_blank" rel="noopener noreferrer" class="">v17.2.0</a></li>
+<li class=""><a href="https://docs.airnativeextensions.com/docs/pushnotifications/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></li>
+</ul>
+<p>This update introduces support for Amazon Device Messaging (ADM) and optimises background performance during asset loading alongside updates to the latest underlying Firebase SDKs.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-1">Updates<a href="https://docs.airnativeextensions.com/news/2026-10#updates-1" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Amazon Device Messaging (ADM):</strong> Native support for ADM alongside a dedicated <code>OneSignalAmazon</code> package for simple integration via <code>apm</code>.</li>
+<li class=""><strong>Optimised Background Loading:</strong> Enhanced image memory usage on Android to prevent system overhead limits during notification payloads.</li>
+<li class=""><strong>Firebase Alignment:</strong> Upgraded Android Firebase FCM SDK components to BOM v34.19.0 and iOS counterparts to v12.19.1.</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/inappbilling-711a8c968ade9dc1d0241b4443f8289f.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappbilling">InAppBilling<a href="https://docs.airnativeextensions.com/news/2026-10#inappbilling" class="hash-link" aria-label="Direct link to InAppBilling" title="Direct link to InAppBilling" translate="no">​</a></h3>
+<ul>
+<li class="">GitHub Release: <a href="https://github.com/airnativeextensions/ANE-InAppBilling/releases/tag/v18.1.3" target="_blank" rel="noopener noreferrer" class="">v18.1.3</a></li>
+<li class=""><a href="https://docs.airnativeextensions.com/docs/inappbilling/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></li>
+</ul>
+<p>A clean documentation alignment release updating Target SDK references.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-2">Updates<a href="https://docs.airnativeextensions.com/news/2026-10#updates-2" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Clarified Guidelines:</strong> Removed target SDK definitions within the documentation to simplify setup and lower deployment confusion.</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/googleplayservices-7b829d8bf2069d0ff860bb698cc198cb.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="googleplayservices">GooglePlayServices<a href="https://docs.airnativeextensions.com/news/2026-10#googleplayservices" class="hash-link" aria-label="Direct link to GooglePlayServices" title="Direct link to GooglePlayServices" translate="no">​</a></h3>
+<ul>
+<li class="">GitHub Release: <a href="https://github.com/airnativeextensions/ANE-GooglePlayServices/releases/tag/v32.3.0" target="_blank" rel="noopener noreferrer" class="">v32.3.0</a></li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-GooglePlayServices/wiki/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></li>
+</ul>
+<p>A major maintenance release aligning core Play Services dependencies to Android BOM v34.19.0 and iOS v12.19.1.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-3">Updates<a href="https://docs.airnativeextensions.com/news/2026-10#updates-3" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Firebase SDK Sync:</strong> Updated multiple packages (Core, Messaging, AdIdSupport, OnDeviceConversion) to Bom v34.19.0 (Android) and v12.19.1 (iOS).</li>
+<li class=""><strong>iOS Simulator Swift Support:</strong> Added native support for Swift compatibility libraries within iOS Simulators.</li>
+<li class=""><strong>Auth Upgrades:</strong> Bumped Google Play Services Auth dependency to v22.0.0.</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/google-2139fb34bc6120d0d9f76ae563b1fd35.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="googleidentity">GoogleIdentity<a href="https://docs.airnativeextensions.com/news/2026-10#googleidentity" class="hash-link" aria-label="Direct link to GoogleIdentity" title="Direct link to GoogleIdentity" translate="no">​</a></h3>
+<ul>
+<li class="">GitHub Release: <a href="https://github.com/airnativeextensions/ANE-GoogleIdentity/releases/tag/v8.2.0" target="_blank" rel="noopener noreferrer" class="">v8.2.0</a></li>
+<li class=""><a href="https://docs.airnativeextensions.com/docs/googleidentity/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></li>
+</ul>
+<p>Essential security and compatibility updates for Google Sign-In and GoogleID libraries on Android and iOS.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-4">Updates<a href="https://docs.airnativeextensions.com/news/2026-10#updates-4" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Android Upgrades:</strong> Updated Android GoogleID SDK to v1.2.1, bringing Auth to v22.0.0 and Credentials to v1.6.0.</li>
+<li class=""><strong>iOS Upgrades:</strong> Updated iOS Google Sign-In SDK to v9.2.0.</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/firebase-b328933f96c7ed72f04af8a4cfe84e56.png" width="800" height="400" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="firebase">Firebase<a href="https://docs.airnativeextensions.com/news/2026-10#firebase" class="hash-link" aria-label="Direct link to Firebase" title="Direct link to Firebase" translate="no">​</a></h3>
+<ul>
+<li class="">GitHub Release: <a href="https://github.com/airnativeextensions/ANE-Firebase/releases/tag/v12.1.0" target="_blank" rel="noopener noreferrer" class="">v12.1.0</a></li>
+<li class=""><a href="https://docs.airnativeextensions.com/docs/firebase/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></li>
+</ul>
+<p>Core Firebase modules have been fully updated to the latest upstream SDKs, adding Swift compatibility enhancements and Remote Config improvements.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-5">Updates<a href="https://docs.airnativeextensions.com/news/2026-10#updates-5" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>BOM Sync:</strong> Upgraded Firebase Android SDK to BOM v34.19.0 and iOS Firebase to v12.19.1.</li>
+<li class=""><strong>Swift Compat:</strong> Added iOS Simulator Swift compatibility libraries.</li>
+<li class=""><strong>Remote Config Custom Signals:</strong> Introduced support for custom signals within the Remote Config library.</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/adobeair-75ec23410377afde7761a5bb875e30e4.png" width="800" height="381" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-information">Further Information<a href="https://docs.airnativeextensions.com/news/2026-10#further-information" class="hash-link" aria-label="Direct link to Further Information" title="Direct link to Further Information" translate="no">​</a></h2>
+<p>As always, thank you for your continued support of distriqt and the AIR developer community. Your feedback and contributions help us keep these extensions up to date and running smoothly across platforms.</p>
+<ul>
+<li class="">For full documentation and setup guides, visit <a href="https://docs.airnativeextensions.com/" target="_blank" rel="noopener noreferrer" class="">docs.airnativeextensions.com</a></li>
+<li class="">Join the AIR community discussions and get support at <a href="https://github.com/airsdk/Adobe-Runtime-Support/" target="_blank" rel="noopener noreferrer" class="">github</a></li>
+<li class="">Publicly available extensions at <a href="https://github.com/airnativeextensions" target="_blank" rel="noopener noreferrer" class="">airnativeextensions</a></li>
+<li class=""><a href="https://github.com/sponsors/marchbold" target="_blank" rel="noopener noreferrer" class="">Support</a> my ongoing involvement in the community</li>
+</ul>
+<p>Stay tuned for more updates next month!</p>]]></content>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
+        <category label="newsletter" term="newsletter"/>
+        <category label="notifications" term="notifications"/>
+        <category label="pushnotifications" term="pushnotifications"/>
+        <category label="inappbilling" term="inappbilling"/>
+        <category label="googleplayservices" term="googleplayservices"/>
+        <category label="googleidentity" term="googleidentity"/>
+        <category label="firebase" term="firebase"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[September 2026]]></title>
         <id>https://docs.airnativeextensions.com/news/2026-09</id>
@@ -1775,43 +1907,5 @@ If you require historical transactions you should now track purchase history on 
         <category label="crashutils" term="crashutils"/>
         <category label="detectscreenshot" term="detectscreenshot"/>
         <category label="nfc" term="nfc"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[APM v2.0]]></title>
-        <id>https://docs.airnativeextensions.com/news/2025-03</id>
-        <link href="https://docs.airnativeextensions.com/news/2025-03"/>
-        <updated>2025-03-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[APM update]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>Linux support</p>
-</blockquote>
-<p><strong>APM Now Supports Linux: Expanded Capabilities and Key Updates</strong></p>
-<p>Great news for developers! APM has been updated to fully support Linux operating systems. This means you can now use APM to install and manage libraries, extensions, and application descriptors in Linux-based development environments. This long-awaited feature enhances APM’s versatility and makes it even more accessible to a broader range of developers.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-new-in-this-update">What’s New in This Update?<a href="https://docs.airnativeextensions.com/news/2025-03#whats-new-in-this-update" class="hash-link" aria-label="Direct link to What’s New in This Update?" title="Direct link to What’s New in This Update?" translate="no">​</a></h3>
-<p>In addition to Linux support, this update brings several important fixes and feature enhancements, including:</p>
-<ul>
-<li class=""><strong>Feature:</strong> Added full Linux implementation for APM (Resolves <a href="https://github.com/airsdk/apm/issues/148" target="_blank" rel="noopener noreferrer" class="">#148</a>).</li>
-<li class=""><strong>Feature:</strong> Improved error reporting by adding descriptions of parameters that caused app-descriptor generation failures (Resolves <a href="https://github.com/airsdk/apm/issues/188" target="_blank" rel="noopener noreferrer" class="">#188</a>).</li>
-<li class=""><strong>Bug Fix:</strong> Resolved an issue where configuration settings were being removed after a package update (Resolves <a href="https://github.com/airsdk/apm/issues/209" target="_blank" rel="noopener noreferrer" class="">#209</a>).</li>
-<li class=""><strong>Android Updates:</strong>
-<ul>
-<li class="">Updated the manifest merge client to version 31.9.0.</li>
-<li class="">Fixed an issue where Java output from manifest merging was causing XML errors (Resolves <a href="https://github.com/airsdk/apm/issues/164" target="_blank" rel="noopener noreferrer" class="">#164</a>).</li>
-<li class="">Added the ability to pass through “tools” requests to the app descriptor, ensuring proper handling during ADT packaging (Resolves <a href="https://github.com/airsdk/apm/issues/219" target="_blank" rel="noopener noreferrer" class="">#219</a>).</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-this-matters">Why This Matters<a href="https://docs.airnativeextensions.com/news/2025-03#why-this-matters" class="hash-link" aria-label="Direct link to Why This Matters" title="Direct link to Why This Matters" translate="no">​</a></h3>
-<p>With the introduction of Linux support, APM is now a more powerful tool for developers across different operating systems. Whether you're working in Windows, macOS, or Linux, you can now seamlessly manage your libraries and application descriptors using APM.</p>
-<p>These updates also enhance stability, making package updates smoother and reducing potential configuration issues. The Android-related improvements further refine the development workflow, ensuring better compatibility and handling of manifest files.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="try-it-out">Try It Out<a href="https://docs.airnativeextensions.com/news/2025-03#try-it-out" class="hash-link" aria-label="Direct link to Try It Out" title="Direct link to Try It Out" translate="no">​</a></h3>
-<p>If you're a Linux user, now is the perfect time to explore APM’s capabilities. Upgrade to the latest version and let us know how it improves your workflow!</p>
-<p><a href="https://airsdk.dev/docs/basics/install-apm" target="_blank" rel="noopener noreferrer" class="">https://airsdk.dev/docs/basics/install-apm</a></p>
-<p>Stay tuned for more updates, and as always, happy coding!</p>]]></content>
-        <author>
-            <name>Michael</name>
-            <uri>https://github.com/marchbold</uri>
-        </author>
-        <category label="apm" term="apm"/>
     </entry>
 </feed>
