@@ -1,3 +1,10 @@
+### 2026.10.01 [v0.4.2]
+
+```
+fix(android,amazon): correct handling of an empty userStatus, correctly process amazon response status (resolves https://github.com/airnativeextensions/ANE-AgeRange/issues/9)
+feat(android): complete proguard rules for obfuscation
+```
+
 ### 2026.09.29 [v0.4.1]
 
 ```
