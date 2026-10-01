@@ -77,7 +77,7 @@ A clean documentation alignment release updating Target SDK references.
 ![](images/googleplayservices.png)
 ### GooglePlayServices
 - GitHub Release: [v32.3.0](https://github.com/airnativeextensions/ANE-GooglePlayServices/releases/tag/v32.3.0)
-- [Documentation](https://docs.airnativeextensions.com/docs/googleplayservices/)
+- [Documentation](https://github.com/airnativeextensions/ANE-GooglePlayServices/wiki/)
 
 A major maintenance release aligning core Play Services dependencies to Android BOM v34.19.0 and iOS v12.19.1.
 
