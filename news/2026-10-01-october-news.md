@@ -28,9 +28,10 @@ Key focus:
 
 <!-- truncate -->
 
+---
+
 ## Extension Updates
 
----
 
 ![](images/notifications.png)
 ### Notifications

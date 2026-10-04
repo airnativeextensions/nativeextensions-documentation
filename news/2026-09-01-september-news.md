@@ -22,6 +22,7 @@ Key focus:
 
 <!-- truncate -->
 
+
 ## News & Announcements
 
 ### [Major Price Reduction](https://docs.airnativeextensions.com/news/2026/08/25/price-reduction)
@@ -38,10 +39,10 @@ If you are currently subscribed:
 
 [Read the full announcement here.](https://docs.airnativeextensions.com/news/2026/08/25/price-reduction)
 
+---
 
 ## Extension Updates
 
----
 
 ![](images/googleplayservices.png)
 
