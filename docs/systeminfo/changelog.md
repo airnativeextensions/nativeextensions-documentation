@@ -1,3 +1,17 @@
+### 2026.10.07 [v0.2.0]
+
+```
+Windows now uses an improved unique-ID and storage approach, with its implementation moved to the core libraries for more consistent logging. Android adds ProGuard rules, and Android and iOS have been updated to the latest core libraries. iOS also now uses a centralized context.
+
+## Updates 
+
+feat(windows): improve unique id approach and storage
+feat(windows): move to core libraries approach with improved logging
+feat(android): add proguard rules
+feat(android,ios): updates for latest core libs
+feat(ios): move to new centralised context
+```
+
 ### 2026.09.03 [v0.1.1]
 
 ```
