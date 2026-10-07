@@ -1,3 +1,9 @@
+### 2026.10.07 [v0.2.1]
+
+```
+fix(airpackage): correct package requirements
+```
+
 ### 2026.10.07 [v0.2.0]
 
 ```
