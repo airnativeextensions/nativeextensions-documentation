@@ -15,6 +15,7 @@ module.exports = {
         { type: "ref", id: "application/index" },
         { type: "ref", id: "applicationrater/index" },
         { type: "ref", id: "applifecycle/index" },
+        { type: "ref", id: "appsettings/index" },
         { type: "ref", id: "audiorecorder/index" },
 
         { type: "ref", id: "battery/index" },
@@ -486,6 +487,36 @@ module.exports = {
           type: "link",
           label: "Contact Support",
           href: "https://github.com/airnativeextensions/ANE-AppLovinSDK/issues/new",
+        },
+      ],
+    },
+  ],
+
+  appsettings: [
+    { type: "ref", id: "index" },
+    { type: "doc", id: "appsettings/index" },
+    {
+      "Get Started": ["appsettings/add-the-extension"],
+    },
+    {
+      "Storing Information": [
+        "appsettings/defaults",
+        "appsettings/keychain",
+        "appsettings/settings",
+      ],
+    },
+    {
+      Other: [
+        { type: "doc", id: "appsettings/changelog" },
+        {
+          type: "link",
+          label: "asdocs",
+          href: "https://docs.airnativeextensions.com/asdocs/appsettings/",
+        },
+        {
+          type: "link",
+          label: "Contact Support",
+          href: "https://github.com/airnativeextensions/ANE-AppSettings/issues/new",
         },
       ],
     },
