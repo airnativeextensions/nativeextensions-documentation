@@ -7,9 +7,9 @@ sidebar_label: Setup
 
 The first step to setting up purchases is to create your products.
 
-This is done through the iTunes Connect configuration for your application. Before starting make sure you understand what you can sell using in-app purchases.
+Configure in-app purchases for your app in [App Store Connect](https://appstoreconnect.apple.com/). Before creating products, review Apple's [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) and confirm that your content and payment flow meet its requirements.
 
-From the Apple [documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Chapters/Products.html#//apple_ref/doc/uid/TP40008267-CH2-SW2): 
+For current product setup guidance, see Apple's [in-app purchase documentation](https://developer.apple.com/in-app-purchase/):
 
 > 
 > You can use In-App Purchase to sell content, app functionality, and services.
@@ -21,32 +21,25 @@ From the Apple [documentation](https://developer.apple.com/library/content/docum
 > You can’t use In-App Purchase to sell real-world goods and services or to sell unsuitable content.
 > 
 > - **Real-world goods and services**. You must deliver a digital good or service within your app when using In-App Purchase. Use a different payment mechanism to let your users buy real-world goods and services in your app, such as a credit card or payment service.
-> - **Unsuitable content**. Don’t use In-App Purchase to sell content that the isn’t allowed by the App Review Guidelines—for example, pornography, hate speech, or defamation.
+> - **Unsuitable content**. Don’t use In-App Purchase to sell content that isn’t allowed by the App Review Guidelines.
 >
 > For detailed information about what you can offer using In-App Purchase, see your license agreement and the App Review Guidelines. Reviewing the guidelines carefully before you start coding helps you avoid delays and rejection during the review process. If the guidelines don’t address your case in sufficient detail, you can ask the App Review team specific questions using the online contact form.
 > 
 
 
-Once you are certain you can sell your product log in to [iTunes Connect](https://itunesconnect.apple.com) and select your application.
+Create each product in App Store Connect. Product IDs are specific to an app, so keep them stable after release. Choose the correct product type when creating a product; it can't be changed later.
 
-Under **Features** you will see the **In-App Purchases** section.
+Use the product ID in the extension's `getProducts` call and purchase request.
 
 Every product you create is only available to one particular application and cannot be shared amongst other applications.
 
-To create a product (the following is adapted from the [Apple documentation](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnectInAppPurchase_Guide/Chapters/CreatingInAppPurchaseProducts.html#//apple_ref/doc/uid/TP40013727-CH3-SW1)):
+When creating a product in App Store Connect:
 
-- Click the Add button (+) as highlighted in the screenshot below:
+- Choose the product type carefully; it can't be changed after creation.
 
-![](images/AppDetails-menu-4_2x.png)
+- Set a product ID that you can keep stable after release.
 
-- In the section for the type of in-app purchase you want to create, click Create. 
-
-  The in-app purchase product type cannot be changed once your in-app purchase has been created.
-
-- In the Reference Name field, enter an internal name for the product.
-- In the Product ID field, enter an alphanumeric identifier for the product.
-
-  In iTunes Connect, you identify the in-app purchase product using a string called a **product identifier**. 
+  The product ID is the **product identifier**. 
   For example, com.company.app_name.productid.
   When your app uses the extension to communicate with the App Store, it uses product identifiers 
   to the `getProducts` function to retrieve the configuration data you provided for the products. 
@@ -56,66 +49,41 @@ To create a product (the following is adapted from the [Apple documentation](htt
 - For auto-renewable subscriptions, create a New Subscription Group, or add it to an existing group. 
   All auto-renewable subscriptions must be part of a group. 
   You can learn more in Understanding Subscription Groups and Durations.
-- Specify whether the product is cleared for sale.
-- Choose a price tier. The price tier determines both the customer price and your proceeds.
-- Configure the product display text for at least one language.
-- In the Review Notes section, enter information that can help Apple review the product.
-- Upload a screenshot of the product as it appears on the device.
-
-  This screenshot is used for Apple’s review only and is not displayed on the App Store.
-
-- Click Save.
+- Set availability and pricing, add localizations, and provide any required review information.
 
 Your in-app purchase product appears on the app’s In-App Purchases page. 
 
-If the product is Ready to Submit, the product’s configuration is complete and ready for you to test the product with your app. 
+Product status labels and submission requirements can change; follow current App Store Connect guidance for testing and release.
 You should now be able to use the extension to query and make test purchases of your products.
 
-You will need to have your product reviewed and release your application in order to have your products available to your users.
+Complete the product's required metadata, localization, pricing, availability, and review information in App Store Connect. Follow current submission requirements before offering products in production.
 
 ---
 
-## Testing 
+## Testing
 
-Each platform has slightly different test environments that you will need to be aware of and setup to be able to 
-correctly implement and test purchases.
+Use the testing environment that matches what you need to validate:
 
-- Create a test user in the sandbox environment: [Setting Up User Accounts](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SettingUpUserAccounts.html#//apple_ref/doc/uid/TP40011225-CH25-SW10)
-- Log out from your iTunes account on the test iOS device
-- Do not sign in with your test account in the Settings
-- Launch your application, you'll be asked to sign into the store while you are testing
+- **StoreKit Testing in Xcode** lets you test locally with a StoreKit configuration file, without creating sandbox tester accounts or making App Store purchases.
+- **Sandbox testing** exercises purchases against Apple's sandbox. Create sandbox tester accounts in App Store Connect and follow Apple's current sign-in instructions for your OS version.
+- **TestFlight** uses the sandbox environment for in-app purchases. Test with the app distributed through TestFlight and ensure your server handles sandbox transactions correctly.
 
-Test each part of your code to verify that you’ve implemented it correctly.
+Test product loading, successful and cancelled purchases, pending purchases where applicable, restores, subscription renewals and expirations, and your server-side verification and entitlement updates. See Apple's [StoreKit documentation](https://developer.apple.com/documentation/storekit) for current testing details.
 
 ---
 
 ## Security Recommendation
 
-When you send a purchase request, create a `String` token that identifies the user making this purchase request 
-and include this token in the `applicationUsername`. You can use a randomly generated string as the token. 
+If you associate purchases with accounts in your service, set `applicationUsername` to an opaque value that identifies the account without exposing personal information. For StoreKit 2, this value must be a UUID string: the extension passes it to StoreKit as `appAccountToken`. Non-UUID values aren't used as an app account token by StoreKit 2. Keep the association on your server and don't treat this value by itself as proof that a purchase is valid.
 
-By way of illustration, consider the following two examples. In the normal 
-case, many different users on your server each buy coins to 
-use in your game, and each user pays for the purchase from a different 
-App Store account. In contrast, it would be very unusual for a single 
-user on your server to buy coins multiple times, paying for each 
-purchase from a different App Store account. The App Store can't
-detect this kind of irregular activity on its own—it needs information 
-from your app about which account on your server is associated with
-the transaction.
-
-
-https://developer.apple.com/library/ios/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html
+Verify transactions before granting entitlements. See [Server Side Verification](server-side-verification.md) for the app-receipt and StoreKit 2 JWS approaches.
 
 
 ---
 
-## Further information
+## Further Information
 
-Apple provides a guide for setting up InApp Purchases. 
-It can be quite a complex process so make sure you follow the guide exactly and complete each step: 
-
-[Adding In-App Purchase to your iOS and Mac Applications](http://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
-
-You can also see the Apple FAQs [here](http://developer.apple.com/library/ios/#technotes/tn2259/_index.html#//apple_ref/doc/uid/DTS40009578-CH1-FREQUENTLY_ASKED_QUESTIONS).
+- [Apple In-App Purchase](https://developer.apple.com/in-app-purchase/)
+- [StoreKit documentation](https://developer.apple.com/documentation/storekit)
+- [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)
 

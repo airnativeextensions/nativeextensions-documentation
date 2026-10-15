@@ -2290,6 +2290,7 @@ module.exports = {
           "Subscription Offers": [
             "inappbilling/subscription-offers",
             "inappbilling/introductory-prices",
+            "inappbilling/winback-offers",
           ],
         },
         "inappbilling/dialogs",
@@ -2301,6 +2302,7 @@ module.exports = {
     },
     {
       Help: [
+        "inappbilling/migration-v19.0", 
         "inappbilling/migration-v17.0", 
         "inappbilling/migration-v16.0", 
         "inappbilling/migration-v15.4", 

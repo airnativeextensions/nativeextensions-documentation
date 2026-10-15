@@ -5,76 +5,53 @@ sidebar_label: Testing
 
 ## iOS Subscriptions
 
-When testing subscriptions, you should be aware that they work differently in the sandbox, TestFlight and on the App Store. 
+StoreKit 2 subscription testing uses the same Xcode, sandbox, and TestFlight environments as other StoreKit purchases. The extension listens for StoreKit 2 transaction updates and reports them through `PurchaseEvent.PURCHASES_UPDATED`; register this listener during setup and update entitlements from verified purchase data.
 
-In order to test correctly you will need to be aware of these differences.
+Authentication prompts and purchase-sheet behavior vary by environment and OS version. Test the purchase flow on the OS versions and devices you support; sandbox behavior isn't a reliable preview of the production purchase sheet.
 
->
-> Importantly be aware that while running your application in sandbox or TestFlight you will not be able to use Touch / Face ID and that you will experience a much large number of password requests. Basically for every AppStore interaction the password dialog will be presented. 
->
-> You have to trust that this process is not how your live application will perform once deployed to production in the AppStore.
-> 
-> We often advise developers to make a simple way for beta testers to switch between subscribed and unsubscribed otherwise you may find your subscribed state will get a lot less testing due to the number of password requests required (sometimes up to three to purchase a subscription).
->
+Use separate test accounts and controlled test data to exercise subscribed and unsubscribed states. Don't add a production entitlement bypass for beta testing.
 
+### Sandbox and TestFlight
 
-### Duration
+Sandbox subscription renewals are accelerated, and the renewal rate can be configured for each Sandbox Apple Account. Sandbox subscriptions renew up to 12 times after the initial purchase. The exact elapsed time depends on the selected renewal rate; see Apple's [sandbox account settings](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/manage-sandbox-apple-account-settings/) and [sandbox subscription testing guide](https://developer.apple.com/documentation/storekit/testing-an-auto-renewable-subscription).
 
-Subscription durations are greatly reduced for testing purposes allowing you to quickly test multiple renewals and expirations via TestFlight and in the sandbox.
+The accelerated sandbox timings are configurable and differ from production. TestFlight also uses the sandbox, but its timing and sign-in workflow differ; don't use sandbox elapsed times as a release criterion for production.
 
-| Subscription Duration | Test Duration |
-| --- | --- |
-| 1 week | 3 minutes |
-| 1 month | 5 minutes |
-| 2 months | 10 minutes |
-| 3 months | 15 minutes |
-| 6 months | 30 minutes |
-| 1 year | 1 hour |
-
-
-A subscription will automatically renew 6 times per account per 8 hour window, at which point the subscription will expire.
-
-There is no way to test cancellation directly as these renewals happen automatically.
-
-There is also no way to test subscription management while in the sandbox or TestFlight.
+You can test turning off auto-renew in sandbox account settings. On iOS, open **Settings > Developer**, tap your **Sandbox Apple Account**, then tap **Manage**. Select the subscription and cancel it. See Apple's [guide to testing disabled auto-renew](https://developer.apple.com/documentation/storekit/testing-disabling-auto-renew). Subscription-management options and UI depend on the test environment.
 
 
 ### Suggested Tests
 
-Note that with the notes above about the 8 hour window performing several of these tests within a short period may have unexpected results. You should be aware that every subscription may not renew 6 times within that window. Try to perform tests within the first subscription period (5 minutes for monthly).
-
-We suggest you test the **Renewals and Expiration** first as this is the main test that uses the renewal attempts.
-
-Also it is helpful to test with multiple sandbox accounts as these restrictions are per account.
+Use the renewal rate configured for the test account when planning waits. Test with more than one Sandbox Apple Account when you need independent purchase histories; sandbox settings and transaction history are account-specific.
 
 
 
 #### Renewals and Expiration
 
-This process is to test the the subscription, renewals and expiration process works correctly.
+Test that StoreKit 2 subscription transactions update entitlements as the subscription renews and expires.
 
 - Subscribe to a monthly subscription
-- Close your app and wait 5 minutes
-- Launch your app
-- If a prompt is displayed enter the password
+- Keep the app open or relaunch it after the configured sandbox renewal interval.
+- Observe `PurchaseEvent.PURCHASES_UPDATED` and update access using the verified transaction state.
+- Finish each transaction after processing it, then verify that completed transactions aren't delivered again as unfinished on the next launch.
 
-Your application should still be subscribed at this point.
+The app should continue to grant access while the subscription is active.
 
-- Repeat this process until 35 minutes have passed (6 renewal periods + original subscription period)
+- Continue through the configured renewal attempts until the subscription expires.
 
-Your application should now be in an un-subscribed state.
+The app should stop granting access when the verified subscription is expired. Don't use a fixed elapsed time; renewal rate and renewal limits are configurable for the sandbox account.
 
 
 #### Restoring after Expiration
 
-This process is to test whether the restore purchases call correctly reports no active subscriptions after a subscription has expired.
+Test that restoring after expiration does not grant access to an expired subscription.
 
 - Subscribe to a monthly subscription
-- Perform the **Renewals and Expiration** test to expire the subscription or simply close the app and wait 35 minutes
+- Let the subscription expire using the renewal rate configured for the sandbox account.
 - Launch the application (enter password if prompted)
 - Go through your restore purchases process
 
-At this point it should report no active subscriptions were found and your application should be in the un-subscribed state. 
+The expired subscription should not grant access. StoreKit 2 restore calls `AppStore.sync()` and refreshes current entitlements; it doesn't reactivate an expired subscription.
 
 
 
@@ -84,10 +61,10 @@ This process is to check the restoring of a subscription during an active subscr
 
 - Subscribe to a monthly subscription
 - Close and uninstall the application
-- Reinstall the application within 5 minutes
+- Reinstall the application while the subscription is still active.
 - Go through your restore purchases process
 
-At this point the application should have restored the active subscription and be in the subscribed state.
+The app should regain access to the active subscription after restore and entitlement refresh.
 
 
 
@@ -99,7 +76,14 @@ This process is to check the updating of the subscription state across a user's 
 - Install the application on another device before the expiration
 - Go through your restore purchases process using the same test user as on the first device
 
-The restore process should have picked up the active subscription purchased on the first device and the second device should be in the subscribed state. 
+The second device should receive or restore the active subscription for the same Sandbox Apple Account and grant the corresponding entitlement.
+
+## Further Information
+
+- [Testing Apple In-App Purchases in Xcode](https://developer.apple.com/documentation/storekit/testing-in-app-purchases-in-xcode)
+- [Testing Apple In-App Purchases with sandbox](https://developer.apple.com/documentation/storekit/testing-in-app-purchases-with-sandbox)
+- [StoreKit 2 transaction updates](https://developer.apple.com/documentation/storekit/transaction/updates)
+- [Restoring purchased products](https://developer.apple.com/documentation/storekit/restoring-purchased-products)
 
 
 

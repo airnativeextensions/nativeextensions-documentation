@@ -1,0 +1,45 @@
+---
+title: Migration v19.0
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+
+This latest update integrates **StoreKit v2** bringing support for the latest Apple Store functionality. 
+It also provides support for win back offers on iOS. 
+
+
+
+## Winback Offers
+
+Winback offers allow you to provide special promotions to users who have previously made purchases but have since become inactive. This feature is now supported on iOS with the latest update, enabling you to re-engage users and encourage them to return to your app.
+
+You can read more about the [Winback Offers](winback-offers.mdx) feature here.
+
+
+## StoreKit v2 Integration
+
+StoreKit v2 is the latest version of Apple's in-app purchase framework, offering enhanced capabilities and a more streamlined experience for both developers and users. With this update, the InAppBilling extension now fully supports StoreKit v2, allowing you to take advantage of the latest features and improvements in the Apple Store ecosystem.
+
+- support for Purchase History
+- support for Refunds
+- improved subscription management
+- enhanced error handling
+- jws (JSON Web Signature) support
+
+We have kept the API practically identical to the previous version, ensuring a smooth transition for developers upgrading to the latest release.
+
+You will notice that `isGetPurchasesSupported` now reflects the capabilities of StoreKit v2 which now allows you to access the full purchase history of the user.
+
+So you can call `getPurchases()` to retrieve the complete list of purchases for the user. This makes tracking subscriptions and purchases much simpler. 
+
+One important thing to note is a change in the server-side verification process with StoreKit v2. 
+You will need to update your server implementation to handle the new purchase jws (JSON Web Signature) provided by StoreKit v2. 
+See [Server Side Verification](apple/server-side-verification.md) for how to get started.
+
+:::note
+StoreKit 1 is still supported for cases where StoreKit v2 is not available or not suitable. 
+This includes older devices (iOS versions prior to iOS 16.4).
+:::
+

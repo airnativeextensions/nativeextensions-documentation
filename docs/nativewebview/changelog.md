@@ -1,3 +1,17 @@
+### 2026.10.15 [v9.1.0]
+
+```
+Android now recovers from WebView renderer termination, restoring page content and applying ProGuard rules for release builds. Windows now uses shared core libraries with improved logging and safer CEF initialization, while iOS and macOS use centralized context and logging; the package dependency was updated.
+
+### Updates 
+
+feat(android): add handling of render process gone - allowing disposal and recreation of webviews
+feat(android): add proguard rules
+feat(ios,macos): move to new centralised context and logging
+feat(windows): migrate to new shared dll core libraries
+feat(windows): additional logging outputs
+```
+
 ### 2026.06.01 [v9.0.1]
 
 ```

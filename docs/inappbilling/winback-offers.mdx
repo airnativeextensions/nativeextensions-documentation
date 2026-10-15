@@ -1,0 +1,105 @@
+---
+title: Win-Back Offers
+sidebar_label: Win-Back Offers
+---
+
+Win-back offers are discounted auto-renewable subscription offers for eligible lapsed customers. Configure the offer in App Store Connect before requesting it.
+
+## Requirements
+
+Win-back offer retrieval is available on iOS 18 and later through StoreKit 2. The App Store determines which configured offers are available for the current customer. Other platforms and older iOS versions do not support this API.
+
+## Retrieve Offers
+
+Pass the product IDs for the auto-renewable subscriptions to check. The operation is asynchronous: `true` means the request started, not that offers were found. The callback receives `null` if retrieval fails, an empty vector if no offers are available, or a vector of `WinbackOffer` objects.
+
+```actionscript
+var productIds:Array = [ "com.example.app.subscription" ];
+
+var started:Boolean = InAppBilling.service.getWinbackOffers(
+    productIds,
+    function ( offers:Vector.<WinbackOffer> ):void
+    {
+        if (offers == null)
+        {
+            trace( "Failed to load win-back offers" );
+            return;
+        }
+
+        if (offers.length == 0)
+        {
+            trace( "No win-back offers are currently available" );
+            return;
+        }
+
+        for each (var winback:WinbackOffer in offers)
+        {
+            trace( "Offer for " + winback.product.id + ": " + winback.offer.id );
+            for each (var phase:SubscriptionPhase in winback.offer.pricingPhases)
+            {
+                trace( phase.priceString + " for "
+                    + phase.subscriptionPeriod.numberOfUnits + " "
+                    + phase.subscriptionPeriod.unit );
+            }
+        }
+    }
+);
+```
+
+`WinbackOffer` pairs the subscription `product` with its `offer`. 
+Inspect the offer's pricing phases and present the applicable price and duration before purchase. 
+Do not assume the first returned offer is the right one if several are available.
+
+You can also handle completion through `WinbackOfferEvent.OFFERS_LOADED` and `WinbackOfferEvent.ERROR`. 
+The callback receives `null` on retrieval failure and an empty vector when no offers are available. 
+The event API reports both retrieval failures and the no-offer case through `ERROR`; inspect `errorMessage`
+ to distinguish them. Choose either callbacks or events for result handling to avoid processing the same response twice.
+
+## Redeem an Offer
+
+Create a `PurchaseRequest` for the offer's product and attach the `SubscriptionOffer` using `SubscriptionOfferRequest`. 
+On this StoreKit 2 win-back path, the offer does not require a subscription-offer signature; 
+the native implementation uses the offer identifier to select StoreKit's win-back offer.
+
+```actionscript
+var request:PurchaseRequest = new PurchaseRequest()
+    .setProductId( winback.product.id )
+    .setApplicationUsername( accountUuid )
+    .setSubscriptionOfferRequest(
+        new SubscriptionOfferRequest()
+            .setSubscriptionOffer( winback.offer )
+    );
+
+if (!InAppBilling.service.checkPurchaseRequestValid( request ))
+{
+    trace( "Win-back purchase request is not valid" );
+    return;
+}
+
+if (!InAppBilling.service.makePurchase( request ))
+{
+    trace( "Win-back purchase could not be started" );
+}
+```
+
+If you associate purchases with an app account, pass a stable UUID string as `accountUuid`. 
+StoreKit 2 uses this value as `appAccountToken`; non-UUID values are ignored for that purpose. 
+Don't use a changing or personal identifier.
+
+`makePurchase()` returning `true` means the request started, not that the purchase succeeded. 
+Listen for `PurchaseEvent.PURCHASES_UPDATED`, then verify the transaction and grant the entitlement 
+according to your purchase flow. See [Server Side Verification](apple/server-side-verification.md). 
+
+### Signature Requirement
+
+With Apple, some offers require the generation of a signature on your server. 
+You can check this by checking the value of the `requiresSignature` property on the `SubscriptionOffer`. 
+
+```actionscript
+if ( winback.offer.requiresSignature )
+{
+    trace( "This offer requires a server-generated signature" );
+}
+```
+
+See [Generate Signature](subscription-offers.mdx#generate-signature) for more information on how to generate a server-side signature for subscription offers.
