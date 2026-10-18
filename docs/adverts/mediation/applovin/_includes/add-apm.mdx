@@ -1,0 +1,49 @@
+
+:::info 
+Note: All of the commands below should be run in a terminal / command prompt in the root directory of your application, generally the level above your source directory.
+:::
+
+import SetupAPM from '../../../../_includes/apm/setup-apm.mdx'
+
+<SetupAPM />
+
+
+### Install the extension 
+
+Install the extension by running: 
+
+```
+apm install com.distriqt.admob.AppLovin
+```
+
+This will download and install the extension, required assets, and all dependencies.
+
+Once complete `apm` will have created something like the following file structure: 
+
+```
+.
+|____ assets
+| |____ ios 
+| | |____ Frameworks
+| | | |____ [dynamic frameworks]
+|____ ane
+| |____ com.distriqt.admob.AppLovin.ane	# AppLovin AdMob mediation extension
+| |____ [dependencies]
+|____ apm_packages					# cache directory - ignore
+|____ project.apm					# apm project file
+```
+
+- Add the `ane` directory to your IDE. *See the tutorials located [here](/docs/tutorials/getting-started) on adding an extension to your IDE.*
+
+- You will have an assets directory that contains required assets for the installed extensions. 
+You must add the contents of the `assets/ios` folder to the root of your iOS application package. 
+(The `ios` folder contains a `Frameworks` folder with the required iOS dynamic frameworks). 
+
+:::info
+We suggest you use the locations directly in your builds rather than copying the files elsewhere. The reason for this is if you ever go to update the extensions using `apm` that these updates will be pulled into your build automatically.
+:::
+
+
+
+
+
