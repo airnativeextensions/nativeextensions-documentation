@@ -1,3 +1,16 @@
+### 2026.10.18 [v17.1.1]
+
+```
+This version adds beta support for AdMob ad preloading on Android and iOS for interstitial, rewarded video, and app open ads. Ads can be requested in advance so they are ready when needed, with preloader events reporting when ads are loaded, the available preloaded inventory is exhausted, or an error occurs.
+
+### Updates
+
+feat(android): update admob sdk v25.4.0, ump v4.0.0
+feat(ios): update admob sdk v13.6.0, ump v3.1.0
+feat(ios): add new request configuration age restricted treatment setting
+feat(ios,android): add preloader functionality for interstitials, rewarded video and app open ad types (resolves https://github.com/airnativeextensions/ANE-Adverts/issues/596)
+```
+
 ### 2026.02.17 [v17.0.0]
 
 ```
