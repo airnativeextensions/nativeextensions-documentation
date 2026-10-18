@@ -1,3 +1,9 @@
+### 2026.10.18 [v17.1.2]
+
+```
+fix(airpackage): update required dependencies
+```
+
 ### 2026.10.18 [v17.1.1]
 
 ```
