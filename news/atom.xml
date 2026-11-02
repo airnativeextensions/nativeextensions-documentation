@@ -2,12 +2,105 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.airnativeextensions.com/news</id>
     <title>air native extensions Blog</title>
-    <updated>2026-10-01T00:00:00.000Z</updated>
+    <updated>2026-11-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.airnativeextensions.com/news"/>
     <subtitle>air native extensions Blog</subtitle>
     <icon>https://docs.airnativeextensions.com/img/favicon.ico</icon>
     <rights>Copyright © 2026 distriqt Pty Ltd</rights>
+    <entry>
+        <title type="html"><![CDATA[November 2026]]></title>
+        <id>https://docs.airnativeextensions.com/news/2026-11</id>
+        <link href="https://docs.airnativeextensions.com/news/2026-11"/>
+        <updated>2026-11-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[November 2026 Extension Updates]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>Centralised native logging infrastructure, AdMob ad preloading, and enhanced webview process recovery.</p>
+</blockquote>
+<p>Welcome to the November 2026 distriqt extension update. This month brings significant foundational improvements to the core extension architecture, including a unified cross-platform native logging pipeline across Android, iOS, macOS, and Windows. Additionally, the Adverts extension introduces ad preloading for interstitials, rewarded video, and app open ads, alongside key resilience upgrades in NativeWebView.</p>
+<p>Key focus:</p>
+<ul>
+<li class="">Unified cross-platform native logging pipeline and shared Windows dynamic library infrastructure in Core</li>
+<li class="">Beta ad preloading functionality for AdMob interstitials, rewarded videos, and app open ads</li>
+<li class="">Automatic render process recovery and state restoration in NativeWebView on Android</li>
+<li class="">Updated SDK dependencies and mediation adapters for AdMob v25.4.0 (Android) and v13.6.0 (iOS)</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Extension Updates</div><div class="admonitionContent_BuS1"><ul>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-Adverts/releases/tag/v17.1.2" target="_blank" rel="noopener noreferrer" class="">Adverts v17.1.2</a> - Updated SDK dependencies, added AdMob preloader functionality, and age restriction settings</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-Adverts-Mediation/releases/tag/v11.1.0" target="_blank" rel="noopener noreferrer" class="">Adverts Mediation v11.1.0</a> - Updated mediation network adapters for compatibility with Adverts v17.1.0</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-Core/releases/tag/v7.8.0" target="_blank" rel="noopener noreferrer" class="">Core v7.8.0</a> - Centralised cross-platform native logging pipeline and shared Windows DLL architecture</li>
+<li class=""><a href="https://github.com/airnativeextensions/ANE-NativeWebView/releases/tag/v9.1.0" target="_blank" rel="noopener noreferrer" class="">NativeWebView v9.1.0</a> - Android webview render process recovery, embedded ProGuard rules, and shared core DLL integration</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="extension-updates">Extension Updates<a href="https://docs.airnativeextensions.com/news/2026-11#extension-updates" class="hash-link" aria-label="Direct link to Extension Updates" title="Direct link to Extension Updates" translate="no">​</a></h2>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="adverts">Adverts<a href="https://docs.airnativeextensions.com/news/2026-11#adverts" class="hash-link" aria-label="Direct link to Adverts" title="Direct link to Adverts" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/admob-4be0695a9eb26890b7f5fe015f1ab7d2.png" width="800" height="400" class="img_ev3q"></p>
+<p><a href="https://github.com/airnativeextensions/ANE-Adverts/releases/tag/v17.1.2" target="_blank" rel="noopener noreferrer" class="">GitHub Release v17.1.2</a> | <a href="https://docs.airnativeextensions.com/docs/adverts/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></p>
+<p>The Adverts extension received a major update introducing beta support for AdMob ad preloading across Android and iOS, alongside the latest Google Mobile Ads SDK updates.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://docs.airnativeextensions.com/news/2026-11#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Updated AdMob SDK to v25.4.0 (Android) and v13.6.0 (iOS), and UMP SDK to v4.0.0 (Android) and v3.1.0 (iOS)</li>
+<li class="">Added beta preloader functionality for interstitial, rewarded video, and app open ad types to prepare inventory in advance</li>
+<li class="">Added request configuration setting for age-restricted treatment on iOS</li>
+<li class="">Updated package dependency specifications for airpackage builds</li>
+</ul>
+<div class="language-actionscript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-actionscript codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// Example: Preloading ads using the Adverts Preloader</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token maybe-class-name">Adverts</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">service</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">preloader</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token method function property-access" style="color:rgb(130, 170, 255)">addEventListener</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"> </span><span class="token maybe-class-name">PreloaderEvent</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token constant" style="color:rgb(130, 170, 255)">AD_LOADED</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> onAdPreloaded </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token maybe-class-name">Adverts</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">service</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">preloader</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token method function property-access" style="color:rgb(130, 170, 255)">preloadAd</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"> </span><span class="token maybe-class-name">AdType</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token constant" style="color:rgb(130, 170, 255)">INTERSTITIAL</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">"YOUR_AD_UNIT_ID"</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">function</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">onAdPreloaded</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"> event</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token maybe-class-name">PreloaderEvent</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token keyword" style="font-style:italic">void</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token function" style="color:rgb(130, 170, 255)">trace</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">"Preloaded ad available for type: "</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">+</span><span class="token plain"> event</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token property-access">adType</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><br></div></code></pre></div></div>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="adverts-mediation">Adverts Mediation<a href="https://docs.airnativeextensions.com/news/2026-11#adverts-mediation" class="hash-link" aria-label="Direct link to Adverts Mediation" title="Direct link to Adverts Mediation" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-Adverts-Mediation/releases/tag/v11.1.0" target="_blank" rel="noopener noreferrer" class="">GitHub Release v11.1.0</a> | <a href="https://docs.airnativeextensions.com/docs/adverts/mediation" target="_blank" rel="noopener noreferrer" class="">Documentation</a></p>
+<p>Updated mediation network adapters to ensure full compatibility with the Adverts v17.1.0 release series.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-1">Updates<a href="https://docs.airnativeextensions.com/news/2026-11#updates-1" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Updated AppLovin SDK to v13.6.3 (Android) and v13.6.3 (iOS)</li>
+<li class="">Updated IronSource SDK to v9.5.0 (Android) and v9.5.0 (iOS)</li>
+<li class="">Updated UnityAds SDK to v4.19.0 (Android) and v4.19.0 (iOS)</li>
+<li class="">Updated Mintegral, Pangle, Vungle, DigitalTurbine, and Facebook Audience Network adapters</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="core">Core<a href="https://docs.airnativeextensions.com/news/2026-11#core" class="hash-link" aria-label="Direct link to Core" title="Direct link to Core" translate="no">​</a></h3>
+<p><a href="https://github.com/airnativeextensions/ANE-Core/releases/tag/v7.8.0" target="_blank" rel="noopener noreferrer" class="">GitHub Release v7.8.0</a> | <a href="https://docs.airnativeextensions.com/docs/core/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></p>
+<p>Core received major architectural updates, establishing a single ActionScript handler for cross-platform native log aggregation and implementing shared Windows dynamic library infrastructure.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-2">Updates<a href="https://docs.airnativeextensions.com/news/2026-11#updates-2" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Implemented a unified ActionScript event handler for aggregated native extension logging across Android, iOS, macOS, and Windows</li>
+<li class="">Created common core native extension DLL libraries and utility layer for Windows desktop builds</li>
+<li class="">Added return path for native logs back into AIR, including output support for Windows dbgviewer</li>
+<li class="">Hardened iOS swizzling helper implementations and FRE utility functions</li>
+<li class="">Embedded consumer ProGuard rules directly into the Android ANE JAR package</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nativewebview">NativeWebView<a href="https://docs.airnativeextensions.com/news/2026-11#nativewebview" class="hash-link" aria-label="Direct link to NativeWebView" title="Direct link to NativeWebView" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/nativewebview-8c049cf5f87cfceb4d84befb9bf708db.png" width="800" height="400" class="img_ev3q"></p>
+<p><a href="https://github.com/airnativeextensions/ANE-NativeWebView/releases/tag/v9.1.0" target="_blank" rel="noopener noreferrer" class="">GitHub Release v9.1.0</a> | <a href="https://docs.airnativeextensions.com/docs/nativewebview/" target="_blank" rel="noopener noreferrer" class="">Documentation</a></p>
+<p>NativeWebView has been upgraded to gracefully handle Android WebView renderer crashes and now leverages the new shared Core dynamic libraries on Windows.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates-3">Updates<a href="https://docs.airnativeextensions.com/news/2026-11#updates-3" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h4>
+<ul>
+<li class="">Added automatic recovery when the Android webview render process is terminated, enabling clean disposal and recreation</li>
+<li class="">Embedded ProGuard rules for release builds on Android</li>
+<li class="">Migrated Windows implementation to the new shared Core DLL infrastructure with improved logging</li>
+<li class="">Shifted iOS and macOS implementations to the centralised context and native logging pipeline</li>
+</ul>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/adobeair-75ec23410377afde7761a5bb875e30e4.png" width="800" height="381" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-information">Further Information<a href="https://docs.airnativeextensions.com/news/2026-11#further-information" class="hash-link" aria-label="Direct link to Further Information" title="Direct link to Further Information" translate="no">​</a></h2>
+<p>As always, thank you for your continued support of distriqt and the AIR developer community. Your feedback and contributions help us keep these extensions up to date and running smoothly across platforms.</p>
+<ul>
+<li class="">For full documentation and setup guides, visit <a href="https://docs.airnativeextensions.com/" target="_blank" rel="noopener noreferrer" class="">docs.airnativeextensions.com</a></li>
+<li class="">Join the AIR community discussions and get support at <a href="https://github.com/airsdk/Adobe-Runtime-Support/" target="_blank" rel="noopener noreferrer" class="">github</a></li>
+<li class="">Publicly available extensions at <a href="https://github.com/airnativeextensions" target="_blank" rel="noopener noreferrer" class="">airnativeextensions</a></li>
+<li class=""><a href="https://github.com/sponsors/marchbold" target="_blank" rel="noopener noreferrer" class="">Support</a> my ongoing involvement in the community</li>
+</ul>
+<p>Stay tuned for more updates next month!</p>]]></content>
+        <author>
+            <name>Michael</name>
+            <uri>https://github.com/marchbold</uri>
+        </author>
+        <category label="newsletter" term="newsletter"/>
+        <category label="adverts" term="adverts"/>
+        <category label="core" term="core"/>
+        <category label="nativewebview" term="nativewebview"/>
+        <category label="mediation" term="mediation"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[October 2026]]></title>
         <id>https://docs.airnativeextensions.com/news/2026-10</id>
@@ -1731,181 +1824,5 @@ If you require historical transactions you should now track purchase history on 
         <category label="inappbilling" term="inappbilling"/>
         <category label="adverts" term="adverts"/>
         <category label="googleidentity" term="googleidentity"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[June 2025]]></title>
-        <id>https://docs.airnativeextensions.com/news/2025-06</id>
-        <link href="https://docs.airnativeextensions.com/news/2025-06"/>
-        <updated>2025-06-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Extension Updates]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>New website release, extension updates!</p>
-</blockquote>
-<p>Over the past few months, we've been working intensively to rebuild <a href="https://airnativeextensions.com/" target="_blank" rel="noopener noreferrer" class="">airnativeextensions.com</a>, primarily to integrate a new payment provider and ensure we can continue delivering extensions to developers worldwide. It’s been a significant undertaking, but we’re confident the improvements to the platform will be well worth it.</p>
-<p>What this means for you:</p>
-<ul>
-<li class="">Nothing will change in the near future</li>
-<li class="">All new purchases will be done through our new payment provider</li>
-<li class="">We are asking all clients to migrate to the new payment provider</li>
-</ul>
-<p>We've made migration easy and allows you to combine your subscriptions into a single payment if you want. More information below.</p>
-<p>Also there are lots of extension updates that have been released.</p>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Extension Updates</div><div class="admonitionContent_BuS1"><ul>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#scanner" class="">Scanner</a> v6.0.5 - Major Upgrade for Barcode Scanning</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#share" class="">Share</a> v8.1.0 - SMS Reading Added on Android</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#inappbilling" class="">InAppBilling</a> v16.1.2 - Improved handling of subscription offer details and purchase flow</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#inappupdates" class="">InAppUpdates</a> v3.0.1</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#vibration" class="">Vibration</a> v5.4.2</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#camerarollextended" class="">CameraRollExtended</a> v8.0.2 - Fixed image loading and permissionless picker issues</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#adverts" class="">Adverts</a> v16.1.0 - Updated SDKs</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#crashutils" class="">CrashUtils</a> v0.0.2 - New <strong>free</strong> extension</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#detectscreenshot" class="">DetectScreenshot</a> v1.0.0 - New <strong>free</strong> extension</li>
-<li class=""><a href="https://docs.airnativeextensions.com/news/2025-06#nfc" class="">NFC</a> v5.6.1</li>
-</ul></div></div>
-<p>Got questions? We're here to help! <a href="https://docs.airnativeextensions.com/news/2025-06#custom-development-work" class="">Let's build better, faster, and smarter together.</a> 💡</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/2025-new-site-d5b06646dc4285972ef7199765886374.png" width="1351" height="916" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-site-released">New Site Released<a href="https://docs.airnativeextensions.com/news/2025-06#new-site-released" class="hash-link" aria-label="Direct link to New Site Released" title="Direct link to New Site Released" translate="no">​</a></h3>
-<p>Thank you for supporting the ongoing development of our AIR extensions!</p>
-<p>Our new site has been released and as part of our commitment to the AIR community, we're excited to announce that we've upgraded our subscription management system to provide you with a better, more streamlined experience.</p>
-<p>We really hope the new site is easier to navigate and manage your subscriptions!</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="migrating">Migrating<a href="https://docs.airnativeextensions.com/news/2025-06#migrating" class="hash-link" aria-label="Direct link to Migrating" title="Direct link to Migrating" translate="no">​</a></h4>
-<p>This upgrade includes a migration to a new payment provider, ensuring we can continue supporting our extensions while offering greater flexibility and ease of use.</p>
-<p>To continue using your extensions, please migrate your existing subscriptions to the new system. It's a quick and easy process:</p>
-<ol>
-<li class="">Navigate to your <a href="https://airnativeextensions.com/user/licenses" target="_blank" rel="noopener noreferrer" class="">subscription management page</a></li>
-<li class="">Click the "Migrate subscriptions" button.</li>
-<li class="">Select the extensions you'd like to migrate.</li>
-<li class="">We'll calculate the remaining time on your current subscriptions and apply a discount to your new subscription(s).</li>
-<li class="">Choose your payment method and complete the payment.</li>
-<li class="">You'll receive a confirmation email with all the details of your new subscription.</li>
-</ol>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Existing subscriptions that you migrate together will be grouped into a single subscription. You should note that this means you'll be billed for these together and also that if you look to cancel in the future you will need to cancel all extensions associated with the subscription.</p><p>You may wish to migrate extensions individually based on your needs.</p></div></div>
-<p>We understand that change can be challenging, but we believe this upgrade will ultimately enhance your experience with our extensions. Our new system offers improved management tools, better support, and a more user-friendly interface. We appreciate your continued support and look forward to bringing you even more improvements in the future!</p>
-<p>If you notice any issues or have any concerns, please reach out to me <a href="mailto:airnativeextensions@distriqt.com" target="_blank" rel="noopener noreferrer" class="">airnativeextensions@distriqt.com</a></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="feedback">Feedback<a href="https://docs.airnativeextensions.com/news/2025-06#feedback" class="hash-link" aria-label="Direct link to Feedback" title="Direct link to Feedback" translate="no">​</a></h3>
-<p>With the release of the new site I'm genuinely excited about where we're heading with AIR native extensions. But more than anything, I want to make sure we're building the right tools in the right way for you.</p>
-<p>So I'd really love your feedback:</p>
-<p><strong>What would make these extensions more valuable or accessible for your projects?</strong></p>
-<ul>
-<li class="">Would different <strong>pricing options</strong> help (subscriptions, bundles, site licenses)?</li>
-<li class="">Are there specific <strong>platforms, features, or ANEs</strong> you'd like to see next?</li>
-<li class="">Would you benefit from <strong>better docs</strong>, <strong>support</strong>, or maybe even <strong>open-source components</strong>?</li>
-</ul>
-<p>One area I'm especially looking at is expanding support for <strong>APM (AIR Package Manager)</strong>, not just for managing extensions, but also for <strong>project creation and scaffolding</strong>. If that's something you'd use, let me know how we can make it awesome.</p>
-<p>And if there's <strong>anything currently stopping you from using our extensions</strong>, I'd really appreciate hearing about that too - even small pain points are worth solving.</p>
-<p>Drop a <a href="https://github.com/airsdk/Adobe-Runtime-Support/discussions/3850" target="_blank" rel="noopener noreferrer" class="">comment</a>, <a href="mailto:airnativeextensions@distriqt.com" target="_blank" rel="noopener noreferrer" class="">message me directly</a>, or reach out via the site - I'm all ears. Your feedback genuinely shapes what we do next.</p>
-<p>Thanks for being part of this community, let's keep AIR development strong!</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/scanner-viewport-8fa2e5373d2be4b4b874a5fbe735130c.png" width="800" height="517" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scanner"><a href="https://airnativeextensions.com/extension/com.distriqt.Scanner" target="_blank" rel="noopener noreferrer" class="">Scanner</a><a href="https://docs.airnativeextensions.com/news/2025-06#scanner" class="hash-link" aria-label="Direct link to scanner" title="Direct link to scanner" translate="no">​</a></h3>
-<p>Released June 19, 2025, this release represents a major overhaul of the Scanner extension.</p>
-<ul>
-<li class="">The scanning algorithm has been completely rewritten for improved <strong>performance</strong> and <strong>accuracy</strong>.</li>
-<li class="">The aging ZBar SDK has been replaced by <strong>MLKit</strong> on Android and the <strong>Vision framework</strong> on iOS, offering modern and robust scanning capabilities.</li>
-<li class="">Permission handling and broadcast receiver processes have been updated to comply with Android API 34 requirements.</li>
-<li class="">A new asynchronous bitmap scanning feature enables scanning of large images without blocking the main thread, improving app responsiveness.</li>
-<li class="">iOS focus handling has been enhanced for the Vision-based algorithm.</li>
-</ul>
-<p>This update promises a smoother, more reliable scanning experience for your users.</p>
-<p>For a smooth transition, check out the <a href="https://docs.airnativeextensions.com/docs/scanner/migrating-to-v6.0" target="_blank" rel="noopener noreferrer" class="">migration guide</a>.</p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/share-0d0f3fd672eb1bd29ff253f031101705.png" width="1200" height="630" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="share"><a href="https://airnativeextensions.com/extension/com.distriqt.Share" target="_blank" rel="noopener noreferrer" class="">Share</a><a href="https://docs.airnativeextensions.com/news/2025-06#share" class="hash-link" aria-label="Direct link to share" title="Direct link to share" translate="no">​</a></h3>
-<p>Released June 13, 2025, ANE-Share has been enhanced with a new Android feature that lets your apps <strong>read SMS messages</strong> directly from the device. This opens up new possibilities for app interaction and automation based on SMS content.</p>
-<p>More information <a href="https://docs.airnativeextensions.com/docs/share/sms#read-sms" target="_blank" rel="noopener noreferrer" class="">here</a></p>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/inappbilling-711a8c968ade9dc1d0241b4443f8289f.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappbilling"><a href="https://airnativeextensions.com/extension/com.distriqt.InAppBilling" target="_blank" rel="noopener noreferrer" class="">InAppBilling</a><a href="https://docs.airnativeextensions.com/news/2025-06#inappbilling" class="hash-link" aria-label="Direct link to inappbilling" title="Direct link to inappbilling" translate="no">​</a></h3>
-<p><strong>Releases:</strong> March 31 &amp; March 25, 2025</p>
-<ul>
-<li class="">Fixed missing method definitions in fallback libraries</li>
-<li class="">Improved handling of subscription offer details and purchase flow</li>
-</ul>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="inappupdates">InAppUpdates<a href="https://docs.airnativeextensions.com/news/2025-06#inappupdates" class="hash-link" aria-label="Direct link to InAppUpdates" title="Direct link to InAppUpdates" translate="no">​</a></h4>
-<p>The InAppUpdates extension gives you the ability to update your Google Play Android application on their device without having to go to the Play Store. This functionality has been separated from the InAppBilling extension and improved upon in a dedicated extension. If you have a license for the InAppBilling extension and wish to use the in-app updates functionality please contact us to get access!</p>
-<p>When your users keep your app up to date on their devices, they can try new features, as well as benefit from performance improvements and bug fixes. Although some users enable background updates when their device is connected to an unmetered connection, other users might need to be reminded to install updates. In-app updates is a Google Play Core libraries feature that prompts active users to update your app.</p>
-<p><strong>Released:</strong> March 26, 2025</p>
-<ul>
-<li class="">Updated manual integration docs to match new Gradle requirements</li>
-</ul>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/admob-4be0695a9eb26890b7f5fe015f1ab7d2.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="adverts"><a href="https://airnativeextensions.com/extension/com.distriqt.Adverts" target="_blank" rel="noopener noreferrer" class="">Adverts</a><a href="https://docs.airnativeextensions.com/news/2025-06#adverts" class="hash-link" aria-label="Direct link to adverts" title="Direct link to adverts" translate="no">​</a></h3>
-<p><strong>Released:</strong> April 30, 2025</p>
-<ul>
-<li class="">Updated to <strong>AdMob SDK v24.2.0</strong> (Android), <strong>v12.12.0</strong> (iOS)</li>
-<li class="">Added <code>showPrivacyOptionsForm()</code> for UMP SDK</li>
-<li class="">New ad events for <strong>clicks and impressions</strong></li>
-<li class="">SDK updates for: AppLovin, UnityAds, IronSource, Mintegral, Vungle, Pangle, DigitalTurbine, FacebookAudience</li>
-</ul>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/camerarollextended-b338411979777f4e0cc01ca7377e2251.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="camerarollextended"><a href="https://airnativeextensions.com/extension/com.distriqt.CameraRollExtended" target="_blank" rel="noopener noreferrer" class="">CameraRollExtended</a><a href="https://docs.airnativeextensions.com/news/2025-06#camerarollextended" class="hash-link" aria-label="Direct link to camerarollextended" title="Direct link to camerarollextended" translate="no">​</a></h3>
-<p><strong>Releases:</strong> May 6 &amp; April 30, 2025</p>
-<ul>
-<li class="">Fixed image loading and permissionless picker issues on Android</li>
-</ul>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/vibration-328927ff207ee1971180f29e355eb11f.png" width="800" height="421" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vibration"><a href="https://airnativeextensions.com/extension/com.distriqt.Vibration" target="_blank" rel="noopener noreferrer" class="">Vibration</a><a href="https://docs.airnativeextensions.com/news/2025-06#vibration" class="hash-link" aria-label="Direct link to vibration" title="Direct link to vibration" translate="no">​</a></h3>
-<p><strong>Releases:</strong> March 25 &amp; March 12, 2025</p>
-<ul>
-<li class="">Added <code>setLogLevel()</code> for log control</li>
-<li class="">Updated documentation</li>
-<li class="">Unity: Fixed post-build script namespace issues</li>
-</ul>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/crashutils-26f6ffe248bd304008d711e0e86fa7b6.png" width="1240" height="930" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="crashutils"><a href="https://github.com/airnativeextensions/ANE-CrashUtils" target="_blank" rel="noopener noreferrer" class="">CrashUtils</a><a href="https://docs.airnativeextensions.com/news/2025-06#crashutils" class="hash-link" aria-label="Direct link to crashutils" title="Direct link to crashutils" translate="no">​</a></h3>
-<p>The CrashUtils extension gives you access to crash logs from previous terminations of your application.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://docs.airnativeextensions.com/news/2025-06#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h4>
-<ul>
-<li class="">Improve app quality by processing your application crashes</li>
-<li class="">Single API interface - your code works across supported platforms with no modifications</li>
-<li class="">Sample project code and ASDocs reference</li>
-</ul>
-<p><strong>Releases:</strong> May 5 &amp; April 29, 2025</p>
-<ul>
-<li class="">Initial release in v0.0.1</li>
-<li class="">New features: <code>getHistoricalProcessExitReasons(maxNum)</code>, <code>appNotResponding()</code></li>
-</ul>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="detectscreenshot"><a href="https://github.com/airnativeextensions/ANE-DetectScreenshot/" target="_blank" rel="noopener noreferrer" class="">DetectScreenshot</a><a href="https://docs.airnativeextensions.com/news/2025-06#detectscreenshot" class="hash-link" aria-label="Direct link to detectscreenshot" title="Direct link to detectscreenshot" translate="no">​</a></h3>
-<p>The DetectScreenshot extension gives you the ability to detect when a screenshot has been taken of your application.</p>
-<p><strong>Released:</strong> May 20, 2025</p>
-<ul>
-<li class="">Initial release with AirPackage support</li>
-</ul>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/nfc-37f39035a51ea8c83fd646295ec21e18.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nfc">NFC<a href="https://docs.airnativeextensions.com/news/2025-06#nfc" class="hash-link" aria-label="Direct link to NFC" title="Direct link to NFC" translate="no">​</a></h3>
-<p><strong>Releases:</strong> May 23 – March 26, 2025</p>
-<ul>
-<li class="">Added <code>isWritable</code> flag for tags</li>
-<li class="">Fixed tag ID and Unity build issues</li>
-</ul>
-<hr>
-<p><img decoding="async" loading="lazy" src="https://docs.airnativeextensions.com/assets/images/custom-development-c9fd24e2ef4e7da59b3da8afc1836052.png" width="800" height="400" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="custom-development-work">Custom Development Work<a href="https://docs.airnativeextensions.com/news/2025-06#custom-development-work" class="hash-link" aria-label="Direct link to Custom Development Work" title="Direct link to Custom Development Work" translate="no">​</a></h3>
-<p>This year, we've been working with some amazing clients and have been able to further extend their reach using their chosen framework! If you need expert help with AIR, native, Flutter, Unity, or Haxe, now is the perfect time to collaborate with us.</p>
-<p>We thrive on challenging, complex integrations and specialize in making different systems work together seamlessly. With years of experience building high-performance native extensions across multiple platforms, we're ready to bring your projects to life!</p>
-<p>Got an idea or a project in mind? Let's make it happen! Reach out to us at <a href="mailto:airnativeextensions@distriqt.com" target="_blank" rel="noopener noreferrer" class="">airnativeextensions@distriqt.com</a>.</p>
-<p>Let's build something amazing together! 🚀🔥</p>]]></content>
-        <author>
-            <name>Michael</name>
-            <uri>https://github.com/marchbold</uri>
-        </author>
-        <category label="newsletter" term="newsletter"/>
-        <category label="scanner" term="scanner"/>
-        <category label="share" term="share"/>
-        <category label="inappbilling" term="inappbilling"/>
-        <category label="inappupdates" term="inappupdates"/>
-        <category label="vibration" term="vibration"/>
-        <category label="adverts" term="adverts"/>
-        <category label="camerarollextended" term="camerarollextended"/>
-        <category label="crashutils" term="crashutils"/>
-        <category label="detectscreenshot" term="detectscreenshot"/>
-        <category label="nfc" term="nfc"/>
     </entry>
 </feed>
