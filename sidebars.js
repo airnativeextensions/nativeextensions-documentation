@@ -2288,7 +2288,7 @@ module.exports = {
         "inappbilling/application-receipt",
         {
           "Offers": [
-            "inappbilling/one-time-product-offers",
+            // "inappbilling/one-time-product-offers",
             "inappbilling/subscription-offers",
             "inappbilling/introductory-prices",
             "inappbilling/winback-offers",
