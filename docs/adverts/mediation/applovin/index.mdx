@@ -15,6 +15,17 @@ import AppDescriptorManual from './_includes/add-manual-appdescriptor.mdx'
 
 This guide is intended for publishers who want to use the Google Mobile Ads SDK to load and display ads from AppLovin Ads via mediation. It covers how to add AppLovin to an ad unit's mediation configuration , how to set up Ad Network Optimization (ANO), and how to integrate the AppLovin SDK and adapter into an Android app.
 
+## Unreleased SDK Requirements
+
+The source update below has not yet been published as a new ANE release.
+
+| Platform | AppLovin SDK | AdMob Adapter | Minimum OS | Google Mobile Ads SDK |
+| --- | --- | --- | --- | --- |
+| Android | 13.6.4 | 13.6.4.2 | Android 7.0 (API 24) | 25.4.0 |
+| iOS | 13.6.4 | 13.6.4.0 | iOS 13.0 | 13.3 or later, below 14.0 |
+
+See Google's [Android adapter release notes](https://developers.google.com/admob/android/mediation/applovin#applovin-android-mediation-adapter-changelog) and [iOS adapter release notes](https://developers.google.com/admob/ios/mediation/applovin#applovin-ios-mediation-adapter-changelog) for compatibility details. The iOS adapter now uses Swift; include the required Swift runtime libraries when packaging your AIR application.
+
 ## Step 1: Set up AppLovin
 
 [Sign up](https://www.applovin.com/signup) or [log in](https://www.applovin.com/login) to your AppLovin account.

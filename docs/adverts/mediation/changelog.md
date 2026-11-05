@@ -1,3 +1,24 @@
+###### 2026.11.06 [v11.2.0]
+
+```
+feat(applovin): update applovin sdk: android v13.6.4 (adapter v13.6.4.2), ios v13.6.4 (adapter v13.6.4.0)
+feat(applovin): require Android API 24 and iOS 13.0
+feat(digitalturbine): update dt exchange adapters: android v8.4.7.1 (sdk v8.4.7), ios v8.5.0.0 (sdk v8.5.0)
+feat(digitalturbine): require Android API 24 and align iOS build and package template minimums with iOS 15.0
+feat(facebookaudience): update Android adapter to v6.22.0.1 (Meta SDK v6.22.0) and iOS adapter to v6.22.1.0 (Meta SDK v6.22.1)
+feat(facebookaudience): require Android API 24 and align iOS build/package template minimums with iOS 15.0
+feat(ironsource): update Android adapter to v9.7.0.0 (IronSource SDK v9.7.0) and iOS adapter to v9.7.0.0.0 (IronSource SDK v9.7.0.0)
+feat(ironsource): require Android API 24 and iOS 13.0
+feat(mintegral): update Android adapter to v17.1.81.1 (Mintegral SDK v17.1.81) and iOS adapter to v8.1.8.0 (Mintegral SDK v8.1.8)
+feat(mintegral): require Android API 24 and iOS 13.0
+feat(pangle): update Android adapter to v8.3.0.4.0 (Pangle SDK v8.3.0.4) and iOS adapter to v8.4.0.5.0 (Pangle SDK v8.4.0.5)
+feat(pangle): require Android API 24 and iOS 13.0
+feat(unityads): update Android adapter to v4.21.0.0 (Unity Ads SDK v4.21.0) and iOS adapter to v4.21.0.0 (Unity Ads SDK v4.21.0)
+feat(unityads): require iOS 13.0
+feat(vungle): update Android adapter to v7.7.9.0 (Vungle SDK v7.7.9) and iOS adapter to v7.7.8.0 (Vungle SDK v7.7.8)
+feat(vungle): require Android API 24 and iOS 13.0
+```
+
 ###### 2026.10.18 [v11.1.0]
 
 ```

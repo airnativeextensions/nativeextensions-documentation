@@ -35,7 +35,11 @@ You must add the files in the `assets/android` folder to the root of your Androi
 
 #### Manifest Additions
 
-No additions required
+For the unreleased SDK update, set the minimum SDK in your Android manifest additions to API 24 or later:
+
+```xml
+<uses-sdk android:minSdkVersion="24" />
+```
 
 
 
@@ -68,6 +72,9 @@ You should only have one `SKAdNetworkItems` entry. If you have multiple extensio
 
 
 ```xml
+<key>MinimumOSVersion</key>
+<string>13.0</string>
+
 <key>AppLovinSdkKey</key>
 <string>APPLOVIN_IOS_SDK_KEY</string>
 
