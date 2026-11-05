@@ -14,7 +14,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="air native extensions" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.2a178d61.css">
-<script src="/assets/js/runtime~main.3bc94366.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.73214aeb.js" defer="defer"></script>
 <script src="/assets/js/main.d85cea7b.js" defer="defer"></script>
 </head>
 <body>
@@ -71,7 +71,8 @@ You must add the files in the <code>assets/android</code> folder to the root of 
 <p>If there is an <code>assets</code> directory alongside the extension in the repository that contains required assets for the installed extensions.
 You must add the files in the <code>assets/android</code> folder to the root of your Android application package.</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="manifest-additions">Manifest Additions<a href="#manifest-additions" class="hash-link" aria-label="Direct link to Manifest Additions" title="Direct link to Manifest Additions" translate="no">​</a></h4>
-<p>No additions required</p>
+<p>For the unreleased SDK update, set the minimum SDK in your Android manifest additions to API 24 or later:</p>
+<div class="language-xml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-xml codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;</span><span class="token tag" style="color:rgb(255, 85, 114)">uses-sdk</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag attr-name namespace" style="color:rgb(178, 204, 214)">android:</span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">minSdkVersion</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(199, 146, 234)">=</span><span class="token tag attr-value punctuation" style="color:rgb(199, 146, 234)">&quot;</span><span class="token tag attr-value" style="color:rgb(255, 85, 114)">24</span><span class="token tag attr-value punctuation" style="color:rgb(199, 146, 234)">&quot;</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">/&gt;</span><br></div></code></pre></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ios">iOS<a href="#ios" class="hash-link" aria-label="Direct link to iOS" title="Direct link to iOS" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="dynamic-frameworks">Dynamic Frameworks<a href="#dynamic-frameworks" class="hash-link" aria-label="Direct link to Dynamic Frameworks" title="Direct link to Dynamic Frameworks" translate="no">​</a></h4>
 <p>This extension uses dynamic frameworks so you must include the frameworks (and any dependent swift libs) in your application for signing by AIR.</p>
