@@ -1,0 +1,63 @@
+---
+title: macOS Application Packaging
+---
+
+Some macOS AIR capabilities, including Apple Push Notification service (APNs), require entitlements in the final signed application. Packaging such an app requires a matching app identifier, signing identity, and provisioning profile that includes the required capabilities.
+
+## Requirements
+
+Before packaging, confirm that:
+
+- The AIR application descriptor uses the app's registered bundle identifier and declares the required macOS application settings and entitlements.
+- The provisioning profile is for that app identifier, includes the entitlements required by the app, and is available as a `.provisionprofile` file.
+- The final macOS signing identity authorized by the profile is installed and available in the macOS Keychain.
+- A PKCS#12 certificate (`.p12`) and its password are available for the initial AIR packaging step. This certificate may be self-signed and does not have to be the identity used for the final signature.
+- AIR's `adt` tool is available, and you have the app descriptor and all files to package.
+
+The profile, signing identity, app identifier, entitlements, and distribution method must be compatible. For APNs, the entitlement's environment must also match the intended APNs environment.
+
+## Stage 1: Package the App
+
+Use AIR's `adt -package` command with `-target bundle` to create an intermediate application bundle. The packaging step uses the PKCS#12 certificate and password; a self-signed certificate is sufficient for this stage. Include the application descriptor and all required SWFs, assets, and native extensions. Write the output to a distinct path, for example `<app-name>.unsigned.app`:
+
+```text
+adt -package \
+	-storetype PKCS12 \
+	-keystore <packaging-certificate.p12> \
+	-storepass <certificate-password> \
+	-target bundle \
+	<app-name>.unsigned.app \
+	<app-descriptor.xml> \
+	[application file options]
+```
+
+`[application file options]` represents the ADT file arguments for your SWF, assets, and native extensions. Add a timestamp authority option if it is required by your signing or distribution workflow. This is the intermediate bundle, not the finished application.
+
+## Embed the Provisioning Profile
+
+After packaging, manually copy the provisioning profile into the intermediate bundle. For example:
+
+```sh
+cp "/path/to/app.provisionprofile" \
+	"MyApp.unsigned.app/Contents/embedded.provisionprofile"
+```
+
+This copy is a separate required step; the initial `adt -package` command does not place the profile there. Replace the source path and app name with your files, then confirm the profile is present at this exact destination before signing.
+
+## Stage 2: Sign the Bundle
+
+Use `adt -sign` to sign the intermediate bundle with the final Keychain signing identity authorized by the provisioning profile. This is the signature used by the finished app; it is separate from the certificate used during packaging. Write the signed result to a new `.app` path:
+
+```text
+adt -sign \
+  -storetype KeychainStore \
+  -alias "<keychain-identity-name>" \
+  -provisioning-profile <app.provisionprofile> \
+  -target bundle \
+  <app-name>.unsigned.app \
+  <app-name>.app
+```
+
+Use the identity name as it appears in Keychain Access and the path to the same provisioning profile copied in the previous step. The resulting `<app-name>.app` is the signed application. Complete any required verification and notarization for your distribution method after signing. Avoid modifying the bundle after it has been signed, since changes can invalidate its signature.
+
+

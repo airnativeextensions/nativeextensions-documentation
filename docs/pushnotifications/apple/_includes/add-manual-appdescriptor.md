@@ -76,4 +76,20 @@ These values **must** match the values in your provisioning profile, ie you must
 :::
 
 
+### macOS
+
+#### Info Additions and Entitlements
+
+Similar to iOS, macOS requires some additions to your application descriptor. The `aps-environment` again indicates whether to use the development sandbox or the production service and should be either `development` or `production`. Note however that the key name is different on macOS being: `com.apple.developer.aps-environment`. 
+
+```xml
+<macOS>
+	<InfoAdditions><![CDATA[
+	]]></InfoAdditions>
+	<Entitlements><![CDATA[
+<key>com.apple.developer.aps-environment</key>
+<string>development</string>
+	]]></Entitlements>
+</macOS>
+```
 

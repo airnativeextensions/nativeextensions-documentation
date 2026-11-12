@@ -3039,6 +3039,7 @@ module.exports = {
           "Apple Push Notification Service": [
             "pushnotifications/apple/add-the-extension",
             "pushnotifications/apple/apple-push-notification-service",
+            "pushnotifications/apple/packaging-macos",
           ],
         },
         {

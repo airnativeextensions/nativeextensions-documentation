@@ -14,7 +14,8 @@ import AppDescriptorAPM from './_includes/add-apm-appdescriptor.md'
 import AppDescriptorManual from './_includes/add-manual-appdescriptor.md'
 
 :::info About
-Apple Push Notification Service (APNS) is the push notification system for use on iOS with iPhones, iPads and other such iOS devices.
+Apple Push Notification Service (APNS) is the push notification system for use on iOS, tvOS and macOS. The implementation requires 
+slightly different setup for each platform however the underlying transport mechanism and concepts remain the same.
 :::
 
 This section describes how to setup your AIR application to use Apple Push Notification Service (APNS) with this extension.
@@ -121,10 +122,10 @@ Edit the `config/ios/InfoAdditions.xml` file that was generated to resemble the 
             <string>2</string>
         </array>
 
-		<key>UIBackgroundModes</key>
-		<array>
-			<string>remote-notification</string>
-		</array>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>remote-notification</string>
+    </array>
 
     </dict>
 </plist>
@@ -143,7 +144,7 @@ then you should include the UIBackgroundModes key:
 ```xml
 <key>UIBackgroundModes</key>
 <array>
-	<string>remote-notification</string>
+  <string>remote-notification</string>
 </array>
 ```
 
@@ -190,7 +191,7 @@ Edit the `config/ios/Entitlements.xml` file that was generated to resemble the f
     <dict>
 
         <key>com.apple.developer.usernotifications.critical-alerts</key>
-		<true/>
+        <true/>
 
     </dict>
 </plist>

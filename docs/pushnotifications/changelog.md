@@ -1,3 +1,25 @@
+### 2026.11.12 [v17.3.0]
+
+```
+The big addition in this release is public macOS support: AIR apps can now receive push notifications through Apple Push Notification service (APNs), bringing the extension's push workflow to desktop macOS. The release also adds the macOS package configuration and APNs entitlements needed for integration, alongside Android image-loading improvements and fixes across platforms.
+
+Note: please ensure you are using v2.3+ of apm to handle the application descriptor additions for macOS, and v7.9+ of the Core extension to handle the centralised notification system!
+
+## Updates 
+
+feat(macos): macos push notifications
+feat(android): implement optimised loading of asset image (https://github.com/airnativeextensions/ANE-PushNotifications/issues/637)
+fix(android): correct worker operation for image loading on android api 30 and lower
+fix(android): correct Notifications.setContext in background thread (resolves https://github.com/airnativeextensions/ANE-PushNotifications/issues/640)
+feat(android): add proguard rules
+fix(ios,onesignal): correct handling of one signal payload causing crash under certain conditions (resolves https://github.com/airnativeextensions/ANE-PushNotifications/issues/636)
+feat(docs,onesignal): add documentation about sending notifications using OneSignal (https://github.com/airnativeextensions/ANE-PushNotifications/issues/283)
+feat(ios): update core library dependencies for new centralised logging and extension context
+feat(package): add macOS application descriptor additions and APNs environment entitlements
+feat(build): enable AllServices and provider-specific notification service variants
+chore(package): update Core dependency to 7.9.x
+```
+
 ### 2026.09.21 [v17.2.0]
 
 ```
