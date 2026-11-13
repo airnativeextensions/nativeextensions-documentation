@@ -1,3 +1,14 @@
+### 2026.11.13 [v6.0.7]
+
+```
+
+
+## Updates 
+
+- feat(android): add consumer proguard rules
+- feat(docs): update manual installation guide
+```
+
 ### 2025.09.15 [v6.0.6]
 
 ```
