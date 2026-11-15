@@ -1,3 +1,9 @@
+### 2026.11.16 [v6.0.8]
+
+```
+fix(android): correct gradle dependency issue
+```
+
 ### 2026.11.13 [v6.0.7]
 
 ```
